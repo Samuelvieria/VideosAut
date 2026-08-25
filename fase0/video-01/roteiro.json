@@ -1,0 +1,13 @@
+{
+  "titulo": "A Chuva na Cabana | Sleep Story para Dormir Rápido",
+  "titulo_i18n": {
+    "en": "The Cabin in the Rain | A Sleep Story to Fall Asleep Fast",
+    "es": "La Cabaña bajo la Lluvia | Un Cuento para Dormir Rápido"
+  },
+  "descricao": "Uma sleep story tranquila em português: você chega em uma cabana isolada durante uma noite de chuva, acende a lareira, prepara um chá e relaxa devagar até adormecer. Narração lenta em 2ª pessoa, feita para acalmar a mente e ajudar você a dormir.\n\nÁudio ambiente: ruído gerado proceduralmente (sem música de terceiros).\nDivulgação: narração com voz sintética (texto-para-fala).",
+  "tags": ["sleep story", "historia para dormir", "dormir rapido", "chuva para dormir", "cabana", "asmr chuva", "relaxamento", "ansiedade dormir", "insonia", "meditacao guiada dormir"],
+  "estrutura": "jornada",
+  "duracao_narrada_min": 26,
+  "prompt_imagem": "Interior cozy cabin at night, warm fireplace glow, rain streaking down a window in the background, wooden armchair with a thick wool blanket, steaming ceramic teacup on a side table, soft amber and warm brown tones with cool blue-grey rain light, wide cinematic shot, no visible people, photorealistic, soft focus, 4K, ambient lighting",
+  "paleta": "quente (âmbar, marrom, laranja da lareira) contrastando com azul-acinzentado frio da chuva na janela"
+}
