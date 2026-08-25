@@ -1,0 +1,18 @@
+# Segredos
+.env
+*.key.json
+client_secret*.json
+credentials.json
+
+# Mídia e artefatos gerados (grandes, não versionar)
+*.wav
+*.flac
+*.m4a
+*.mp4
+*.mov
+output/
+state/
+logs/
+
+# SO
+.DS_Store
