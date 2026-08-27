@@ -7,6 +7,7 @@ carregada sem expor o segredo em log, terminal ou histórico de conversa.
 """
 from __future__ import annotations
 import os
+import re
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -75,7 +76,16 @@ def diagnostico() -> None:
 MODELO_ROTEIRO = "claude-opus-5"
 
 
-_SUSPEITO = ("cd ", "./", "python", "source ", "export ", "setenv ", "git ", "sudo ")
+_SUSPEITO = ("cd ", "./", "python", "source ", "export ", "setenv ", "git ", "sudo ",
+             "curl ", "wget ", "http://", "https://", "brew ", "pip ", "npm ")
+
+# Formato esperado por chave. Pegar o formato errado aqui evita descobrir só na
+# primeira chamada de API, com erro de autenticação que não diz o que houve.
+_FORMATO = {
+    "FAL_KEY":           (r"[0-9a-f-]{36}:[0-9a-f]{32}", "uuid:hex, 69 chars"),
+    "ANTHROPIC_API_KEY": (r"sk-ant-[A-Za-z0-9_\-]{20,}", "começa com sk-ant-"),
+    "OPENAI_API_KEY":    (r"sk-[A-Za-z0-9_\-]{20,}", "começa com sk-"),
+}
 
 
 def _valida(nome: str, valor: str) -> str:
@@ -109,6 +119,13 @@ def _valida(nome: str, valor: str) -> str:
                 raise SystemExit(
                     f"o valor é a mesma coisa repetida {n}x ({len(valor)} chars).\n"
                     f"  Nada gravado — cole UMA vez só.")
+
+    esperado = _FORMATO.get(nome)
+    if esperado and not re.fullmatch(esperado[0], valor):
+        raise SystemExit(
+            f"não parece uma {nome} válida (esperado: {esperado[1]}).\n"
+            f"  Recebi {len(valor)} chars começando com {valor[:8]!r}.\n"
+            f"  Nada gravado — cole só o valor da chave, sem comando em volta.")
 
     if nome == "GOOGLE_APPLICATION_CREDENTIALS":
         if not Path(valor).expanduser().is_file():
