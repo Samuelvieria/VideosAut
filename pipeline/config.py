@@ -95,6 +95,21 @@ def _valida(nome: str, valor: str) -> str:
         raise SystemExit(
             f"isso parece um COMANDO, não uma chave:\n    {valor[:60]}...\n"
             f"  Nada foi gravado. Cole o valor da chave, não a linha de comando.")
+    # Colar repetido é o erro mais comum: o prompt oculto não dá retorno visual,
+    # então o usuário duplica sem perceber. Aconteceu com 4 repetições.
+    metade = len(valor) // 2
+    if len(valor) % 2 == 0 and valor[:metade] == valor[metade:]:
+        raise SystemExit(
+            f"o valor é a mesma coisa repetida 2x ({len(valor)} chars).\n"
+            f"  Nada gravado — cole UMA vez só. O prompt não mostra nada, mas registrou.")
+    for n in (3, 4):
+        if len(valor) % n == 0:
+            parte = len(valor) // n
+            if len({valor[i*parte:(i+1)*parte] for i in range(n)}) == 1:
+                raise SystemExit(
+                    f"o valor é a mesma coisa repetida {n}x ({len(valor)} chars).\n"
+                    f"  Nada gravado — cole UMA vez só.")
+
     if nome == "GOOGLE_APPLICATION_CREDENTIALS":
         if not Path(valor).expanduser().is_file():
             raise SystemExit(f"caminho não existe: {valor}")
