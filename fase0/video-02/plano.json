@@ -21,7 +21,7 @@
     "imagens": "geradas, estilo pixel art consistente — não usar gravuras de acervo",
     "disclosure": "narração sintética + imagens geradas → ativar divulgação de conteúdo sintético no Studio"
   },
-  "estilo_base": "pixel art, detailed 16-bit style, dark moody palette of deep blue-greys and near-black shadows with warm amber lantern and firelight accents, dramatic rim lighting, cinematic wide shot, heavy atmosphere, sea and rain, no text, no UI, no modern elements, 16:9",
+  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange highlights, dramatic rim lighting, cinematic wide composition, historically accurate 19th century whaling era, painterly game background art, 16:9",
   "nota_duracoes": "Durações são ALVO. Quem manda no corte final é o áudio: depois de gerar a narração, as cenas são reajustadas para cair nas pausas naturais. Ver s5_render.",
   "cenas": [
     {
@@ -254,7 +254,7 @@
       "dur_s": 80,
       "papel": "narrado",
       "titulo": "A baleia branca",
-      "prompt": "an enormous white sperm whale breaching from black water, wrinkled scarred brow, broken harpoon irons trailing from its flank, dwarfing a small whaleboat below, wall of spray, storm light, overwhelming scale",
+      "prompt": "extreme close view of a vast wall of pale scarred whale forehead breaking the surface of black storm water, a sheer flat wrinkled cliff of white flesh filling the entire left of the frame, one small dark eye low near the waterline, rusted broken harpoon irons embedded in the old scars, a tiny six-man whaleboat at the far right for scale, spray and foam, heavy storm sky",
       "ambiente": {
         "mar": 1.0,
         "chuva": 0.0,
@@ -262,7 +262,8 @@
         "vento": 0.6,
         "abafado": false,
         "_": "tempestade, a baleia"
-      }
+      },
+      "_nota": "3 tentativas com pose de salto sairam JUBARTE — viés do modelo, salto no dado de treino é quase sempre jubarte. Cachalote aparece em perfil na superfície. Mudar a pose resolveu o que descrever melhor não resolvia."
     },
     {
       "n": 17,
@@ -299,7 +300,7 @@
       "dur_s": 90,
       "papel": "moldura-fecha",
       "titulo": "O velho, ao amanhecer",
-      "prompt": "an old weathered whaler, grey beard, dark navy peacoat, flat wool cap, clay pipe, heavy boots, the exact same figure on the exact same a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind, same framing and camera angle as the opening, but the rain has stopped and the sky is pale grey dawn, his lantern guttering out, flat calm sea, he is turning to walk back down the pier",
+      "prompt": "clear pale dawn sky, dry weathered planks, still glassy water, soft pink and grey morning light, an old weathered whaler, grey beard, dark navy peacoat, flat wool cap, clay pipe, heavy boots, seen from behind walking away down a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind, an old whaling ship moored alongside, his lantern guttering low, calm open sea, same pier and same framing as the opening scene",
       "ambiente": {
         "mar": 0.35,
         "chuva": 0.0,
@@ -307,14 +308,16 @@
         "vento": 0.2,
         "abafado": false,
         "_": "cais, a chuva parou"
-      }
+      },
+      "seed_de": 1,
+      "_nota_seed": "Usa a MESMA seed da cena 1. A moldura só fecha se a composição for reconhecivelmente o mesmo lugar; prompt parecido com seed diferente dá outro enquadramento. Mesma seed + só as palavras de luz trocadas = mesma cena, outro momento."
     },
     {
       "n": 20,
       "dur_s": 370,
       "papel": "cauda-ambiente",
       "titulo": "Mar calmo (sem narração)",
-      "prompt": "a vast calm ocean at full sunrise seen from just above the waterline, long slow swells catching warm gold and rose light, empty horizon, no ship, no land, no figures, extremely quiet and restful, the sun just clear of the water",
+      "prompt": "a vast open ocean at full sunrise seen from just above the waterline, long slow swells catching warm gold and rose light, unbroken horizon line from edge to edge, pure water and sky only, extremely quiet and restful, the sun just clear of the water",
       "ambiente": {
         "mar": 0.4,
         "chuva": 0.0,
@@ -351,5 +354,7 @@
     "starbuck": "a young first mate, sandy hair, plain dark jacket, worn anxious face",
     "cais": "a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind"
   },
-  "_nota_estilo": "O prompt final de cada cena é estilo_base + ', ' + prompt. Gerando à mão no Draw Things, colar o estilo_base ANTES do prompt toda vez. Esquecer uma vez = uma cena fora do estilo."
+  "_nota_estilo": "O prompt final de cada cena é estilo_base + ', ' + prompt. Gerando à mão no Draw Things, colar o estilo_base ANTES do prompt toda vez. Esquecer uma vez = uma cena fora do estilo.",
+  "_nota_estilo_base": "Só traço, paleta e enquadramento. Duas armadilhas já medidas: (1) 'sea and rain' aqui forçava chuva nas 20 cenas, inclusive interiores; (2) 'lantern and firelight accents' fazia o modelo desenhar lanternas como OBJETO em cenas de mar aberto. Descrever cor e luz, nunca objeto, nunca negação.",
+  "_nota_prompts": "NUNCA nomear o que não se quer. Modelo de difusão não processa negação: 'a chuva parou' contém 'chuva' e o modelo desenha chuva. Medido na cena 19, 3 tentativas. Z-Image-Turbo não aceita negative_prompt, então a única defesa é descrever só o que existe."
 }
