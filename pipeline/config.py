@@ -75,5 +75,67 @@ def diagnostico() -> None:
 MODELO_ROTEIRO = "claude-opus-5"
 
 
+_SUSPEITO = ("cd ", "./", "python", "source ", "export ", "setenv ", "git ", "sudo ")
+
+
+def _valida(nome: str, valor: str) -> str:
+    """Rejeita o que claramente não é chave.
+
+    O modo anterior lia da área de transferência, e isso falha justamente quando
+    o usuário copia o COMANDO de algum lugar para colar no terminal: o clipboard
+    passa a ter o comando, e o comando grava a si mesmo. Aconteceu 4 vezes.
+    """
+    valor = valor.strip()
+    if not valor:
+        raise SystemExit("nada digitado — nenhuma alteração feita")
+    if "\n" in valor or "\r" in valor:
+        raise SystemExit("valor tem mais de uma linha; cole só a chave")
+    baixo = valor.lower()
+    if any(baixo.startswith(x) for x in _SUSPEITO) or " && " in valor:
+        raise SystemExit(
+            f"isso parece um COMANDO, não uma chave:\n    {valor[:60]}...\n"
+            f"  Nada foi gravado. Cole o valor da chave, não a linha de comando.")
+    if nome == "GOOGLE_APPLICATION_CREDENTIALS":
+        if not Path(valor).expanduser().is_file():
+            raise SystemExit(f"caminho não existe: {valor}")
+        valor = str(Path(valor).expanduser().resolve())
+    elif len(valor) < 16:
+        raise SystemExit(f"só {len(valor)} caracteres — parece curto demais para uma chave")
+    return valor
+
+
+def definir(nome: str) -> None:
+    """Lê a chave por digitação OCULTA e grava no .env.
+
+    getpass lê do terminal sem ecoar: o valor não aparece na tela, não vai para
+    o histórico do shell (não é argumento de comando) e não depende do
+    clipboard. Colar dentro do prompt funciona normalmente.
+    """
+    import getpass
+
+    if nome not in _CONHECIDAS:
+        raise SystemExit(f"Chave desconhecida: {nome}. Opções: {', '.join(_CONHECIDAS)}")
+
+    print(f"  {nome} — {_CONHECIDAS[nome]}")
+    print("  Cole o valor e tecle Enter. Nada aparece na tela; isso é esperado.")
+    valor = _valida(nome, getpass.getpass("  > "))
+
+    linhas = ENV.read_text(encoding="utf-8").splitlines() if ENV.is_file() else []
+    for i, l in enumerate(linhas):
+        if l.strip().startswith(f"{nome}="):
+            linhas[i] = f"{nome}={valor}"
+            break
+    else:
+        linhas.append(f"{nome}={valor}")
+
+    ENV.write_text("\n".join(linhas) + "\n", encoding="utf-8")
+    ENV.chmod(0o600)
+    print(f"  gravado: {_mascara(valor)}")
+
+
 if __name__ == "__main__":
-    diagnostico()
+    import sys
+    if len(sys.argv) == 3 and sys.argv[1] == "set":
+        definir(sys.argv[2])
+    else:
+        diagnostico()
