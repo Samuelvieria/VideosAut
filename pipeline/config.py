@@ -31,6 +31,7 @@ _CONHECIDAS = {
     "FAL_KEY":                        "fal.ai — geração de imagem (Z-Image-Turbo)",
     "REPLICATE_API_TOKEN":            "Replicate — alternativa de imagem",
     "GOOGLE_APPLICATION_CREDENTIALS": "Google Cloud TTS — caminho do JSON da conta de serviço",
+    "ANTHROPIC_API_KEY":              "Claude API — adaptação do roteiro pt-BR -> inglês",
     "OPENAI_API_KEY":                 "OpenAI — TTS/imagem (não recomendado para pt-BR)",
     "ELEVENLABS_API_KEY":             "ElevenLabs — TTS premium",
     "DASHSCOPE_API_KEY":              "Alibaba Model Studio — Z-Image / Qwen-TTS",
@@ -66,6 +67,12 @@ def diagnostico() -> None:
             print(f"  {k:<32} {_mascara(v)}")
         else:
             print(f"  {k:<32} —  ({desc})")
+
+
+# Modelo padrão da adaptação de roteiro. Opus 5 é o default do projeto; trocar
+# para claude-sonnet-5 corta o custo para ~40% se a qualidade bastar (adaptação
+# não é a tarefa mais exigente do pipeline). Decisão de custo é do Samuel.
+MODELO_ROTEIRO = "claude-opus-5"
 
 
 if __name__ == "__main__":
