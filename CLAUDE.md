@@ -5,8 +5,13 @@ decisões de arquitetura já tomadas — não reabrir essas discussões sem moti
 
 ## Decisões fixadas
 
-- **Zero editor de vídeo.** Um vídeo de sono é 1 imagem/loop curto + 1 trilha de áudio longa.
-  Tudo em FFmpeg puro (render, mix de áudio, concat). Nada de DaVinci/Premiere/CapCut.
+- **Zero editor de vídeo.** Tudo em FFmpeg puro (render, mix de áudio, concat).
+  Nada de DaVinci/Premiere/CapCut.
+- **Formato: 30 min, não 1–3 h.** Decidido em 26/08/2026. A duração é um *parâmetro*,
+  não uma constante — o pipeline é idêntico para 30 min e 3 h, muda o número de cenas
+  e o `-t`. Se a retenção pedir formato longo depois, é um número, não uma reescrita.
+- **N imagens em sequência, não 1 imagem estática.** Referência de formato:
+  narração + sequência de cenas ilustradas, sem vídeo real. ~20 cenas em 30 min.
 - **Claude Code é o engenheiro, não o servidor de produção.** Quem roda em produção é um
   pipeline Python + cron, determinístico e idempotente. Claude (API, não Claude Code) só
   gera o estágio criativo (roteiro/metadados) dentro do pipeline.
@@ -24,6 +29,88 @@ decisões de arquitetura já tomadas — não reabrir essas discussões sem moti
   em vídeo de sono).
 - **Divulgação de conteúdo sintético ativada** para voz/imagem geradas (toggle no Studio).
 
+## TTS — decisão tomada (vídeo 1, validar se mantém para os próximos)
+
+Trocamos Azure por **Kokoro-82M** (local, Apache-2.0, licença comercial livre — ao
+contrário do XTTS-v2/Coqui, que é CPML e proíbe uso comercial). Resolve o bloqueio
+de conta Azure e roda 100% offline no Mac (CPU, sem GPU).
+
+- Voz: `pm_santa` (lang_code `p` = pt-BR), **speed=0.80**, sem pitch shift.
+- Testamos blend de vozes (`load_voice("v1,v2")`, média dos vetores de estilo) e
+  pitch shift via `ffmpeg-full` + filtro `rubberband` (`formant=preserved` para não
+  soar artificial) — nenhum dos dois melhorou em relação à voz pura mais lenta.
+- Setup: `.venv` no root do repo (Python 3.12 via Homebrew, não o Python 3.9 do
+  sistema) + `pip install kokoro soundfile` + `brew install espeak-ng`.
+- Render final precisa de `ffmpeg-full` (não o `ffmpeg` padrão do Homebrew) por
+  causa do `librubberband` — instalado keg-only em
+  `/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`.
+
+## Render — arquitetura medida (26/08/2026)
+
+Cada cena é um **clipe independente** com fade-in/fade-out para preto e GOP fechado
+alinhado; a montagem final é `concat -c copy`. Nada de `xfade` no vídeo inteiro.
+
+- Medido: **0,56× realtime** a 24 fps (clipe de 30 s renderizou em 17 s) com
+  `preset medium -crf 21`. 30 min de vídeo ≈ 17 min de render, paralelizável por cena.
+- `concat -c copy` de clipes com GOP alinhado: **instantâneo, sem artefato de emenda**
+  (verificado com `-f null`).
+- Fade-to-preto entre cenas em vez de crossfade: além de mais calmo para conteúdo de
+  sono, é o que permite o `-c copy` (crossfade obrigaria reencodar tudo).
+
+**Duas pegadinhas do `zoompan`, ambas medidas:**
+
+1. `-t` é opção de **saída** — vai depois do `-vf`. Com `-t` antes do `-i`, o
+   `-framerate` alimenta N frames de entrada e o `zoompan` gera `d` frames de saída
+   para cada um: milhões de frames, o comando nunca termina.
+2. `scale` **antes** do `zoompan` é obrigatório. O `zoompan` reescala a imagem inteira
+   a cada frame de saída; alimentá-lo com 4K direto é o que trava o render.
+
+O comando corrigido está na seção 6b do doc de viabilidade.
+
+## Imagens — ferramenta e direitos
+
+**Gerador: Draw Things + SD 1.5**, local. Decidido em 26/08/2026 após medir o
+hardware: MacBook Pro **M2, 8 GB de RAM, 11 GB livres**. Isso elimina SDXL (~7 GB) e
+Flux (~16–24 GB). Midjourney foi eliminado por não ter API — morreria na Fase 1.
+
+**Gerar em 640×360 e fazer upscale nearest-neighbor ×3 para 1920×1080.** Escala
+inteira e `flags=neighbor` são obrigatórias: qualquer interpolação borra a grade de
+pixels. Medido: o PNG nearest sai 5× menor que o lanczos e comprime melhor no vídeo.
+640×360 tem menos área que o nativo do SD 1.5, então cabe folgado em 8 GB — para
+pixel art, gerar pequeno é tecnicamente melhor, não concessão ao hardware.
+
+Estilo travado em `fase0/video-02/estilo.yaml` (prefixo, negativos, paleta, seed
+fixa por cena). Padrão emprestado do OpenMontage; o código dele é AGPL, não usar.
+
+**Para temas históricos, usar imagens de acervo livremente.** Decisão do Samuel em
+26/08/2026: **não gatear imagem por status de direito** — ele avaliou o risco de
+reclamação e assumiu. Não reabrir essa discussão. Fica só o registro leve de origem
+(instituição, URL, autor) em [docs/fontes-imagens.md](docs/fontes-imagens.md), que
+serve para refazer a imagem, não para autorizar.
+
+Preferir `uso: referencia_img2img` por motivo **estético**: pintura a óleo no meio de
+uma sequência de pixel art quebra a linguagem visual do canal.
+
+Diferença crítica em relação ao áudio: imagem no YouTube não passa por Content ID —
+reclamação vira *strike*, não claim. Áudio custa receita, imagem custa o canal.
+
+Quando a obra-fonte for histórica (ex.: Moby-Dick, 1851): **o texto original é PD, mas
+traduções publicadas são obra autoral protegida.** A adaptação em português tem que ser
+escrita por nós, nunca colada de tradução em catálogo.
+
+## Hardware e perfis
+
+Máquina atual: MacBook Pro **M2, 8 GB, 8 CPUs, sem GPU**. Migração para workstation
+planejada — ver [docs/migracao-workstation.md](docs/migracao-workstation.md).
+
+Nada nos estágios lê hardware direto: tudo passa por `pipeline/perfil.py`, que
+detecta GPU/RAM/CPU e devolve modelo de whisper, device, preset de x264 e
+paralelismo. Forçar com `PERFIL=teste|m2-8gb|workstation`.
+
+Gargalo medido: `s4_legendas` com `large-v3` em CPU roda a **3,44× realtime** —
+~87 min por vídeo. `s2_tts` leva ~12 min e `s5_render` 8 min. A máquina nova compra
+de volta basicamente o tempo de legenda.
+
 ## Não pular a Fase 0
 
 O maior risco do projeto não é técnico — é construir automação eficiente demais para um
@@ -39,5 +126,8 @@ depender desses valores em código.
 
 ## Estrutura do repositório
 
-Ainda em Fase 0 — sem pipeline/scripts. Estrutura cresce por fase (ver README.md).
+Fase 0 (validação manual) rodando em paralelo com a Fase 1 (automação dos estágios
+mecânicos). `pipeline/` já tem `s2_tts`, `s4_legendas` e `s5_render` — ver
+[pipeline/README.md](pipeline/README.md). `s1_roteiro.py` e `s6_upload.py` continuam
+proibidos até 2–3 vídeos publicados.
 `output/` e `state/` (quando existirem) são gerados localmente e não versionados.

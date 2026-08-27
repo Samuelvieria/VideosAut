@@ -1,0 +1,66 @@
+# Playbook visual — trava a identidade entre as 20 cenas deste vídeo E entre vídeos.
+# Padrão emprestado do OpenMontage (styles/), não o código dele — é AGPL.
+# Referência de estilo: imagem do velho no cais (gerada por IA pelo Samuel).
+
+id: baleeiro-pixel
+versao: 1
+
+gerador:
+  app: Draw Things            # Mac App Store, grátis, nativo Apple Silicon
+  base: SD 1.5                # NÃO SDXL: 8 GB de RAM e 11 GB livres em disco
+  nota_base: |
+    SD 1.5 (~2 GB) contra SDXL (~7 GB). Além do espaço, a fraqueza do SD 1.5 é
+    detalhe fino de alta frequência — que pixel art não tem. Para este estilo
+    específico a perda é quase nula.
+  lora: pixel art             # buscar na aba de LoRAs do Draw Things
+  automacao: |
+    Draw Things expõe um servidor de API local. É o motivo de escolher ele em vez
+    de Midjourney: sobrevive à Fase 1. VERIFICAR o protocolo exato antes de
+    depender disso no pipeline.
+
+resolucao:
+  gerar: [640, 360]
+  entregar: [1920, 1080]
+  upscale: "ffmpeg -i in.png -vf scale=1920:1080:flags=neighbor out.png"
+  nota: |
+    ×3 exato. Escala INTEIRA e NEAREST são obrigatórias — qualquer interpolação
+    (lanczos, bicubic) borra a grade de pixels e mata o estilo. Medido: o PNG
+    nearest sai 5× menor que o lanczos, e comprime melhor no vídeo.
+
+prompt_prefixo: >-
+  pixel art, detailed 16-bit style, dark moody palette of deep blue-greys and
+  near-black shadows, warm amber lantern and firelight accents, dramatic rim
+  lighting, cinematic wide composition, heavy sea and rain atmosphere
+
+prompt_negativo: >-
+  text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars,
+  plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic,
+  3d render, oversaturated, deformed hands, extra limbs
+
+paleta:
+  sombra:  "#0d1117"
+  frio:    "#2b3a4a"
+  medio:   "#4a5a6a"
+  destaque_quente: "#e8a54b"
+  fogo:    "#c8632a"
+
+seed:
+  politica: fixa-por-cena
+  base: 20260826
+  formula: "seed = base + n_cena"
+  nota: |
+    Seed fixa por cena torna a regeração determinística — se a cena 9 precisar de
+    ajuste, as outras 19 não mudam. Guardar a seed usada junto com a imagem.
+
+amostragem:
+  steps: 24
+  cfg: 7.0
+  sampler: DPM++ 2M Karras
+
+img2img_historico:
+  quando: cenas com âncora em obra de domínio público (ver plano.json)
+  strength: 0.55
+  nota: |
+    Composição e veracidade histórica vêm da obra PD; o traço vem do gerador.
+    0.55 é ponto de partida — abaixo disso a saída fica parecida demais com a
+    fonte, acima perde o enquadramento que era o motivo de usar a referência.

@@ -16,3 +16,19 @@ logs/
 
 # SO
 .DS_Store
+
+# Artefatos do pipeline
+__pycache__/
+*.pyc
+*.stamp
+build/
+imagens/
+audio/
+.venv/
+
+# Biblioteca de sons (grande; ver docs/biblioteca-sons.md)
+*.mp3
+sons/
+
+# Projetos de teste descartaveis
+fase0/*/teste/

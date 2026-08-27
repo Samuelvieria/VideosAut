@@ -436,8 +436,14 @@ ffmpeg -i narracao.wav -i ambiente.flac -filter_complex "\
 
 ```bash
 # Renderize UM loop de 60 s com Ken Burns lento e GOP fechado
-ffmpeg -loop 1 -framerate 30 -t 60 -i bg_4k.png \
-  -vf "zoompan=z='min(zoom+0.00015,1.12)':d=1800:s=1920x1080:fps=30,format=yuv420p" \
+# ATENCAO: -t vai DEPOIS do -vf (opcao de saida). Com -t antes do -i, o -framerate 30
+# alimenta 1800 frames de entrada e o zoompan gera d=1800 frames de saida PARA CADA UM
+# deles = 3,24 milhoes de frames (~30 h de video). O comando nunca termina. [FATO, medido]
+# O scale antes do zoompan tambem e obrigatorio: o zoompan reescala a imagem inteira a
+# cada frame de saida, entao alimenta-lo com 4K e o que torna a rota cara. [FATO, medido]
+ffmpeg -loop 1 -framerate 30 -i bg_4k.png \
+  -vf "scale=2560:-2,zoompan=z='min(zoom+0.00015,1.12)':d=1800:s=1920x1080:fps=30,format=yuv420p" \
+  -t 60 \
   -c:v libx264 -preset slow -crf 20 \
   -g 60 -keyint_min 60 -sc_threshold 0 \
   -an loop60.mp4
