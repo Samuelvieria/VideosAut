@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block titulo %}Correções — {{ slug }}{% endblock %}
+{% block conteudo %}
+<p><a href="/projetos/{{ slug }}">&larr; {{ slug }}</a></p>
+<h1>Correções</h1>
+<p>Anota aqui o que precisa de ajuste — cena específica ou geral (som,
+narração, etc). Não dispara nada sozinho; é registro pra não depender só do
+chat pra lembrar do que falta.</p>
+
+<div class="card">
+<form method="post" action="/projetos/{{ slug }}/correcoes">
+  <label>Cena (opcional, deixa em branco se for geral)
+    <input type="number" name="cena" min="1" max="99" style="width:6em">
+  </label>
+  <label>O que precisa mudar
+    <textarea name="texto" rows="3" cols="60" required
+              placeholder="ex.: cena 9, a cicatriz do rosto não aparece"></textarea>
+  </label>
+  <button type="submit">Adicionar</button>
+</form>
+</div>
+
+<h2>Abertas ({{ abertas|length }})</h2>
+{% if not abertas %}
+  <p><em>nenhuma pendência.</em></p>
+{% endif %}
+{% for i in abertas %}
+  <div class="card">
+    <span class="tag aberta">aberta</span>
+    {% if i.cena %}<strong>cena {{ i.cena }}</strong> — {% endif %}{{ i.texto }}
+    <div style="margin-top:0.5rem">
+      <form method="post" action="/projetos/{{ slug }}/correcoes/{{ i.id }}/resolver" style="display:inline">
+        <button type="submit">marcar resolvida</button>
+      </form>
+      <span style="color:var(--texto-fraco); font-size:0.85rem">{{ i.criado_em }}</span>
+    </div>
+  </div>
+{% endfor %}
+
+<h2>Resolvidas ({{ resolvidas|length }})</h2>
+{% for i in resolvidas %}
+  <div class="card" style="opacity:0.7">
+    <span class="tag resolvida">resolvida</span>
+    {% if i.cena %}<strong>cena {{ i.cena }}</strong> — {% endif %}{{ i.texto }}
+    <div style="margin-top:0.5rem">
+      <form method="post" action="/projetos/{{ slug }}/correcoes/{{ i.id }}/reabrir" style="display:inline">
+        <button type="submit">reabrir</button>
+      </form>
+      <span style="color:var(--texto-fraco); font-size:0.85rem">{{ i.resolvida_em }}</span>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

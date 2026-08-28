@@ -12,6 +12,12 @@ com Claude Code em [CLAUDE.md](CLAUDE.md).
 (roteiro, TTS, render) antes de automatizar qualquer etapa. Objetivo: descobrir o que
 retém público antes de construir uma fábrica de conteúdo que ninguém assiste.
 
+## Interface
+
+[estudio/](estudio/README.md) — app web local (FastAPI) pra acompanhar projetos,
+personas e disparar estágios do pipeline sem linha de comando. Ainda não faz roteiro
+por LLM nem upload; ver o README dele pro que existe e o porquê dos limites.
+
 ## Roadmap
 
 | Fase | Escopo |

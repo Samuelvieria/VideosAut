@@ -1,0 +1,123 @@
+/* Paleta emprestada do próprio canal (pipeline/s5_render.py::placeholders) —
+   deep blue-grey + âmbar, a mesma linguagem visual das cenas em pixel art. */
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --bg-elevado: #161c26;
+  --bg-card: #1a212d;
+  --borda: #2b3a4a;
+  --texto: #dde3ea;
+  --texto-fraco: #8a97a8;
+  --ambar: #e8a54b;
+  --ambar-forte: #c8632a;
+  --verde: #5fb98c;
+  --vermelho: #d9685f;
+  --raio: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  line-height: 1.55;
+}
+
+h1, h2, h3 { color: #f3f0e8; font-weight: 600; letter-spacing: 0.01em; }
+h1 { font-size: 1.6rem; margin: 1.2rem 0 0.4rem; }
+h2 {
+  font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ambar); margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--borda);
+  padding-bottom: 0.4rem;
+}
+
+a { color: var(--ambar); text-decoration: none; }
+a:hover { color: var(--ambar-forte); text-decoration: underline; }
+
+nav.topo {
+  display: flex; gap: 1.5rem; align-items: center;
+  padding: 1rem 0; margin-bottom: 0.5rem; border-bottom: 1px solid var(--borda);
+}
+nav.topo a { font-weight: 600; font-size: 0.95rem; color: var(--texto); }
+nav.topo a:hover { color: var(--ambar); text-decoration: none; }
+
+table.lista { border-collapse: collapse; width: 100%; margin: 0.5rem 0 1.5rem; }
+table.lista th {
+  text-align: left; font-size: 0.78rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--texto-fraco); padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid var(--borda);
+}
+table.lista td {
+  padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--bg-elevado);
+  vertical-align: middle;
+}
+table.lista tr:hover td { background: var(--bg-elevado); }
+
+.console {
+  background: #05070a;
+  color: #b9c4d1;
+  padding: 0.85rem 1rem;
+  height: 280px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--bg-card);
+  padding: 1rem 1.2rem;
+}
+legend {
+  color: var(--ambar); font-weight: 600; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.04em; padding: 0 0.4rem;
+}
+
+label { display: block; margin-bottom: 0.6rem; font-size: 0.92rem; }
+label small { color: var(--texto-fraco); display: block; margin-top: 0.2rem; }
+
+input[type="text"], input[type="number"], textarea, select {
+  background: var(--bg); color: var(--texto); border: 1px solid var(--borda);
+  border-radius: 6px; padding: 0.4rem 0.6rem; font-size: 0.92rem;
+  font-family: inherit; margin-top: 0.3rem;
+}
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--ambar); outline-offset: 1px; }
+
+input[type="range"] { accent-color: var(--ambar); width: 220px; vertical-align: middle; }
+output { color: var(--ambar); font-weight: 600; margin-left: 0.4rem; }
+
+button {
+  cursor: pointer; padding: 0.5rem 1rem; border-radius: 6px;
+  border: 1px solid var(--ambar-forte); background: var(--ambar);
+  color: #1a1206; font-weight: 600; font-size: 0.9rem;
+}
+button:hover { background: var(--ambar-forte); color: #fff; }
+button:disabled { cursor: not-allowed; opacity: 0.5; }
+
+audio { display: block; max-width: 420px; margin: 0.6rem 0; }
+video { border-radius: var(--raio); border: 1px solid var(--borda); }
+
+.card {
+  background: var(--bg-card); border: 1px solid var(--borda);
+  border-radius: var(--raio); padding: 1rem 1.2rem; margin-bottom: 1rem;
+}
+
+ul { padding-left: 1.1rem; }
+li { margin-bottom: 0.4rem; }
+
+.tag {
+  display: inline-block; font-size: 0.72rem; padding: 0.1rem 0.5rem;
+  border-radius: 999px; background: var(--bg-elevado); color: var(--texto-fraco);
+  border: 1px solid var(--borda);
+}
+.tag.aberta { color: var(--vermelho); border-color: var(--vermelho); }
+.tag.resolvida { color: var(--verde); border-color: var(--verde); }

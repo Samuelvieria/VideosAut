@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block titulo %}Mixer — {{ slug }}{% endblock %}
+{% block conteudo %}
+<p><a href="/projetos/{{ slug }}">&larr; {{ slug }}</a></p>
+<h1>Mixer de áudio</h1>
+<p>Ajusta e clica em "gerar preview" — refaz só o áudio (segundos), não o vídeo
+inteiro. Ouve o resultado, ajusta de novo, até bater o ponto certo.</p>
+
+<form method="post" action="/projetos/{{ slug }}/mixagem">
+  <fieldset>
+    <legend>Voz</legend>
+    <label>Volume (depois da compressão, antes do eco) — atual: {{ valores.voz_ganho }}<br>
+      <input type="range" name="voz_ganho" min="0.3" max="2.0" step="0.05"
+             value="{{ valores.voz_ganho }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.voz_ganho }}</output>
+    </label><br><br>
+    <label>Reverb (sala pequena — 0 = seca, 1 = eco forte) — atual: {{ valores.voz_reverb }}<br>
+      <input type="range" name="voz_reverb" min="0" max="1" step="0.05"
+             value="{{ valores.voz_reverb }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.voz_reverb }}</output>
+    </label><br><br>
+    <label>De-esser (reduz "S"/"Ç" estourado — o que mais acorda em fone) — atual: {{ valores.voz_deesser }}<br>
+      <input type="range" name="voz_deesser" min="0" max="1" step="0.05"
+             value="{{ valores.voz_deesser }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.voz_deesser }}</output>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Ambiente (som de fundo)</legend>
+    <label>Ganho (quão alto, antes do ducking) — atual: {{ valores.ambiente_ganho }}<br>
+      <input type="range" name="ambiente_ganho" min="0.0" max="1.2" step="0.02"
+             value="{{ valores.ambiente_ganho }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.ambiente_ganho }}</output>
+    </label><br><br>
+    <label>Reverb (0 = seco, 1 = sala grande) — atual: {{ valores.ambiente_reverb }}<br>
+      <input type="range" name="ambiente_reverb" min="0" max="1" step="0.05"
+             value="{{ valores.ambiente_reverb }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.ambiente_reverb }}</output>
+    </label><br><br>
+    <label>Corte de agudo em Hz (mais baixo = mais "distante/abafado") — atual: {{ valores.ambiente_lowpass_hz }}<br>
+      <input type="range" name="ambiente_lowpass_hz" min="1000" max="12000" step="250"
+             value="{{ valores.ambiente_lowpass_hz }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.ambiente_lowpass_hz }}</output> Hz
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Ducking (o ambiente abaixando quando tem narração)</legend>
+    <label>Threshold (quão pouco de voz já abaixa o ambiente) — atual: {{ valores.duck_threshold }}<br>
+      <input type="range" name="duck_threshold" min="0.01" max="0.3" step="0.01"
+             value="{{ valores.duck_threshold }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.duck_threshold }}</output>
+    </label><br><br>
+    <label>Ratio (quanto abaixa) — atual: {{ valores.duck_ratio }}<br>
+      <input type="range" name="duck_ratio" min="1" max="10" step="0.5"
+             value="{{ valores.duck_ratio }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.duck_ratio }}</output>
+    </label><br><br>
+    <label>Attack em ms (quão rápido abaixa) — atual: {{ valores.duck_attack_ms }}<br>
+      <input type="range" name="duck_attack_ms" min="10" max="500" step="10"
+             value="{{ valores.duck_attack_ms }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.duck_attack_ms }}</output> ms
+    </label><br><br>
+    <label>Release em ms (quão rápido volta ao normal) — atual: {{ valores.duck_release_ms }}<br>
+      <input type="range" name="duck_release_ms" min="50" max="3000" step="50"
+             value="{{ valores.duck_release_ms }}"
+             oninput="this.nextElementSibling.value=this.value">
+      <output>{{ valores.duck_release_ms }}</output> ms
+      <br><small>Curto demais (abaixo de ~500ms) faz o ambiente "bombear"
+      audivelmente a cada sílaba. Pra sono, 1500-3000ms com uma redução
+      pequena (ratio baixo) é mais suave do que reagir rápido — o ambiente
+      abaixa devagar e sobe devagar, sem virar evento perceptível.</small>
+    </label>
+  </fieldset>
+
+  <button type="submit">Salvar valores</button>
+</form>
+
+<h2>Preview rápido</h2>
+<div class="card">
+  <p style="margin-top:0; color:var(--texto-fraco)">Processa só um TRECHO —
+  poucos segundos em vez de esperar o mix inteiro (33 min). Escolhe uma cena
+  com narração + ambiente juntos pra ouvir o ducking de verdade, não só o
+  ambiente sozinho.</p>
+  <label style="display:inline-block; margin-right:1.5rem">Cena
+    <select id="preview-cena">
+      {% for c in cenas %}
+      <option value="{{ c.offset }}">{{ c.n }} — {{ c.titulo }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label style="display:inline-block">Duração
+    <input type="number" id="preview-dur" value="45" min="10" max="180" style="width:5em"> s
+  </label>
+  <div style="margin-top:0.8rem">
+    <button id="btn-mix" onclick="gerarPreviewCurto('{{ slug }}')">
+      gerar preview (salva os valores acima antes)
+    </button>
+  </div>
+  <pre id="log-mix" class="console" style="margin-top:0.8rem"></pre>
+  <audio id="player-preview" controls style="{{ '' if tem_preview_curto else 'display:none' }}"
+         src="/projetos/{{ slug }}/arquivos/mix-preview"></audio>
+</div>
+
+<h2>Mix completo</h2>
+<div class="card">
+  <p style="margin-top:0; color:var(--texto-fraco)">Usa os MESMOS valores
+  salvos acima, aplicados ao áudio do vídeo inteiro (~1 min pra processar,
+  não é instantâneo como o preview, mas também não precisa re-renderizar
+  vídeo nenhum). É esse arquivo que entra no vídeo final quando ele for
+  montado — o preview curto e o mix completo sempre usam a mesma
+  configuração, não são coisas separadas.</p>
+  <button id="btn-mix-completo" onclick="gerarMixCompleto('{{ slug }}')">
+    gerar mix completo (33 min, ~1 min de espera)
+  </button>
+  <pre id="log-mix-completo" class="console" style="margin-top:0.8rem"></pre>
+  {% if tem_preview %}
+  <audio id="player-completo" controls src="/projetos/{{ slug }}/arquivos/mix"></audio>
+  {% else %}
+  <audio id="player-completo" controls style="display:none"></audio>
+  {% endif %}
+</div>
+
+<script src="/static/estudio.js"></script>
+<script>
+// salva o formulário via fetch antes de disparar o preview, pra não precisar
+// de dois cliques (salvar, depois gerar)
+document.querySelector("form").addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  fetch(ev.target.action, {method: "POST", body: new FormData(ev.target)})
+    .then(() => location.reload());
+});
+
+async function gerarPreviewCurto(slug) {
+  // salva antes, senão o preview usa o valor antigo
+  await fetch(`/projetos/${slug}/mixagem`, {method: "POST", body: new FormData(document.querySelector("form"))});
+  const inicio = document.getElementById("preview-cena").value;
+  const dur = document.getElementById("preview-dur").value;
+  const ok = await rodarEstagio(slug, "mixagem-preview", "btn-mix", "log-mix",
+                                 {preview_inicio: inicio, preview_dur: dur});
+  if (!ok) return;
+  const player = document.getElementById("player-preview");
+  player.style.display = "";
+  player.src = `/projetos/${slug}/arquivos/mix-preview?t=${Date.now()}`;
+  player.load();
+  player.play().catch(() => {});
+}
+
+async function gerarMixCompleto(slug) {
+  // mesmos valores salvos, sem preview_inicio/preview_dur = mix.m4a inteiro
+  await fetch(`/projetos/${slug}/mixagem`, {method: "POST", body: new FormData(document.querySelector("form"))});
+  const ok = await rodarEstagio(slug, "mixagem-preview", "btn-mix-completo", "log-mix-completo", {});
+  if (!ok) return;
+  const player = document.getElementById("player-completo");
+  player.style.display = "";
+  player.src = `/projetos/${slug}/arquivos/mix?t=${Date.now()}`;
+  player.load();
+}
+</script>
+{% endblock %}

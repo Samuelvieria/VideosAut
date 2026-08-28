@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}Personas{% endblock %}
+{% block conteudo %}
+<h1>Personas</h1>
+<p><a href="/personas/novo">+ nova persona</a></p>
+<table class="lista">
+  <thead><tr><th>Nome</th><th>Voz PT</th><th>Voz EN</th><th></th></tr></thead>
+  <tbody>
+  {% for p in personas %}
+    <tr>
+      <td>{{ p.nome }}</td>
+      <td>{{ p.vozes.pt.voice }} (speed {{ p.vozes.pt.speed if p.vozes.pt.speed is not none else 'pendente' }})</td>
+      <td>{{ p.vozes.en.voice or '— (TBD)' }}</td>
+      <td><a href="/personas/{{ p.id }}/editar">editar</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

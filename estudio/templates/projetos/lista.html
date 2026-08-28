@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block titulo %}Projetos{% endblock %}
+{% block conteudo %}
+<h1>Projetos</h1>
+{% if not projetos %}
+  <p>Nenhum projeto encontrado em <code>fase0/</code>.</p>
+{% endif %}
+<table class="lista">
+  <thead>
+    <tr><th>Título</th><th>Duração alvo</th><th>Cenas</th><th>Vídeo</th><th>Legendas</th></tr>
+  </thead>
+  <tbody>
+  {% for p in projetos %}
+    <tr>
+      <td><a href="/projetos/{{ p.slug }}">{{ p.titulo }}</a></td>
+      <td>{% if p.duracao_alvo_s %}{{ (p.duracao_alvo_s / 60) | round(0, 'floor') | int }} min{% else %}—{% endif %}</td>
+      <td>{{ p.num_cenas }}</td>
+      <td>{{ '✓' if p.tem_video else '—' }}</td>
+      <td>{{ '✓' if p.tem_legendas else '—' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

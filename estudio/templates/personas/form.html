@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block titulo %}{{ 'Editar persona' if persona else 'Nova persona' }}{% endblock %}
+{% block conteudo %}
+<p><a href="/personas">&larr; personas</a></p>
+<h1>{{ 'Editar persona' if persona else 'Nova persona' }}</h1>
+<form method="post" action="{{ acao }}">
+  <label>Nome<br>
+    <input type="text" name="nome" value="{{ persona.nome if persona else '' }}" required>
+  </label><br><br>
+
+  <label>Descrição / direção de voz<br>
+    <textarea name="descricao" rows="4" cols="60">{{ persona.descricao if persona else '' }}</textarea>
+  </label><br><br>
+
+  <fieldset>
+    <legend>Voz — Português (Kokoro)</legend>
+    <label>voice id<br>
+      <input type="text" name="voz_pt_voice"
+             value="{{ persona.vozes.pt.voice if persona else 'pm_santa' }}" required>
+    </label><br>
+    <label>speed<br>
+      <input type="number" step="0.01" name="voz_pt_speed"
+             value="{{ persona.vozes.pt.speed if persona else 0.80 }}" required>
+    </label><br>
+    <label>nota<br>
+      <input type="text" name="voz_pt_nota" size="60"
+             value="{{ persona.vozes.pt.nota if persona else '' }}">
+    </label>
+  </fieldset>
+
+  <fieldset disabled>
+    <legend>Voz — Inglês</legend>
+    <p>TBD — nenhum engine de voz em inglês definido no projeto ainda.</p>
+  </fieldset>
+
+  <br>
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %}

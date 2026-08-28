@@ -1,0 +1,57 @@
+{
+  "personas": [
+    {
+      "id": "marinheiro",
+      "nome": "O Marinheiro",
+      "descricao": "Velho baleeiro aposentado, cansado, fala devagar sem pressa, como quem já contou a história muitas vezes. Usado no video-02 (Moby Dick).",
+      "vozes": {
+        "pt": {
+          "engine": "kokoro",
+          "voice": "pm_santa",
+          "speed": 0.6,
+          "nota": "Padronizado em 0.60 em 27/08/2026 (era 0.75; antes 0.80 no video-01). Mecanismo antigo (speed baixo estica a fala); mantido como está porque o video-02 já foi aprovado de ouvido — não refeito. Personas novas usam o mecanismo corrigido (pausa crescente, não speed baixo) — ver SKILL.md § Ritmo de narração."
+        },
+        "en": {
+          "engine": null,
+          "voice": null,
+          "speed": null,
+          "nota": "TBD — nenhum engine de voz em inglês escolhido ainda."
+        }
+      },
+      "criado_em": "2026-08-27T00:00:00-03:00",
+      "origem_video": "fase0/video-02"
+    },
+    {
+      "id": "guardiao",
+      "nome": "O Guardião",
+      "descricao": "Voz masculina alternativa (pm_alex) — candidato pra narrador de episódios futuros que não sejam do universo do Marinheiro/baleeiro (ex.: Frankenstein, A Máquina do Tempo). PENDENTE DE AUDIÇÃO — ver amostras.",
+      "vozes": {
+        "pt": {
+          "engine": "kokoro",
+          "voice": "pm_alex",
+          "speed": null,
+          "nota": "PENDENTE: escolher speed depois de ouvir as amostras (speed=0.60 e speed=1.00 geradas em 28/08/2026). Metodologia nova: speed perto do natural + pausa crescente entre frases/parágrafos (FATOR_PAUSA_INICIO/FIM em s2_tts.py), não speed baixo. Ver SKILL.md § Ritmo de narração."
+        },
+        "en": {"engine": null, "voice": null, "speed": null, "nota": "TBD"}
+      },
+      "criado_em": "2026-08-28T00:00:00-03:00",
+      "origem_video": null
+    },
+    {
+      "id": "narradora",
+      "nome": "A Narradora",
+      "descricao": "Voz feminina (pf_dora) — candidato pra episódios com narração feminina ou pra variar o universo sonoro do canal. PENDENTE DE AUDIÇÃO — ver amostras.",
+      "vozes": {
+        "pt": {
+          "engine": "kokoro",
+          "voice": "pf_dora",
+          "speed": null,
+          "nota": "PENDENTE: mesma observação de velocidade da persona 'guardiao' — escolher speed depois de ouvir as amostras, via pausa crescente, não speed baixo."
+        },
+        "en": {"engine": null, "voice": null, "speed": null, "nota": "TBD"}
+      },
+      "criado_em": "2026-08-28T00:00:00-03:00",
+      "origem_video": null
+    }
+  ]
+}

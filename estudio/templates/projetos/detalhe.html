@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block titulo %}{{ plano.titulo }}{% endblock %}
+{% block conteudo %}
+<p><a href="/projetos">&larr; projetos</a></p>
+<h1>{{ plano.titulo }}</h1>
+<p style="color:var(--texto-fraco)">
+  {% if plano.duracao_alvo_s %}{{ (plano.duracao_alvo_s / 60) | round(0, 'floor') | int }} min alvo{% endif %}
+  · {{ plano.cenas | length }} cenas
+  {% if plano.voz %} · voz: {{ plano.voz.voice }} (speed {{ plano.voz.speed }}){% endif %}
+</p>
+
+{% if tem_video %}
+<h2>Vídeo final</h2>
+<video controls width="480" src="/projetos/{{ slug }}/video"></video>
+{% endif %}
+
+{% if tem_legendas %}
+<p><a href="/projetos/{{ slug }}/legendas" target="_blank">legendas.pt-BR.srt</a></p>
+{% endif %}
+
+<h2>Áudio &amp; correções</h2>
+<div class="card" style="display:flex; gap:2rem">
+  <a href="/projetos/{{ slug }}/mixagem">mixer de áudio &rarr;</a>
+  <a href="/projetos/{{ slug }}/correcoes">anotações de ajuste &rarr;</a>
+</div>
+
+<h2>Cenas</h2>
+<table class="lista">
+  <thead><tr><th>N</th><th>Título</th><th>Papel</th><th>Imagem</th><th>Áudio</th></tr></thead>
+  <tbody>
+  {% for c in plano.cenas %}
+    {% set nome_img = "cena_%02d.png" | format(c.n) %}
+    {% set nome_audio = "cena_%02d.wav" | format(c.n) %}
+    <tr>
+      <td>{{ c.n }}</td>
+      <td>{{ c.titulo }}</td>
+      <td>{{ c.papel }}</td>
+      <td>
+        {% if nome_img in imagens %}
+          <a href="/projetos/{{ slug }}/arquivos/imagens/{{ nome_img }}" target="_blank">ver</a>
+        {% else %}—{% endif %}
+      </td>
+      <td>
+        {% if nome_audio in audios %}
+          <audio controls src="/projetos/{{ slug }}/arquivos/audio/{{ nome_audio }}"></audio>
+        {% else %}—{% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>Estágios</h2>
+<div class="card">
+  <button id="btn-imagens-seco"
+          onclick="rodarEstagio('{{ slug }}', 'imagens-seco', 'btn-imagens-seco', 'log-imagens-seco')">
+    rodar s3_imagens --seco (grátis — só monta os prompts, não gasta)
+  </button>
+  <pre id="log-imagens-seco" class="console" style="margin-top:0.8rem"></pre>
+</div>
+
+<script src="/static/estudio.js"></script>
+{% endblock %}
