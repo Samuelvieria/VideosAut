@@ -1,5 +1,6 @@
 {
   "titulo": "Moby Dick contada por um velho baleeiro | História para Dormir",
+  "obra": "Moby-Dick, Herman Melville — 19th century whaling story",
   "duracao_alvo_s": 1800,
   "narrado_s": 1430,
   "cauda_ambiente_s": 370,
@@ -7,13 +8,26 @@
   "voz": {
     "engine": "kokoro",
     "voice": "pm_santa",
-    "speed": 0.75,
-    "nota": "0.80 foi validado no video-01. Baixado para 0.75 aqui porque a persona é um homem idoso e cansado. RE-TESTAR antes de gerar a narração completa — se não melhorar, voltar para 0.80 (ver CLAUDE.md)."
+    "speed": 0.6,
+    "nota": "Padronizado em 0.60 em 27/08/2026 (era 0.75, antes disso 0.80 no video-01). Ver CLAUDE.md."
   },
   "ambiente": {
     "_nota": "Ambiente por CENA, não uma trilha única. Segue o lugar e o momento do roteiro: da tempestade no cais, para dentro da estalagem com lareira, para o mar aberto, para a calmaria. A transição acontece no mesmo instante do fade para preto entre cenas, então soa intencional.",
     "sintese": "pipeline/ambiente.py — mar por eventos de onda, não ruído modulado",
     "fonte_externa": null
+  },
+  "mixagem": {
+    "_nota": "Editável pelo mixer do estudio/ (roda só pipeline/s5_render.py --so-mix pra ouvir sem re-renderizar o vídeo). Valores = MIXAGEM_PADRAO em pipeline/s5_render.py.",
+    "ambiente_ganho": 0.3,
+    "ambiente_reverb": 0.85,
+    "ambiente_lowpass_hz": 3500,
+    "duck_threshold": 0.05,
+    "duck_ratio": 2.0,
+    "duck_attack_ms": 170,
+    "duck_release_ms": 1600,
+    "voz_ganho": 0.6,
+    "voz_reverb": 0.45,
+    "voz_deesser": 0.25
   },
   "direitos": {
     "texto_fonte": "Moby-Dick, Herman Melville, 1851 — domínio público",
@@ -29,6 +43,7 @@
       "dur_s": 65,
       "papel": "moldura-abre",
       "titulo": "O velho no cais",
+      "personagem": "the old whaler, narrator of the story",
       "prompt": "an old weathered whaler, grey beard, dark navy peacoat, flat wool cap, clay pipe, heavy boots, standing alone at the end of a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind, at night in heavy rain, holding a lit oil lantern low at his side, stormy sea and breaking waves behind him, lighthouse beam cutting through the rain",
       "ambiente": {
         "mar": 1.0,
@@ -44,6 +59,7 @@
       "dur_s": 70,
       "papel": "narrado",
       "titulo": "Ismael em New Bedford",
+      "personagem": "Ishmael, the young sailor narrator of the original novel",
       "prompt": "a lean young sailor in a worn brown coat with a canvas sea bag, walking down a narrow cobbled street of a 19th century whaling town at night, sleet falling, warm yellow light spilling from small inn windows, dark clapboard houses leaning over the street",
       "ambiente": {
         "mar": 0.15,
@@ -59,6 +75,7 @@
       "dur_s": 70,
       "papel": "narrado",
       "titulo": "A estalagem",
+      "personagem": "unnamed sailors at a whaling inn",
       "prompt": "interior of a cramped 19th century sailors inn at night, low beamed ceiling, large fireplace throwing amber light, harpoons and whale jawbone on the wall, weathered sailors hunched over a long table, thick pipe smoke",
       "ambiente": {
         "mar": 0.0,
@@ -74,7 +91,8 @@
       "dur_s": 75,
       "papel": "narrado",
       "titulo": "Queequeg",
-      "prompt": "a very tall Polynesian harpooner, dark geometric tattoos covering face, neck and arms, shaved head with a topknot, seated on the edge of a bed in a dark inn room, sharpening a harpoon by candlelight, face half in shadow, a small wooden idol on the nightstand, single candle as the only light source",
+      "personagem": "Queequeg, the tattooed harpooner",
+      "prompt": "close view of a very tall Polynesian harpooner whose entire face is densely covered in bold dark blue-black tribal tattoo patterns across forehead, cheeks, nose and chin, more tattoo bands spiraling down his neck and both arms, bald shaved head with one small topknot, seated on the edge of a narrow bed in a cramped dark inn room, both hands gripping the wooden shaft of a whaling harpoon with a distinct long barbed iron harpoon head, sharpening the barbed blade with a whetstone, warm candlelight from a single candle on the nightstand falling directly on his tattooed face, a small carved wooden idol beside the candle",
       "ambiente": {
         "mar": 0.0,
         "chuva": 0.3,
@@ -89,7 +107,8 @@
       "dur_s": 70,
       "papel": "narrado",
       "titulo": "A capela dos baleeiros",
-      "prompt": "interior of a small austere seamans chapel, rows of empty wooden pews, cold grey light from tall windows, marble memorial tablets covering the walls, a pulpit shaped like the prow of a ship, one figure seated alone at the back",
+      "personagem": "an unnamed lone sailor",
+      "prompt": "interior of a small austere seamans chapel, rows of empty wooden pews, cold grey light from tall windows, marble memorial tablets covering the walls, a pulpit shaped like the prow of a ship, a small dark silhouette of a single hooded man sitting alone in the back-most pew, his head bowed, clearly visible against the empty pews around him",
       "ambiente": {
         "mar": 0.1,
         "chuva": 0.2,
@@ -104,6 +123,7 @@
       "dur_s": 65,
       "papel": "narrado",
       "titulo": "Nantucket ao amanhecer",
+      "personagem": "no character — the whaling harbor itself",
       "prompt": "a whaling harbor at cold grey dawn, dozens of tall bare masts crowded together, low mist over black water, stacked barrels and coiled rope on the quay, gulls, muted blue and slate palette",
       "ambiente": {
         "mar": 0.35,
@@ -119,6 +139,7 @@
       "dur_s": 80,
       "papel": "narrado",
       "titulo": "O Pequod",
+      "personagem": "no character — the whaling ship Pequod itself",
       "prompt": "a dark weathered whaling ship moored at a quay, its rails and bulwarks studded with polished whale teeth and bone, tiller carved from a whale jaw, tarred rigging, sky heavy and overcast, ominous silhouette",
       "ambiente": {
         "mar": 0.4,
@@ -134,6 +155,7 @@
       "dur_s": 70,
       "papel": "narrado",
       "titulo": "A partida",
+      "personagem": "the whaling ship Pequod and its crew, departing",
       "prompt": "a whaling ship under full sail leaving a snow-dusted harbor on a grey winter morning, small figures on the receding quay, open slate-coloured ocean ahead, cold desaturated palette with one faint warm break in the clouds",
       "ambiente": {
         "mar": 0.6,
@@ -149,7 +171,8 @@
       "dur_s": 85,
       "papel": "narrado",
       "titulo": "Ahab no convés",
-      "prompt": "a tall gaunt sea captain, long black coat, white ivory peg leg, a livid white scar running down one side of his face into his collar, standing motionless on a ship deck at night, the ivory leg braced in a socket bored into the planking, moonlight rim-lighting him from behind, deck otherwise empty",
+      "personagem": "Captain Ahab, obsessive captain with an ivory peg leg",
+      "prompt": "full-length view from head to boots of a tall gaunt sea captain standing alone on an empty ship deck at night, his whole body visible in frame, wearing a long black coat, one leg is a carved wooden prosthetic shaped like a table leg with turned ridged rings, made of pale bone-white ivory, bare of any trouser fabric, its rounded tip planted into a round hole in the wooden deck planking, his gaunt face turned toward bright cold moonlight revealing a thick pale scar shaped like a lightning bolt zigzagging from his hairline across his forehead and left eye down his cheek to his collar, dark open sea visible past the railing behind him",
       "ambiente": {
         "mar": 0.7,
         "chuva": 0.0,
@@ -164,6 +187,7 @@
       "dur_s": 80,
       "papel": "narrado",
       "titulo": "O dobrão no mastro",
+      "personagem": "the ship's crew, gathered sailors",
       "prompt": "close view of a gold Spanish doubloon nailed to a ships mainmast, glinting warm against dark tarred wood, a ring of shadowed sailors faces gathered around it in lantern light, raised harpoons crossed above",
       "ambiente": {
         "mar": 0.5,
@@ -179,7 +203,8 @@
       "dur_s": 75,
       "papel": "narrado",
       "titulo": "A caça",
-      "prompt": "three small whaleboats rowing hard across heavy grey swell, oars biting the water, a harpooner standing in the bow of the nearest boat, the dark bulk of a whale breaking the surface in the distance, spray and low storm light",
+      "personagem": "unnamed whalers, harpooners in the whaleboats",
+      "prompt": "three small whaleboats rowing hard across heavy grey swell, oars biting the water, a harpooner standing in the bow of the nearest boat with a raised harpoon, far in the background only a low dark curved back and a small puff of spray mark a whale mostly submerged near the horizon, spray and low storm light",
       "ambiente": {
         "mar": 1.0,
         "chuva": 0.0,
@@ -194,6 +219,7 @@
       "dur_s": 75,
       "papel": "narrado",
       "titulo": "As fornalhas",
+      "personagem": "the ship's crew, working the try-works",
       "prompt": "a whaling ship deck at night with the try-works furnaces blazing, huge iron cauldrons of boiling whale oil, thick red and orange firelight throwing enormous distorted shadows of the crew onto the sails, black smoke against the night sky",
       "ambiente": {
         "mar": 0.45,
@@ -209,6 +235,7 @@
       "dur_s": 75,
       "papel": "narrado",
       "titulo": "Starbuck",
+      "personagem": "Starbuck, the ship's anxious first mate",
       "prompt": "a young first mate, sandy hair, plain dark jacket, worn anxious face, alone in a dark ship corridor at night holding a musket, hesitating outside a cabin door with faint amber light beneath it, a single swinging lantern casting moving shadows",
       "ambiente": {
         "mar": 0.25,
@@ -224,6 +251,7 @@
       "dur_s": 65,
       "papel": "narrado",
       "titulo": "A calmaria",
+      "personagem": "no character — the Pequod becalmed",
       "prompt": "a whaling ship becalmed on a perfectly flat mirror-like sea at sunset, sails hanging slack, ship and reflection almost symmetrical, immense sky burning deep orange and violet down to the horizon, profound stillness",
       "ambiente": {
         "mar": 0.15,
@@ -239,6 +267,7 @@
       "dur_s": 70,
       "papel": "narrado",
       "titulo": "O Rachel",
+      "personagem": "the captain of the whaling ship Rachel, a different captain than Ahab",
       "prompt": "a desperate ship captain who has just climbed aboard another whaling ship, standing on the deck pleading with the crew, his own ship lashed alongside, both vessels rolling on grey open ocean, the listening crew silent and turned away, cold overcast light",
       "ambiente": {
         "mar": 0.55,
@@ -254,7 +283,11 @@
       "dur_s": 80,
       "papel": "narrado",
       "titulo": "A baleia branca",
-      "prompt": "extreme close view of a vast wall of pale scarred whale forehead breaking the surface of black storm water, a sheer flat wrinkled cliff of white flesh filling the entire left of the frame, one small dark eye low near the waterline, rusted broken harpoon irons embedded in the old scars, a tiny six-man whaleboat at the far right for scale, spray and foam, heavy storm sky",
+      "personagem": "the white whale Moby Dick",
+      "contexto_narrativo": false,
+      "seed_de": 916,
+      "_nota_contexto": "desligado: nomear a baleia no contexto reativa o vies de pose de salto (jubarte) que o prompt visual ja evita — ver s3_imagens.py",
+      "prompt": "extreme vertical close-up shot at the waterline filling the whole frame with only a pale scarred whale forehead rising just above the black water, most of its enormous body cropped out of frame below the waterline, water sheeting off the exposed wrinkled skin, one small dark eye visible near the waterline, rusted broken harpoon irons embedded in the old scars, a small whaleboat visible near the edge of frame for scale, spray, heavy storm sky",
       "ambiente": {
         "mar": 1.0,
         "chuva": 0.0,
@@ -270,7 +303,8 @@
       "dur_s": 85,
       "papel": "narrado",
       "titulo": "O naufrágio",
-      "prompt": "a whaling ship going down bow-first into a churning vortex, masts tilting, sails collapsing into black water, a tall gaunt sea captain, long black coat, white ivory peg leg, a livid white scar running down one side of his face into his collar dragged from a whaleboat by a harpoon line, debris spinning in the whirlpool, dark storm sky",
+      "personagem": "the whaling ship Pequod sinking, with Captain Ahab dragged under",
+      "prompt": "extreme low angle view of a whaling ship's bow plunging steeply underwater, the entire deck tilted almost vertical, torn sails collapsing down into churning black water, snapped rigging ropes whipping loose, a wide spinning whirlpool of white foam swallowing the sinking hull, broken oars and wooden debris scattered across the water, small distant silhouette of a man with one pale ivory peg leg being dragged underwater by a taut harpoon rope wrapped around his body, heavy dark storm clouds above, faint moonlight breaking through the clouds",
       "ambiente": {
         "mar": 1.0,
         "chuva": 0.0,
@@ -285,6 +319,7 @@
       "dur_s": 85,
       "papel": "narrado",
       "titulo": "O caixão",
+      "personagem": "Ishmael, the sole survivor, adrift on a coffin",
       "prompt": "a single survivor lying across a carved wooden coffin adrift on a vast calm ocean under a clear night sky heavy with stars, the water black and glassy reflecting starlight, one distant ship lantern on the horizon, absolute solitude",
       "ambiente": {
         "mar": 0.2,
@@ -300,6 +335,7 @@
       "dur_s": 90,
       "papel": "moldura-fecha",
       "titulo": "O velho, ao amanhecer",
+      "personagem": "the old whaler, narrator of the story",
       "prompt": "clear pale dawn sky, dry weathered planks, still glassy water, soft pink and grey morning light, an old weathered whaler, grey beard, dark navy peacoat, flat wool cap, clay pipe, heavy boots, seen from behind walking away down a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind, an old whaling ship moored alongside, his lantern guttering low, calm open sea, same pier and same framing as the opening scene",
       "ambiente": {
         "mar": 0.35,
@@ -317,6 +353,7 @@
       "dur_s": 370,
       "papel": "cauda-ambiente",
       "titulo": "Mar calmo (sem narração)",
+      "personagem": "no character — the open sea",
       "prompt": "a vast open ocean at full sunrise seen from just above the waterline, long slow swells catching warm gold and rose light, unbroken horizon line from edge to edge, pure water and sky only, extremely quiet and restful, the sun just clear of the water",
       "ambiente": {
         "mar": 0.4,

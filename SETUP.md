@@ -31,6 +31,31 @@ sudo apt update && sudo apt install -y python3.12 python3.12-venv ffmpeg espeak-
 O `espeak-ng` é obrigatório: o Kokoro usa ele para fonemas em português. Sem ele
 o TTS falha na importação, não no uso — o erro aparece longe da causa.
 
+**Windows** — testado em 27/08/2026 numa workstation com RTX 3060 8GB, sem
+`winget`/`choco`/`scoop` disponíveis. Sem gerenciador de pacotes, é tudo manual:
+
+```powershell
+# Python 3.12 — NÃO usar 3.13: numpy/kokoro não têm wheel pronta pra 3.13 ainda
+# e o pip cai pra compilar do fonte com um gcc velho que não builda. Baixar o
+# instalador em python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe e rodar:
+python-3.12.10-amd64.exe /quiet InstallAllUsers=0 PrependPath=0 Include_launcher=1
+
+# ffmpeg — sem choco, baixar build pronto (zip, não precisa de 7-Zip):
+# https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip
+# Extrair e colocar o `bin\` no PATH do usuário.
+
+# espeak-ng — NÃO precisa instalar no sistema. O `misaki` (dependência do
+# Kokoro) já traz o pacote `espeakng-loader`, que empacota o espeak-ng via pip
+# e funciona sem instalação global. pipeline/s2_tts.py já está com o wiring
+# (EspeakWrapper.set_library/set_data_path) — só rodar `pip install kokoro`
+# de novo abaixo já resolve. (O instalador .msi oficial falha sem admin —
+# erro 1603 — e nem vale a pena perseguir.)
+```
+
+O `espeak-ng` é obrigatório em qualquer SO: o Kokoro usa ele para fonemas em
+português. Sem ele o TTS falha na importação, não no uso — o erro aparece
+longe da causa.
+
 **Verifica:**
 ```bash
 ffmpeg -version | head -1
@@ -43,12 +68,21 @@ e o render vai quebrar no meio.
 
 ## 3. Ambiente Python
 
+**macOS/Linux**
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate          # bash/zsh
 # source .venv/bin/activate.csh    # tcsh/csh
 pip install --upgrade pip
 pip install kokoro soundfile numpy faster-whisper pyyaml
+```
+
+**Windows**
+```powershell
+py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install --upgrade pip
+pip install kokoro soundfile numpy faster-whisper pyyaml requests
 ```
 
 **Verifica:**
@@ -62,6 +96,9 @@ Esta é a verificação mais importante da migração:
 |---|---|
 | `workstation` com `cuda/float16` | GPU sendo usada. Legendas caem de ~87 min para poucos minutos |
 | `cpu-forte` ou `m2-8gb` | **GPU não detectada** — ver Problemas conhecidos, item 1 |
+
+Essa checagem só confirma que o CUDA é **visível**. Rodar de fato em GPU exige
+mais uma coisa — ver item 5 de Problemas conhecidos.
 
 ---
 
@@ -164,6 +201,33 @@ Seu shell é tcsh/csh, não bash. Use `source .venv/bin/activate.csh`, e note qu
 Quase sempre é `-t` colocado antes do `-i` num comando ffmpeg com `zoompan`: o
 filtro passa a gerar milhões de frames. `-t` é opção de **saída**. Ver
 [pipeline/README.md](pipeline/README.md).
+
+**5. Windows: `perfil` diz `workstation`/`cuda` mas o `s4_legendas` quebra com
+`Library cublas64_12.dll is not found or cannot be loaded`**
+
+`ctranslate2.get_cuda_device_count()` (usado pelo `perfil.py`) só confirma que
+o driver NVIDIA está visível — não que o runtime CUDA (cuBLAS/cuDNN) existe no
+sistema. No Windows normalmente não existe, a menos que o CUDA Toolkit tenha
+sido instalado à parte. Resolve sem precisar do Toolkit inteiro:
+
+```powershell
+pip install nvidia-cublas-cu12 nvidia-cudnn-cu12
+```
+
+Isso instala os `.dll` dentro do próprio venv
+(`.venv\Lib\site-packages\nvidia\{cublas,cudnn}\bin\`), mas o Windows não
+procura DLL em `site-packages` sozinho — falta colocar essas duas pastas no
+PATH (do usuário, para persistir):
+
+```powershell
+$p1 = "$PWD\.venv\Lib\site-packages\nvidia\cublas\bin"
+$p2 = "$PWD\.venv\Lib\site-packages\nvidia\cudnn\bin"
+[Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable('Path','User'));$p1;$p2", "User")
+```
+
+Medido em 27/08/2026, RTX 3060 8GB: 30 min de áudio transcrito com `large-v3`
+em **6 min** (carga do modelo incluída), contra ~87 min em CPU na M2. É o
+ganho que justifica a máquina inteira.
 
 ---
 

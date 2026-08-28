@@ -35,7 +35,19 @@ Trocamos Azure por **Kokoro-82M** (local, Apache-2.0, licença comercial livre �
 contrário do XTTS-v2/Coqui, que é CPML e proíbe uso comercial). Resolve o bloqueio
 de conta Azure e roda 100% offline no Mac (CPU, sem GPU).
 
-- Voz: `pm_santa` (lang_code `p` = pt-BR), **speed=0.80**, sem pitch shift.
+- Voz: `pm_santa` (lang_code `p` = pt-BR), **speed=0.60** (padronizado em 27/08/2026;
+  era 0.80 no vídeo 1, depois 0.75 no vídeo 2 — ver `fase0/video-02/plano.json`),
+  sem pitch shift.
+- **`speed` baixo como mecanismo principal de lentidão está superado desde
+  28/08/2026** (pesquisa de ritmo de narração pt-BR — ver
+  `.claude/skills/qualidade-producao-video/SKILL.md` § Ritmo de narração):
+  estica a fala toda por igual (vogal e consoante) e soa "sedado". O
+  `pm_santa`/0.60 do video-02 fica como está — já aprovado de ouvido, não
+  foi refeito — mas **personas novas usam speed perto do natural + pausa
+  crescente entre frases/parágrafos** (`FATOR_PAUSA_INICIO`/`FIM` em
+  `pipeline/s2_tts.py`), não o multiplicador. Kokoro-82M só tem 3 vozes
+  pt-BR: `pm_santa`, `pm_alex`, `pf_dora` — ver `estudio/dados/personas.json`
+  para os candidatos em avaliação.
 - Testamos blend de vozes (`load_voice("v1,v2")`, média dos vetores de estilo) e
   pitch shift via `ffmpeg-full` + filtro `rubberband` (`formant=preserved` para não
   soar artificial) — nenhum dos dois melhorou em relação à voz pura mais lenta.
@@ -57,7 +69,9 @@ alinhado; a montagem final é `concat -c copy`. Nada de `xfade` no vídeo inteir
 - Fade-to-preto entre cenas em vez de crossfade: além de mais calmo para conteúdo de
   sono, é o que permite o `-c copy` (crossfade obrigaria reencodar tudo).
 
-**Duas pegadinhas do `zoompan`, ambas medidas:**
+**Duas pegadinhas do `zoompan`, ambas medidas** (histórico — o movimento de
+cena implementado em 27/08/2026 usa `crop` deslizante + escala inteira, não
+`zoompan`, exatamente para não cair nelas; ver `pipeline/s5_render.py`):
 
 1. `-t` é opção de **saída** — vai depois do `-vf`. Com `-t` antes do `-i`, o
    `-framerate` alimenta N frames de entrada e o `zoompan` gera `d` frames de saída

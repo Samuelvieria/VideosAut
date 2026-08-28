@@ -8,17 +8,22 @@ Arquitetura (medida em 26/08/2026, ver CLAUDE.md):
   - a montagem final é `concat -c copy` — instantânea, sem reencode;
   - a duração de cada clipe vem do ÁUDIO daquela cena, não do plano.
 
-Por que as imagens ficam paradas: o estilo é pixel art. Zoom/pan contínuo
-interpola subpixel e destrói a grade de pixels, que é o estilo inteiro. Movimento
-correto para pixel art exige passo INTEIRO na grade da fonte — ver `movimento`.
+Movimento de imagem (27/08/2026): as cenas narradas deslizam devagar (pan
+horizontal), a cauda sem narração fica parada. O estilo é pixel art — zoom/pan
+contínuo do jeito ingênuo (`zoompan`/escala variável) reamostra em subpixel e
+destrói a grade de pixels, que é o estilo inteiro. A saída: `s3_imagens` gera
+768×432 (640×360 de densidade real + 128×72 de margem); aqui se corta uma
+janela de 640×360 — sempre esse tamanho, parada ou deslizando pela margem —
+por PIXEL INTEIRO (`crop` nunca reamostra), escalando por um fator inteiro
+exato ×3 até 1920×1080. Ver `clipe_cena` e as constantes `PAN_*`.
 """
 from __future__ import annotations
-import argparse, json, sys
+import argparse, json, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from pipeline.comum import (FFMPEG, atualizado, carregar_plano, duracao, erro,
+from pipeline.comum import (FFMPEG, RAIZ, atualizado, carregar_plano, duracao, erro,
                             ffmpeg, lista_concat, log, marcar, projeto)
 from pipeline.perfil import perfil
 from pipeline import ambiente as amb
@@ -28,7 +33,21 @@ LARG, ALT = 1920, 1080
 GOP = FPS * 2
 PAUSA_ENTRE_CENAS = 2.0   # respiro entre cenas; também dá tempo do fade acontecer
 FADE = 1.5
-V_AMBIENTE = 0.9          # ganho do ambiente antes do ducking
+
+# Movimento de imagem por passo INTEIRO na grade da fonte (ver docstring do
+# módulo). A primeira versão (27/08/2026) cortava uma janela menor que os
+# 640×360 gerados pra abrir margem de deslizar — mas isso ampliava o pixel
+# (bloco 4×4 em vez de 3×3) E cortava composição pensada pro quadro cheio.
+# Corrigido: s3_imagens agora gera em 768×432 (640×360 de densidade real +
+# margem), então a janela de corte fica DO MESMO TAMANHO de sempre (640×360,
+# escala ×3, densidade idêntica à de uma cena parada) e só a POSIÇÃO desliza
+# dentro da margem gerada a mais.
+SRC_L, SRC_A = 768, 432
+PAN_ESCALA = 3
+PAN_L, PAN_A = LARG // PAN_ESCALA, ALT // PAN_ESCALA      # 640, 360
+PAN_MARGEM_X = SRC_L - PAN_L                              # 128
+PAN_MARGEM_Y = SRC_A - PAN_A                              # 72
+PAN_PERIODO_S = 40.0      # duração de um vaivém completo — ver nota em clipe_cena
 
 
 def _cenas_narradas(plano: dict) -> list[dict]:
@@ -49,7 +68,7 @@ def placeholders(proj: Path, plano: dict) -> None:
         if alvo.exists():
             continue
         cor = paleta[c["n"] % len(paleta)]
-        ffmpeg(["-f", "lavfi", "-i", f"color=c={cor}:s=640x360", "-frames:v", "1",
+        ffmpeg(["-f", "lavfi", "-i", f"color=c={cor}:s={SRC_L}x{SRC_A}", "-frames:v", "1",
                 str(alvo)], f"placeholder cena {c['n']}")
     log(f"placeholders em {d}")
 
@@ -88,8 +107,30 @@ def trilha_narracao(proj: Path, cenas: list[dict], forcar: bool) -> tuple[Path, 
 
 CROSSFADE = 3.0   # transição entre ambientes de cena; cai junto com o fade do vídeo
 
+# Camada gravada sobre a base sintética (docs/biblioteca-sons.md, pendência
+# registrada em 26/08/2026, implementada em 27/08/2026 depois de ouvir o
+# video-02: síntese pura demais soa a ruído filtrado, não a chuva/mar de
+# verdade). Regra por CENA a partir do que o plano.json já tem (mar/chuva),
+# sem precisar de campo novo: chuva forte usa o único trovão "usável em sono"
+# do lote (loswin23-thunderstorm-2 — os outros têm estouro seco demais); mar
+# sem chuva forte usa a cama mais longa e equilibrada (enternalrainsounds,
+# 900s, cobre a cena inteira sem repetir o início toda vez). Nunca as duas
+# juntas — vira camada, não confusão.
+SONS = RAIZ / "sons"
+_TEMPESTADE = SONS / "loswin23-thunderstorm-2-516370.mp3"
+_MAR_CAMA = SONS / "enternalrainsounds-light-rain-with-gentle-ocean-waves-mix-420329.mp3"
 
-def _ambiente_cena(dest: Path, dur: float, cfg: dict) -> None:
+
+def _escolher_gravado(cfg: dict) -> tuple[Path, float] | None:
+    chuva, mar = cfg.get("chuva", 0), cfg.get("mar", 0)
+    if chuva >= 0.5 and _TEMPESTADE.is_file():
+        return _TEMPESTADE, 0.35 * chuva
+    if mar >= 0.3 and not cfg.get("abafado") and _MAR_CAMA.is_file():
+        return _MAR_CAMA, 0.25 * mar
+    return None
+
+
+def _ambiente_cena(dest: Path, dur: float, cfg: dict, n: int = 0) -> None:
     """Gera o ambiente de UMA cena, conforme o perfil dela no plano."""
     nos, camadas = [], {"L": [], "R": []}
     for canal in ("L", "R"):
@@ -108,6 +149,15 @@ def _ambiente_cena(dest: Path, dur: float, cfg: dict) -> None:
                 "-c:a", "pcm_s16le", str(dest)], "ambiente vazio")
         return
 
+    entrada_args = []
+    gravado = _escolher_gravado(cfg)
+    if gravado:
+        arquivo, ganho = gravado
+        # deslocamento por cena para não começar sempre no mesmo trecho do
+        # arquivo (é a repetição que dá pra "reconhecer" ouvindo várias cenas)
+        offset = (n * 137) % 400
+        entrada_args = ["-stream_loop", "-1", "-ss", str(offset), "-i", str(arquivo)]
+
     for canal in ("L", "R"):
         c = camadas[canal]
         if len(c) > 1:
@@ -116,10 +166,19 @@ def _ambiente_cena(dest: Path, dur: float, cfg: dict) -> None:
             nos.append(f"{c[0]}anull[mix{canal}]")
 
     f = min(CROSSFADE, dur / 3)
-    nos.append(f"[mixL][mixR]join=inputs=2:channel_layout=stereo,"
-               f"afade=t=in:st=0:d={f:.2f},afade=t=out:st={dur-f:.2f}:d={f:.2f},"
-               f"loudnorm=I=-24:TP=-3.0:LRA=9[out]")
-    ffmpeg(["-filter_complex", ";".join(nos), "-map", "[out]",
+    if gravado:
+        _, ganho = gravado
+        nos.append(f"[0:a]atrim=0:{dur},asetpts=PTS-STARTPTS,"
+                   f"aformat=channel_layouts=stereo,volume={ganho}[grav]")
+        nos.append(f"[mixL][mixR]join=inputs=2:channel_layout=stereo[sint]")
+        nos.append(f"[sint][grav]amix=inputs=2:duration=first:normalize=0,"
+                   f"afade=t=in:st=0:d={f:.2f},afade=t=out:st={dur-f:.2f}:d={f:.2f},"
+                   f"loudnorm=I=-24:TP=-3.0:LRA=9[out]")
+    else:
+        nos.append(f"[mixL][mixR]join=inputs=2:channel_layout=stereo,"
+                   f"afade=t=in:st=0:d={f:.2f},afade=t=out:st={dur-f:.2f}:d={f:.2f},"
+                   f"loudnorm=I=-24:TP=-3.0:LRA=9[out]")
+    ffmpeg([*entrada_args, "-filter_complex", ";".join(nos), "-map", "[out]",
             "-ar", "48000", "-ac", "2", "-c:a", "pcm_s16le", str(dest)], f"ambiente {dest.name}")
 
 
@@ -135,7 +194,7 @@ def trilha_ambiente(proj: Path, plano: dict, duracoes: dict, forcar: bool) -> Pa
     saida.parent.mkdir(exist_ok=True)
     perfis = {c["n"]: c.get("ambiente", {}) for c in plano["cenas"]}
     cfg = json.dumps({str(k): [perfis.get(k), round(v, 1)] for k, v in sorted(duracoes.items())},
-                     sort_keys=True)
+                     sort_keys=True) + ";v2-camada-gravada"
     if not forcar and atualizado(saida, [], cfg):
         log("ambiente: já atualizado")
         return saida
@@ -144,7 +203,7 @@ def trilha_ambiente(proj: Path, plano: dict, duracoes: dict, forcar: bool) -> Pa
     partes = []
     for n in sorted(duracoes):
         alvo = d / f"amb_{n:02d}.wav"
-        _ambiente_cena(alvo, duracoes[n], perfis.get(n, {}))
+        _ambiente_cena(alvo, duracoes[n], perfis.get(n, {}), n)
         partes.append(alvo)
         p = perfis.get(n, {})
         log(f"  cena {n:02d}  mar={p.get('mar',0):.2f} chuva={p.get('chuva',0):.2f} "
@@ -158,21 +217,105 @@ def trilha_ambiente(proj: Path, plano: dict, duracoes: dict, forcar: bool) -> Pa
     return saida
 
 
-def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bool) -> Path:
-    """Ducking sidechain + masterização a -18 LUFS (abaixo do alvo do YouTube).
+# Padrão do bloco `mixagem` do plano.json — usado quando o vídeo não tem essa
+# seção (compatível com vídeos antigos) e como valor inicial no mixer do
+# estudio/. `reverb` é um multiplicador (0-1) sobre REVERB_DECAY_BASE; os
+# outros valores vão direto pros filtros de ffmpeg abaixo.
+#
+# Recalibrado em 28/08/2026 a partir de pesquisa de mercado pra loudness de
+# vídeo de sono (sem norma oficial ITU/EBU/AES pra esse nicho especificamente
+# — números vêm de WCAG G56, prática de podcast/audiolivro e documentação do
+# próprio YouTube; ver .claude/skills/qualidade-producao-video/SKILL.md):
+#   - ambiente_ganho subiu de 0.1 pra 1.0: medido (isolando cada stem, ver
+#     SKILL.md) que 0.1 dava gap de +25dB da voz (quase mudo) e mesmo 0.42
+#     (calculado a partir do arquivo bruto sem processar) ainda dava ~21dB —
+#     os cortes de EQ novos (highpass, dip 1-4kHz, lowpass) tiram mais
+#     energia do que o cálculo ingênuo previa. 1.0 mede ~13,6dB de gap,
+#     dentro do alvo de 12-15dB pra ambiente de ruído banda-larga (WCAG
+#     recomenda ≥20dB pra música, mas ruído sem melodia não compete com a
+#     fala do mesmo jeito).
+#   - duck_ratio caiu de 4 pra 2 e duck_release subiu de 450ms pra 2000ms:
+#     ducking forte + rápido "bombeia" (fica óbvio o ambiente subindo/caindo);
+#     pra sono o alvo é reduzir só 4-6dB, de forma lenta o bastante pra não
+#     ser percebido como evento.
+MIXAGEM_PADRAO = {
+    "voz_ganho": 1.0,
+    "voz_reverb": 0.5,
+    "voz_deesser": 0.4,
+    "ambiente_ganho": 1.0,
+    "ambiente_reverb": 0.7,
+    "ambiente_lowpass_hz": 5500,
+    "duck_threshold": 0.05,
+    "duck_ratio": 2,
+    "duck_attack_ms": 200,
+    "duck_release_ms": 2000,
+}
+REVERB_DELAYS_MS = [40, 70, 110, 160]
+REVERB_DECAY_BASE = [0.5, 0.4, 0.28, 0.2]   # ×ambiente_reverb=1.0 = reverb máximo
+VOZ_REVERB_DELAYS_MS = [23, 37]             # sala pequena — bem mais curto que o do ambiente
+VOZ_REVERB_DECAY_BASE = [0.20, 0.14]        # ×voz_reverb=1.0 = eco máximo; 0.5 = padrão antigo
+
+# Alvo de masterização final — YouTube normaliza tudo pra -14 LUFS integrado;
+# entregar mais baixo (era -18) só faz o espectador subir o volume do
+# aparelho, e aí o próximo vídeo/anúncio (normalizado em -14) toca alto
+# demais. O "quão suave" certo vem de LRA estreito, não de nível baixo.
+#
+# TP alvo passado ao loudnorm é -1.5, não -1.0: o teto de segurança real do
+# checklist é -1.0 dBTP, mas o loudnorm (mesmo em 2 passos, linear=true)
+# overshoot o TP pedido em ~0.1-0.4dB na prática — medido em 28/08/2026 no
+# video-02: alvo -1.0 mediu -0.88 (passou do teto). Pedir -1.5 mediu -1.40 de
+# verdade, com margem. Ver .claude/skills/qualidade-producao-video/SKILL.md.
+MASTER_I, MASTER_TP, MASTER_LRA = -14.0, -1.5, 6.0
+
+
+def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bool,
+          mixagem: dict | None = None, janela: tuple[float, float] | None = None) -> Path:
+    """Ducking sidechain + masterização a -14 LUFS / -1 dBTP (o alvo real do
+    YouTube — ver MASTER_I). Era -18 (deliberadamente abaixo) até 28/08/2026;
+    mudou porque entregar mais baixo faz o espectador subir o volume do
+    aparelho, e o próximo vídeo/anúncio normalizado em -14 toca alto demais
+    — quem deve controlar "quão baixo" é o volume do aparelho do ouvinte,
+    não o master. O conforto do formato vem de LRA estreito, não de nível
+    baixo. Ver .claude/skills/qualidade-producao-video/SKILL.md.
 
     A voz fica MONO e centrada de propósito: narração é o foco e tem que vir de
     um ponto só. Quem ganha largura é o ambiente. Voz espalhada no campo estéreo
     soa difusa e atrapalha o adormecer, que é o oposto do que o vídeo existe para
     fazer.
+
+    `mixagem` sobrepõe MIXAGEM_PADRAO — vem do bloco `mixagem` do plano.json,
+    editável pelo mixer do estudio/ sem mexer em código (ver estudio/routers/mixer.py).
+
+    `janela=(inicio_s, dur_s)` processa só um TRECHO em vez do vídeo inteiro —
+    ouvir um ajuste de mixagem não pode depender de esperar os 30+ min
+    completos toda vez. Sai em `build/mix_preview.m4a`, nunca sobrescreve o
+    `mix.m4a` real usado no render final.
     """
-    saida = proj / "build" / "mix.m4a"
-    cfg = f"amb={V_AMBIENTE};total={total_s:.1f};cena=v4;voz=eq+comp+sala"
+    m = {**MIXAGEM_PADRAO, **(mixagem or {})}
+    if janela:
+        inicio_s, dur_s = janela
+        saida = proj / "build" / "mix_preview.m4a"
+        bruto = proj / "build" / "mix_bruto_preview.wav"
+        entrada = ["-ss", f"{inicio_s:.2f}", "-i", str(narracao),
+                   "-ss", f"{inicio_s:.2f}", "-i", str(ambiente)]
+    else:
+        dur_s = total_s
+        saida = proj / "build" / "mix.m4a"
+        bruto = proj / "build" / "mix_bruto.wav"
+        entrada = ["-i", str(narracao), "-i", str(ambiente)]
+
+    cfg = (f"total={dur_s:.1f};janela={janela};cena=v11-master-14lufs-2pass;voz=eq+comp+sala+deess;"
+           + ";".join(f"{k}={v}" for k, v in sorted(m.items())))
     if not forcar and atualizado(saida, [narracao, ambiente], cfg):
         log("mix: já atualizado")
         return saida
 
-    ffmpeg(["-i", str(narracao), "-i", str(ambiente), "-filter_complex",
+    decays = "|".join(f"{d*m['ambiente_reverb']:.3f}" for d in REVERB_DECAY_BASE)
+    delays = "|".join(str(d) for d in REVERB_DELAYS_MS)
+    voz_decays = "|".join(f"{d*m['voz_reverb']:.3f}" for d in VOZ_REVERB_DECAY_BASE)
+    voz_delays = "|".join(str(d) for d in VOZ_REVERB_DELAYS_MS)
+
+    ffmpeg([*entrada, "-filter_complex",
             # voz mono -> duplicada nos dois canais (centro), estendida com silêncio
             # asplit explícito: a voz é consumida DUAS vezes (sidechain + mix). O
             # ffmpeg tolera reusar o label num grafo só-áudio, mas falha com
@@ -180,40 +323,135 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
             # no ffmpeg 9.0.1. asplit funciona nos dois casos.
             # Cadeia de voz. TTS soa robótico por três motivos tratáveis:
             # médio-agudo estridente em 2-4 kHz, dinâmica plana demais, e ausência
-            # de qualquer sala — a voz "flutua" fora de um espaço físico.
+            # de qualquer sala — a voz "flutua" fora de um espaço físico. Ganho
+            # entra DEPOIS do compressor (só nível, não muda quanto comprime) e
+            # ANTES do eco (a cauda de reverb escala junto com o volume).
             f"[0:a]aformat=channel_layouts=mono,"
             f"highpass=f=80,"                       # tira ronco abaixo da voz
+            f"equalizer=f=325:t=q:w=1.5:g=-3,"      # corta abafado/mud (250-400Hz)
             f"equalizer=f=3000:t=q:w=1.4:g=-3,"     # corta a aspereza digital
+            f"treble=f=9000:g=-2:width_type=o:width=1,"  # shelf alto — reduz "ar"/sibilância residual
+            f"deesser=i={m['voz_deesser']}:f=0.6,"  # o "S" estourado é o principal despertador em fone
             f"acompressor=threshold=-18dB:ratio=3:attack=15:release=250:knee=6,"
-            f"aecho=0.92:0.85:23|37:0.10|0.07,"     # sala pequena, ~8% wet
-            f"apad=whole_dur={total_s},"
-            f"pan=stereo|c0=c0|c1=c0,asplit=2[voz_sc][voz_mix];"
-            f"[1:a]aformat=channel_layouts=stereo,volume={V_AMBIENTE}[amb];"
-            f"[amb][voz_sc]sidechaincompress=threshold=0.05:ratio=6:attack=200:release=1800[duck];"
+            f"volume={m['voz_ganho']},"
+            f"aecho=0.92:0.85:{voz_delays}:{voz_decays},"  # sala pequena
+            # loudnorm da VOZ SOZINHA, não do mix somado — normalizar depois
+            # de somar com o ambiente reinflava o volume geral (ambiente
+            # incluso) sempre que a soma ficava baixa demais, meio que
+            # desfazendo o ganho baixo escolhido no mixer. Com a voz num
+            # nível fixo e conhecido, ambiente_ganho passa a ser um
+            # multiplicador direto de verdade, sem nada compensando depois.
+            # Esse loudnorm aqui é só um "leveler" pra manter a voz
+            # consistente cena a cena — o alvo de masterização real
+            # (MASTER_I/-14 LUFS) entra depois, em 2 passos, no fim de tudo.
+            #
+            # loudnorm entra DEPOIS do pan=stereo, não antes: medir loudness
+            # num sinal ainda mono e só depois duplicar pros dois canais
+            # (pan=stereo|c0=c0|c1=c0) sai ~3dB mais alto que o alvo — o
+            # BS.1770 soma os dois canais do estéreo "mono duplicado", então
+            # o mesmo conteúdo mede mais alto em estéreo que em mono. Medido
+            # em 28/08/2026: alvo -18 LUFS, saída real -14.3 LUFS até corrigir
+            # a ordem.
+            f"apad=whole_dur={dur_s},"
+            f"pan=stereo|c0=c0|c1=c0,"
+            f"loudnorm=I=-18:TP=-3.0:LRA=5,"
+            f"asplit=2[voz_sc][voz_mix];"
+            # Ambiente "no fundo": mais baixo que a voz, com pseudo-reverb de
+            # sala grande (aecho com várias repetições longas — não tem
+            # afreeverb neste build de ffmpeg) e lowpass (som distante perde
+            # agudo). Os 4 números vêm do bloco `mixagem` do plano.json.
+            f"[1:a]aformat=channel_layouts=stereo,highpass=f=45,"
+            f"volume={m['ambiente_ganho']},"
+            f"aecho=0.8:0.7:{delays}:{decays},"
+            # dip espectral 1-4kHz ("sidechain EQ"): abre espaço pra
+            # inteligibilidade da voz sem precisar baixar o ambiente inteiro
+            # — dá pra manter mais presença no resto do espectro com o
+            # mesmo gap percebido.
+            f"equalizer=f=2000:t=q:w=1.5:g=-3.5,"
+            f"lowpass=f={m['ambiente_lowpass_hz']}[amb];"
+            # release era 1800ms fixo — mais longo que as pausas de respiração
+            # (300-450ms, ver s2_tts.py), então o ambiente nunca "voltava"
+            # durante a narração. Editável no mixer agora. Alvo atual (ver
+            # MIXAGEM_PADRAO): reduzir só 4-6dB, devagar — ducking forte e
+            # rápido "bombeia" (fica óbvio), o que é o oposto do que sono pede.
+            f"[amb][voz_sc]sidechaincompress=threshold={m['duck_threshold']}:"
+            f"ratio={m['duck_ratio']}:attack={m['duck_attack_ms']}:"
+            f"release={m['duck_release_ms']}[duck];"
+            # só limita pico da soma — NÃO normaliza loudness geral aqui, a
+            # masterização de verdade (2 passos, ganho linear) vem depois,
+            # em cima do arquivo já pronto. Ver _masterizar_2passos().
             f"[duck][voz_mix]amix=inputs=2:duration=longest:normalize=0,"
-            f"loudnorm=I=-18:TP=-2.0:LRA=7[out]",
-            "-map", "[out]", "-t", f"{total_s}",
-            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", str(saida)],
-           "mix de áudio")
+            f"alimiter=limit=0.98:attack=5:release=50[out]",
+            "-map", "[out]", "-t", f"{dur_s}",
+            "-ar", "48000", "-ac", "2", "-c:a", "pcm_s24le", str(bruto)],
+           "mix bruto (pré-masterização)")
+
+    _masterizar_2passos(bruto, saida)
     marcar(saida, [narracao, ambiente], cfg)
-    log(f"mix estéreo: {duracao(saida)/60:.1f} min")
+    log(f"mix {'preview' if janela else 'estéreo'}: {duracao(saida):.0f}s" if janela
+        else f"mix estéreo: {duracao(saida)/60:.1f} min")
     return saida
 
 
-def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medium") -> Path:
+def _masterizar_2passos(bruto: Path, saida: Path) -> None:
+    """loudnorm de 2 passos (`linear=true`) no mix já pronto — ganho FIXO
+    (só um offset), preserva a relação voz/ambiente calibrada no resto da
+    cadeia. O loudnorm de 1 passo (dinâmico) reage à loudness corrente e
+    reinflava o volume geral sempre que a soma ficava baixa — foi esse o bug
+    que motivou tirar o loudnorm de dentro do filtro complexo (ver mixar()).
+    Alvo: MASTER_I/-14 LUFS, o que o YouTube normaliza — entregar mais baixo
+    só faz o espectador subir o volume do aparelho e levar um susto no
+    próximo vídeo/anúncio, que toca em -14.
+    """
+    alvo = f"I={MASTER_I}:TP={MASTER_TP}:LRA={MASTER_LRA}"
+    analise = subprocess.run(
+        [FFMPEG, "-i", str(bruto), "-af", f"loudnorm={alvo}:print_format=json", "-f", "null", "-"],
+        capture_output=True, text=True)
+    try:
+        bruto_json = analise.stderr[analise.stderr.rindex("{"):analise.stderr.rindex("}") + 1]
+        stats = json.loads(bruto_json)
+    except (ValueError, json.JSONDecodeError):
+        erro(f"loudnorm (análise) não devolveu estatísticas válidas:\n{analise.stderr[-800:]}")
+    medidos = (f"measured_I={stats['input_i']}:measured_TP={stats['input_tp']}:"
+               f"measured_LRA={stats['input_lra']}:measured_thresh={stats['input_thresh']}")
+    ffmpeg(["-i", str(bruto), "-af", f"loudnorm={alvo}:{medidos}:linear=true",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", str(saida)],
+           "masterização 2 passos")
+
+
+def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medium",
+               mover: bool = True) -> Path:
     img = proj / "imagens" / f"cena_{n:02d}.png"
     if not img.exists():
         erro(f"falta {img}. Gere as imagens ou rode com --placeholder.")
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset}"
+    direcao = 1 if n % 2 == 0 else -1
+    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};dir={direcao};v4-pan-vaivem"
     if not forcar and atualizado(saida, [img], cfg):
         return saida
 
     f_out = max(0.0, dur - FADE)
-    # flags=neighbor: upscale de pixel art tem que ser nearest, senão borra a grade
-    vf = (f"scale={LARG}:{ALT}:flags=neighbor,format=yuv420p,"
+    y0 = PAN_MARGEM_Y // 2   # fixo, só desliza no eixo horizontal
+    if mover and PAN_MARGEM_X > 0:
+        # Linear ao longo da cena inteira (75-130s) dava 1 passo de pixel a
+        # cada ~0,8s — perceptível como travado, não como deslize. Trocado
+        # por um vaivém senoidal de período curto (PAN_PERIODO_S), que dá um
+        # passo a cada ~0,15s (bem mais fluido) e ainda assim lê como
+        # deslocamento lento, porque a amplitude continua pequena (128px) e a
+        # curva desacelera nas pontas (derivada do seno) em vez de bater e
+        # voltar seco. `direcao` só decide a fase inicial (que lado começa).
+        fase = 0 if direcao > 0 else "PI"
+        expr_x = f"trunc({PAN_MARGEM_X}/2*(1+sin(2*PI*t/{PAN_PERIODO_S}+{fase})))"
+    else:
+        expr_x = str(PAN_MARGEM_X // 2)   # parado: janela centralizada na margem
+    # crop nunca reamostra (só seleciona pixels existentes) — a janela é
+    # sempre 640x360 (a densidade real, parada ou deslizando pela margem
+    # gerada a mais em 768x432), e o scale=neighbor que segue continua ×3
+    # exato. Isso é o que evita destruir a grade de pixel art.
+    vf = (f"crop={PAN_L}:{PAN_A}:x='{expr_x}':y={y0},"
+          f"scale={LARG}:{ALT}:flags=neighbor,format=yuv420p,"
           f"fade=t=in:st=0:d={FADE},fade=t=out:st={f_out:.2f}:d={FADE}")
     ffmpeg(["-loop", "1", "-framerate", str(FPS), "-i", str(img),
             "-vf", vf,
@@ -234,6 +472,14 @@ def main() -> None:
     ap.add_argument("--forcar", action="store_true", help="ignora o cache de idempotência")
     ap.add_argument("--jobs", type=int, default=None,
                     help="clipes em paralelo (padrão: do perfil)")
+    ap.add_argument("--so-mix", action="store_true",
+                    help="refaz só o mix de áudio (build/mix.m4a) e para — "
+                         "pra ouvir um ajuste do mixer sem re-renderizar o vídeo inteiro")
+    ap.add_argument("--preview-s", type=float, default=None,
+                    help="com --so-mix: processa só N segundos (build/mix_preview.m4a) "
+                         "em vez do áudio inteiro — preview quase instantâneo do mixer")
+    ap.add_argument("--preview-inicio", type=float, default=0.0,
+                    help="com --preview-s: onde começar, em segundos (padrão: 0 = cena 1)")
     a = ap.parse_args()
 
     hw = perfil()
@@ -270,7 +516,12 @@ def main() -> None:
     ambiente = trilha_ambiente(proj, plano, duracoes, a.forcar)
 
     print(f"[3/5] mix")
-    mix = mixar(proj, narracao, ambiente, total, a.forcar)
+    janela = (a.preview_inicio, min(a.preview_s, total - a.preview_inicio)) if a.preview_s else None
+    mix = mixar(proj, narracao, ambiente, total, a.forcar, plano.get("mixagem"), janela)
+
+    if a.so_mix:
+        log(f"--so-mix: parando aqui — {mix}")
+        return
 
     jobs = a.jobs or hw.jobs
     print(f"[4/5] clipes de cena ({len(duracoes)}, {jobs} em paralelo)")
@@ -280,7 +531,9 @@ def main() -> None:
     # thread pool basta — não há GIL no caminho.
     with ThreadPoolExecutor(max_workers=jobs) as pool:
         futuros = {c["n"]: pool.submit(clipe_cena, proj, c["n"], duracoes[c["n"]],
-                                       a.forcar, hw.x264_preset) for c in pendentes}
+                                       a.forcar, hw.x264_preset,
+                                       c["papel"] != "cauda-ambiente")
+                   for c in pendentes}
         resultados = {}
         for c in pendentes:                      # ordem do plano, não de conclusão
             resultados[c["n"]] = futuros[c["n"]].result()

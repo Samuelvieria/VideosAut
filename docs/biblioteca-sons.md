@@ -62,7 +62,21 @@ exatamente a categoria que o Content ID pega bem.
 loop realmente limpo. O papel deles é **camada**, sobre o mar e a chuva de
 `pipeline/ambiente.py`.
 
-## Integração — ainda não implementada
+## Integração — implementada em 27/08/2026
 
-O `plano.json` tem o campo `ambiente.fonte_externa`, hoje `null`. Falta escrever a
-mistura de camada gravada sobre a sintética no `s5_render`.
+`pipeline/s5_render.py::_escolher_gravado()` mistura uma camada gravada sobre a
+sintética por CENA, a partir do `mar`/`chuva` que o `plano.json` já tem (sem
+precisar de campo novo — o `ambiente.fonte_externa` no nível do vídeo continua
+`null`, virou irrelevante). Regra: `chuva ≥ 0.5` usa `loswin23-thunderstorm-2`
+(o único trovão "usável em sono" do lote); senão `mar ≥ 0.3` e não abafado usa
+`enternalrainsounds-light-rain-ocean-mix` (mais longa e equilibrada, 900s). Nunca
+os dois juntos. O ponto de início do arquivo varia por cena (`n * 137 % 400`)
+pra não repetir sempre o mesmo trecho entre cenas.
+
+Motivo da mudança: depois de ouvir a narração completa do video-02, a síntese
+100% procedural soava "muito sintética" — camada gravada resolve isso sem abrir
+mão da defesa de Content ID (ela é só camada, nunca sozinha, nunca em primeiro
+plano — ver seção "Licença" acima).
+
+`stereogenicstudio-beach-02` não está em `sons/` (só 11 dos 12 arquivos foram
+recuperados) — não é usado na regra atual.

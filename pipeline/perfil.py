@@ -39,6 +39,17 @@ def _ram_gb() -> float:
             n = int(subprocess.run(["sysctl", "-n", "hw.memsize"],
                                    capture_output=True, text=True).stdout.strip())
             return n / 1024 ** 3
+        if sys.platform == "win32":
+            import ctypes
+            class _MEMSTATUS(ctypes.Structure):
+                _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong),
+                            ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
+                            ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
+                            ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
+                            ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
+            m = _MEMSTATUS(); m.dwLength = ctypes.sizeof(_MEMSTATUS)
+            ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(m))
+            return m.ullTotalPhys / 1024 ** 3
         with open("/proc/meminfo") as f:
             for l in f:
                 if l.startswith("MemTotal:"):

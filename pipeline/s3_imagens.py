@@ -3,15 +3,26 @@
 
     python -m pipeline.s3_imagens fase0/video-02 [--cena N] [--forcar] [--seco]
 
-Gera em 640x360. O upscale para 1920x1080 é do s5_render, com `flags=neighbor`
-em escala inteira ×3 — pixel art interpolado perde a grade e o estilo morre.
+Gera em 768x432 — 640x360 (a densidade de pixel real, ×3 até 1920x1080 no
+s5_render) mais 128x72 de MARGEM pro corte deslizante do movimento de cena
+(ver PAN_* em pipeline/s5_render.py). O s5_render sempre recorta uma janela de
+640x360 desse arquivo (parada e centralizada, ou deslizando pela margem) antes
+de escalar ×3 com `flags=neighbor` — nunca a imagem inteira direto, e nunca
+escala fracionária: pixel art interpolado perde a grade e o estilo morre.
 Ver docs/imagens-provedores.md e fase0/video-02/estilo.yaml.
 
-O prompt final é `estilo_base` + o prompt da cena. O Z-Image-Turbo NÃO aceita
-`negative_prompt`, então os negativos do estilo.yaml não têm para onde ir — o
-que dá para fazer é manter o estilo_base explícito o bastante para não abrir
-espaço a eles. Se aparecer texto ou elemento moderno nas imagens, é aqui que
-está a causa.
+O prompt final é obra + personagem + cena (contexto narrativo) seguido de
+`estilo_base` + o prompt visual da cena. Medido em 27/08/2026: sem o contexto
+narrativo na frente, o modelo perde o traço que define o personagem quando ele
+compete com o resto da descrição (a perna de marfim do Ahab sumiu duas vezes
+seguidas até o prompt passar a abrir com "Captain Ahab" antes da descrição
+física). `obra` e `personagem` vêm do plano.json; cena sem personagem nomeado
+usa "no character — ...".
+
+O Z-Image-Turbo NÃO aceita `negative_prompt`, então os negativos do estilo.yaml
+não têm para onde ir — o que dá para fazer é manter o estilo_base explícito o
+bastante para não abrir espaço a eles. Se aparecer texto ou elemento moderno
+nas imagens, é aqui que está a causa.
 """
 from __future__ import annotations
 import argparse, json, sys, time, urllib.error, urllib.request
@@ -22,7 +33,7 @@ from pipeline.comum import atualizado, carregar_plano, erro, log, marcar, projet
 from pipeline.config import obter
 
 MODELO = "fal-ai/z-image/turbo"
-LARG, ALT = 640, 360
+LARG, ALT = 768, 432   # 640x360 de densidade real + 128x72 de margem pro pan (s5_render)
 PASSOS = 8
 
 
@@ -74,6 +85,7 @@ def main() -> None:
     estilo = plano.get("estilo_base", "").strip()
     if not estilo:
         erro("plano.json sem estilo_base — as cenas sairiam com estilos diferentes")
+    obra = plano.get("obra", "").strip()
 
     seed_base = 20260826
     try:
@@ -95,7 +107,19 @@ def main() -> None:
         # moldura (cenas 1 e 19): mesma composição, momento diferente. Sem isso
         # o gerador entrega outro cais e o dispositivo narrativo não fecha.
         seed = seed_base + int(c.get("seed_de", c["n"]))
-        prompt = f"{estilo}, {c['prompt']}"
+        # Contexto narrativo ANTES da descrição visual: obra, personagem e a
+        # cena da história. Sem isso o modelo perde o traço que define o
+        # personagem quando ele compete com o resto da descrição (ver docstring).
+        # `contexto_narrativo: false` desliga isso por cena — existe porque
+        # medido em 27/08/2026: na cena da baleia branca, nomear "the white
+        # whale" no contexto reativa o viés de pose de salto (jubarte) que o
+        # prompt visual já tinha sido ajustado para evitar. Contexto genérico
+        # pode reforçar clichê de treino tão bem quanto resolver perda de traço.
+        contexto = ""
+        if c.get("contexto_narrativo", True):
+            contexto = ", ".join(x for x in (obra, c.get("personagem", "").strip(),
+                                              f"scene: {c['titulo']}") if x)
+        prompt = f"{contexto}. {estilo}, {c['prompt']}" if contexto else f"{estilo}, {c['prompt']}"
         cfg = f"{MODELO};{LARG}x{ALT};steps={PASSOS};seed={seed};{prompt[:180]}"
 
         if a.seco:

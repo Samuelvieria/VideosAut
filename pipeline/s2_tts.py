@@ -26,14 +26,28 @@ SR = 24000
 PAUSA_RESPIRO = 0.45      # segundos de silêncio em cada "..."
 PAUSA_PARAGRAFO = 0.30    # respiro extra entre parágrafos
 
+# Densidade decrescente pela PAUSA, não pela articulação — ver pesquisa de
+# ritmo de 28/08/2026 (.claude/skills/qualidade-producao-video/SKILL.md,
+# seção "Ritmo de narração"). `speed` do Kokoro estica tudo por igual,
+# inclusive consoante, e soa "sedado"; o jeito certo de desacelerar é dar mais
+# silêncio entre frases/parágrafos, crescendo ao longo do episódio. FATOR_*
+# definem esse crescimento: cena 1 usa 1.0× a pausa base, a última cena do
+# corpo narrado usa FATOR_PAUSA_FIM×.
+FATOR_PAUSA_INICIO = 1.0
+FATOR_PAUSA_FIM = 1.6
 
-def sintetiza(pipeline, texto: str, voice: str, speed: float):
+
+def sintetiza(pipeline, texto: str, voice: str, speed: float, fator_pausa: float = 1.0):
     """Sintetiza um bloco honrando as marcas de respiração.
 
     O texto é cortado nos "..." e em quebras de parágrafo; cada pedaço vai ao
     modelo separadamente e o silêncio entra entre eles. Isso resolve dois
     problemas de uma vez: dá a pausa que o Kokoro não dá sozinho, e alimenta o
     modelo com passagens curtas — que é onde ele erra menos prosódia.
+
+    `fator_pausa` escala PAUSA_RESPIRO/PAUSA_PARAGRAFO pra essa cena — é como
+    o chamador implementa densidade decrescente ao longo do episódio sem
+    tocar em `speed` (ver FATOR_PAUSA_INICIO/FIM).
     """
     import numpy as np
 
@@ -42,7 +56,8 @@ def sintetiza(pipeline, texto: str, voice: str, speed: float):
         partes = [x.strip() for x in par.split("...") if x.strip()]
         for j, parte in enumerate(partes):
             ult = j == len(partes) - 1
-            pedacos.append((parte, PAUSA_PARAGRAFO if ult else PAUSA_RESPIRO))
+            base = PAUSA_PARAGRAFO if ult else PAUSA_RESPIRO
+            pedacos.append((parte, base * fator_pausa))
     if pedacos:
         pedacos[-1] = (pedacos[-1][0], 0.0)
 
@@ -85,9 +100,11 @@ def main() -> None:
 
     destino = proj / "audio"
     destino.mkdir(exist_ok=True)
-    cfg = f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO}"
+    cfg = (f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO};"
+           f"fator_pausa={FATOR_PAUSA_INICIO}-{FATOR_PAUSA_FIM}")
 
     cenas = blocos(roteiro)
+    total_cenas = len(cenas)
     pendentes = [c for c in cenas
                  if a.forcar or not atualizado(destino / f"cena_{c[0]:02d}.wav", [roteiro], cfg + c[2][:200])]
 
@@ -96,15 +113,30 @@ def main() -> None:
     else:
         # importa só quando há trabalho: carregar o Kokoro custa segundos
         import numpy as np, soundfile as sf
+
+        # Aponta o phonemizer para o espeak-ng empacotado via pip, em vez de
+        # depender de instalação no sistema (brew/apt). No Windows não há
+        # gerenciador de pacotes padrão para isso; espeakng_loader funciona
+        # igual nas três plataformas, então fixamos por aqui sempre.
+        import espeakng_loader
+        from phonemizer.backend.espeak.wrapper import EspeakWrapper
+        EspeakWrapper.set_library(espeakng_loader.get_library_path())
+        EspeakWrapper.set_data_path(espeakng_loader.get_data_path())
+
         from kokoro import KPipeline
         pipeline = KPipeline(lang_code="p")
         log(f"voz={voice} speed={speed} — {len(pendentes)} cena(s) a gerar")
         for n, titulo, corpo in pendentes:
             alvo = destino / f"cena_{n:02d}.wav"
-            audio = sintetiza(pipeline, corpo, voice, speed)
+            # posição relativa da cena no episódio (0 na primeira, 1 na
+            # última) — cresce a pausa, não a lentidão da fala, ao longo do
+            # episódio (densidade decrescente, ver FATOR_PAUSA_*)
+            pos = (n - 1) / max(1, total_cenas - 1)
+            fator = FATOR_PAUSA_INICIO + (FATOR_PAUSA_FIM - FATOR_PAUSA_INICIO) * pos
+            audio = sintetiza(pipeline, corpo, voice, speed, fator)
             sf.write(alvo, audio, SR)
             marcar(alvo, [roteiro], cfg + corpo[:200])
-            log(f"cena {n:02d}  {len(audio)/SR:6.1f}s  {titulo}")
+            log(f"cena {n:02d}  {len(audio)/SR:6.1f}s  {titulo}  (pausa×{fator:.2f})")
 
     # relatório consolidado, consumido pelo s5
     from pipeline.comum import duracao

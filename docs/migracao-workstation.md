@@ -2,7 +2,7 @@
 projeto: Canal de Sono Automatizado
 assunto: transição para a máquina com GPU
 data: 2026-08-27
-status: preparado, não executado
+status: executado em 27/08/2026 — workstation Windows, RTX 3060 8GB (não a Linux/macOS que este doc presumia; ver SETUP.md para as adaptações de Windows)
 ---
 
 # Transição para a workstation
@@ -92,8 +92,25 @@ Mais hardware não valida produto.
 
 ## Pendências abertas
 
-- Camada de som gravado sobre a base sintética — `ambiente.fonte_externa` existe no
-  plano mas **não está implementado**
-- `s3_imagens.py` não existe; escrever direto contra o gerador da máquina nova
-- Render paralelo (`jobs`) só foi exercitado com 3 clipes
+- Camada de som gravado sobre a base sintética — implementada em 27/08/2026, ver
+  `docs/biblioteca-sons.md`. Ainda falta `stereogenicstudio-beach-02` (11 dos 12
+  arquivos foram recuperados), mas não bloqueia a regra atual (usa outros dois).
 - Decisão de `speed` da voz pendente — ver `fase0/video-02/teste/`
+
+## Migração real — o que o doc acima não previu
+
+A máquina nova saiu Windows, não Linux/macOS. `SETUP.md` tem a versão completa;
+os pontos que valem registro aqui:
+
+- **Sem `winget`/`choco`/`scoop`** nesta máquina — todo binário (Python, ffmpeg)
+  foi baixado e extraído manualmente. `python -m pipeline.perfil` sozinho não
+  garante GPU de verdade: ele só detecta o driver, não o runtime CUDA. Faltava
+  `nvidia-cublas-cu12`/`nvidia-cudnn-cu12` via pip + PATH — ver SETUP.md item 5.
+- `pipeline/s2_tts.py` ganhou o wiring do `espeakng-loader` (commit local, a
+  aplicar) porque a suposição antiga — espeak-ng resolvido pelo sistema — só
+  valia no Mac com brew.
+- **Ganho medido bateu com a previsão**: `s4_legendas` (large-v3, 30 min de
+  áudio) caiu de ~87 min (CPU, M2) para **6 min** (RTX 3060, cuBLAS/cuDNN via
+  pip). `s3_imagens` (Z-Image-Turbo via fal.ai) rodou em ~80s para as 20 cenas.
+- Primeiro vídeo completo do pipeline nesta máquina: `fase0/video-02/final.mp4`
+  (30 min, 442 MB) + `legendas.pt-BR.srt` (315 legendas), gerado em 27/08/2026.
