@@ -49,7 +49,16 @@ SRC_L, SRC_A = 1280, 720          # o que o s3_imagens gera
 PAN_ESCALA = 2                    # nearest ×2 — pixel art exige escala inteira
 PAN_MARGEM_X = SRC_L * PAN_ESCALA - LARG      # 640 px de saída
 PAN_MARGEM_Y = SRC_A * PAN_ESCALA - ALT       # 360 px de saída
-# sem período: o movimento é linear ao longo da cena inteira, não um vaivém.
+# VELOCIDADE constante, não percurso constante. MEDIDO 03/09/2026: fixando o
+# percurso em 640px e deixando o tempo variar, cena de 50s andava a 12,8 px/s e
+# cena de 110s a 5,8 px/s — a maioria das cenas é longa, então a maioria ficou
+# no pior caso (0,208s entre passos contra 0,042s da cena curta).
+#
+# Onda triangular: velocidade constante em cada trecho, com reversão nas pontas.
+# Triângulo e não seno justamente porque seno tem derivada zero nos extremos, que
+# foi a causa original do travado.
+PAN_VEL_X = 12.0    # px de saída por segundo — ~1 passo a cada 2 frames a 24fps
+PAN_VEL_Y = 6.75    # proporcional à margem (360/640), para a diagonal ficar reta
 
 
 def _cenas_narradas(plano: dict) -> list[dict]:
@@ -479,7 +488,7 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v5-pan-linear-diag"
+    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v6-pan-vel-constante"
     if not forcar and atualizado(saida, [img], cfg):
         return saida
 
@@ -504,18 +513,25 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
     #
     # Com fonte 1280×720 a margem é 640×360 de saída: ~12 passos/s em diagonal,
     # contra 1,3/s antes. A 24 fps isso lê como deslize contínuo.
-    dx, dy = [(1, -1), (-1, 1), (1, 1), (-1, -1)][n % 4]
+    fase_x, fase_y = [(0, 1), (1, 0), (0, 0), (1, 1)][n % 4]
 
-    def _eixo(margem: int, sentido: int) -> str:
-        if not mover or margem <= 0:
+    def _eixo(margem: int, vel: float, fase: int) -> str:
+        """Onda triangular de velocidade constante, entre 0 e `margem`.
+
+        `abs(mod(2t/P+1,2)-1)` desenha o triângulo; P = 2*margem/vel é o tempo de
+        ida e volta. Fase 1 começa da outra ponta, para as cenas não deslizarem
+        todas no mesmo sentido.
+        """
+        if not mover or margem <= 0 or vel <= 0:
             return str(margem // 2)
-        a, b = (0, margem) if sentido > 0 else (margem, 0)
-        return f"trunc({a}+({b - a})*t/{dur:.3f})"
+        P = 2 * margem / vel
+        desloc = 1 + fase          # fase 0 começa em 0; fase 1 começa na margem
+        return f"trunc({margem}*abs(mod(2*t/{P:.2f}+{desloc},2)-1))"
 
     # scale ANTES do crop: nearest ×2 mantém a grade de pixel art cravada, e o
     # crop que segue nunca reamostra — só escolhe quais pixels aparecem.
     vf = (f"scale={SRC_L * PAN_ESCALA}:{SRC_A * PAN_ESCALA}:flags=neighbor,"
-          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, dx)}':y='{_eixo(PAN_MARGEM_Y, dy)}',"
+          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, PAN_VEL_X, fase_x)}':y='{_eixo(PAN_MARGEM_Y, PAN_VEL_Y, fase_y)}',"
           f"format=yuv420p,"
           f"fade=t=in:st=0:d={FADE},fade=t=out:st={f_out:.2f}:d={FADE}")
     ffmpeg(["-loop", "1", "-framerate", str(FPS), "-i", str(img),
