@@ -14,7 +14,7 @@ python -m pipeline.s4_legendas  fase0/video-02
 | Estágio | Entrada | Saída |
 |---|---|---|
 | `s2_tts` | `roteiro.md`, bloco `voz` do `plano.json` | `audio/cena_NN.wav`, `duracoes.json` |
-| `s3_imagens` | `plano.json` (`estilo_base` + prompt por cena), `FAL_KEY` | `imagens/cena_NN.png` (640×360) |
+| `s3_imagens` | `plano.json` (`estilo_base` + prompt por cena), `FAL_KEY` | `imagens/cena_NN.png` (1280×720) |
 | `s5_render` | `imagens/`, `audio/`, `plano.json` | `final.mp4` |
 | `s7_auth` | JSON do cliente OAuth | `~/.config/youtube-token.json` |
 | `s7_metricas` | token + ID do vídeo | relatório no terminal, `metricas/*.json` |
@@ -39,13 +39,14 @@ proíbe antes de 2–3 vídeos manuais publicados. O risco do projeto não é t�
 - **`-t` é opção de saída.** Antes do `-i` o comando gera milhões de frames e
   nunca termina. Já custou 8 min de render travado uma vez.
 - **`scale=...:flags=neighbor`.** Upscale de pixel art tem que ser nearest e em
-  escala inteira (640×360 ×3 = 1920×1080). Qualquer interpolação borra a grade.
+  escala inteira. Qualquer interpolação borra a grade.
 - **Movimento por passo inteiro, não Ken Burns.** Ken Burns/`zoompan` ingênuo
-  reamostra em subpixel e destrói a grade de pixel art. Implementado em
-  27/08/2026: `crop` (nunca reamostra) corta uma janela menor que os 640×360
-  gerados e desliza por pixel inteiro da fonte; o `scale=neighbor` que segue
-  continua um fator inteiro exato (×4) até 1920×1080. Cauda sem narração fica
-  parada — ver `clipe_cena` em `s5_render.py`.
+  reamostra em subpixel e destrói a grade de pixel art. A ordem no filtergraph
+  importa e é **`scale` ANTES de `crop`**: a fonte de 1280×720 é escalada ×2
+  nearest para 2560×1440, e só então um `crop` de 1920×1080 desliza por pixel
+  inteiro dentro dela — sobram 640px de margem em x e 360px em y. O `crop`
+  nunca reamostra, então a grade sobrevive ao movimento. Cauda sem narração
+  fica parada — ver `clipe_cena` e `PAN_*` em `s5_render.py`.
 - **Legenda soft.** `s4` gera `.srt` para `captions.insert`. Nunca queimar.
 - **Mix a −14 LUFS integrado / teto real −1 dBTP** (era −18, deliberadamente abaixo, até
   28/08/2026) — é o alvo real de normalização do YouTube; entregar mais baixo só

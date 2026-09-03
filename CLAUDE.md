@@ -1,7 +1,10 @@
 # Contexto do projeto — Canal de Sono Automatizado
 
-Análise completa em [docs/viabilidade-tecnica.md](docs/viabilidade-tecnica.md). Resumo das
-decisões de arquitetura já tomadas — não reabrir essas discussões sem motivo novo:
+Análise completa em [docs/viabilidade-tecnica.md](docs/viabilidade-tecnica.md).
+**Estado atual, custo por vídeo e ordem das frentes abertas em
+[docs/estado-e-direcao.md](docs/estado-e-direcao.md)** (03/09/2026) — comece por
+ele. Resumo das decisões de arquitetura já tomadas — não reabrir essas
+discussões sem motivo novo:
 
 ## Decisões fixadas
 

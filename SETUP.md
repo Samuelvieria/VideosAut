@@ -248,9 +248,12 @@ ganho que justifica a máquina inteira.
 
 ## O que NÃO mudar na máquina nova
 
-**Resolução de geração continua 640×360.** É decisão estética, não limitação de
-hardware — pixel art é upscalado com `flags=neighbor` em escala inteira ×3. Gerar
-em 1080p nativo produz pseudo-pixel-art com grade inconsistente.
+**Resolução de geração continua 1280×720.** É decisão estética *e* limitação
+medida do provedor — pixel art é upscalado com `flags=neighbor` em escala
+inteira ×2, e a fal.ai não honra dimensão abaixo de 512px num eixo (medido em
+02/09/2026: pedir 640×360 devolvia 640×512, fora de 16:9). Gerar em 1080p
+nativo produz pseudo-pixel-art com grade inconsistente; gerar menor que 512
+produz proporção errada em silêncio.
 
 **`s1_roteiro.py` e `s6_upload.py` continuam não existindo** até 2–3 vídeos
 publicados. Mais hardware não valida produto.

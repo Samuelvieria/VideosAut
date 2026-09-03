@@ -2,10 +2,24 @@
 projeto: Canal de Sono Automatizado
 assunto: geração de imagem — provedores, preço e recomendação
 data: 2026-08-27
-status: pesquisa; preços de fonte secundária, confirmar antes de contratar
+status: pesquisa de 27/08/2026 — a RECOMENDAÇÃO abaixo foi superada pelos fatos.
+         Ver a nota no topo e docs/estado-e-direcao.md § custo.
 ---
 
 # Geração de imagem: quanto custa e o que escolher
+
+> **NOTA DE 03/09/2026 — leia antes do resto.** Este documento é da pesquisa de
+> 27/08 e a decisão real divergiu dele em dois pontos:
+>
+> 1. **O caminho é a API da fal.ai, não auto-hospedar.** O Draw Things + SD 1.5
+>    citado abaixo era o plano para o M2 sem GPU e nunca foi o caminho real.
+> 2. **A resolução NÃO é 640×360.** Medido em 02/09: a fal.ai não entrega
+>    dimensão abaixo de 512px num eixo — 640×360 voltava como 640×512, fora de
+>    16:9, e o render cortava a cena em silêncio. É **1280×720**, escala
+>    inteira **×2**. Onde este texto disser 640×360 ou ×3, está errado.
+>
+> O custo medido hoje é R$ 0,56–1,41 por vídeo. Ver
+> [estado-e-direcao.md](estado-e-direcao.md).
 
 > Todos os preços abaixo são `[SECUNDÁRIO]` — vêm de comparativos de terceiros
 > datados de 2026. **Confirmar na página oficial do fornecedor antes de depender.**

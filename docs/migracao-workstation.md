@@ -61,8 +61,12 @@ O `s5_render` é idempotente: rodar duas vezes com a mesma entrada leva segundos
 Se refizer tudo na segunda vez, a idempotência quebrou.
 
 **4. Geração de imagem** — ver [imagens-provedores.md](imagens-provedores.md).
-Recomendação: **Z-Image-Turbo auto-hospedado** (Apache 2.0, custo zero com GPU).
-Substitui o Draw Things + SD 1.5, que era imposição dos 8 GB.
+Hoje roda por **API da fal.ai** (Z-Image-Turbo), não local — o Draw Things +
+SD 1.5 era o plano para o M2 sem GPU, mas a API acabou sendo o caminho real
+desde o video-02. Custo medido: R$ 0,56 a R$ 1,41 por vídeo (ver
+[estado-e-direcao.md](estado-e-direcao.md) § custo), o que remove a urgência de
+auto-hospedar. Com GPU, auto-hospedar continua atraente pela licença Apache 2.0
+— um estágio que não morre se o fornecedor mudar de termos — não pela economia.
 
 ## Ganho esperado, medido na máquina antiga
 
@@ -80,10 +84,13 @@ e só o *timing* do whisper sobrevive, a perda é pequena.
 
 ## O que NÃO mudar na máquina nova
 
-**Resolução de geração continua 640×360.** Decisão estética, não limitação de
-hardware — pixel art é upscalado com `flags=neighbor` em escala inteira ×3. Gerar em
-1080p nativo produz pseudo-pixel-art com grade inconsistente. Máquina melhor não é
-motivo para mexer.
+**Resolução de geração continua 1280×720.** É decisão estética *e* limitação
+medida do provedor — pixel art é upscalado com `flags=neighbor` em escala
+inteira ×2, e a fal.ai não honra dimensão abaixo de 512px num eixo (medido em
+02/09/2026: pedir 640×360 devolvia 640×512, fora de 16:9). Gerar em 1080p
+nativo produz pseudo-pixel-art com grade inconsistente; gerar menor que 512
+produz proporção errada em silêncio.
+Máquina melhor não é motivo para mexer.
 
 **A duração continua vindo do áudio**, não do plano.
 
