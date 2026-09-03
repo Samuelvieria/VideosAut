@@ -151,7 +151,7 @@ def main() -> None:
                        "ppm": round(len(corpo.split()) / (d / 60))})
     total = sum(l["dur_s"] for l in linhas)
     json.dump({"voice": voice, "speed": speed, "total_s": round(total, 2), "cenas": linhas},
-              open(proj / "duracoes.json", "w"), indent=2, ensure_ascii=False)
+              open(proj / "duracoes.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
     alvo_s = float(plano.get("duracao_alvo_s", 1800))
     print(f"\nnarrado: {total/60:.1f} min  |  cauda para fechar {alvo_s/60:.0f} min: "

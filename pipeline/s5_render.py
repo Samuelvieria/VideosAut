@@ -554,7 +554,7 @@ def main() -> None:
                "narrado_s": round(sum(v for k, v in duracoes.items()
                                       if not cauda or k != cauda["n"]), 2),
                "cenas": {str(k): round(v, 2) for k, v in duracoes.items()}},
-              open(proj / "duracoes_render.json", "w"), indent=2)
+              open(proj / "duracoes_render.json", "w", encoding="utf-8"), indent=2)
 
     print(f"\nOK — {final}")
     print(f"   {duracao(final)/60:.1f} min, {final.stat().st_size/1e6:.0f} MB")
