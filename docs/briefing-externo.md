@@ -158,103 +158,173 @@ Cada uma custou análise ou medição. Sugerir o contrário é ruído.
 
 # PARTE 2 — Prompts (escolher UM por conversa)
 
-## A. Retenção e formato
+## Regras que valem para todos (colar junto com o prompt escolhido)
 
-> Acima está o briefing de um canal de sono no YouTube, ainda sem nada
-> publicado. Preciso da sua leitura sobre **retenção**, não sobre produção.
->
-> 1. Para conteúdo de sono, o que efetivamente segura o espectador nos
->    primeiros 60 segundos, quando ele ainda está escolhendo se fica?
-> 2. 33,5 minutos é um erro de formato? Canais grandes do nicho usam 1–3 h.
->    Qual a lógica por trás disso — watch time bruto, ou o vídeo não acabar
->    enquanto a pessoa dorme?
-> 3. A moldura do velho narrador ("vou te contar a história do Pequod") ajuda
->    ou é fricção antes do conteúdo?
-> 4. Um vídeo de sono deve ter clímax narrativo, ou qualquer pico de tensão é
->    um defeito porque acorda quem estava adormecendo?
->
-> Seja concreto e diga em que baseia cada resposta. Se for intuição, diga que é.
+```
+Antes de responder, quatro regras:
 
-## B. Descoberta e primeiros inscritos
+1. NÃO elogie o projeto. Não comece dizendo que está bem estruturado. Eu já
+   sei o que fiz de certo; preciso do que está errado.
+2. Marque CADA afirmação com [OBSERVADO] se você viu isso em dados ou casos
+   concretos, [INFERIDO] se deduziu, ou [PALPITE] se está chutando. Uma
+   resposta toda [PALPITE] é útil — uma resposta que esconde o palpite não é.
+3. Se você não sabe, diga "não sei". Não preencha lacuna com plausibilidade.
+4. No fim, escreva a frase: "Eu poderia estar errado sobre X" — onde X é a
+   parte da sua resposta em que você tem menos confiança.
+```
 
-> Acima está o briefing. O canal tem **zero inscritos** e nada publicado.
->
-> 1. Como um canal de sono novo é descoberto hoje? Busca, sugeridos, Shorts?
-> 2. Título e thumbnail para esse nicho: o que funciona, e o que só parece que
->    funciona?
-> 3. Faz sentido usar Shorts como porta de entrada para vídeo longo de sono,
->    ou o público é outro?
-> 4. Quanto tempo, realisticamente, até os primeiros 1.000 inscritos publicando
->    2–3 vídeos por semana com essa qualidade?
-> 5. O que você **não** faria no lugar dele?
-
-## C. Risco de política do YouTube
-
-> Acima está o briefing. A preocupação é a política de **conteúdo inautêntico**,
-> que desmonetiza produção em massa com template.
->
-> Este canal usa: voz sintética, imagens geradas por IA, ambiente sintetizado,
-> pipeline automatizado — mas roteiro escrito à mão, revisão humana obrigatória
-> antes de publicar, 2–3 vídeos por semana, e divulgação de conteúdo sintético
-> ativada.
->
-> 1. Onde exatamente esse formato cai na política? Cite o texto oficial.
-> 2. Quais sinais concretos separam "IA como ferramenta" de "produção em massa"?
-> 3. O que aumentaria o risco sem parecer que aumenta?
-> 4. Casos reais de canais desmonetizados por isso — o que tinham em comum?
-
-## D. Áudio
-
-> Acima está o briefing. Sobre a mixagem, especificamente.
->
-> Hoje: ambiente sintetizado (mar por eventos de onda com ataque rápido e cauda
-> longa, chuva por ruído filtrado), estéreo por decorrelação real (seeds
-> independentes por canal, correlação L/R ≈ 0), voz mono centrada, ducking
-> sidechain suave de 4–6 dB, masterização a −14 LUFS.
->
-> 1. Para conteúdo de sono, essa profundidade de ducking está certa?
-> 2. −14 LUFS é apropriado, ou material para dormir deve ser mais baixo mesmo
->    sabendo que o YouTube normaliza?
-> 3. Que camada sonora sentiria falta num ambiente de mar noturno em pixel art?
-> 4. Como sintetizar rangido de madeira de navio de forma convincente, sem
->    gravação de terceiros?
-
-## E. Bilíngue (pt-BR + inglês)
-
-> Acima está o briefing. Quero servir português e inglês. O material visual é o
-> mesmo; só narração e metadados mudam. RPM em inglês é 3–5× o brasileiro.
->
-> 1. Uma faixa de áudio extra no mesmo vídeo, ou canal separado por idioma?
->    Considere algoritmo, watch time e esforço de manutenção.
-> 2. Se canal separado: os dois publicando o mesmo formato em paralelo agravam
->    o risco de "conteúdo inautêntico"?
-> 3. Vale começar pelo inglês, dado o RPM, mesmo o dono sendo brasileiro e
->    julgando melhor a qualidade em português?
-
-## F. Imagem
-
-> Acima está o briefing. As imagens são pixel art gerada, 1024×576, 20 por
-> vídeo, estilo travado por prefixo de prompt e seed fixa por cena.
->
-> Problema concreto: a cena da baleia branca de Moby Dick sai como **jubarte**,
-> não cachalote — cabeça pontuda em vez do bloco quadrado. Cinco tentativas,
-> incluindo descrever a anatomia explicitamente e trocar a pose. O modelo tem
-> viés de treino ("baleia" → jubarte).
->
-> 1. Como contornar viés de treino desse tipo sem trocar de modelo?
-> 2. Vale usar img2img a partir de uma gravura do século XIX em domínio público?
-> 3. Como manter consistência de personagem entre 20 cenas, além de repetir a
->    descrição literal e fixar a seed?
+**Rode o mesmo prompt em 2–3 modelos diferentes.** Onde eles concordam, é sinal.
+Onde divergem, é onde a incerteza real está — e é aí que vale testar em vez de
+escolher pela resposta que soou melhor.
 
 ---
 
+## A. Retenção e formato — *pré-mortem*
+
+> Você é analista de retenção de uma MCN. Já viu centenas de canais falharem.
+> Não dá conselho motivacional e não tem paciência para "crie conteúdo de
+> qualidade".
+>
+> **Cenário: o vídeo acima foi publicado e fracassou.** 340 visualizações em
+> 30 dias, retenção média de 11%, a maioria saindo antes dos 90 segundos.
+>
+> Explique **por que fracassou**. Não me diga o que fazer — me diga o que
+> aconteceu. Liste as causas em ordem da mais provável para a menos, e para
+> cada uma diga qual número no YouTube Analytics confirmaria ou descartaria
+> aquela hipótese.
+>
+> Depois responda duas coisas, escolhendo, não listando opções:
+>
+> - A duração certa para este formato é X minutos. Diga o X e defenda.
+> - A moldura do velho narrador nos primeiros 60 segundos: mantém ou corta?
+>
+> **Proibido:** falar de thumbnail, título ou SEO. Isso é outra conversa.
+> Quero só o que acontece depois que a pessoa já clicou.
+
+## B. Descoberta — *o mecanismo, não a lista*
+
+> Você trabalha com crescimento de canais no YouTube e é cético com
+> conteúdo de IA. Sua função aqui é dizer onde este canal vai travar.
+>
+> Canal novo, zero inscritos, nicho de sono, 2–3 vídeos por semana.
+>
+> **Pergunta única:** qual é o mecanismo de distribuição que efetivamente
+> tira um canal de sono do zero hoje? Escolha **um** e explique como ele
+> funciona na prática. Se a resposta honesta for "não existe, só volume e
+> tempo", diga isso.
+>
+> Depois:
+>
+> - Escreva 3 títulos que você usaria para este vídeo, e explique o que cada
+>   um está tentando explorar.
+> - Diga uma coisa que este projeto está fazendo que **não deveria** estar
+>   fazendo nesta fase.
+>
+> **Proibido:** "poste com consistência", "otimize a thumbnail", "use
+> palavras-chave", "engaje com a comunidade". Se sua resposta caberia em
+> qualquer canal de qualquer nicho, ela não serve.
+
+## C. Risco de política — *cite ou admita*
+
+> Você é consultor de conformidade de plataforma. Sua reputação depende de
+> nunca inventar o que uma política diz.
+>
+> O canal acima usa voz sintética, imagens geradas por IA, ambiente sonoro
+> sintetizado e pipeline automatizado. Tem roteiro escrito à mão, revisão
+> humana obrigatória antes de publicar, 2–3 vídeos por semana e divulgação
+> de conteúdo sintético ativada.
+>
+> 1. Cite o **texto oficial** da política de conteúdo inautêntico do YouTube,
+>    com URL. Se você não consegue acessar ou não tem certeza da redação
+>    atual, **diga isso e pare** — não parafraseie de memória.
+> 2. Dê uma nota de risco de 1 a 5 para este canal ser desmonetizado nos
+>    próximos 12 meses, e explique o que sustenta a nota.
+> 3. Qual mudança **aumentaria** o risco sem parecer que aumenta? É o que eu
+>    mais quero saber, porque é a que eu faria sem perceber.
+> 4. Se você conhece casos reais de canais atingidos por essa política,
+>    descreva o que tinham em comum. Se não conhece, diga que não conhece.
+
+## D. Áudio — *um teste, não uma aula*
+
+> Você é engenheiro de mixagem e já trabalhou com áudio para sono e
+> meditação. Assuma que eu sei o básico de compressão e EQ.
+>
+> Mixagem atual: ambiente sintetizado (mar por eventos de onda com ataque
+> rápido e cauda longa; chuva por ruído filtrado), estéreo por decorrelação
+> real (fontes independentes por canal, correlação L/R ≈ 0), voz mono
+> centrada, ducking sidechain de 4–6 dB com release de 1,5–3 s,
+> masterização a −14 LUFS integrado com true peak em −1,5 dB.
+>
+> **Não me explique o que é ducking.** Me dê:
+>
+> 1. **Uma** mudança de parâmetro que você faria primeiro, com o valor
+>    antes e depois, e o que eu deveria ouvir de diferente. Preciso poder
+>    testar em um comando.
+> 2. Um erro que essa cadeia provavelmente tem e que eu não listei — algo
+>    que só aparece depois de 20 minutos de escuta, não nos primeiros 30
+>    segundos.
+> 3. −14 LUFS está certo para material de dormir, sabendo que o YouTube
+>    normaliza para lá? Responda sim ou não antes de explicar.
+
+## E. Bilíngue — *decida, não compare*
+
+> Você é diretor de operações de um canal multilíngue. Já tocou os dois
+> modelos e sabe onde cada um dói.
+>
+> O material visual é idêntico nos dois idiomas; só narração e metadados
+> mudam. RPM em inglês é 3–5× o brasileiro. O dono é brasileiro e julga
+> qualidade muito melhor em português.
+>
+> **Escolha uma arquitetura e defenda:** faixa de áudio adicional no mesmo
+> vídeo, ou canais separados por idioma. Não faça tabela comparativa — eu já
+> tenho uma. Escolha.
+>
+> Depois:
+>
+> - Descreva o modo de falha da opção que você **não** escolheu. O que dá
+>   errado, e em quanto tempo?
+> - Dado o RPM, começar pelo inglês é o certo — mesmo o dono julgando pior
+>   a qualidade em inglês? Considere que ele não tem como saber se a
+>   narração em inglês está boa.
+
+## F. Imagem — *viés de treino*
+
+> Você trabalha com geração de imagem em produção e conhece os vieses dos
+> modelos de difusão.
+>
+> Problema: a cena da baleia branca de Moby Dick precisa de um **cachalote**
+> (cabeça retangular ocupando um terço do corpo). O modelo entrega
+> consistentemente uma **jubarte** (focinho pontudo, pregas na garganta,
+> nadadeira peitoral longa). Cinco tentativas: descrever a anatomia
+> explicitamente, mudar a pose de salto para perfil, e fechar o
+> enquadramento só na cabeça. O modelo é Z-Image-Turbo, 8 passos, **sem
+> suporte a `negative_prompt`**.
+>
+> 1. Qual técnica de prompt contorna viés de treino desse tipo? Quero o
+>    mecanismo, não "seja mais específico" — já fui.
+> 2. Existe vocabulário que ativa a região certa do espaço latente sem
+>    nomear "baleia"? Termos de anatomia, de época, de estilo de ilustração?
+> 3. img2img a partir de uma gravura do século XIX em domínio público
+>    resolve, ou o viés volta na difusão mesmo com imagem de referência?
+> 4. Estilo consistente entre 20 cenas: além de prefixo fixo e seed fixa, o
+>    que mais funciona na prática?
+
 ## Depois de coletar as respostas
 
-Traga tudo de volta para esta conversa. O critério de aproveitamento é:
+Traga tudo de volta para a conversa principal. O critério de triagem:
 
-- **Contradiz uma medição nossa?** Descartar, a não ser que traga método
-  verificável — nossos números foram medidos nesta máquina.
-- **Reabre decisão travada sem argumento novo?** Descartar.
-- **É afirmação verificável?** Testar antes de adotar.
-- **É opinião de produto** (retenção, formato, título)? Aí vale mesmo, porque é
-  onde temos zero dado próprio.
+| situação | o que fazer |
+|---|---|
+| Contradiz uma medição nossa | **descartar**, salvo se vier com método verificável |
+| Reabre decisão travada sem argumento novo | **descartar** |
+| Afirmação marcada `[OBSERVADO]` | **verificar**, depois adotar |
+| Afirmação marcada `[PALPITE]` | tratar como hipótese, não como dado |
+| Opinião de produto (retenção, formato, título) | **peso alto** — é onde não temos dado próprio |
+| Dois ou três modelos concordaram | sinal forte |
+| Modelos divergiram | é aí que a incerteza real mora — testar, não escolher pela prosa |
+
+Uma armadilha: a resposta mais bem escrita não é a mais certa. Modelos escrevem
+com a mesma confiança quando sabem e quando não sabem — foi para isso que os
+prompts exigem `[OBSERVADO] / [INFERIDO] / [PALPITE]` e a frase "eu poderia
+estar errado sobre X". Se um modelo ignorar essas duas regras, a resposta dele
+vale menos, não mais.
