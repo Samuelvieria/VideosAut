@@ -13,23 +13,32 @@ A moldura do velho **é nossa** — não está no livro. É ela que:
 - justifica a persona da voz (`pm_santa`, masculina e idosa);
 - dá abertura e fecho ao vídeo (cenas 1 e 19).
 
-## Estado
+## Estado (03/09/2026)
 
-- [x] `plano.json` — 20 cenas, 1800 s, com prompt de imagem por cena
-- [x] `estilo.yaml` — identidade visual travada
-- [x] `roteiro.md` — 3.285 palavras, adaptação nossa
-- [ ] Thumbnails — 3 variantes
-- [x] Ambiente — chuva + mar procedurais, estéreo decorrelado (no `s5_render`)
-- [x] Narração — Kokoro `pm_santa` 0.75, 25,4 min (`s2_tts`)
-- [x] Mix + render (`s5_render`) — validado com placeholders
-- [ ] Legendas (`s4_legendas`)
-- [ ] **Imagens reais — único bloqueio**
+Pronto para publicar. Falta só render final e o upload manual.
 
-## Registrar aqui depois de publicar
+- [x] `plano.json` — 20 cenas, 41,2 min, prompts e perfil de ambiente por cena
+- [x] `estilo.yaml` — identidade visual travada, 1024×576 → janela 960×540 → ×2
+- [x] `roteiro.md` — 3.467 palavras. **Moldura movida da abertura para o fecho**
+- [x] Narração — Kokoro `pm_santa` 0.60, 32,2 min, 102 ppm, 19 cenas consistentes
+- [x] Imagens — 20 em 1024×576
+- [x] Ambiente — chuva + mar por cena, estéreo decorrelado
+- [x] Legendas — `legendas.pt-BR.srt`, 313 blocos
+- [x] Título, descrição, 16 tags, metadados de publicação
+- [x] Thumbnail — `thumbnails/thumb_B.png` (o velho com a lanterna)
+- [ ] **Render final** — refazer, tudo mudou desde o último
+- [ ] **Upload manual** — ver checklist em `docs/monetizacao.md`
 
-Retenção, ponto de abandono, e se as cenas duraram o certo (a sensação de "imagem
-parada tempo demais" é o risco número um deste formato).
+### Limitação conhecida
 
+Cena 16, a baleia branca, sai **jubarte** e não cachalote. Seis tentativas,
+quatro estratégias, incluindo a técnica que quatro consultas externas
+convergiram. É viés de treino do Z-Image-Turbo, não erro de prompt. Saídas
+registradas no `plano.json`: outro modelo só nessa imagem, ou img2img de gravura
+em domínio público com denoising 0,30–0,55.
+
+A thumbnail escolhida não tem baleia, então o problema não aparece no ativo mais
+visível.
 
 ## Como gerar
 
@@ -40,3 +49,7 @@ python -m pipeline.s5_render    fase0/video-02
 ```
 
 Os scripts avulsos que existiam aqui foram absorvidos pelo `pipeline/`.
+
+**Antes de renderizar na workstation:** `git pull`. Os últimos commits mudaram a
+resolução das imagens, o alvo de duração e a abertura do roteiro. Sem eles a
+cauda volta para 1 minuto e o corte come o rodapé das cenas.
