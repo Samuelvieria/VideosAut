@@ -207,3 +207,89 @@ Fontes secundárias:
 [Vozo](https://www.vozo.ai/blogs/youtube/profitable-faceless-youtube-niches) ·
 [Agência Roque](https://www.agenciaroque.com.br/blog/canais-dark-no-youtube-como-criar-crescer-e-monetizar-em) ·
 [tubelab](https://tubelab.net/blog/faceless-youtube-channel-niches)
+
+---
+
+## 9. Análise das transcrições — medido com `voz.md` no texto deles
+
+Feito em 03/09/2026 com [kar2phi/video-lens](https://github.com/kar2phi/video-lens)
+(MIT) para buscar a transcrição, e as métricas do nosso próprio
+[voz.md](voz.md) aplicadas ao texto resultante.
+
+O Chill Cartoon é música pura (as legendas automáticas só marcam `[music]`) —
+sem narração para medir.
+
+| | History at Night | Dreamoria | **nosso video-02** |
+|---|---|---|---|
+| views | 1,18 M | 5,50 M | **4** |
+| duração | 75 min | 169 min | 41 min |
+| **palavras de narração** | **13.612** | **21.744** | **3.279** |
+| **ritmo** | **181 ppm** | **129 ppm** | **80 ppm** |
+| mediana de palavras/frase | 13 | 13 | **9** |
+| frases ≤10 palavras | 36% | 40% | **57%** |
+| fragmentos (1–4 palavras) | 4% | 6% | **21%** |
+| começa com "And"/"E" | 2% | 5% | **15%** |
+| perguntas retóricas | 11 | 6 | **0** |
+| termos banidos | 1 | 2 | 0 |
+
+### O que é estrutural e o que é gosto
+
+**Estrutural, não negociável:** eles escrevem 4 a 6,6× mais texto. 3.279
+palavras não preenchem 75 minutos em ritmo nenhum. Subir para 60+ min exige
+**6.000 a 9.700 palavras** por vídeo — 2 a 3× o que escrevemos hoje. Isso é
+aritmética, não estética.
+
+**Contestável, e vale testar:** o ritmo. Nossos 80 ppm são pouco mais da metade
+dos 181 do History at Night. Fala de conversa fica em ~150 ppm. Assumimos que
+mais lento é melhor para dormir; os dois canais que funcionam rodam perto do
+normal.
+
+**Provavelmente diferença de gênero, não erro:** mediana de frase e
+fragmentação. Eles fazem **história expositiva** ("como era ser pirata"), que
+naturalmente usa período mais longo. Nós fazemos **reconto narrativo**, que é
+oral e entrecortado. As duas coisas podem estar certas nos seus gêneros. Mas
+vale registrar que o `voz.md` foi extraído do **nosso próprio roteiro aprovado
+de ouvido** — ele descreve o nosso gosto, não um modelo validado do gênero, e o
+próprio documento diz isso.
+
+### A convenção de abertura — os dois fazem igual, e é o oposto do que prescrevemos
+
+**Dreamoria:**
+> "Good evening and welcome back. Tonight we're diving into the fascinating
+> world of Greek mythology. As always, let me know where in the world you're
+> listening from. Get cozy, settle in, and let's begin."
+
+**History at Night:**
+> "Hello and welcome to History at Night. The word pirate usually brings to mind
+> a very specific image, doesn't it? [...] So, tonight we will leave the legends
+> behind [...] But before we dive in, please take a moment to like the video and
+> subscribe."
+
+O padrão compartilhado tem seis partes: **saudação → anúncio do tema → CTA leve
+→ frase de transição ("let's begin") → conteúdo longo → coda reflexiva e boa
+noite.**
+
+Isso viola, simultaneamente:
+
+- o consenso 5/6 das consultas de **cortar a moldura dos primeiros 60 s**
+- a proibição de **pergunta retórica** no `voz.md` ("ativa processamento")
+- a regra do `monetizacao.md` de **não pedir inscrição** (acorda o espectador)
+- e, de quebra, `furthermore` e `dive into` estão nas nossas listas de banidos
+
+Com 1,18 M e 5,50 M de views.
+
+### A distinção que reconcilia
+
+Vale separar dois tipos de moldura, que estávamos tratando como um só:
+
+- **Moldura de personagem** — um velho baleeiro fictício se apresentando como
+  narrador. Exige que o ouvinte aceite uma conceito diegético antes de começar.
+  É a que o video-02 tinha, e é o que as consultas mandaram cortar.
+- **Moldura de apresentador** — "boa noite, bem-vindo de volta". Não explica
+  nada, não pede aceitação de nada. É **ritual**, e ritual é exatamente o que
+  constrói o espectador recorrente, que o `monetizacao.md` identifica como o
+  único ativo real do nicho.
+
+A hipótese: as consultas estavam certas sobre a primeira e nós generalizamos
+para a segunda. A saudação familiar **é** a ancoragem acústica, não o obstáculo
+a ela.
