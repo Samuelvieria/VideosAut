@@ -121,3 +121,15 @@ li { margin-bottom: 0.4rem; }
 }
 .tag.aberta { color: var(--vermelho); border-color: var(--vermelho); }
 .tag.resolvida { color: var(--verde); border-color: var(--verde); }
+
+/* Painel de estágios (projetos/detalhe.html) */
+.tag.tempo { color: var(--texto-fraco); border-color: var(--borda); }
+.tag.gasta { color: var(--ambar-forte); border-color: var(--ambar-forte); }
+.estagio-campos {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+.estagio-campos label {
+  display: flex; align-items: center; gap: 0.35rem;
+  color: var(--texto-fraco); font-size: 0.9rem;
+}

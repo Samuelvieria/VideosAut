@@ -51,13 +51,53 @@
 </table>
 
 <h2>Estágios</h2>
+<p style="color:var(--texto-fraco)">
+  Na ordem em que rodam. Estágio já feito e sem entrada alterada sai na hora —
+  a idempotência é por hash do <em>conteúdo</em> das entradas, então trocar de
+  branch ou dar pull não invalida mais nada.
+</p>
+
+{% for nome, e in estagios.items() %}
 <div class="card">
-  <button id="btn-imagens-seco"
-          onclick="rodarEstagio('{{ slug }}', 'imagens-seco', 'btn-imagens-seco', 'log-imagens-seco')">
-    rodar s3_imagens --seco (grátis — só monta os prompts, não gasta)
-  </button>
-  <pre id="log-imagens-seco" class="console" style="margin-top:0.8rem"></pre>
+  <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap">
+    <strong>{{ e.rotulo }}</strong>
+    {% if e.tempo %}<span class="tag tempo">{{ e.tempo }}</span>{% endif %}
+    {% if e.custa %}<span class="tag gasta">gasta dinheiro</span>{% endif %}
+  </div>
+  {% if e.nota %}<p style="color:var(--texto-fraco); margin:0.5rem 0">{{ e.nota }}</p>{% endif %}
+
+  <div class="estagio-campos">
+    {% if "forcar" in e.campos %}
+      <label><input type="checkbox" id="forcar-{{ nome }}"> ignorar cache</label>
+    {% endif %}
+    {% if "cena" in e.campos %}
+      <label>só a cena
+        <input type="number" id="cena-{{ nome }}" min="1" max="{{ plano.cenas | length }}"
+               placeholder="todas" style="width:5.5rem"></label>
+    {% endif %}
+    {% if "modelo" in e.campos %}
+      <label>modelo
+        <select id="modelo-{{ nome }}">
+          <option value="">do perfil</option>
+          {% for m in modelos_whisper %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
+        </select></label>
+    {% endif %}
+    {% if "jobs" in e.campos %}
+      <label>jobs
+        <input type="number" id="jobs-{{ nome }}" min="1" max="32"
+               placeholder="perfil" style="width:5.5rem"></label>
+    {% endif %}
+    {% if e.custa %}
+      <label style="color:var(--ambar-forte)">
+        <input type="checkbox" id="confirmo-{{ nome }}"> confirmo o gasto</label>
+    {% endif %}
+    <button id="btn-{{ nome }}"
+            onclick="rodarEstagio('{{ slug }}', '{{ nome }}', 'btn-{{ nome }}', 'log-{{ nome }}', extrasDe('{{ nome }}'))">
+      rodar</button>
+  </div>
+  <pre id="log-{{ nome }}" class="console" style="margin-top:0.8rem"></pre>
 </div>
+{% endfor %}
 
 <script src="/static/estudio.js"></script>
 {% endblock %}

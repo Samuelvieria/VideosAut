@@ -6,6 +6,10 @@
 // "done") — quem chama e precisa fazer algo DEPOIS (tipo recarregar um
 // player de áudio) usa `await rodarEstagio(...)`, não só dispara e esquece.
 function rodarEstagio(slug, estagio, botaoId, logId, extras) {
+  // `null` = o coletor barrou (ex.: gasto não confirmado) e já escreveu no log.
+  // Não confundir com `undefined`, que é chamada sem extras e é válida.
+  if (extras === null) return Promise.resolve(false);
+
   const botao = document.getElementById(botaoId);
   const log = document.getElementById(logId);
   log.textContent = "";
@@ -20,8 +24,11 @@ function rodarEstagio(slug, estagio, botaoId, logId, extras) {
       if (resp.status === 409) {
         log.textContent = "já tem uma execução rodando para este estágio — acompanhando...\n";
       } else if (!resp.ok) {
-        resp.text().then((detalhe) => {
-          log.textContent = `erro ao iniciar (${resp.status}): ${detalhe}`;
+        resp.text().then((corpo) => {
+          // FastAPI devolve {"detail": "..."} — mostrar o texto, não o JSON cru.
+          let msg = corpo;
+          try { const j = JSON.parse(corpo); if (j.detail) msg = j.detail; } catch (_) {}
+          log.textContent = `erro ao iniciar (${resp.status}): ${msg}`;
         });
         botao.disabled = false;
         botao.textContent = "rodar";
@@ -54,4 +61,35 @@ function rodarEstagio(slug, estagio, botaoId, logId, extras) {
       botao.textContent = "rodar";
       return false;
     });
+}
+
+
+// Lê os controles que existirem para um estágio e monta o corpo do POST. Os ids
+// seguem `campo-estagio`, então o mesmo coletor serve para todos e a tela pode
+// ganhar campo novo sem tocar aqui. O que o estágio não declarar em `campos`
+// nem aparece no HTML, e o servidor ignora de todo jeito.
+function extrasDe(nome) {
+  const extras = {};
+  const campo = (prefixo) => document.getElementById(`${prefixo}-${nome}`);
+
+  const forcar = campo("forcar");
+  if (forcar && forcar.checked) extras.forcar = "true";
+
+  for (const p of ["cena", "modelo", "jobs"]) {
+    const el = campo(p);
+    if (el && el.value) extras[p] = el.value;
+  }
+
+  // Confirmação de gasto: sem o marcador, nem envia — mas a guarda que vale é
+  // a do servidor (ver pipeline_run.rodar), esta só evita a ida à rede.
+  const confirmo = campo("confirmo");
+  if (confirmo) {
+    if (!confirmo.checked) {
+      document.getElementById(`log-${nome}`).textContent =
+        "este estágio gasta na fal.ai — marque 'confirmo o gasto' antes de rodar.";
+      return null;
+    }
+    extras.confirmo_custo = "sim";
+  }
+  return extras;
 }

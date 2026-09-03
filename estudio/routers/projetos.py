@@ -15,6 +15,7 @@ from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
+from estudio.routers.pipeline_run import ESTAGIOS, MODELOS_WHISPER
 from pipeline.comum import carregar_plano
 
 router = APIRouter()
@@ -81,6 +82,7 @@ async def detalhe(request: Request, slug: str):
     audios = sorted(p.name for p in (d / "audio").glob("cena_*.wav")) if (d / "audio").is_dir() else []
     return templates.TemplateResponse(request, "projetos/detalhe.html", {
         "slug": slug, "plano": plano, "imagens": imagens, "audios": audios,
+        "estagios": ESTAGIOS, "modelos_whisper": MODELOS_WHISPER,
         "tem_video": (d / "final.mp4").is_file(),
         "tem_legendas": (d / "legendas.pt-BR.srt").is_file(),
     })
