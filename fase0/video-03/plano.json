@@ -1,6 +1,6 @@
 {
   "titulo": "A Luz da Baía Quieta | História Calma para Dormir | Grécia Antiga",
-  "obra": "A Luz da Baía Quieta — história original ambientada na Grécia Antiga, sem mitologia, sem deuses, sem monstros",
+  "obra": "original story set on the ancient Greek coast — a lighthouse keeper's tale",
   "duracao_alvo_s": 1800,
   "narrado_s": 1456,
   "cauda_ambiente_s": 344,
@@ -25,7 +25,7 @@
     "imagens": "geradas, estilo pixel art consistente com o canal (mesma paleta escura do video-02, ambientação trocada)",
     "disclosure": "narração sintética + imagens geradas → ativar divulgação de conteúdo sintético no Studio"
   },
-  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange highlights, dramatic rim lighting, cinematic wide composition, ancient Mediterranean Greek coast at night, painterly game background art, 16:9",
+  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange highlights, dramatic rim lighting, cinematic wide composition, ancient Mediterranean Greek coast, 16:9",
   "nota_duracoes": "Durações são ALVO. Quem manda no corte final é o áudio — ver s5_render.",
   "cenas": [
     {

@@ -26,6 +26,46 @@ cena 19 do vídeo 2 (3 tentativas). Z-Image-Turbo não aceita
 geral de "positive framing" de qualquer guia de prompt de imagem: escrever
 "rua vazia", nunca "rua sem carros".
 
+**Não pedir linguagem de "arte de jogo" — ela convém tela de título.** O cue
+`painterly game background art` no `estilo_base` do vídeo 2 fez o modelo
+escrever o nome da história DENTRO da imagem: "Moby-Dolk" na cena 2 e
+"Moby-Dik / Herman Melville" na cena 20, essa última saindo photorealista de
+quebra. A causa não é óbvia — arte de fundo de jogo, no conjunto de treino,
+vem com título sobreposto e moldura de menu. Restaurar `no text` nos negativos
+NÃO resolveu (testado: o título voltou), porque o modelo não estava
+desobedecendo, estava atendendo ao que foi pedido. O que resolveu foi tirar o
+cue e fechar o enquadramento da cena, reduzindo a área vazia que convida
+tipografia.
+
+Corolário medido em 03/09/2026: essa regra não estava escrita aqui, e o
+video-03 — planejado depois da correção, mas a partir do template de antes —
+nasceu com o mesmo cue no `estilo_base`. Achado pelo `--seco`, antes de gastar.
+Regra que não vira documento volta.
+
+**A negação vale para o campo `obra` também, não só para o prompt da cena.** O
+`obra` entra no prompt POSITIVO (ver o formato na regra seguinte). O video-03
+veio com `obra: "A Luz da Baía Quieta — história original ambientada na Grécia
+Antiga, sem mitologia, sem deuses, sem monstros"`: três negações pedindo
+exatamente mitologia, deuses e monstros. A intenção negativa mora em
+`estilo.yaml/prompt_negativo`, que é registro humano e não chega ao modelo
+(Z-Image-Turbo não aceita `negative_prompt`); a defesa real é o `estilo_base`
+explícito.
+
+**Título de obra só ajuda quando o modelo já conhece a obra.** "Moby-Dick,
+Herman Melville" carrega associação visual de treino — século XIX, baleeiro,
+mar — e paga o próprio custo. Um título que nós inventamos, "A Luz da Baía
+Quieta", o modelo nunca viu: carrega zero informação visual e só adiciona o
+risco de ser desenhado como texto na tela, em português, com acento. Em obra
+original, pôr no `obra` a era e o tema, nunca o título:
+`original story set on the ancient Greek coast — a lighthouse keeper's tale`.
+
+**Não fixar hora do dia no `estilo_base`.** A base vale para todas as N cenas;
+hora do dia não. O video-03 tinha `ancient Mediterranean Greek coast at night`
+e contradizia três cenas — a 6 (memória diurna, `soft overcast daylight`), a 20
+e a 21 (amanhecer). Medido: as 21 cenas já traziam a própria luz no prompt, a
+base não precisava fixar nada. Na base vai só o invariante do vídeo — traço,
+paleta, era, enquadramento.
+
 **Contexto narrativo (obra + personagem + cena) ANTES da descrição visual
 ajuda a reter o traço que define um personagem.**
 Formato: `{obra}, {personagem}, scene: {titulo}. {estilo_base}, {prompt visual}`.

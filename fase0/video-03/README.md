@@ -33,3 +33,20 @@ python -m pipeline.s3_imagens   fase0/video-03
 python -m pipeline.s5_render    fase0/video-03
 python -m pipeline.s4_legendas  fase0/video-03
 ```
+
+## Correções de prompt aplicadas em 03/09/2026
+
+O plano veio da outra máquina montado a partir do template de **antes** das
+correções do video-02. O `s3_imagens --seco` pegou três regressões antes de
+gastar um centavo:
+
+1. `estilo_base` tinha `painterly game background art` — o cue que escreveu
+   "Moby-Dolk" na tela do video-02. Removido.
+2. `estilo_base` fixava `at night`, contradizendo a cena 6 (memória diurna),
+   a 20 e a 21 (amanhecer). Removido — as 21 cenas já trazem a própria luz.
+3. `obra` estava em português e com negações (`sem deuses, sem monstros`), que
+   em prompt positivo pedem o que negam. Reescrito em inglês, sem o título
+   original, que não carrega informação visual e só arrisca virar texto na tela.
+
+As quatro regras que saíram disso estão em
+`.claude/skills/qualidade-producao-video/references/prompt-imagem.md`.
