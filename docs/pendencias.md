@@ -6,6 +6,8 @@ data: 2026-09-03
 
 # Pendências
 
+> **Ambas resolvidas em 03/09/2026.** Ver o fim de cada seção.
+
 Achados ao puxar (`git pull --ff-only`) e revisar os 26 commits que chegaram de
 outra sessão/máquina antes desta. Fast-forward puro, sem conflito de merge — as
 duas pendências abaixo são coisas erradas ou ambíguas no que chegou, não
@@ -55,8 +57,18 @@ não seria resolvido pra path absoluto nem teria a existência conferida.
 3. Estender a branch de path em `_valida()` pra tratar `GOOGLE_APPLICATION_CREDENTIALS`
    e `YOUTUBE_OAUTH_CLIENT` igual (mesmo tipo de segredo: caminho de JSON).
 
-Nem `YOUTUBE_API_KEY` nem `YOUTUBE_OAUTH_CLIENT` estão preenchidas no `.env`
-local — o bug ainda não foi exercitado na prática aqui.
+**RESOLVIDO em 03/09/2026.** Diagnóstico estava correto em tudo. A causa raiz
+foi um `str.replace` com âncora `    "ANTHROPIC_API_KEY":`, que existe DUAS
+vezes no arquivo — em `_CONHECIDAS` e em `_FORMATO` — então as descrições
+foram injetadas nos dois lugares.
+
+Aplicados os três pontos do fix. E uma armadilha a mais na correção: recortar
+o bloco de `_FORMATO` com `s.index("}", ini)` acha o `}` de dentro de
+`{30,}` na própria regex, não o fim do dicionário. Corrigido por linha.
+
+Validação testada com cinco casos: chave válida aceita, chave de outro
+serviço recusada, comando colado recusado, caminho existente resolvido para
+absoluto, caminho inexistente recusado.
 
 ## 2. video-02: publicado ou pendente de re-render?
 
@@ -74,5 +86,15 @@ anterior à correção de resolução (1280×720, ver `CLAUDE.md` § Imagens) e 
 mudança de duração/abertura, e o que está publicado no YouTube agora pode não
 bater com o que os arquivos locais descrevem.
 
-**Não resolvido aqui** — precisa confirmar com o Samuel qual dos dois estados é
-real antes de tocar em render ou upload do video-02.
+**RESOLVIDO em 03/09/2026: o publicado É a versão corrigida.** A contradição
+era documentação velha — a seção `## Estado` ficou com o checklist de antes da
+publicação, e eu acrescentei o `## PUBLICADO` acima sem apagar o de baixo.
+
+Confirmado com três sinais independentes:
+
+- as 20 imagens em disco são **1280×720**, a resolução corrigida
+- a duração publicada (`PT41M14S`) bate com `duracao_alvo_s` = 2473 s
+- cronologia: imagens 01:35 -> render final 04:08:55 -> publicado 07:20 UTC
+
+A pergunta era boa e a suspeita era razoável — o README realmente descrevia
+dois estados incompatíveis.

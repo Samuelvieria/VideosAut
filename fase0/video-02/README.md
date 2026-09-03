@@ -26,21 +26,22 @@ Os números a acompanhar, em ordem de importância:
 3. Duração média **absoluta** — 11% de 41 min pode ser sucesso: a pessoa dormiu.
 4. Origem do tráfego — busca é o único canal controlável partindo do zero.
 
-## Estado (03/09/2026)
+## Estado — encerrado
 
-Pronto para publicar. Falta só render final e o upload manual.
+Tudo entregue. O que está no YouTube é a versão com todas as correções:
 
-- [x] `plano.json` — 20 cenas, 41,2 min, prompts e perfil de ambiente por cena
-- [x] `estilo.yaml` — identidade visual travada, 1024×576 → janela 960×540 → ×2
-- [x] `roteiro.md` — 3.467 palavras. **Moldura movida da abertura para o fecho**
-- [x] Narração — Kokoro `pm_santa` 0.60, 32,2 min, 102 ppm, 19 cenas consistentes
-- [x] Imagens — 20 em 1024×576
-- [x] Ambiente — chuva + mar por cena, estéreo decorrelado
-- [x] Legendas — `legendas.pt-BR.srt`, 313 blocos
-- [x] Título, descrição, 16 tags, metadados de publicação
-- [x] Thumbnail — `thumbnails/thumb_B.png` (o velho com a lanterna)
-- [ ] **Render final** — refazer, tudo mudou desde o último
-- [ ] **Upload manual** — ver checklist em `docs/monetizacao.md`
+- [x] Roteiro — 3.467 palavras. Moldura movida da abertura para o fecho
+- [x] Narração — Kokoro `pm_santa` 0.60, 32,2 min, 102 ppm
+- [x] Imagens — 20 em **1280×720** (a correção de resolução de 02/09)
+- [x] Ambiente por cena, estéreo, sem `aecho` (era ele o granulado da cauda)
+- [x] Pan v9 — parada, deslize a 1 px/frame, parada
+- [x] Cauda de ambiente de 9 min, com rampa de +8 dB
+- [x] Legendas, título, descrição, 16 tags, thumbnail
+- [x] **Render final 03/09 04:08** e **publicado 04:20**
+
+Conferido em 03/09 com três sinais independentes: as 20 imagens em disco são
+1280×720, a duração publicada (`PT41M14S`) bate com `duracao_alvo_s` (2473 s),
+e o render precede a publicação em 3 horas.
 
 ### Limitação conhecida
 

@@ -86,8 +86,6 @@ _SUSPEITO = ("cd ", "./", "python", "source ", "export ", "setenv ", "git ", "su
 _FORMATO = {
     "FAL_KEY":           (r"[0-9a-f-]{36}:[0-9a-f]{32}", "uuid:hex, 69 chars"),
     "YOUTUBE_API_KEY":   (r"AIza[A-Za-z0-9_\-]{30,}", "começa com AIza"),
-    "YOUTUBE_API_KEY":                "YouTube — só dados PÚBLICOS (não lê analytics)",
-    "YOUTUBE_OAUTH_CLIENT":           "YouTube — caminho do JSON do cliente OAuth (lê o seu canal)",
     "ANTHROPIC_API_KEY": (r"sk-ant-[A-Za-z0-9_\-]{20,}", "começa com sk-ant-"),
     "OPENAI_API_KEY":    (r"sk-[A-Za-z0-9_\-]{20,}", "começa com sk-"),
 }
@@ -132,7 +130,9 @@ def _valida(nome: str, valor: str) -> str:
             f"  Recebi {len(valor)} chars começando com {valor[:8]!r}.\n"
             f"  Nada gravado — cole só o valor da chave, sem comando em volta.")
 
-    if nome == "GOOGLE_APPLICATION_CREDENTIALS":
+    # Estes dois não são chave, são CAMINHO de JSON: resolve para absoluto e
+    # confere existência, sem passar por regex de formato.
+    if nome in ("GOOGLE_APPLICATION_CREDENTIALS", "YOUTUBE_OAUTH_CLIENT"):
         if not Path(valor).expanduser().is_file():
             raise SystemExit(f"caminho não existe: {valor}")
         valor = str(Path(valor).expanduser().resolve())
