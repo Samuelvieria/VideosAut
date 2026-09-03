@@ -45,12 +45,11 @@ FADE = 1.5
 # Com fonte 1024×576 (nativo do modelo) sobram duas janelas de escala inteira:
 #   640×360 ×3 -> mostra só 62% do quadro; corta composição demais
 #   960×540 ×2 -> mostra 94%, sobra margem 64×36 pro pan   <- escolhida
-SRC_L, SRC_A = 1024, 576                                  # nativo do modelo, 16:9
-PAN_ESCALA = 2
-PAN_L, PAN_A = LARG // PAN_ESCALA, ALT // PAN_ESCALA      # 960, 540
-PAN_MARGEM_X = SRC_L - PAN_L                              # 64
-PAN_MARGEM_Y = SRC_A - PAN_A                              # 36
-PAN_PERIODO_S = 40.0      # duração de um vaivém completo — ver nota em clipe_cena
+SRC_L, SRC_A = 1280, 720          # o que o s3_imagens gera
+PAN_ESCALA = 2                    # nearest ×2 — pixel art exige escala inteira
+PAN_MARGEM_X = SRC_L * PAN_ESCALA - LARG      # 640 px de saída
+PAN_MARGEM_Y = SRC_A * PAN_ESCALA - ALT       # 360 px de saída
+# sem período: o movimento é linear ao longo da cena inteira, não um vaivém.
 
 
 def _cenas_narradas(plano: dict) -> list[dict]:
@@ -480,31 +479,44 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    direcao = 1 if n % 2 == 0 else -1
-    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};dir={direcao};v4-pan-vaivem"
+    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v5-pan-linear-diag"
     if not forcar and atualizado(saida, [img], cfg):
         return saida
 
     f_out = max(0.0, dur - FADE)
-    y0 = PAN_MARGEM_Y // 2   # fixo, só desliza no eixo horizontal
-    if mover and PAN_MARGEM_X > 0:
-        # Linear ao longo da cena inteira (75-130s) dava 1 passo de pixel a
-        # cada ~0,8s — perceptível como travado, não como deslize. Trocado
-        # por um vaivém senoidal de período curto (PAN_PERIODO_S), que dá um
-        # passo a cada ~0,15s (bem mais fluido) e ainda assim lê como
-        # deslocamento lento, porque a amplitude continua pequena (128px) e a
-        # curva desacelera nas pontas (derivada do seno) em vez de bater e
-        # voltar seco. `direcao` só decide a fase inicial (que lado começa).
-        fase = 0 if direcao > 0 else "PI"
-        expr_x = f"trunc({PAN_MARGEM_X}/2*(1+sin(2*PI*t/{PAN_PERIODO_S}+{fase})))"
-    else:
-        expr_x = str(PAN_MARGEM_X // 2)   # parado: janela centralizada na margem
-    # crop nunca reamostra (só seleciona pixels existentes) — a janela é
-    # sempre 640x360 (a densidade real, parada ou deslizando pela margem
-    # gerada a mais em 768x432), e o scale=neighbor que segue continua ×3
-    # exato. Isso é o que evita destruir a grade de pixel art.
-    vf = (f"crop={PAN_L}:{PAN_A}:x='{expr_x}':y={y0},"
-          f"scale={LARG}:{ALT}:flags=neighbor,format=yuv420p,"
+
+    # MEDIDO 03/09/2026. O vaivém senoidal anterior lia como TRAVADO, e a causa
+    # não era o tamanho do passo — era a irregularidade. Sobre uma cena de 100s:
+    #
+    #   seno, corte no espaço da fonte:  passo de 2px, intervalo 0,04s a 3,21s
+    #                                    -> razão max/mediana 12,8x
+    #   linear, corte no espaço da saída: passo de 1px, intervalo 0,75s a 0,79s
+    #                                    -> razão 1,0x
+    #
+    # Nos extremos do seno a derivada é zero e a imagem CONGELA por 3 segundos;
+    # no meio dispara 25 passos por segundo. O olho lê o contraste, não a média.
+    #
+    # Duas correções somadas:
+    # 1. Escalar ANTES de cortar. Cortando na fonte e escalando depois, cada
+    #    passo de 1px da fonte virava 2px na tela. Escalando primeiro, o corte
+    #    anda em pixels de SAÍDA e o passo cai pela metade.
+    # 2. Linear em vez de seno — velocidade constante, passos regulares.
+    #
+    # Com fonte 1280×720 a margem é 640×360 de saída: ~12 passos/s em diagonal,
+    # contra 1,3/s antes. A 24 fps isso lê como deslize contínuo.
+    dx, dy = [(1, -1), (-1, 1), (1, 1), (-1, -1)][n % 4]
+
+    def _eixo(margem: int, sentido: int) -> str:
+        if not mover or margem <= 0:
+            return str(margem // 2)
+        a, b = (0, margem) if sentido > 0 else (margem, 0)
+        return f"trunc({a}+({b - a})*t/{dur:.3f})"
+
+    # scale ANTES do crop: nearest ×2 mantém a grade de pixel art cravada, e o
+    # crop que segue nunca reamostra — só escolhe quais pixels aparecem.
+    vf = (f"scale={SRC_L * PAN_ESCALA}:{SRC_A * PAN_ESCALA}:flags=neighbor,"
+          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, dx)}':y='{_eixo(PAN_MARGEM_Y, dy)}',"
+          f"format=yuv420p,"
           f"fade=t=in:st=0:d={FADE},fade=t=out:st={f_out:.2f}:d={FADE}")
     ffmpeg(["-loop", "1", "-framerate", str(FPS), "-i", str(img),
             "-vf", vf,

@@ -42,7 +42,7 @@ MODELO = "fal-ai/z-image/turbo"
 # Por isso 1024x576: e o preset landscape_16_9 do proprio modelo. Qualquer
 # alteracao aqui precisa manter as DUAS dimensoes >= 512, senao a imagem sai
 # com outra proporcao e o corte do s5_render passa a comer composicao.
-LARG, ALT = 1024, 576   # nativo do modelo (preset landscape_16_9), 16:9 exato
+LARG, ALT = 1280, 720   # margem de pan; ver PAN_* no s5_render
 PASSOS = 8
 
 
