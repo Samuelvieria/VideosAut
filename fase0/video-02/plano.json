@@ -35,7 +35,7 @@
     "imagens": "geradas, estilo pixel art consistente — não usar gravuras de acervo",
     "disclosure": "narração sintética + imagens geradas → ativar divulgação de conteúdo sintético no Studio"
   },
-  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange highlights, dramatic rim lighting, cinematic wide composition, historically accurate 19th century whaling era, painterly game background art, 16:9",
+  "estilo_base": "pixel art, detailed 16-bit pixel art style, visible pixel grain, limited palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange, dramatic rim lighting, cinematic wide composition, 19th century whaling era, 16:9",
   "nota_duracoes": "Durações são ALVO. Quem manda no corte final é o áudio: depois de gerar a narração, as cenas são reajustadas para cair nas pausas naturais. Ver s5_render.",
   "cenas": [
     {
@@ -60,7 +60,7 @@
       "papel": "narrado",
       "titulo": "Ismael em New Bedford",
       "personagem": "Ishmael, the young sailor narrator of the original novel",
-      "prompt": "a lean young sailor in a worn brown coat with a canvas sea bag, walking down a narrow cobbled street of a 19th century whaling town at night, sleet falling, warm yellow light spilling from small inn windows, dark clapboard houses leaning over the street",
+      "prompt": "a lean young sailor in a worn brown coat carrying a canvas sea bag, seen close from behind at street level, walking away down a narrow cobbled street of a 19th century whaling town at night, sleet falling, warm yellow light from small inn windows, dark clapboard houses leaning in and filling the frame to the top edge, laundry lines and roof eaves crossing overhead, no open sky",
       "ambiente": {
         "mar": 0.15,
         "chuva": 0.8,
@@ -68,7 +68,8 @@
         "vento": 0.4,
         "abafado": false,
         "_": "rua da cidade, aguaceiro, porto distante"
-      }
+      },
+      "_nota": "Enquadramento fechado de propósito: telhados e beirais cobrem o topo. A versão com céu aberto saiu duas vezes com título de livro escrito no espaço vazio."
     },
     {
       "n": 3,
@@ -354,7 +355,7 @@
       "papel": "cauda-ambiente",
       "titulo": "Mar calmo (sem narração)",
       "personagem": "no character — the open sea",
-      "prompt": "a vast open ocean at full sunrise seen from just above the waterline, long slow swells catching warm gold and rose light, unbroken horizon line from edge to edge, pure water and sky only, extremely quiet and restful, the sun just clear of the water",
+      "prompt": "pixel art seascape at sunrise, chunky visible pixels, long slow ocean swells rendered as blocky stepped shapes, warm gold and rose light on the water in dithered bands, empty horizon, water and sky only, retro game background art, extremely calm and restful",
       "ambiente": {
         "mar": 0.4,
         "chuva": 0.0,
@@ -362,7 +363,8 @@
         "vento": 0.15,
         "abafado": false,
         "_": "mar calmo ao nascer do sol"
-      }
+      },
+      "_nota": "Cena vazia (só mar e céu) dava ao modelo pouca âncora e ele derivava para foto de banco de imagem. Prompt reforça pixel art e descreve a água em termos do estilo (blocos, dithering), não em termos fotográficos."
     }
   ],
   "thumbnails": {
@@ -397,7 +399,7 @@
     "cais": "a weathered wooden pier with mooring posts, coiled rope, lobster crates, a lighthouse on the headland behind"
   },
   "_nota_estilo": "O prompt final de cada cena é estilo_base + ', ' + prompt. Gerando à mão no Draw Things, colar o estilo_base ANTES do prompt toda vez. Esquecer uma vez = uma cena fora do estilo.",
-  "_nota_estilo_base": "Só traço, paleta e enquadramento. Duas armadilhas já medidas: (1) 'sea and rain' aqui forçava chuva nas 20 cenas, inclusive interiores; (2) 'lantern and firelight accents' fazia o modelo desenhar lanternas como OBJETO em cenas de mar aberto. Descrever cor e luz, nunca objeto, nunca negação.",
+  "_nota_estilo_base": "Só traço, paleta e enquadramento. Quatro armadilhas medidas:\n(1) 'sea and rain' forçava chuva nas 20 cenas, inclusive interiores;\n(2) 'lantern and firelight accents' virava lanterna como OBJETO em mar aberto;\n(3) 'painterly game background art' puxava para TELA DE TÍTULO — as cenas 2 e 20, que têm grande área vazia no topo, saíram com 'Moby-Dick / Herman Melville' escrito, e errado;\n(4) 'no text' NÃO resolve isso. Testado: com a negação explícita o título voltou. A saída é tirar o que convida ao texto (o cue de game art) e não deixar área vazia grande no enquadramento.",
   "_nota_prompts": "NUNCA nomear o que não se quer. Modelo de difusão não processa negação: 'a chuva parou' contém 'chuva' e o modelo desenha chuva. Medido na cena 19, 3 tentativas. Z-Image-Turbo não aceita negative_prompt, então a única defesa é descrever só o que existe.",
   "titulo_anterior": "Moby Dick contada por um velho baleeiro | História para Dormir",
   "titulo_i18n": {

@@ -52,6 +52,25 @@ narração acelerando na metade.
 **Detecção:** ao agregar arquivos gerados, conferir se vieram todos da mesma
 configuração. `ls -lT` na pasta responde em um comando.
 
+### 5. Inspecionar a amostra em vez do lote
+
+Gerei 20 imagens e abri 4. Duas das 16 que não abri tinham **título de livro
+escrito na imagem, e escrito errado** — uma delas na cena que fica 9 minutos na
+tela. Só apareceu porque o Samuel assistiu.
+
+**Detecção:** folha de contato. Um comando mostra as 20 de uma vez:
+
+```bash
+cd fase0/video-02/imagens && ffmpeg -y -pattern_type glob -i "cena_*.png" \
+  -vf "scale=480:270,tile=4x5:margin=4:padding=4" -frames:v 1 -update 1 /tmp/contato.png
+```
+
+Custa segundos e uma leitura. Abrir quatro arquivos "representativos" não é
+inspecionar o lote — é confirmar expectativa.
+
+E vale para o vídeo pronto também: extrair um frame de cada cena do
+`final.mp4` prova que a correção chegou no arquivo, não só na pasta de imagens.
+
 ## Ao consumir análise de IA externa
 
 Vale para as consultas em `docs/consultas/`. Duas coisas concretas do último lote:
