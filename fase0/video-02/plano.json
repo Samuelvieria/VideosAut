@@ -439,7 +439,13 @@
     },
     "idioma": "pt-BR",
     "categoria": "Pessoas e blogs",
-    "publico_infantil": false
+    "publico_infantil": false,
+    "canal": {
+      "nome": "SleepPowder",
+      "handle": "@SleepPowder-x1l",
+      "conta": "samuelalvesvieira39@gmail.com",
+      "_nota": "A conta tem também o canal pessoal do Samuel. Na tela de consentimento do OAuth os dois aparecem — escolher SleepPowder. O s7_auth imprime o nome do canal autorizado no fim justamente para pegar troca errada; se vier o pessoal, rodar com --forcar e refazer."
+    }
   },
   "_baleia_limitacao": "Z-Image-Turbo entrega jubarte quando se pede cachalote. 6 tentativas: descrição anatômica explícita, troca de pose (salto -> perfil), enquadramento fechado só na cabeça, e a técnica convergente de 4 consultas externas (nome científico Physeter macrocephalus + iconografia baleeira do séc. XIX + geometria sem o token 'whale'). Nenhuma funcionou. Não é problema de prompt — é viés de treino, e possivelmente trade-off da variante Turbo destilada. Saídas: outro modelo só nessa imagem, ou img2img de gravura em domínio público com denoising baixo (0,30-0,55).",
   "_nota_reverb": "ambiente_reverb=0 desliga o aecho do ambiente. Era ele a causa da granulação na cauda — confirmado de ouvido no A/B de 03/09/2026 (teste/audio/B_rampa_sem_eco). Cinco hipóteses medidas falharam antes; o teste que resolveu foi o ouvido, não o instrumento."
