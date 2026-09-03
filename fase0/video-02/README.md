@@ -13,6 +13,19 @@ A moldura do velho **é nossa** — não está no livro. É ela que:
 - justifica a persona da voz (`pm_santa`, masculina e idosa);
 - dá abertura e fecho ao vídeo (cenas 1 e 19).
 
+## PUBLICADO em 03/09/2026
+
+https://www.youtube.com/watch?v=103_aYlJr4o  (`103_aYlJr4o`)
+
+Primeiro vídeo do canal SleepPowder. Doze dias do primeiro roteiro até aqui.
+
+Os números a acompanhar, em ordem de importância:
+
+1. **Novos vs recorrentes** — só no Studio, a API não dá. É o ativo do nicho.
+2. Retenção em 30, 60 e 90 s — diz se cortar a moldura funcionou.
+3. Duração média **absoluta** — 11% de 41 min pode ser sucesso: a pessoa dormiu.
+4. Origem do tráfego — busca é o único canal controlável partindo do zero.
+
 ## Estado (03/09/2026)
 
 Pronto para publicar. Falta só render final e o upload manual.
