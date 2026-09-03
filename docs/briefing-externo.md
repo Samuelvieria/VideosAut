@@ -27,6 +27,26 @@ chuva e mar por trás. Sem vídeo real, sem rosto, sem música de terceiros.
 Produção automatizada por um pipeline Python + FFmpeg. **Nada foi publicado
 ainda** — o primeiro vídeo está pronto para revisão.
 
+## Como chegamos aqui (10 dias, 15 commits)
+
+O projeto já mudou de forma várias vezes, sempre por evidência. Isso importa para
+quem for opinar: **não há apego ao formato atual.**
+
+| quando | mudança | motivo |
+|---|---|---|
+| 24/08 | repositório criado, primeiro roteiro escrito | *A Chuva na Cabana*, 2.822 palavras |
+| 26/08 | **1–3 h → 30 min** | decisão de produto; duração virou parâmetro, não constante |
+| 26/08 | **1 imagem estática → ~20 imagens em sequência** | referência de formato encontrada |
+| 26/08 | **primeiro vídeo abandonado** | a cabana virou Moby Dick, com moldura de narrador |
+| 27/08 | pipeline automatizado (TTS, imagem, legenda, render) | estágios mecânicos, sem LLM dentro |
+| 28/08 | **migração para workstation** (Windows, RTX 3060) | legendas levavam 87 min em CPU |
+| 28/08 | interface web local (`estudio/`) | mixer e execução de estágios pelo navegador |
+| 28/08 | **ritmo lento por pausa, não por `speed`** | `speed` baixo degradava pronúncia (medido) |
+| 02/09 | **imagens 640×360 → 1024×576** | o gerador nunca honrou o tamanho pedido |
+
+O roteiro da cabana (2.822 palavras) existe pronto e nunca virou vídeo. Serviu
+para validar a voz e o TTS.
+
 ## O primeiro vídeo (referência concreta)
 
 | | |
@@ -53,8 +73,32 @@ plano.json ──► s3_imagens (fal.ai Z-Image)   ──► 20 PNG 1024×576
 Estágios determinísticos e idempotentes. Nenhum LLM roda dentro do pipeline —
 LLM só escreve/adapta roteiro, fora do loop de produção.
 
+Há também `estudio/`, uma interface web local (FastAPI) para operar o pipeline
+pelo navegador: mixer de áudio, cadastro de personas de voz, execução dos
+estágios e registro de correções. A separação é rígida — `estudio/` importa de
+`pipeline/`, nunca o contrário, e invoca os estágios por subprocesso. Cada
+estágio continua rodável sozinho por linha de comando.
+
+São ~2.200 linhas de Python no total, entre pipeline e interface.
+
 **Não existem, de propósito:** geração automática de roteiro e upload automático.
 A regra do projeto é não construir a fábrica antes de validar o produto.
+
+## Estado atual
+
+| | |
+|---|---|
+| Roteiro do vídeo 1 | pronto — 3.467 palavras |
+| Narração | gerada — 32,5 min, 20 cenas |
+| Imagens | 20 geradas em 1024×576 |
+| Ambiente sonoro | sintetizado, estéreo, por cena |
+| Legendas pt-BR | 313 blocos, alinhadas ao roteiro |
+| Render final | **pendente** — o último é de imagens antigas |
+| Publicação | **nada publicado** |
+| Versão em inglês | planejada, não iniciada |
+| Roteiro automático / upload automático | **não existem, de propósito** |
+
+O gargalo não é técnico. É que ninguém viu o vídeo ainda.
 
 ## Custo mensal real
 
