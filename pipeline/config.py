@@ -32,6 +32,8 @@ _CONHECIDAS = {
     "FAL_KEY":                        "fal.ai — geração de imagem (Z-Image-Turbo)",
     "REPLICATE_API_TOKEN":            "Replicate — alternativa de imagem",
     "GOOGLE_APPLICATION_CREDENTIALS": "Google Cloud TTS — caminho do JSON da conta de serviço",
+    "YOUTUBE_API_KEY":                "YouTube — só dados PÚBLICOS (não lê analytics)",
+    "YOUTUBE_OAUTH_CLIENT":           "YouTube — caminho do JSON do cliente OAuth (lê o seu canal)",
     "ANTHROPIC_API_KEY":              "Claude API — adaptação do roteiro pt-BR -> inglês",
     "OPENAI_API_KEY":                 "OpenAI — TTS/imagem (não recomendado para pt-BR)",
     "ELEVENLABS_API_KEY":             "ElevenLabs — TTS premium",
@@ -83,6 +85,9 @@ _SUSPEITO = ("cd ", "./", "python", "source ", "export ", "setenv ", "git ", "su
 # primeira chamada de API, com erro de autenticação que não diz o que houve.
 _FORMATO = {
     "FAL_KEY":           (r"[0-9a-f-]{36}:[0-9a-f]{32}", "uuid:hex, 69 chars"),
+    "YOUTUBE_API_KEY":   (r"AIza[A-Za-z0-9_\-]{30,}", "começa com AIza"),
+    "YOUTUBE_API_KEY":                "YouTube — só dados PÚBLICOS (não lê analytics)",
+    "YOUTUBE_OAUTH_CLIENT":           "YouTube — caminho do JSON do cliente OAuth (lê o seu canal)",
     "ANTHROPIC_API_KEY": (r"sk-ant-[A-Za-z0-9_\-]{20,}", "começa com sk-ant-"),
     "OPENAI_API_KEY":    (r"sk-[A-Za-z0-9_\-]{20,}", "começa com sk-"),
 }

@@ -35,3 +35,10 @@ fase0/*/teste/
 
 # Thumbnails geradas
 thumbnails/
+
+# Credenciais soltas
+chaveyt.txt
+*.key.txt
+
+# Métricas lidas da API (dados do canal, não versionar)
+metricas/
