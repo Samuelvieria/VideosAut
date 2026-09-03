@@ -33,7 +33,16 @@ from pipeline.comum import atualizado, carregar_plano, erro, log, marcar, projet
 from pipeline.config import obter
 
 MODELO = "fal-ai/z-image/turbo"
-LARG, ALT = 768, 432   # 640x360 de densidade real + 128x72 de margem pro pan (s5_render)
+
+# MEDIDO 02/09/2026: a fal.ai NAO honra dimensao abaixo de 512 — ela empurra
+# para 512 sem avisar, e a resposta vem com o tamanho real (nao o pedido).
+#   pedido 640x360 -> devolveu 640x512   (razao 1.25, nao 16:9)
+#   pedido 768x432 -> devolveu 768x512   (razao 1.50, nao 16:9)
+#   pedido 1024x576 -> devolveu 1024x576  OK
+# Por isso 1024x576: e o preset landscape_16_9 do proprio modelo. Qualquer
+# alteracao aqui precisa manter as DUAS dimensoes >= 512, senao a imagem sai
+# com outra proporcao e o corte do s5_render passa a comer composicao.
+LARG, ALT = 1024, 576   # nativo do modelo (preset landscape_16_9), 16:9 exato
 PASSOS = 8
 
 

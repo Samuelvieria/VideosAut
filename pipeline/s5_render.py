@@ -34,19 +34,22 @@ GOP = FPS * 2
 PAUSA_ENTRE_CENAS = 2.0   # respiro entre cenas; também dá tempo do fade acontecer
 FADE = 1.5
 
-# Movimento de imagem por passo INTEIRO na grade da fonte (ver docstring do
-# módulo). A primeira versão (27/08/2026) cortava uma janela menor que os
-# 640×360 gerados pra abrir margem de deslizar — mas isso ampliava o pixel
-# (bloco 4×4 em vez de 3×3) E cortava composição pensada pro quadro cheio.
-# Corrigido: s3_imagens agora gera em 768×432 (640×360 de densidade real +
-# margem), então a janela de corte fica DO MESMO TAMANHO de sempre (640×360,
-# escala ×3, densidade idêntica à de uma cena parada) e só a POSIÇÃO desliza
-# dentro da margem gerada a mais.
-SRC_L, SRC_A = 768, 432
-PAN_ESCALA = 3
-PAN_L, PAN_A = LARG // PAN_ESCALA, ALT // PAN_ESCALA      # 640, 360
-PAN_MARGEM_X = SRC_L - PAN_L                              # 128
-PAN_MARGEM_Y = SRC_A - PAN_A                              # 72
+# Movimento por passo INTEIRO na grade da fonte. A escala tem que ser inteira
+# ou o pixel art borra — essa é a restrição que manda em todos os números aqui.
+#
+# MEDIDO 02/09/2026: a fal.ai não entrega dimensão abaixo de 512, então 640×360
+# e 768×432 nunca existiram — vinham 640×512 e 768×512, fora de 16:9. O código
+# anterior assumia 768×432 e cortava 640×360 em y=36, descartando em silêncio
+# os 116px de baixo de toda cena.
+#
+# Com fonte 1024×576 (nativo do modelo) sobram duas janelas de escala inteira:
+#   640×360 ×3 -> mostra só 62% do quadro; corta composição demais
+#   960×540 ×2 -> mostra 94%, sobra margem 64×36 pro pan   <- escolhida
+SRC_L, SRC_A = 1024, 576                                  # nativo do modelo, 16:9
+PAN_ESCALA = 2
+PAN_L, PAN_A = LARG // PAN_ESCALA, ALT // PAN_ESCALA      # 960, 540
+PAN_MARGEM_X = SRC_L - PAN_L                              # 64
+PAN_MARGEM_Y = SRC_A - PAN_A                              # 36
 PAN_PERIODO_S = 40.0      # duração de um vaivém completo — ver nota em clipe_cena
 
 
@@ -419,11 +422,37 @@ def _masterizar_2passos(bruto: Path, saida: Path) -> None:
            "masterização 2 passos")
 
 
+def _dimensoes_png(caminho: Path) -> tuple[int, int]:
+    """Largura e altura direto do cabeçalho PNG, sem decodificar a imagem."""
+    import struct
+    with open(caminho, "rb") as f:
+        cab = f.read(33)
+    if cab[:8] != b"\x89PNG\r\n\x1a\n":
+        erro(f"{caminho} não é PNG")
+    return struct.unpack(">II", cab[16:24])
+
+
+def _confere_fonte(img: Path) -> None:
+    """Aborta se a imagem não tem o tamanho que as constantes de pan assumem.
+
+    Existe porque a ausência desta checagem deixou um bug rodar em silêncio: o
+    código assumia fonte 768×432, a fal.ai entregava 768×512, e o crop comia
+    116px do rodapé de toda cena sem nenhum aviso. Errar alto é melhor do que
+    entregar 30 min de vídeo com a composição cortada.
+    """
+    w, h = _dimensoes_png(img)
+    if (w, h) != (SRC_L, SRC_A):
+        erro(f"{img.name} é {w}×{h}, mas o render assume {SRC_L}×{SRC_A}.\n"
+             f"  A janela de corte ({PAN_L}×{PAN_A}) e a escala ×{PAN_ESCALA} dependem disso.\n"
+             f"  Regere as imagens:  python -m pipeline.s3_imagens {img.parent.parent} --forcar")
+
+
 def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medium",
                mover: bool = True) -> Path:
     img = proj / "imagens" / f"cena_{n:02d}.png"
     if not img.exists():
         erro(f"falta {img}. Gere as imagens ou rode com --placeholder.")
+    _confere_fonte(img)
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)

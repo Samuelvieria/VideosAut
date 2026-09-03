@@ -84,6 +84,19 @@ para não esquecer que existe, não para usar sem necessidade real.
 
 ## Prompt de imagem (fal.ai Z-Image-Turbo, `pipeline/s3_imagens.py`)
 
+**A fal.ai não entrega dimensão abaixo de 512 — ela empurra para 512 sem
+avisar, e a resposta traz o tamanho REAL, não o pedido.** Medido em
+02/09/2026: pedir 640×360 devolvia 640×512 (razão 1,25) e pedir 768×432
+devolvia 768×512 (razão 1,50) — nenhum dos dois em 16:9, apesar de o prompt
+dizer "16:9". Gerar em **1024×576** (o preset `landscape_16_9` do próprio
+modelo), que é honrado.
+
+Isso passou despercebido por semanas porque nada conferia o tamanho recebido:
+o `s5_render` assumia fonte 768×432 e recortava 640×360 em `y=36`, comendo em
+silêncio os 116px de rodapé de toda cena. **Sempre validar a dimensão da
+imagem contra o que o render assume** — `s5_render._confere_fonte` faz isso e
+aborta. Errar alto é melhor que entregar 30 min com composição cortada.
+
 **NUNCA nomear o que não se quer — modelo de difusão não processa negação.**
 "a chuva parou" contém a palavra "chuva" e o modelo desenha chuva. Medido na
 cena 19 do vídeo 2 (3 tentativas). Z-Image-Turbo não aceita

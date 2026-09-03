@@ -19,13 +19,22 @@ gerador:
     depender disso no pipeline.
 
 resolucao:
-  gerar: [640, 360]
-  entregar: [1920, 1080]
-  upscale: "ffmpeg -i in.png -vf scale=1920:1080:flags=neighbor out.png"
+  gerar: [1024, 576]          # nativo do modelo (preset landscape_16_9), 16:9 exato
+  janela_corte: [960, 540]    # o que o s5_render recorta da fonte
+  entregar: [1920, 1080]      # janela ×2, escala inteira
   nota: |
-    ×3 exato. Escala INTEIRA e NEAREST são obrigatórias — qualquer interpolação
-    (lanczos, bicubic) borra a grade de pixels e mata o estilo. Medido: o PNG
-    nearest sai 5× menor que o lanczos, e comprime melhor no vídeo.
+    MEDIDO 02/09/2026: a fal.ai não entrega dimensão abaixo de 512 — empurra
+    para 512 em silêncio. Pedir 640×360 devolvia 640×512 e pedir 768×432
+    devolvia 768×512, ambos fora de 16:9. Por isso 1024×576, que é o preset
+    landscape_16_9 do próprio modelo.
+
+    A escala tem que ser INTEIRA e NEAREST, ou a grade de pixel art borra.
+    Com fonte 1024×576 sobram duas janelas possíveis:
+      640×360 ×3 → mostra só 62% do quadro, corta composição demais
+      960×540 ×2 → mostra 94%, e sobra margem 64×36 para o pan   ← escolhida
+
+    Mexer em qualquer um destes números quebra os outros dois. O s5_render
+    confere a dimensão da fonte e aborta se não bater.
 
 prompt_prefixo: >-
   pixel art, detailed 16-bit style, dark moody palette of deep blue-greys and
