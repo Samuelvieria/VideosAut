@@ -366,21 +366,26 @@
     }
   ],
   "thumbnails": {
-    "nota": "Gerar 2–3 variantes e testar. Texto grande, legível a 120px de largura no feed do celular.",
+    "escolhida": "thumb_B.png",
+    "_motivo": "O velho com a lanterna no cais. Texto legível no vazio à esquerda, paleta fria com um único ponto quente, e promete o que o vídeo entrega — é a cena de abertura. Escolhida também porque NÃO tem baleia: o modelo não desenha cachalote (6 tentativas, 4 estratégias), e a thumbnail é o ativo mais visível para carregar um erro de anatomia.",
     "variantes": [
       {
         "id": "A",
-        "conceito": "a baleia branca emergindo (cena 16), recortada bem fechada, texto MOBY DICK em serifa pesada creme no terço inferior"
+        "arquivo": "thumb_A.png",
+        "status": "descartada — a baleia sai jubarte"
       },
       {
         "id": "B",
-        "conceito": "o velho no cais com a lanterna (cena 1), silhueta contra a chuva, texto UMA HISTÓRIA PARA DORMIR menor no topo"
+        "arquivo": "thumb_B.png",
+        "status": "ESCOLHIDA"
       },
       {
         "id": "C",
-        "conceito": "o Pequod contra o céu de tempestade (cena 7), horizonte baixo, muito céu negro, texto centralizado"
+        "arquivo": "thumb_C.png",
+        "status": "reserva — navio no horizonte"
       }
-    ]
+    ],
+    "_nota_texto": "Fonte serifada (Georgia) em creme, sombra suave em vez de contorno duro. Contorno grosso lê como conteúdo agitado, o oposto do nicho."
   },
   "personagens": {
     "_nota": "Colar a descrição LITERAL nas cenas onde a pessoa aparece. O gerador não tem memória entre prompts — 'o mesmo homem da cena anterior' não existe para ele. Repetição literal é o único jeito de manter a mesma pessoa.",
@@ -399,5 +404,42 @@
     "en": "Sleep Story with Rain and Ocean Sounds | Moby Dick and the White Whale"
   },
   "_nota_titulo": "Consenso de 6 de 6 consultas externas: ninguém procura 'Moby Dick' às 23h. Procura 'história para dormir', 'som de chuva'. O título lidera pela FUNÇÃO e usa a obra como qualificador. Search é o único mecanismo de descoberta controlável num canal com zero inscritos — browse e suggested dependem de dados de sessão que ainda não existem.",
-  "_nota_cauda": "Cauda de 9 min, contra 1 min antes. O alvo era 1800s enquanto a narração já ocupava 1932s — o resto ficava negativo e o s5_render caía no fallback de 60s. Quase todas as consultas externas apontaram isso: se o ouvinte desperta levemente na transição do primeiro ciclo de sono e encontra silêncio ou autoplay, o microdespertar é completo. 41,2 min também aproxima da faixa de 45-60 min que 3 de 6 consultas recomendaram — e chegou lá pela duração real da narração, não por eu ter forçado."
+  "_nota_cauda": "Cauda de 9 min, contra 1 min antes. O alvo era 1800s enquanto a narração já ocupava 1932s — o resto ficava negativo e o s5_render caía no fallback de 60s. Quase todas as consultas externas apontaram isso: se o ouvinte desperta levemente na transição do primeiro ciclo de sono e encontra silêncio ou autoplay, o microdespertar é completo. 41,2 min também aproxima da faixa de 45-60 min que 3 de 6 consultas recomendaram — e chegou lá pela duração real da narração, não por eu ter forçado.",
+  "descricao": "Uma história calma para dormir, narrada devagar sobre o som de chuva e de mar aberto.\n\nO Pequod partiu de Nantucket atrás de uma baleia branca e não voltou. Esta é a história dele, contada sem pressa, para você não precisar chegar ao fim.\n\nA narração dura cerca de 32 minutos. Depois disso ficam mais 9 minutos só de mar e chuva, sem voz, para o caso de você ainda estar acordado — ou para não te acordar se já não estiver.\n\nAdaptação livre de Moby Dick, de Herman Melville (1851), escrita por nós. O texto original está em domínio público; esta adaptação não é tradução de nenhuma edição publicada.\n\nSem música. O som de fundo é sintetizado, não gravado.\n\nFones de ouvido ajudam, mas volume baixo ajuda mais.\n\n—\n\nNarração com voz sintética e imagens geradas por computador.",
+  "tags": [
+    "historia para dormir",
+    "som de chuva para dormir",
+    "som de mar para dormir",
+    "narracao calma",
+    "historia para dormir adulto",
+    "dormir rapido",
+    "relaxar para dormir",
+    "chuva e mar",
+    "sleep story portugues",
+    "audiobook para dormir",
+    "insonia",
+    "moby dick",
+    "historia do mar",
+    "voz calma",
+    "ruido de chuva",
+    "dormir profundamente"
+  ],
+  "capitulos": {
+    "_nota": "Capítulos são opcionais e há um argumento contra: a barra de capítulos convida a pular, e conteúdo de sono não quer navegação. Deixados aqui para decisão manual no Studio, não gerados automaticamente.",
+    "recomendacao": "não usar no vídeo 1 — medir sem eles primeiro"
+  },
+  "publicacao": {
+    "visibilidade": "private",
+    "_nota_visibilidade": "Regra do projeto: todo upload sobe privado e só vira público após revisão. Também contorna a trava automática de projetos de API não auditados.",
+    "conteudo_sintetico": true,
+    "_nota_sintetico": "Toggle 'conteúdo alterado ou sintético' ATIVADO no Studio. As consultas confirmaram: marcar não penaliza no algoritmo; não marcar e ser detectado, sim.",
+    "monetizacao": {
+      "mid_rolls": false,
+      "_nota": "NUNCA anúncio no meio. Um anúncio no minuto 20 acorda quem estava adormecendo, gera dislike e o espectador não volta. Só pré-roll, ou nada. O YouTube coloca mid-roll por padrão — precisa desativar à mão."
+    },
+    "idioma": "pt-BR",
+    "categoria": "Pessoas e blogs",
+    "publico_infantil": false
+  },
+  "_baleia_limitacao": "Z-Image-Turbo entrega jubarte quando se pede cachalote. 6 tentativas: descrição anatômica explícita, troca de pose (salto -> perfil), enquadramento fechado só na cabeça, e a técnica convergente de 4 consultas externas (nome científico Physeter macrocephalus + iconografia baleeira do séc. XIX + geometria sem o token 'whale'). Nenhuma funcionou. Não é problema de prompt — é viés de treino, e possivelmente trade-off da variante Turbo destilada. Saídas: outro modelo só nessa imagem, ou img2img de gravura em domínio público com denoising baixo (0,30-0,55)."
 }

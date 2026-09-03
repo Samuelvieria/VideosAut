@@ -32,3 +32,6 @@ sons/
 
 # Projetos de teste descartaveis
 fase0/*/teste/
+
+# Thumbnails geradas
+thumbnails/
