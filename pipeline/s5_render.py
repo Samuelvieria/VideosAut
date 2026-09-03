@@ -252,6 +252,14 @@ MIXAGEM_PADRAO = {
     "duck_ratio": 2,
     "duck_attack_ms": 200,
     "duck_release_ms": 2000,
+    # A cauda (ambiente sem voz) precisa SUBIR quando a narração acaba. Durante
+    # a narração o loudnorm normaliza voz+ambiente somados, e a voz domina a
+    # soma; quando ela sai, sobra o ambiente no nível em que sempre esteve.
+    # MEDIDO 03/09/2026 no vídeo 02: narração a -14,3 LUFS e cauda a -26,4 —
+    # 12,1 dB de queda. Quem ajusta o volume pela voz perde a cauda inteira, e
+    # a cauda existe justamente para cobrir a transição do sono.
+    "cauda_ganho": 2.6,        # ~+8,3 dB, deixa a cauda ~4 dB abaixo da narração
+    "cauda_rampa_s": 45.0,     # subida lenta; degrau seco seria audível
 }
 REVERB_DELAYS_MS = [40, 70, 110, 160]
 REVERB_DECAY_BASE = [0.5, 0.4, 0.28, 0.2]   # ×ambiente_reverb=1.0 = reverb máximo
@@ -269,6 +277,21 @@ VOZ_REVERB_DECAY_BASE = [0.20, 0.14]        # ×voz_reverb=1.0 = eco máximo; 0.
 # video-02: alvo -1.0 mediu -0.88 (passou do teto). Pedir -1.5 mediu -1.40 de
 # verdade, com margem. Ver .claude/skills/qualidade-producao-video/SKILL.md.
 MASTER_I, MASTER_TP, MASTER_LRA = -14.0, -1.5, 6.0
+
+
+def _ganho_ambiente(m: dict, narr_s: float, janela: tuple | None) -> str:
+    """Expressão de ganho do ambiente, com rampa de subida ao fim da narração.
+
+    Retorna o ganho constante quando não há cauda. Com cauda, sobe de
+    `ambiente_ganho` para `ambiente_ganho * cauda_ganho` ao longo de
+    `cauda_rampa_s`, começando quando a voz termina.
+    """
+    g, r, rampa = m["ambiente_ganho"], m.get("cauda_ganho", 1.0), m.get("cauda_rampa_s", 45.0)
+    if r <= 1.0 or narr_s <= 0:
+        return f"{g}"
+    # no modo janela o tempo do filtro começa em 0, mas corresponde a inicio_s
+    t0 = narr_s - (janela[0] if janela else 0.0)
+    return f"{g}*(1+{r - 1:.4f}*min(1,max(0,(t-{t0:.2f})/{rampa:.1f})))"
 
 
 def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bool,
@@ -295,6 +318,7 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
     `mix.m4a` real usado no render final.
     """
     m = {**MIXAGEM_PADRAO, **(mixagem or {})}
+    narr_s = duracao(narracao)   # narração pura, antes do apad estender
     if janela:
         inicio_s, dur_s = janela
         saida = proj / "build" / "mix_preview.m4a"
@@ -307,7 +331,7 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
         bruto = proj / "build" / "mix_bruto.wav"
         entrada = ["-i", str(narracao), "-i", str(ambiente)]
 
-    cfg = (f"total={dur_s:.1f};janela={janela};cena=v11-master-14lufs-2pass;voz=eq+comp+sala+deess;"
+    cfg = (f"total={dur_s:.1f};janela={janela};cena=v12-cauda-rampa;voz=eq+comp+sala+deess;"
            + ";".join(f"{k}={v}" for k, v in sorted(m.items())))
     if not forcar and atualizado(saida, [narracao, ambiente], cfg):
         log("mix: já atualizado")
@@ -364,7 +388,7 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
             # afreeverb neste build de ffmpeg) e lowpass (som distante perde
             # agudo). Os 4 números vêm do bloco `mixagem` do plano.json.
             f"[1:a]aformat=channel_layouts=stereo,highpass=f=45,"
-            f"volume={m['ambiente_ganho']},"
+            f"volume=volume='{_ganho_ambiente(m, narr_s, janela)}':eval=frame,"
             f"aecho=0.8:0.7:{delays}:{decays},"
             # dip espectral 1-4kHz ("sidechain EQ"): abre espaço pra
             # inteligibilidade da voz sem precisar baixar o ambiente inteiro
