@@ -57,8 +57,14 @@ PAN_MARGEM_Y = SRC_A * PAN_ESCALA - ALT       # 360 px de saída
 # Onda triangular: velocidade constante em cada trecho, com reversão nas pontas.
 # Triângulo e não seno justamente porque seno tem derivada zero nos extremos, que
 # foi a causa original do travado.
-PAN_VEL_X = 12.0    # px de saída por segundo — ~1 passo a cada 2 frames a 24fps
-PAN_VEL_Y = 6.75    # proporcional à margem (360/640), para a diagonal ficar reta
+# HORIZONTAL apenas. O diagonal fazia X andar a cada 0,083s e Y a cada 0,148s —
+# dois eixos quantizados em ritmos incomensuráveis, e quando um anda e o outro
+# não a imagem SACODE em vez de deslizar. Relatado como "tremendo" em 03/09/2026.
+#
+# Velocidade travada em FPS px/s: exatamente 1 pixel de saída por frame. É o
+# único valor sem frame repetido e sem batimento — qualquer outro produz uns
+# frames que andam e outros que não, e é isso que o olho lê como tremor.
+PAN_VEL_X = float(FPS)
 
 
 def _cenas_narradas(plano: dict) -> list[dict]:
@@ -488,7 +494,7 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v6-pan-vel-constante"
+    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v7-pan-horizontal-1px-frame"
     if not forcar and atualizado(saida, [img], cfg):
         return saida
 
@@ -513,7 +519,7 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
     #
     # Com fonte 1280×720 a margem é 640×360 de saída: ~12 passos/s em diagonal,
     # contra 1,3/s antes. A 24 fps isso lê como deslize contínuo.
-    fase_x, fase_y = [(0, 1), (1, 0), (0, 0), (1, 1)][n % 4]
+    fase_x = n % 2          # metade das cenas começa de cada lado
 
     def _eixo(margem: int, vel: float, fase: int) -> str:
         """Onda triangular de velocidade constante, entre 0 e `margem`.
@@ -531,7 +537,7 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
     # scale ANTES do crop: nearest ×2 mantém a grade de pixel art cravada, e o
     # crop que segue nunca reamostra — só escolhe quais pixels aparecem.
     vf = (f"scale={SRC_L * PAN_ESCALA}:{SRC_A * PAN_ESCALA}:flags=neighbor,"
-          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, PAN_VEL_X, fase_x)}':y='{_eixo(PAN_MARGEM_Y, PAN_VEL_Y, fase_y)}',"
+          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, PAN_VEL_X, fase_x)}':y={PAN_MARGEM_Y // 2},"
           f"format=yuv420p,"
           f"fade=t=in:st=0:d={FADE},fade=t=out:st={f_out:.2f}:d={FADE}")
     ffmpeg(["-loop", "1", "-framerate", str(FPS), "-i", str(img),
