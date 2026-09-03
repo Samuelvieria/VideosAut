@@ -1,0 +1,9 @@
+Canal de YouTube de conteúdo para dormir, em português. Narração calma sobre ~20 imagens em pixel art, com chuva e mar ao fundo. Sem rosto, sem vídeo real, sem música de terceiros. Produção por pipeline Python + FFmpeg: TTS local, imagem gerada por API, legenda alinhada, render automatizado.
+
+Primeiro vídeo pronto: Moby Dick, 33,5 min, roteiro próprio de 3.467 palavras, narrado por um velho baleeiro que reconta a história — moldura inventada por nós. Custo ~R$25/mês.
+
+NADA FOI PUBLICADO. Zero dado de audiência.
+
+Decisões travadas, não sugerir alternativas: FFmpeg puro sem editor; TTS local (ElevenLabs é caro em 26+ min de fala por vídeo); ambiente sonoro sintetizado, não biblioteca (Content ID varre tudo, licença não protege); legenda soft; 2–3 vídeos/semana; revisão humana antes de publicar.
+
+Em aberto: 33,5 min é a duração certa? A moldura do narrador ajuda ou atrapalha? Como um canal de sono novo é descoberto? Onde este formato cai na política de conteúdo inautêntico?
