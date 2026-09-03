@@ -9,27 +9,20 @@ final segue o áudio, não o contrário.
 
 ---
 
-## Cena 1 — O velho no cais
+## Cena 1 — O cais na chuva
 
-Você chegou tarde. Tudo bem. A chuva também chegou tarde hoje.
+Chove no cais.
 
-Senta aí, no seco, debaixo do beiral. Não precisa dizer nada.
+A água bate nas tábuas e escorre por entre elas, e lá embaixo o mar sobe e desce
+devagar contra os postes, do mesmo jeito que sobe e desce há mil anos.
 
-Eu venho a este cais desde antes de você nascer. Primeiro para embarcar, depois
-para descarregar, e agora, faz muitos anos, só para olhar a água e deixar o tempo
-passar em cima de mim. O mar não muda. Muda quem olha.
+O farol acende, apaga, acende. A luz atravessa a chuva e some no escuro do mar
+aberto, onde não há nada para iluminar.
 
-Essa noite eu vou te contar uma história. É uma história antiga, de um navio que
-saiu de um porto perto daqui e não voltou. Eu não estava nele. Se estivesse, não
-teria como te contar nada.
+É de portos como este que os navios saíam. Ficavam fora dois anos, três anos, e
+alguns não voltavam.
 
-Mas eu ouvi de um homem que estava. E ele ouviu de si mesmo, o que é a única
-maneira honesta de ouvir uma coisa dessas.
-
-Ele se chamava Ismael.
-
-Deixa a chuva cair. Não tem pressa nenhuma. A história é longa e a noite é maior
-ainda.
+Este é o começo da história de um deles.
 
 ## Cena 2 — Ismael em New Bedford
 

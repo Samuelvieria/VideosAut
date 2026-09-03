@@ -1,5 +1,5 @@
 {
-  "titulo": "Moby Dick contada por um velho baleeiro | História para Dormir",
+  "titulo": "História para Dormir com Som de Chuva e Mar | Moby Dick e a Baleia Branca",
   "obra": "Moby-Dick, Herman Melville — 19th century whaling story",
   "duracao_alvo_s": 1800,
   "narrado_s": 1430,
@@ -393,5 +393,11 @@
   },
   "_nota_estilo": "O prompt final de cada cena é estilo_base + ', ' + prompt. Gerando à mão no Draw Things, colar o estilo_base ANTES do prompt toda vez. Esquecer uma vez = uma cena fora do estilo.",
   "_nota_estilo_base": "Só traço, paleta e enquadramento. Duas armadilhas já medidas: (1) 'sea and rain' aqui forçava chuva nas 20 cenas, inclusive interiores; (2) 'lantern and firelight accents' fazia o modelo desenhar lanternas como OBJETO em cenas de mar aberto. Descrever cor e luz, nunca objeto, nunca negação.",
-  "_nota_prompts": "NUNCA nomear o que não se quer. Modelo de difusão não processa negação: 'a chuva parou' contém 'chuva' e o modelo desenha chuva. Medido na cena 19, 3 tentativas. Z-Image-Turbo não aceita negative_prompt, então a única defesa é descrever só o que existe."
+  "_nota_prompts": "NUNCA nomear o que não se quer. Modelo de difusão não processa negação: 'a chuva parou' contém 'chuva' e o modelo desenha chuva. Medido na cena 19, 3 tentativas. Z-Image-Turbo não aceita negative_prompt, então a única defesa é descrever só o que existe.",
+  "titulo_anterior": "Moby Dick contada por um velho baleeiro | História para Dormir",
+  "titulo_i18n": {
+    "en": "Sleep Story with Rain and Ocean Sounds | Moby Dick and the White Whale"
+  },
+  "_nota_titulo": "Consenso de 6 de 6 consultas externas: ninguém procura 'Moby Dick' às 23h. Procura 'história para dormir', 'som de chuva'. O título lidera pela FUNÇÃO e usa a obra como qualificador. Search é o único mecanismo de descoberta controlável num canal com zero inscritos — browse e suggested dependem de dados de sessão que ainda não existem.",
+  "_nota_cauda": "A cauda era de 1 min porque a narração (32,5 min) já estourava o alvo de 30. Quase todas as consultas apontaram isso: se o ouvinte desperta levemente na transição do primeiro ciclo de sono e encontra silêncio ou autoplay, o microdespertar é completo. Alvo recalculado para dar 9 min de cauda."
 }

@@ -73,6 +73,11 @@ def gerar(prompt: str, seed: int, chave: str) -> bytes:
         "num_images": 1,
         "seed": seed,
         "output_format": "png",
+        # O provedor tem um LLM interno que reescreve o prompt antes de gerar.
+        # Ligado, ele injeta adjetivos diferentes a cada chamada — o que sabota
+        # por baixo dos panos a consistência de estilo que a seed fixa e o
+        # prefixo tentam garantir. Desligado, o prompt chega como escrevemos.
+        "enable_prompt_expansion": False,
     }, chave)
     imgs = r.get("images") or []
     if not imgs:
