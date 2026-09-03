@@ -1,9 +1,9 @@
 {
   "titulo": "História para Dormir com Som de Chuva e Mar | Moby Dick e a Baleia Branca",
   "obra": "Moby-Dick, Herman Melville — 19th century whaling story",
-  "duracao_alvo_s": 1800,
-  "narrado_s": 1430,
-  "cauda_ambiente_s": 370,
+  "duracao_alvo_s": 2473,
+  "narrado_s": 1932,
+  "cauda_ambiente_s": 541,
   "moldura": "Um velho baleeiro aposentado, no cais de um porto do Atlântico Norte, sob chuva. Ele conta a história do Pequod como quem já ouviu de outros e agora repassa. A moldura é NOSSA — não está no livro. É ela que torna a obra original por cima de um texto em domínio público, e é ela que justifica a persona da voz.",
   "voz": {
     "engine": "kokoro",
@@ -399,5 +399,5 @@
     "en": "Sleep Story with Rain and Ocean Sounds | Moby Dick and the White Whale"
   },
   "_nota_titulo": "Consenso de 6 de 6 consultas externas: ninguém procura 'Moby Dick' às 23h. Procura 'história para dormir', 'som de chuva'. O título lidera pela FUNÇÃO e usa a obra como qualificador. Search é o único mecanismo de descoberta controlável num canal com zero inscritos — browse e suggested dependem de dados de sessão que ainda não existem.",
-  "_nota_cauda": "A cauda era de 1 min porque a narração (32,5 min) já estourava o alvo de 30. Quase todas as consultas apontaram isso: se o ouvinte desperta levemente na transição do primeiro ciclo de sono e encontra silêncio ou autoplay, o microdespertar é completo. Alvo recalculado para dar 9 min de cauda."
+  "_nota_cauda": "Cauda de 9 min, contra 1 min antes. O alvo era 1800s enquanto a narração já ocupava 1932s — o resto ficava negativo e o s5_render caía no fallback de 60s. Quase todas as consultas externas apontaram isso: se o ouvinte desperta levemente na transição do primeiro ciclo de sono e encontra silêncio ou autoplay, o microdespertar é completo. 41,2 min também aproxima da faixa de 45-60 min que 3 de 6 consultas recomendaram — e chegou lá pela duração real da narração, não por eu ter forçado."
 }

@@ -1,140 +1,140 @@
 {
   "voice": "pm_santa",
   "speed": 0.6,
-  "total_s": 1911.62,
+  "total_s": 1895.29,
   "cenas": [
     {
       "n": 1,
-      "titulo": "O velho no cais",
-      "dur_s": 81.08,
-      "palavras": 149,
-      "ppm": 110
+      "titulo": "O cais na chuva",
+      "dur_s": 47.55,
+      "palavras": 86,
+      "ppm": 109
     },
     {
       "n": 2,
       "titulo": "Ismael em New Bedford",
-      "dur_s": 83.1,
+      "dur_s": 83.16,
       "palavras": 150,
       "ppm": 108
     },
     {
       "n": 3,
       "titulo": "A estalagem",
-      "dur_s": 86.9,
+      "dur_s": 87.05,
       "palavras": 151,
       "ppm": 104
     },
     {
       "n": 4,
       "titulo": "Queequeg",
-      "dur_s": 105.15,
+      "dur_s": 105.45,
       "palavras": 183,
       "ppm": 104
     },
     {
       "n": 5,
       "titulo": "A capela",
-      "dur_s": 98.7,
+      "dur_s": 98.94,
       "palavras": 165,
       "ppm": 100
     },
     {
       "n": 6,
       "titulo": "Nantucket",
-      "dur_s": 73.65,
+      "dur_s": 73.97,
       "palavras": 122,
       "ppm": 99
     },
     {
       "n": 7,
       "titulo": "O Pequod",
-      "dur_s": 113.5,
+      "dur_s": 113.92,
       "palavras": 193,
       "ppm": 102
     },
     {
       "n": 8,
       "titulo": "A partida",
-      "dur_s": 87.75,
+      "dur_s": 88.34,
       "palavras": 150,
-      "ppm": 103
+      "ppm": 102
     },
     {
       "n": 9,
       "titulo": "Ahab",
-      "dur_s": 105.33,
+      "dur_s": 106.2,
       "palavras": 179,
-      "ppm": 102
+      "ppm": 101
     },
     {
       "n": 10,
       "titulo": "O dobrão",
-      "dur_s": 120.33,
+      "dur_s": 121.22,
       "palavras": 201,
-      "ppm": 100
+      "ppm": 99
     },
     {
       "n": 11,
       "titulo": "A caça",
-      "dur_s": 95.45,
+      "dur_s": 96.5,
       "palavras": 167,
-      "ppm": 105
+      "ppm": 104
     },
     {
       "n": 12,
       "titulo": "As fornalhas",
-      "dur_s": 107.97,
+      "dur_s": 109.02,
       "palavras": 181,
-      "ppm": 101
+      "ppm": 100
     },
     {
       "n": 13,
       "titulo": "Starbuck",
-      "dur_s": 108.5,
+      "dur_s": 109.7,
       "palavras": 178,
-      "ppm": 98
+      "ppm": 97
     },
     {
       "n": 14,
       "titulo": "A calmaria",
-      "dur_s": 94.95,
+      "dur_s": 96.31,
       "palavras": 162,
-      "ppm": 102
+      "ppm": 101
     },
     {
       "n": 15,
       "titulo": "O Rachel",
-      "dur_s": 94.67,
+      "dur_s": 95.94,
       "palavras": 165,
-      "ppm": 105
+      "ppm": 103
     },
     {
       "n": 16,
       "titulo": "A baleia branca",
-      "dur_s": 111.92,
+      "dur_s": 113.65,
       "palavras": 188,
-      "ppm": 101
+      "ppm": 99
     },
     {
       "n": 17,
       "titulo": "O naufrágio",
-      "dur_s": 102.8,
+      "dur_s": 104.48,
       "palavras": 177,
-      "ppm": 103
+      "ppm": 102
     },
     {
       "n": 18,
       "titulo": "O caixão",
-      "dur_s": 126.12,
+      "dur_s": 128.25,
       "palavras": 210,
-      "ppm": 100
+      "ppm": 98
     },
     {
       "n": 19,
       "titulo": "O velho, ao amanhecer",
-      "dur_s": 113.75,
+      "dur_s": 115.64,
       "palavras": 214,
-      "ppm": 113
+      "ppm": 111
     }
   ]
 }
