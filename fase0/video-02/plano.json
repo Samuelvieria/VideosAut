@@ -19,7 +19,7 @@
   "mixagem": {
     "_nota": "Editável pelo mixer do estudio/ (roda só pipeline/s5_render.py --so-mix pra ouvir sem re-renderizar o vídeo). Valores = MIXAGEM_PADRAO em pipeline/s5_render.py.",
     "ambiente_ganho": 0.3,
-    "ambiente_reverb": 0.85,
+    "ambiente_reverb": 0.0,
     "ambiente_lowpass_hz": 3500,
     "duck_threshold": 0.05,
     "duck_ratio": 2.0,
@@ -441,5 +441,6 @@
     "categoria": "Pessoas e blogs",
     "publico_infantil": false
   },
-  "_baleia_limitacao": "Z-Image-Turbo entrega jubarte quando se pede cachalote. 6 tentativas: descrição anatômica explícita, troca de pose (salto -> perfil), enquadramento fechado só na cabeça, e a técnica convergente de 4 consultas externas (nome científico Physeter macrocephalus + iconografia baleeira do séc. XIX + geometria sem o token 'whale'). Nenhuma funcionou. Não é problema de prompt — é viés de treino, e possivelmente trade-off da variante Turbo destilada. Saídas: outro modelo só nessa imagem, ou img2img de gravura em domínio público com denoising baixo (0,30-0,55)."
+  "_baleia_limitacao": "Z-Image-Turbo entrega jubarte quando se pede cachalote. 6 tentativas: descrição anatômica explícita, troca de pose (salto -> perfil), enquadramento fechado só na cabeça, e a técnica convergente de 4 consultas externas (nome científico Physeter macrocephalus + iconografia baleeira do séc. XIX + geometria sem o token 'whale'). Nenhuma funcionou. Não é problema de prompt — é viés de treino, e possivelmente trade-off da variante Turbo destilada. Saídas: outro modelo só nessa imagem, ou img2img de gravura em domínio público com denoising baixo (0,30-0,55).",
+  "_nota_reverb": "ambiente_reverb=0 desliga o aecho do ambiente. Era ele a causa da granulação na cauda — confirmado de ouvido no A/B de 03/09/2026 (teste/audio/B_rampa_sem_eco). Cinco hipóteses medidas falharam antes; o teste que resolveu foi o ouvido, não o instrumento."
 }

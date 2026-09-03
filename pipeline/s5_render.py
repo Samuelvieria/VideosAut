@@ -57,14 +57,24 @@ PAN_MARGEM_Y = SRC_A * PAN_ESCALA - ALT       # 360 px de saída
 # Onda triangular: velocidade constante em cada trecho, com reversão nas pontas.
 # Triângulo e não seno justamente porque seno tem derivada zero nos extremos, que
 # foi a causa original do travado.
-# HORIZONTAL apenas. O diagonal fazia X andar a cada 0,083s e Y a cada 0,148s —
-# dois eixos quantizados em ritmos incomensuráveis, e quando um anda e o outro
-# não a imagem SACODE em vez de deslizar. Relatado como "tremendo" em 03/09/2026.
+# PARADO -> DESLIZE -> PARADO, horizontal.
 #
-# Velocidade travada em FPS px/s: exatamente 1 pixel de saída por frame. É o
-# único valor sem frame repetido e sem batimento — qualquer outro produz uns
-# frames que andam e outros que não, e é isso que o olho lê como tremor.
-PAN_VEL_X = float(FPS)
+# O princípio, achado tentando de tudo entre 03 e 04/09/2026: em imagem
+# quantizada NÃO EXISTE "devagar e suave". O passo é sempre 1 pixel, então
+# baixar a velocidade só aumenta quantos frames ficam congelados entre um passo
+# e outro. Há dois estados bons — 1 px por frame (fluido) ou parado. Qualquer
+# valor no meio gagueja por definição.
+#
+#   v4 seno, corte na fonte       -> TRAVADO: congelava 3,2s nos extremos
+#   v6 triângulo diagonal         -> TREMENDO: dois eixos em ritmos incomensuráveis
+#   v7 horizontal 24 px/s         -> fluido, mas rápido demais
+#   v8 cobrindo a duração da cena -> lento, e travado de novo
+#   v9 parado + deslize + parado  -> atual
+#
+# O deslize é sempre a 1 px/frame. O que varia por cena é quanto ele dura e
+# quanto tempo a imagem fica parada antes e depois.
+PAN_VEL_X = float(FPS)     # 1 px de saída por frame — o único ritmo fluido
+PAN_FRACAO = 0.35          # fração da cena em movimento; o resto, parada
 
 
 def _cenas_narradas(plano: dict) -> list[dict]:
@@ -351,7 +361,12 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
         log("mix: já atualizado")
         return saida
 
-    decays = "|".join(f"{d*m['ambiente_reverb']:.3f}" for d in REVERB_DECAY_BASE)
+    # Abaixo deste limiar o aecho sai da cadeia em vez de receber decaimento
+    # quase-zero: o filtro recusa decay=0, e passar 0,001 ainda deixava o eco
+    # audível na cauda. Foi ele a causa da granulação relatada em 03/09/2026,
+    # confirmada de ouvido no A/B (teste/audio/B_rampa_sem_eco).
+    usar_eco_amb = m["ambiente_reverb"] >= 0.05
+    decays = "|".join(f"{max(d*m['ambiente_reverb'], 0.001):.3f}" for d in REVERB_DECAY_BASE)
     delays = "|".join(str(d) for d in REVERB_DELAYS_MS)
     voz_decays = "|".join(f"{d*m['voz_reverb']:.3f}" for d in VOZ_REVERB_DECAY_BASE)
     voz_delays = "|".join(str(d) for d in VOZ_REVERB_DELAYS_MS)
@@ -403,7 +418,7 @@ def mixar(proj: Path, narracao: Path, ambiente: Path, total_s: float, forcar: bo
             # agudo). Os 4 números vêm do bloco `mixagem` do plano.json.
             f"[1:a]aformat=channel_layouts=stereo,highpass=f=45,"
             f"volume=volume='{_ganho_ambiente(m, narr_s, janela)}':eval=frame,"
-            f"aecho=0.8:0.7:{delays}:{decays},"
+            + (f"aecho=0.8:0.7:{delays}:{decays}," if usar_eco_amb else "") +
             # dip espectral 1-4kHz ("sidechain EQ"): abre espaço pra
             # inteligibilidade da voz sem precisar baixar o ambiente inteiro
             # — dá pra manter mais presença no resto do espectro com o
@@ -494,7 +509,7 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
 
     saida = proj / "build" / "clipes" / f"cena_{n:02d}.mp4"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v7-pan-horizontal-1px-frame"
+    cfg = f"dur={dur:.2f};fps={FPS};fade={FADE};preset={preset};mover={mover};v9-pan-parado-desliza-parado"
     if not forcar and atualizado(saida, [img], cfg):
         return saida
 
@@ -521,23 +536,25 @@ def clipe_cena(proj: Path, n: int, dur: float, forcar: bool, preset: str = "medi
     # contra 1,3/s antes. A 24 fps isso lê como deslize contínuo.
     fase_x = n % 2          # metade das cenas começa de cada lado
 
-    def _eixo(margem: int, vel: float, fase: int) -> str:
-        """Onda triangular de velocidade constante, entre 0 e `margem`.
+    def _eixo(margem: int, sentido: int) -> str:
+        """Parada, depois deslize a 1 px/frame, depois parada de novo.
 
-        `abs(mod(2t/P+1,2)-1)` desenha o triângulo; P = 2*margem/vel é o tempo de
-        ida e volta. Fase 1 começa da outra ponta, para as cenas não deslizarem
-        todas no mesmo sentido.
+        O percurso é limitado pela margem E pelo tempo que cabe a 1 px/frame.
+        O trecho em movimento fica centrado na cena.
         """
-        if not mover or margem <= 0 or vel <= 0:
+        if not mover or margem <= 0:
             return str(margem // 2)
-        P = 2 * margem / vel
-        desloc = 1 + fase          # fase 0 começa em 0; fase 1 começa na margem
-        return f"trunc({margem}*abs(mod(2*t/{P:.2f}+{desloc},2)-1))"
+        percurso = int(min(margem, PAN_VEL_X * dur * PAN_FRACAO))
+        t_mov = percurso / PAN_VEL_X
+        t0 = max(0.0, (dur - t_mov) / 2)
+        a, b = (0, percurso) if sentido == 0 else (margem, margem - percurso)
+        prog = f"min(1,max(0,(t-{t0:.2f})/{t_mov:.2f}))"
+        return f"trunc({a}+({b - a})*{prog})"
 
     # scale ANTES do crop: nearest ×2 mantém a grade de pixel art cravada, e o
     # crop que segue nunca reamostra — só escolhe quais pixels aparecem.
     vf = (f"scale={SRC_L * PAN_ESCALA}:{SRC_A * PAN_ESCALA}:flags=neighbor,"
-          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, PAN_VEL_X, fase_x)}':y={PAN_MARGEM_Y // 2},"
+          f"crop={LARG}:{ALT}:x='{_eixo(PAN_MARGEM_X, fase_x)}':y={PAN_MARGEM_Y // 2},"
           f"format=yuv420p,"
           f"fade=t=in:st=0:d={FADE},fade=t=out:st={f_out:.2f}:d={FADE}")
     ffmpeg(["-loop", "1", "-framerate", str(FPS), "-i", str(img),
