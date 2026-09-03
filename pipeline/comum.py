@@ -54,12 +54,33 @@ def duracao(caminho: Path) -> float:
     return float(r.stdout.strip())
 
 
+_VERSAO_MARCA = "v2"   # muda quando o algoritmo de hash muda; ver nota abaixo
+_BLOCO = 65536
+
+
 def _hash(caminhos: list[Path], extra: str = "") -> str:
-    h = hashlib.sha256(extra.encode())
+    """Hash das entradas por CONTEÚDO, não por mtime.
+
+    Era mtime_ns + tamanho até 03/09/2026. O problema não é teórico: `git
+    checkout`, `git pull` e troca de branch reescrevem o mtime de arquivo
+    versionado sem tocar no conteúdo. Medido no merge de 03/09 — o
+    `roteiro.md` do video-02 ficou byte a byte idêntico e o stamp das 20
+    cenas de TTS furou do mesmo jeito, o que mandaria refazer 12 min de
+    narração à toa. Em `s4_legendas` o mesmo furo custa os 87 min de whisper.
+
+    Custo medido de hashear conteúdo aqui: 0,17 s para 111 MB (39 arquivos,
+    os WAVs de narração + os 20 PNGs). Irrelevante perto do que evita.
+
+    Padrão emprestado de affaan-m/ecc (MIT), skill content-hash-cache-pattern.
+    """
+    h = hashlib.sha256(f"{_VERSAO_MARCA}\0{extra}".encode())
     for c in sorted(caminhos):
         h.update(c.name.encode())
-        h.update(str(c.stat().st_mtime_ns).encode())
-        h.update(str(c.stat().st_size).encode())
+        h.update(b"\0")
+        with open(c, "rb") as f:
+            while bloco := f.read(_BLOCO):
+                h.update(bloco)
+        h.update(b"\0")
     return h.hexdigest()[:16]
 
 
@@ -68,6 +89,14 @@ def atualizado(saida: Path, entradas: list[Path], extra: str = "") -> bool:
 
     Guarda o hash das entradas ao lado da saída. Mudou qualquer entrada ou o
     parâmetro `extra` (config), refaz; senão pula.
+
+    Nota sobre a troca de mtime para conteúdo em 03/09/2026: o `_VERSAO_MARCA`
+    entra no hash, então todo stamp gravado no esquema antigo passa a não
+    bater e o estágio refaz uma vez. Isso é de propósito e sai de graça — o
+    único projeto com artefato em disco é o video-02, que está publicado e
+    não precisa rodar de novo. Não vale construir um re-stamper: ele
+    precisaria saber as entradas de cada estágio, que só o próprio estágio
+    conhece.
     """
     marca = saida.with_suffix(saida.suffix + ".stamp")
     if not saida.exists() or not marca.exists():
