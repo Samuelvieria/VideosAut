@@ -184,6 +184,21 @@ O `faster-whisper` roda em CTranslate2, não em torch, e o wheel padrão do PyPI
 CPU. Instale a variante com CUDA. Sem isso o whisper roda a 3,4× realtime e
 **nada avisa** que era para ser melhor.
 
+**0. O shell do Samuel é tcsh, não bash**
+
+`source .venv/bin/activate` FALHA em tcsh com `Bad : modifier in $ '-'` — e
+ainda desativa um venv que já estivesse ligado. Em tcsh o certo é
+`source .venv/bin/activate.csh`.
+
+Mais simples e à prova de shell: **não ative nada**, use o caminho direto.
+
+```
+cd ~/Videos && ./.venv/bin/python -m pipeline.<estagio> ...
+```
+
+Funciona em bash, zsh e tcsh, e não depende de qual janela está ativada. É a
+forma que todos os comandos deste runbook deveriam usar.
+
 **2. `command not found: python`**
 
 O venv não está ativo naquela janela. Use o caminho direto, que funciona sempre:
