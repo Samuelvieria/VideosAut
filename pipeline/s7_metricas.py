@@ -124,7 +124,16 @@ def imprimir(r: dict) -> None:
     s = r.get("resumo", {})
     print(f"\n  {r['titulo']}")
     print(f"  {r['id']}  |  {dur//60}min{dur%60:02d}  |  publicado {str(r.get('publicado'))[:10]}")
-    print(f"\n  views {s.get('views','?')}  |  duração média "
+    pub = r.get("estatisticas", {})
+    va = int(s.get("views", 0) or 0)
+    vp = int(pub.get("viewCount", 0) or 0)
+    print(f"\n  PÚBLICO (atualiza em minutos)")
+    print(f"    views {vp}  |  likes {pub.get('likeCount','?')}  |  "
+          f"comentários {pub.get('commentCount','?')}")
+    print(f"\n  ANALYTICS (atrasa horas, até ~48h no começo)")
+    if vp and not va:
+        print(f"    ainda sem dado — as {vp} views públicas ainda não propagaram")
+    print(f"  views {s.get('views','?')}  |  duração média "
           f"{int(s.get('averageViewDuration',0))//60}min{int(s.get('averageViewDuration',0))%60:02d}"
           f"  ({s.get('averageViewPercentage',0):.1f}%)"
           f"  |  inscritos ganhos {s.get('subscribersGained','?')}")
