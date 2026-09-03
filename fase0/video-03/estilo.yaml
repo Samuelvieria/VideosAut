@@ -1,0 +1,80 @@
+# Playbook visual — trava a identidade entre as 21 cenas deste vídeo E entre
+# vídeos. Mesma base técnica do video-02 (fase0/video-02/estilo.yaml) — pixel
+# art 16-bit, paleta escura âmbar/azul — pra manter identidade visual do canal
+# entre episódios (ver docs/estrategia de crescimento, §4/§7.1: consistência
+# visual importa mais que destaque individual, o espectador procura o canal,
+# não navega). Só a ambientação muda: Grécia Antiga em vez de baleeiros do
+# século 19. Sem mitologia grega no visual — nem os prompts nem os negativos
+# citam deuses/monstros, de propósito (ver roteiro.md).
+
+id: farol-grego-pixel
+versao: 1
+
+gerador:
+  app: fal.ai (Z-Image-Turbo)   # mudou do Draw Things local — ver docs/imagens-provedores.md
+  nota: |
+    Este campo documenta a app original (Draw Things/SD 1.5) prevista no doc
+    de viabilidade; a produção real migrou para fal.ai (pipeline/s3_imagens.py)
+    na workstation Windows. Z-Image-Turbo não aceita negative_prompt — ver
+    nota em prompt_negativo abaixo. `enable_prompt_expansion: False` no
+    payload — o LLM interno do provedor reescreve o prompt a cada chamada
+    se isso ficar ligado, o que destrói a consistência de estilo entre cenas.
+
+resolucao:
+  gerar: [1280, 720]            # LARG/ALT em pipeline/s3_imagens.py
+  entregar: [1920, 1080]
+  upscale: "ffmpeg -i in.png -vf crop=960:540:X:Y,scale=1920:1080:flags=neighbor out.png"
+  nota: |
+    CORRIGIDO em 02-03/09/2026 (fora desta sessão) — este arquivo tinha
+    768×432 herdado do video-02, que já estava ERRADO: a fal.ai não entrega
+    dimensão abaixo de 512 num eixo, então 640×360 e 768×432 nunca existiram
+    de verdade (vinham 640×512 e 768×512, fora de 16:9, cortando a cena em
+    silêncio). Gerar em 1280×720 (múltiplo do preset nativo 1024×576 do
+    modelo), recortar 960×540 (94% do quadro, sobra margem 64×36px de saída
+    pro pan) e escalar ×2 NEAREST até 1920×1080. Ver PAN_* em
+    pipeline/s5_render.py — a escala tem que ser fator INTEIRO, sempre.
+
+prompt_prefixo: >-
+  pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of
+  deep blue-greys and near-black shadows, warm amber and burnt orange
+  highlights, dramatic rim lighting, cinematic wide composition, ancient
+  Mediterranean Greek coast at night
+
+prompt_negativo: >-
+  text, watermark, signature, UI, HUD, modern clothing, modern buildings,
+  cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry,
+  photorealistic, 3d render, oversaturated, deformed hands, extra limbs,
+  gods, mythological creatures, armor, battle
+  # Z-Image-Turbo não aceita negative_prompt (ver s3_imagens.py) — os
+  # negativos aqui são só referência humana de intenção, não chegam a virar
+  # parâmetro real. A defesa de verdade é manter o estilo_base do plano.json
+  # explícito o bastante para não abrir espaço a esses elementos.
+
+paleta:
+  sombra:  "#0d1117"
+  frio:    "#2b3a4a"
+  medio:   "#4a5a6a"
+  destaque_quente: "#e8a54b"
+  fogo:    "#c8632a"
+
+seed:
+  politica: fixa-por-cena
+  base: 20260828
+  formula: "seed = base + n_cena (ou + seed_de, se a cena tiver esse campo)"
+  nota: |
+    Base própria (20260828), diferente do video-02 (20260826) — de propósito,
+    pra não herdar a mesma sequência de ruído inicial num personagem e cenário
+    completamente diferentes. Sem este arquivo, s3_imagens.py cairia no
+    default do código (20260826, o MESMO do video-02) — por isso este arquivo
+    existe mesmo não tendo LoRA/app local nenhum pra documentar.
+
+amostragem:
+  passos: 8   # PASSOS em pipeline/s3_imagens.py — Z-Image-Turbo, não SD 1.5
+
+img2img_historico:
+  aplica: false
+  nota: |
+    Não se aplica a este vídeo — a história é original (Demétrio, Míron, a
+    ilha) e não ancora em nenhum monumento/figura histórica real específica,
+    então não há imagem de acervo pra usar como referência img2img (ver
+    CLAUDE.md § Imagens — ferramenta e direitos, que trata do caso contrário).

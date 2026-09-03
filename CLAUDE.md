@@ -83,18 +83,29 @@ O comando corrigido está na seção 6b do doc de viabilidade.
 
 ## Imagens — ferramenta e direitos
 
-**Gerador: Draw Things + SD 1.5**, local. Decidido em 26/08/2026 após medir o
-hardware: MacBook Pro **M2, 8 GB de RAM, 11 GB livres**. Isso elimina SDXL (~7 GB) e
-Flux (~16–24 GB). Midjourney foi eliminado por não ter API — morreria na Fase 1.
+**Gerador: fal.ai (Z-Image-Turbo)**, via API — não Draw Things/SD 1.5 local como o
+doc de viabilidade original previa. Migrou junto com a workstation Windows
+(`pipeline/s3_imagens.py`); Draw Things era o plano pro M2 sem GPU dedicada de
+sobra, mas a API acabou sendo o caminho real desde o video-02.
 
-**Gerar em 640×360 e fazer upscale nearest-neighbor ×3 para 1920×1080.** Escala
-inteira e `flags=neighbor` são obrigatórias: qualquer interpolação borra a grade de
-pixels. Medido: o PNG nearest sai 5× menor que o lanczos e comprime melhor no vídeo.
-640×360 tem menos área que o nativo do SD 1.5, então cabe folgado em 8 GB — para
-pixel art, gerar pequeno é tecnicamente melhor, não concessão ao hardware.
+**Gerar em 1280×720 e fazer upscale nearest-neighbor ×2 para 1920×1080** (não
+640×360 ×3 — essa combinação nunca funcionou de verdade: **medido em
+02/09/2026, a fal.ai não entrega dimensão abaixo de 512px num eixo**, então
+640×360 e 768×432 (a correção intermediária de 27/08) vinham sempre esticadas
+pra 640×512/768×512, fora de 16:9, e o `s5_render` cortava a cena em silêncio
+sem avisar. 1280×720 é múltiplo do preset nativo `landscape_16_9` do modelo
+(1024×576) e devolve exatamente o que é pedido. Escala inteira e
+`flags=neighbor` continuam obrigatórias — qualquer interpolação borra a grade
+de pixels. Ver `pipeline/s3_imagens.py` e `PAN_*` em `pipeline/s5_render.py`.
 
-Estilo travado em `fase0/video-02/estilo.yaml` (prefixo, negativos, paleta, seed
-fixa por cena). Padrão emprestado do OpenMontage; o código dele é AGPL, não usar.
+**`enable_prompt_expansion: False`** no payload da fal.ai — ligado, o LLM
+interno do provedor reescreve o prompt a cada chamada e destrói a
+consistência de estilo entre cenas (achado junto com a correção de resolução).
+
+Estilo travado por vídeo (`fase0/video-NN/estilo.yaml`: prefixo, negativos,
+paleta, seed fixa por cena) — mesma base visual entre vídeos, ambientação
+troca por episódio. Padrão emprestado do OpenMontage; o código dele é AGPL,
+não usar.
 
 **Para temas históricos, usar imagens de acervo livremente.** Decisão do Samuel em
 26/08/2026: **não gatear imagem por status de direito** — ele avaliou o risco de

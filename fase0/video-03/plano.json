@@ -1,0 +1,368 @@
+{
+  "titulo": "A Luz da Baía Quieta | História Calma para Dormir | Grécia Antiga",
+  "obra": "A Luz da Baía Quieta — história original ambientada na Grécia Antiga, sem mitologia, sem deuses, sem monstros",
+  "duracao_alvo_s": 1800,
+  "narrado_s": 1456,
+  "cauda_ambiente_s": 344,
+  "moldura": "Demétrio, um velho contador de histórias grego (persona 'Filósofo Grego'), narra uma noite específica da própria juventude como guardião de um farol numa ilha pequena. História original, escrita do zero — de propósito, sem mitologia grega, sem batalhas, sem monstros, pra fugir do que já é muito conhecido. O fio emocional é o filho, Míron, que foi pro mar; nenhum clímax dramático, só uma noite quieta de trabalho e memória.",
+  "voz": {
+    "engine": "kokoro",
+    "voice": "pm_alex",
+    "speed": 0.95,
+    "nota": "Persona 'filosofo-grego' (estudio/dados/personas.json). Mecanismo novo de ritmo: speed perto do natural + pausa crescente (FATOR_PAUSA_INICIO/FIM em s2_tts.py), não speed baixo. Ajustável depois de ouvir a narração real desta cena."
+  },
+  "ambiente": {
+    "_nota": "Ambiente por CENA, segue o que a imagem mostra — baía calma a maior parte do tempo, fogo do farol nas cenas de perto da torre. Sem chuva em todo o vídeo (noite clara, de propósito — contraste com o video-02).",
+    "sintese": "pipeline/ambiente.py — mar por eventos de onda, não ruído modulado",
+    "fonte_externa": null
+  },
+  "mixagem": {
+    "_nota": "Sem overrides — usa MIXAGEM_PADRAO de pipeline/s5_render.py (já reflete a masterização -14 LUFS/-1.5 TP e a cadeia de voz calibrada nesta sessão). Ajustar pelo mixer do estudio/ depois de ouvir com a voz pm_alex, que não foi calibrada por ouvido ainda — só pm_santa foi."
+  },
+  "direitos": {
+    "texto_fonte": "Original, escrito para este canal — sem fonte externa, sem adaptação de obra de terceiros",
+    "traducao": "N/A — não é adaptação",
+    "imagens": "geradas, estilo pixel art consistente com o canal (mesma paleta escura do video-02, ambientação trocada)",
+    "disclosure": "narração sintética + imagens geradas → ativar divulgação de conteúdo sintético no Studio"
+  },
+  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dark moody palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange highlights, dramatic rim lighting, cinematic wide composition, ancient Mediterranean Greek coast at night, painterly game background art, 16:9",
+  "nota_duracoes": "Durações são ALVO. Quem manda no corte final é o áudio — ver s5_render.",
+  "cenas": [
+    {
+      "n": 1,
+      "dur_s": 72,
+      "papel": "moldura-abre",
+      "titulo": "Abertura",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio standing at the base of a stone lighthouse tower at night, holding a small oil lamp low at his side, calm expression looking toward the viewer, rocky cliff edge behind him, dark sea below, single warm lamp light as the only source",
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0.0,
+        "fogo": 0.3,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "base da torre, noite calma"
+      }
+    },
+    {
+      "n": 2,
+      "dur_s": 79,
+      "papel": "narrado",
+      "titulo": "A ilha",
+      "personagem": "no character — establishing landscape",
+      "prompt": "wide establishing shot, small rocky Mediterranean island at dusk, a modest stone lighthouse tower on a cliff at one end, a curved quiet bay of dark water on the other side, a tiny stone cottage near the tower base, fading purple-blue twilight sky",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.2,
+        "vento": 0.4,
+        "abafado": false,
+        "_": "ilha inteira, entardecer"
+      }
+    },
+    {
+      "n": 3,
+      "dur_s": 83,
+      "papel": "narrado",
+      "titulo": "A torre e o fogo",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "close view inside the lighthouse lantern room, a large blackened bronze oil basin ablaze with tall orange flame, Demétrio's weathered hands adjusting a thin wick-trimming rod, stone walls glowing warm orange, small window showing dark sky beyond",
+      "ambiente": {
+        "mar": 0.1,
+        "chuva": 0.0,
+        "fogo": 1.0,
+        "vento": 0.5,
+        "abafado": false,
+        "_": "topo da torre, fogo aceso"
+      }
+    },
+    {
+      "n": 4,
+      "dur_s": 66,
+      "papel": "narrado",
+      "titulo": "O óleo e a pedra",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "medium close view of Demétrio's calloused hands carefully pouring oil from a clay jar into the bronze basin, firelight reflecting off the liquid, worn stone floor and tower wall in soft focus behind, warm amber glow",
+      "ambiente": {
+        "mar": 0.1,
+        "chuva": 0.0,
+        "fogo": 0.8,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "topo da torre, rotina"
+      }
+    },
+    {
+      "n": 5,
+      "dur_s": 83,
+      "papel": "narrado",
+      "titulo": "A rotina da noite",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio seated on a worn stone bench beside the lit lantern room at the top of the tower, looking out over the dark sea, the flame glowing steadily behind him, wind-bent low shrubs at the cliff edge, star-scattered night sky",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.4,
+        "vento": 0.4,
+        "abafado": false,
+        "_": "banco de pedra, alto da torre"
+      }
+    },
+    {
+      "n": 6,
+      "dur_s": 81,
+      "papel": "narrado",
+      "titulo": "O filho que foi para o mar",
+      "personagem": "a young broad-shouldered sailor (Míron) and a younger version of Demétrio watching from the dock",
+      "prompt": "wide shot, a modest daytime harbor scene, a young broad-shouldered sailor boarding a wooden merchant ship, a younger Demétrio standing on the dock watching him, rope and cargo crates scattered on weathered wooden planks, soft overcast daylight",
+      "ambiente": {
+        "mar": 0.5,
+        "chuva": 0.0,
+        "fogo": 0.0,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "porto, memória, dia"
+      }
+    },
+    {
+      "n": 7,
+      "dur_s": 68,
+      "papel": "narrado",
+      "titulo": "As cartas que não chegam",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "medium shot, Demétrio sitting alone at a rough wooden table inside a small stone cottage at night, holding a small worn token between his fingers, a single oil lamp casting warm light across his face, bare stone walls, one small shuttered window",
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0.0,
+        "fogo": 0.3,
+        "vento": 0.3,
+        "abafado": true,
+        "_": "dentro da casinha, noite"
+      }
+    },
+    {
+      "n": 8,
+      "dur_s": 71,
+      "papel": "narrado",
+      "titulo": "O mar em silêncio",
+      "personagem": "no character — empty seascape at night",
+      "prompt": "wide shot, calm dark Mediterranean sea seen from a rocky cliff edge at night, faint moonlight glinting on slow gentle waves, distant horizon barely visible, scattered stars above, no visible figure",
+      "ambiente": {
+        "mar": 0.5,
+        "chuva": 0.0,
+        "fogo": 0.1,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "mar visto do alto, calmo"
+      }
+    },
+    {
+      "n": 9,
+      "dur_s": 59,
+      "papel": "narrado",
+      "titulo": "Uma luz distante",
+      "personagem": "no character — empty seascape at night",
+      "prompt": "wide night seascape, a single small distant yellow ship light glowing low on the dark horizon, calm black water beneath a star-filled sky, rocky cliff silhouette in the foreground corner",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.1,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "mar, primeira luz"
+      }
+    },
+    {
+      "n": 10,
+      "dur_s": 91,
+      "papel": "narrado",
+      "titulo": "O ofício de guiar",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot from below, Demétrio standing on the tower's stone balcony looking out over the bay, the tall lantern flame blazing brightly above him, hidden rocks barely breaking the water's surface far below near the bay entrance, dark sea beyond",
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0.0,
+        "fogo": 0.7,
+        "vento": 0.4,
+        "abafado": false,
+        "_": "varanda da torre"
+      }
+    },
+    {
+      "n": 11,
+      "dur_s": 76,
+      "papel": "narrado",
+      "titulo": "Rostos que nunca vê",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "close view of Demétrio's weathered face in profile, lit from below by the warm orange glow of the distant lantern flame, deep lines and grey beard catching the light, dark night sky behind him",
+      "ambiente": {
+        "mar": 0.1,
+        "chuva": 0.0,
+        "fogo": 0.6,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "close no rosto, luz do fogo"
+      }
+    },
+    {
+      "n": 12,
+      "dur_s": 74,
+      "papel": "narrado",
+      "titulo": "Pão e vinho",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "medium shot, Demétrio sitting on the stone doorstep of a small cottage at night, a piece of dark bread and a few olives on a wooden plate beside him, a small clay cup of wine, a single oil lamp beside the door, the lit tower glowing faintly in the background",
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0.0,
+        "fogo": 0.4,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "soleira da casinha"
+      }
+    },
+    {
+      "n": 13,
+      "dur_s": 73,
+      "papel": "narrado",
+      "titulo": "Os nomes que ele deu às estrelas",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot from below, Demétrio standing on the rocky cliff looking straight up at a dense field of bright stars, one star noticeably brighter near the top of the frame, calm dark sea barely visible at the edge of the composition, faint lantern glow off to one side",
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0.0,
+        "fogo": 0.2,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "penhasco, céu estrelado"
+      }
+    },
+    {
+      "n": 14,
+      "dur_s": 59,
+      "papel": "narrado",
+      "titulo": "Uma segunda luz",
+      "personagem": "no character — empty seascape at night",
+      "prompt": "wide night seascape, two small distant ship lights at different points on the dark horizon, calm black water, faint starlight reflected on the surface, rocky cliff edge in the foreground",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.1,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "mar, duas luzes"
+      }
+    },
+    {
+      "n": 15,
+      "dur_s": 71,
+      "papel": "narrado",
+      "titulo": "Talvez seja ele",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "close view of Demétrio's face looking out toward the sea, a soft hopeful expression, warm lantern light from one side catching the corner of his eyes, dark night sky and a blurred distant ship light behind him",
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0.0,
+        "fogo": 0.5,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "close, esperança"
+      }
+    },
+    {
+      "n": 16,
+      "dur_s": 77,
+      "papel": "narrado",
+      "titulo": "A luz que responde",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio's silhouette on the rocky cliff edge raising a small lantern high with one arm, the lantern's light small but clear against the dark sky, a faint answering light visible far out on the black water",
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0.0,
+        "fogo": 0.4,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "sinal de luz, penhasco"
+      }
+    },
+    {
+      "n": 17,
+      "dur_s": 76,
+      "papel": "narrado",
+      "titulo": "Não precisa saber",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio standing calmly at the top of stone stairs looking down toward a small bay, two ship silhouettes now inside the calm water near a modest wooden pier, the tower's flame glowing steady above him",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.3,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "topo das escadas, baía"
+      }
+    },
+    {
+      "n": 18,
+      "dur_s": 76,
+      "papel": "narrado",
+      "titulo": "O fogo mais fraco",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "close view of the bronze lantern basin, the flame now low and thin, a pale grey light beginning to creep in through a small stone window beside it, Demétrio's tired hand resting on the basin's edge",
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0.0,
+        "fogo": 0.5,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "fogo fraco, amanhecer chegando"
+      }
+    },
+    {
+      "n": 19,
+      "dur_s": 64,
+      "papel": "narrado",
+      "titulo": "A promessa da manhã",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, pale early dawn sky over a calm grey-blue sea, two ships now docked quietly at a small wooden pier below the cliff, Demétrio descending the last few stone steps of the tower, faint cool morning light replacing the night's warm glow",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.05,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "amanhecer, navios no cais"
+      }
+    },
+    {
+      "n": 20,
+      "dur_s": 57,
+      "papel": "moldura-fecha",
+      "titulo": "Fecho",
+      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "medium shot, Demétrio seated peacefully on the stone doorstep of his cottage, soft pale morning light across his face, eyes closed or half-closed, calm sea and quiet pier visible behind him in the distance",
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0.0,
+        "fogo": 0.05,
+        "vento": 0.15,
+        "abafado": false,
+        "_": "soleira, descanso"
+      }
+    },
+    {
+      "n": 21,
+      "dur_s": 344,
+      "papel": "cauda-ambiente",
+      "titulo": "Mar calmo ao amanhecer (sem narração)",
+      "personagem": "no character — empty seascape at dawn",
+      "prompt": "wide shot, calm pale dawn sea, gentle waves, soft early morning light, empty quiet horizon",
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0.0,
+        "fogo": 0.0,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "cauda, amanhecer calmo"
+      }
+    }
+  ]
+}

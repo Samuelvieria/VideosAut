@@ -22,15 +22,15 @@
       "origem_video": "fase0/video-02"
     },
     {
-      "id": "guardiao",
-      "nome": "O Guardião",
-      "descricao": "Voz masculina alternativa (pm_alex) — candidato pra narrador de episódios futuros que não sejam do universo do Marinheiro/baleeiro (ex.: Frankenstein, A Máquina do Tempo). PENDENTE DE AUDIÇÃO — ver amostras.",
+      "id": "filosofo-grego",
+      "nome": "O Filósofo Grego",
+      "descricao": "Voz masculina (pm_alex) — narrador reutilizável pra histórias ambientadas na Grécia Antiga: um contador de histórias itinerante, tom contemplativo e medido, mais professoral que o Marinheiro. Não é ligado a um título específico — serve qualquer episódio de antiguidade grega.",
       "vozes": {
         "pt": {
           "engine": "kokoro",
           "voice": "pm_alex",
-          "speed": null,
-          "nota": "PENDENTE: escolher speed depois de ouvir as amostras (speed=0.60 e speed=1.00 geradas em 28/08/2026). Metodologia nova: speed perto do natural + pausa crescente entre frases/parágrafos (FATOR_PAUSA_INICIO/FIM em s2_tts.py), não speed baixo. Ver SKILL.md § Ritmo de narração."
+          "speed": 0.95,
+          "nota": "Speed perto do natural (era 'pendente' em 28/08/2026, antes chamada 'O Guardião'). Metodologia nova: densidade decrescente pela pausa crescente (FATOR_PAUSA_INICIO/FIM em s2_tts.py), não por speed baixo — medido que speed=0.60 degrada articulação (whisper transcreveu errado). 0.95 é ponto de partida, ajustável depois de ouvir as amostras em fase0/_vozes-candidatas/."
         },
         "en": {"engine": null, "voice": null, "speed": null, "nota": "TBD"}
       },
@@ -38,15 +38,31 @@
       "origem_video": null
     },
     {
-      "id": "narradora",
-      "nome": "A Narradora",
-      "descricao": "Voz feminina (pf_dora) — candidato pra episódios com narração feminina ou pra variar o universo sonoro do canal. PENDENTE DE AUDIÇÃO — ver amostras.",
+      "id": "patricia-romana",
+      "nome": "A Patrícia Romana",
+      "descricao": "Voz feminina (pf_dora) — narradora reutilizável pra histórias ambientadas na Roma Imperial, do ponto de vista do alto escalão (senadores, patrícios, a vida na Cúria e nas vilas). Tom mais formal e dignificado que as outras personas. Não é ligada a um título específico.",
       "vozes": {
         "pt": {
           "engine": "kokoro",
           "voice": "pf_dora",
-          "speed": null,
-          "nota": "PENDENTE: mesma observação de velocidade da persona 'guardiao' — escolher speed depois de ouvir as amostras, via pausa crescente, não speed baixo."
+          "speed": 0.95,
+          "nota": "Speed perto do natural (era 'pendente' em 28/08/2026, antes chamada 'A Narradora'). Mesma metodologia da persona 'filosofo-grego' — pausa crescente, não speed baixo. 0.95 é ponto de partida, ajustável depois de ouvir as amostras em fase0/_vozes-candidatas/."
+        },
+        "en": {"engine": null, "voice": null, "speed": null, "nota": "TBD"}
+      },
+      "criado_em": "2026-08-28T00:00:00-03:00",
+      "origem_video": null
+    },
+    {
+      "id": "trovador-taberna",
+      "nome": "O Trovador da Taberna",
+      "descricao": "Voz masculina (pm_santa, compartilhada com 'O Marinheiro') — narrador reutilizável pra histórias medievais contadas numa taberna: um músico/contador de histórias itinerante, mais caloroso e folclórico que o Marinheiro, mas com a mesma calma exigida pelo formato de sono. Reusar a voz do Marinheiro é intencional — são dois papéis do mesmo 'ator', diferenciados por personagem e por ritmo, não por timbre.",
+      "vozes": {
+        "pt": {
+          "engine": "kokoro",
+          "voice": "pm_santa",
+          "speed": 0.95,
+          "nota": "Usa o mecanismo novo (pausa crescente), diferente do Marinheiro (speed=0.60, mecanismo antigo, já aprovado e não refeito) — mesma voz Kokoro, configuração de ritmo diferente. 0.95 é ponto de partida, ajustável depois de ouvir amostra."
         },
         "en": {"engine": null, "voice": null, "speed": null, "nota": "TBD"}
       },
