@@ -241,7 +241,7 @@ sem narração para medir.
 | views | 1,18 M | 5,50 M | **4** |
 | duração | 75 min | 169 min | 41 min |
 | **palavras de narração** | **13.612** | **21.744** | **3.279** |
-| **ritmo** | **181 ppm** | **129 ppm** | **80 ppm** |
+| **ritmo de narração** | **180 ppm** | **128 ppm** | **102 ppm** |
 | mediana de palavras/frase | 13 | 13 | **9** |
 | frases ≤10 palavras | 36% | 40% | **57%** |
 | fragmentos (1–4 palavras) | 4% | 6% | **21%** |
@@ -256,10 +256,38 @@ palavras não preenchem 75 minutos em ritmo nenhum. Subir para 60+ min exige
 **6.000 a 9.700 palavras** por vídeo — 2 a 3× o que escrevemos hoje. Isso é
 aritmética, não estética.
 
-**Contestável, e vale testar:** o ritmo. Nossos 80 ppm são pouco mais da metade
-dos 181 do History at Night. Fala de conversa fica em ~150 ppm. Assumimos que
-mais lento é melhor para dormir; os dois canais que funcionam rodam perto do
-normal.
+**Contestável, e vale testar:** o ritmo. Fala de conversa fica em ~150 ppm.
+Assumimos que mais lento é melhor para dormir; os dois canais que funcionam
+rodam perto do normal ou acima.
+
+> **Correção de 04/09/2026.** A primeira versão desta tabela dizia 80 ppm para
+> o nosso vídeo. Estava errado: eu dividi as palavras pela duração **total**,
+> que inclui os 9 minutos de cauda silenciosa. Sobre os 32,2 min de narração
+> real dá **102 ppm**. A distância continua existindo, mas é 102 contra 128–180,
+> não 80 contra 181.
+>
+> E medindo isso apareceu um achado que ninguém tinha notado: **nenhuma das
+> duas referências tem cauda.** A última legenda do History at Night cai aos 75
+> de 75 min, e a do Dreamoria aos 169 de 169. As duas narram até o fim. Nossa
+> cauda de 9 minutos é invenção nossa — foi adicionada porque as consultas
+> disseram que 1 minuto era pouco, e ninguém verificou o que o mercado faz. Não
+> quer dizer que esteja errada; quer dizer que é uma aposta não testada, e que
+> o nosso "vídeo de 41 min" é um vídeo de 32 min com 9 de chuva no fim.
+
+Medido também em 04/09 com amostras reais do Kokoro sobre o mesmo trecho de 158
+palavras (`fase0/_vozes-candidatas/`):
+
+| speed | pausa | ppm |
+|---|---|---|
+| 0,60 (atual) | 1,0 | 123 |
+| 0,75 | 1,0 | 152 |
+| 0,90 | 1,0 | 195 |
+| 1,00 | 1,6 | 205 |
+
+O trecho isolado a 0,60 dá 123 ppm, mas o vídeo inteiro dá 102 — a diferença é
+o `FATOR_PAUSA` crescendo de 1,0 para 1,6 ao longo do episódio, mais os
+intervalos entre cenas. Ou seja, **nosso ritmo não é uniforme, ele desacelera**,
+e o fim do vídeo é bem mais lento que 102.
 
 **Provavelmente diferença de gênero, não erro:** mediana de frase e
 fragmentação. Eles fazem **história expositiva** ("como era ser pirata"), que
