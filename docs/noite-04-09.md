@@ -189,3 +189,68 @@ em vez de aceitar ou rejeitar pela prosa.
 - Workstation: a máquina não está aqui
 
 O PC continua ligado. Ainda há trabalho desbloqueado na lista.
+
+---
+
+# Segunda parte — a noite de 04/09
+
+O Samuel ouviu a narração do video-03 e disse: *"a ênfase nas sílabas está
+errada"*. Isso virou o trabalho da noite.
+
+## O achado, e o que ele implica para o vídeo já publicado
+
+**`speed` abaixo de 0.85 destrói o acento tonal do Kokoro.** Teste pareado,
+mesma palavra, mesma voz, só a velocidade muda:
+
+| speed | pico de F0 na sílaba tônica |
+|---|---|
+| 0.60 | 1 de 6 |
+| 0.70 | 0 de 6 |
+| 0.80 | 1 de 6 |
+| **0.85** | **4 de 6** |
+| 1.00 | 4 de 6 |
+
+Abaixo de 0.85 a curva de altura só decai ao longo da palavra, sem pico nenhum.
+Como em português a tônica se marca também por subida de altura, **toda palavra
+soa acentuada na primeira sílaba**.
+
+**E o video-02 foi gerado a 0.60.** Ou seja: o vídeo que está no ar tem o mesmo
+defeito. Você o aprovou de ouvido na época — talvez não incomode ali, talvez
+incomode agora que o ouvido está calibrado. **É decisão sua**, e ela tem custo:
+regerar a narração implica refazer o render e substituir o vídeo publicado,
+perdendo as views e o histórico. Eu não faria isso sem você mandar.
+
+## O que mudou no pipeline
+
+- `speed` do video-03 subiu para **0.85**, e a lentidão passou a vir da pausa —
+  que agora é **parâmetro do projeto** (`voz.pausa_respiro_s`,
+  `voz.pausa_paragrafo_s`), não constante global. O video-02 não tem essas
+  chaves e continua exatamente como estava.
+- **Custo real:** a pausa tem retorno decrescente. O video-03 cai de 68 para
+  ~52 min. Nem 6× a pausa passa de 57. Se a duração alvo for alta, a resposta é
+  mais **texto**, não mais silêncio.
+- A marca de idempotência do `s2_tts` passou a ser **por cena**. Antes usava o
+  arquivo inteiro do roteiro como entrada, então mudar uma palavra numa cena
+  regerava as 38 — 25 minutos de CPU por uma frase.
+
+## O que mais foi feito
+
+- **`s2b_revisar`** — página local com um player por cena e o texto ao lado, em
+  frases numeradas. Clicar numa frase copia "cena N, frase M". Serve para você
+  apontar o defeito exato em vez de descrevê-lo.
+- **Sequências no estúdio** — `mecanica` (não gasta) e `completa` (gasta),
+  rodando os estágios na ordem certa e **parando no primeiro erro**.
+- **Revisão histórica do roteiro** pelo Gemini: achou um anacronismo real
+  (tesoura de eixo é romana, não grega) e errou no ponto grande (afirmou que
+  faróis queimavam lenha, não óleo — a evidência sobre o Farol de Alexandria
+  diz o contrário). Detalhes no `fase0/video-03/README.md`.
+
+## O erro de método que se repetiu quatro vezes
+
+Antes de achar a causa, fiz quatro medições que não serviram — e todas do mesmo
+jeito: mediram algo **correlacionado** com tonicidade em vez de tonicidade.
+Está registrado como o modo de falha nº 6 em [verificacao.md](verificacao.md).
+
+O que funcionou foi teste **pareado**: mudar uma variável só. E isso só ficou
+possível depois de eu conseguir mexer no fonema direto, envolvendo o `g2p` do
+Kokoro. Antes disso eu comparava palavras diferentes e chamava de experimento.
