@@ -296,7 +296,23 @@ Kokoro. Antes disso eu comparava palavras diferentes e chamava de experimento.
 video-03 sai com ~52 min. Se não, o problema é outro e a página de revisão
 serve para você apontar a cena e a frase.
 
-E fica de pé a pergunta da duração: 52 min contra o piso de 65 do mercado.
-Fecha-se com **mais texto**, não com mais silêncio — a pausa tem retorno
-decrescente e nem 6× o padrão passa de 57 min. São ~2.000 palavras a mais, e eu
-não as escrevi porque você ainda não ouviu o que existe.
+E fica de pé a pergunta da duração: **52 min contra o piso de 65** do mercado.
+Medi todas as alavancas de silêncio, uma a uma:
+
+| alavanca | teto |
+|---|---|
+| pausa entre frases a 6× o padrão | 57 min |
+| pausa entre cenas a 12 s (de 2) | 58,6 min |
+| as duas somadas | ~62 min |
+
+**Nenhuma combinação de silêncio chega a 65.** Não é retorno decrescente, é
+teto: as pausas ocorrem em número fixo de lugares. A duração só se compra com
+**texto** — cerca de **1.900 palavras a mais**.
+
+Eu não as escrevi, e por um motivo: você pediu para testar a história, e
+acrescentar 1.900 palavras muda a coisa que você ia testar. Se aprovar o que
+existe, escrevo; se não aprovar, teriam sido 1.900 palavras jogadas fora.
+
+Vale também questionar o alvo: 52 min já é um salto sobre os 41 do video-02 e
+os 30 que o video-03 tinha. Talvez 52 sirva para este e os 65+ fiquem para o
+próximo, que nasceria com a meta certa desde o roteiro.
