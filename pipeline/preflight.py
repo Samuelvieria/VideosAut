@@ -110,6 +110,17 @@ def conferir(proj: Path) -> Resultado:
             dif = [i+1 for i, (x, y) in enumerate(zip(titulos_r, titulos_p)) if x != y]
             r.erro(f"títulos divergem nas cenas {dif[:6]}")
 
+    # Anotação que vaza para a narração. O `blocos` agora tira comentário HTML,
+    # mas outras marcas de markdown depois do último cabeçalho de cena entrariam
+    # no corpo dele e seriam FALADAS. Foi o que quase aconteceu na cena 38.
+    bruto = rot.read_text(encoding="utf-8")
+    depois = bruto[bruto.rfind("\n## Cena "):] if "\n## Cena " in bruto else ""
+    suspeito = [m for m in ("<!--", "```", "| ---", "> **") if m in depois]
+    if suspeito:
+        r.aviso(f"depois do último cabeçalho de cena há {suspeito} — confira se "
+                f"não vai virar narração falada. Comentário HTML já é removido "
+                f"pelo s2_tts; o resto, não")
+
     # ---- voz
     voz = plano.get("voz") or {}
     try:
@@ -140,15 +151,33 @@ def conferir(proj: Path) -> Resultado:
 
     # ---- duração projetada
     palavras = sum(len(c.split()) for _, _, c in b)
+
+    # MEDIDO vence ESTIMADO. O `duracoes.json` que o s2_tts grava tem o tempo
+    # real da narração; usá-lo elimina de uma vez toda a classe de erro de
+    # projeção. Eu errei essa conta três vezes: primeiro ignorando a cauda,
+    # depois a pausa de frase, depois a de parágrafo e de respiro, que eu tinha
+    # triplicado neste projeto. Estimativa só entra quando não há medição.
+    medido = proj / "duracoes.json"
     ppm = _ppm(speed) if speed > 0 else 0
-    fala = palavras / ppm if ppm > 0 else 0
+    if medido.is_file():
+        try:
+            dd = json.loads(medido.read_text(encoding="utf-8"))
+            fala = float(dd["total_s"]) / 60
+            ppm = palavras / fala if fala else 0
+            fonte = "medido"
+        except Exception:
+            fala = palavras / ppm if ppm > 0 else 0
+            fonte = "estimado"
+    else:
+        fala = palavras / ppm if ppm > 0 else 0
+        fonte = "estimado"
 
     # A pausa de frase entra na conta. O `_ppm` mede só a fala; ignorá-la fazia
     # a projeção errar por minutos — no video-03 são 319 fronteiras de frase, o
     # que a 1,2s vale 6,4 min. Contadas do mesmo jeito que o s2_tts corta:
     # dentro de parágrafo, depois de os "..." já terem separado.
     p_frase = float(voz.get("pausa_frase_s") or 0)
-    if p_frase > 0:
+    if p_frase > 0 and fonte == "estimado":
         fronteiras = 0
         for _, _, corpo in b:
             for par in [x for x in corpo.split("\n\n") if x.strip()]:
@@ -161,8 +190,8 @@ def conferir(proj: Path) -> Resultado:
     total = fala + entre_cenas + cauda
     alvo = plano.get("duracao_alvo_s", 0) / 60
     if ppm > 0:
-        r.ok(f"{palavras:,} palavras / {ppm:.0f} ppm = {fala:.1f} min de fala "
-             f"(pausa de frase inclusa) + {entre_cenas:.1f} entre cenas "
+        r.ok(f"{palavras:,} palavras · {fala:.1f} min de fala ({fonte}, "
+             f"{ppm:.0f} ppm) + {entre_cenas:.1f} entre cenas "
              f"+ {cauda:.0f} de cauda = {total:.1f} min")
     if ppm > 0 and alvo and abs(total - alvo) > alvo * 0.15:
         r.aviso(f"projeção {total:.0f} min contra duracao_alvo_s de {alvo:.0f} "

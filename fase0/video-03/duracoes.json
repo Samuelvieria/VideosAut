@@ -1,273 +1,273 @@
 {
   "voice": "pm_santa",
-  "speed": 0.85,
-  "total_s": 2700.69,
+  "speed": 0.75,
+  "total_s": 3939.31,
   "cenas": [
     {
       "n": 1,
       "titulo": "Abertura",
-      "dur_s": 61.7,
+      "dur_s": 100.0,
       "palavras": 137,
-      "ppm": 133
+      "ppm": 82
     },
     {
       "n": 2,
       "titulo": "A ilha",
-      "dur_s": 66.89,
-      "palavras": 160,
-      "ppm": 144
+      "dur_s": 118.75,
+      "palavras": 163,
+      "ppm": 82
     },
     {
       "n": 3,
       "titulo": "A torre e o fogo",
-      "dur_s": 71.13,
+      "dur_s": 103.21,
       "palavras": 162,
-      "ppm": 137
+      "ppm": 94
     },
     {
       "n": 4,
       "titulo": "Os cento e doze degraus",
-      "dur_s": 65.92,
+      "dur_s": 115.29,
       "palavras": 161,
-      "ppm": 147
+      "ppm": 84
     },
     {
       "n": 5,
       "titulo": "A bacia de bronze",
-      "dur_s": 64.84,
+      "dur_s": 95.26,
       "palavras": 162,
-      "ppm": 150
+      "ppm": 102
     },
     {
       "n": 6,
       "titulo": "O óleo e a pedra",
-      "dur_s": 64.05,
+      "dur_s": 94.6,
       "palavras": 154,
-      "ppm": 144
+      "ppm": 98
     },
     {
       "n": 7,
       "titulo": "O barco do óleo",
-      "dur_s": 64.95,
+      "dur_s": 93.27,
       "palavras": 157,
-      "ppm": 145
+      "ppm": 101
     },
     {
       "n": 8,
       "titulo": "A mecha, de hora em hora",
-      "dur_s": 71.71,
+      "dur_s": 104.46,
       "palavras": 181,
-      "ppm": 151
+      "ppm": 104
     },
     {
       "n": 9,
       "titulo": "Quando chovia sobre o fogo",
-      "dur_s": 60.03,
+      "dur_s": 95.6,
       "palavras": 149,
-      "ppm": 149
+      "ppm": 94
     },
     {
       "n": 10,
       "titulo": "O vento tinha nomes",
-      "dur_s": 64.41,
+      "dur_s": 94.76,
       "palavras": 156,
-      "ppm": 145
+      "ppm": 99
     },
     {
       "n": 11,
       "titulo": "A rotina da noite",
-      "dur_s": 60.65,
+      "dur_s": 85.49,
       "palavras": 147,
-      "ppm": 145
+      "ppm": 103
     },
     {
       "n": 12,
       "titulo": "O que se come numa ilha",
-      "dur_s": 61.76,
+      "dur_s": 97.97,
       "palavras": 152,
-      "ppm": 148
+      "ppm": 93
     },
     {
       "n": 13,
       "titulo": "Pão e vinho",
-      "dur_s": 61.85,
+      "dur_s": 89.29,
       "palavras": 153,
-      "ppm": 148
+      "ppm": 103
     },
     {
       "n": 14,
       "titulo": "O outro lado da ilha",
-      "dur_s": 98.82,
+      "dur_s": 139.1,
       "palavras": 233,
-      "ppm": 141
+      "ppm": 101
     },
     {
       "n": 15,
       "titulo": "Como ele veio parar ali",
-      "dur_s": 67.93,
+      "dur_s": 100.41,
       "palavras": 149,
-      "ppm": 132
+      "ppm": 89
     },
     {
       "n": 16,
       "titulo": "A mulher que ficou",
-      "dur_s": 61.94,
+      "dur_s": 91.4,
       "palavras": 158,
-      "ppm": 153
+      "ppm": 104
     },
     {
       "n": 17,
       "titulo": "O filho que foi para o mar",
-      "dur_s": 59.94,
+      "dur_s": 90.71,
       "palavras": 148,
-      "ppm": 148
+      "ppm": 98
     },
     {
       "n": 18,
       "titulo": "O que Míron foi procurar",
-      "dur_s": 62.57,
+      "dur_s": 90.81,
       "palavras": 143,
-      "ppm": 137
+      "ppm": 94
     },
     {
       "n": 19,
       "titulo": "As rotas que passavam ali",
-      "dur_s": 64.59,
+      "dur_s": 87.21,
       "palavras": 156,
-      "ppm": 145
+      "ppm": 107
     },
     {
       "n": 20,
       "titulo": "A estação de navegar",
-      "dur_s": 98.97,
+      "dur_s": 143.81,
       "palavras": 226,
-      "ppm": 137
+      "ppm": 94
     },
     {
       "n": 21,
       "titulo": "As cartas que não chegam",
-      "dur_s": 102.08,
+      "dur_s": 155.7,
       "palavras": 231,
-      "ppm": 136
+      "ppm": 89
     },
     {
       "n": 22,
       "titulo": "O mar em silêncio",
-      "dur_s": 95.68,
+      "dur_s": 133.38,
       "palavras": 218,
-      "ppm": 137
+      "ppm": 98
     },
     {
       "n": 23,
       "titulo": "Os navios que ele guiou",
-      "dur_s": 90.22,
+      "dur_s": 120.01,
       "palavras": 224,
-      "ppm": 149
+      "ppm": 112
     },
     {
       "n": 24,
       "titulo": "Rostos que nunca vê",
-      "dur_s": 102.05,
+      "dur_s": 143.3,
       "palavras": 245,
-      "ppm": 144
+      "ppm": 103
     },
     {
       "n": 25,
       "titulo": "Quando a luz falhava",
-      "dur_s": 60.25,
+      "dur_s": 92.36,
       "palavras": 143,
-      "ppm": 142
+      "ppm": 93
     },
     {
       "n": 26,
       "titulo": "Os nomes que ele deu às estrelas",
-      "dur_s": 79.29,
+      "dur_s": 107.37,
       "palavras": 192,
-      "ppm": 145
+      "ppm": 107
     },
     {
       "n": 27,
       "titulo": "Navegar sem nenhuma luz",
-      "dur_s": 76.15,
+      "dur_s": 108.74,
       "palavras": 183,
-      "ppm": 144
+      "ppm": 101
     },
     {
       "n": 28,
       "titulo": "Uma luz distante",
-      "dur_s": 77.13,
+      "dur_s": 108.88,
       "palavras": 176,
-      "ppm": 137
+      "ppm": 97
     },
     {
       "n": 29,
       "titulo": "O ofício de guiar",
-      "dur_s": 54.52,
+      "dur_s": 77.62,
       "palavras": 144,
-      "ppm": 158
+      "ppm": 111
     },
     {
       "n": 30,
       "titulo": "Uma segunda luz",
-      "dur_s": 62.94,
+      "dur_s": 95.65,
       "palavras": 157,
-      "ppm": 150
+      "ppm": 98
     },
     {
       "n": 31,
       "titulo": "Talvez seja ele",
-      "dur_s": 60.44,
+      "dur_s": 90.85,
       "palavras": 133,
-      "ppm": 132
+      "ppm": 88
     },
     {
       "n": 32,
       "titulo": "A espera não tem pressa",
-      "dur_s": 60.94,
+      "dur_s": 93.86,
       "palavras": 147,
-      "ppm": 145
+      "ppm": 94
     },
     {
       "n": 33,
       "titulo": "A luz que responde",
-      "dur_s": 56.03,
+      "dur_s": 80.04,
       "palavras": 134,
-      "ppm": 144
+      "ppm": 100
     },
     {
       "n": 34,
       "titulo": "Não precisa saber",
-      "dur_s": 64.69,
+      "dur_s": 84.89,
       "palavras": 153,
-      "ppm": 142
+      "ppm": 108
     },
     {
       "n": 35,
       "titulo": "O que ele diria, se dissesse",
-      "dur_s": 62.26,
+      "dur_s": 90.6,
       "palavras": 145,
-      "ppm": 140
+      "ppm": 96
     },
     {
       "n": 36,
       "titulo": "O fogo mais fraco",
-      "dur_s": 94.21,
+      "dur_s": 131.1,
       "palavras": 221,
-      "ppm": 141
+      "ppm": 101
     },
     {
       "n": 37,
       "titulo": "A promessa da manhã",
-      "dur_s": 62.1,
+      "dur_s": 96.08,
       "palavras": 145,
-      "ppm": 140
+      "ppm": 91
     },
     {
       "n": 38,
       "titulo": "Fecho",
-      "dur_s": 85.06,
-      "palavras": 184,
-      "ppm": 130
+      "dur_s": 97.48,
+      "palavras": 137,
+      "ppm": 84
     }
   ]
 }

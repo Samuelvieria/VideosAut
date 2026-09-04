@@ -104,9 +104,23 @@ def sintetiza(pipeline, texto: str, voice: str, speed: float, fator_pausa: float
 
     saida = []
     for texto_i, pausa in pedacos:
-        saida.append(np.concatenate([a for _, _, a in pipeline(texto_i, voice=voice, speed=speed)]))
+        # Pedaço sem nenhuma letra não gera áudio, e `np.concatenate([])`
+        # levanta ValueError que derrubava o estágio inteiro na cena 38. Pular é
+        # o certo: pontuação solta não é fala. A pausa dele é preservada, para o
+        # ritmo não mudar por causa do descarte.
+        if not re.search(r"[^\W\d_]", texto_i, re.UNICODE):
+            if pausa > 0 and saida:
+                saida.append(np.zeros(int(SR * pausa), dtype=saida[-1].dtype))
+            continue
+        pedaco = [a for _, _, a in pipeline(texto_i, voice=voice, speed=speed)]
+        if not pedaco:
+            log(f"aviso: o modelo não devolveu áudio para {texto_i[:50]!r}; pulado")
+            continue
+        saida.append(np.concatenate(pedaco))
         if pausa > 0:
             saida.append(np.zeros(int(SR * pausa), dtype=saida[-1].dtype))
+    if not saida:
+        erro(f"nenhum áudio gerado para o bloco: {texto[:80]!r}")
     return np.concatenate(saida)
 
 
@@ -124,6 +138,12 @@ def _marca(cfg: str, corpo: str) -> str:
 def blocos(roteiro: Path) -> list[tuple[int, str, str]]:
     """Extrai (n, titulo, corpo) de cada `## Cena N — Titulo` do roteiro."""
     txt = roteiro.read_text(encoding="utf-8")
+    # Comentário HTML é ANOTAÇÃO, não narração. Descoberto em 04/09/2026: a nota
+    # que explica por que a cauda não leva cabeçalho fica DEPOIS do último
+    # cabeçalho de cena, então entrava no corpo da cena 38 — e a voz teria lido
+    # o comentário em voz alta no fecho do vídeo. Mesma família do "(sem
+    # narração)" que já tinha sido pego.
+    txt = re.sub(r"<!--.*?-->", "", txt, flags=re.S)
     partes = re.split(r"^## Cena (\d+) — (.+)$", txt, flags=re.M)[1:]
     if not partes:
         erro(f"{roteiro} não tem nenhum cabeçalho '## Cena N — Título'")

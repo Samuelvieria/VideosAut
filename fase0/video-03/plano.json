@@ -1,8 +1,8 @@
 {
   "titulo": "A Luz da Baía Quieta | História Calma para Dormir | Grécia Antiga",
   "obra": "original story set on the ancient Greek coast — the keeper of a stone pharos, an open fire beacon",
-  "duracao_alvo_s": 3935,
-  "narrado_s": 3960,
+  "duracao_alvo_s": 4553,
+  "narrado_s": 3939,
   "cauda_ambiente_s": 540,
   "moldura": "Demétrio, um velho contador de histórias grego (persona 'Filósofo Grego'), narra uma noite específica da própria juventude como guardião de um farol numa ilha pequena. História original, escrita do zero — de propósito, sem mitologia grega, sem batalhas, sem monstros, pra fugir do que já é muito conhecido. O fio emocional é o filho, Míron, que foi pro mar; nenhum clímax dramático, só uma noite quieta de trabalho e memória.",
   "voz": {
@@ -102,7 +102,7 @@
       "papel": "narrado",
       "titulo": "A bacia de bronze",
       "personagem": "no character",
-      "prompt": "close view of a wide blackened bronze fire basin on three short feet at the top of a stone tower, thick inward-turned rim, a tall curved sheet of polished bronze standing behind it catching the flame, warm orange fire filling the basin, night sky and black sea beyond the short columns",
+      "prompt": "close view of a wide blackened bronze fire basin on three short stubby feet at the top of a stone tower, thick inward-turned rim, warm orange fire filling the basin, behind the basin a broad FLAT slab of polished bronze standing upright like a low wall, as wide as the basin itself and slightly taller, its surface honey-coloured and reflecting the flame forward, night sky and black sea beyond the low stone parapet",
       "ambiente": {
         "mar": 0.3,
         "chuva": 0,
@@ -294,7 +294,7 @@
       "papel": "narrado",
       "titulo": "O filho que foi para o mar",
       "personagem": "a young broad-shouldered sailor (Míron) and a younger version of Demétrio watching from the dock",
-      "prompt": "wide shot, a modest daytime harbor scene, a young broad-shouldered sailor boarding a wooden merchant ship, a younger Demétrio standing on the dock watching him, rope and cargo crates scattered on weathered wooden planks, soft overcast daylight",
+      "prompt": "wide shot, a small Greek harbour under BRIGHT FLAT OVERCAST DAYLIGHT, midday, no fire and no lamp anywhere, a young broad-shouldered sailor in a short undyed wool tunic climbing aboard a wooden merchant ship, and on the stone quay a MIDDLE-AGED man in his forties with dark hair and a dark short beard, same face as Demétrio but not old, standing still and watching him go, rope and clay amphorae on the worn stone quay, pale grey sky, calm grey-blue water",
       "ambiente": {
         "mar": 0.5,
         "chuva": 0.0,
@@ -659,5 +659,26 @@
   ],
   "_nota_expansao": "Levado de 30 para 75 min em 04/09/2026, por decisão do Samuel depois da pesquisa de mercado (docs/mercado.md §2: não há um só caso de sucesso perto de 30-41 min; a faixa é 65-170). As 15 cenas novas abrem domínio ENUMERÁVEL — como a lâmpada funciona, de onde vem o óleo, as rotas, navegar sem luz — que é o que sustenta 66 min de narração sem encher linguiça. Arco emocional único não estica 3x; textura concreta, sim. É a fórmula do History at Night: moldura emocional, corpo expositivo.",
   "_nota_ritmo_medido": "MEDIDO em 04/09/2026 com o roteiro real, três cenas em posições diferentes: pm_alex/0.95 dá 163, 168 e 169 ppm nas cenas 1, 19 e 37. Ou seja, o FATOR_PAUSA crescendo de 1.00 para 1.58 quase NÃO muda o ritmo — a variação entre cenas vem mais do texto do que do mecanismo. Isso contradiz o que docs/mercado.md §9 afirmava sobre a nossa narração desacelerar ao longo do episódio, e precisa ser reconferido lá.",
-  "_nota_pharos": "Em 04/09/2026 a primeira leva de 39 imagens saiu com FAROL MODERNO em cerca de 23 delas — torre listrada, casa de lanterna envidraçada, guarda-corpo. Duas causas: (1) a palavra 'lighthouse' no obra e em 25 personagens ativa esmagadoramente a torre do séc. XIX no treino, mesma família do 'white whale' que trazia a jubarte; (2) eu mesmo escrevi 'lantern room' em prompts de cena, que é componente de farol moderno. Corrigido com 'pharos', a palavra grega, que no treino aparece como estrutura antiga — a técnica de ancorar por contexto histórico documentada em consultas/sintese.md."
+  "_nota_pharos": "Em 04/09/2026 a primeira leva de 39 imagens saiu com FAROL MODERNO em cerca de 23 delas — torre listrada, casa de lanterna envidraçada, guarda-corpo. Duas causas: (1) a palavra 'lighthouse' no obra e em 25 personagens ativa esmagadoramente a torre do séc. XIX no treino, mesma família do 'white whale' que trazia a jubarte; (2) eu mesmo escrevi 'lantern room' em prompts de cena, que é componente de farol moderno. Corrigido com 'pharos', a palavra grega, que no treino aparece como estrutura antiga — a técnica de ancorar por contexto histórico documentada em consultas/sintese.md.",
+  "thumbnails": {
+    "texto": "A Luz da Baía Quieta",
+    "_motivo": "Três cenas com céu ou mar vazio para o texto assentar. Evitadas as de close de rosto, onde o texto competiria, e a cena 17, que é a única de dia e quebraria a leitura noturna na miniatura.",
+    "variantes": [
+      {
+        "id": "A",
+        "cena": 3,
+        "posicao": "inf-esq"
+      },
+      {
+        "id": "B",
+        "cena": 30,
+        "posicao": "sup-esq"
+      },
+      {
+        "id": "C",
+        "cena": 39,
+        "posicao": "sup-dir"
+      }
+    ]
+  }
 }
