@@ -34,15 +34,18 @@ BRL_POR_USD = 5.10
 # Cues que já custaram uma rodada de erro. Espelha estudio/db/personas.py, mas
 # o pipeline NÃO importa de estudio/ (ver a regra em estudio/main.py), então a
 # lista vive nos dois lugares de propósito.
+# `so_base=True` marca a regra que vale só para o estilo_base. Hora do dia é o
+# caso: no estilo_base é erro (vale para todas as cenas), mas no prompt DA CENA
+# é obrigatório — é a cena que diz a luz dela.
 CUES_RUINS = [
     (r"\bgam(e|ing)\b[\w\s]{0,20}\bart\b|\btitle\s+screen\b",
-     "linguagem de arte de jogo — escreveu o título dentro da imagem no video-02"),
+     "linguagem de arte de jogo — escreveu o título dentro da imagem no video-02", False),
     (r"\b(at|in\s+the|late)\s+(night|dawn|dusk|noon|sunset|sunrise|midnight|"
      r"morning|afternoon|evening)\b|\b(daytime|nighttime)\b",
      "hora do dia no estilo_base vale para TODAS as cenas e contradiz as que "
-     "se passam em outro momento"),
+     "se passam em outro momento", True),
     (r"\b(no|without|never|sem)\s+\w{0,12}\s*(text|watermark|logo|letter|title)",
-     "negação em prompt positivo pede o que nega"),
+     "negação em prompt positivo pede o que nega", False),
 ]
 
 
@@ -87,6 +90,11 @@ def conferir(proj: Path) -> Resultado:
         r.erro("falta roteiro.md")
         return r
     b = blocos(rot)
+    sem_n = [i for i, c in enumerate(cenas, 1) if "n" not in c]
+    if sem_n:
+        r.erro(f"cenas sem o campo `n` na posição {sem_n[:6]} — o pipeline nomeia "
+               f"os arquivos por ele")
+        cenas = [{**c, "n": c.get("n", i)} for i, c in enumerate(cenas, 1)]
     narradas = [c for c in cenas if c.get("papel") != "cauda-ambiente"]
     if len(b) != len(narradas):
         r.erro(f"o roteiro tem {len(b)} cabeçalhos de cena e o plano tem "
@@ -104,8 +112,13 @@ def conferir(proj: Path) -> Resultado:
 
     # ---- voz
     voz = plano.get("voz") or {}
-    speed = float(voz.get("speed", 0))
-    if speed < PISO_SPEED:
+    try:
+        speed = float(voz.get("speed") or 0)
+    except (TypeError, ValueError):
+        speed = 0.0
+    if speed <= 0:
+        r.erro("plano sem `voz.speed` — sem ele não dá para projetar duração")
+    elif speed < PISO_SPEED:
         r.erro(f"speed {speed} está abaixo do piso {PISO_SPEED}. Medido em "
                f"04/09/2026: abaixo dele o pico de F0 deixa de cair na sílaba "
                f"tônica e toda palavra soa acentuada na primeira. A lentidão "
@@ -115,17 +128,18 @@ def conferir(proj: Path) -> Resultado:
 
     # ---- duração projetada
     palavras = sum(len(c.split()) for _, _, c in b)
-    ppm = _ppm(speed)
-    fala = palavras / ppm
+    ppm = _ppm(speed) if speed > 0 else 0
+    fala = palavras / ppm if ppm > 0 else 0
     cauda = plano.get("cauda_ambiente_s", 0) / 60
     total = fala + cauda
     alvo = plano.get("duracao_alvo_s", 0) / 60
-    r.ok(f"{palavras:,} palavras / {ppm:.0f} ppm = {fala:.0f} min de fala "
-         f"+ {cauda:.0f} de cauda = {total:.0f} min")
-    if alvo and abs(total - alvo) > alvo * 0.15:
+    if ppm > 0:
+        r.ok(f"{palavras:,} palavras / {ppm:.0f} ppm = {fala:.0f} min de fala "
+             f"+ {cauda:.0f} de cauda = {total:.0f} min")
+    if ppm > 0 and alvo and abs(total - alvo) > alvo * 0.15:
         r.aviso(f"projeção {total:.0f} min contra duracao_alvo_s de {alvo:.0f} "
                 f"min — mais de 15% de diferença")
-    if total < FAIXA_MERCADO[0]:
+    if ppm > 0 and total < FAIXA_MERCADO[0]:
         r.aviso(f"{total:.0f} min fica abaixo do piso de {FAIXA_MERCADO[0]} que "
                 f"docs/mercado.md §2 encontrou. Duração se compra com TEXTO; a "
                 f"pausa tem retorno decrescente")
@@ -135,7 +149,7 @@ def conferir(proj: Path) -> Resultado:
     if not estilo:
         r.erro("plano sem estilo_base — as cenas sairiam com estilos diferentes")
     else:
-        maus = [m for p, m in CUES_RUINS if re.search(p, estilo, re.I)]
+        maus = [m for p, m, _ in CUES_RUINS if re.search(p, estilo, re.I)]
         for m in maus:
             r.erro(f"estilo_base: {m}")
         if not maus:
@@ -144,9 +158,13 @@ def conferir(proj: Path) -> Resultado:
     obra = (plano.get("obra") or "").strip()
     if not obra:
         r.erro("plano sem obra — é o contexto que segura o traço do personagem")
-    elif [c for c in obra if c.isalpha() and ord(c) > 127]:
-        r.erro("obra tem letra acentuada, sinal de que está em português. "
-               "Escreva em inglês, dizendo era e tema")
+    elif (ac := [c for c in obra if c.isalpha() and ord(c) > 127]):
+        # AVISO e não ERRO: a criação de projeto já barra isso na porta de
+        # entrada, e existe título estrangeiro legítimo com acento
+        # ("Les Misérables"). Travar a produção inteira por isso seria caro.
+        r.aviso(f"obra tem letra acentuada ({''.join(sorted(set(ac)))}), sinal "
+                f"de que está em português — o modelo desenharia o título como "
+                f"texto ilegível. Se for título estrangeiro de verdade, ignore")
     else:
         r.ok("obra em ASCII, sem negação aparente")
 
@@ -172,9 +190,26 @@ def conferir(proj: Path) -> Resultado:
     if not tipo_errado and not sem_amb:
         r.ok("toda cena tem perfil de ambiente com pelo menos uma camada")
 
-    LUZ = re.compile(r"night|dark|lantern|lamp|firelight|flame|glow|torch|"
-                     r"starlight|dawn|morning|daylight|dusk|light|moon", re.I)
+    # \b em "light": sem ele, "flight", "slight" e "delight" davam match e
+    # aprovavam a cena por engano.
+    LUZ = re.compile(r"\b(night|dark\w*|lantern|lamp\w*|firelight|flame|glow\w*|"
+                     r"torch|starlight|dawn|morning|daylight|dusk|light|moon\w*|"
+                     r"lit|sun\w*|shadow\w*)\b", re.I)
     sem_luz = [c["n"] for c in narradas if c.get("prompt") and not LUZ.search(c["prompt"])]
+
+    # Os cues UNIVERSais valem no prompt da cena também — foi o buraco que a
+    # auditoria achou: o estilo_base passava limpo e uma cena com "no text"
+    # gastava dinheiro do mesmo jeito.
+    maus_cena = []
+    for c in narradas:
+        for padrao, motivo, so_base in CUES_RUINS:
+            if not so_base and c.get("prompt") and re.search(padrao, c["prompt"], re.I):
+                maus_cena.append((c["n"], motivo))
+    for n, motivo in maus_cena[:8]:
+        r.erro(f"cena {n}: {motivo}")
+    if not maus_cena:
+        r.ok("nenhum prompt de cena com cue proibido")
+
     if sem_luz:
         r.aviso(f"cenas cujo prompt não diz a luz: {sem_luz}. O estilo_base não "
                 f"fixa hora do dia de propósito, então a cena precisa dizer")
