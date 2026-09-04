@@ -148,3 +148,14 @@ durando seis noites — consumo modesto, não uma fogueira imperial. Fica o óle
 
 Fontes: [The Past](https://the-past.com/feature/illuminating-antiquity-the-pharos-lighthouse-in-alexandria/) ·
 [World History Encyclopedia](https://www.worldhistory.org/Lighthouse_of_Alexandria/)
+
+## Imagens aprovadas em 04/09/2026 — não regerar
+
+Palavras do Samuel: *"gostei muito das imagens, não é pra mexer nelas"*.
+
+As 39 estão como ele quer, incluindo as duas refeitas individualmente: a cena 5
+(a placa de bronze, que saíra como um gancho torto) e a cena 17 (a memória
+diurna, que saíra de noite e com uma criança no lugar do Demétrio adulto).
+
+Custo já pago: **R$ 1,97**. Qualquer `s3_imagens --forcar` daqui em diante
+descarta trabalho aprovado — confirmar com ele antes.
