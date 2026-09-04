@@ -1,17 +1,19 @@
 {
   "titulo": "A Luz da Baía Quieta | História Calma para Dormir | Grécia Antiga",
   "obra": "original story set on the ancient Greek coast — a lighthouse keeper's tale",
-  "duracao_alvo_s": 4500,
+  "duracao_alvo_s": 3935,
   "narrado_s": 3960,
   "cauda_ambiente_s": 540,
   "moldura": "Demétrio, um velho contador de histórias grego (persona 'Filósofo Grego'), narra uma noite específica da própria juventude como guardião de um farol numa ilha pequena. História original, escrita do zero — de propósito, sem mitologia grega, sem batalhas, sem monstros, pra fugir do que já é muito conhecido. O fio emocional é o filho, Míron, que foi pro mar; nenhum clímax dramático, só uma noite quieta de trabalho e memória.",
   "voz": {
     "engine": "kokoro",
     "voice": "pm_santa",
-    "speed": 0.85,
+    "speed": 0.75,
     "pausa_respiro_s": 1.35,
     "pausa_paragrafo_s": 0.9,
-    "nota": "speed 0.85 e pausa 3x o padrão, definido em 04/09/2026 depois de o Samuel ouvir a versão em 0.60 e dizer que a ênfase nas sílabas estava errada. MEDIDO: em teste pareado (mesma palavra, mesma voz, só a velocidade muda), o pico de F0 cai na sílaba tônica em 4 de 6 palavras a partir de 0.85, e em 0 a 1 de 6 abaixo disso. A 0.60 a curva de altura só decai, sem nenhum pico na tônica — e em português a tônica se marca também por subida de altura, então toda palavra soa acentuada na primeira sílaba. A transição é nítida entre 0.80 e 0.85. Custo: o vídeo cai de 68 para ~52 min, porque a pausa tem retorno decrescente (nem 6x o padrão passa de 57 min). Prosódia certa vale mais que a meta de duração, que era minha e não dele."
+    "pausa_frase_s": 1.2,
+    "vogal_final_pt": true,
+    "nota": "Aprovado de ouvido pelo Samuel em 04/09/2026, depois de ouvir 0.75 e 0.85 lado a lado com as mesmas correções. A minha medição dizia que abaixo de 0.85 o acento tonal se perde (0 a 1 acerto de 6 contra 4 de 6) — e o ouvido dele discordou. A medição foi feita em PALAVRA ISOLADA, sem pausa de frase e sem a correção de vogal; com as duas compensações o resultado perceptual é outro. Terceira vez neste projeto em que o ouvido dele vence a medição: antes foi o aecho da cauda e a irregularidade do pan. pausa_frase_s=1.2 porque 1.8 foi rejeitado às cegas por matar a fluidez. vogal_final_pt troca o æ do espeak pelo ɐ do português."
   },
   "ambiente": {
     "_nota": "Ambiente por CENA, segue o que a imagem mostra — baía calma a maior parte do tempo, fogo do farol nas cenas de perto da torre. Sem chuva em todo o vídeo (noite clara, de propósito — contraste com o video-02).",

@@ -116,8 +116,20 @@ def conferir(proj: Path) -> Resultado:
         speed = float(voz.get("speed") or 0)
     except (TypeError, ValueError):
         speed = 0.0
+    compensa = bool(voz.get("pausa_frase_s")) and bool(voz.get("vogal_final_pt"))
     if speed <= 0:
         r.erro("plano sem `voz.speed` — sem ele não dá para projetar duração")
+    elif speed < PISO_SPEED and compensa:
+        # O piso foi medido em PALAVRA ISOLADA, sem pausa de frase e sem a
+        # correção de vogal. Em 04/09/2026 o Samuel ouviu 0.75 e 0.85 lado a
+        # lado COM as duas compensações e aprovou 0.75 — o ouvido venceu a
+        # medição, que é o que já tinha acontecido com o aecho e com o pan.
+        # Então aqui é aviso, não erro: o piso continua valendo como alerta,
+        # mas não bloqueia quem compensou e conferiu de ouvido.
+        r.aviso(f"speed {speed} está abaixo do piso medido {PISO_SPEED}, mas o "
+                f"plano compensa com pausa_frase_s e vogal_final_pt. Foi "
+                f"aprovado de ouvido em 04/09 nessa configuração. Se mexer numa "
+                f"das compensações, ouça de novo antes de produzir")
     elif speed < PISO_SPEED:
         r.erro(f"speed {speed} está abaixo do piso {PISO_SPEED}. Medido em "
                f"04/09/2026: abaixo dele o pico de F0 deixa de cair na sílaba "
@@ -130,12 +142,28 @@ def conferir(proj: Path) -> Resultado:
     palavras = sum(len(c.split()) for _, _, c in b)
     ppm = _ppm(speed) if speed > 0 else 0
     fala = palavras / ppm if ppm > 0 else 0
+
+    # A pausa de frase entra na conta. O `_ppm` mede só a fala; ignorá-la fazia
+    # a projeção errar por minutos — no video-03 são 319 fronteiras de frase, o
+    # que a 1,2s vale 6,4 min. Contadas do mesmo jeito que o s2_tts corta:
+    # dentro de parágrafo, depois de os "..." já terem separado.
+    p_frase = float(voz.get("pausa_frase_s") or 0)
+    if p_frase > 0:
+        fronteiras = 0
+        for _, _, corpo in b:
+            for par in [x for x in corpo.split("\n\n") if x.strip()]:
+                for parte in [y.strip() for y in par.split("...") if y.strip()]:
+                    fr = [f for f in re.split(r"(?<=[.!?])\s+", parte) if f.strip()]
+                    fronteiras += max(0, len(fr) - 1)
+        fala += fronteiras * p_frase / 60
     cauda = plano.get("cauda_ambiente_s", 0) / 60
-    total = fala + cauda
+    entre_cenas = max(0, len(narradas) - 1) * 2.0 / 60   # PAUSA_ENTRE_CENAS do s5
+    total = fala + entre_cenas + cauda
     alvo = plano.get("duracao_alvo_s", 0) / 60
     if ppm > 0:
-        r.ok(f"{palavras:,} palavras / {ppm:.0f} ppm = {fala:.0f} min de fala "
-             f"+ {cauda:.0f} de cauda = {total:.0f} min")
+        r.ok(f"{palavras:,} palavras / {ppm:.0f} ppm = {fala:.1f} min de fala "
+             f"(pausa de frase inclusa) + {entre_cenas:.1f} entre cenas "
+             f"+ {cauda:.0f} de cauda = {total:.1f} min")
     if ppm > 0 and alvo and abs(total - alvo) > alvo * 0.15:
         r.aviso(f"projeção {total:.0f} min contra duracao_alvo_s de {alvo:.0f} "
                 f"min — mais de 15% de diferença")
