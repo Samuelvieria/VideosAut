@@ -1,6 +1,6 @@
 {
   "titulo": "A Luz da Baía Quieta | História Calma para Dormir | Grécia Antiga",
-  "obra": "original story set on the ancient Greek coast — a lighthouse keeper's tale",
+  "obra": "original story set on the ancient Greek coast — the keeper of a stone pharos, an open fire beacon",
   "duracao_alvo_s": 3935,
   "narrado_s": 3960,
   "cauda_ambiente_s": 540,
@@ -37,8 +37,8 @@
       "dur_s": 104,
       "papel": "moldura-abre",
       "titulo": "Abertura",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
-      "prompt": "wide shot, Demétrio standing at the base of a stone lighthouse tower at night, holding a small oil lamp low at his side, calm expression looking toward the viewer, rocky cliff edge behind him, dark sea below, single warm lamp light as the only source",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio standing at the base of a squat stone pharos tower with an open bronze fire basin on top at night, holding a small oil lamp low at his side, calm expression looking toward the viewer, rocky cliff edge behind him, dark sea below, single warm lamp light as the only source",
       "ambiente": {
         "mar": 0.3,
         "chuva": 0.0,
@@ -54,7 +54,7 @@
       "papel": "narrado",
       "titulo": "A ilha",
       "personagem": "no character — establishing landscape",
-      "prompt": "wide establishing shot, small rocky Mediterranean island at dusk, a modest stone lighthouse tower on a cliff at one end, a curved quiet bay of dark water on the other side, a tiny stone cottage near the tower base, fading purple-blue twilight sky",
+      "prompt": "wide establishing shot, small rocky Mediterranean island at dusk, a modest squat stone pharos tower with an open bronze fire basin on top on a cliff at one end, a curved quiet bay of dark water on the other side, a tiny stone cottage near the tower base, fading purple-blue twilight sky",
       "ambiente": {
         "mar": 0.4,
         "chuva": 0.0,
@@ -69,8 +69,8 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A torre e o fogo",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
-      "prompt": "close view inside the lighthouse lantern room, a large blackened bronze oil basin ablaze with tall orange flame, Demétrio's weathered hands adjusting a thin wick-trimming rod, stone walls glowing warm orange, small window showing dark sky beyond",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "close view of the open fire platform at the top of the stone pharos, a large blackened bronze oil basin ablaze with tall orange flame, Demétrio's weathered hands adjusting a thin wick-trimming rod, stone walls glowing warm orange, small window showing dark sky beyond",
       "ambiente": {
         "mar": 0.1,
         "chuva": 0.0,
@@ -85,7 +85,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Os cento e doze degraus",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "interior of the stone tower, tight spiral staircase hugging the curved wall with no handrail, worn stone steps dished in the middle, Demétrio climbing with an oil jar held against his chest, one hand flat on the stone, a single small lamp casting his shadow up the wall, deep darkness above and below",
       "ambiente": {
         "mar": 0.15,
@@ -117,7 +117,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O óleo e a pedra",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium close view of Demétrio's calloused hands carefully pouring oil from a clay jar into the bronze basin, firelight reflecting off the liquid, worn stone floor and tower wall in soft focus behind, warm amber glow",
       "ambiente": {
         "mar": 0.1,
@@ -133,7 +133,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O barco do óleo",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio on the low rocks of the bay in the morning receiving sealed clay oil jars handed up from a small boat by two sailors, jars lined on the stone beside him, cool clear early daylight, the tower on the cliff behind",
       "ambiente": {
         "mar": 0.25,
@@ -149,7 +149,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A mecha, de hora em hora",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio's hands holding a thin bronze hook, trimming the charred tip of a thick twisted linen wick floating in a bronze basin of oil, the flame low and smoky before the cut, warm light only from the fire, everything else in darkness",
       "ambiente": {
         "mar": 0.4,
@@ -165,7 +165,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Quando chovia sobre o fogo",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio pressed against a stone column at the open top of the tower during heavy slanting rain, holding a large sheet of thick leather tied against the windward side, his arm and shoulder soaked, the fire basin hissing and shrunk beside him, water streaking through the orange light",
       "ambiente": {
         "mar": 0.4,
@@ -197,8 +197,8 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A rotina da noite",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
-      "prompt": "wide shot, Demétrio seated on a worn stone bench beside the lit lantern room at the top of the tower, looking out over the dark sea, the flame glowing steadily behind him, wind-bent low shrubs at the cliff edge, star-scattered night sky",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "prompt": "wide shot, Demétrio seated on a worn stone bench beside the lit open fire platform at the top of the stone tower, looking out over the dark sea, the flame glowing steadily behind him, wind-bent low shrubs at the cliff edge, star-scattered night sky",
       "ambiente": {
         "mar": 0.4,
         "chuva": 0.0,
@@ -213,7 +213,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O que se come numa ilha",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio seated on a low stone bench outside a small stone house, a clay bowl in his lap with hard bread soaked in oil and a single olive, a chipped clay cup beside him, a small fig tree behind a low stone wall, soft overcast daylight",
       "ambiente": {
         "mar": 0.8,
@@ -229,7 +229,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Pão e vinho",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium shot, Demétrio sitting on the stone doorstep of a small cottage at night, a piece of dark bread and a few olives on a wooden plate beside him, a small clay cup of wine, a single oil lamp beside the door, the lit tower glowing faintly in the background",
       "ambiente": {
         "mar": 0.2,
@@ -245,7 +245,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O outro lado da ilha",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot of a beach of large round smooth stones on the far side of the island, Demétrio seated on a larger rock with his back to the viewer, half-buried dark timbers of an old wrecked boat in the stones, pale flat morning light, no tower visible anywhere",
       "ambiente": {
         "mar": 0.3,
@@ -357,7 +357,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "As cartas que não chegam",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium shot, Demétrio sitting alone at a rough wooden table inside a small stone cottage at night, holding a small worn token between his fingers, a single oil lamp casting warm light across his face, bare stone walls, one small shuttered window",
       "ambiente": {
         "mar": 0.2,
@@ -389,7 +389,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Os navios que ele guiou",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio standing at the tower opening looking down at a damaged ship anchored in the calm bay below, its sail torn and half-lowered, two small figures working on the deck by lantern light, the bay water black and still, warm fire glow from behind him on the stone",
       "ambiente": {
         "mar": 0.2,
@@ -405,7 +405,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Rostos que nunca vê",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio's weathered face in profile, lit from below by the warm orange glow of the distant lantern flame, deep lines and grey beard catching the light, dark night sky behind him",
       "ambiente": {
         "mar": 0.1,
@@ -421,7 +421,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Quando a luz falhava",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio halfway up the dark spiral staircase running, one hand on the wall, an unlit torch in the other, panic in his posture, faint cold blue light from the opening far above him, the basin dark and cold at the top",
       "ambiente": {
         "mar": 0.35,
@@ -437,7 +437,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Os nomes que ele deu às estrelas",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot from below, Demétrio standing on the rocky cliff looking straight up at a dense field of bright stars, one star noticeably brighter near the top of the frame, calm dark sea barely visible at the edge of the composition, faint lantern glow off to one side",
       "ambiente": {
         "mar": 0.2,
@@ -485,7 +485,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O ofício de guiar",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot from below, Demétrio standing on the tower's stone balcony looking out over the bay, the tall lantern flame blazing brightly above him, hidden rocks barely breaking the water's surface far below near the bay entrance, dark sea beyond",
       "ambiente": {
         "mar": 0.3,
@@ -517,7 +517,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Talvez seja ele",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio's face looking out toward the sea, a soft hopeful expression, warm lantern light from one side catching the corner of his eyes, dark night sky and a blurred distant ship light behind him",
       "ambiente": {
         "mar": 0.2,
@@ -533,7 +533,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A espera não tem pressa",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium shot of Demétrio standing motionless beside the fire basin through the night, arms at his sides, face lit warm orange from one side, looking down toward a single tiny still light on the black water of the bay far below",
       "ambiente": {
         "mar": 0.2,
@@ -549,7 +549,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A luz que responde",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot, Demétrio's silhouette on the rocky cliff edge raising a small lantern high with one arm, the lantern's light small but clear against the dark sky, a faint answering light visible far out on the black water",
       "ambiente": {
         "mar": 0.3,
@@ -565,7 +565,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "Não precisa saber",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot, Demétrio standing calmly at the top of stone stairs looking down toward a small bay, two ship silhouettes now inside the calm water near a modest wooden pier, the tower's flame glowing steady above him",
       "ambiente": {
         "mar": 0.4,
@@ -581,7 +581,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O que ele diria, se dissesse",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio seated on the stone bench at the tower opening, hands loose in his lap, looking out at the sea with an unreadable calm expression, low orange firelight on one side of his face and cold pre-dawn grey on the other",
       "ambiente": {
         "mar": 0.3,
@@ -597,7 +597,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "O fogo mais fraco",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of the bronze lantern basin, the flame now low and thin, a pale grey light beginning to creep in through a small stone window beside it, Demétrio's tired hand resting on the basin's edge",
       "ambiente": {
         "mar": 0.2,
@@ -613,7 +613,7 @@
       "dur_s": 104,
       "papel": "narrado",
       "titulo": "A promessa da manhã",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot, pale early dawn sky over a calm grey-blue sea, two ships now docked quietly at a small wooden pier below the cliff, Demétrio descending the last few stone steps of the tower, faint cool morning light replacing the night's warm glow",
       "ambiente": {
         "mar": 0.4,
@@ -629,7 +629,7 @@
       "dur_s": 104,
       "papel": "moldura-fecha",
       "titulo": "Fecho",
-      "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
+      "personagem": "Demétrio, an old Greek beacon keeper, tender of a stone pharos — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium shot, Demétrio seated peacefully on the stone doorstep of his cottage, soft pale morning light across his face, eyes closed or half-closed, calm sea and quiet pier visible behind him in the distance",
       "ambiente": {
         "mar": 0.3,
@@ -658,5 +658,6 @@
     }
   ],
   "_nota_expansao": "Levado de 30 para 75 min em 04/09/2026, por decisão do Samuel depois da pesquisa de mercado (docs/mercado.md §2: não há um só caso de sucesso perto de 30-41 min; a faixa é 65-170). As 15 cenas novas abrem domínio ENUMERÁVEL — como a lâmpada funciona, de onde vem o óleo, as rotas, navegar sem luz — que é o que sustenta 66 min de narração sem encher linguiça. Arco emocional único não estica 3x; textura concreta, sim. É a fórmula do History at Night: moldura emocional, corpo expositivo.",
-  "_nota_ritmo_medido": "MEDIDO em 04/09/2026 com o roteiro real, três cenas em posições diferentes: pm_alex/0.95 dá 163, 168 e 169 ppm nas cenas 1, 19 e 37. Ou seja, o FATOR_PAUSA crescendo de 1.00 para 1.58 quase NÃO muda o ritmo — a variação entre cenas vem mais do texto do que do mecanismo. Isso contradiz o que docs/mercado.md §9 afirmava sobre a nossa narração desacelerar ao longo do episódio, e precisa ser reconferido lá."
+  "_nota_ritmo_medido": "MEDIDO em 04/09/2026 com o roteiro real, três cenas em posições diferentes: pm_alex/0.95 dá 163, 168 e 169 ppm nas cenas 1, 19 e 37. Ou seja, o FATOR_PAUSA crescendo de 1.00 para 1.58 quase NÃO muda o ritmo — a variação entre cenas vem mais do texto do que do mecanismo. Isso contradiz o que docs/mercado.md §9 afirmava sobre a nossa narração desacelerar ao longo do episódio, e precisa ser reconferido lá.",
+  "_nota_pharos": "Em 04/09/2026 a primeira leva de 39 imagens saiu com FAROL MODERNO em cerca de 23 delas — torre listrada, casa de lanterna envidraçada, guarda-corpo. Duas causas: (1) a palavra 'lighthouse' no obra e em 25 personagens ativa esmagadoramente a torre do séc. XIX no treino, mesma família do 'white whale' que trazia a jubarte; (2) eu mesmo escrevi 'lantern room' em prompts de cena, que é componente de farol moderno. Corrigido com 'pharos', a palavra grega, que no treino aparece como estrutura antiga — a técnica de ancorar por contexto histórico documentada em consultas/sintese.md."
 }
