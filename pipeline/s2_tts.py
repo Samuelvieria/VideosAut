@@ -94,6 +94,16 @@ def main() -> None:
     voice = voz.get("voice", "pm_santa")
     speed = float(voz.get("speed", 0.80))
 
+    # A pausa passou a ser parâmetro DO PROJETO em 04/09/2026, não constante
+    # global. Motivo: medido que `speed` abaixo de 0.85 destrói o acento tonal
+    # (o pico de F0 deixa de cair na sílaba tônica e a curva só decai, e aí toda
+    # palavra soa acentuada na primeira sílaba). A lentidão tem que vir da
+    # pausa. Mas mexer nas constantes mudaria o video-02, que está publicado —
+    # então cada projeto traz as suas, com o valor antigo como padrão.
+    global PAUSA_RESPIRO, PAUSA_PARAGRAFO
+    PAUSA_RESPIRO = float(voz.get("pausa_respiro_s", PAUSA_RESPIRO))
+    PAUSA_PARAGRAFO = float(voz.get("pausa_paragrafo_s", PAUSA_PARAGRAFO))
+
     roteiro = proj / "roteiro.md"
     if not roteiro.is_file():
         erro(f"falta {roteiro}")

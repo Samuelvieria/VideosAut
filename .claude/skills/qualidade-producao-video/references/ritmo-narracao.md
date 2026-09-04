@@ -64,3 +64,28 @@ por lá.
 por contexto (podcastify.io); velocidade de fala em PB, SciELO/CoDAS
 (scielo.br/j/codas) e RBCS/UFPB (periodicos.ufpb.br/index.php/rbcs).
 
+## Piso de `speed`: 0.85 (medido em 04/09/2026)
+
+Abaixo de 0.85 o Kokoro **perde o acento tonal**. Teste pareado, mesma palavra,
+mesma voz, só a velocidade muda:
+
+| speed | pico de F0 na sílaba tônica |
+|---|---|
+| 0.60 | 1 de 6 |
+| 0.70 | 0 de 6 |
+| 0.80 | 1 de 6 |
+| **0.85** | **4 de 6** |
+| 1.00 | 4 de 6 |
+
+A transição é nítida entre 0.80 e 0.85. Abaixo dela a curva de altura só decai
+ao longo da palavra, sem pico nenhum — e em português a tônica se marca também
+por subida de altura, então **toda palavra soa acentuada na primeira sílaba**.
+Foi descrito de ouvido como "a ênfase nas sílabas está errada".
+
+A lentidão vem da **pausa**, configurável por projeto em
+`plano.json` → `voz.pausa_respiro_s` e `voz.pausa_paragrafo_s`.
+
+Mas ela tem **retorno decrescente**, e isso muda o planejamento de duração: a
+6× o valor padrão, um roteiro de 6.400 palavras vai de 49 para 57 min, não
+muito além. Se a duração alvo for alta, a resposta é **mais texto**, não mais
+silêncio.

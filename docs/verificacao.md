@@ -92,3 +92,35 @@ Antes de reportar que algo funcionou:
 > **Que evidência eu tenho além de o resultado parecer certo?**
 
 Se a resposta for "nenhuma", não funcionou — ainda não se sabe.
+
+---
+
+## 6. Medir o que se correlaciona com a coisa, em vez da coisa
+
+Em 04/09/2026 o Samuel ouviu a narração do video-03 e disse: *"a ênfase nas
+sílabas está errada"*. Eu tentei **quatro** medições antes de acertar, e as
+quatro falharam do mesmo jeito.
+
+| tentativa | o que mediu | por que não serviu |
+|---|---|---|
+| taxa de erro do whisper por velocidade | reconhecimento | 15,8% idêntico em 0.60 a 1.00. Um sintetizador pode acentuar a sílaba errada e continuar perfeitamente inteligível |
+| energia RMS por sílaba | volume | acertava nos nomes próprios. Tonicidade é energia **+ duração + altura**, e eu media um terço dela |
+| varredura de regra de tonicidade em 1.177 palavras | ortografia | 164 "divergências", quase todas bug meu: contei "ia" de *bacia* como ditongo e o `ɐ̃ʊ̃` de *carvão* como duas sílabas |
+| F0 por sílaba, com e sem tônica secundária | altura, sem controle | 22% contra 67% parecia forte. Mas as palavras com `ˌ` são mais longas, e em palavra isolada a altura decai naturalmente. Controlando por posição da tônica, **a diferença sumiu** |
+
+O que funcionou foi **teste pareado**: a mesma palavra, a mesma voz, mudando
+só a velocidade. Aí o efeito apareceu limpo e grande.
+
+> A regra: quando a variável de interesse está confundida com outra, o número
+> vai parecer um achado. **Se você não consegue mudar só uma coisa, ainda não
+> tem experimento** — tem correlação com nome de conclusão.
+
+E a variável só ficou isolável depois de eu conseguir mexer no fonema direto,
+envolvendo o `g2p` do Kokoro. Antes disso eu estava comparando palavras
+diferentes e chamando isso de teste.
+
+Nota de honestidade: a hipótese que eu testei primeiro (a tônica secundária do
+espeak, `ˌ`, empurrando o acento) veio do Gemini e **estava errada** — removê-la
+não mudou nada, 1 melhorou e 5 ficaram idênticas. O que a delegação de fato
+entregou foi outra coisa, e mais útil: apontar que tonicidade é energia +
+duração + F0, e que eu estava medindo só a primeira.

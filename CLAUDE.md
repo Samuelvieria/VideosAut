@@ -51,6 +51,19 @@ de conta Azure e roda 100% offline no Mac (CPU, sem GPU).
 - Voz: `pm_santa` (lang_code `p` = pt-BR), **speed=0.60** (padronizado em 27/08/2026;
   era 0.80 no vídeo 1, depois 0.75 no vídeo 2 — ver `fase0/video-02/plano.json`),
   sem pitch shift.
+- **`speed` abaixo de 0.85 DESTRÓI o acento tonal — medido em 04/09/2026.**
+  Em teste pareado (mesma palavra, mesma voz, só a velocidade muda), o pico de
+  F0 cai na sílaba tônica em 4 de 6 palavras a partir de 0.85, e em 0 a 1 de 6
+  abaixo disso. A transição é nítida entre 0.80 e 0.85. A 0.60 a curva de altura
+  apenas decai, sem nenhum pico na tônica — e como em português a tônica se
+  marca também por subida de altura, **toda palavra passa a soar acentuada na
+  primeira sílaba**. Foi o que o Samuel ouviu no video-03 e descreveu como "a
+  ênfase nas sílabas está errada". **Piso: 0.85.** A lentidão vem da pausa, que
+  agora é parâmetro do projeto (`voz.pausa_respiro_s` e `voz.pausa_paragrafo_s`
+  no plano.json), não constante global — o video-02 fica como está.
+  Cuidado com o custo: a pausa tem retorno decrescente. Nem 6× o padrão leva o
+  video-03 além de 57 min, contra 68 que ele teria a 0.60.
+
 - **`speed` baixo como mecanismo principal de lentidão está superado desde
   28/08/2026** (pesquisa de ritmo de narração pt-BR — ver
   `.claude/skills/qualidade-producao-video/SKILL.md` § Ritmo de narração):
