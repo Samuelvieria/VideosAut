@@ -80,6 +80,14 @@ ESTAGIOS: dict[str, Estagio] = {
         nota="É o estágio mais lento do pipeline. Whisper large-v3 em CPU roda "
              "a 3,44x realtime.",
     ),
+    "thumbnails": Estagio(
+        rotulo="s5b_thumbs — gerar as três thumbnails candidatas",
+        modulo="pipeline.s5b_thumbs", tempo="segundos", campos=("forcar",),
+        nota="Três CENAS diferentes, com o mesmo tratamento de texto. Gera "
+             "também uma folha de contato com as três lado a lado — escolher "
+             "olhando uma de cada vez é escolher entre coisas que você nunca "
+             "viu juntas. Não sobrescreve thumbnail feita à mão sem --forcar.",
+    ),
     "render": Estagio(
         rotulo="s5_render — montar o vídeo final",
         modulo="pipeline.s5_render", tempo="~8 min",
