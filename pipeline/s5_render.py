@@ -608,11 +608,29 @@ def main() -> None:
 
     alvo = float(plano.get("duracao_alvo_s", 1800))
     if cauda:
-        resto = alvo - sum(duracoes.values())
-        if resto < 30:
-            log(f"AVISO: narração ocupou {sum(duracoes.values())/60:.1f} min do alvo de "
-                f"{alvo/60:.0f} min; cauda ficaria em {resto:.0f}s. Usando 60s.")
-            resto = 60.0
+        narrado = sum(duracoes.values())
+        # `cauda_ambiente_s`, quando presente, MANDA. Antes a cauda era sempre
+        # o resto para fechar `duracao_alvo_s`, e o campo ficava de enfeite —
+        # o que é armadilha: no video-03, com alvo de 75 min e 46 de narração,
+        # a cauda sairia com 29 min sozinha, 39% do vídeo em chuva, sem
+        # ninguém ter decidido isso. Encher até o alvo continua sendo o padrão
+        # quando o campo não existe, que é o caso do video-02 (lá os dois
+        # números coincidem: 540 s).
+        declarada = plano.get("cauda_ambiente_s")
+        if declarada:
+            resto = float(declarada)
+            fecha = narrado + resto
+            if abs(fecha - alvo) > 60:
+                log(f"AVISO: cauda_ambiente_s={resto:.0f}s dá {fecha/60:.1f} min "
+                    f"de vídeo, contra duracao_alvo_s de {alvo/60:.0f} min. "
+                    f"Mandando na cauda declarada — ajuste duracao_alvo_s se a "
+                    f"intenção era outra.")
+        else:
+            resto = alvo - narrado
+            if resto < 30:
+                log(f"AVISO: narração ocupou {narrado/60:.1f} min do alvo de "
+                    f"{alvo/60:.0f} min; cauda ficaria em {resto:.0f}s. Usando 60s.")
+                resto = 60.0
         duracoes[cauda["n"]] = resto
     total = sum(duracoes.values())
 
