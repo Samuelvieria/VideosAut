@@ -90,8 +90,11 @@ contém "chuva" e o modelo desenha chuva. Descrever só o que EXISTE.
 **Nunca nomear objeto quando se quer luz.** "lantern accents" no estilo base fazia
 o modelo desenhar lanternas boiando em mar aberto. Descrever cor, não objeto.
 
-**Gerar em 1024×576.** A fal.ai empurra qualquer dimensão abaixo de 512 para 512
-sem avisar. Validar a dimensão recebida contra o que o render assume.
+**Gerar em 1280×720.** A fal.ai empurra qualquer dimensão abaixo de 512 para 512
+sem avisar. 1280×720 é múltiplo inteiro do preset nativo (1024×576), é honrado, e
+deixa 640×360px de margem para o `crop` deslizante do pan depois da escala ×2 —
+sem margem não há movimento. Validar a dimensão recebida contra o que o render
+assume (`s5_render._confere_fonte`).
 
 **`enable_prompt_expansion: False`.** Ligado, o LLM do provedor reescreve o prompt
 a cada chamada e destrói a consistência entre cenas.

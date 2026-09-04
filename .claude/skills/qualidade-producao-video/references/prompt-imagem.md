@@ -9,8 +9,7 @@ Cada regra aqui custou uma rodada real de erro-e-correção.
 avisar, e a resposta traz o tamanho REAL, não o pedido.** Medido em
 02/09/2026: pedir 640×360 devolvia 640×512 (razão 1,25) e pedir 768×432
 devolvia 768×512 (razão 1,50) — nenhum dos dois em 16:9, apesar de o prompt
-dizer "16:9". Gerar em **1024×576** (o preset `landscape_16_9` do próprio
-modelo), que é honrado.
+dizer "16:9". Gerar em **1280×720** (múltiplo inteiro do preset nativo `landscape_16_9`, que é 1024×576), que é honrado e ainda deixa 640×360px de margem para o `crop` deslizante do pan depois da escala ×2.
 
 Isso passou despercebido por semanas porque nada conferia o tamanho recebido:
 o `s5_render` assumia fonte 768×432 e recortava 640×360 em `y=36`, comendo em

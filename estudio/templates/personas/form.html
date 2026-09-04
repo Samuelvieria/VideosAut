@@ -3,6 +3,9 @@
 {% block conteudo %}
 <p><a href="/personas">&larr; personas</a></p>
 <h1>{{ 'Editar persona' if persona else 'Nova persona' }}</h1>
+{% if erro %}
+<div class="card" style="border-color:var(--vermelho); color:var(--vermelho); white-space:pre-wrap">{{ erro }}</div>
+{% endif %}
 <form method="post" action="{{ acao }}">
   <label>Nome<br>
     <input type="text" name="nome" value="{{ persona.nome if persona else '' }}" required>
@@ -31,6 +34,40 @@
   <fieldset disabled>
     <legend>Voz — Inglês</legend>
     <p>TBD — nenhum engine de voz em inglês definido no projeto ainda.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Estética</legend>
+    <p style="color:var(--texto-fraco); margin-top:0">
+      O que é invariante do canal e da era da persona — traço, paleta, luz.
+      A cena individual diz a hora do dia e o assunto; aqui, não. Cues que já
+      causaram regressão são <strong>recusados na gravação</strong>.
+    </p>
+    <label>estilo_base (vai no prompt POSITIVO de toda cena)<br>
+      <textarea name="estilo_base" rows="4" cols="72">{{ persona.estetica.estilo_base if persona and persona.estetica else '' }}</textarea>
+    </label><br>
+    <label>prompt_negativo (registro de intenção — o Z-Image-Turbo não aceita)<br>
+      <textarea name="prompt_negativo" rows="3" cols="72">{{ persona.estetica.prompt_negativo if persona and persona.estetica else '' }}</textarea>
+    </label><br>
+    <label>paleta — 3 a 4 cores nomeadas, separadas por vírgula<br>
+      <input type="text" name="paleta" size="72"
+             value="{{ persona.estetica.paleta | join(', ') if persona and persona.estetica else '' }}">
+    </label><br>
+    <label>luz — direção fixa; ancora estilo mais que o assunto<br>
+      <input type="text" name="luz" size="72"
+             value="{{ persona.estetica.luz if persona and persona.estetica else '' }}">
+    </label><br>
+    <label>resolução de geração<br>
+      <input type="number" name="res_l" style="width:7rem"
+             value="{{ persona.estetica.resolucao[0] if persona and persona.estetica else 1280 }}">
+      ×
+      <input type="number" name="res_a" style="width:7rem"
+             value="{{ persona.estetica.resolucao[1] if persona and persona.estetica else 720 }}">
+    </label><br>
+    <label>nota<br>
+      <input type="text" name="estetica_nota" size="72"
+             value="{{ persona.estetica.nota if persona and persona.estetica else '' }}">
+    </label>
   </fieldset>
 
   <br>

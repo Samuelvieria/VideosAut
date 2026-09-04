@@ -4,13 +4,18 @@
 <h1>Personas</h1>
 <p><a href="/personas/novo">+ nova persona</a></p>
 <table class="lista">
-  <thead><tr><th>Nome</th><th>Voz PT</th><th>Voz EN</th><th></th></tr></thead>
+  <thead><tr><th>Nome</th><th>Voz PT</th><th>Voz EN</th><th>Estética</th><th></th></tr></thead>
   <tbody>
   {% for p in personas %}
     <tr>
       <td>{{ p.nome }}</td>
       <td>{{ p.vozes.pt.voice }} (speed {{ p.vozes.pt.speed if p.vozes.pt.speed is not none else 'pendente' }})</td>
       <td>{{ p.vozes.en.voice or '— (TBD)' }}</td>
+      <td>
+        {% if p.estetica and p.estetica.estilo_base %}
+          <span class="tag resolvida">definida</span>
+        {% else %}<span class="tag aberta">falta</span>{% endif %}
+      </td>
       <td><a href="/personas/{{ p.id }}/editar">editar</a></td>
     </tr>
   {% endfor %}
