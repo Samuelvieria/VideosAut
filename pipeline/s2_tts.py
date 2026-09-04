@@ -40,6 +40,17 @@ PAUSA_FRASE = 0.0         # entre frases DENTRO do parágrafo; 0 = comportamento
 # variação de verdade pede outro motor (ver docs/tts-provedores.md).
 CADENCIA_ALTERNADA = 0    # de N em N frases, alimenta com vírgula; 0 = desligado
 
+# O espeak-ng mapeia o /a/ átono final do português para `æ` — o mesmo símbolo
+# da vogal de "cat" em inglês. Ele faz isso por convenção interna, não por erro.
+# O risco é o Kokoro: sendo multilíngue, se o treino da voz pt-BR não ancorou
+# esse símbolo com densidade, o modelo o realiza com timbre inglês.
+#
+# MEDIDO 04/09/2026: trocar æ por ɐ encurta a palavra de 3% (água) a 8% (ponta)
+# e sobe o F0 final de 123 para 129 Hz em "água". Efeito pequeno mas na direção
+# certa, e ɐ é o símbolo foneticamente correto para pt-BR. Fica opcional porque
+# não foi julgado de ouvido ainda, e porque mexer nisso mudaria o video-02.
+VOGAL_FINAL_PT = False    # True troca æ por ɐ na saída do fonemizador
+
 # Densidade decrescente pela PAUSA, não pela articulação — ver pesquisa de
 # ritmo de 28/08/2026 (.claude/skills/qualidade-producao-video/SKILL.md,
 # seção "Ritmo de narração"). `speed` do Kokoro estica tudo por igual,
@@ -142,10 +153,12 @@ def main() -> None:
     # pausa. Mas mexer nas constantes mudaria o video-02, que está publicado —
     # então cada projeto traz as suas, com o valor antigo como padrão.
     global PAUSA_RESPIRO, PAUSA_PARAGRAFO, PAUSA_FRASE, CADENCIA_ALTERNADA
+    global VOGAL_FINAL_PT
     PAUSA_RESPIRO = float(voz.get("pausa_respiro_s", PAUSA_RESPIRO))
     PAUSA_PARAGRAFO = float(voz.get("pausa_paragrafo_s", PAUSA_PARAGRAFO))
     PAUSA_FRASE = float(voz.get("pausa_frase_s", PAUSA_FRASE))
     CADENCIA_ALTERNADA = int(voz.get("cadencia_alternada", CADENCIA_ALTERNADA))
+    VOGAL_FINAL_PT = bool(voz.get("vogal_final_pt", VOGAL_FINAL_PT))
 
     roteiro = proj / "roteiro.md"
     if not roteiro.is_file():
@@ -155,6 +168,7 @@ def main() -> None:
     destino.mkdir(exist_ok=True)
     cfg = (f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO};"
            f"frase={PAUSA_FRASE};cadencia={CADENCIA_ALTERNADA};"
+           f"vogal_pt={VOGAL_FINAL_PT};"
            f"fator_pausa={FATOR_PAUSA_INICIO}-{FATOR_PAUSA_FIM}")
 
     cenas = blocos(roteiro)
@@ -179,6 +193,16 @@ def main() -> None:
 
         from kokoro import KPipeline
         pipeline = KPipeline(lang_code="p")
+        if VOGAL_FINAL_PT:
+            _g2p = pipeline.g2p
+
+            def _g2p_pt(texto):
+                ps, extra = _g2p(texto)
+                if isinstance(ps, str):
+                    ps = ps.replace("æ", "ɐ")
+                return ps, extra
+            pipeline.g2p = _g2p_pt
+            log("vogal final: æ -> ɐ (VOGAL_FINAL_PT ligado)")
         log(f"voz={voice} speed={speed} — {len(pendentes)} cena(s) a gerar")
         for n, titulo, corpo in pendentes:
             alvo = destino / f"cena_{n:02d}.wav"
