@@ -7,9 +7,11 @@ status: avaliação de rumo
 
 # Estado e direção
 
-> **Atualizado em 04/09/2026.** Os itens 4.1 (personas com estética), 4.2
-> (thumbnails) e a primeira metade de 4.4 (criar projeto pelo estúdio) foram
-> feitos na sessão autônoma da madrugada. Relatório em
+> **Atualizado em 04/09/2026, duas sessões.** Feitos: 4.1 (personas com
+> estética), 4.2 (thumbnails), 4.3 em parte, e o **4.4 inteiro menos o
+> `s6_upload`** — criar projeto, encadear estágios em sequência parando no
+> primeiro erro, e um `preflight` que confere tudo antes de gastar. Mais o
+> roteiro do video-03 levado a 39 cenas e o achado do piso de `speed`. Relatório em
 > [noite-04-09.md](noite-04-09.md). E a pesquisa de mercado
 > ([mercado.md](mercado.md)) contrariou duas premissas que este documento
 > tratava como dadas — duração e cadência.
@@ -183,7 +185,7 @@ próprio vídeo já tem. Escolher continua sendo seu; gerar deixa de ser artesan
 
 Ganho: tira a etapa mais manual que sobrou. Custo: baixo.
 
-#### 4.3 Padronizar o que já sabemos de imagem — *seu item 7*
+#### 4.3 Padronizar o que já sabemos de imagem — *seu item 7* · **PARCIAL**
 
 Você está certo de que os resultados ficaram bons e o padrão tem que continuar.
 O risco não é a qualidade cair, é o **conhecimento estar espalhado**: parte no
@@ -206,15 +208,20 @@ hierarquia de consistência — acima de prompt e de seed. Vale testar no video-
 
 ### Depois de publicar mais dois vídeos
 
-#### 4.4 O aplicativo mais autônomo — *seu item 8*
+#### 4.4 O aplicativo mais autônomo — *seu item 8* · **quase todo FEITO**
 
-O estúdio já dirige os quatro estágios mecânicos (feito em 03/09). O que falta
-para autonomia real, em ordem:
+O estúdio dirige os oito estágios, cria projeto a partir de persona, encadeia
+sequências parando no primeiro erro, e roda um `preflight` antes de tudo. Só o
+`s6_upload` continua de fora, e por regra sua.
+
+O que faltava, em ordem:
 
 1. ~~**Criar projeto pela interface**~~ — **FEITO 04/09.** Nasce de uma persona,
    com o padrão de duração do mercado (75 min) e as validações de prompt.
-2. **Encadear estágios** — rodar `narração → imagens → legendas → render` numa
-   chamada, com parada no primeiro erro.
+2. ~~**Encadear estágios**~~ — **FEITO 04/09.** Duas sequências, `mecanica`
+   (não gasta) e `completa`, com `preflight` como primeiro passo e parada no
+   primeiro erro. Parar importa: os estágios dependem uns dos outros, e seguir
+   depois de uma falha produz vídeo com cena faltando em vez de erro.
 3. **`s6_upload`** — e aqui há uma trava **sua**, não minha: o CLAUDE.md proíbe
    `s1_roteiro.py` e `s6_upload.py` até 2–3 vídeos publicados. Temos um. Isso
    destrava publicando o video-03 e o video-04, não reescrevendo a regra.
