@@ -173,10 +173,11 @@ Nossa narração roda a **102 palavras/min** sobre os 32,2 min de fala real do
 video-02 (não sobre os 41 min totais, que incluem a cauda). As referências:
 Dreamoria **128 ppm**, History at Night **180 ppm**. Fala de conversa fica em ~150.
 
-E **eles não desaceleram**: medindo por terço do vídeo, a variação é −4,1% e
-−1,0%. Nosso `FATOR_PAUSA` vai de 1,0 a 1,6 de propósito, então o fim do nosso
-vídeo é bem mais lento que o começo. Isso é diferença nossa, não convenção do
-gênero — e não foi decidido comparando com nada.
+**Ninguém desacelera, nem eles nem nós.** Por terço de vídeo eles variam −4,1%
+e −1,0%; nosso `FATOR_PAUSA`, medido com o roteiro real em três posições do
+episódio, dá 163, 168 e 169 ppm — praticamente reta. **O mecanismo faz muito
+menos do que se supunha.** Quem produz a nossa lentidão é a pausa de
+`PAUSA_PARAGRAFO` a cada quebra de parágrafo, não a rampa ao longo do episódio.
 
 Nenhuma das duas referências tem **cauda de ambiente**. As duas narram até o
 último segundo. A nossa cauda de 9 min é aposta não testada.

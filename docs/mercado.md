@@ -302,10 +302,32 @@ palavras (`fase0/_vozes-candidatas/`):
 | 0,90 | 1,0 | 195 |
 | 1,00 | 1,6 | 205 |
 
-O trecho isolado a 0,60 dá 123 ppm, mas o vídeo inteiro dá 102 — a diferença é
-o `FATOR_PAUSA` crescendo de 1,0 para 1,6 ao longo do episódio, mais os
-intervalos entre cenas. Ou seja, **nosso ritmo não é uniforme, ele desacelera**,
-e o fim do vídeo é bem mais lento que 102.
+O trecho isolado a 0,60 dá 123 ppm, mas o vídeo inteiro dá 102.
+
+> **Correção de 04/09/2026 — a minha explicação para essa diferença estava
+> errada.** Eu atribuí ao `FATOR_PAUSA`, que cresce de 1,0 para 1,6 ao longo do
+> episódio, e concluí que "nosso ritmo desacelera". Fui medir com o roteiro
+> real, três cenas em posições diferentes do episódio:
+>
+> | cena | fator de pausa | ppm |
+> |---|---|---|
+> | 1 | 1,00 | 163 |
+> | 19 | 1,29 | 168 |
+> | 37 | 1,58 | 169 |
+>
+> **Praticamente reta.** O `FATOR_PAUSA` quase não muda o ritmo — a variação
+> entre cenas vem mais do texto do que do mecanismo. Então nós também não
+> desaceleramos, e a comparação com as referências (−4,1% e −1,0%) mostra três
+> curvas planas, não duas.
+>
+> A diferença real entre 123 e 102 é outra: o trecho de teste foi montado
+> **juntando linhas**, o que apagou as quebras de parágrafo — e o `s2_tts`
+> insere silêncio em cada uma. Quem nos deixa lentos é a **pausa de parágrafo**,
+> não a desaceleração ao longo do episódio.
+>
+> Conferido contra o áudio de verdade: `fase0/video-02/duracoes.json` registra
+> 1.895 s de narração para 3.279 palavras, o que dá **104 ppm** — batendo com
+> os 102 estimados.
 
 **Provavelmente diferença de gênero, não erro:** mediana de frase e
 fragmentação. Eles fazem **história expositiva** ("como era ser pirata"), que

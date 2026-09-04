@@ -7,9 +7,9 @@
   "moldura": "Demétrio, um velho contador de histórias grego (persona 'Filósofo Grego'), narra uma noite específica da própria juventude como guardião de um farol numa ilha pequena. História original, escrita do zero — de propósito, sem mitologia grega, sem batalhas, sem monstros, pra fugir do que já é muito conhecido. O fio emocional é o filho, Míron, que foi pro mar; nenhum clímax dramático, só uma noite quieta de trabalho e memória.",
   "voz": {
     "engine": "kokoro",
-    "voice": "pm_alex",
-    "speed": 0.95,
-    "nota": "Persona 'filosofo-grego' (estudio/dados/personas.json). Mecanismo novo de ritmo: speed perto do natural + pausa crescente (FATOR_PAUSA_INICIO/FIM em s2_tts.py), não speed baixo. Ajustável depois de ouvir a narração real desta cena."
+    "voice": "pm_santa",
+    "speed": 0.6,
+    "nota": "Trocado de pm_alex/0.95 para pm_santa/0.60 em 04/09/2026, por decisão do Samuel. Motivo: medido que pm_alex a 0.95 roda a 167 ppm, e as 6.397 palavras do roteiro sairiam em 38 min de fala — 47 min de vídeo, abaixo do piso de 65 que a pesquisa de mercado encontrou. pm_santa/0.60 roda a ~102 ppm e entrega os 73 min planejados. É também a única combinação de voz e velocidade que já foi aprovada de ouvido, no video-02. Custo aceito: o narrador fica com o mesmo timbre do video-02 — o projeto já aceita isso, a persona 'trovador-taberna' reusa pm_santa de propósito, com a diferenciação vindo do personagem e do ritmo, não do timbre."
   },
   "ambiente": {
     "_nota": "Ambiente por CENA, segue o que a imagem mostra — baía calma a maior parte do tempo, fogo do farol nas cenas de perto da torre. Sem chuva em todo o vídeo (noite clara, de propósito — contraste com o video-02).",
@@ -527,5 +527,6 @@
       }
     }
   ],
-  "_nota_expansao": "Levado de 30 para 75 min em 04/09/2026, por decisão do Samuel depois da pesquisa de mercado (docs/mercado.md §2: não há um só caso de sucesso perto de 30-41 min; a faixa é 65-170). As 15 cenas novas abrem domínio ENUMERÁVEL — como a lâmpada funciona, de onde vem o óleo, as rotas, navegar sem luz — que é o que sustenta 66 min de narração sem encher linguiça. Arco emocional único não estica 3x; textura concreta, sim. É a fórmula do History at Night: moldura emocional, corpo expositivo."
+  "_nota_expansao": "Levado de 30 para 75 min em 04/09/2026, por decisão do Samuel depois da pesquisa de mercado (docs/mercado.md §2: não há um só caso de sucesso perto de 30-41 min; a faixa é 65-170). As 15 cenas novas abrem domínio ENUMERÁVEL — como a lâmpada funciona, de onde vem o óleo, as rotas, navegar sem luz — que é o que sustenta 66 min de narração sem encher linguiça. Arco emocional único não estica 3x; textura concreta, sim. É a fórmula do History at Night: moldura emocional, corpo expositivo.",
+  "_nota_ritmo_medido": "MEDIDO em 04/09/2026 com o roteiro real, três cenas em posições diferentes: pm_alex/0.95 dá 163, 168 e 169 ppm nas cenas 1, 19 e 37. Ou seja, o FATOR_PAUSA crescendo de 1.00 para 1.58 quase NÃO muda o ritmo — a variação entre cenas vem mais do texto do que do mecanismo. Isso contradiz o que docs/mercado.md §9 afirmava sobre a nossa narração desacelerar ao longo do episódio, e precisa ser reconferido lá."
 }

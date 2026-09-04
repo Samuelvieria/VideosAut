@@ -935,6 +935,7 @@ A baía continua lá. Funda e quieta, do mesmo jeito.
 
 E os navios que passam hoje têm outros jeitos de saber onde a terra começa.
 
-## Cena 39 — Mar calmo ao amanhecer (sem narração)
-
-_(sem narração — ambiente de mar calmo ao amanhecer, 9 minutos)_
+<!-- A cauda (cena 39 do plano.json) NÃO tem cabeçalho aqui de propósito: o
+     s2_tts sintetiza TODO bloco `## Cena N — Título` do roteiro, e um bloco de
+     cauda viraria voz dizendo "sem narração". Mesma convenção do video-02, que
+     tem 19 cabeçalhos para 20 cenas. -->
