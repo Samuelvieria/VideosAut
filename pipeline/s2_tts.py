@@ -26,6 +26,19 @@ SR = 24000
 # Então cortamos o texto nos "..." e inserimos o silêncio nós mesmos.
 PAUSA_RESPIRO = 0.45      # segundos de silêncio em cada "..."
 PAUSA_PARAGRAFO = 0.30    # respiro extra entre parágrafos
+PAUSA_FRASE = 0.0         # entre frases DENTRO do parágrafo; 0 = comportamento antigo
+
+# MEDIDO 04/09/2026: o Kokoro pt-BR tem um contorno de fim de frase só. Ponto,
+# reticências, vírgula, "?" e "!" dão todos a mesma queda de F0 (-39 a -53 Hz),
+# nas três vozes (pm_santa, pm_alex, pf_dora). Não há entonação interrogativa a
+# extrair, e a pontuação não dirige nada.
+#
+# A ÚNICA variação que apareceu: no pm_santa, frase alimentada terminando em
+# VÍRGULA cai -19 Hz contra -53 do ponto. Queda mais rasa lê como "continua" em
+# vez de "fecha". `CADENCIA_ALTERNADA` usa isso: troca o ponto final por vírgula
+# em algumas frases, dando duas cadências em vez de uma. É paliativo — a
+# variação de verdade pede outro motor (ver docs/tts-provedores.md).
+CADENCIA_ALTERNADA = 0    # de N em N frases, alimenta com vírgula; 0 = desligado
 
 # Densidade decrescente pela PAUSA, não pela articulação — ver pesquisa de
 # ritmo de 28/08/2026 (.claude/skills/qualidade-producao-video/SKILL.md,
@@ -53,12 +66,28 @@ def sintetiza(pipeline, texto: str, voice: str, speed: float, fator_pausa: float
     import numpy as np
 
     pedacos: list[tuple[str, float]] = []
+    n_frase = 0
     for i, par in enumerate([p for p in texto.split("\n\n") if p.strip()]):
         partes = [x.strip() for x in par.split("...") if x.strip()]
         for j, parte in enumerate(partes):
-            ult = j == len(partes) - 1
-            base = PAUSA_PARAGRAFO if ult else PAUSA_RESPIRO
-            pedacos.append((parte, base * fator_pausa))
+            ult_parte = j == len(partes) - 1
+            base_parte = PAUSA_PARAGRAFO if ult_parte else PAUSA_RESPIRO
+
+            # Corte por FRASE. Antes o corte era só nos "..." e nos parágrafos,
+            # então um parágrafo de cinco frases ia ao modelo num bloco e não
+            # havia pausa nenhuma entre elas — o Samuel ouviu isso e pediu.
+            if PAUSA_FRASE > 0:
+                frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", parte) if f.strip()]
+            else:
+                frases = [parte]
+
+            for k, frase in enumerate(frases):
+                ult_frase = k == len(frases) - 1
+                if CADENCIA_ALTERNADA and not ult_frase and n_frase % CADENCIA_ALTERNADA == 0:
+                    frase = re.sub(r"\.$", ",", frase)
+                n_frase += 1
+                pausa = (base_parte if ult_frase else PAUSA_FRASE) * fator_pausa
+                pedacos.append((frase, pausa))
     if pedacos:
         pedacos[-1] = (pedacos[-1][0], 0.0)
 
@@ -112,9 +141,11 @@ def main() -> None:
     # palavra soa acentuada na primeira sílaba). A lentidão tem que vir da
     # pausa. Mas mexer nas constantes mudaria o video-02, que está publicado —
     # então cada projeto traz as suas, com o valor antigo como padrão.
-    global PAUSA_RESPIRO, PAUSA_PARAGRAFO
+    global PAUSA_RESPIRO, PAUSA_PARAGRAFO, PAUSA_FRASE, CADENCIA_ALTERNADA
     PAUSA_RESPIRO = float(voz.get("pausa_respiro_s", PAUSA_RESPIRO))
     PAUSA_PARAGRAFO = float(voz.get("pausa_paragrafo_s", PAUSA_PARAGRAFO))
+    PAUSA_FRASE = float(voz.get("pausa_frase_s", PAUSA_FRASE))
+    CADENCIA_ALTERNADA = int(voz.get("cadencia_alternada", CADENCIA_ALTERNADA))
 
     roteiro = proj / "roteiro.md"
     if not roteiro.is_file():
@@ -123,6 +154,7 @@ def main() -> None:
     destino = proj / "audio"
     destino.mkdir(exist_ok=True)
     cfg = (f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO};"
+           f"frase={PAUSA_FRASE};cadencia={CADENCIA_ALTERNADA};"
            f"fator_pausa={FATOR_PAUSA_INICIO}-{FATOR_PAUSA_FIM}")
 
     cenas = blocos(roteiro)

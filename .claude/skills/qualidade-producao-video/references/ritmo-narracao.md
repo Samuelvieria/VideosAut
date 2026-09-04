@@ -89,3 +89,50 @@ Mas ela tem **retorno decrescente**, e isso muda o planejamento de duração: a
 6× o valor padrão, um roteiro de 6.400 palavras vai de 49 para 57 min, não
 muito além. Se a duração alvo for alta, a resposta é **mais texto**, não mais
 silêncio.
+
+## Entonação de fim de frase: o Kokoro pt-BR não tem (medido 04/09/2026)
+
+Pedido de ouvido: *"às vezes uma entonação diferente no final das frases"*.
+Não é entregável com este motor.
+
+Medida a inclinação do F0 no terço final da mesma frase, variando a pontuação:
+
+| pontuação | inclinação |
+|---|---|
+| ponto | −39 Hz |
+| reticências | −45 |
+| vírgula | −51 |
+| **interrogação** | **−53** |
+| exclamação | −49 |
+| sem pontuação | −51 |
+
+**Todas caem, inclusive a interrogativa.** A pontuação não dirige nada. E não é
+da voz: nas três vozes pt-BR (`pm_santa`, `pm_alex`, `pf_dora`), declarativa,
+interrogativa e continuativa dão todas inclinação negativa.
+
+A única variação que apareceu: no `pm_santa`, frase alimentada terminando em
+**vírgula** cai −19 Hz contra −53 do ponto. Queda mais rasa lê como "continua"
+em vez de "fecha". `CADENCIA_ALTERNADA` em `s2_tts.py` usa isso, trocando o
+ponto por vírgula de N em N frases — duas cadências em vez de uma. É paliativo.
+
+**Variação de entonação de verdade pede outro motor.** É o argumento mais
+concreto que existe hoje para a prova cega de `docs/tts-provedores.md`.
+
+## Pausa entre frases (novo em 04/09/2026)
+
+Até aqui o corte só acontecia nos `...` e em quebra de parágrafo, então um
+parágrafo de cinco frases ia ao modelo num bloco e **não havia pausa entre
+elas**. `voz.pausa_frase_s` no plano.json resolve.
+
+Efeito medido no roteiro do video-03 (600 frases, **319 fronteiras** novas):
+
+| pausa/frase | narração | vídeo com cauda de 9 min |
+|---|---|---|
+| 0,0s | 45,0 min | 55,2 |
+| 0,9s | 49,8 | 60,0 |
+| 1,5s | 53,0 | 63,2 |
+| **1,8s** | **54,6** | **64,8** |
+
+Corrige uma conta que eu errei duas vezes: eu havia concluído que "silêncio não
+fecha o vão até 65 min", porque medi só as pausas de `...`, de parágrafo e de
+cena — que são poucas. Fronteira de frase é a alavanca de verdade, e ela fecha.
