@@ -101,12 +101,29 @@ obra depois". O mercado faz o **oposto**:
 | 466 k | `Why Was Europe's First Great Civilization Completely Forgotten? \| History for Sleep` |
 | — | **nosso:** `História para Dormir com Som de Chuva e Mar \| Moby Dick e a Baleia Branca` |
 
-O padrão real é **curiosidade primeiro, função no sufixo depois do pipe**. E as
-curiosidades são exatamente as categorias de gancho da literatura de retenção:
-*Why Was ... Completely Forgotten?* é Paradoxo; *What It Was Like to Be a
-Pirate* é Promessa Específica; *Why You Wouldn't Last a Day* é Consequência.
+As curiosidades usadas são exatamente as categorias de gancho da literatura de
+retenção: *Why Was ... Completely Forgotten?* é Paradoxo; *What It Was Like to
+Be a Pirate* é Promessa Específica; *Why You Wouldn't Last a Day* é
+Consequência. O nosso título não tem lacuna de curiosidade nenhuma.
 
-O nosso título abre com a função e **não tem lacuna de curiosidade nenhuma**.
+**Correção de 04/09/2026 — eu tinha generalizado demais aqui.** A primeira
+versão desta seção afirmava que "o padrão real é curiosidade primeiro, função
+no sufixo". Olhando os três vencedores juntos, isso descreve **um** deles:
+
+| padrão | exemplo | chars |
+|---|---|---|
+| curiosidade → função | `What It Was Like to Be a Pirate... \| History for Sleep` | 73 |
+| **gênero → curiosidade** | `Boring History For Sleep \| Why You Wouldn't Last a Day...` | 70 |
+| só assunto, sem função | `The ENTIRE Story of Greek Mythology` | **35** |
+
+O de 5,50 M — o maior da amostra — tem 35 caracteres e nenhuma função no
+título. O que os três têm em comum não é a ordem: é **caber**. A busca do
+YouTube no celular corta perto de 60 caracteres, então o que estiver depois
+disso não existe para quem procura.
+
+Regra que sobrevive à evidência: **o termo que tem busca vem antes do corte.**
+Em inglês esse termo é o nome do gênero. Em pt-BR, pela §5, é `som de chuva` —
+e é o único.
 
 ---
 
