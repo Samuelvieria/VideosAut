@@ -1,146 +1,176 @@
 ---
 projeto: Canal de Sono Automatizado
-assunto: TTS — provedores, preço, licença e o que realmente sabemos
-data: 2026-09-03
-status: pesquisa de mercado + medição nossa; NADA contratado
+assunto: TTS pago — pesquisa para decisão de compra
+data: 2026-09-04
+status: pesquisa concluída; NADA contratado. Falta a prova cega.
 ---
 
-# Voz sintética: quanto custa, o que é bom, e o que ainda não sabemos
+# Voz paga: o que existe, quanto custa na nossa escala, e o que testar
 
-> Este documento é sobre o **motor** de voz. O contrato de escrita — ritmo de
-> frase, termos banidos, concretude — está em [voz.md](voz.md) e não muda com
-> o provedor.
+> Reescrito em 04/09/2026 quando o Samuel decidiu pagar e pediu **vozes
+> diferentes** e **inglês**. A versão anterior deste documento usava um volume
+> errado — 15 mil caracteres por vídeo. O vídeo cresceu para 75 min e o número
+> real é **34 mil**. Isso dobra a conta e muda qual plano serve.
+>
+> O contrato de escrita continua em [voz.md](voz.md) e não muda com o provedor.
 
-## A conclusão, antes dos detalhes
+## O nosso volume, medido
 
-**Nenhum benchmark público responde a nossa pergunta.** Todos os rankings de
-2026 que encontrei medem **inglês**. O nosso produto hoje é pt-BR, e a
-qualidade de um modelo em inglês não transfere para português — timbre,
-prosódia e, principalmente, o tratamento das nasais (`ão`, `ãe`, `õe`) e da
+| | palavras | caracteres |
+|---|---|---|
+| video-02 (41 min) | 3.222 | 17.618 |
+| video-03 (75 min) | 6.375 | **34.248** |
+
+Como o formato agora é 75 min, **34 mil caracteres por vídeo** é a base. E o
+inglês **dobra**, porque é roteiro reescrito, não tradução — decisão registrada
+em [voz.md](voz.md).
+
+| cadência | só pt-BR | pt-BR + inglês |
+|---|---|---|
+| quinzenal | 68 mil/mês | **137 mil/mês** |
+| 1 por semana | 137 mil | **274 mil** |
+| 2 por semana | 274 mil | **548 mil** |
+
+A pesquisa de mercado ([mercado.md](mercado.md) §1) aponta para **cadência
+baixa**: os dois canais de referência têm seis vídeos cada e ~80 mil inscritos.
+Então a faixa realista é **137 a 274 mil caracteres/mês**.
+
+---
+
+## Os três candidatos, com o custo na nossa faixa
+
+Câmbio de 04/09/2026: US$ 1 ≈ R$ 5,10. `[SECUNDÁRIO]`
+
+| | preço | 137 mil/mês | 274 mil/mês | vozes | pt-BR |
+|---|---|---|---|---|---|
+| **Fish Audio** | US$ 15/milhão | **R$ 11** | **R$ 21** | 4.000+ | Tier 2, com localização pt-BR em 2026 |
+| **Cartesia** Startup | US$ 49/mês, 1,25 M inclusos | **R$ 250** | **R$ 250** | clonagem instantânea | **Brasil é o locale PRIMÁRIO** |
+| **ElevenLabs** Pro | US$ 99/mês, 600 mil | **R$ 505** | **R$ 505** | 4.000+ | um entre 70+ idiomas |
+
+Duas observações que a tabela esconde:
+
+**O Fish Audio cobra por uso, não por assinatura.** Nos nossos volumes ele sai
+por menos que o plano fixo de US$ 15/mês deles. É de longe o mais barato, por
+uma ordem de grandeza.
+
+**O ElevenLabs não tem degrau útil.** O plano Creator (US$ 22, 121 mil) não
+cobre nem a cadência quinzenal bilíngue. Quem sobe, sobe direto para o Pro.
+
+---
+
+## A qualidade: três alegações que se contradizem
+
+| fonte | alega | credibilidade |
+|---|---|---|
+| Artificial Analysis Speech Arena, ago/2026 | **Cartesia Sonic-3.6 lidera as duas arenas** | terceiro independente, e é o dado mais recente |
+| Fish Audio, teste cego de 10 dias, 71 mil comparações | **Fish S2 Pro vence 60%** contra o ElevenLabs | teste do próprio fornecedor sobre si mesmo |
+| comparativos gerais | ElevenLabs lidera qualidade e clonagem | consenso repetido, sem número |
+
+O teste do Fish Audio é grande e bem desenhado, **mas foi conduzido por eles
+sobre o próprio produto**. Não desqualifica; pede desconto.
+
+**E nada disso responde a nossa pergunta.** Essas arenas medem
+predominantemente inglês. Continua valendo o que este documento já dizia:
+qualidade em inglês não transfere para português — nasais, `ão`/`ãe`/`õe`, e a
 palatalização de /t/ e /d/ antes de /i/ são exatamente onde TTS multilíngue
-costuma quebrar.
+quebra.
 
-Então a recomendação não é "compre X". É: **rode uma prova cega em pt-BR com o
-nosso próprio roteiro antes de assinar qualquer coisa.** O método já provou ser
-o que funciona neste projeto — o Samuel achou de ouvido o `aecho` que cinco
-medições minhas declararam limpo.
+O único sinal específico de pt-BR que apareceu é do Cartesia, e é de arquitetura,
+não de marketing: **o Brasil é o locale primário do português** deles, com
+"best-in-class pronunciations". Não é português herdado de Portugal.
 
-## Volume real, medido (é o que define a faixa de preço)
+---
 
-| | caracteres |
+## Vozes diferentes, que era o pedido
+
+Hoje as 4 personas de `estudio/dados/personas.json` dividem **3 vozes** do
+Kokoro. Duas personas usam a mesma (`pm_santa`), e isso foi decisão forçada, não
+escolha.
+
+| | como resolve |
 |---|---|
-| video-02 (Moby Dick, 41 min) | 18.007 |
-| video-03 (farol grego, 30 min) | 11.979 |
-| **média por vídeo** | **~15.000** |
+| Fish Audio | biblioteca de 4.000+ vozes da comunidade |
+| ElevenLabs | biblioteca de 4.000+ · clonagem profissional |
+| Cartesia | **clonagem instantânea a partir de 3 segundos**, já no plano de US$ 5 |
 
-A 10–13 vídeos/mês: **150–195 mil caracteres/mês** em pt-BR.
-Bilíngue pt+en: **300–390 mil/mês**.
+A clonagem instantânea do Cartesia é a que dá mais controle: cada persona ganha
+timbre próprio, e não um timbre sorteado de biblioteca compartilhada com
+milhares de outros canais.
 
-Esse número importa porque quase todo provedor cobra por caractere, e as faixas
-de assinatura caem bem perto dele.
+> **Cuidado de licença.** Clonar a voz de uma pessoa real exige autorização
+> dela. O caminho limpo é clonar a partir de **voz sintética** já licenciada, ou
+> gravar alguém que consinta por escrito. Isto é da mesma família da decisão que
+> já tirou o XTTS-v2 do projeto: um canal automatizado não pode ter um estágio
+> que morre por questão de direito.
 
-## Preço, a 13 vídeos/mês
-
-Câmbio de 03/09/2026: **US$ 1 ≈ R$ 5,10**. `[SECUNDÁRIO — confirmar]`
-
-| opção | licença | pt-BR? | US$/mês | R$/mês |
-|---|---|---|---|---|
-| **Kokoro-82M** (atual, local) | Apache-2.0 | 3 vozes | **0** | **0** |
-| **Chatterbox** (local) | MIT | sim (`language_id="pt"`) | **0** | **0** |
-| **Fish Audio** API | comercial no plano pago | sim | ~2,90 | ~15 |
-| Fish Audio Plus (250k) | idem | sim | 15 | ~77 |
-| ElevenLabs Creator (121k) | comercial | sim | 22 | ~112 |
-| **ElevenLabs Pro (600k)** | comercial | sim | 99 | ~505 |
-
-Duas observações que mudam a leitura da tabela:
-
-**O Creator não serve.** 121 mil créditos não cobrem nem os 150–195 mil de
-pt-BR sozinho. Quem sobe de degrau no ElevenLabs sobe direto para o Pro, de
-US$ 99 — não existe meio-termo útil para o nosso volume.
-
-**O Fish Audio cobra por uso, não por assinatura.** US$ 15 por milhão de
-caracteres. Nos nossos 195 mil/mês isso dá **US$ 2,90** — 34× mais barato que o
-ElevenLabs Pro. Mesmo bilíngue (390 mil) fica em US$ 5,85.
-
-## O que os benchmarks de 2026 dizem — e o que eles não dizem
-
-**ElevenLabs** continua sendo a referência de qualidade em inglês. MOS 4,6,
-descrito como indistinguível de locutor humano em teste cego, e apontado como o
-melhor especificamente em **narração longa**, que é o nosso caso.
-
-**Fish Audio S2 Pro** aparece em 1º lugar num teste A/B cego, com pontuação
-Bradley-Terry 1,7× a do segundo colocado, custando 11× menos que o ElevenLabs
-Multilingual v2. Se esse resultado se sustentar em português, é a melhor
-relação custo-benefício do mercado por uma margem grande.
-
-**Chatterbox** (Resemble AI, **MIT**) marcou 63,75% de preferência contra o
-ElevenLabs em teste cego. É local, gratuito e sem amarra de licença.
-
-**Kokoro-82M**, o que já usamos, aparece com 1.060 de Elo — à frente de Maya1
-(3B), Higgs Audio V3 (4B), Chatterbox e VibeVoice 7B — com apenas 82M de
-parâmetros.
-
-**Higgs Audio V3** tem 100+ idiomas e WER publicado, mas **licença não
-comercial**. Fora, pelo mesmo motivo que o XTTS-v2/Coqui ficou fora.
-
-### As duas contradições que eu não vou esconder
-
-1. Uma fonte põe o Kokoro **à frente** do Chatterbox em Elo; outra põe o
-   Chatterbox batendo o ElevenLabs em preferência. São benchmarks diferentes
-   medindo coisas diferentes, e nenhum é auditável por nós.
-2. Todos são **em inglês**. Nenhum diz nada sobre pt-BR.
-
-Isso não é ruído a ser resolvido lendo mais artigo. É o motivo pelo qual a
-próxima ação é testar, não comprar.
-
-## O que já temos construído para testar
-
-- `fase0/video-01/test_chatterbox.py` — Chatterbox multilíngue com
-  `language_id="pt"`, rodando em `mps` (a GPU do próprio Mac). **Já funcionou.**
-- `fase0/video-01/test_chatterbox_clone.py` — clonagem de voz.
-- `estudio/dados/personas.json` — 4 personas, todas com `en: TBD`.
-- `pipeline/s2_tts.py` — já tem `FATOR_PAUSA_INICIO`/`FIM`, o mecanismo de
-  lentidão por pausa crescente que substituiu o `speed` baixo.
-
-Falta: `fase0/_vozes-candidatas/`, que o `personas.json` cita e **não existe**.
-
-## A prova cega proposta
-
-Barata e decisiva. O critério é o seu ouvido, não o meu medidor.
-
-1. Escolher **um trecho de 90 s** do roteiro do video-02 — já aprovado de
-   ouvido, então serve de linha de base honesta.
-2. Gerar o mesmo trecho em: Kokoro `pm_santa` (atual), Chatterbox pt,
-   Fish Audio, ElevenLabs. Os dois pagos têm camada gratuita suficiente para
-   90 s.
-3. Nomear os arquivos `A`, `B`, `C`, `D` — **sem dizer qual é qual**.
-4. Ouvir no fone e no celular, à noite, no volume em que se usa para dormir.
-5. Só depois revelar os nomes.
-
-O que julgar, em ordem: **respiração e pausa** (é o que separa "leitura" de
-"contação"), **nasais e sibilância** (onde português quebra), **estabilidade ao
-longo do trecho** (modelo que degrada aos 60 s é inútil para 40 min), e só por
-último timbre.
+---
 
 ## Recomendação
 
-**Não assinar nada agora.** Fazer a prova cega. Se o Kokoro perder feio, o
-próximo passo é o **Fish Audio**, não o ElevenLabs — porque a US$ 2,90/mês o
-erro é barato de desfazer, e a US$ 505/ano o ElevenLabs precisa provar que a
-diferença é audível **em português** e que ela se converte em retenção.
+**Testar antes de assinar, e o teste é grátis.** Os três têm camada gratuita
+suficiente para gerar o mesmo trecho:
 
-E há um argumento de arquitetura que vale mais que os dois preços: Kokoro e
-Chatterbox rodam **offline, com licença livre**. Um canal automatizado que
-depende de API de voz tem um estágio que morre se o fornecedor mudar de termos —
-a mesma lógica que já tirou o XTTS-v2 do projeto.
+| | camada grátis |
+|---|---|
+| Cartesia | 20 mil créditos (uso não comercial — serve para teste) |
+| ElevenLabs | 10 mil créditos |
+| Fish Audio | camada gratuita disponível |
+
+O protocolo já está escrito em
+[`fase0/_vozes-candidatas/README.md`](../fase0/_vozes-candidatas/README.md) e já
+foi rodado uma vez, contra o Chatterbox. O que ele exige e que quase se perde:
+**nivelar o loudness antes de comparar.** Na rodada anterior o Chatterbox saiu
+10 dB mais alto que o Kokoro, e sem normalizar eu teria "descoberto" que ele era
+melhor quando só estava mais alto.
+
+O texto de teste é o da cena 2 do video-03, que contém `manhã` e `água` — as
+duas palavras que o Samuel apontou como erradas no Kokoro. A pergunta deixa de
+ser "qual voz é mais bonita" e passa a ser **"qual acerta o defeito que eu
+ouvi"**.
+
+### Se for para apostar sem testar
+
+**Cartesia Startup, US$ 49/mês.** Motivos, em ordem:
+
+1. Lidera o benchmark **independente** mais recente (ago/2026), e os outros dois
+   sinais de qualidade são autodeclarados ou sem número.
+2. **Brasil é o locale primário** do português — é o único sinal específico de
+   pt-BR que apareceu em toda a pesquisa.
+3. 1,25 milhão de caracteres cobre **qualquer** cadência nossa com folga, então
+   o preço não muda se o canal acelerar.
+4. Clonagem instantânea resolve o pedido de vozes diferentes com controle.
+
+**O Fish Audio é 12× mais barato** (R$ 21 contra R$ 250 na cadência semanal) e
+pode muito bem ganhar a prova cega. Se ganhar, é ele — a diferença de preço
+paga um ano de fal.ai várias vezes.
+
+**O ElevenLabs só se ganhar de ouvido por margem clara.** A R$ 505/mês ele
+precisa provar que a diferença é audível **em português** e que ela se converte
+em retenção — coisa que nenhum dado que eu achei demonstra.
 
 ---
 
-Fontes de preço e benchmark (todas `[SECUNDÁRIO]`, comparativos de terceiros):
-[Notevibes](https://notevibes.com/best-ai-voice-generator-for-audiobooks) ·
-[Flexprice](https://flexprice.io/blog/elevenlabs-pricing-breakdown) ·
-[Smallest.ai](https://smallest.ai/blog/fish-audio-pricing-plans-api-billing-commercial-use-in-2026) ·
-[TextToLab](https://texttolab.com/blog/fish-audio-pricing) ·
-[Pinggy](https://pinggy.io/blog/best_open_source_self_hosted_text_to_speech_models/) ·
-[FindSkill](https://findskill.ai/blog/best-open-source-tts-2026/) ·
-[localaimaster](https://localaimaster.com/blog/best-local-tts-models)
+## Para o inglês
+
+Os três atendem, e o inglês é onde todos são mais fortes. A decisão de motor
+provavelmente será a mesma dos dois idiomas, o que simplifica.
+
+O que **não** simplifica, e está em [mercado.md](mercado.md) §6: a faixa em
+inglês exige roteiro reescrito, não traduzido, com outra lista de tiques
+(`delve`, `tapestry`, `testament to`). O custo do inglês é de escrita e de
+julgamento, não de TTS — o TTS apenas dobra, e dobrar R$ 21 é irrelevante.
+
+E vale lembrar o argumento que as consultas externas levantaram e continua de
+pé: **em conteúdo de sono a voz é o produto.** Se a narração em inglês for ruim,
+o canal não converte e não dá para saber se foi a voz, o roteiro ou o algoritmo.
+Por isso a prova cega deveria ser feita **nos dois idiomas** antes de assinar.
+
+---
+
+Fontes `[SECUNDÁRIO]`:
+[MarkTechPost — Sonic-3.6](https://www.marktechpost.com/2026/08/18/cartesia-ships-sonic-3-6-a-streaming-tts-model-that-now-leads-both-artificial-analysis-speech-arenas/) ·
+[Cartesia Brasil](https://www.cartesia.ai/regions/brazil) ·
+[TextToLab — preços Cartesia](https://texttolab.com/blog/cartesia-pricing) ·
+[TextToLab — Fish vs ElevenLabs](https://texttolab.com/blog/fish-audio-vs-elevenlabs) ·
+[Fish Audio — modelos](https://docs.fish.audio/developer-guide/models-pricing/models-overview) ·
+[Gradium — comparativo 2026](https://gradium.ai/content/best-ai-voice-generators-2026)
