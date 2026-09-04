@@ -42,3 +42,15 @@ chaveyt.txt
 
 # Métricas lidas da API (dados do canal, não versionar)
 metricas/
+
+# EXCEÇÃO — as imagens do video-03 foram aprovadas pelo Samuel em 04/09/2026
+# ("não é pra mexer nelas") e custaram R$ 1,97. Versionadas de propósito para
+# que a máquina com GPU receba EXATAMENTE estas, sem regerar. Os .stamp vão
+# junto: como a marca é hash de conteúdo desde 03/09, ela é válida em qualquer
+# máquina, e o s3_imagens vai pular a geração.
+!fase0/video-03/imagens/
+!fase0/video-03/imagens/*.png
+!fase0/video-03/imagens/*.stamp
+!fase0/video-03/thumbnails/
+!fase0/video-03/thumbnails/*.png
+!fase0/video-03/thumbnails/*.stamp

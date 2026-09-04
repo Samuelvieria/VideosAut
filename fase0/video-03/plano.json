@@ -9,11 +9,11 @@
     "engine": "kokoro",
     "voice": "pm_santa",
     "speed": 0.75,
-    "pausa_respiro_s": 1.35,
-    "pausa_paragrafo_s": 0.9,
+    "pausa_respiro_s": 0.45,
+    "pausa_paragrafo_s": 0.3,
     "pausa_frase_s": 1.2,
     "vogal_final_pt": true,
-    "nota": "Aprovado de ouvido pelo Samuel em 04/09/2026, depois de ouvir 0.75 e 0.85 lado a lado com as mesmas correções. A minha medição dizia que abaixo de 0.85 o acento tonal se perde (0 a 1 acerto de 6 contra 4 de 6) — e o ouvido dele discordou. A medição foi feita em PALAVRA ISOLADA, sem pausa de frase e sem a correção de vogal; com as duas compensações o resultado perceptual é outro. Terceira vez neste projeto em que o ouvido dele vence a medição: antes foi o aecho da cauda e a irregularidade do pan. pausa_frase_s=1.2 porque 1.8 foi rejeitado às cegas por matar a fluidez. vogal_final_pt troca o æ do espeak pelo ɐ do português."
+    "nota": "Configuração B, escolhida de ouvido em 04/09/2026 depois de o Samuel dizer que a voz do video-02 estava melhor. Comparando os dois, eram CINCO diferenças, e duas delas eu tinha feito sem pedir julgamento: tripliquei respiro e parágrafo para comprar duração quando ainda estava a speed 0.85. Voltaram ao padrão do video-02. O que fica de diferente do video-02 é só o que ele aprovou explicitamente: speed 0.75 (contra 0.60), pausa entre frases de 1,2s (que não existia), e a vogal final ɐ no lugar do æ do espeak. Custo de voltar ao padrão: 3% de duração — os respiros de '...' e de parágrafo são poucos perto das 319 fronteiras de frase. IMAGENS NÃO SÃO TOCADAS: só o áudio, as legendas e os tempos mudam."
   },
   "ambiente": {
     "_nota": "Ambiente por CENA, segue o que a imagem mostra — baía calma a maior parte do tempo, fogo do farol nas cenas de perto da torre. Sem chuva em todo o vídeo (noite clara, de propósito — contraste com o video-02).",
