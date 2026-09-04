@@ -37,6 +37,11 @@ FASE0 = RAIZ / "fase0"
 DURACAO_PADRAO_MIN = 75
 SEG_POR_CENA = 125          # video-02: 2.473 s / 20 cenas = 123,7
 
+# Palavras por minuto de narração, MEDIDO no video-02 sobre os 32,2 min de fala
+# real — não sobre os 41 min totais, que incluem a cauda silenciosa. As
+# referências rodam a 128 e 180. Ver docs/mercado.md §9.
+PPM_MEDIDO = 102
+
 # Valores do video-02, que foi aprovado de ouvido e publicado. Ver
 # .claude/skills/qualidade-producao-video/references/mixagem-audio.md
 MIXAGEM_PADRAO = {
@@ -103,6 +108,17 @@ def _validar_obra(obra: str) -> str:
     return obra
 
 
+def _compor_estilo(est: dict) -> str:
+    """Junta traço + paleta + luz numa string só — o que de fato vai ao prompt."""
+    partes = [est["estilo_base"].strip().rstrip(",")]
+    paleta = [c.strip() for c in (est.get("paleta") or []) if c.strip()]
+    if paleta:
+        partes.append("palette of " + ", ".join(paleta))
+    if (est.get("luz") or "").strip():
+        partes.append(est["luz"].strip())
+    return ", ".join(partes)
+
+
 def _cenas_esqueleto(n_cenas: int, dur_s: int, personagem: str) -> list[dict]:
     """Cenas em branco, com os papéis que o roteiro do video-02 usa."""
     por_cena = round(dur_s / n_cenas)
@@ -137,6 +153,14 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
     if persona is None:
         raise ProjetoInvalido(f"persona '{persona_id}' não existe")
     est = persona.get("estetica") or {}
+    if est.get("estilo_base"):
+        from estudio.db.personas import _validar_estetica
+        try:
+            _validar_estetica({**est, "estilo_base": _compor_estilo(est)})
+        except EsteticaInvalida as e:
+            raise ProjetoInvalido(
+                f"a composição de estilo_base + paleta + luz da persona "
+                f"'{persona_id}' é recusada:\n{e}")
     if not est.get("estilo_base"):
         raise ProjetoInvalido(
             f"a persona '{persona_id}' não tem estética definida. Defina em "
@@ -175,7 +199,13 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
             "_nota": "Imagens geradas; áudio procedural. Divulgação de "
                      "conteúdo sintético ATIVADA no Studio.",
         },
-        "estilo_base": est["estilo_base"],
+        # paleta e luz entram AQUI, não ficam só no estilo.yaml. O `estilo_base`
+        # é a única coisa da estética que chega ao prompt (ver s3_imagens), e a
+        # síntese das consultas externas aponta as duas como âncora de estilo
+        # mais forte que o assunto. Guardá-las num arquivo que o pipeline não lê
+        # seria enfeite.
+        "estilo_base": _compor_estilo(est),
+        "resolucao": list(est.get("resolucao") or [1280, 720]),
         "_estetica_origem": {
             "persona": persona_id,
             "copiado_em": date.today().isoformat(),
@@ -211,7 +241,10 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
         texto = json.dumps(estilo, indent=2, ensure_ascii=False)
     (proj / "estilo.yaml").write_text(texto, encoding="utf-8")
 
-    palavras_alvo = f"{duracao_min * 80:,}".replace(",", ".")
+    # 102 ppm é a medição corrigida do video-02 sobre a narração real
+    # (docs/mercado.md §9). Usar 80 faria todo roteiro novo nascer
+    # curto demais para a duração alvo.
+    palavras_alvo = f"{duracao_min * PPM_MEDIDO:,}".replace(",", ".")
     (proj / "roteiro.md").write_text(
         f"""# {titulo}
 
@@ -221,8 +254,8 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
 > começando com "E", zero termos banidos.
 
 > **Meta de volume:** {duracao_min} min. Medido em `docs/mercado.md` §9, os
-> canais que funcionam escrevem 13.612 e 21.744 palavras. Nos nossos ~80
-> palavras/min isso dá cerca de **{palavras_alvo} palavras** aqui — e o
+> canais que funcionam escrevem 13.612 e 21.744 palavras. Nos nossos {PPM_MEDIDO}
+> palavras/min medidos isso dá cerca de **{palavras_alvo} palavras** aqui — e o
 > video-02 tinha 3.279. Não é estilo, é aritmética: texto de menos não
 > preenche a duração.
 

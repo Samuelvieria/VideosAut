@@ -21,7 +21,7 @@
       "criado_em": "2026-08-27T00:00:00-03:00",
       "origem_video": "fase0/video-02",
       "estetica": {
-        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, limited palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange, dramatic rim lighting, cinematic wide composition, 19th century whaling era, 16:9",
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dramatic rim lighting, cinematic wide composition, 19th century whaling era, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs",
         "paleta": [
           "deep blue-grey",
@@ -58,7 +58,7 @@
       "criado_em": "2026-08-28T00:00:00-03:00",
       "origem_video": null,
       "estetica": {
-        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, limited palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange, dramatic rim lighting, cinematic wide composition, ancient Mediterranean Greek coast, 16:9",
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dramatic rim lighting, cinematic wide composition, ancient Mediterranean Greek coast, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs",
         "paleta": [
           "deep blue-grey",
@@ -95,7 +95,7 @@
       "criado_em": "2026-08-28T00:00:00-03:00",
       "origem_video": null,
       "estetica": {
-        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, limited palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange, dramatic rim lighting, cinematic wide composition, imperial Roman architecture, marble and terracotta, 16:9",
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dramatic rim lighting, cinematic wide composition, imperial Roman architecture, marble and terracotta, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs",
         "paleta": [
           "deep blue-grey",
@@ -132,7 +132,7 @@
       "criado_em": "2026-08-28T00:00:00-03:00",
       "origem_video": null,
       "estetica": {
-        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, limited palette of deep blue-greys and near-black shadows lit by warm amber and burnt orange, dramatic rim lighting, cinematic wide composition, medieval European tavern and countryside, timber and stone, 16:9",
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, dramatic rim lighting, cinematic wide composition, medieval European tavern and countryside, timber and stone, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs",
         "paleta": [
           "deep blue-grey",

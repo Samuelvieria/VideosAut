@@ -42,7 +42,12 @@ MODELO = "fal-ai/z-image/turbo"
 # Por isso 1024x576: e o preset landscape_16_9 do proprio modelo. Qualquer
 # alteracao aqui precisa manter as DUAS dimensoes >= 512, senao a imagem sai
 # com outra proporcao e o corte do s5_render passa a comer composicao.
-LARG, ALT = 1280, 720   # margem de pan; ver PAN_* no s5_render
+LARG, ALT = 1280, 720   # padrão; margem de pan, ver PAN_* no s5_render
+# O plano pode sobrescrever com `resolucao: [l, a]`, que é o que a persona
+# grava ao criar o projeto. Sem isso o campo existiria só de enfeite: o
+# estúdio validava uma resolução que este estágio ignorava. Mudar aqui exige
+# que o s5_render concorde — e ele confere, em `_confere_fonte`, abortando com
+# mensagem clara se a fonte não bater com o que o pan assume.
 PASSOS = 8
 
 
@@ -65,10 +70,11 @@ def _post(url: str, corpo: dict, chave: str) -> dict:
     erro(f"fal.ai recusou ({ultimo[0]} → HTTP {ultimo[1]}):\n{ultimo[2]}")
 
 
-def gerar(prompt: str, seed: int, chave: str) -> bytes:
+def gerar(prompt: str, seed: int, chave: str,
+          larg: int = LARG, alt: int = ALT) -> bytes:
     r = _post(f"https://fal.run/{MODELO}", {
         "prompt": prompt,
-        "image_size": {"width": LARG, "height": ALT},
+        "image_size": {"width": larg, "height": alt},
         "num_inference_steps": PASSOS,
         "num_images": 1,
         "seed": seed,
@@ -96,6 +102,7 @@ def main() -> None:
 
     proj = projeto(a.projeto)
     plano = carregar_plano(proj)
+    larg, alt = (plano.get("resolucao") or [LARG, ALT])[:2]
     estilo = plano.get("estilo_base", "").strip()
     if not estilo:
         erro("plano.json sem estilo_base — as cenas sairiam com estilos diferentes")
@@ -134,7 +141,7 @@ def main() -> None:
             contexto = ", ".join(x for x in (obra, c.get("personagem", "").strip(),
                                               f"scene: {c['titulo']}") if x)
         prompt = f"{contexto}. {estilo}, {c['prompt']}" if contexto else f"{estilo}, {c['prompt']}"
-        cfg = f"{MODELO};{LARG}x{ALT};steps={PASSOS};seed={seed};{prompt[:180]}"
+        cfg = f"{MODELO};{larg}x{alt};steps={PASSOS};seed={seed};{prompt[:180]}"
 
         if a.seco:
             print(f"\n--- cena {c['n']:02d} · seed {seed} · {c['titulo']}")
@@ -145,7 +152,7 @@ def main() -> None:
             continue
 
         t = time.time()
-        alvo.write_bytes(gerar(prompt, seed, chave))
+        alvo.write_bytes(gerar(prompt, seed, chave, larg, alt))
         marcar(alvo, [], cfg)
         log(f"cena {c['n']:02d}  {time.time()-t:5.1f}s  {alvo.stat().st_size/1024:5.0f} KB  {c['titulo']}")
 

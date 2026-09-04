@@ -36,9 +36,14 @@ ENTIRE Story of Greek Mythology*, 169 min — tem **5.499.262** views. O segundo
 colocado tem **15.758**. Uma razão de **350×**. A média de 921 mil descreve um
 canal que não existe: o real é um acerto gigante e cinco vídeos de 5 a 15 mil.
 
-**Isso quer dizer que mesmo os casos de sucesso produzem majoritariamente
-fracassos.** O negócio não é "acertar sempre", é fazer poucos e aceitar que
-quase todos erram.
+**No Dreamoria, isso quer dizer que um vídeo É o canal** e os outros cinco
+somam menos de 1% dele.
+
+Ressalva de 04/09, levantada na auditoria: **isso é um canal, não uma lei.** No
+History at Night a dispersão é de 1,18 M a 175 k — 6,7×, não 350×. Os seis
+vídeos dele têm mediana de 923 mil. Então "mesmo os casos de sucesso produzem
+majoritariamente fracassos" descreve o Dreamoria e **não** o History at Night.
+O que os dois compartilham não é a dispersão: é a cadência baixa.
 
 **O canal com 399 vídeos tem a PIOR mediana de views** (9.186), apesar de ter
 5× mais inscritos. São dois negócios diferentes, não dois pontos da mesma
@@ -273,6 +278,19 @@ rodam perto do normal ou acima.
 > disseram que 1 minuto era pouco, e ninguém verificou o que o mercado faz. Não
 > quer dizer que esteja errada; quer dizer que é uma aposta não testada, e que
 > o nosso "vídeo de 41 min" é um vídeo de 32 min com 9 de chuva no fim.
+
+**E eles não desaceleram — só nós.** Medido nos carimbos de tempo das próprias
+transcrições, palavras por minuto em cada terço do vídeo:
+
+| | 1º terço | 2º terço | 3º terço | variação |
+|---|---|---|---|---|
+| History at Night | 183 | 182 | 176 | **−4,1%** |
+| Dreamoria | 128 | 130 | 127 | **−1,0%** |
+
+Praticamente reta nos dois. O nosso `FATOR_PAUSA` vai de 1,0 a 1,6 ao longo do
+episódio de propósito, então o fim do nosso vídeo é bem mais lento que o começo.
+Isso não estava sendo comparado com nada — agora está, e é uma diferença nossa,
+não uma convenção do gênero.
 
 Medido também em 04/09 com amostras reais do Kokoro sobre o mesmo trecho de 158
 palavras (`fase0/_vozes-candidatas/`):

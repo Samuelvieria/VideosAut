@@ -25,6 +25,7 @@ zsh — cinco tentativas perdidas nisso.
 """
 from __future__ import annotations
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -39,12 +40,18 @@ from pipeline.comum import atualizado, carregar_plano, erro, ffmpeg, log, marcar
 # librubberband. Resolvido aqui e só para este processo: trocar
 # `comum.FFMPEG` globalmente mudaria o binário de todos os estágios, e nenhum
 # outro precisa disso.
+# Os caminhos absolutos são ÚLTIMO recurso, não o primeiro. A ordem de busca é
+# FFMPEG_FULL do ambiente, depois o que o comum.py resolveu, depois o PATH, e só
+# então os prefixos conhecidos do Homebrew — que diferem entre Apple Silicon
+# (/opt/homebrew) e Intel (/usr/local), e não existem fora do Mac.
 _CANDIDATOS = ["/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
                "/usr/local/opt/ffmpeg-full/bin/ffmpeg"]
 
 
 def _ffmpeg_com_drawtext() -> str:
-    for cam in [comum.FFMPEG, *_CANDIDATOS, shutil.which("ffmpeg") or ""]:
+    ordem = [os.environ.get("FFMPEG_FULL", ""), comum.FFMPEG,
+             shutil.which("ffmpeg") or "", *_CANDIDATOS]
+    for cam in ordem:
         if not cam or not Path(cam).is_file():
             continue
         r = subprocess.run([cam, "-hide_banner", "-filters"],
@@ -52,7 +59,8 @@ def _ffmpeg_com_drawtext() -> str:
         if r.returncode == 0 and " drawtext " in r.stdout:
             return cam
     erro("nenhum ffmpeg com o filtro `drawtext` encontrado. O padrão do "
-         "Homebrew não traz libfreetype; instale com `brew install ffmpeg-full`.")
+         "Homebrew não traz libfreetype; instale com `brew install ffmpeg-full`, "
+         "ou aponte a variável FFMPEG_FULL para um binário que tenha o filtro.")
 
 LARG, ALT = 1280, 720           # o tamanho que o YouTube recomenda para thumbnail
 FONTE = "/System/Library/Fonts/Supplemental/Georgia.ttf"
