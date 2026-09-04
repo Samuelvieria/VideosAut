@@ -14,6 +14,26 @@ em API paga, e nenhum arquivo seu foi sobrescrito.
 
 ---
 
+## O canal se mexeu durante a noite
+
+Quando comecei, o video-02 tinha **4 views**. Ao terminar, tem **253 views e 13
+likes**.
+
+Não vou vender isso como validação, porque não é:
+
+- 253 continua sendo pouco, e a origem do tráfego ainda não dá para ver
+- **retenção continua sem dado** — o Analytics atrasa até 48 h, e retenção é a
+  única coisa que responde a pergunta do projeto
+- 13 likes em 253 views é 5,1%, acima do típico de 2–4% — mas em amostra desse
+  tamanho isso é ruído, não sinal
+
+O que muda de verdade: a base do argumento "não temos dado nenhum" tinha 4
+views. Agora tem movimento. **Vale voltar ao `s7_metricas` daqui a 24–48 h**,
+quando a curva de retenção existir. É ela, e não a contagem de views, que diz
+se o produto presta.
+
+---
+
 ## O resumo em cinco linhas
 
 Seis tarefas concluídas, todas do `docs/estado-e-direcao.md` §5 e do
