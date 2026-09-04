@@ -50,3 +50,50 @@ gastar um centavo:
 
 As quatro regras que saíram disso estão em
 `.claude/skills/qualidade-producao-video/references/prompt-imagem.md`.
+
+## Expandido para 73 min em 04/09/2026
+
+Decisão do Samuel depois da pesquisa de mercado. **Velocidade da narração
+mantida** em `speed 0.60`.
+
+| | antes | agora |
+|---|---|---|
+| duração | 30 min | **73 min** (64 de fala + 9 de cauda) |
+| cenas | 21 | **39** |
+| palavras | 2.157 | **6.481** |
+
+**As 18 cenas novas não esticam o arco emocional.** Um homem esperando uma
+noite não rende 64 minutos, e forçar isso vira enchimento. O que rende é o
+material **enumerável** que a história já permitia e não usava: como a bacia de
+bronze funciona, por que a placa refletora precisa ser polida, o que a mecha
+faz se ninguém aparar, de onde vem o óleo, que navios passavam ali, como se
+navegava sem nenhuma luz. É a fórmula do History at Night — moldura emocional,
+corpo expositivo.
+
+Três cenas vieram de fio solto do próprio roteiro: a mulher dele era citada uma
+vez, num copo lascado, e nunca explicada.
+
+Contrato de voz (`docs/voz.md`): **9 de 9 métricas passam.**
+
+Revisado pelo `gemini-3.1-pro`, que achou quatro problemas, todos corrigidos:
+
+1. Eu escrevi "O que se come numa ilha" sem notar que "Pão e vinho" já cobria
+   isso — repetindo *"pão duro molhado no azeite"* literalmente nas duas.
+2. "O vento tinha nomes" e "Os nomes que ele deu às estrelas" usavam a mesma
+   fórmula de fechamento ("um homem sozinho dá nome às coisas").
+3. "Pão e vinho" e "O barco do óleo" estavam no terço final, depois da cena de
+   risco — logística voltando é um passo atrás. Movidas para o primeiro ato.
+4. O barco do óleo já estava estabelecido na cena 6 antes de ganhar cena
+   própria.
+
+Ele validou duas coisas: o arco sobrevive, e o primeiro ato virar manual de
+operação de farol **é bom para o formato** — ancora em ação concreta e tátil
+antes de qualquer peso emocional. E o fecho funciona porque as duas últimas
+cenas são descompressão, não clímax.
+
+### Falta antes de produzir
+
+- [ ] Ler o roteiro inteiro em voz alta (ou ouvir a narração) — 9/9 no contrato
+      não garante que soa bem
+- [ ] Conferir os 38 prompts com `s3_imagens --seco` antes de gastar
+- [ ] Gerar imagens: 38 cenas + 3 thumbnails ≈ **R$ 1,00**
