@@ -1,273 +1,273 @@
 {
   "voice": "pm_santa",
   "speed": 0.75,
-  "total_s": 3939.31,
+  "total_s": 3748.61,
   "cenas": [
     {
       "n": 1,
       "titulo": "Abertura",
-      "dur_s": 100.0,
+      "dur_s": 93.7,
       "palavras": 137,
-      "ppm": 82
+      "ppm": 88
     },
     {
       "n": 2,
       "titulo": "A ilha",
-      "dur_s": 118.75,
+      "dur_s": 114.78,
       "palavras": 163,
-      "ppm": 82
+      "ppm": 85
     },
     {
       "n": 3,
       "titulo": "A torre e o fogo",
-      "dur_s": 103.21,
+      "dur_s": 98.25,
       "palavras": 162,
-      "ppm": 94
+      "ppm": 99
     },
     {
       "n": 4,
       "titulo": "Os cento e doze degraus",
-      "dur_s": 115.29,
+      "dur_s": 112.14,
       "palavras": 161,
-      "ppm": 84
+      "ppm": 86
     },
     {
       "n": 5,
       "titulo": "A bacia de bronze",
-      "dur_s": 95.26,
+      "dur_s": 92.07,
       "palavras": 162,
-      "ppm": 102
+      "ppm": 106
     },
     {
       "n": 6,
       "titulo": "O óleo e a pedra",
-      "dur_s": 94.6,
+      "dur_s": 90.38,
       "palavras": 154,
-      "ppm": 98
+      "ppm": 102
     },
     {
       "n": 7,
       "titulo": "O barco do óleo",
-      "dur_s": 93.27,
+      "dur_s": 89.32,
       "palavras": 157,
-      "ppm": 101
+      "ppm": 105
     },
     {
       "n": 8,
       "titulo": "A mecha, de hora em hora",
-      "dur_s": 104.46,
+      "dur_s": 101.12,
       "palavras": 181,
-      "ppm": 104
+      "ppm": 107
     },
     {
       "n": 9,
       "titulo": "Quando chovia sobre o fogo",
-      "dur_s": 95.6,
+      "dur_s": 92.21,
       "palavras": 149,
-      "ppm": 94
+      "ppm": 97
     },
     {
       "n": 10,
       "titulo": "O vento tinha nomes",
-      "dur_s": 94.76,
+      "dur_s": 90.64,
       "palavras": 156,
-      "ppm": 99
+      "ppm": 103
     },
     {
       "n": 11,
       "titulo": "A rotina da noite",
-      "dur_s": 85.49,
+      "dur_s": 80.96,
       "palavras": 147,
-      "ppm": 103
+      "ppm": 109
     },
     {
       "n": 12,
       "titulo": "O que se come numa ilha",
-      "dur_s": 97.97,
+      "dur_s": 93.73,
       "palavras": 152,
-      "ppm": 93
+      "ppm": 97
     },
     {
       "n": 13,
       "titulo": "Pão e vinho",
-      "dur_s": 89.29,
-      "palavras": 153,
-      "ppm": 103
-    },
-    {
-      "n": 14,
-      "titulo": "O outro lado da ilha",
-      "dur_s": 139.1,
-      "palavras": 233,
-      "ppm": 101
-    },
-    {
-      "n": 15,
-      "titulo": "Como ele veio parar ali",
-      "dur_s": 100.41,
-      "palavras": 149,
-      "ppm": 89
-    },
-    {
-      "n": 16,
-      "titulo": "A mulher que ficou",
-      "dur_s": 91.4,
-      "palavras": 158,
-      "ppm": 104
-    },
-    {
-      "n": 17,
-      "titulo": "O filho que foi para o mar",
-      "dur_s": 90.71,
-      "palavras": 148,
-      "ppm": 98
-    },
-    {
-      "n": 18,
-      "titulo": "O que Míron foi procurar",
-      "dur_s": 90.81,
-      "palavras": 143,
-      "ppm": 94
-    },
-    {
-      "n": 19,
-      "titulo": "As rotas que passavam ali",
-      "dur_s": 87.21,
-      "palavras": 156,
-      "ppm": 107
-    },
-    {
-      "n": 20,
-      "titulo": "A estação de navegar",
-      "dur_s": 143.81,
-      "palavras": 226,
-      "ppm": 94
-    },
-    {
-      "n": 21,
-      "titulo": "As cartas que não chegam",
-      "dur_s": 155.7,
-      "palavras": 231,
-      "ppm": 89
-    },
-    {
-      "n": 22,
-      "titulo": "O mar em silêncio",
-      "dur_s": 133.38,
-      "palavras": 218,
-      "ppm": 98
-    },
-    {
-      "n": 23,
-      "titulo": "Os navios que ele guiou",
-      "dur_s": 120.01,
-      "palavras": 224,
-      "ppm": 112
-    },
-    {
-      "n": 24,
-      "titulo": "Rostos que nunca vê",
-      "dur_s": 143.3,
-      "palavras": 245,
-      "ppm": 103
-    },
-    {
-      "n": 25,
-      "titulo": "Quando a luz falhava",
-      "dur_s": 92.36,
-      "palavras": 143,
-      "ppm": 93
-    },
-    {
-      "n": 26,
-      "titulo": "Os nomes que ele deu às estrelas",
-      "dur_s": 107.37,
-      "palavras": 192,
-      "ppm": 107
-    },
-    {
-      "n": 27,
-      "titulo": "Navegar sem nenhuma luz",
-      "dur_s": 108.74,
-      "palavras": 183,
-      "ppm": 101
-    },
-    {
-      "n": 28,
-      "titulo": "Uma luz distante",
-      "dur_s": 108.88,
-      "palavras": 176,
-      "ppm": 97
-    },
-    {
-      "n": 29,
-      "titulo": "O ofício de guiar",
-      "dur_s": 77.62,
-      "palavras": 144,
-      "ppm": 111
-    },
-    {
-      "n": 30,
-      "titulo": "Uma segunda luz",
-      "dur_s": 95.65,
-      "palavras": 157,
-      "ppm": 98
-    },
-    {
-      "n": 31,
-      "titulo": "Talvez seja ele",
-      "dur_s": 90.85,
-      "palavras": 133,
-      "ppm": 88
-    },
-    {
-      "n": 32,
-      "titulo": "A espera não tem pressa",
-      "dur_s": 93.86,
-      "palavras": 147,
-      "ppm": 94
-    },
-    {
-      "n": 33,
-      "titulo": "A luz que responde",
-      "dur_s": 80.04,
-      "palavras": 134,
-      "ppm": 100
-    },
-    {
-      "n": 34,
-      "titulo": "Não precisa saber",
-      "dur_s": 84.89,
+      "dur_s": 84.98,
       "palavras": 153,
       "ppm": 108
     },
     {
+      "n": 14,
+      "titulo": "O outro lado da ilha",
+      "dur_s": 131.83,
+      "palavras": 233,
+      "ppm": 106
+    },
+    {
+      "n": 15,
+      "titulo": "Como ele veio parar ali",
+      "dur_s": 95.26,
+      "palavras": 149,
+      "ppm": 94
+    },
+    {
+      "n": 16,
+      "titulo": "A mulher que ficou",
+      "dur_s": 87.67,
+      "palavras": 158,
+      "ppm": 108
+    },
+    {
+      "n": 17,
+      "titulo": "O filho que foi para o mar",
+      "dur_s": 86.93,
+      "palavras": 148,
+      "ppm": 102
+    },
+    {
+      "n": 18,
+      "titulo": "O que Míron foi procurar",
+      "dur_s": 87.75,
+      "palavras": 143,
+      "ppm": 98
+    },
+    {
+      "n": 19,
+      "titulo": "As rotas que passavam ali",
+      "dur_s": 83.34,
+      "palavras": 156,
+      "ppm": 112
+    },
+    {
+      "n": 20,
+      "titulo": "A estação de navegar",
+      "dur_s": 137.53,
+      "palavras": 226,
+      "ppm": 99
+    },
+    {
+      "n": 21,
+      "titulo": "As cartas que não chegam",
+      "dur_s": 148.55,
+      "palavras": 231,
+      "ppm": 93
+    },
+    {
+      "n": 22,
+      "titulo": "O mar em silêncio",
+      "dur_s": 126.14,
+      "palavras": 218,
+      "ppm": 104
+    },
+    {
+      "n": 23,
+      "titulo": "Os navios que ele guiou",
+      "dur_s": 113.5,
+      "palavras": 224,
+      "ppm": 118
+    },
+    {
+      "n": 24,
+      "titulo": "Rostos que nunca vê",
+      "dur_s": 135.88,
+      "palavras": 245,
+      "ppm": 108
+    },
+    {
+      "n": 25,
+      "titulo": "Quando a luz falhava",
+      "dur_s": 88.19,
+      "palavras": 143,
+      "ppm": 97
+    },
+    {
+      "n": 26,
+      "titulo": "Os nomes que ele deu às estrelas",
+      "dur_s": 102.31,
+      "palavras": 192,
+      "ppm": 113
+    },
+    {
+      "n": 27,
+      "titulo": "Navegar sem nenhuma luz",
+      "dur_s": 104.47,
+      "palavras": 183,
+      "ppm": 105
+    },
+    {
+      "n": 28,
+      "titulo": "Uma luz distante",
+      "dur_s": 101.98,
+      "palavras": 176,
+      "ppm": 104
+    },
+    {
+      "n": 29,
+      "titulo": "O ofício de guiar",
+      "dur_s": 73.26,
+      "palavras": 144,
+      "ppm": 118
+    },
+    {
+      "n": 30,
+      "titulo": "Uma segunda luz",
+      "dur_s": 90.36,
+      "palavras": 157,
+      "ppm": 104
+    },
+    {
+      "n": 31,
+      "titulo": "Talvez seja ele",
+      "dur_s": 86.39,
+      "palavras": 133,
+      "ppm": 92
+    },
+    {
+      "n": 32,
+      "titulo": "A espera não tem pressa",
+      "dur_s": 89.35,
+      "palavras": 147,
+      "ppm": 99
+    },
+    {
+      "n": 33,
+      "titulo": "A luz que responde",
+      "dur_s": 74.57,
+      "palavras": 134,
+      "ppm": 108
+    },
+    {
+      "n": 34,
+      "titulo": "Não precisa saber",
+      "dur_s": 79.36,
+      "palavras": 153,
+      "ppm": 116
+    },
+    {
       "n": 35,
       "titulo": "O que ele diria, se dissesse",
-      "dur_s": 90.6,
+      "dur_s": 85.95,
       "palavras": 145,
-      "ppm": 96
+      "ppm": 101
     },
     {
       "n": 36,
       "titulo": "O fogo mais fraco",
-      "dur_s": 131.1,
+      "dur_s": 123.58,
       "palavras": 221,
-      "ppm": 101
+      "ppm": 107
     },
     {
       "n": 37,
       "titulo": "A promessa da manhã",
-      "dur_s": 96.08,
+      "dur_s": 90.38,
       "palavras": 145,
-      "ppm": 91
+      "ppm": 96
     },
     {
       "n": 38,
       "titulo": "Fecho",
-      "dur_s": 97.48,
+      "dur_s": 89.8,
       "palavras": 137,
-      "ppm": 84
+      "ppm": 92
     }
   ]
 }

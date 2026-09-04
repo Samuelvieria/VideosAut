@@ -1,2384 +1,2388 @@
 1
-00:00:00,000 --> 00:00:01,280
+00:00:00,000 --> 00:00:01,140
 Boa noite.
 
 2
-00:00:03,040 --> 00:00:04,240
+00:00:02,300 --> 00:00:04,200
 Se acomode.
 
 3
-00:00:05,900 --> 00:00:08,640
+00:00:05,770 --> 00:00:08,590
 Apague o que ainda estiver aceso.
 
 4
-00:00:10,080 --> 00:00:13,080
+00:00:08,750 --> 00:00:12,220
 Se você estiver dirigindo, pare agora.
 
 5
-00:00:15,010 --> 00:00:16,810
+00:00:14,100 --> 00:00:16,020
 Escute em outra hora.
 
 6
-00:00:18,380 --> 00:00:19,980
+00:00:16,540 --> 00:00:18,700
 Eu sou só um velho...
 
 7
-00:00:21,700 --> 00:00:24,160
+00:00:18,700 --> 00:00:22,030
 que caminhou muito e falou pouco.
 
 8
-00:00:25,870 --> 00:00:31,690
+00:00:22,030 --> 00:00:29,570
 E agora, no fim da vida, só quero contar as noites que guardei.
 
 9
-00:00:33,140 --> 00:00:34,760
+00:00:29,950 --> 00:00:32,030
 Essa é uma delas.
 
 10
-00:00:36,150 --> 00:00:37,650
+00:00:32,190 --> 00:00:34,130
 Não tem batalha.
 
 11
-00:00:39,400 --> 00:00:41,800
+00:00:35,410 --> 00:00:38,390
 Não tem deus descendo do céu.
 
 12
-00:00:43,570 --> 00:00:48,610
+00:00:39,600 --> 00:00:45,240
 E não tem monstro no fundo do mar, nem herói matando ninguém.
 
 13
-00:00:50,020 --> 00:00:51,500
+00:00:45,640 --> 00:00:47,560
 Tem só um homem.
 
 14
-00:00:53,040 --> 00:00:54,380
+00:00:47,800 --> 00:00:50,500
 Um fogo.
 
 15
-00:00:55,900 --> 00:00:57,900
+00:00:50,500 --> 00:00:53,950
 E uma baía quieta.
 
 16
-00:00:59,440 --> 00:01:01,720
+00:00:53,950 --> 00:00:57,090
 O homem se chama Demétrio.
 
 17
-00:01:03,450 --> 00:01:05,350
+00:00:58,360 --> 00:01:00,820
 E era eu, há muito tempo.
 
 18
-00:01:06,840 --> 00:01:08,500
+00:01:01,320 --> 00:01:03,280
 Vou contar devagar.
 
 19
-00:01:10,390 --> 00:01:13,130
+00:01:03,660 --> 00:01:07,940
 Não precisa acompanhar até o fim.
 
 20
-00:01:14,960 --> 00:01:22,500
+00:01:09,280 --> 00:01:17,180
 Se você dormir no meio, a história continua sozinha, e o mar continua depois dela.
 
 21
-00:01:23,960 --> 00:01:27,300
+00:01:17,820 --> 00:01:21,400
 Respire uma vez, fundo, e solte devagar.
 
 22
-00:01:29,100 --> 00:01:31,740
+00:01:22,830 --> 00:01:25,870
 Depois esqueça que eu pedi isso.
 
 23
-00:01:33,220 --> 00:01:35,460
+00:01:26,190 --> 00:01:27,930
 Não precisa entender nada.
 
 24
-00:01:37,230 --> 00:01:39,490
+00:01:27,950 --> 00:01:33,140
 Não vai ter pergunta no fim.
 
 25
-00:01:42,000 --> 00:01:43,660
+00:01:35,700 --> 00:01:37,320
 A ilha era pequena.
 
 26
-00:01:45,270 --> 00:01:49,490
+00:01:38,870 --> 00:01:43,090
 Numa manhã, você atravessava ela de ponta a ponta.
 
 27
-00:01:51,010 --> 00:01:52,730
+00:01:44,840 --> 00:01:46,280
 Andando devagar.
 
 28
-00:01:54,530 --> 00:01:59,110
+00:01:46,420 --> 00:01:52,660
 E ainda sobrava tempo pra sentar e comer alguma coisa.
 
 29
-00:02:00,580 --> 00:02:04,000
+00:01:53,380 --> 00:01:56,820
 Numa das pontas, a terra parava de repente.
 
 30
-00:02:05,810 --> 00:02:07,190
+00:01:58,920 --> 00:02:00,140
 Virava rocha.
 
 31
-00:02:08,910 --> 00:02:13,110
+00:02:00,140 --> 00:02:06,060
 E caía direto na água, sem praia nenhuma.
 
 32
-00:02:15,110 --> 00:02:16,850
+00:02:07,540 --> 00:02:09,940
 Ali ficava a torre.
 
 33
-00:02:18,440 --> 00:02:19,880
+00:02:09,940 --> 00:02:12,710
 Não era grande.
 
 34
-00:02:21,430 --> 00:02:27,930
+00:02:12,710 --> 00:02:20,980
 E era só alta o bastante pra a luz se ver de longe, por cima das ondas.
 
 35
-00:02:29,520 --> 00:02:32,900
+00:02:21,320 --> 00:02:25,260
 Do outro lado da rocha, a baía se abria.
 
 36
-00:02:34,690 --> 00:02:36,270
+00:02:27,300 --> 00:02:28,700
 Funda e quieta.
 
 37
-00:02:37,920 --> 00:02:41,240
+00:02:28,740 --> 00:02:33,630
 Como uma tigela de água escura...
 
 38
-00:02:43,070 --> 00:02:49,910
+00:02:34,720 --> 00:02:41,420
 esperando os navios que vinham de noite e não conseguiam ver onde a terra começava.
 
 39
-00:02:50,990 --> 00:02:54,370
+00:02:41,420 --> 00:02:45,080
 O chão era pedra clara e mato baixo.
 
 40
-00:02:56,120 --> 00:02:58,260
+00:02:46,780 --> 00:02:49,100
 Nada crescia alto ali.
 
 41
-00:03:00,060 --> 00:03:02,820
+00:02:49,360 --> 00:02:53,610
 O vento não deixava.
 
 42
-00:03:04,530 --> 00:03:13,930
+00:02:55,130 --> 00:03:04,770
 As poucas árvores que existiam cresciam tortas, todas inclinadas pro mesmo lado, como se estivessem andando.
 
 43
-00:03:15,370 --> 00:03:17,550
+00:03:05,480 --> 00:03:07,140
 Havia três construções.
 
 44
-00:03:19,100 --> 00:03:20,300
+00:03:09,260 --> 00:03:10,560
 A torre.
 
 45
-00:03:20,300 --> 00:03:22,770
+00:03:10,560 --> 00:03:13,120
 A casa.
 
 46
-00:03:22,770 --> 00:03:28,420
+00:03:13,120 --> 00:03:16,740
 E um telheiro de pedra onde ficava o óleo.
 
 47
-00:03:29,890 --> 00:03:32,590
+00:03:16,740 --> 00:03:22,160
 Era ali que Demétrio vivia.
 
 48
-00:03:34,270 --> 00:03:36,870
+00:03:23,640 --> 00:03:26,480
 Sozinho, a maior parte do tempo.
 
 49
-00:03:38,590 --> 00:03:40,470
+00:03:27,780 --> 00:03:30,160
 E cuidava do fogo.
 
 50
-00:03:42,745 --> 00:03:46,085
+00:03:32,482 --> 00:03:35,622
 Subir a torre era sempre a mesma coisa.
 
 51
-00:03:47,855 --> 00:03:50,895
+00:03:35,922 --> 00:03:40,512
 E ele gostava exatamente por isso.
 
 52
-00:03:52,385 --> 00:03:57,845
+00:03:41,172 --> 00:03:46,872
 No alto, esperava uma bacia grande de bronze, enegrecida pelos anos.
 
 53
-00:03:59,785 --> 00:04:03,825
+00:03:48,472 --> 00:03:52,732
 Ele enchia ela devagar, sem derramar nada...
 
 54
-00:04:05,865 --> 00:04:12,865
+00:03:53,582 --> 00:04:00,882
 óleo derramado era menos luz na noite seguinte, e a noite seguinte sempre vinha.
 
 55
-00:04:14,085 --> 00:04:20,645
+00:04:00,882 --> 00:04:08,162
 E acendia com uma vareta fina, tirada de uma lamparina menor que nunca apagava.
 
 56
-00:04:22,405 --> 00:04:26,365
+00:04:08,302 --> 00:04:13,912
 O fogo pegava com um som pequeno, quase um suspiro.
 
 57
-00:04:28,105 --> 00:04:36,505
+00:04:15,372 --> 00:04:23,972
 E depois crescia, até a bacia toda virar uma flor de luz alaranjada contra a pedra escura.
 
 58
-00:04:38,015 --> 00:04:41,675
+00:04:24,582 --> 00:04:28,582
 A luz não ia longe como as pessoas imaginam.
 
 59
-00:04:43,205 --> 00:04:45,005
+00:04:29,672 --> 00:04:31,752
 Não era um facho.
 
 60
-00:04:46,615 --> 00:04:49,295
+00:04:31,752 --> 00:04:35,882
 Não cortava a noite.
 
 61
-00:04:50,885 --> 00:04:55,065
+00:04:37,372 --> 00:04:41,892
 Era mais como uma brasa alta, vista de muito longe...
 
 62
-00:04:56,925 --> 00:05:01,345
+00:04:42,682 --> 00:04:47,162
 uma coisa laranja onde não devia ter nada.
 
 63
-00:05:02,825 --> 00:05:04,305
+00:04:48,042 --> 00:04:49,602
 Mas era o bastante.
 
 64
-00:05:06,505 --> 00:05:16,605
+00:04:51,622 --> 00:05:01,962
 Um marinheiro que via aquilo sabia duas coisas ao mesmo tempo: que ali tinha rocha, e que logo depois da rocha tinha abrigo.
 
 65
-00:05:18,035 --> 00:05:21,455
+00:05:02,272 --> 00:05:06,072
 Do lado de fora, o vento batia sem parar.
 
 66
-00:05:23,345 --> 00:05:25,385
+00:05:07,982 --> 00:05:09,972
 Ele nem escutava mais.
 
 67
-00:05:27,954 --> 00:05:30,554
+00:05:12,735 --> 00:05:15,215
 Eram cento e doze degraus.
 
 68
-00:05:32,174 --> 00:05:35,054
+00:05:16,755 --> 00:05:19,755
 Ele contou uma vez, no primeiro mês.
 
 69
-00:05:36,884 --> 00:05:40,424
+00:05:21,405 --> 00:05:25,225
 E depois nunca mais precisou.
 
 70
-00:05:41,974 --> 00:05:44,934
+00:05:25,735 --> 00:05:28,935
 A pedra era gasta no meio de cada um.
 
 71
-00:05:46,684 --> 00:05:50,924
+00:05:30,675 --> 00:05:34,915
 Fundo o bastante pra juntar água quando chovia.
 
 72
-00:05:52,834 --> 00:05:54,754
+00:05:36,725 --> 00:05:38,805
 Não foi ele que gastou.
 
 73
-00:05:56,544 --> 00:06:00,704
+00:05:40,575 --> 00:05:44,915
 Foram os homens antes dele, e os antes daqueles.
 
 74
-00:06:02,344 --> 00:06:06,144
+00:05:44,915 --> 00:05:50,095
 Um degrau leva muitos anos pra afundar assim.
 
 75
-00:06:07,694 --> 00:06:12,294
+00:05:50,605 --> 00:05:55,765
 A escada subia colada na parede, em espiral, sem corrimão.
 
 76
-00:06:14,044 --> 00:06:18,004
+00:05:57,315 --> 00:06:01,475
 Do lado de dentro ficava a pedra fria.
 
 77
-00:06:19,454 --> 00:06:22,194
+00:06:02,905 --> 00:06:05,585
 Do lado de fora, o vazio.
 
 78
-00:06:24,054 --> 00:06:29,554
+00:06:07,145 --> 00:06:12,985
 Quem subia aprendia rápido a andar encostado na parede.
 
 79
-00:06:30,954 --> 00:06:34,554
+00:06:13,165 --> 00:06:17,245
 Ele subia quatro vezes por noite, no mínimo.
 
 80
-00:06:36,184 --> 00:06:37,644
+00:06:18,935 --> 00:06:20,505
 Uma pra acender.
 
 81
-00:06:37,644 --> 00:06:42,324
+00:06:20,505 --> 00:06:25,095
 E as outras pra cuidar.
 
 82
-00:06:43,944 --> 00:06:48,964
+00:06:26,485 --> 00:06:31,815
 Com o jarro de óleo cheio, subia mais devagar, uma mão na pedra.
 
 83
-00:06:50,474 --> 00:06:54,194
+00:06:32,255 --> 00:06:36,425
 No inverno os degraus ficavam molhados e escuros.
 
 84
-00:06:56,084 --> 00:07:01,564
+00:06:38,085 --> 00:06:43,675
 Ele parava no trigésimo, e de novo no septuagésimo.
 
 85
-00:07:03,174 --> 00:07:05,154
+00:06:44,775 --> 00:06:47,255
 Não porque cansasse.
 
 86
-00:07:06,954 --> 00:07:13,314
+00:06:48,455 --> 00:06:53,575
 Mas porque ali dava pra ouvir o mar mudar de som conforme se subia.
 
 87
-00:07:14,724 --> 00:07:16,844
+00:06:53,575 --> 00:06:53,575
 Cento e doze degraus.
 
 88
-00:07:18,514 --> 00:07:19,514
+00:06:53,575 --> 00:06:53,575
 Vinte anos.
 
 89
-00:07:21,434 --> 00:07:22,954
+00:06:53,575 --> 00:06:55,355
 Ele nunca caiu.
 
 90
-00:07:25,240 --> 00:07:27,980
+00:07:06,875 --> 00:07:09,555
 A bacia era mais velha que ele.
 
 91
-00:07:29,770 --> 00:07:38,870
+00:07:10,745 --> 00:07:20,405
 Bronze fundido, largo como uma mesa pequena, com uma borda grossa virada pra dentro pra segurar o óleo.
 
 92
-00:07:40,400 --> 00:07:45,380
+00:07:20,875 --> 00:07:26,195
 Por baixo tinha três pés curtos, e entre os pés passava o ar.
 
 93
-00:07:47,100 --> 00:07:51,840
+00:07:27,955 --> 00:07:32,565
 Era isso que mantinha o fogo vivo com vento forte.
 
 94
-00:07:53,410 --> 00:08:00,570
+00:07:32,565 --> 00:07:41,415
 Quem fez aquilo sabia o que estava fazendo, e fez muito antes de Demétrio nascer.
 
 95
-00:08:02,020 --> 00:08:08,940
+00:07:42,045 --> 00:07:48,045
 Atrás da bacia havia uma placa de bronze polido, curva, quase da altura de um homem.
 
 96
-00:08:10,540 --> 00:08:15,860
+00:07:48,185 --> 00:07:55,995
 Ela pegava a luz do fogo e jogava pra frente, na direção da água.
 
 97
-00:08:17,710 --> 00:08:22,190
+00:07:58,045 --> 00:08:02,425
 Sem ela, metade da luz ia embora pro lado errado.
 
 98
-00:08:23,750 --> 00:08:28,050
+00:08:03,225 --> 00:08:07,745
 Polir aquela placa era o trabalho mais chato de todos.
 
 99
-00:08:29,970 --> 00:08:31,470
+00:08:09,675 --> 00:08:11,095
 Fuligem gruda.
 
 100
-00:08:33,370 --> 00:08:42,550
+00:08:12,775 --> 00:08:22,095
 E ele fazia isso de manhã, sentado, com um pano e areia fina, até o bronze voltar a ficar cor de mel.
 
 101
-00:08:44,090 --> 00:08:46,910
+00:08:22,915 --> 00:08:25,955
 Uma placa suja custava alcance.
 
 102
-00:08:48,660 --> 00:08:50,900
+00:08:27,475 --> 00:08:29,895
 E alcance custava navio.
 
 103
-00:08:52,370 --> 00:08:59,910
+00:08:30,755 --> 00:08:38,175
 Então ele poliu aquela placa por vinte anos, toda semana, sem ninguém nunca ver o trabalho.
 
 104
-00:09:02,504 --> 00:09:04,864
+00:08:40,945 --> 00:08:43,165
 Havia um ritmo em tudo aquilo.
 
 105
-00:09:06,764 --> 00:09:11,124
+00:08:45,065 --> 00:08:48,265
 Encher, acender, aparar a mecha de hora em hora...
 
 106
-00:09:11,124 --> 00:09:18,144
+00:08:50,205 --> 00:08:55,505
 e entre uma coisa e outra, sentar num banco de pedra e olhar o mar.
 
 107
-00:09:19,714 --> 00:09:24,094
+00:08:56,205 --> 00:09:00,765
 O óleo vinha do continente, num barco, quatro vezes por ano.
 
 108
-00:09:25,914 --> 00:09:32,974
+00:09:02,275 --> 00:09:09,615
 Vinha em jarras de barro lacradas com cera, e cada jarra dava umas seis noites.
 
 109
-00:09:34,794 --> 00:09:41,294
+00:09:09,615 --> 00:09:17,955
 Era óleo ruim, o que não servia pra comida — grosso, escuro, com cheiro forte.
 
 110
-00:09:42,864 --> 00:09:45,744
+00:09:18,475 --> 00:09:21,895
 O telheiro guardava trinta jarras.
 
 111
-00:09:47,524 --> 00:09:49,304
+00:09:23,415 --> 00:09:25,215
 Ele contava sempre.
 
 112
-00:09:51,224 --> 00:09:57,224
+00:09:26,655 --> 00:09:33,135
 Um homem sozinho numa ilha aprende a contar as coisas que não podem acabar.
 
 113
-00:09:58,964 --> 00:10:02,284
+00:09:34,105 --> 00:09:37,705
 As mãos dele sabiam o trabalho de memória.
 
 114
-00:10:04,094 --> 00:10:06,834
+00:09:39,705 --> 00:09:42,305
 Sabiam o peso certo do jarro.
 
 115
-00:10:08,494 --> 00:10:14,674
+00:09:42,305 --> 00:09:50,095
 E o ângulo certo da vareta, o jeito de aparar a mecha sem se queimar.
 
 116
-00:10:16,364 --> 00:10:22,144
+00:09:51,115 --> 00:09:56,735
 Vinte anos fazendo a mesma coisa deixam as mãos mais sábias que a cabeça.
 
 117
-00:10:23,714 --> 00:10:25,854
+00:09:57,735 --> 00:09:59,835
 Ele nem precisava pensar.
 
 118
-00:10:27,924 --> 00:10:29,044
+00:10:01,875 --> 00:10:03,115
 Só fazia.
 
 119
-00:10:30,854 --> 00:10:36,434
+00:10:04,755 --> 00:10:10,435
 E enquanto fazia, a mente ficava livre pra ir pra outros lugares.
 
 120
-00:10:39,104 --> 00:10:44,724
+00:10:13,328 --> 00:10:18,848
 Quatro vezes por ano chegava o barco do óleo, e esse era o dia diferente.
 
 121
-00:10:46,464 --> 00:10:57,044
+00:10:19,978 --> 00:10:30,468
 Vinha sempre de manhã, sempre com os mesmos dois homens, e sempre com aquela pressa de quem tem mais três paradas antes do fim do dia.
 
 122
-00:10:58,954 --> 00:11:01,954
+00:10:31,838 --> 00:10:34,718
 Descarregavam as jarras na pedra baixa.
 
 123
-00:11:03,794 --> 00:11:09,734
+00:10:34,898 --> 00:10:42,608
 E ele subia com elas uma a uma, ou duas quando estava mais disposto.
 
 124
-00:11:11,394 --> 00:11:13,244
+00:10:42,608 --> 00:10:45,988
 Não assinava nada.
 
 125
-00:11:15,114 --> 00:11:17,234
+00:10:47,518 --> 00:10:49,838
 Ninguém assinava nada.
 
 126
-00:11:19,054 --> 00:11:23,094
+00:10:51,878 --> 00:10:55,778
 Contavam juntos em voz alta e pronto.
 
 127
-00:11:24,754 --> 00:11:32,354
+00:10:56,858 --> 00:11:04,418
 Depois os dois aceitavam um copo de vinho e sentavam no banco de pedra por um tempo curto.
 
 128
-00:11:33,834 --> 00:11:35,314
+00:11:05,138 --> 00:11:06,858
 Falavam do tempo.
 
 129
-00:11:37,184 --> 00:11:40,084
+00:11:06,978 --> 00:11:11,628
 Do preço da coisa no continente.
 
 130
-00:11:41,684 --> 00:11:43,964
+00:11:11,668 --> 00:11:15,398
 E de quem tinha morrido.
 
 131
-00:11:45,504 --> 00:11:53,024
+00:11:15,668 --> 00:11:23,928
 Era a conversa inteira que Demétrio tinha em três meses, e ela durava o tempo de um copo.
 
 132
-00:11:54,454 --> 00:12:04,414
+00:11:25,268 --> 00:11:35,228
 Ele aprendeu a não desperdiçar: escutava mais do que falava, e depois ficava semanas remoendo o que tinha escutado.
 
 133
-00:12:05,934 --> 00:12:11,754
+00:11:36,058 --> 00:11:41,878
 Quando o barco sumia, a ilha ficava mais silenciosa do que antes dele chegar.
 
 134
-00:12:14,372 --> 00:12:18,492
+00:11:44,646 --> 00:11:48,666
 A mecha era de linho torcido, grossa como um dedo.
 
 135
-00:12:20,212 --> 00:12:26,472
+00:11:50,326 --> 00:11:56,646
 Ela boiava no óleo, segurada por uma peça de ferro no meio da bacia.
 
 136
-00:12:28,032 --> 00:12:31,572
+00:11:57,616 --> 00:12:01,196
 Conforme queimava, a ponta virava carvão.
 
 137
-00:12:33,392 --> 00:12:36,072
+00:12:02,706 --> 00:12:05,386
 E carvão não dá luz, dá fumaça.
 
 138
-00:12:37,912 --> 00:12:48,212
+00:12:07,336 --> 00:12:17,536
 Se ninguém aparasse, em duas horas a chama ficava baixa e suja, e a luz encolhia sem que ninguém percebesse de longe.
 
 139
-00:12:49,792 --> 00:12:52,512
+00:12:18,376 --> 00:12:21,316
 Então de hora em hora ele subia.
 
 140
-00:12:54,342 --> 00:13:08,122
+00:12:23,076 --> 00:12:36,936
 Puxava um dedo de mecha nova para fora com um gancho fino de bronze, e a parte queimada ele quebrava fora com os dedos, sem medo, porque a ponta já era carvão frio.
 
 141
-00:13:09,852 --> 00:13:12,652
+00:12:38,616 --> 00:12:41,516
 E a chama subia de novo, limpa.
 
 142
-00:13:14,052 --> 00:13:16,112
+00:12:42,266 --> 00:12:44,246
 Era um trabalho de nada.
 
 143
-00:13:18,072 --> 00:13:21,492
+00:12:46,166 --> 00:12:49,646
 Levava o tempo de contar até cinquenta.
 
 144
-00:13:23,002 --> 00:13:28,562
+00:12:49,646 --> 00:12:55,966
 Mas era esse trabalho de nada que fazia a torre servir pra alguma coisa.
 
 145
-00:13:30,442 --> 00:13:34,542
+00:12:57,746 --> 00:13:02,046
 Uma luz que ninguém apara vira uma luz fraca.
 
 146
-00:13:36,332 --> 00:13:43,372
+00:13:03,676 --> 00:13:10,826
 E uma luz fraca é pior que nenhuma, porque o marinheiro confia nela e calcula errado.
 
 147
-00:13:44,952 --> 00:13:49,252
+00:13:11,716 --> 00:13:16,126
 Ele pensava nisso às vezes, cortando a mecha no escuro.
 
 148
-00:13:50,402 --> 00:13:58,462
+00:13:16,286 --> 00:13:25,266
 Que o ofício inteiro cabia num gesto pequeno, repetido, que ninguém jamais ia agradecer.
 
 149
-00:14:00,833 --> 00:14:02,713
+00:13:27,767 --> 00:13:29,627
 Chuva era o inimigo.
 
 150
-00:14:04,573 --> 00:14:09,133
+00:13:29,707 --> 00:13:35,967
 Não a chuva fina, que evaporava antes de chegar na chama.
 
 151
-00:14:10,973 --> 00:14:11,793
+00:13:37,647 --> 00:13:38,687
 A outra.
 
 152
-00:14:13,813 --> 00:14:17,213
+00:13:38,867 --> 00:13:44,087
 A que vinha de lado, empurrada pelo vento.
 
 153
-00:14:18,723 --> 00:14:24,523
+00:13:44,287 --> 00:13:50,707
 O alto da torre tinha um teto de pedra, apoiado em quatro colunas curtas.
 
 154
-00:14:26,293 --> 00:14:28,913
+00:13:52,337 --> 00:13:55,077
 Ele protegia de cima.
 
 155
-00:14:28,913 --> 00:14:33,253
+00:13:55,137 --> 00:13:59,307
 E não protegia de lado nenhum.
 
 156
-00:14:34,813 --> 00:14:43,353
+00:13:59,307 --> 00:14:08,657
 Nas noites ruins ele subia com uma placa de couro grosso e amarrava do lado de onde vinha a água.
 
 157
-00:14:45,013 --> 00:14:53,253
+00:14:10,817 --> 00:14:18,767
 Ficava ali, encostado na coluna, segurando a borda com a mão, sentindo a chuva bater no braço.
 
 158
-00:14:53,983 --> 00:14:56,163
+00:14:19,077 --> 00:14:21,057
 O fogo chiava.
 
 159
-00:14:58,113 --> 00:14:58,993
+00:14:21,177 --> 00:14:23,827
 Encolhia.
 
 160
-00:15:00,933 --> 00:15:01,953
+00:14:24,047 --> 00:14:26,737
 Voltava.
 
 161
-00:15:01,953 --> 00:15:08,513
+00:14:26,957 --> 00:14:32,657
 E eram justamente essas as noites em que a luz mais importava.
 
 162
-00:15:10,393 --> 00:15:14,353
+00:14:32,797 --> 00:14:38,497
 Navio nenhum se perde em noite calma.
 
 163
-00:15:16,173 --> 00:15:23,093
+00:14:40,197 --> 00:14:47,157
 Ele se perde quando não enxerga a costa, e quando o vento decide pra onde ele vai.
 
 164
-00:15:24,603 --> 00:15:28,263
+00:14:47,797 --> 00:14:51,637
 Então nas piores noites Demétrio não dormia.
 
 165
-00:15:30,133 --> 00:15:36,033
+00:14:53,367 --> 00:14:59,547
 Ficava lá em cima, molhado, com a mão na placa de couro, olhando o escuro.
 
 166
-00:15:38,429 --> 00:15:43,529
+00:15:01,974 --> 00:15:06,994
 O vento do norte era seco e frio, e vinha em rajadas curtas.
 
 167
-00:15:45,349 --> 00:15:50,589
+00:15:08,804 --> 00:15:14,054
 Esse era o pior pro fogo, porque batia direto na bacia.
 
 168
-00:15:52,249 --> 00:15:55,549
+00:15:14,714 --> 00:15:18,124
 O do sul vinha morno e carregado de água.
 
 169
-00:15:57,579 --> 00:16:01,619
+00:15:20,034 --> 00:15:24,074
 Chegava devagar, e trazia nuvem baixa.
 
 170
-00:16:03,429 --> 00:16:08,189
+00:15:24,534 --> 00:15:30,984
 Com ele a luz ficava embaçada, como vista através de um pano.
 
 171
-00:16:09,349 --> 00:16:12,749
+00:15:31,344 --> 00:15:34,884
 O do oeste era o mais forte, e o mais raro.
 
 172
-00:16:14,629 --> 00:16:21,009
+00:15:36,514 --> 00:15:43,054
 Quando ele soprava por três dias, a baía enchia de barco esperando ele passar.
 
 173
-00:16:22,769 --> 00:16:25,469
+00:15:43,874 --> 00:15:46,794
 E o do leste quase não soprava.
 
 174
-00:16:27,369 --> 00:16:30,809
+00:15:48,584 --> 00:15:52,264
 Quando soprava, era de madrugada, e durava pouco.
 
 175
-00:16:33,339 --> 00:16:38,859
+00:15:52,764 --> 00:15:59,604
 Demétrio conhecia todos pelo som que faziam nas frestas da pedra.
 
 176
-00:16:40,579 --> 00:16:44,939
+00:16:01,274 --> 00:16:05,554
 Nem precisava sair pra saber qual era.
 
 177
-00:16:46,529 --> 00:16:49,749
+00:16:06,334 --> 00:16:08,934
 Os marinheiros tinham nome pra cada um.
 
 178
-00:16:51,629 --> 00:17:00,249
+00:16:08,954 --> 00:16:20,194
 Ele também tinha, mas os dele eram outros, feitos sozinho ao longo dos anos, e ele nunca contou pra ninguém.
 
 179
-00:17:02,089 --> 00:17:06,209
+00:16:21,234 --> 00:16:25,464
 Um homem que vive sozinho acaba dando nome pras coisas.
 
 180
-00:17:08,119 --> 00:17:12,659
+00:16:27,484 --> 00:16:31,854
 É um jeito de não ficar calado o tempo todo.
 
 181
-00:17:15,193 --> 00:17:17,473
+00:16:34,612 --> 00:16:36,832
 A noite tinha suas partes.
 
 182
-00:17:19,513 --> 00:17:22,713
+00:16:36,892 --> 00:16:42,012
 E Demétrio conhecia cada uma pelo som.
 
 183
-00:17:24,373 --> 00:17:32,353
+00:16:42,972 --> 00:16:50,972
 Primeiro vinha o silêncio maior, quando o dia se despedia e os pássaros da ilha se calavam um a um.
 
 184
-00:17:34,233 --> 00:17:41,173
+00:16:52,942 --> 00:16:59,762
 Depois vinha o vento, sempre mais forte depois que o sol se escondia atrás da água.
 
 185
-00:17:42,883 --> 00:17:48,303
+00:17:00,632 --> 00:17:06,112
 Bem mais tarde, vinha o som mais fundo do mar batendo na rocha lá embaixo.
 
 186
-00:17:50,123 --> 00:17:55,263
+00:17:06,112 --> 00:17:13,142
 Um som que ele sentia mais no peito do que nos ouvidos.
 
 187
-00:17:56,393 --> 00:18:01,953
+00:17:13,712 --> 00:17:19,182
 E quase no amanhecer, vinha um tipo de quietude diferente das outras...
 
 188
-00:18:04,233 --> 00:18:08,073
+00:17:20,312 --> 00:17:24,112
 uma quietude que já sabia que ia acabar.
 
 189
-00:18:09,773 --> 00:18:12,073
+00:17:25,072 --> 00:17:27,602
 Ele gostava de todas elas.
 
 190
-00:18:14,153 --> 00:18:21,813
+00:17:29,492 --> 00:17:37,322
 Cada parte da noite tinha seu próprio jeito de pesar sobre os ombros de um homem cansado.
 
 191
-00:18:23,373 --> 00:18:25,813
+00:17:37,792 --> 00:17:40,572
 Dormia de dia, em pedaços.
 
 192
-00:18:27,703 --> 00:18:30,883
+00:17:42,352 --> 00:17:45,592
 Nunca a noite inteira, nunca de uma vez só.
 
 193
-00:18:32,733 --> 00:18:40,093
+00:17:47,552 --> 00:17:54,792
 Depois de vinte anos, o corpo dele tinha esquecido como se dorme do jeito dos outros.
 
 194
-00:18:42,684 --> 00:18:45,164
+00:17:57,571 --> 00:17:59,931
 Não crescia quase nada ali.
 
 195
-00:18:47,104 --> 00:18:50,704
+00:18:01,691 --> 00:18:05,551
 O chão era raso e o sal chegava com o vento.
 
 196
-00:18:52,244 --> 00:19:00,784
+00:18:06,201 --> 00:18:14,841
 Ele tinha um pé de figo perto da casa, protegido por um muro baixo de pedra que ele mesmo levantou.
 
 197
-00:19:02,824 --> 00:19:07,144
+00:18:16,561 --> 00:18:21,201
 Dava figo pequeno e doce, por umas seis semanas no ano.
 
 198
-00:19:08,784 --> 00:19:10,984
+00:18:21,711 --> 00:18:24,391
 O resto vinha do barco.
 
 199
-00:19:12,844 --> 00:19:16,364
+00:18:26,151 --> 00:18:29,931
 Farinha, azeitona, queijo duro, peixe salgado.
 
 200
-00:19:18,294 --> 00:19:21,784
+00:18:29,931 --> 00:18:35,091
 E vinho, que durava mais que tudo.
 
 201
-00:19:23,404 --> 00:19:25,144
+00:18:35,831 --> 00:18:37,831
 Água era do poço.
 
 202
-00:19:27,064 --> 00:19:33,964
+00:18:39,551 --> 00:18:46,611
 Um poço raso, meio salobro no fim do verão, que ele aprendeu a não esvaziar de uma vez.
 
 203
-00:19:35,754 --> 00:19:38,934
+00:18:47,551 --> 00:18:50,891
 Ele pescava da rocha, de manhã, com linha.
 
 204
-00:19:40,994 --> 00:19:42,714
+00:18:52,851 --> 00:18:54,571
 Não era bom nisso.
 
 205
-00:19:44,624 --> 00:19:49,644
+00:18:56,521 --> 00:19:01,561
 Mas o mar ali era generoso, e não precisava ser bom.
 
 206
-00:19:51,404 --> 00:19:54,424
+00:19:02,391 --> 00:19:05,711
 Comia uma vez de tarde, antes de subir.
 
 207
-00:19:56,454 --> 00:20:00,794
+00:19:07,541 --> 00:19:11,981
 E de novo de madrugada, quando o corpo pedia.
 
 208
-00:20:02,764 --> 00:20:06,564
+00:19:14,081 --> 00:19:17,901
 Sempre a mesma coisa, sempre na mesma ordem.
 
 209
-00:20:08,284 --> 00:20:11,804
+00:19:18,701 --> 00:19:22,401
 Vinte anos comendo pão duro molhado em azeite.
 
 210
-00:20:13,704 --> 00:20:15,884
+00:19:24,111 --> 00:19:26,231
 Ele nunca reclamou disso.
 
 211
-00:20:17,904 --> 00:20:20,224
+00:19:28,211 --> 00:19:30,711
 E não tinha pra quem.
 
 212
-00:20:22,652 --> 00:20:29,912
+00:19:33,296 --> 00:19:40,356
 Ele comia devagar, sentado no banco de pedra do lado de fora, com a tigela no colo.
 
 213
-00:20:31,202 --> 00:20:36,082
+00:19:41,036 --> 00:19:45,916
 O copo era de barro, com a borda lascada, e ele nunca trocou.
 
 214
-00:20:37,632 --> 00:20:41,352
+00:19:46,676 --> 00:19:50,416
 O copo era de quando a mulher dele ainda vivia.
 
 215
-00:20:43,292 --> 00:20:48,432
+00:19:52,386 --> 00:19:57,606
 Não tinha nada de especial, e era só o copo que sobrou.
 
 216
-00:20:50,022 --> 00:20:54,782
+00:19:58,416 --> 00:20:03,236
 De noite, lá em cima, ele às vezes levava um pouco de vinho.
 
 217
-00:20:56,032 --> 00:20:59,072
+00:20:04,476 --> 00:20:07,296
 Não pra beber direito.
 
 218
-00:21:01,172 --> 00:21:09,432
+00:20:09,416 --> 00:20:17,796
 Só pra ter alguma coisa quente por dentro nas horas mais frias, entre uma aparada de mecha e outra.
 
 219
-00:21:11,202 --> 00:21:17,082
+00:20:18,566 --> 00:20:24,866
 Comer sozinho todo dia, por vinte anos, faz uma coisa estranha com o tempo.
 
 220
-00:21:19,102 --> 00:21:26,762
+00:20:26,796 --> 00:20:34,116
 A refeição vira só mais um trabalho da noite, feito na mesma ordem, no mesmo lugar.
 
 221
-00:21:28,042 --> 00:21:30,702
+00:20:34,716 --> 00:20:37,016
 E ele nunca achou isso triste.
 
 222
-00:21:32,822 --> 00:21:34,082
+00:20:37,036 --> 00:20:40,846
 Só era assim.
 
 223
-00:21:35,652 --> 00:21:40,012
+00:20:41,286 --> 00:20:46,146
 O copo continuou na prateleira depois que ela morreu.
 
 224
-00:21:41,882 --> 00:21:45,562
+00:20:47,956 --> 00:20:51,736
 Não por devoção, e não por lembrança.
 
 225
-00:21:47,582 --> 00:21:51,442
+00:20:53,676 --> 00:20:57,516
 Era só o copo que tinha, e trocar dava trabalho.
 
 226
-00:21:53,937 --> 00:22:00,797
+00:21:00,281 --> 00:21:07,001
 Do lado oposto à torre, a ilha descia devagar até uma praia de pedras redondas.
 
 227
-00:22:02,137 --> 00:22:05,257
+00:21:07,341 --> 00:21:10,761
 Ele ia lá de manhã, quando dormia bem.
 
 228
-00:22:07,237 --> 00:22:14,777
+00:21:12,751 --> 00:21:20,211
 Era o único lugar onde não dava pra ver a torre, e ele gostava disso uma vez por semana.
 
 229
-00:22:16,557 --> 00:22:23,337
+00:21:20,981 --> 00:21:26,661
 As pedras eram lisas, do tamanho de um punho, e faziam barulho quando a onda puxava.
 
 230
-00:22:23,337 --> 00:22:30,637
+00:21:26,661 --> 00:21:35,471
 Um som de coisa rolando, que enchia a praia inteira e depois sumia.
 
 231
-00:22:32,277 --> 00:22:35,557
+00:21:36,321 --> 00:21:39,571
 Havia restos de um barco ali, meio enterrados.
 
 232
-00:22:37,677 --> 00:22:46,077
+00:21:41,581 --> 00:21:50,041
 Madeira velha, escura, sem nenhum metal — alguém já tinha levado tudo que prestava, muito antes dele.
 
 233
-00:22:47,677 --> 00:22:50,377
+00:21:50,911 --> 00:21:53,621
 Ele nunca soube de que navio era.
 
 234
-00:22:52,257 --> 00:22:53,697
+00:21:55,611 --> 00:21:56,981
 Nem quis saber.
 
 235
-00:22:55,407 --> 00:22:58,447
+00:21:58,021 --> 00:22:01,061
 Sentava numa pedra maior e ficava.
 
 236
-00:23:00,447 --> 00:23:02,807
+00:22:01,181 --> 00:22:05,311
 Sem pensar em nada especial.
 
 237
-00:23:04,937 --> 00:23:10,097
+00:22:07,481 --> 00:22:12,761
 Olhando a água vir e voltar sobre as pedras redondas.
 
 238
-00:23:11,657 --> 00:23:19,317
+00:22:13,321 --> 00:22:21,241
 E depois subia de novo pro lado da torre, porque a noite ia vir, e o fogo não acende sozinho.
 
 239
-00:23:21,217 --> 00:23:23,277
+00:22:22,201 --> 00:22:24,481
 No inverno ele ia menos.
 
 240
-00:23:25,187 --> 00:23:31,547
+00:22:24,901 --> 00:22:32,651
 A praia de pedras ficava batida demais, e o caminho descia molhado.
 
 241
-00:23:33,197 --> 00:23:41,817
+00:22:33,021 --> 00:22:42,201
 Mas ia mesmo assim, uma ou duas vezes, com o casaco pesado, só pra confirmar que continuava tudo ali.
 
 242
-00:23:43,867 --> 00:23:54,567
+00:22:44,101 --> 00:22:54,931
 As mesmas pedras redondas, o mesmo barulho de coisa rolando, os mesmos restos escuros de madeira meio enterrados na areia grossa.
 
 243
-00:23:55,957 --> 00:23:58,547
+00:22:55,671 --> 00:22:58,101
 É uma coisa boba, e ele sabia.
 
 244
-00:24:00,737 --> 00:24:09,357
+00:23:00,281 --> 00:23:08,491
 Um homem que mora numa ilha de uma manhã de travessia não precisa conferir se a ilha continua inteira.
 
 245
-00:24:10,877 --> 00:24:12,657
+00:23:09,421 --> 00:23:11,621
 Mas ele conferia.
 
 246
-00:24:15,036 --> 00:24:17,136
+00:23:14,115 --> 00:23:16,135
 Ele não nasceu na ilha.
 
 247
-00:24:19,116 --> 00:24:22,096
+00:23:18,165 --> 00:23:20,945
 Quase ninguém nasce numa ilha dessas.
 
 248
-00:24:23,846 --> 00:24:30,886
+00:23:22,095 --> 00:23:29,135
 Veio de uma cidade de porto, no continente, onde trabalhou muitos anos com madeira.
 
 249
-00:24:32,856 --> 00:24:34,356
+00:23:31,025 --> 00:23:32,485
 Era bom nisso.
 
 250
-00:24:36,376 --> 00:24:38,816
+00:23:34,365 --> 00:23:36,965
 Fazia porta, fazia banco.
 
 251
-00:24:40,966 --> 00:24:44,806
+00:23:38,465 --> 00:23:43,045
 E consertava casco quando precisava.
 
 252
-00:24:46,296 --> 00:24:58,776
+00:23:43,045 --> 00:23:56,315
 O trabalho da torre apareceu do jeito que esses trabalhos apareciam: o homem que estava lá ficou velho demais pra subir os degraus, e alguém precisava.
 
 253
-00:25:00,696 --> 00:25:03,636
+00:23:58,115 --> 00:24:01,155
 Pagava pouco, e ninguém queria.
 
 254
-00:25:05,836 --> 00:25:09,196
+00:24:01,555 --> 00:24:06,535
 E ficava longe de tudo, e ninguém queria.
 
 255
-00:25:10,976 --> 00:25:12,096
+00:24:07,055 --> 00:24:08,815
 Demétrio quis.
 
 256
-00:25:13,846 --> 00:25:18,466
+00:24:09,755 --> 00:24:14,435
 Ele nunca soube explicar direito o motivo, nem pra si mesmo.
 
 257
-00:25:20,396 --> 00:25:32,716
+00:24:14,435 --> 00:24:28,605
 Tinha alguma coisa a ver com estar cansado de gente, e alguma coisa a ver com achar bonito um trabalho que não precisa ser discutido com ninguém.
 
 258
-00:25:34,576 --> 00:25:40,156
+00:24:30,035 --> 00:24:35,535
 Chegou num barco de manhã, com uma caixa de ferramenta e pouca roupa.
 
 259
-00:25:42,056 --> 00:25:47,716
+00:24:37,085 --> 00:24:43,105
 E subiu os degraus pela primeira vez naquela tarde, contando.
 
 260
-00:25:49,396 --> 00:25:54,896
+00:24:43,605 --> 00:24:45,185
 Cento e doze.
 
 261
-00:25:57,445 --> 00:25:59,745
-Ela se chamava Thaleia.
+00:24:45,795 --> 00:24:48,595
+Achou que ia ficar uns dois anos.
 
 262
-00:26:01,605 --> 00:26:03,125
-E ela foi junto.
+00:24:51,371 --> 00:24:53,631
+Ela se chamava Thaleia.
 
 263
-00:26:04,925 --> 00:26:13,625
-Isso é a parte que as pessoas não imaginam quando pensam num homem sozinho numa torre: que ele não começou sozinho.
+00:24:53,651 --> 00:24:56,911
+E ela foi junto.
 
 264
-00:26:15,345 --> 00:26:17,685
-Os primeiros anos foram de dois.
+00:24:58,041 --> 00:25:06,651
+Isso é a parte que as pessoas não imaginam quando pensam num homem sozinho numa torre: que ele não começou sozinho.
 
 265
-00:26:19,875 --> 00:26:24,555
-Ela cuidava do figo e do poço, e ele cuidava do fogo.
+00:25:07,481 --> 00:25:09,991
+Os primeiros anos foram de dois.
 
 266
-00:26:26,445 --> 00:26:32,205
-Míron nasceu ali, na casa de pedra, com o barulho do mar do lado de fora.
+00:25:12,151 --> 00:25:16,941
+Ela cuidava do figo e do poço, e ele cuidava do fogo.
 
 267
-00:26:33,855 --> 00:26:40,075
-Ela nunca reclamou da ilha, e ele nunca perguntou se ela queria ter ido embora.
+00:25:18,721 --> 00:25:24,501
+Míron nasceu ali, na casa de pedra, com o barulho do mar do lado de fora.
 
 268
-00:26:42,245 --> 00:26:50,785
-Essas duas coisas ficaram entre eles por muitos anos, cada um do seu lado, sem nunca virar conversa.
+00:25:25,311 --> 00:25:31,611
+Ela nunca reclamou da ilha, e ele nunca perguntou se ela queria ter ido embora.
 
 269
-00:26:52,345 --> 00:26:56,205
-Ela morreu no inverno em que Míron tinha onze anos.
+00:25:33,511 --> 00:25:42,451
+Essas duas coisas ficaram entre eles por muitos anos, cada um do seu lado, sem nunca virar conversa.
 
 270
-00:26:58,325 --> 00:27:00,455
-Foi febre, e foi rápido.
+00:25:43,051 --> 00:25:47,031
+Ela morreu no inverno em que Míron tinha onze anos.
 
 271
-00:27:02,525 --> 00:27:10,745
-E não teve o que fazer, porque médico ficava a uma travessia de distância e o tempo estava fechado.
+00:25:48,701 --> 00:25:51,201
+Foi febre, e foi rápido.
 
 272
-00:27:12,445 --> 00:27:15,345
-Ele acendeu o fogo naquela noite.
+00:25:51,541 --> 00:26:01,631
+E não teve o que fazer, porque médico ficava a uma travessia de distância e o tempo estava fechado.
 
 273
-00:27:17,445 --> 00:27:19,445
-Não porque fosse forte.
+00:26:02,351 --> 00:26:05,291
+Ele acendeu o fogo naquela noite.
 
 274
-00:27:21,465 --> 00:27:28,465
-Mas porque era a hora, e porque não saberia o que fazer com as mãos se não subisse.
+00:26:05,571 --> 00:26:09,431
+Não porque fosse forte.
 
 275
-00:27:30,850 --> 00:27:32,590
-Ele tinha um filho.
+00:26:09,651 --> 00:26:18,431
+Mas porque era a hora, e porque não saberia o que fazer com as mãos se não subisse.
 
 276
-00:27:34,660 --> 00:27:36,200
-Chamava-se Míron.
+00:26:21,045 --> 00:26:22,545
+Ele tinha um filho.
 
 277
-00:27:38,290 --> 00:27:43,870
-Tinha os ombros largos da mãe e a paciência curta do pai.
+00:26:24,195 --> 00:26:26,215
+Chamava-se Míron.
 
 278
-00:27:45,590 --> 00:27:50,190
-Míron não quis aprender a subir os cento e doze degraus.
+00:26:26,435 --> 00:26:33,905
+Tinha os ombros largos da mãe e a paciência curta do pai.
 
 279
-00:27:52,070 --> 00:27:55,170
-E quis aprender a velejar.
+00:26:34,935 --> 00:26:39,515
+Míron não quis aprender a subir os cento e doze degraus.
 
 280
-00:27:57,290 --> 00:28:14,350
-Na primeira vez que um navio grande parou na baía pra se abrigar de uma tempestade, ele passou a tarde inteira no costado conversando com os marinheiros, e voltou de noite com os olhos de quem já tinha ido embora.
+00:26:39,555 --> 00:26:44,455
+E quis aprender a velejar.
 
 281
-00:28:16,160 --> 00:28:21,200
-Quando o navio partiu, na manhã seguinte, Míron foi embora dentro dele.
+00:26:46,065 --> 00:27:03,665
+Na primeira vez que um navio grande parou na baía pra se abrigar de uma tempestade, ele passou a tarde inteira no costado conversando com os marinheiros, e voltou de noite com os olhos de quem já tinha ido embora.
 
 282
-00:28:22,870 --> 00:28:24,590
-Isso foi há seis anos.
+00:27:04,605 --> 00:27:09,705
+Quando o navio partiu, na manhã seguinte, Míron foi embora dentro dele.
 
 283
-00:28:26,810 --> 00:28:27,710
-Ou sete.
+00:27:10,645 --> 00:27:12,465
+Isso foi há seis anos.
 
 284
-00:28:29,860 --> 00:28:35,660
-Demétrio já tinha perdido a conta exata, e não se cobrava por isso.
+00:27:14,085 --> 00:27:15,645
+Ou sete.
 
 285
-00:28:35,660 --> 00:28:39,170
-Ele não ficou bravo.
+00:27:17,585 --> 00:27:23,505
+Demétrio já tinha perdido a conta exata, e não se cobrava por isso.
 
 286
-00:28:40,710 --> 00:28:50,030
-Um homem que passa a vida guiando navios pro mar aberto não pode ficar bravo quando o próprio filho decide seguir um.
+00:27:24,295 --> 00:27:26,275
+Ele não ficou bravo.
 
 287
-00:28:51,550 --> 00:28:53,890
-Ficou só mais quieto.
+00:27:28,015 --> 00:27:37,155
+Um homem que passa a vida guiando navios pro mar aberto não pode ficar bravo quando o próprio filho decide seguir um.
 
 288
-00:28:55,740 --> 00:29:01,260
-Que é uma coisa diferente, e mais difícil de perceber de fora.
+00:27:37,845 --> 00:27:40,185
+Ficou só mais quieto.
 
 289
-00:29:03,558 --> 00:29:06,698
-A vida num navio daqueles não era boa.
+00:27:40,185 --> 00:27:47,225
+Que é uma coisa diferente, e mais difícil de perceber de fora.
 
 290
-00:29:08,858 --> 00:29:15,978
-Demétrio sabia disso melhor que ninguém, porque tinha visto centenas deles passarem.
+00:27:49,975 --> 00:27:52,935
+A vida num navio daqueles não era boa.
 
 291
-00:29:17,748 --> 00:29:27,088
-Dormia-se no convés quando fazia calor, e embaixo dele quando chovia, apertado entre a carga e a madeira molhada.
+00:27:55,055 --> 00:28:02,255
+Demétrio sabia disso melhor que ninguém, porque tinha visto centenas deles passarem.
 
 292
-00:29:29,058 --> 00:29:39,678
-Comia-se pão duro e peixe salgado, muitas vezes a mesma coisa por semanas seguidas, até a boca esquecer o que era gosto.
+00:28:03,175 --> 00:28:12,615
+Dormia-se no convés quando fazia calor, e embaixo dele quando chovia, apertado entre a carga e a madeira molhada.
 
 293
-00:29:41,378 --> 00:29:45,438
-Um marinheiro puxava corda até a mão virar couro.
+00:28:14,475 --> 00:28:25,155
+Comia-se pão duro e peixe salgado, muitas vezes a mesma coisa por semanas seguidas, até a boca esquecer o que era gosto.
 
 294
-00:29:47,458 --> 00:29:49,798
-Remava quando o vento parava.
+00:28:25,925 --> 00:28:30,225
+Um marinheiro puxava corda até a mão virar couro.
 
 295
-00:29:49,798 --> 00:30:00,418
-E ficava doente com uma facilidade que assustava, longe de qualquer lugar onde alguém pudesse ajudar.
+00:28:31,945 --> 00:28:34,625
+Remava quando o vento parava.
 
 296
-00:30:02,038 --> 00:30:08,148
-Mas todo lugar do mundo conhecido ficava do outro lado daquela água.
+00:28:34,785 --> 00:28:44,945
+E ficava doente com uma facilidade que assustava, longe de qualquer lugar onde alguém pudesse ajudar.
 
 297
-00:30:10,198 --> 00:30:19,518
-E um rapaz de dezoito anos numa ilha de uma manhã de travessia olha pro horizonte e não vê o trabalho.
+00:28:46,045 --> 00:28:52,145
+Mas todo lugar do mundo conhecido ficava do outro lado daquela água.
 
 298
-00:30:21,728 --> 00:30:23,828
-Vê o que vem depois dele.
+00:28:54,155 --> 00:29:03,395
+E um rapaz de dezoito anos numa ilha de uma manhã de travessia olha pro horizonte e não vê o trabalho.
 
 299
-00:30:25,578 --> 00:30:27,238
-Demétrio entendia.
+00:29:05,735 --> 00:29:07,775
+Vê o que vem depois dele.
 
 300
-00:30:29,358 --> 00:30:33,818
-Ele mesmo tinha chegado ali num barco, uma vez, muito antes.
+00:29:08,795 --> 00:29:10,455
+Demétrio entendia.
 
 301
-00:30:36,366 --> 00:30:39,086
-A ilha ficava numa curva boa.
+00:29:12,455 --> 00:29:17,055
+Ele mesmo tinha chegado ali num barco, uma vez, muito antes.
 
 302
-00:30:41,146 --> 00:30:46,726
-Não era destino de ninguém, e era caminho de quase todo mundo.
+00:29:19,721 --> 00:29:22,341
+A ilha ficava numa curva boa.
 
 303
-00:30:48,456 --> 00:30:58,316
-De um lado vinham os navios carregados de trigo, pesados, baixos na água, descendo devagar do norte no fim do verão.
+00:29:24,281 --> 00:29:29,741
+Não era destino de ninguém, e era caminho de quase todo mundo.
 
 304
-00:31:00,096 --> 00:31:02,176
-Eles nunca paravam.
+00:29:30,671 --> 00:29:40,831
+De um lado vinham os navios carregados de trigo, pesados, baixos na água, descendo devagar do norte no fim do verão.
 
 305
-00:31:04,266 --> 00:31:09,186
-Passavam longe, só conferindo onde estava a rocha.
+00:29:42,251 --> 00:29:44,751
+Eles nunca paravam.
 
 306
-00:31:10,906 --> 00:31:21,406
-Do outro lado subiam os de azeite e vinho, em jarras amarradas com corda, e esses às vezes entravam na baía pra passar a noite.
+00:29:46,471 --> 00:29:51,711
+Passavam longe, só conferindo onde estava a rocha.
 
 307
-00:31:23,306 --> 00:31:31,786
-Havia também os pequenos, de pesca e de troca, que iam de ilha em ilha e nunca perdiam a costa de vista.
+00:29:51,711 --> 00:30:03,121
+Do outro lado subiam os de azeite e vinho, em jarras amarradas com corda, e esses às vezes entravam na baía pra passar a noite.
 
 308
-00:31:33,646 --> 00:31:41,286
-Esses eram os que mais dependiam da luz, porque não tinham para onde correr se o tempo virasse.
+00:30:03,971 --> 00:30:12,631
+Havia também os pequenos, de pesca e de troca, que iam de ilha em ilha e nunca perdiam a costa de vista.
 
 309
-00:31:42,966 --> 00:31:53,126
-E uma ou duas vezes por ano passava um navio grande, estrangeiro, com vela de cor diferente e homens que falavam outra coisa.
+00:30:14,661 --> 00:30:22,181
+Esses eram os que mais dependiam da luz, porque não tinham para onde correr se o tempo virasse.
 
 310
-00:31:54,926 --> 00:32:03,266
-Demétrio aprendeu a reconhecer todos pelo jeito de andar na água, muito antes de conseguir ver a vela.
+00:30:23,151 --> 00:30:33,151
+E uma ou duas vezes por ano passava um navio grande, estrangeiro, com vela de cor diferente e homens que falavam outra coisa.
 
 311
-00:32:05,580 --> 00:32:08,080
-Não se navegava o ano inteiro.
+00:30:34,061 --> 00:30:42,701
+Demétrio aprendeu a reconhecer todos pelo jeito de andar na água, muito antes de conseguir ver a vela.
 
 312
-00:32:10,300 --> 00:32:15,180
-Isso é coisa de gente que nunca viu o mar de inverno.
+00:30:45,060 --> 00:30:47,340
+Não se navegava o ano inteiro.
 
 313
-00:32:16,730 --> 00:32:27,690
-De outubro em diante o vento ficava sem palavra, o céu fechava sem avisar, e quem tinha juízo puxava o barco pra areia e esperava.
+00:30:49,660 --> 00:30:54,500
+Isso é coisa de gente que nunca viu o mar de inverno.
 
 314
-00:32:29,860 --> 00:32:37,020
-Os portos ficavam cheios de casco encostado, e as rotas sumiam por uns quatro meses.
+00:30:55,220 --> 00:31:06,260
+De outubro em diante o vento ficava sem palavra, o céu fechava sem avisar, e quem tinha juízo puxava o barco pra areia e esperava.
 
 315
-00:32:38,610 --> 00:32:42,150
-A ilha ficava muito quieta nesse tempo.
+00:31:08,220 --> 00:31:15,520
+Os portos ficavam cheios de casco encostado, e as rotas sumiam por uns quatro meses.
 
 316
-00:32:44,200 --> 00:32:54,680
-Passavam-se semanas sem uma vela no horizonte, e o barco do óleo vinha uma vez só, antes do tempo fechar, com jarra a mais.
+00:31:15,520 --> 00:31:19,920
+A ilha ficava muito quieta nesse tempo.
 
 317
-00:32:56,360 --> 00:32:59,180
-Ele acendia o fogo do mesmo jeito.
+00:31:22,000 --> 00:31:32,640
+Passavam-se semanas sem uma vela no horizonte, e o barco do óleo vinha uma vez só, antes do tempo fechar, com jarra a mais.
 
 318
-00:33:01,560 --> 00:33:07,840
-Toda noite, sem falta, mesmo sabendo que provavelmente ninguém ia ver.
+00:31:33,380 --> 00:31:36,200
+Ele acendia o fogo do mesmo jeito.
 
 319
-00:33:09,510 --> 00:33:12,450
-Porque provavelmente não é certeza.
+00:31:38,220 --> 00:31:44,760
+Toda noite, sem falta, mesmo sabendo que provavelmente ninguém ia ver.
 
 320
-00:33:14,620 --> 00:33:23,820
-E porque a única noite em que a luz importa de verdade é justamente a noite em que ninguém esperava que importasse.
+00:31:45,460 --> 00:31:48,460
+Porque provavelmente não é certeza.
 
 321
-00:33:25,470 --> 00:33:27,190
-Vinte invernos assim.
+00:31:48,880 --> 00:32:00,050
+E porque a única noite em que a luz importa de verdade é justamente a noite em que ninguém esperava que importasse.
 
 322
-00:33:29,470 --> 00:33:31,210
-Acendendo pra ninguém.
+00:32:00,970 --> 00:32:02,590
+Vinte invernos assim.
 
 323
-00:33:33,160 --> 00:33:36,680
-No meio do inverno ele conversava sozinho.
+00:32:04,320 --> 00:32:06,660
+Acendendo pra ninguém.
 
 324
-00:33:38,810 --> 00:33:40,610
-Não muito, e não sempre.
+00:32:07,700 --> 00:32:11,400
+No meio do inverno ele conversava sozinho.
 
 325
-00:33:42,510 --> 00:33:52,250
-Frases curtas, ditas em voz alta enquanto trabalhava, do jeito que a gente fala com um cachorro que não tem.
+00:32:13,370 --> 00:32:15,290
+Não muito, e não sempre.
 
 326
-00:33:54,160 --> 00:33:55,820
-Comentava o vento.
+00:32:17,860 --> 00:32:26,940
+Frases curtas, ditas em voz alta enquanto trabalhava, do jeito que a gente fala com um cachorro que não tem.
 
 327
-00:33:57,070 --> 00:34:03,950
-E reclamava do óleo grosso quando estava frio demais e custava a pegar.
+00:32:27,270 --> 00:32:29,770
+Comentava o vento.
 
 328
-00:34:06,260 --> 00:34:11,540
-Dizia o número dos degraus, às vezes, subindo, sem precisar contar.
+00:32:29,770 --> 00:32:37,720
+E reclamava do óleo grosso quando estava frio demais e custava a pegar.
 
 329
-00:34:13,250 --> 00:34:21,730
-Na primavera, quando as velas voltavam ao horizonte, ele parava de falar sozinho quase sem perceber.
+00:32:40,000 --> 00:32:45,340
+Dizia o número dos degraus, às vezes, subindo, sem precisar contar.
 
 330
-00:34:24,040 --> 00:34:28,900
-E só ia notar isso muitos anos depois, olhando pra trás.
+00:32:46,040 --> 00:32:54,780
+Na primavera, quando as velas voltavam ao horizonte, ele parava de falar sozinho quase sem perceber.
 
 331
-00:34:31,390 --> 00:34:34,410
-De vez em quando chegava notícia.
+00:32:56,550 --> 00:33:02,110
+E só ia notar isso muitos anos depois, olhando pra trás.
 
 332
-00:34:36,470 --> 00:34:38,810
-Um marinheiro de passagem.
+00:33:04,591 --> 00:33:07,491
+De vez em quando chegava notícia.
 
 333
-00:34:40,800 --> 00:34:45,160
-Um pescador que tinha ouvido de outro pescador.
+00:33:09,341 --> 00:33:11,931
+Um marinheiro de passagem.
 
 334
-00:34:47,370 --> 00:34:52,110
-Um nome dito de leve numa taverna do continente.
+00:33:13,611 --> 00:33:18,241
+Um pescador que tinha ouvido de outro pescador.
 
 335
-00:34:53,930 --> 00:34:57,470
-Míron tinha sido visto num porto distante.
+00:33:20,171 --> 00:33:25,181
+Um nome dito de leve numa taverna do continente.
 
 336
-00:34:59,560 --> 00:35:01,160
-Míron estava bem.
+00:33:26,131 --> 00:33:29,761
+Míron tinha sido visto num porto distante.
 
 337
-00:35:03,030 --> 00:35:06,230
-E tinha crescido a barba.
+00:33:31,931 --> 00:33:33,461
+Míron estava bem.
 
 338
-00:35:07,750 --> 00:35:09,870
-Nada disso vinha escrito.
+00:33:33,741 --> 00:33:38,501
+E tinha crescido a barba.
 
 339
-00:35:12,250 --> 00:35:14,190
-Ninguém ali escrevia.
+00:33:38,501 --> 00:33:41,301
+Nada disso vinha escrito.
 
 340
-00:35:16,460 --> 00:35:25,260
-As notícias andavam de boca em boca, de barco em barco, e chegavam meses depois de terem sido verdade.
+00:33:43,881 --> 00:33:45,621
+Ninguém ali escrevia.
 
 341
-00:35:27,340 --> 00:35:32,340
-Então o que Demétrio sabia do filho era sempre o passado de alguém.
+00:33:47,721 --> 00:33:56,841
+As notícias andavam de boca em boca, de barco em barco, e chegavam meses depois de terem sido verdade.
 
 342
-00:35:34,360 --> 00:35:40,190
-Um Míron de um ano atrás, num lugar onde ele já não estava mais.
+00:33:57,711 --> 00:34:02,991
+Então o que Demétrio sabia do filho era sempre o passado de alguém.
 
 343
-00:35:41,860 --> 00:35:45,260
-Ele guardava cada pedaço mesmo assim.
+00:34:05,261 --> 00:34:10,701
+Um Míron de um ano atrás, num lugar onde ele já não estava mais.
 
 344
-00:35:47,420 --> 00:35:55,060
-Repetia pra si mesmo enquanto aparava a mecha, pra não esquecer o nome do porto.
+00:34:10,701 --> 00:34:15,091
+Ele guardava cada pedaço mesmo assim.
 
 345
-00:35:55,950 --> 00:36:00,290
-E às vezes passava um ano inteiro sem nenhuma notícia.
+00:34:17,351 --> 00:34:24,371
+Repetia pra si mesmo enquanto aparava a mecha, pra não esquecer o nome do porto.
 
 346
-00:36:02,390 --> 00:36:05,460
-Esses eram os anos compridos.
+00:34:24,481 --> 00:34:29,421
+E às vezes passava um ano inteiro sem nenhuma notícia.
 
 347
-00:36:07,220 --> 00:36:14,080
-Uma vez veio um pedaço maior de notícia, e ele guardou esse melhor que os outros.
+00:34:31,321 --> 00:34:34,541
+Esses eram os anos compridos.
 
 348
-00:36:15,620 --> 00:36:26,060
-Um homem que descarregava jarra no continente contou pra um pescador, que contou pra outro, que parou na baía por causa do vento.
+00:34:35,041 --> 00:34:41,681
+Uma vez veio um pedaço maior de notícia, e ele guardou esse melhor que os outros.
 
 349
-00:36:28,170 --> 00:36:36,510
-Míron tinha ficado uns meses numa cidade de porto grande, trabalhando em terra, consertando casco.
+00:34:42,441 --> 00:34:53,561
+Um homem que descarregava jarra no continente contou pra um pescador, que contou pra outro, que parou na baía por causa do vento.
 
 350
-00:36:38,520 --> 00:36:44,500
-E depois embarcou de novo, num barco pequeno, de dois ou três homens.
+00:34:55,261 --> 00:35:04,101
+Míron tinha ficado uns meses numa cidade de porto grande, trabalhando em terra, consertando casco.
 
 351
-00:36:46,110 --> 00:36:48,790
-Barco pequeno é melhor e é pior.
+00:35:05,731 --> 00:35:11,951
+E depois embarcou de novo, num barco pequeno, de dois ou três homens.
 
 352
-00:36:51,010 --> 00:36:53,390
-É melhor porque não vai longe.
+00:35:13,131 --> 00:35:15,551
+Barco pequeno é melhor e é pior.
 
 353
-00:36:55,450 --> 00:36:59,530
-E é pior porque não aguenta muita coisa.
+00:35:15,551 --> 00:35:20,111
+É melhor porque não vai longe.
 
 354
-00:37:00,420 --> 00:37:06,540
-Demétrio ficou com as duas metades dessa notícia por uns dois anos.
+00:35:20,391 --> 00:35:26,111
+E é pior porque não aguenta muita coisa.
 
 355
-00:37:09,090 --> 00:37:12,870
-O mar não devolve nada quando você pergunta.
+00:35:27,011 --> 00:35:32,371
+Demétrio ficou com as duas metades dessa notícia por uns dois anos.
 
 356
-00:37:14,980 --> 00:37:21,080
-Essa é a primeira coisa que qualquer um aprende morando de frente pra ele.
+00:35:35,140 --> 00:35:38,580
+O mar não devolve nada quando você pergunta.
 
 357
-00:37:22,760 --> 00:37:30,560
-Você pode ficar ali a noite inteira, olhando a mesma direção, e ele continua igual.
+00:35:40,960 --> 00:35:47,060
+Essa é a primeira coisa que qualquer um aprende morando de frente pra ele.
 
 358
-00:37:32,110 --> 00:37:34,350
-Nem confirma, nem nega.
+00:35:47,950 --> 00:35:55,070
+Você pode ficar ali a noite inteira, olhando a mesma direção, e ele continua igual.
 
 359
-00:37:36,410 --> 00:37:44,250
-Só vai e volta na rocha, com aquela paciência que não é bondade nem crueldade — é só o que ele faz.
+00:35:55,070 --> 00:35:59,560
+Nem confirma, nem nega.
 
 360
-00:37:46,090 --> 00:37:48,490
-Demétrio não perguntava mais.
+00:35:59,640 --> 00:36:09,370
+Só vai e volta na rocha, com aquela paciência que não é bondade nem crueldade — é só o que ele faz.
 
 361
-00:37:50,830 --> 00:37:58,070
-Tinha perguntado muito nos primeiros dois anos, sem nunca dizer nada em voz alta.
+00:36:10,410 --> 00:36:12,770
+Demétrio não perguntava mais.
 
 362
-00:37:59,810 --> 00:38:01,130
-Depois parou.
+00:36:15,090 --> 00:36:22,280
+Tinha perguntado muito nos primeiros dois anos, sem nunca dizer nada em voz alta.
 
 363
-00:38:02,810 --> 00:38:05,930
-Não porque tivesse desistido do filho.
+00:36:23,430 --> 00:36:24,700
+Depois parou.
 
 364
-00:38:08,080 --> 00:38:20,300
-Mas porque entendeu que perguntar e esperar são coisas diferentes, e que só uma delas dá pra fazer por muito tempo sem se gastar por dentro.
+00:36:25,390 --> 00:36:28,520
+Não porque tivesse desistido do filho.
 
 365
-00:38:22,040 --> 00:38:23,780
-Então ele esperava.
+00:36:30,230 --> 00:36:43,010
+Mas porque entendeu que perguntar e esperar são coisas diferentes, e que só uma delas dá pra fazer por muito tempo sem se gastar por dentro.
 
 366
-00:38:23,780 --> 00:38:30,960
-Que é uma coisa que se faz de olhos abertos, cuidando do fogo.
+00:36:43,700 --> 00:36:45,760
+Então ele esperava.
 
 367
-00:38:32,670 --> 00:38:36,190
-Nos primeiros meses ele fazia contas.
+00:36:47,660 --> 00:36:52,880
+Que é uma coisa que se faz de olhos abertos, cuidando do fogo.
 
 368
-00:38:37,840 --> 00:38:50,880
-Quantos dias até um porto e quantos de volta, quantas semanas até a estação fechar, em que mês uma notícia levaria pra atravessar de boca em boca.
+00:36:53,360 --> 00:36:56,920
+Nos primeiros meses ele fazia contas.
 
 369
-00:38:52,610 --> 00:38:57,090
-As contas sempre davam certo e nunca serviam pra nada.
+00:36:59,030 --> 00:37:11,970
+Quantos dias até um porto e quantos de volta, quantas semanas até a estação fechar, em que mês uma notícia levaria pra atravessar de boca em boca.
 
 370
-00:38:59,320 --> 00:39:06,840
-O prazo passava, e não chegava ninguém, e ele começava outra conta com outro prazo.
+00:37:12,840 --> 00:37:17,320
+As contas sempre davam certo e nunca serviam pra nada.
 
 371
-00:39:08,400 --> 00:39:17,660
-Uma hora ele percebeu que estava fazendo aquilo pra ter o que fazer com a cabeça, e não pra descobrir coisa nenhuma.
+00:37:19,160 --> 00:37:27,180
+O prazo passava, e não chegava ninguém, e ele começava outra conta com outro prazo.
 
 372
-00:39:19,520 --> 00:39:22,100
-Foi mais ou menos aí que parou.
+00:37:27,920 --> 00:37:37,020
+Uma hora ele percebeu que estava fazendo aquilo pra ter o que fazer com a cabeça, e não pra descobrir coisa nenhuma.
 
 373
-00:39:24,467 --> 00:39:26,447
-Ele lembrava de alguns.
+00:37:38,070 --> 00:37:40,790
+Foi mais ou menos aí que parou.
 
 374
-00:39:28,387 --> 00:39:37,887
-Do primeiro, de longe o mais assustado, que entrou na baía de lado com a vela rasgada e ficou três dias consertando.
+00:37:43,278 --> 00:37:45,078
+Ele lembrava de alguns.
 
 375
-00:39:40,037 --> 00:39:48,457
-O capitão subiu a torre pra agradecer, e não achou o que dizer, e os dois ficaram calados olhando o mar.
+00:37:46,148 --> 00:37:55,778
+Do primeiro, de longe o mais assustado, que entrou na baía de lado com a vela rasgada e ficou três dias consertando.
 
 376
-00:39:50,237 --> 00:39:55,857
-De um pequeno, de dois homens só, que chegou de madrugada com um deles ferido.
+00:37:57,768 --> 00:38:06,318
+O capitão subiu a torre pra agradecer, e não achou o que dizer, e os dois ficaram calados olhando o mar.
 
 377
-00:39:57,937 --> 00:40:04,657
-Demétrio desceu com água e pano e não perguntou nada, porque não era da conta dele.
+00:38:07,208 --> 00:38:12,938
+De um pequeno, de dois homens só, que chegou de madrugada com um deles ferido.
 
 378
-00:40:04,657 --> 00:40:15,767
-De um cargueiro pesado que ele viu passar reto, longe, numa noite ruim — e que ele soube depois que não chegou a lugar nenhum.
+00:38:14,378 --> 00:38:21,918
+Demétrio desceu com água e pano e não perguntou nada, porque não era da conta dele.
 
 379
-00:40:18,177 --> 00:40:25,617
-Esse ele lembrava melhor que os outros, e sem motivo, porque não tinha feito nada de errado.
+00:38:21,918 --> 00:38:32,018
+De um cargueiro pesado que ele viu passar reto, longe, numa noite ruim — e que ele soube depois que não chegou a lugar nenhum.
 
 380
-00:40:27,217 --> 00:40:30,077
-Em vinte anos são muitos navios.
+00:38:34,288 --> 00:38:41,738
+Esse ele lembrava melhor que os outros, e sem motivo, porque não tinha feito nada de errado.
 
 381
-00:40:32,347 --> 00:40:34,567
-Ele não lembrava da maioria.
+00:38:42,448 --> 00:38:45,608
+Em vinte anos são muitos navios.
 
 382
-00:40:36,467 --> 00:40:39,867
-Lembrava dos que precisaram dele de perto.
+00:38:47,418 --> 00:38:49,878
+Ele não lembrava da maioria.
 
 383
-00:40:41,557 --> 00:40:45,337
-E de um, uma vez só, que entrou de noite com música.
+00:38:50,538 --> 00:38:54,438
+Lembrava dos que precisaram dele de perto.
 
 384
-00:40:47,137 --> 00:40:59,277
-Era um barco de carga voltando cheio, com a viagem toda dando certo, e os homens estavam cantando no convés antes mesmo de jogar a pedra na água.
+00:38:55,218 --> 00:38:59,068
+E de um, uma vez só, que entrou de noite com música.
 
 385
-00:41:00,907 --> 00:41:05,827
-Ele ouviu da torre, longe, sem entender a letra.
+00:38:59,998 --> 00:39:12,248
+Era um barco de carga voltando cheio, com a viagem toda dando certo, e os homens estavam cantando no convés antes mesmo de jogar a pedra na água.
 
 386
-00:41:07,477 --> 00:41:10,977
-Ficou escutando até o fim, com o queixo na mão.
+00:39:14,258 --> 00:39:18,898
+Ele ouviu da torre, longe, sem entender a letra.
 
 387
-00:41:13,067 --> 00:41:24,027
-E no dia seguinte não desceu pra falar com ninguém, porque não tinha nada pra dizer e a noite já tinha sido boa do jeito que foi.
+00:39:19,558 --> 00:39:23,138
+Ficou escutando até o fim, com o queixo na mão.
 
 388
-00:41:26,479 --> 00:41:31,939
-A maior parte do trabalho dele era com gente que ele nunca ia conhecer.
+00:39:24,748 --> 00:39:36,228
+E no dia seguinte não desceu pra falar com ninguém, porque não tinha nada pra dizer e a noite já tinha sido boa do jeito que foi.
 
 389
-00:41:33,859 --> 00:41:43,359
-Um homem ao leme, a duas horas de distância, ajusta a direção por causa de uma luz laranja e nem pensa muito nisso.
+00:39:38,778 --> 00:39:43,878
+A maior parte do trabalho dele era com gente que ele nunca ia conhecer.
 
 390
-00:41:45,579 --> 00:41:52,399
-Chega em casa dois dias depois e não conta pra ninguém, porque não aconteceu nada.
+00:39:44,888 --> 00:39:54,668
+Um homem ao leme, a duas horas de distância, ajusta a direção por causa de uma luz laranja e nem pensa muito nisso.
 
 391
-00:41:54,329 --> 00:41:55,709
-É esse o ofício.
+00:39:57,028 --> 00:40:03,728
+Chega em casa dois dias depois e não conta pra ninguém, porque não aconteceu nada.
 
 392
-00:41:57,799 --> 00:42:00,639
-Fazer com que não aconteça nada.
+00:40:04,698 --> 00:40:06,378
+É esse o ofício.
 
 393
-00:42:02,439 --> 00:42:07,019
-Demétrio pensava nisso com uma espécie de gosto tranquilo.
+00:40:07,858 --> 00:40:11,098
+Fazer com que não aconteça nada.
 
 394
-00:42:09,109 --> 00:42:22,589
-Que existia gente dormindo em cidades que ele nunca ia ver, e que dormia lá porque um pai voltou, e que o pai voltou por causa de uma mecha aparada de hora em hora.
+00:40:12,148 --> 00:40:16,828
+Demétrio pensava nisso com uma espécie de gosto tranquilo.
 
 395
-00:42:24,379 --> 00:42:27,279
-Ninguém agradece o que não aconteceu.
+00:40:18,728 --> 00:40:32,248
+Que existia gente dormindo em cidades que ele nunca ia ver, e que dormia lá porque um pai voltou, e que o pai voltou por causa de uma mecha aparada de hora em hora.
 
 396
-00:42:29,059 --> 00:42:30,859
-E era melhor assim.
+00:40:33,088 --> 00:40:36,068
+Ninguém agradece o que não aconteceu.
 
 397
-00:42:33,159 --> 00:42:39,979
-Um agradecimento a cada navio deixaria o trabalho pesado de um jeito diferente.
+00:40:36,818 --> 00:40:38,878
+E era melhor assim.
 
 398
-00:42:41,879 --> 00:42:45,119
-Só uma vez alguém voltou pra agradecer.
+00:40:41,078 --> 00:40:47,978
+Um agradecimento a cada navio deixaria o trabalho pesado de um jeito diferente.
 
 399
-00:42:46,979 --> 00:42:59,759
-Um homem já de idade, muitos anos depois de uma noite que Demétrio nem lembrava direito, desceu de um barco de passagem e subiu a pé até a torre no meio da tarde.
+00:40:48,818 --> 00:40:52,418
+Só uma vez alguém voltou pra agradecer.
 
 400
-00:43:02,099 --> 00:43:04,079
-Disse o mês e o ano.
+00:40:53,258 --> 00:41:06,118
+Um homem já de idade, muitos anos depois de uma noite que Demétrio nem lembrava direito, desceu de um barco de passagem e subiu a pé até a torre no meio da tarde.
 
 401
-00:43:06,299 --> 00:43:08,579
-Disse que estava com o irmão.
+00:41:08,538 --> 00:41:10,418
+Disse o mês e o ano.
 
 402
-00:43:10,799 --> 00:43:17,019
-Disse que sem a luz teriam batido na rocha do norte, que é a pior das duas.
+00:41:12,558 --> 00:41:15,138
+Disse que estava com o irmão.
 
 403
-00:43:19,029 --> 00:43:21,849
-Demétrio não lembrava daquela noite.
+00:41:17,118 --> 00:41:23,498
+Disse que sem a luz teriam batido na rocha do norte, que é a pior das duas.
 
 404
-00:43:24,259 --> 00:43:32,319
-Fez o que dava: ofereceu água e vinho, ouviu a história inteira, e concordou nas partes certas.
+00:41:24,638 --> 00:41:27,478
+Demétrio não lembrava daquela noite.
 
 405
-00:43:33,829 --> 00:43:36,709
-O homem foi embora satisfeito.
+00:41:29,918 --> 00:41:38,078
+Fez o que dava: ofereceu água e vinho, ouviu a história inteira, e concordou nas partes certas.
 
 406
-00:43:38,789 --> 00:43:49,209
-E ele ficou pensando o resto da semana em quantas outras noites daquelas tinham existido sem ninguém nunca voltar pra contar.
+00:41:38,678 --> 00:41:41,558
+O homem foi embora satisfeito.
 
 407
-00:43:51,778 --> 00:43:54,678
-Falhou três vezes em vinte anos.
+00:41:43,088 --> 00:41:53,888
+E ele ficou pensando o resto da semana em quantas outras noites daquelas tinham existido sem ninguém nunca voltar pra contar.
 
 408
-00:43:56,908 --> 00:43:58,228
-Ele contava.
+00:41:56,663 --> 00:41:59,403
+Falhou três vezes em vinte anos.
 
 409
-00:43:58,228 --> 00:44:02,248
-A primeira foi culpa dele.
+00:42:01,593 --> 00:42:03,013
+Ele contava.
 
 410
-00:44:04,478 --> 00:44:15,738
-Dormiu de tarde mais do que devia, acordou com o céu já escuro, e subiu correndo os cento e doze degraus com o coração na garganta.
+00:42:03,273 --> 00:42:06,083
+A primeira foi culpa dele.
 
 411
-00:44:17,918 --> 00:44:19,798
-Ficou uma hora sem luz.
+00:42:08,173 --> 00:42:19,473
+Dormiu de tarde mais do que devia, acordou com o céu já escuro, e subiu correndo os cento e doze degraus com o coração na garganta.
 
 412
-00:44:22,168 --> 00:44:28,228
-Não aconteceu nada, e ele não dormiu mais de tarde por uns dois anos.
+00:42:21,653 --> 00:42:23,773
+Ficou uma hora sem luz.
 
 413
-00:44:30,058 --> 00:44:32,258
-A segunda foi o vento.
+00:42:25,963 --> 00:42:32,023
+Não aconteceu nada, e ele não dormiu mais de tarde por uns dois anos.
 
 414
-00:44:34,368 --> 00:44:42,408
-Um oeste de três dias entrou por baixo do teto e apagou a bacia quatro vezes numa noite só.
+00:42:32,043 --> 00:42:35,473
+A segunda foi o vento.
 
 415
-00:44:44,648 --> 00:44:47,068
-Ele reacendeu quatro vezes.
+00:42:37,263 --> 00:42:45,503
+Um oeste de três dias entrou por baixo do teto e apagou a bacia quatro vezes numa noite só.
 
 416
-00:44:49,088 --> 00:44:50,988
-A terceira foi o óleo.
+00:42:47,563 --> 00:42:50,143
+Ele reacendeu quatro vezes.
 
 417
-00:44:53,278 --> 00:45:02,038
-O barco atrasou por causa do tempo, e ele passou seis noites racionando, com a chama na metade do tamanho.
+00:42:51,023 --> 00:42:53,303
+A terceira foi o óleo.
 
 418
-00:45:03,998 --> 00:45:10,118
-Nas três vezes ele ficou com uma coisa apertada no peito por semanas depois.
+00:42:55,263 --> 00:43:04,363
+O barco atrasou por causa do tempo, e ele passou seis noites racionando, com a chama na metade do tamanho.
 
 419
-00:45:12,658 --> 00:45:18,518
-E nas três vezes, até onde ele soube, não houve consequência nenhuma.
+00:43:04,363 --> 00:43:11,593
+Nas três vezes ele ficou com uma coisa apertada no peito por semanas depois.
 
 420
-00:45:20,518 --> 00:45:23,758
-Isso não aliviava tanto quanto deveria.
+00:43:13,953 --> 00:43:19,933
+E nas três vezes, até onde ele soube, não houve consequência nenhuma.
 
 421
-00:45:26,140 --> 00:45:31,980
-As estrelas em cima do mar são diferentes das estrelas em cima da terra.
+00:43:21,023 --> 00:43:24,383
+Isso não aliviava tanto quanto deveria.
 
 422
-00:45:34,200 --> 00:45:52,120
-Não porque sejam outras, mas porque não tem nada por baixo delas competindo — nem telhado, nem árvore, nem fumaça de fogão — e então elas ocupam o céu inteiro de uma vez, até quase encostar na água do outro lado.
+00:43:26,857 --> 00:43:32,637
+As estrelas em cima do mar são diferentes das estrelas em cima da terra.
 
 423
-00:45:53,800 --> 00:45:57,290
-Ele sabia os nomes que todo mundo sabia.
+00:43:34,517 --> 00:43:52,637
+Não porque sejam outras, mas porque não tem nada por baixo delas competindo — nem telhado, nem árvore, nem fumaça de fogão — e então elas ocupam o céu inteiro de uma vez, até quase encostar na água do outro lado.
 
 424
-00:45:59,700 --> 00:46:07,160
-As que os marinheiros usavam pra achar o norte, e as que anunciavam que o tempo bom ia acabar.
+00:43:53,617 --> 00:43:56,977
+Ele sabia os nomes que todo mundo sabia.
 
 425
-00:46:08,930 --> 00:46:11,370
-Mas ele também tinha os dele.
+00:43:56,977 --> 00:44:06,777
+As que os marinheiros usavam pra achar o norte, e as que anunciavam que o tempo bom ia acabar.
 
 426
-00:46:13,240 --> 00:46:24,000
-Chamava uma delas de a teimosa, porque aparecia sempre no mesmo lugar, mesmo nas noites em que ele preferia não olhar pra aquele lado.
+00:44:07,847 --> 00:44:10,207
+Mas ele também tinha os dele.
 
 427
-00:46:26,150 --> 00:46:38,060
-Uma outra, baixinha e alaranjada, ele chamava de a irmã do fogo, porque era da cor exata da bacia quando a mecha estava recém-aparada.
+00:44:11,137 --> 00:44:21,977
+Chamava uma delas de a teimosa, porque aparecia sempre no mesmo lugar, mesmo nas noites em que ele preferia não olhar pra aquele lado.
 
 428
-00:46:39,780 --> 00:46:44,920
-E tinha uma, muito fraca, quase no fim do céu, que ele nunca deu nome nenhum.
+00:44:23,997 --> 00:44:36,197
+Uma outra, baixinha e alaranjada, ele chamava de a irmã do fogo, porque era da cor exata da bacia quando a mecha estava recém-aparada.
 
 429
-00:46:47,340 --> 00:46:50,640
-Só conferia se ainda estava lá.
+00:44:36,897 --> 00:44:42,127
+E tinha uma, muito fraca, quase no fim do céu, que ele nunca deu nome nenhum.
 
 430
-00:46:52,480 --> 00:46:56,200
-Ele conferia essa toda noite antes de descer.
+00:44:44,557 --> 00:44:47,847
+Só conferia se ainda estava lá.
 
 431
-00:46:58,380 --> 00:47:03,680
-Sem motivo nenhum, e sem nunca ter decidido fazer isso.
+00:44:48,437 --> 00:44:52,577
+Ele conferia essa toda noite antes de descer.
 
 432
-00:47:05,520 --> 00:47:12,940
-Certas coisas a gente só percebe que virou hábito quando já são hábito há muitos anos.
+00:44:54,667 --> 00:44:59,977
+Sem motivo nenhum, e sem nunca ter decidido fazer isso.
 
 433
-00:47:15,512 --> 00:47:23,212
-Antes das torres, e em quase todo lugar onde ainda não havia nenhuma, os homens faziam o seguinte.
+00:45:00,867 --> 00:45:08,367
+Certas coisas a gente só percebe que virou hábito quando já são hábito há muitos anos.
 
 434
-00:47:25,392 --> 00:47:39,012
-Navegavam de dia, sempre com a costa à vista, contando os pontos que já conheciam: aquele morro de dois cumes, aquela praia branca, aquela ponta onde a água muda de cor.
+00:45:11,169 --> 00:45:18,749
+Antes das torres, e em quase todo lugar onde ainda não havia nenhuma, os homens faziam o seguinte.
 
 435
-00:47:41,352 --> 00:47:51,252
-Uma viagem inteira era uma sequência de coisas reconhecidas, uma depois da outra, como quem lê uma frase decorada.
+00:45:20,189 --> 00:45:33,669
+Navegavam de dia, sempre com a costa à vista, contando os pontos que já conheciam: aquele morro de dois cumes, aquela praia branca, aquela ponta onde a água muda de cor.
 
 436
-00:47:53,032 --> 00:47:56,292
-E quando o sol caía, procuravam abrigo.
+00:45:35,969 --> 00:45:46,039
+Uma viagem inteira era uma sequência de coisas reconhecidas, uma depois da outra, como quem lê uma frase decorada.
 
 437
-00:47:58,462 --> 00:48:06,222
-Encostavam numa enseada, jogavam a pedra na água, dormiam a bordo e esperavam a manhã.
+00:45:46,709 --> 00:45:50,249
+E quando o sol caía, procuravam abrigo.
 
 438
-00:48:07,932 --> 00:48:16,372
-Quem era apanhado pela noite longe da costa tinha as estrelas, e tinha o vento, e tinha o que lembrava.
+00:45:52,329 --> 00:46:00,149
+Encostavam numa enseada, jogavam a pedra na água, dormiam a bordo e esperavam a manhã.
 
 439
-00:48:18,602 --> 00:48:19,742
-Era pouco.
+00:46:00,779 --> 00:46:09,299
+Quem era apanhado pela noite longe da costa tinha as estrelas, e tinha o vento, e tinha o que lembrava.
 
 440
-00:48:21,712 --> 00:48:28,832
-Um erro pequeno de direção, repetido por seis horas no escuro, vira um erro grande.
+00:46:11,509 --> 00:46:12,469
+Era pouco.
 
 441
-00:48:30,712 --> 00:48:34,392
-Por isso uma luz na rocha mudava tanta coisa.
+00:46:12,929 --> 00:46:21,769
+Um erro pequeno de direção, repetido por seis horas no escuro, vira um erro grande.
 
 442
-00:48:36,612 --> 00:48:38,992
-Ela não guiava até um lugar.
+00:46:22,739 --> 00:46:26,509
+Por isso uma luz na rocha mudava tanta coisa.
 
 443
-00:48:41,282 --> 00:48:51,202
-Ela dizia uma coisa mais simples e mais importante: aqui é terra, e você está mais perto dela do que imagina.
+00:46:26,809 --> 00:46:31,049
+Ela não guiava até um lugar.
 
 444
-00:48:53,102 --> 00:48:57,842
-Demétrio sabia disso do jeito que se sabe uma coisa óbvia.
+00:46:33,519 --> 00:46:43,379
+Ela dizia uma coisa mais simples e mais importante: aqui é terra, e você está mais perto dela do que imagina.
 
 445
-00:48:59,952 --> 00:49:03,892
-E era por isso que ele subia com chuva.
+00:46:44,339 --> 00:46:48,839
+Demétrio sabia disso do jeito que se sabe uma coisa óbvia.
 
 446
-00:49:06,250 --> 00:49:15,470
-Naquela noite o mar estava quase liso, e o vento tinha parado cedo, o que não era comum naquela época do ano.
+00:46:50,979 --> 00:46:55,239
+E era por isso que ele subia com chuva.
 
 447
-00:49:17,350 --> 00:49:21,650
-Ele tinha acabado de aparar a mecha pela terceira vez.
+00:46:57,643 --> 00:47:06,803
+Naquela noite o mar estava quase liso, e o vento tinha parado cedo, o que não era comum naquela época do ano.
 
 448
-00:49:24,120 --> 00:49:31,220
-Sentou na borda de pedra, com as costas na coluna, do jeito que sentava sempre.
+00:47:07,613 --> 00:47:12,073
+Ele tinha acabado de aparar a mecha pela terceira vez.
 
 449
-00:49:32,890 --> 00:49:34,770
-E foi aí que ele viu.
+00:47:14,503 --> 00:47:21,443
+Sentou na borda de pedra, com as costas na coluna, do jeito que sentava sempre.
 
 450
-00:49:36,670 --> 00:49:40,390
-Longe, na direção do mar aberto, uma luz pequena.
+00:47:22,483 --> 00:47:24,263
+E foi aí que ele viu.
 
 451
-00:49:42,610 --> 00:49:50,010
-Não uma estrela — estrela não mexe daquele jeito, subindo e descendo devagar com a água.
+00:47:24,743 --> 00:47:29,103
+Longe, na direção do mar aberto, uma luz pequena.
 
 452
-00:49:52,310 --> 00:49:54,130
-Era fogo em barco.
+00:47:31,123 --> 00:47:38,723
+Não uma estrela — estrela não mexe daquele jeito, subindo e descendo devagar com a água.
 
 453
-00:49:55,830 --> 00:49:57,830
-Um barco pequeno, então.
+00:47:40,833 --> 00:47:42,893
+Era fogo em barco.
 
 454
-00:50:00,190 --> 00:50:03,050
-Grande não anda com fogo no convés.
+00:47:43,483 --> 00:47:45,663
+Um barco pequeno, então.
 
 455
-00:50:03,050 --> 00:50:08,840
-Ele ficou olhando por muito tempo, sem se mexer.
+00:47:47,783 --> 00:47:51,023
+Grande não anda com fogo no convés.
 
 456
-00:50:10,990 --> 00:50:18,730
-Contando devagar, do jeito que tinha aprendido, pra medir se a luz estava vindo ou passando.
+00:47:51,873 --> 00:47:55,833
+Ele ficou olhando por muito tempo, sem se mexer.
 
 457
-00:50:20,480 --> 00:50:21,740
-Estava vindo.
+00:47:57,523 --> 00:48:05,723
+Contando devagar, do jeito que tinha aprendido, pra medir se a luz estava vindo ou passando.
 
 458
-00:50:23,570 --> 00:50:25,890
-O jeito de medir era simples.
+00:48:06,453 --> 00:48:07,813
+Estava vindo.
 
 459
-00:50:28,320 --> 00:50:39,900
-Ele escolhia um ponto fixo — uma fresta da pedra, a quina da coluna — e alinhava a luzinha com aquilo, e contava devagar até duzentos.
+00:48:08,093 --> 00:48:10,913
+O jeito de medir era simples.
 
 460
-00:50:41,420 --> 00:50:48,320
-Se no fim da contagem a luz tinha saído do alinhamento pro lado, estava passando.
+00:48:13,463 --> 00:48:24,373
+Ele escolhia um ponto fixo — uma fresta da pedra, a quina da coluna — e alinhava a luzinha com aquilo, e contava devagar até duzentos.
 
 461
-00:50:50,210 --> 00:50:54,750
-Se continuava no mesmo lugar e maior, estava vindo.
+00:48:25,813 --> 00:48:32,743
+Se no fim da contagem a luz tinha saído do alinhamento pro lado, estava passando.
 
 462
-00:50:57,130 --> 00:51:02,350
-Ele fez o que fazia sempre, e fez com mais cuidado que o normal.
+00:48:32,943 --> 00:48:38,883
+Se continuava no mesmo lugar e maior, estava vindo.
 
 463
-00:51:04,350 --> 00:51:08,990
-Encheu a bacia até a borda, embora não fosse hora de encher.
+00:48:41,621 --> 00:48:46,701
+Ele fez o que fazia sempre, e fez com mais cuidado que o normal.
 
 464
-00:51:11,390 --> 00:51:15,390
-Aparou a mecha inteira, não só a ponta.
+00:48:47,831 --> 00:48:52,571
+Encheu a bacia até a borda, embora não fosse hora de encher.
 
 465
-00:51:17,670 --> 00:51:25,070
-Passou o pano na placa de bronze, ali mesmo, no escuro, sem areia, só pra tirar o pó da noite.
+00:48:54,901 --> 00:48:59,001
+Aparou a mecha inteira, não só a ponta.
 
 466
-00:51:26,960 --> 00:51:39,450
-A chama subiu alta e limpa, e a luz alaranjada bateu na placa e saiu pela frente da torre, por cima da água preta, na direção de onde a luzinha vinha.
+00:49:01,031 --> 00:49:08,611
+Passou o pano na placa de bronze, ali mesmo, no escuro, sem areia, só pra tirar o pó da noite.
 
 467
-00:51:41,360 --> 00:51:44,760
-Isso é tudo que um homem numa torre pode fazer.
+00:49:08,611 --> 00:49:22,071
+A chama subiu alta e limpa, e a luz alaranjada bateu na placa e saiu pela frente da torre, por cima da água preta, na direção de onde a luzinha vinha.
 
 468
-00:51:47,200 --> 00:51:53,900
-Não dá pra gritar de longe, não dá pra ir buscar, não dá pra dizer por onde entrar.
+00:49:22,821 --> 00:49:26,501
+Isso é tudo que um homem numa torre pode fazer.
 
 469
-00:51:55,920 --> 00:51:58,000
-Dá pra queimar mais claro.
+00:49:28,831 --> 00:49:35,641
+Não dá pra gritar de longe, não dá pra ir buscar, não dá pra dizer por onde entrar.
 
 470
-00:52:00,140 --> 00:52:04,230
-E esperar que do outro lado alguém esteja olhando.
+00:49:36,691 --> 00:49:38,901
+Dá pra queimar mais claro.
 
 471
-00:52:06,070 --> 00:52:10,390
-Ele ficou de pé, ao lado da bacia, com o calor no rosto.
+00:49:38,901 --> 00:49:45,051
+E esperar que do outro lado alguém esteja olhando.
 
 472
-00:52:12,560 --> 00:52:14,140
-E não sentou mais.
+00:49:46,041 --> 00:49:50,461
+Ele ficou de pé, ao lado da bacia, com o calor no rosto.
 
 473
-00:52:16,748 --> 00:52:26,348
-A luz do barco sumiu por um tempo, atrás da ponta de rocha do norte, e demorou mais do que ele achava que ia demorar.
+00:49:52,531 --> 00:49:54,111
+E não sentou mais.
 
 474
-00:52:28,318 --> 00:52:44,878
-Quando voltou a aparecer, estava mais perto, e mais alta, e ele conseguia ver que subia e descia num ritmo mais curto — sinal de que já estava na água revolta da entrada da baía, onde a corrente bate.
+00:49:56,876 --> 00:50:06,376
+A luz do barco sumiu por um tempo, atrás da ponta de rocha do norte, e demorou mais do que ele achava que ia demorar.
 
 475
-00:52:46,388 --> 00:52:50,588
-E então aconteceu uma coisa que ele não esperava.
+00:50:07,396 --> 00:50:23,896
+Quando voltou a aparecer, estava mais perto, e mais alta, e ele conseguia ver que subia e descia num ritmo mais curto — sinal de que já estava na água revolta da entrada da baía, onde a corrente bate.
 
 476
-00:52:52,598 --> 00:52:54,518
-A luz do barco piscou.
+00:50:23,896 --> 00:50:28,816
+E então aconteceu uma coisa que ele não esperava.
 
 477
-00:52:56,768 --> 00:52:59,288
-Sumiu por um instante e voltou.
+00:50:29,356 --> 00:50:31,896
+A luz do barco piscou.
 
 478
-00:53:01,588 --> 00:53:04,948
-Sumiu de novo, e voltou de novo.
+00:50:34,276 --> 00:50:36,656
+Sumiu por um instante e voltou.
 
 479
-00:53:06,848 --> 00:53:11,228
-Alguém estava passando alguma coisa na frente do fogo.
+00:50:39,036 --> 00:50:42,376
+Sumiu de novo, e voltou de novo.
 
 480
-00:53:13,368 --> 00:53:14,508
-Duas vezes.
+00:50:42,626 --> 00:50:47,746
+Alguém estava passando alguma coisa na frente do fogo.
 
 481
-00:53:15,918 --> 00:53:17,758
-Devagar.
+00:50:49,566 --> 00:50:50,946
+Duas vezes.
 
 482
-00:53:19,708 --> 00:53:21,028
-Não é código.
+00:50:53,296 --> 00:50:54,296
+Devagar.
 
 483
-00:53:23,288 --> 00:53:24,388
-Nunca foi.
+00:50:55,096 --> 00:50:56,376
+Não é código.
 
 484
-00:53:26,428 --> 00:53:34,548
-É só o que um homem faz num barco quando vê uma luz na costa e quer que quem está lá saiba que ele viu.
+00:50:58,536 --> 00:50:59,876
+Nunca foi.
 
 485
-00:53:36,468 --> 00:53:40,368
-Demétrio pegou o pano que usava pra polir o bronze.
+00:50:59,876 --> 00:51:10,096
+É só o que um homem faz num barco quando vê uma luz na costa e quer que quem está lá saiba que ele viu.
 
 486
-00:53:42,668 --> 00:53:44,488
-Levantou o braço.
+00:51:11,246 --> 00:51:14,926
+Demétrio pegou o pano que usava pra polir o bronze.
 
 487
-00:53:46,458 --> 00:53:51,918
-E passou o pano na frente da chama, duas vezes, devagar.
+00:51:17,716 --> 00:51:19,296
+Levantou o braço.
 
 488
-00:53:54,401 --> 00:53:58,801
-Foi só depois de abaixar o braço que o pensamento chegou.
+00:51:19,296 --> 00:51:26,516
+E passou o pano na frente da chama, duas vezes, devagar.
 
 489
-00:54:00,861 --> 00:54:03,741
-Ele não deixou o pensamento crescer.
+00:51:29,237 --> 00:51:33,457
+Foi só depois de abaixar o braço que o pensamento chegou.
 
 490
-00:54:06,081 --> 00:54:13,441
-Segurou ele do jeito que a gente segura um copo cheio demais, com as duas mãos, sem andar.
+00:51:34,577 --> 00:51:37,617
+Ele não deixou o pensamento crescer.
 
 491
-00:54:15,621 --> 00:54:17,241
-Míron estava no mar.
+00:51:39,837 --> 00:51:47,257
+Segurou ele do jeito que a gente segura um copo cheio demais, com as duas mãos, sem andar.
 
 492
-00:54:19,681 --> 00:54:25,201
-Míron era marinheiro de barco pequeno, das últimas notícias.
+00:51:48,337 --> 00:51:50,237
+Míron estava no mar.
 
 493
-00:54:27,671 --> 00:54:31,111
-Barcos pequenos passam por ali o tempo todo.
+00:51:52,637 --> 00:51:58,197
+Míron era marinheiro de barco pequeno, das últimas notícias.
 
 494
-00:54:33,321 --> 00:54:38,741
-E qualquer marinheiro que vê uma luz responde do mesmo jeito.
+00:51:58,197 --> 00:52:04,067
+Barcos pequenos passam por ali o tempo todo.
 
 495
-00:54:40,811 --> 00:54:47,951
-Todas essas coisas eram verdade ao mesmo tempo, e nenhuma delas queria dizer nada.
+00:52:05,887 --> 00:52:11,687
+E qualquer marinheiro que vê uma luz responde do mesmo jeito.
 
 496
-00:54:49,861 --> 00:54:53,071
-Ele já tinha feito essa conta antes.
+00:52:13,017 --> 00:52:20,097
+Todas essas coisas eram verdade ao mesmo tempo, e nenhuma delas queria dizer nada.
 
 497
-00:54:55,521 --> 00:55:05,241
-Muitas vezes, nos primeiros anos, com outros barcos, em outras noites, e todas as vezes a conta tinha dado em nada.
+00:52:20,497 --> 00:52:24,217
+Ele já tinha feito essa conta antes.
 
 498
-00:55:07,171 --> 00:55:09,891
-Mas ele ficou olhando assim mesmo.
+00:52:26,707 --> 00:52:36,387
+Muitas vezes, nos primeiros anos, com outros barcos, em outras noites, e todas as vezes a conta tinha dado em nada.
 
 499
-00:55:12,221 --> 00:55:16,961
-Porque uma coisa é saber que provavelmente não é.
+00:52:37,287 --> 00:52:40,087
+Mas ele ficou olhando assim mesmo.
 
 500
-00:55:19,041 --> 00:55:24,761
-Outra coisa, completamente diferente, é conseguir parar de olhar.
+00:52:42,477 --> 00:52:47,257
+Porque uma coisa é saber que provavelmente não é.
 
 501
-00:55:27,252 --> 00:55:31,632
-O barco levou quase duas horas pra entrar na baía.
+00:52:49,297 --> 00:52:54,897
+Outra coisa, completamente diferente, é conseguir parar de olhar.
 
 502
-00:55:33,422 --> 00:55:35,242
-Ele acompanhou tudo.
+00:52:57,628 --> 00:53:01,888
+O barco levou quase duas horas pra entrar na baía.
 
 503
-00:55:37,662 --> 00:55:47,262
-Viu a luzinha contornar a rocha, sumir de novo, e reaparecer já do lado de dentro, onde a água fica preta e parada.
+00:53:02,818 --> 00:53:04,538
+Ele acompanhou tudo.
 
 504
-00:55:49,582 --> 00:55:52,922
-Viu ela parar de subir e descer.
+00:53:07,088 --> 00:53:16,648
+Viu a luzinha contornar a rocha, sumir de novo, e reaparecer já do lado de dentro, onde a água fica preta e parada.
 
 505
-00:55:55,162 --> 00:56:00,462
-Viu ela ficar imóvel, o que quer dizer que jogaram a pedra na água.
+00:53:19,028 --> 00:53:22,648
+Viu ela parar de subir e descer.
 
 506
-00:56:02,312 --> 00:56:09,172
-Duas horas é muito tempo pra ficar de pé olhando uma coisa que não muda quase nada.
+00:53:24,778 --> 00:53:29,798
+Viu ela ficar imóvel, o que quer dizer que jogaram a pedra na água.
 
 507
-00:56:09,172 --> 00:56:13,992
-Mas ele não pensou em descer.
+00:53:30,248 --> 00:53:37,668
+Duas horas é muito tempo pra ficar de pé olhando uma coisa que não muda quase nada.
 
 508
-00:56:15,902 --> 00:56:19,002
-Aparou a mecha na hora certa, como sempre.
+00:53:39,578 --> 00:53:42,498
+Mas ele não pensou em descer.
 
 509
-00:56:21,412 --> 00:56:24,052
-Encheu a bacia quando precisou.
+00:53:43,248 --> 00:53:46,408
+Aparou a mecha na hora certa, como sempre.
 
 510
-00:56:26,432 --> 00:56:32,392
-Fez o trabalho inteiro, do mesmo jeito, com o barco parado lá embaixo.
+00:53:48,828 --> 00:53:51,608
+Encheu a bacia quando precisou.
 
 511
-00:56:34,082 --> 00:56:41,222
-Um homem que passou vinte anos esperando aprende que esperar não é ficar parado.
+00:53:53,708 --> 00:53:59,808
+Fez o trabalho inteiro, do mesmo jeito, com o barco parado lá embaixo.
 
 512
-00:56:43,472 --> 00:56:50,892
-É continuar fazendo tudo, no ritmo de sempre, com uma parte da cabeça em outro lugar.
+00:54:00,818 --> 00:54:05,278
+Um homem que passou vinte anos esperando aprende que esperar não é ficar parado.
 
 513
-00:56:53,002 --> 00:56:56,242
-O céu ainda estava fechado de estrelas.
+00:54:05,278 --> 00:54:17,598
+É continuar fazendo tudo, no ritmo de sempre, com uma parte da cabeça em outro lugar.
 
 514
-00:56:58,422 --> 00:57:00,682
-Faltava muito pra manhã.
+00:54:17,758 --> 00:54:22,028
+O céu ainda estava fechado de estrelas.
 
 515
-00:57:03,114 --> 00:57:11,114
-Lá embaixo, no barco parado, alguém acendeu uma lamparina de mão e andou com ela até a proa.
+00:54:24,038 --> 00:54:26,438
+Faltava muito pra manhã.
 
 516
-00:57:12,854 --> 00:57:17,034
-Ele viu a luz pequena atravessar o convés devagar.
+00:54:28,982 --> 00:54:36,702
+Lá embaixo, no barco parado, alguém acendeu uma lamparina de mão e andou com ela até a proa.
 
 517
-00:57:19,424 --> 00:57:20,664
-Viu ela parar.
+00:54:37,592 --> 00:54:41,812
+Ele viu a luz pequena atravessar o convés devagar.
 
 518
-00:57:23,124 --> 00:57:29,804
-E viu ela subir, levantada, e ficar lá em cima, alta, na direção da torre.
+00:54:44,382 --> 00:54:45,502
+Viu ela parar.
 
 519
-00:57:31,654 --> 00:57:33,954
-Ficou assim por um tempo bom.
+00:54:45,502 --> 00:54:54,722
+E viu ela subir, levantada, e ficar lá em cima, alta, na direção da torre.
 
 520
-00:57:36,384 --> 00:57:37,644
-Sem piscar.
+00:54:54,882 --> 00:54:57,842
+Ficou assim por um tempo bom.
 
 521
-00:57:39,854 --> 00:57:41,334
-Sem se mexer.
+00:54:58,122 --> 00:55:01,672
+Sem piscar.
 
 522
-00:57:43,204 --> 00:57:49,864
-Só um homem, num barco, segurando uma lamparina no alto, virado pra uma luz na rocha.
+00:55:01,732 --> 00:55:05,182
+Sem se mexer.
 
 523
-00:57:51,694 --> 00:57:54,614
-Demétrio não fez nada dessa vez.
+00:55:06,082 --> 00:55:12,832
+Só um homem, num barco, segurando uma lamparina no alto, virado pra uma luz na rocha.
 
 524
-00:57:57,014 --> 00:58:03,454
-Não passou o pano na frente da chama, não levantou o braço, não fez sinal nenhum.
+00:55:13,972 --> 00:55:16,652
+Demétrio não fez nada dessa vez.
 
 525
-00:58:05,504 --> 00:58:11,024
-Ficou parado do lado da bacia, deixando o fogo fazer o que fogo faz.
+00:55:19,032 --> 00:55:25,522
+Não passou o pano na frente da chama, não levantou o braço, não fez sinal nenhum.
 
 526
-00:58:13,074 --> 00:58:22,734
-E os dois ficaram assim, cada um com a sua luz, olhando um pro outro por cima da água escura, sem saber quem era o outro.
+00:55:26,492 --> 00:55:32,212
+Ficou parado do lado da bacia, deixando o fogo fazer o que fogo faz.
 
 527
-00:58:25,155 --> 00:58:27,075
-De manhã ele desceu.
+00:55:32,962 --> 00:55:42,882
+E os dois ficaram assim, cada um com a sua luz, olhando um pro outro por cima da água escura, sem saber quem era o outro.
 
 528
-00:58:28,975 --> 00:58:33,295
-Não desceu correndo, e não desceu devagar de propósito.
+00:55:45,555 --> 00:55:47,415
+De manhã ele desceu.
 
 529
-00:58:35,595 --> 00:58:46,775
-Desceu os cento e doze degraus no passo de sempre, parando no trigésimo e no septuagésimo, do jeito que fazia havia vinte anos.
+00:55:48,195 --> 00:55:52,645
+Não desceu correndo, e não desceu devagar de propósito.
 
 530
-00:58:48,875 --> 00:58:54,075
-Quando chegou na pedra baixa da baía, o barco já estava saindo.
+00:55:54,755 --> 00:56:06,055
+Desceu os cento e doze degraus no passo de sempre, parando no trigésimo e no septuagésimo, do jeito que fazia havia vinte anos.
 
 531
-00:58:55,915 --> 00:59:07,035
-Tinha aproveitado a primeira brisa da manhã, que é o que qualquer barco pequeno faz, porque a brisa da manhã é a melhor do dia e não espera ninguém.
+00:56:06,815 --> 00:56:12,595
+Quando chegou na pedra baixa da baía, o barco já estava saindo.
 
 532
-00:59:09,055 --> 00:59:13,795
-Ele viu a vela pequena pegando vento na saída da baía.
+00:56:12,915 --> 00:56:24,395
+Tinha aproveitado a primeira brisa da manhã, que é o que qualquer barco pequeno faz, porque a brisa da manhã é a melhor do dia e não espera ninguém.
 
 533
-00:59:15,795 --> 00:59:21,335
-Viu dois homens no convés, longe demais pra ter rosto.
+00:56:25,675 --> 00:56:30,335
+Ele viu a vela pequena pegando vento na saída da baía.
 
 534
-00:59:22,425 --> 00:59:31,045
-E ficou ali, na pedra, com as mãos caídas, até o barco virar um ponto branco e depois nada.
+00:56:32,415 --> 00:56:37,935
+Viu dois homens no convés, longe demais pra ter rosto.
 
 535
-00:59:32,845 --> 00:59:34,965
-Nunca soube quem era.
+00:56:38,755 --> 00:56:46,635
+E ficou ali, na pedra, com as mãos caídas, até o barco virar um ponto branco e depois nada.
 
 536
-00:59:34,965 --> 00:59:49,585
-E, com o tempo, entendeu que essa é a forma normal das coisas: a maior parte do bem que a gente faz vai embora antes de a gente descobrir pra quem foi.
+00:56:46,875 --> 00:56:49,775
+Nunca soube quem era.
 
 537
-00:59:52,046 --> 00:59:56,546
-Muitos anos depois, ele ainda pensava naquela noite.
+00:56:51,645 --> 00:57:04,325
+E, com o tempo, entendeu que essa é a forma normal das coisas: a maior parte do bem que a gente faz vai embora antes de a gente descobrir pra quem foi.
 
 538
-00:59:58,966 --> 01:00:00,686
-Não todos os dias.
+00:57:06,919 --> 00:57:11,199
+Muitos anos depois, ele ainda pensava naquela noite.
 
 539
-01:00:03,246 --> 01:00:08,206
-Mas ela voltava, de vez em quando, sem ser chamada.
+00:57:13,619 --> 00:57:15,519
+Não todos os dias.
 
 540
-01:00:10,096 --> 01:00:17,696
-E ele tinha uma frase pronta pra dizer, caso um dia encontrasse o filho e tivesse coragem.
+00:57:15,599 --> 00:57:22,979
+Mas ela voltava, de vez em quando, sem ser chamada.
 
 541
-01:00:19,546 --> 01:00:22,266
-Ia dizer que não ficou bravo.
+00:57:23,739 --> 00:57:31,619
+E ele tinha uma frase pronta pra dizer, caso um dia encontrasse o filho e tivesse coragem.
 
 542
-01:00:24,546 --> 01:00:32,206
-Que entendeu no mesmo dia, e não levou anos pra entender, como talvez o filho imaginasse.
+00:57:31,879 --> 00:57:35,219
+Ia dizer que não ficou bravo.
 
 543
-01:00:34,126 --> 01:00:37,986
-Ia dizer que a luz ficou acesa todas as noites.
+00:57:35,219 --> 00:57:45,059
+Que entendeu no mesmo dia, e não levou anos pra entender, como talvez o filho imaginasse.
 
 544
-01:00:40,546 --> 01:00:45,686
-Todas, sem falhar, menos três, e que ele lembrava das três.
+00:57:46,049 --> 00:57:49,969
+Ia dizer que a luz ficou acesa todas as noites.
 
 545
-01:00:47,596 --> 01:01:05,016
-E ia dizer que se em alguma noite, em algum lugar, Míron tivesse visto uma luz laranja na rocha e corrigido o rumo por causa dela, então estava tudo bem, e não precisava ser aquela torre, e não precisava ser ele.
+00:57:51,839 --> 00:57:57,699
+Todas, sem falhar, menos três, e que ele lembrava das três.
 
 546
-01:01:06,196 --> 01:01:08,116
-Nunca disse.
+00:57:58,219 --> 00:58:16,059
+E ia dizer que se em alguma noite, em algum lugar, Míron tivesse visto uma luz laranja na rocha e corrigido o rumo por causa dela, então estava tudo bem, e não precisava ser aquela torre, e não precisava ser ele.
 
 547
-01:01:10,706 --> 01:01:12,426
-Nunca teve pra quem.
+00:58:16,939 --> 00:58:18,299
+Nunca disse.
 
 548
-01:01:14,886 --> 01:01:22,206
-Mas a frase ficou pronta, do mesmo jeito que a bacia ficava cheia antes de escurecer.
+00:58:20,119 --> 00:58:22,619
+Nunca teve pra quem.
 
 549
-01:01:24,646 --> 01:01:29,726
-O fim de uma noite tem um som próprio, e Demétrio conhecia bem.
+00:58:24,889 --> 00:58:32,329
+Mas a frase ficou pronta, do mesmo jeito que a bacia ficava cheia antes de escurecer.
 
 550
-01:01:31,756 --> 01:01:38,616
-A chama fica menor, não porque falte óleo, mas porque o ar muda antes do sol aparecer.
+00:58:34,865 --> 00:58:39,745
+O fim de uma noite tem um som próprio, e Demétrio conhecia bem.
 
 551
-01:01:38,616 --> 01:01:43,976
-Fica mais pesado, mais parado.
+00:58:40,735 --> 00:58:47,555
+A chama fica menor, não porque falte óleo, mas porque o ar muda antes do sol aparecer.
 
 552
-01:01:46,356 --> 01:01:50,656
-E o fogo sente isso antes de qualquer pessoa.
+00:58:47,555 --> 00:58:53,135
+Fica mais pesado, mais parado.
 
 553
-01:01:52,626 --> 01:01:54,066
-Ele deixava.
+00:58:54,935 --> 00:58:59,415
+E o fogo sente isso antes de qualquer pessoa.
 
 554
-01:01:56,476 --> 01:02:00,216
-Não enchia mais a bacia depois de certa hora.
+00:59:00,725 --> 00:59:02,245
+Ele deixava.
 
 555
-01:02:02,506 --> 01:02:06,686
-Não valia a pena, e o óleo era contado.
+00:59:04,575 --> 00:59:08,375
+Não enchia mais a bacia depois de certa hora.
 
 556
-01:02:08,606 --> 01:02:17,706
-A luz ia baixando devagar, virando uma coisa laranja pequena no meio de uma pedra que já dava pra ver sem ela.
+00:59:08,375 --> 00:59:14,985
+Não valia a pena, e o óleo era contado.
 
 557
-01:02:19,686 --> 01:02:36,406
-E lá pela última hora entrava uma claridade cinza pela abertura do lado leste, fina, sem cor nenhuma ainda, e a chama e a claridade dividiam o alto da torre por um tempo, sem nenhuma das duas ganhar.
+00:59:15,755 --> 00:59:25,015
+A luz ia baixando devagar, virando uma coisa laranja pequena no meio de uma pedra que já dava pra ver sem ela.
 
 558
-01:02:38,426 --> 01:02:41,126
-Era a parte que ele mais gostava.
+00:59:25,585 --> 00:59:42,625
+E lá pela última hora entrava uma claridade cinza pela abertura do lado leste, fina, sem cor nenhuma ainda, e a chama e a claridade dividiam o alto da torre por um tempo, sem nenhuma das duas ganhar.
 
 559
-01:02:43,546 --> 01:02:46,866
-E era a única em que ele sentava de novo.
+00:59:43,805 --> 00:59:46,645
+Era a parte que ele mais gostava.
 
 560
-01:02:48,886 --> 01:02:52,506
-Nessa hora o vento também parava, quase sempre.
+00:59:48,755 --> 00:59:52,135
+E era a única em que ele sentava de novo.
 
 561
-01:02:54,966 --> 01:03:06,026
-Não morria de vez, mas perdia a teimosia, e as frestas da pedra ficavam caladas pela primeira vez desde o começo da noite.
+00:59:53,355 --> 00:59:56,835
+Nessa hora o vento também parava, quase sempre.
 
 562
-01:03:08,016 --> 01:03:10,376
-O mar embaixo continuava.
+00:59:59,305 --> 01:00:10,345
+Não morria de vez, mas perdia a teimosia, e as frestas da pedra ficavam caladas pela primeira vez desde o começo da noite.
 
 563
-01:03:12,856 --> 01:03:16,036
-Ele era o único que não descansava nunca.
+01:00:10,865 --> 01:00:13,955
+O mar embaixo continuava.
 
 564
-01:03:18,166 --> 01:03:35,066
-Demétrio sentava com as costas na coluna do lado leste, sentindo a pedra fria atravessar o casaco, e ficava olhando a chama pequena com os olhos meio fechados, sem pensar em nada que pudesse ser dito depois.
+01:00:16,305 --> 01:00:19,495
+Ele era o único que não descansava nunca.
 
 565
-01:03:37,750 --> 01:03:46,510
-Quando o sol aparecia de verdade, a bacia já estava quase apagada, e ele nem precisava fazer nada.
+01:00:20,645 --> 01:00:37,625
+Demétrio sentava com as costas na coluna do lado leste, sentindo a pedra fria atravessar o casaco, e ficava olhando a chama pequena com os olhos meio fechados, sem pensar em nada que pudesse ser dito depois.
 
 566
-01:03:48,570 --> 01:03:51,070
-O mar mudava de cor primeiro.
+01:00:40,445 --> 01:00:48,945
+Quando o sol aparecia de verdade, a bacia já estava quase apagada, e ele nem precisava fazer nada.
 
 567
-01:03:53,360 --> 01:04:00,440
-De preto pra cinza, de cinza pra um azul muito claro que não é o azul do meio do dia.
+01:00:50,065 --> 01:00:52,405
+O mar mudava de cor primeiro.
 
 568
-01:04:03,010 --> 01:04:11,070
-As pedras da baía apareciam uma a uma, como se alguém estivesse colocando elas ali naquele momento.
+01:00:52,785 --> 01:01:02,035
+De preto pra cinza, de cinza pra um azul muito claro que não é o azul do meio do dia.
 
 569
-01:04:13,010 --> 01:04:15,210
-Os pássaros voltavam.
+01:01:04,165 --> 01:01:12,725
+As pedras da baía apareciam uma a uma, como se alguém estivesse colocando elas ali naquele momento.
 
 570
-01:04:17,580 --> 01:04:20,200
-Não muitos, e sempre os mesmos.
+01:01:14,025 --> 01:01:15,865
+Os pássaros voltavam.
 
 571
-01:04:22,210 --> 01:04:30,250
-Ele descia com a lamparina pequena na mão, que continuava acesa, porque aquela nunca apagava.
+01:01:17,755 --> 01:01:20,935
+Não muitos, e sempre os mesmos.
 
 572
-01:04:32,110 --> 01:04:35,590
-Em algum lugar do dia ele ia dormir um pouco.
+01:01:21,895 --> 01:01:29,965
+Ele descia com a lamparina pequena na mão, que continuava acesa, porque aquela nunca apagava.
 
 573
-01:04:38,160 --> 01:04:38,960
-Ia comer.
+01:01:30,345 --> 01:01:34,385
+Em algum lugar do dia ele ia dormir um pouco.
 
 574
-01:04:41,590 --> 01:04:47,190
-Ia polir a placa de bronze se fosse o dia certo da semana.
+01:01:36,585 --> 01:01:37,785
+Ia comer.
 
 575
-01:04:47,190 --> 01:04:51,810
-E de noite ia subir de novo.
+01:01:39,625 --> 01:01:45,865
+Ia polir a placa de bronze se fosse o dia certo da semana.
 
 576
-01:04:54,260 --> 01:04:56,440
-Cento e doze degraus.
+01:01:46,855 --> 01:01:49,445
+E de noite ia subir de novo.
 
 577
-01:04:58,790 --> 01:05:00,370
-Encher a bacia.
+01:01:52,145 --> 01:01:54,265
+Cento e doze degraus.
 
 578
-01:05:02,830 --> 01:05:03,490
-Acender.
+01:01:56,575 --> 01:01:58,235
+Encher a bacia.
 
 579
-01:05:05,670 --> 01:05:13,170
-Porque a noite seguinte sempre vinha, e ainda vem, e alguém tem que estar lá em cima quando ela chegar.
+01:02:00,645 --> 01:02:01,325
+Acender.
 
 580
-01:05:15,831 --> 01:05:17,211
-Foi só isso.
+01:02:02,295 --> 01:02:09,995
+Porque a noite seguinte sempre vinha, e ainda vem, e alguém tem que estar lá em cima quando ela chegar.
 
 581
-01:05:19,701 --> 01:05:22,761
-Um homem, um fogo, e uma baía quieta.
+01:02:12,825 --> 01:02:14,045
+Foi só isso.
 
 582
-01:05:24,681 --> 01:05:26,141
-Nenhum monstro.
+01:02:16,505 --> 01:02:19,705
+Um homem, um fogo, e uma baía quieta.
 
 583
-01:05:28,671 --> 01:05:30,171
-Nenhuma batalha.
+01:02:20,435 --> 01:02:22,055
+Nenhum monstro.
 
 584
-01:05:32,681 --> 01:05:33,781
-Nenhum deus.
+01:02:24,485 --> 01:02:26,025
+Nenhuma batalha.
 
 585
-01:05:35,951 --> 01:05:44,911
-Só um trabalho pequeno, feito de hora em hora, por muitos anos, por alguém que nunca soube direito pra quem estava fazendo.
+01:02:28,395 --> 01:02:29,655
+Nenhum deus.
 
 586
-01:05:47,121 --> 01:05:55,461
-Eu contei essa história muitas vezes pra mim mesmo, lá em cima, entre uma aparada de mecha e outra.
+01:02:30,765 --> 01:02:39,865
+Só um trabalho pequeno, feito de hora em hora, por muitos anos, por alguém que nunca soube direito pra quem estava fazendo.
 
 587
-01:05:58,131 --> 01:06:00,131
-E agora contei pra você.
+01:02:40,995 --> 01:02:49,455
+Eu contei essa história muitas vezes pra mim mesmo, lá em cima, entre uma aparada de mecha e outra.
 
 588
-01:06:02,141 --> 01:06:05,881
-Se você ainda estiver acordado, não tem problema.
+01:02:49,715 --> 01:02:54,105
+E agora contei pra você.
 
 589
-01:06:08,371 --> 01:06:09,271
-Fique aí.
+01:02:54,975 --> 01:02:58,675
+Se você ainda estiver acordado, não tem problema.
 
 590
-01:06:11,771 --> 01:06:17,031
-O mar continua mais um pouco depois que eu parar de falar.
+01:03:01,305 --> 01:03:02,205
+Fique aí.
 
 591
-01:06:19,121 --> 01:06:20,101
-Durma bem.
+01:03:04,545 --> 01:03:09,985
+O mar continua mais um pouco depois que eu parar de falar.
 
 592
-01:06:22,171 --> 01:06:24,091
-A torre não existe mais.
+01:03:10,965 --> 01:03:12,145
+Durma bem.
 
 593
-01:06:24,091 --> 01:06:36,071
-Caiu num inverno qualquer, muitos anos depois de eu descer dela pela última vez, e ninguém levantou outra no lugar.
+01:03:13,015 --> 01:03:15,115
+A torre não existe mais.
 
 594
-01:06:38,101 --> 01:06:40,021
-A baía continua lá.
+01:03:17,965 --> 01:03:27,165
+Caiu num inverno qualquer, muitos anos depois de eu descer dela pela última vez, e ninguém levantou outra no lugar.
 
 595
-01:06:42,491 --> 01:06:44,851
-Funda e quieta, do mesmo jeito.
+01:03:28,335 --> 01:03:30,195
+A baía continua lá.
 
 596
-01:06:47,001 --> 01:06:52,701
+01:03:32,725 --> 01:03:35,025
+Funda e quieta, do mesmo jeito.
+
+597
+01:03:35,385 --> 01:03:41,795
 E os navios que passam hoje têm outros jeitos de saber onde a terra começa.
 

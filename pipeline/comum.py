@@ -14,6 +14,17 @@ RAIZ = Path(__file__).resolve().parent.parent
 FFMPEG = os.environ.get("FFMPEG") or shutil.which("ffmpeg") or "/opt/homebrew/bin/ffmpeg"
 FFPROBE = os.environ.get("FFPROBE") or shutil.which("ffprobe") or "/opt/homebrew/bin/ffprobe"
 
+# No Windows o stdout nasce em cp1252, que não codifica IPA nem símbolo fora do
+# Latin-1 — e aí um LOG derruba o estágio inteiro. Aconteceu em 04/09/2026: o
+# s2_tts morreu com UnicodeEncodeError ao anunciar a troca de vogal final
+# (`ɐ`, U+0250) ANTES de sintetizar a primeira cena. Reconfigurar aqui vale
+# para todos os estágios, porque todos passam por este módulo.
+for _fluxo in (sys.stdout, sys.stderr):
+    try:
+        _fluxo.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):     # fluxo redirecionado/não-reconfigurável
+        pass
+
 
 def log(msg: str) -> None:
     print(f"  {msg}", flush=True)
