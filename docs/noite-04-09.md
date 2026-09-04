@@ -245,6 +245,29 @@ perdendo as views e o histórico. Eu não faria isso sem você mandar.
   faróis queimavam lenha, não óleo — a evidência sobre o Farol de Alexandria
   diz o contrário). Detalhes no `fase0/video-03/README.md`.
 
+## O `preflight`, e o bug que ele achou na primeira execução
+
+Escrevi um comando que confere o projeto **antes** de gastar dinheiro ou tempo:
+`python -m pipeline.preflight fase0/video-03`. Ele virou o primeiro passo das
+duas sequências do estúdio.
+
+Confere roteiro contra plano (contagem e títulos), piso de `speed`, duração
+projetada contra o alvo e contra o piso do mercado, cue proibido no
+`estilo_base` **e no prompt de cada cena**, `obra` acentuada, cena sem prompt,
+formato do `ambiente`, cena sem pista de luz, e o custo em reais.
+
+**Na primeira execução ele achou um bug meu, e grave.** Eu tinha escrito o campo
+`ambiente` das 18 cenas novas do video-03 como **texto** — "vento nas frestas,
+mar ao longe" — quando ele é um **dicionário de níveis de mixagem**
+`{mar, chuva, fogo, vento, abafado}`. O `s5_render` faz `cfg.get("mar")` e teria
+quebrado no meio do render. Convertidas as 22 cenas e validadas: os perfis geram
+estéreo com as camadas certas.
+
+Depois mandei o Gemini auditar o próprio preflight — buraco em rede de segurança
+é pior que não ter rede. Ele achou cinco, todos corrigidos, sendo o pior este: a
+ferramenta que existe para evitar crash **crashava** com `ZeroDivisionError` se
+`voz.speed` faltasse.
+
 ## O erro de método que se repetiu quatro vezes
 
 Antes de achar a causa, fiz quatro medições que não serviram — e todas do mesmo
@@ -254,3 +277,26 @@ Está registrado como o modo de falha nº 6 em [verificacao.md](verificacao.md).
 O que funcionou foi teste **pareado**: mudar uma variável só. E isso só ficou
 possível depois de eu conseguir mexer no fonema direto, envolvendo o `g2p` do
 Kokoro. Antes disso eu comparava palavras diferentes e chamava de experimento.
+
+---
+
+## Estado ao fim da noite
+
+- **Áudio do video-03**: regerando a `speed 0.85`, ~52 min. Quando terminar,
+  rode `python -m pipeline.s2b_revisar fase0/video-03` e abra
+  `fase0/video-03/audio/revisar.html`.
+- **Estúdio**: 8 estágios, 2 sequências, criação de projeto, preflight. Testado
+  de ponta a ponta — 9 telas respondem, 5 guardas barram.
+- **video-03**: passa no preflight. 39 cenas, 38 prompts escritos, ambiente
+  configurado, custo estimado de **R$ 0,96** (R$ 2,41 com retentativa).
+
+### O que decide o próximo passo
+
+**Ouça e diga se a ênfase melhorou.** Se sim, o piso de 0.85 fica valendo e o
+video-03 sai com ~52 min. Se não, o problema é outro e a página de revisão
+serve para você apontar a cena e a frase.
+
+E fica de pé a pergunta da duração: 52 min contra o piso de 65 do mercado.
+Fecha-se com **mais texto**, não com mais silêncio — a pausa tem retorno
+decrescente e nem 6× o padrão passa de 57 min. São ~2.000 palavras a mais, e eu
+não as escrevi porque você ainda não ouviu o que existe.
