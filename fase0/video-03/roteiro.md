@@ -45,11 +45,11 @@ Não precisa entender nada. Não vai ter pergunta no fim.
 
 ## Cena 2 — A ilha
 
-A ilha era pequena. Você atravessava ela de ponta a ponta numa manhã. Andando
-devagar. E ainda sobrava tempo pra sentar e comer alguma coisa.
+A ilha era pequena. Numa manhã, você atravessava ela de ponta a ponta.
+Andando devagar. E ainda sobrava tempo pra sentar e comer alguma coisa.
 
 Numa das pontas, a terra parava de repente. Virava rocha. E caía direto na
-água. Ali ficava a torre. Não era grande. E era só alta o bastante pra a luz
+água, sem praia nenhuma. Ali ficava a torre. Não era grande. E era só alta o bastante pra a luz
 se ver de longe, por cima das ondas.
 
 Do outro lado da rocha, a baía se abria. Funda e quieta. Como uma tigela de
