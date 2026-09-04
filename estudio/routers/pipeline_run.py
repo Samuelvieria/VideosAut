@@ -104,6 +104,24 @@ ESTAGIOS: dict[str, Estagio] = {
 }
 
 
+# Sequências: os estágios dependem uns dos outros (o render precisa das imagens
+# E do áudio; a legenda precisa do áudio), então rodar na mão significa lembrar
+# a ordem. Aqui a ordem está escrita uma vez.
+SEQUENCIAS: dict[str, tuple[str, tuple[str, ...], str]] = {
+    "mecanica": (
+        "produção sem gastar — narração, legendas, render",
+        ("narracao", "legendas", "render"),
+        "Assume que as imagens já existem. Não chama a fal.ai, não gasta nada.",
+    ),
+    "completa": (
+        "produção completa — inclui GERAR as imagens",
+        ("narracao", "imagens", "legendas", "render", "thumbnails"),
+        "Inclui o s3_imagens, que GASTA na fal.ai. Rode o --seco antes e "
+        "confira os prompts.",
+    ),
+}
+
+
 def _checar_projeto(slug: str) -> Path:
     if "/" in slug or "\\" in slug or ".." in slug:
         raise HTTPException(status_code=400, detail="slug inválido")
@@ -187,9 +205,39 @@ async def rodar(slug: str, estagio: str,
     return {"status": "iniciado", "slug": slug, "estagio": estagio, "argv": argv}
 
 
+@router.post("/projetos/{slug}/sequencias/{nome}/rodar")
+async def rodar_sequencia(slug: str, nome: str, confirmo_custo: str = Form(None),
+                          forcar: bool = Form(False)):
+    d = _checar_projeto(slug)
+    if nome not in SEQUENCIAS:
+        raise HTTPException(status_code=404, detail=f"sequência '{nome}' desconhecida")
+    _, etapas, _ = SEQUENCIAS[nome]
+
+    # A confirmação é exigida se QUALQUER etapa da sequência gastar. O usuário
+    # aperta um botão só; a guarda tem que olhar a sequência inteira.
+    if any(ESTAGIOS[e].custa for e in etapas) and confirmo_custo != "sim":
+        gasta = [e for e in etapas if ESTAGIOS[e].custa]
+        raise HTTPException(
+            status_code=400,
+            detail=f"esta sequência inclui etapa que gasta na fal.ai "
+                   f"({', '.join(gasta)}) — falta confirmo_custo=sim")
+
+    passos = []
+    for e in etapas:
+        est = ESTAGIOS[e]
+        argv = _montar_argv(est, {"forcar": forcar})
+        passos.append((f"{e} ({est.modulo})", est.modulo, [str(d), *argv]))
+    if not runner.iniciar_sequencia(slug, nome, passos):
+        raise HTTPException(status_code=409, detail="esta sequência já está rodando")
+    return {"status": "iniciado", "slug": slug, "sequencia": nome,
+            "passos": [p[0] for p in passos]}
+
+
 @router.get("/projetos/{slug}/estagios/{estagio}/logs")
 async def logs(slug: str, estagio: str):
     _checar_projeto(slug)
-    _checar_estagio(estagio)
+    # aceita nome de estágio OU de sequência: o SSE é o mesmo mecanismo
+    if estagio not in ESTAGIOS and estagio not in SEQUENCIAS:
+        raise HTTPException(status_code=404, detail=f"'{estagio}' desconhecido")
     return StreamingResponse(runner.acompanhar(slug, estagio),
                              media_type="text/event-stream")

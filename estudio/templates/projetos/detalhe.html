@@ -57,6 +57,32 @@
   branch ou dar pull não invalida mais nada.
 </p>
 
+<div class="card" style="border-color:var(--ambar)">
+  <strong>Rodar em sequência</strong>
+  <p style="color:var(--texto-fraco); margin:.4rem 0">
+    Os estágios dependem uns dos outros — o render precisa das imagens e do
+    áudio. A sequência roda na ordem certa e <strong>para no primeiro
+    erro</strong>, em vez de produzir um vídeo com cena faltando.
+  </p>
+  {% for nome, seq in sequencias.items() %}
+    <div class="estagio-campos" style="border-top:1px solid var(--borda); padding-top:.7rem">
+      <div style="flex:1 1 100%">
+        <strong>{{ seq[0] }}</strong><br>
+        <span style="color:var(--texto-fraco); font-size:.88rem">{{ seq[2] }}</span><br>
+        <span style="color:var(--texto-fraco); font-size:.82rem">{{ seq[1] | join(" → ") }}</span>
+      </div>
+      {% if seq[1] | select("in", gasta) | list %}
+        <label style="color:var(--ambar-forte)">
+          <input type="checkbox" id="confirmo-seq-{{ nome }}"> confirmo o gasto</label>
+      {% endif %}
+      <button id="btn-seq-{{ nome }}"
+              onclick="rodarSequencia('{{ slug }}', '{{ nome }}', 'seq-{{ nome }}')">
+        rodar sequência</button>
+    </div>
+    <pre id="log-seq-{{ nome }}" class="console" style="margin-top:.6rem"></pre>
+  {% endfor %}
+</div>
+
 {% for nome, e in estagios.items() %}
 <div class="card">
   <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap">

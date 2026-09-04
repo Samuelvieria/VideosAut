@@ -17,7 +17,7 @@ from fastapi.templating import Jinja2Templates
 
 from estudio.db import personas as db_personas
 from estudio.db.projetos import DURACAO_PADRAO_MIN, ProjetoInvalido, criar_projeto
-from estudio.routers.pipeline_run import ESTAGIOS, MODELOS_WHISPER
+from estudio.routers.pipeline_run import ESTAGIOS, MODELOS_WHISPER, SEQUENCIAS
 from pipeline.comum import carregar_plano
 
 router = APIRouter()
@@ -109,6 +109,8 @@ async def detalhe(request: Request, slug: str):
     return templates.TemplateResponse(request, "projetos/detalhe.html", {
         "slug": slug, "plano": plano, "imagens": imagens, "audios": audios,
         "estagios": ESTAGIOS, "modelos_whisper": MODELOS_WHISPER,
+        "sequencias": SEQUENCIAS,
+        "gasta": [n for n, e in ESTAGIOS.items() if e.custa],
         "tem_video": (d / "final.mp4").is_file(),
         "tem_legendas": (d / "legendas.pt-BR.srt").is_file(),
     })

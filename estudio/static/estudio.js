@@ -93,3 +93,60 @@ function extrasDe(nome) {
   }
   return extras;
 }
+
+
+// Dispara uma SEQUÊNCIA de estágios. Mesma mecânica de SSE do estágio avulso —
+// o servidor escreve tudo num log só e marca cada passo — então o front só
+// precisa apontar para outra URL.
+function rodarSequencia(slug, nome, id) {
+  const botao = document.getElementById(`btn-${id}`);
+  const log = document.getElementById(`log-${id}`);
+  const confirmo = document.getElementById(`confirmo-seq-${nome}`);
+
+  if (confirmo && !confirmo.checked) {
+    log.textContent = "esta sequência inclui etapa que gasta na fal.ai — " +
+                      "marque 'confirmo o gasto' antes de rodar.";
+    return Promise.resolve(false);
+  }
+  const corpo = new FormData();
+  if (confirmo) corpo.append("confirmo_custo", "sim");
+
+  log.textContent = "";
+  botao.disabled = true;
+  botao.textContent = "rodando...";
+
+  return fetch(`/projetos/${slug}/sequencias/${nome}/rodar`, { method: "POST", body: corpo })
+    .then((resp) => new Promise((resolve) => {
+      if (!resp.ok && resp.status !== 409) {
+        resp.text().then((c) => {
+          let msg = c;
+          try { const j = JSON.parse(c); if (j.detail) msg = j.detail; } catch (_) {}
+          log.textContent = `erro ao iniciar (${resp.status}): ${msg}`;
+        });
+        botao.disabled = false; botao.textContent = "rodar sequência";
+        resolve(false); return;
+      }
+      const fonte = new EventSource(`/projetos/${slug}/estagios/${nome}/logs`);
+      fonte.onmessage = (ev) => {
+        log.textContent += ev.data + "\n";
+        log.scrollTop = log.scrollHeight;
+      };
+      fonte.addEventListener("done", (ev) => {
+        log.textContent += ev.data === "0"
+          ? "\n[sequência concluída]\n"
+          : `\n[PAROU — código ${ev.data}. Veja acima em que passo]\n`;
+        fonte.close();
+        botao.disabled = false; botao.textContent = "rodar de novo";
+        resolve(ev.data === "0");
+      });
+      fonte.onerror = () => {
+        fonte.close(); botao.disabled = false;
+        botao.textContent = "rodar sequência"; resolve(false);
+      };
+    }))
+    .catch((e) => {
+      log.textContent = `erro de rede: ${e}`;
+      botao.disabled = false; botao.textContent = "rodar sequência";
+      return false;
+    });
+}

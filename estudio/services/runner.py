@@ -39,7 +39,12 @@ def estado(slug: str, estagio: str) -> Execucao | None:
 
 
 async def _rodar(chave: tuple[str, str], modulo: str, argv: list[str]) -> None:
-    ex = _execucoes[chave]
+    await _rodar_em(_execucoes[chave], modulo, argv)
+
+
+async def _rodar_em(ex: "Execucao", modulo: str, argv: list[str]) -> None:
+    """Roda um módulo escrevendo no Execucao dado. Separado de `_rodar` para a
+    sequência poder reusar sem criar entrada no registro global."""
     try:
         proc = await asyncio.create_subprocess_exec(
             sys.executable, "-u", "-m", modulo, *argv,
@@ -67,6 +72,42 @@ def iniciar(slug: str, estagio: str, modulo: str, argv: list[str]) -> bool:
         return False
     _execucoes[chave] = Execucao()
     asyncio.create_task(_rodar(chave, modulo, argv))
+    return True
+
+
+async def _rodar_sequencia(chave: tuple[str, str], passos: list[tuple[str, str, list[str]]]) -> None:
+    """Roda os passos em ordem, PARANDO no primeiro que falhar.
+
+    Parar em vez de seguir é o ponto: os estágios dependem uns dos outros — o
+    render precisa das imagens e do áudio. Seguir depois de uma falha produz um
+    vídeo com cena faltando em vez de um erro, e vídeo errado é mais caro de
+    descobrir que erro.
+    """
+    ex = _execucoes[chave]
+    for i, (rotulo, modulo, argv) in enumerate(passos, 1):
+        ex.linhas.append(f"[estudio] passo {i}/{len(passos)}: {rotulo}")
+        sub = Execucao()
+        await _rodar_em(sub, modulo, argv)
+        ex.linhas.extend(sub.linhas)
+        if sub.codigo != 0:
+            ex.linhas.append(
+                f"[estudio] PAROU no passo {i} ({rotulo}), código {sub.codigo}. "
+                f"Os passos seguintes não rodaram.")
+            ex.finalizado, ex.codigo = True, sub.codigo
+            return
+        ex.linhas.append(f"[estudio] passo {i} concluído")
+    ex.linhas.append("[estudio] sequência inteira concluída")
+    ex.finalizado, ex.codigo = True, 0
+
+
+def iniciar_sequencia(slug: str, nome: str,
+                      passos: list[tuple[str, str, list[str]]]) -> bool:
+    """Encadeia estágios num log só. `nome` identifica a sequência no SSE."""
+    chave = (slug, nome)
+    if em_andamento(slug, nome):
+        return False
+    _execucoes[chave] = Execucao()
+    asyncio.create_task(_rodar_sequencia(chave, passos))
     return True
 
 
