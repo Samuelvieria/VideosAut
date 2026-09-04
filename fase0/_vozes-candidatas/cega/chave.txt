@@ -1,0 +1,5 @@
+NAO ABRA ANTES DE OUVIR.
+
+A = Chatterbox (ResembleAI, MIT, local) — pt
+B = Kokoro pm_santa 0.85, SEM injeção de pausa
+C = Kokoro pm_santa 0.85, COM pausa de frase 1.8s

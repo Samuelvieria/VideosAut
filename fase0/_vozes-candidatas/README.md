@@ -83,3 +83,53 @@ porque o que se julga é qual soa melhor, não qual é qual.
 ## Resultado
 
 _(preencher depois da escuta — data, ordem de preferência, e a decisão)_
+
+---
+
+## Segunda leva — a prova cega de verdade (04/09/2026)
+
+Rodada depois de o Samuel cobrar: *"cadê a prova cega?"*. Ele tinha razão — eu
+havia escrito este protocolo e citado ele três vezes como argumento sem ter
+executado nada.
+
+Está em `cega/`: **`A.wav`, `B.wav`, `C.wav`** e um `chave.txt` que **não deve
+ser aberto antes de ouvir**.
+
+### O que está sendo comparado
+
+Fish Audio e ElevenLabs seguem precisando de cadastro. Mas o **Chatterbox**
+(ResembleAI, MIT, local) não precisava de nada, e estava ao alcance desde o
+começo. Os três candidatos são ele e as duas configurações do Kokoro.
+
+### O texto não é genérico
+
+É o da **cena 2**, que contém `manhã` e `água` — as duas palavras que o Samuel
+apontou como erradas, ambas em fim de frase. A pergunta deixa de ser "qual voz é
+mais bonita" e passa a ser **"qual acerta o defeito que eu ouvi"**.
+
+### O nivelamento, que era obrigatório
+
+Medido antes: o Chatterbox saiu a **−15,99 LUFS** e o Kokoro a **−26,18**. Dez
+decibéis de diferença. Em teste de escuta o mais alto ganha sistematicamente, e
+comparar assim mediria volume, não voz.
+
+Os três foram normalizados a −20 LUFS com `loudnorm` de dois passes e
+`linear=true`. **Sem esse passo o teste não valeria nada.**
+
+### Duas coisas medidas que valem saber depois de ouvir
+
+- O Chatterbox roda a **216 palavras/min** no mesmo texto, contra 165 do
+  Kokoro. É rápido demais para sono, mas isso é ajustável — não é defeito de
+  voz, e não deve pesar no julgamento.
+- O áudio cru dele saiu com **pico 1,040**, ou seja **clipando**. Qualquer uso
+  em produção precisaria normalizar antes. O Kokoro saiu em 0,463.
+- Custo: o modelo baixou **3,0 GB** para o cache do HuggingFace, e leva ~107 s
+  só para carregar num M2 de 8 GB. Para apagar:
+  `rm -rf ~/.cache/huggingface/hub/models--ResembleAI--chatterbox`
+
+### Julgue nesta ordem
+
+1. **`manhã` e `água`** — a velocidade e a entonação delas melhoram em algum?
+2. **Respiração e pausa** — qual soa como quem conta, não como quem lê?
+3. **Nasais** — `ã`, `õ`, e a palatalização de /t/ e /d/ antes de /i/.
+4. **Timbre** — por último, e de propósito.
