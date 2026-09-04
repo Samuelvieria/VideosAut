@@ -97,3 +97,54 @@ cenas são descompressão, não clímax.
       não garante que soa bem
 - [ ] Conferir os 38 prompts com `s3_imagens --seco` antes de gastar
 - [ ] Gerar imagens: 38 cenas + 3 thumbnails ≈ **R$ 1,00**
+
+## Revisão de plausibilidade histórica (04/09/2026)
+
+Delegada ao `gemini-3.1-pro`. A ambientação é ficção original, mas a descrição
+do canal declara que a pesquisa é levada a sério, então erro grosseiro de época
+vira comentário.
+
+**Confirmado OK:**
+
+- **Navegação de cabotagem** — navegar de dia com a costa à vista, ancorar de
+  noite em enseada. Correto e padrão.
+- **`mare clausum`** — a estação de navegar fechando de outubro a março por
+  causa das tempestades. Historicamente certo e bem aplicado.
+- **Vida material** — pão de cevada duro molhado em azeite, chiton de lã crua,
+  sandálias de couro, vinho sempre misturado com água, poço salobro.
+
+**Corrigido:**
+
+- **Tesoura de ferro para aparar a mecha.** Tesoura de eixo (as duas lâminas
+  cruzadas num pino) é invenção romana do séc. I d.C. Os gregos tinham tesoura
+  de mola, de tosquia, que seria ferramenta estranha para fogo. Trocado por um
+  gancho fino de bronze puxando mecha nova, e a parte queimada quebrada com os
+  dedos — a rotina repetitiva de hora em hora, que é o que a cena precisa,
+  fica intacta. O prompt de imagem da cena também foi corrigido.
+
+**Contestado, e mantido como está:**
+
+O revisor afirmou que faróis antigos queimavam **lenha**, não óleo, e que
+azeite era valioso demais para queimar. Fui verificar e a evidência aponta para
+o contrário no nosso caso:
+
+- Sobre o Farol de Alexandria, a leitura corrente é *"a fire, likely burning
+  **oil** as wood was scarce"*.
+- O cálculo que sustenta isso: um fogo de lenha com chama de 2 m consumiria
+  **50 toneladas de madeira por noite** — uma floresta por ano. Óleo é o que
+  fecha a conta, não o que a estoura.
+- Óleo de oliva de **baixa qualidade** para lamparina é padrão absoluto na
+  Antiguidade, e o roteiro já especifica exatamente isso: *"óleo ruim, o que
+  não servia pra comida — grosso, escuro, com cheiro forte"*.
+- A placa de bronze polido como refletor também é atestada nos relatos do
+  Farol.
+
+A nossa torre é pequena, com bacia "larga como uma mesa pequena" e uma jarra
+durando seis noites — consumo modesto, não uma fogueira imperial. Fica o óleo.
+
+> Registro do método: o revisor errou no ponto principal e acertou no detalhe
+> que eu jamais teria pego sozinho. Aceitar tudo teria custado reescrever quatro
+> cenas por nada; recusar tudo teria deixado um anacronismo real no texto.
+
+Fontes: [The Past](https://the-past.com/feature/illuminating-antiquity-the-pharos-lighthouse-in-alexandria/) ·
+[World History Encyclopedia](https://www.worldhistory.org/Lighthouse_of_Alexandria/)

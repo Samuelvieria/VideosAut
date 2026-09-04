@@ -10,6 +10,7 @@ Voz e velocidade vêm do bloco `voz` do plano.json, não ficam fixas aqui — ca
 vídeo pode ter uma persona diferente.
 """
 from __future__ import annotations
+import hashlib
 import argparse, json, re, sys
 from pathlib import Path
 
@@ -69,6 +70,17 @@ def sintetiza(pipeline, texto: str, voice: str, speed: float, fator_pausa: float
     return np.concatenate(saida)
 
 
+def _marca(cfg: str, corpo: str) -> str:
+    """Assinatura de uma cena: config + hash do texto DELA.
+
+    Era `[roteiro]` como entrada, ou seja o arquivo inteiro — então mudar uma
+    palavra numa cena invalidava as 38 e regerava tudo. E o texto entrava
+    truncado em 200 caracteres, o que deixava duas cenas de mesmo começo
+    indistinguíveis. Agora é o texto completo da cena, em hash, e nada mais.
+    """
+    return f"{cfg};texto={hashlib.sha256(corpo.encode()).hexdigest()[:16]}"
+
+
 def blocos(roteiro: Path) -> list[tuple[int, str, str]]:
     """Extrai (n, titulo, corpo) de cada `## Cena N — Titulo` do roteiro."""
     txt = roteiro.read_text(encoding="utf-8")
@@ -116,7 +128,7 @@ def main() -> None:
     cenas = blocos(roteiro)
     total_cenas = len(cenas)
     pendentes = [c for c in cenas
-                 if a.forcar or not atualizado(destino / f"cena_{c[0]:02d}.wav", [roteiro], cfg + c[2][:200])]
+                 if a.forcar or not atualizado(destino / f"cena_{c[0]:02d}.wav", [], _marca(cfg, c[2]))]
 
     if not pendentes:
         log("todas as cenas já estão atualizadas")
@@ -145,7 +157,7 @@ def main() -> None:
             fator = FATOR_PAUSA_INICIO + (FATOR_PAUSA_FIM - FATOR_PAUSA_INICIO) * pos
             audio = sintetiza(pipeline, corpo, voice, speed, fator)
             sf.write(alvo, audio, SR)
-            marcar(alvo, [roteiro], cfg + corpo[:200])
+            marcar(alvo, [], _marca(cfg, corpo))
             log(f"cena {n:02d}  {len(audio)/SR:6.1f}s  {titulo}  (pausa×{fator:.2f})")
 
     # relatório consolidado, consumido pelo s5

@@ -181,8 +181,9 @@ Conforme queimava, a ponta virava carvão. E carvão não dá luz, dá fumaça. 
 ninguém aparasse, em duas horas a chama ficava baixa e suja, e a luz encolhia
 sem que ninguém percebesse de longe.
 
-Então de hora em hora ele subia. Cortava um dedo de mecha queimada com uma
-tesoura de ferro. E a chama subia de novo, limpa.
+Então de hora em hora ele subia. Puxava um dedo de mecha nova para fora com um
+gancho fino de bronze, e a parte queimada ele quebrava fora com os dedos, sem
+medo, porque a ponta já era carvão frio. E a chama subia de novo, limpa.
 
 Era um trabalho de nada. Levava o tempo de contar até cinquenta.
 
