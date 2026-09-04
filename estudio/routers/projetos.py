@@ -11,10 +11,12 @@ RAIZ = Path(__file__).resolve().parent.parent.parent
 if str(RAIZ) not in sys.path:
     sys.path.insert(0, str(RAIZ))
 
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, Form, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
+from estudio.db import personas as db_personas
+from estudio.db.projetos import DURACAO_PADRAO_MIN, ProjetoInvalido, criar_projeto
 from estudio.routers.pipeline_run import ESTAGIOS, MODELOS_WHISPER
 from pipeline.comum import carregar_plano
 
@@ -72,6 +74,30 @@ async def listar(request: Request):
     return templates.TemplateResponse(request, "projetos/lista.html", {
         "projetos": _listar_projetos(),
     })
+
+
+@router.get("/projetos/novo", response_class=HTMLResponse)
+async def novo_form(request: Request):
+    return templates.TemplateResponse(request, "projetos/novo.html", {
+        "personas": db_personas.listar(),
+        "duracao_padrao": DURACAO_PADRAO_MIN,
+    })
+
+
+@router.post("/projetos/novo")
+async def novo_criar(request: Request, slug: str = Form(...), titulo: str = Form(...),
+                     obra: str = Form(...), persona_id: str = Form(...),
+                     duracao_min: int = Form(DURACAO_PADRAO_MIN),
+                     n_cenas: int = Form(None)):
+    try:
+        criar_projeto(slug, titulo, obra, persona_id, duracao_min, n_cenas or None)
+    except ProjetoInvalido as e:
+        return templates.TemplateResponse(request, "projetos/novo.html", {
+            "personas": db_personas.listar(), "duracao_padrao": DURACAO_PADRAO_MIN,
+            "erro": str(e), "form": {"slug": slug, "titulo": titulo, "obra": obra,
+                                      "persona_id": persona_id, "duracao_min": duracao_min},
+        }, status_code=400)
+    return RedirectResponse(url=f"/projetos/{slug}", status_code=303)
 
 
 @router.get("/projetos/{slug}", response_class=HTMLResponse)

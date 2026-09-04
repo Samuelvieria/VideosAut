@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block titulo %}Novo projeto{% endblock %}
+{% block conteudo %}
+<p><a href="/projetos">&larr; projetos</a></p>
+<h1>Novo projeto</h1>
+
+<p style="color:var(--texto-fraco)">
+  O projeto nasce de uma <a href="/personas">persona</a>, que carrega voz e
+  estética. É isso que impede um vídeo novo de herdar um cue de prompt já
+  corrigido em outro — foi assim que o video-03 nasceu com o
+  <code>painterly game background art</code> do video-02.
+</p>
+
+{% if erro %}
+<div class="card" style="border-color:var(--vermelho); color:var(--vermelho); white-space:pre-wrap">{{ erro }}</div>
+{% endif %}
+
+<form method="post" action="/projetos/novo">
+  <label>slug — vira <code>fase0/&lt;slug&gt;/</code><br>
+    <input type="text" name="slug" size="40" required
+           pattern="[a-z0-9][a-z0-9-]{1,40}"
+           value="{{ form.slug if form else '' }}"
+           placeholder="video-04"></label><br><br>
+
+  <label>Título — o que vai no YouTube<br>
+    <input type="text" name="titulo" size="72" required
+           value="{{ form.titulo if form else '' }}"></label><br>
+  <p style="color:var(--texto-fraco); margin:0.3rem 0 1rem">
+    Curiosidade primeiro, função no sufixo depois do pipe. Medido em
+    <code>docs/mercado.md</code> §4: é o padrão dos títulos que fazem 1 a 5
+    milhões de views, e é o contrário do que o nosso video-02 fez.
+  </p>
+
+  <label>obra — contexto narrativo, <strong>em inglês</strong><br>
+    <input type="text" name="obra" size="72" required
+           value="{{ form.obra if form else '' }}"
+           placeholder="original story set on the ancient Greek coast — a lighthouse keeper's tale">
+  </label><br>
+  <p style="color:var(--texto-fraco); margin:0.3rem 0 1rem">
+    Entra no prompt positivo de <em>toda</em> cena. Diga era e tema, nunca o
+    título inventado — o modelo nunca o viu, então ele não carrega informação
+    visual e só arrisca virar texto na tela. Negação é recusada: em prompt
+    positivo, "sem deuses" pede deuses.
+  </p>
+
+  <label>Persona<br>
+    <select name="persona_id" required>
+      {% for p in personas %}
+        <option value="{{ p.id }}"
+                {% if form and form.persona_id == p.id %}selected{% endif %}
+                {% if not (p.estetica and p.estetica.estilo_base) %}disabled{% endif %}>
+          {{ p.nome }} — {{ p.vozes.pt.voice }}
+          {% if not (p.estetica and p.estetica.estilo_base) %}(sem estética){% endif %}
+        </option>
+      {% endfor %}
+    </select></label><br><br>
+
+  <label>Duração alvo (min)<br>
+    <input type="number" name="duracao_min" min="1" style="width:7rem"
+           value="{{ form.duracao_min if form else duracao_padrao }}"></label><br>
+  <p style="color:var(--texto-fraco); margin:0.3rem 0 1rem">
+    O padrão é {{ duracao_padrao }} porque <code>docs/mercado.md</code> §2 não
+    achou <strong>um só</strong> caso de sucesso perto de 30–41 min. A faixa que
+    funciona em narrativa é 65–170 min. Menos que isso pede justificativa.
+  </p>
+
+  <label>Cenas — em branco calcula de <code>~125 s</code> por cena<br>
+    <input type="number" name="n_cenas" min="3" style="width:7rem"
+           placeholder="auto"></label><br><br>
+
+  <button type="submit">Criar</button>
+</form>
+{% endblock %}
