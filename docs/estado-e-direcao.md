@@ -7,6 +7,13 @@ status: avaliação de rumo
 
 # Estado e direção
 
+> **Atualizado em 04/09/2026.** Os itens 4.1 (personas com estética), 4.2
+> (thumbnails) e a primeira metade de 4.4 (criar projeto pelo estúdio) foram
+> feitos na sessão autônoma da madrugada. Relatório em
+> [noite-04-09.md](noite-04-09.md). E a pesquisa de mercado
+> ([mercado.md](mercado.md)) contrariou duas premissas que este documento
+> tratava como dadas — duração e cadência.
+
 Revisão dos 31 documentos do projeto, do código e dos dados reais do canal,
 para responder: onde estamos, quanto custa cada vídeo agora que a curva de
 aprendizado passou, e em que ordem atacar as oito frentes abertas.
@@ -149,7 +156,7 @@ Aposta cara em premissa não validada vai depois do dado.
 
 ### Agora — barato, permanente, útil mesmo se o canal mudar de rumo
 
-#### 4.1 Personas com estética, não só voz — *seu item 5*
+#### 4.1 Personas com estética, não só voz — *seu item 5* · **FEITO 04/09**
 
 Já existem 4 personas em `estudio/dados/personas.json`, com voz pt-BR
 configurada. O que falta é o que você pediu: **elas não carregam estética.**
@@ -163,7 +170,7 @@ vez de copiar YAML e herdar os erros dele.
 Ganho: permanente, e conserta a causa raiz de uma regressão real.
 Custo: baixo. Não depende de nenhum dado de audiência.
 
-#### 4.2 Thumbnails padronizadas — *seu item 9*
+#### 4.2 Thumbnails padronizadas — *seu item 9* · **FEITO 04/09**
 
 **Não existe nenhuma ferramenta de thumbnail no projeto.** As três do video-02
 foram feitas na mão, e nada foi codificado — inclusive os 5 comandos que
@@ -204,9 +211,8 @@ hierarquia de consistência — acima de prompt e de seed. Vale testar no video-
 O estúdio já dirige os quatro estágios mecânicos (feito em 03/09). O que falta
 para autonomia real, em ordem:
 
-1. **Criar projeto pela interface** — hoje ele só lista o que já existe em
-   `fase0/`. Sem isso o ciclo não fecha. Não é gated por nada; pode ser feito
-   junto com §4.1.
+1. ~~**Criar projeto pela interface**~~ — **FEITO 04/09.** Nasce de uma persona,
+   com o padrão de duração do mercado (75 min) e as validações de prompt.
 2. **Encadear estágios** — rodar `narração → imagens → legendas → render` numa
    chamada, com parada no primeiro erro.
 3. **`s6_upload`** — e aqui há uma trava **sua**, não minha: o CLAUDE.md proíbe

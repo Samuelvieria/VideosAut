@@ -13,6 +13,12 @@ discussões sem motivo novo:
 - **Formato: 30 min, não 1–3 h.** Decidido em 26/08/2026. A duração é um *parâmetro*,
   não uma constante — o pipeline é idêntico para 30 min e 3 h, muda o número de cenas
   e o `-t`. Se a retenção pedir formato longo depois, é um número, não uma reescrita.
+  **CONTRARIADO PELO MERCADO em 04/09/2026.** Medido em [docs/mercado.md](docs/mercado.md):
+  não existe **um só** caso de sucesso na amostra perto de 30–41 min. A faixa que funciona
+  em narrativa é **65–170 min**; ambiente é medido em horas. O padrão de projeto novo
+  no estúdio já nasce em **75 min** (mediana do History at Night). O video-02 tem 41 e o
+  video-03 foi planejado com 30 — este último ainda não foi produzido, então mudar é
+  barato agora e caro depois.
 - **N imagens em sequência, não 1 imagem estática.** Referência de formato:
   narração + sequência de cenas ilustradas, sem vídeo real. ~20 cenas em 30 min.
 - **Claude Code é o engenheiro, não o servidor de produção.** Quem roda em produção é um
@@ -21,7 +27,11 @@ discussões sem motivo novo:
 - **Sem prompt fixo.** Banco de premissas + 5–8 estruturas narrativas sorteadas por vídeo,
   para não cair em "conteúdo inautêntico" (política do YouTube desde jul/2025).
 - **Cadência humana: 2–3 vídeos/semana**, nunca 7. Volume alto + formato idêntico é o sinal
-  de risco mais forte.
+  de risco mais forte. **Em revisão desde 04/09/2026** — a pesquisa de mercado
+  ([docs/mercado.md](docs/mercado.md)) mostrou que os dois canais de referência do nicho
+  publicam **um vídeo a cada 5 semanas** com seis vídeos no total e ~80 mil inscritos cada,
+  enquanto o de 399 vídeos tem a pior mediana de views. Não é decisão tomada; é uma
+  premissa que o dado contraria e que precisa da sua leitura.
 - **Gate manual obrigatório antes de publicar.** Todo upload sobe como `private`; você aprova
   antes de tornar público. Isso também contorna a trava automática de vídeos como privados
   em projetos de API não auditados (armadilha nº1 da seção 5).
@@ -91,6 +101,11 @@ doc de viabilidade original previa. Migrou junto com a workstation Windows
 (`pipeline/s3_imagens.py`); Draw Things era o plano pro M2 sem GPU dedicada de
 sobra, mas a API acabou sendo o caminho real desde o video-02.
 
+A resolução deixou de ser constante em 04/09/2026: o `plano.json` pode trazer
+`resolucao: [l, a]`, gravado pela persona ao criar o projeto, e o `s3_imagens` lê
+(com o valor abaixo como padrão, então plano antigo não muda). O `s5_render`
+continua abortando se a fonte não bater com o que o pan assume.
+
 **Gerar em 1280×720 e fazer upscale nearest-neighbor ×2 para 1920×1080** (não
 640×360 ×3 — essa combinação nunca funcionou de verdade: **medido em
 02/09/2026, a fal.ai não entrega dimensão abaixo de 512px num eixo**, então
@@ -151,6 +166,22 @@ Ver seção 10 do documento de viabilidade — custo de quota de `videos.insert`
 nome exato do campo de divulgação sintética na Data API v3, comportamento de loudness do
 YouTube, expiração de refresh token OAuth. Confirmar na documentação oficial antes de
 depender desses valores em código.
+
+## Ritmo de narração — medido em 04/09/2026
+
+Nossa narração roda a **102 palavras/min** sobre os 32,2 min de fala real do
+video-02 (não sobre os 41 min totais, que incluem a cauda). As referências:
+Dreamoria **128 ppm**, History at Night **180 ppm**. Fala de conversa fica em ~150.
+
+E **eles não desaceleram**: medindo por terço do vídeo, a variação é −4,1% e
+−1,0%. Nosso `FATOR_PAUSA` vai de 1,0 a 1,6 de propósito, então o fim do nosso
+vídeo é bem mais lento que o começo. Isso é diferença nossa, não convenção do
+gênero — e não foi decidido comparando com nada.
+
+Nenhuma das duas referências tem **cauda de ambiente**. As duas narram até o
+último segundo. A nossa cauda de 9 min é aposta não testada.
+
+Amostras de ritmo para escutar: `fase0/_vozes-candidatas/`.
 
 ## Estrutura do repositório
 
