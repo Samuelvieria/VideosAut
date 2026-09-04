@@ -56,6 +56,14 @@ class Estagio:
 
 # chave = nome no URL. Ordem = ordem em que os estágios rodam de verdade.
 ESTAGIOS: dict[str, Estagio] = {
+    "preflight": Estagio(
+        rotulo="preflight — conferir o projeto antes de produzir",
+        modulo="pipeline.preflight", tempo="instantâneo",
+        nota="Confere roteiro contra plano, piso de speed, duração projetada, "
+             "cue de prompt proibido, cenas sem prompt, formato do ambiente e "
+             "custo estimado. Sai com erro se algo estiver quebrado — por isso "
+             "é o primeiro passo das sequências.",
+    ),
     "narracao": Estagio(
         rotulo="s2_tts — gerar narração por cena",
         modulo="pipeline.s2_tts", tempo="~12 min", campos=("forcar",),
@@ -109,13 +117,13 @@ ESTAGIOS: dict[str, Estagio] = {
 # a ordem. Aqui a ordem está escrita uma vez.
 SEQUENCIAS: dict[str, tuple[str, tuple[str, ...], str]] = {
     "mecanica": (
-        "produção sem gastar — narração, legendas, render",
-        ("narracao", "legendas", "render"),
+        "produção sem gastar — confere, narração, legendas, render",
+        ("preflight", "narracao", "legendas", "render"),
         "Assume que as imagens já existem. Não chama a fal.ai, não gasta nada.",
     ),
     "completa": (
         "produção completa — inclui GERAR as imagens",
-        ("narracao", "imagens", "legendas", "render", "thumbnails"),
+        ("preflight", "narracao", "imagens", "legendas", "render", "thumbnails"),
         "Inclui o s3_imagens, que GASTA na fal.ai. Rode o --seco antes e "
         "confira os prompts.",
     ),

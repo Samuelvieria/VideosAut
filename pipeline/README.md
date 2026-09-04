@@ -15,6 +15,7 @@ python -m pipeline.s4_legendas  fase0/video-02
 |---|---|---|
 | `s2_tts` | `roteiro.md`, bloco `voz` do `plano.json` | `audio/cena_NN.wav`, `duracoes.json` |
 | `s3_imagens` | `plano.json` (`estilo_base` + prompt por cena), `FAL_KEY` | `imagens/cena_NN.png` (1280×720) |
+| `preflight` | `plano.json`, `roteiro.md` | relatório; código 1 se algo impede produzir |
 | `s2b_revisar` | `audio/`, `roteiro.md` | `audio/revisar.html` — página local para ouvir e apontar |
 | `s5_render` | `imagens/`, `audio/`, `plano.json` | `final.mp4` |
 | `s5b_thumbs` | `imagens/`, `plano.json` (bloco `thumbnails`) | `thumbnails/thumb_{A,B,C}.png` + `contato.png` |

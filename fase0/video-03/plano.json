@@ -85,7 +85,14 @@
       "titulo": "Os cento e doze degraus",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "interior of the stone tower, tight spiral staircase hugging the curved wall with no handrail, worn stone steps dished in the middle, Demétrio climbing with an oil jar held against his chest, one hand flat on the stone, a single small lamp casting his shadow up the wall, deep darkness above and below",
-      "ambiente": "vento nas frestas de pedra, passos lentos, eco fechado"
+      "ambiente": {
+        "mar": 0.15,
+        "chuva": 0,
+        "fogo": 0.1,
+        "vento": 0.4,
+        "abafado": true,
+        "_": "escada interna da torre, vento nas frestas, eco fechado"
+      }
     },
     {
       "n": 5,
@@ -94,7 +101,14 @@
       "titulo": "A bacia de bronze",
       "personagem": "no character",
       "prompt": "close view of a wide blackened bronze fire basin on three short feet at the top of a stone tower, thick inward-turned rim, a tall curved sheet of polished bronze standing behind it catching the flame, warm orange fire filling the basin, night sky and black sea beyond the short columns",
-      "ambiente": "chama constante, vento alto, mar distante embaixo"
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0,
+        "fogo": 0.7,
+        "vento": 0.5,
+        "abafado": false,
+        "_": "alto da torre, chama constante, vento alto"
+      }
     },
     {
       "n": 6,
@@ -119,7 +133,14 @@
       "titulo": "O barco do óleo",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio on the low rocks of the bay in the morning receiving sealed clay oil jars handed up from a small boat by two sailors, jars lined on the stone beside him, cool clear early daylight, the tower on the cliff behind",
-      "ambiente": "barco na pedra, vozes, barro batendo, água calma"
+      "ambiente": {
+        "mar": 0.25,
+        "chuva": 0,
+        "fogo": 0.8,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "junto da bacia, estalo baixo da chama"
+      }
     },
     {
       "n": 8,
@@ -128,7 +149,14 @@
       "titulo": "A mecha, de hora em hora",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio's hands holding a thin bronze hook, trimming the charred tip of a thick twisted linen wick floating in a bronze basin of oil, the flame low and smoky before the cut, warm light only from the fire, everything else in darkness",
-      "ambiente": "estalo baixo da chama, tesoura de ferro, vento contido"
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 1.0,
+        "fogo": 0.4,
+        "vento": 0.9,
+        "abafado": false,
+        "_": "tempestade de lado, chiado do fogo"
+      }
     },
     {
       "n": 9,
@@ -137,7 +165,14 @@
       "titulo": "Quando chovia sobre o fogo",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio pressed against a stone column at the open top of the tower during heavy slanting rain, holding a large sheet of thick leather tied against the windward side, his arm and shoulder soaked, the fire basin hissing and shrunk beside him, water streaking through the orange light",
-      "ambiente": "chuva forte de lado, vento uivando, chiado do fogo"
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0,
+        "fogo": 0.2,
+        "vento": 0.8,
+        "abafado": false,
+        "_": "vento mudando de tom nas frestas, mar ao longe"
+      }
     },
     {
       "n": 10,
@@ -146,7 +181,14 @@
       "titulo": "O vento tinha nomes",
       "personagem": "no character",
       "prompt": "wide shot of a small rocky Greek island at night seen from above the tower, low wind-bent trees all leaning the same direction, dark sea streaked with wind lines on every side, the single orange fire at the cliff edge, cold blue-grey moonlight on the stone",
-      "ambiente": "vento mudando de tom nas frestas, mar ao longe"
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0,
+        "fogo": 0.2,
+        "vento": 0.8,
+        "abafado": false,
+        "_": "vento mudando de tom nas frestas, mar ao longe"
+      }
     },
     {
       "n": 11,
@@ -171,7 +213,14 @@
       "titulo": "O que se come numa ilha",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio seated on a low stone bench outside a small stone house, a clay bowl in his lap with hard bread soaked in oil and a single olive, a chipped clay cup beside him, a small fig tree behind a low stone wall, soft overcast daylight",
-      "ambiente": "pássaros da ilha, vento fraco, mar distante"
+      "ambiente": {
+        "mar": 0.8,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.1,
+        "abafado": false,
+        "_": "praia de pedras redondas rolando na onda"
+      }
     },
     {
       "n": 13,
@@ -196,7 +245,14 @@
       "titulo": "O outro lado da ilha",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "wide shot of a beach of large round smooth stones on the far side of the island, Demétrio seated on a larger rock with his back to the viewer, half-buried dark timbers of an old wrecked boat in the stones, pale flat morning light, no tower visible anywhere",
-      "ambiente": "pedras redondas rolando na onda, gaivotas, sem vento"
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0.3,
+        "fogo": 0.5,
+        "vento": 0.2,
+        "abafado": true,
+        "_": "dentro da casa de pedra, lareira baixa, chuva fina fora"
+      }
     },
     {
       "n": 15,
@@ -205,7 +261,14 @@
       "titulo": "Como ele veio parar ali",
       "personagem": "a younger Demétrio in his thirties — same face without the grey beard, dark hair, simple undyed wool chiton",
       "prompt": "a younger Demétrio stepping off a small boat onto low rocks in the morning, carrying a wooden tool box under one arm and a bundle of clothes, looking up at a squat stone tower on the cliff above him, cool clear early light, calm water",
-      "ambiente": "quilha na pedra, água calma, passos"
+      "ambiente": {
+        "mar": 0.4,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "chegada de barco, água calma"
+      }
     },
     {
       "n": 16,
@@ -214,7 +277,14 @@
       "titulo": "A mulher que ficou",
       "personagem": "a younger Demétrio in his thirties — same face without the grey beard, dark hair, simple undyed wool chiton",
       "prompt": "interior of a small stone house lit by one oil lamp, a younger Demétrio seated at a rough wooden table, a woman in a simple undyed chiton standing at the hearth with her back half-turned, a small boy asleep on a low bed against the wall, warm amber lamplight, cold blue night at the shuttered window",
-      "ambiente": "lareira baixa, mar abafado do lado de fora, chuva fina"
+      "ambiente": {
+        "mar": 0.9,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.5,
+        "abafado": false,
+        "_": "convés de navio, madeira rangendo"
+      }
     },
     {
       "n": 17,
@@ -239,7 +309,14 @@
       "titulo": "O que Míron foi procurar",
       "personagem": "no character",
       "prompt": "wide shot of a crowded merchant ship deck at night, sailors sleeping between cargo and coiled rope under a single hanging lantern, wet timber, a young broad-shouldered sailor awake at the rail looking out at black water, cold moonlight on the sail above",
-      "ambiente": "madeira rangendo, mar batendo no casco, corda tensionando"
+      "ambiente": {
+        "mar": 1.0,
+        "chuva": 0.5,
+        "fogo": 0.0,
+        "vento": 0.9,
+        "abafado": false,
+        "_": "mar revolto de inverno"
+      }
     },
     {
       "n": 19,
@@ -248,7 +325,14 @@
       "titulo": "As rotas que passavam ali",
       "personagem": "no character",
       "prompt": "wide seascape at dusk seen from a high cliff, three ships at different distances on the water — one heavy grain ship low in the water far out, one mid-size ship with amphorae lashed on deck closer in, one small fishing boat near the rocks, pale fading light and the first dark of night at the horizon",
-      "ambiente": "mar aberto, vento constante, velas batendo ao longe"
+      "ambiente": {
+        "mar": 0.7,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.6,
+        "abafado": false,
+        "_": "mar aberto, vento constante"
+      }
     },
     {
       "n": 20,
@@ -257,7 +341,14 @@
       "titulo": "A estação de navegar",
       "personagem": "no character",
       "prompt": "wide shot of an empty grey winter sea under low heavy cloud, whitecaps everywhere, the rocky island shore in the foreground with no ship anywhere on the horizon, cold flat daylight with no sun, spray on the rocks",
-      "ambiente": "mar revolto de inverno, vento pesado, chuva fria"
+      "ambiente": {
+        "mar": 1.0,
+        "chuva": 0.5,
+        "fogo": 0.0,
+        "vento": 0.9,
+        "abafado": false,
+        "_": "mar revolto de inverno"
+      }
     },
     {
       "n": 21,
@@ -298,7 +389,14 @@
       "titulo": "Os navios que ele guiou",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio standing at the tower opening looking down at a damaged ship anchored in the calm bay below, its sail torn and half-lowered, two small figures working on the deck by lantern light, the bay water black and still, warm fire glow from behind him on the stone",
-      "ambiente": "mar quieto na baía, marteladas distantes, vento fraco"
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.7,
+        "abafado": true,
+        "_": "escada no escuro, vento forte lá em cima"
+      }
     },
     {
       "n": 24,
@@ -323,7 +421,14 @@
       "titulo": "Quando a luz falhava",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "Demétrio halfway up the dark spiral staircase running, one hand on the wall, an unlit torch in the other, panic in his posture, faint cold blue light from the opening far above him, the basin dark and cold at the top",
-      "ambiente": "passos rápidos na pedra, respiração, vento forte lá em cima"
+      "ambiente": {
+        "mar": 0.35,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.2,
+        "abafado": false,
+        "_": "pedra baixa da baía, descarga do barco"
+      }
     },
     {
       "n": 26,
@@ -348,7 +453,14 @@
       "titulo": "Navegar sem nenhuma luz",
       "personagem": "no character",
       "prompt": "wide shot of a small ancient boat far out on a black sea at night with no light anywhere, two figures barely visible as silhouettes, dense stars filling the whole sky down to the horizon, faint starlight on the water, no land in sight",
-      "ambiente": "mar aberto no escuro, vela batendo, silêncio"
+      "ambiente": {
+        "mar": 0.5,
+        "chuva": 0,
+        "fogo": 0.0,
+        "vento": 0.3,
+        "abafado": false,
+        "_": "mar aberto no escuro, vela batendo"
+      }
     },
     {
       "n": 28,
@@ -421,7 +533,14 @@
       "titulo": "A espera não tem pressa",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "medium shot of Demétrio standing motionless beside the fire basin through the night, arms at his sides, face lit warm orange from one side, looking down toward a single tiny still light on the black water of the bay far below",
-      "ambiente": "chama constante, mar parado, vento quase nenhum"
+      "ambiente": {
+        "mar": 0.2,
+        "chuva": 0,
+        "fogo": 0.6,
+        "vento": 0.1,
+        "abafado": false,
+        "_": "vigília ao lado da bacia, mar parado"
+      }
     },
     {
       "n": 33,
@@ -462,7 +581,14 @@
       "titulo": "O que ele diria, se dissesse",
       "personagem": "Demétrio, an old Greek lighthouse keeper — weathered tanned face, short grey beard, deep-set calm eyes, simple undyed wool chiton, leather sandals, calloused hands",
       "prompt": "close view of Demétrio seated on the stone bench at the tower opening, hands loose in his lap, looking out at the sea with an unreadable calm expression, low orange firelight on one side of his face and cold pre-dawn grey on the other",
-      "ambiente": "chama baixa, vento parando, mar fundo embaixo"
+      "ambiente": {
+        "mar": 0.3,
+        "chuva": 0,
+        "fogo": 0.3,
+        "vento": 0.15,
+        "abafado": false,
+        "_": "fim da noite, chama baixa, vento parando"
+      }
     },
     {
       "n": 36,
