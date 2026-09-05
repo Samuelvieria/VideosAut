@@ -1699,3 +1699,532 @@ Hoje eu acho que era só um sistema funcionando.
 Não pense que era vida boa. Não era. Era trabalho de sol a sol.
 
 Mas era um lugar onde todo mundo sabia o que fazer.
+
+## Cena 53 — Gente chegando
+
+Em Wadi Sirhan a gente parou de andar sozinho.
+
+Chegava gente. Todo dia chegava.
+
+Primeiro eram dois ou três, de alguma família das redondezas, que vinham ver
+quem era aquele bando. Depois eram dez. Depois eram trinta.
+
+E aí não parou mais...
+
+Auda mandava recado, e o recado andava mais rápido que a gente. Ele mandava
+para primos, para gente que devia favor, para gente que ele tinha ajudado ou
+que tinha ajudado ele.
+
+E a coisa foi engordando.
+
+O acampamento que era de quarenta homens virou de cem. Depois de duzentos.
+Depois eu perdi a conta, e quem cuida de camelo perder a conta quer dizer
+muito.
+
+Isso muda tudo do meu ofício.
+
+Quarenta animais eu conhecia um por um. Trezentos eu não conheço — eu vigio.
+
+E vira outro trabalho: em vez de olhar o bicho, você olha o conjunto. Procura o
+que anda diferente, o que está fora do grupo, o que não levantou junto.
+
+Eu passei a andar entre eles de manhã, devagar, olhando o todo.
+
+E até hoje, quando eu entro num lugar com muita gente, eu faço a mesma coisa
+sem querer.
+
+## Cena 54 — As crianças e os cabritos
+
+Onde tem acampamento tem criança, e onde tem criança tem cabrito.
+
+E os dois se comportam igual, o que sempre me fez rir.
+
+As crianças chegavam perto dos nossos camelos com uma coragem que os adultos
+não tinham. Vinham por baixo, entre as pernas dos bichos, sem medo nenhum.
+
+Eu gritava. Elas riam...
+
+Os cabritos faziam a mesma coisa. Entravam no meio das cordas da tenda, subiam
+em cima do que desse, e um deles subiu numa carga minha e ficou lá em cima
+olhando todo mundo como se fosse dono.
+
+Tem uma coisa que eu quero te dizer sobre esse pedaço da história.
+
+Depois de semanas de silêncio, de areia, de conta de água — chegar num lugar
+com criança correndo é uma coisa que mexe com o homem.
+
+Você não faz nada. Fica sentado.
+
+E fica olhando, com aquela cara boba de quem está com sono, uma criança
+correndo atrás de um cabrito no fim da tarde.
+
+E é isso. Não tem lição nenhuma nessa cena.
+
+É só que era bom.
+
+## Cena 55 — As histórias à noite
+
+À noite, no acampamento grande, contava-se história.
+
+Não era entretenimento como hoje se entende. Era o jeito de guardar as coisas.
+
+Ninguém escrevia. Então o que não fosse contado sumia, e por isso contava-se
+sempre, e sempre as mesmas.
+
+E ninguém reclamava de já ter ouvido...
+
+O bom contador não é o que tem história nova. É o que conta a velha de um jeito
+que você escuta de novo.
+
+Auda era assim. Ele repetia e a gente ficava.
+
+Tinha um jeito de fazer. A voz baixa no começo, quase difícil de ouvir, e isso
+puxa todo mundo para a frente.
+
+Depois ele parava numa hora esquisita. No meio de uma frase, quase.
+
+E ficava calado o suficiente para incomodar. E aí voltava.
+
+Eu aprendi a contar ouvindo aquilo. E é por isso que eu falo assim com você,
+com essas paradas — não é problema de velhice.
+
+É ofício.
+
+Bom, é um pouco de velhice também.
+
+## Cena 56 — Bair
+
+Bair é um lugar de poços.
+
+Não é cidade, não é aldeia. É um punhado de poços antigos no meio de um planalto
+de pedra, e umas ruínas em volta que ninguém sabe direito de quando são.
+
+A gente chegou lá e alguns dos poços estavam estragados.
+
+Não secos. Estragados de propósito, que é diferente, e que a gente entendeu na
+hora sem precisar de explicação...
+
+Isso é uma coisa que se faz em guerra e é a coisa mais cruel que se pode fazer
+naquela terra.
+
+Um poço leva gerações para ser cavado. Estragar leva uma tarde.
+
+E quem estraga não mata só o inimigo. Mata quem passar ali nos próximos dez
+anos, sem escolher.
+
+Ficamos vários dias em Bair.
+
+Consertando o que dava para consertar, e havia quem soubesse fazer isso.
+
+Eu não. Eu cuidava dos animais. Mas eu vi homens descendo em poço com corda,
+dias seguidos, tirando pedra e entulho de lá de dentro.
+
+E vi um deles subir no quarto dia com água na mão, e mostrar para os outros
+como quem mostra um filho recém-nascido.
+
+## Cena 57 — Contar de novo a história
+
+Naquelas noites de Bair eu ouvi a nossa própria travessia ser contada.
+
+Isso foi estranho. Foi a primeira vez que eu ouvi uma coisa que eu tinha vivido
+virar história na boca de outro.
+
+E já estava diferente.
+
+A tempestade estava maior. Os dias sem água eram cinco, e tinham sido três...
+
+E o resgate do Gasim já era uma cena inteira, com falas que ninguém falou.
+
+Eu fiquei quieto. Não corrigi.
+
+Primeiro porque ninguém corrige Auda. Segundo porque eu percebi, ali, que
+corrigir não adiantava nada.
+
+A história vira o que ela precisa virar.
+
+Ela cresce onde precisa crescer, e encolhe no resto, e depois de umas vinte
+noites ela toma uma forma e não muda mais.
+
+Eu estou fazendo isso agora, com você.
+
+Eu juro que estou tentando contar o que aconteceu. E mesmo assim, eu sei que
+cinquenta anos passaram por cima disso.
+
+O que eu te dou não é o que aconteceu.
+
+É o que ficou.
+
+## Cena 58 — Al-Jafr
+
+Depois de Bair a gente foi para Al-Jafr.
+
+Al-Jafr é uma planície de sal. Você sai da pedra e entra numa coisa lisa,
+branca, que vai até onde a vista acaba.
+
+O chão é rachado em placas. Placas grandes, com a borda levantada, como louça
+quebrada e colada de novo.
+
+E ele estala quando o camelo pisa...
+
+Não tem nada ali. Nada mesmo.
+
+Nem mato ralo, nem pedra, nem duna que quebre a linha. É a coisa mais vazia que
+eu vi na vida, e eu tinha acabado de atravessar o vazio.
+
+E ao mesmo tempo é fácil de andar. Chão firme, plano, sem afundar.
+
+A gente andou rápido em Al-Jafr.
+
+De noite, com lua, aquele chão branco fica com uma luz própria. Você vê a sua
+sombra em cima do sal.
+
+Eu me lembro de olhar para baixo e ver a minha sombra andando, e a do camelo, e
+achar que a gente parecia estar andando no céu.
+
+Deve ter sido cansaço.
+
+Mas eu guardei essa imagem melhor do que guardei coisas mais importantes.
+
+## Cena 59 — A espera
+
+E aí veio a espera.
+
+Ninguém conta essa parte. Nas histórias, o grupo atravessa o deserto e chega e
+acontece a coisa.
+
+Na vida real, o grupo atravessa o deserto e depois espera semanas.
+
+Esperava-se gente chegar. Esperava-se recado. Esperava-se que uma família
+decidisse se vinha ou não vinha...
+
+E esperar, num lugar quente, sem nada para fazer, é um trabalho.
+
+O dia fica comprido de um jeito que a marcha não deixava. Andando, o dia passa
+sozinho. Parado, você sente cada hora.
+
+Todo mundo fica meio azedo. Discussão pequena começa a aparecer.
+
+E é aí que acidente acontece, porque gente sem tarefa faz besteira.
+
+Os chefes sabiam disso. Então sempre tinha alguma coisa mandada.
+
+Contar carga outra vez. Revisar sela. Levar os animais para pastar mais longe do
+que precisava.
+
+Eu levei anos para entender que metade daquelas tarefas não servia para nada.
+
+Servia para não deixar ninguém parado.
+
+## Cena 60 — O que a espera faz
+
+Nessas semanas eu aprendi uma coisa sobre mim que eu não sabia.
+
+Eu aguento cansaço. Aguento sede, aguento frio de madrugada, aguento andar doze
+horas.
+
+Eu não aguento não ter o que fazer.
+
+No terceiro dia parado eu estava pior do que no terceiro dia sem água...
+
+E não era só eu. Dava para ver na coluna inteira.
+
+Homem que atravessou o Nefud sem reclamar começava a implicar com o jeito que
+o outro fazia café.
+
+Tem uma explicação boba e verdadeira. Andando, a cabeça fica ocupada com o
+passo. Parado, ela fica ocupada com você.
+
+E ninguém é boa companhia para si mesmo o dia inteiro.
+
+Eu me acostumei, com o tempo, a arranjar uma coisa para as mãos.
+
+Costurar couro que não precisava. Trançar corda. Limpar o que já estava limpo.
+
+Faço isso até hoje. A minha mulher achava graça.
+
+Ela dizia que eu não sabia ficar sentado.
+
+E é verdade. Eu aprendi a atravessar deserto antes de aprender a ficar parado
+numa cadeira.
+
+## Cena 61 — Consertar tudo
+
+O trabalho que eu mais gosto de lembrar é o de consertar.
+
+Odre de água, principalmente. Eles vazavam sempre, e sempre num lugar difícil.
+
+Você vira o odre do avesso, o que já é uma luta, e procura o furo passando a
+mão devagar. A mão acha antes do olho, sempre.
+
+Aí você raspa em volta com a faca, para o couro ficar áspero e a costura pegar...
+
+Agulha grossa, de três lados. Linha encerada.
+
+E costura de dentro para fora, com o ponto apertado, e depois passa gordura por
+cima da costura.
+
+Leva uma hora um furo. Às vezes duas.
+
+E é uma hora boa. Você está sentado na sombra, as mãos ocupadas, e a cabeça
+fica naquele lugar de não pensar em nada.
+
+Corda também. Corda desfia na ponta e você tem que rematar.
+
+Sela: revisar a madeira, procurar rachadura, apertar a amarração que soltou.
+
+Eu passava dias assim naquelas semanas de espera.
+
+E quando eu ficava velho e não conseguia mais dormir, eu descia e ia consertar
+alguma coisa na cozinha, de noite.
+
+A minha mulher acordava e não dizia nada.
+
+Acho que ela entendia.
+
+## Cena 62 — A última noite antes
+
+A noite antes de partir foi diferente de todas.
+
+Já se sabia que ia acontecer. Já se sabia o caminho, e já tinha gente
+suficiente.
+
+E teve uma coisa esquisita no ar, que eu só reconheci depois: todo mundo estava
+calmo.
+
+Não animado. Calmo...
+
+Cada um cuidou do seu. Carga conferida cedo, animais alimentados, tudo pronto
+com horas de antecedência, que nunca acontecia.
+
+E aí sobrou tempo.
+
+O fogo ficou aceso mais que o normal. Ninguém contou história longa. Falou-se
+de coisa pequena.
+
+Um homem falou de uma dívida que ele tinha em casa. Outro perguntou a um
+terceiro o nome do filho mais novo, que ele nunca tinha perguntado.
+
+Eu fiquei perto dos camelos, como sempre.
+
+Deitei ali no meio deles, no lugar de sempre, e escutei aquele som de sempre —
+quarenta bocas, e depois trezentas, mastigando devagar.
+
+E naquela noite eu dormi bem.
+
+Que é uma coisa que quase ninguém acredita quando eu conto.
+
+## Cena 63 — Descer as gargantas
+
+A última parte foi pelas montanhas.
+
+Não é montanha alta, mas é pedra de verdade, com garganta estreita entre
+paredões, e o caminho descendo.
+
+Descer é pior que subir. Todo mundo que carrega bicho sabe.
+
+Subindo, o peso vai para trás e o animal usa a força. Descendo, o peso vai para
+a frente, para cima do pescoço e das patas da frente, e a carga quer escorregar...
+
+Então você reamarra tudo antes de descer. Tudo.
+
+E vai a pé. Ninguém desce montado numa garganta ruim.
+
+A gente foi assim, quilômetros, andando ao lado do bicho, segurando o cabresto
+curto, com a pedra apertando dos dois lados.
+
+Ali dentro faz sombra o dia inteiro. É fresco. Depois de meses de sol, entrar
+numa garganta funda é como entrar num quarto.
+
+E o som muda de novo.
+
+Fica fechado. O passo bate na parede e volta na hora, curtinho.
+
+E se alguém fala, a voz enche o lugar todo.
+
+Então ninguém falou.
+
+## Cena 64 — O último dia
+
+Do último dia eu vou contar pouco, e é de propósito.
+
+Aconteceu o que a gente tinha ido fazer, e aconteceu depressa, e não é sobre
+isso que eu quero falar com você antes de dormir.
+
+Teve barulho. Teve gente correndo. Teve o que tem.
+
+Eu fiquei atrás com os animais, que é onde eu sempre ficava, e eu vou te dizer
+com honestidade que eu não vi quase nada...
+
+O que eu me lembro do último dia não é o que você espera.
+
+Eu me lembro de estar segurando quatro cabrestos ao mesmo tempo, com a mão
+doendo, e de um dos camelos estar puxando para o lado.
+
+Eu me lembro de um cheiro diferente no ar, que eu não soube identificar na
+hora.
+
+E eu me lembro de um homem passando por mim correndo e gritando uma coisa que
+eu não entendi.
+
+Depois ficou quieto.
+
+E aí alguém disse: acabou.
+
+E eu não acreditei, e continuei segurando os cabrestos por mais um tempo, com a
+mão doendo, sem saber o que fazer com aquilo.
+
+## Cena 65 — O ar muda
+
+Foi na descida final que eu senti.
+
+Estava andando, olhando o chão, do jeito que se anda quando se está cansado
+demais para olhar para cima.
+
+E o ar mudou.
+
+Não esfriou. Ficou... mais pesado. Mais macio, se é que isso quer dizer alguma
+coisa...
+
+Eu parei sem pensar. E respirei fundo.
+
+Tinha umidade no ar. Depois de dois meses, umidade.
+
+Você não sabe o que é isso até passar sem. O ar do deserto é seco de um jeito
+que reseca o lábio, o nariz por dentro, e você se acostuma tanto que esquece
+que existe outro tipo de ar.
+
+E aí você respira um ar com água dentro e o corpo inteiro reconhece.
+
+Antes do olho. Antes do cheiro.
+
+O peito reconhece.
+
+Eu olhei para cima e ainda não dava para ver nada. Só pedra e mais pedra.
+
+Mas eu soube ali. E o homem na minha frente também tinha parado.
+
+A gente se olhou e ninguém falou nada.
+
+## Cena 66 — O cheiro de sal
+
+Depois veio o cheiro.
+
+Sal, alga, aquela coisa meio podre e meio limpa que só o mar tem.
+
+Eu tinha crescido longe do mar e ainda assim aquele cheiro me pareceu familiar,
+e eu acho que é uma coisa antiga que a gente carrega sem saber.
+
+Os camelos levantaram a cabeça...
+
+E aí a gente saiu de entre as pedras, e o lugar se abriu, e o mar estava lá
+embaixo.
+
+Eu vou tentar dizer como foi.
+
+Era azul de um jeito que dói. Depois de dois meses de vermelho, de bege, de
+preto e de branco de sal, o azul entra no olho como se fosse barulho.
+
+Eu não chorei. Uns choraram.
+
+Eu fiquei com uma coisa apertada na garganta e continuei andando, porque parar
+ali no meio da descida atrapalhava quem vinha atrás.
+
+Mas eu virei a cabeça umas quinze vezes na meia hora seguinte.
+
+Só para conferir se continuava lá.
+
+## Cena 67 — O mar outra vez
+
+A gente desceu até a beira.
+
+Não naquele dia. No seguinte, quando já dava, quando as coisas já estavam
+resolvidas e ninguém precisava mais de mim segurando cabresto.
+
+Eu levei o meu camelo até a água.
+
+Eles não gostam. Ficam desconfiados com aquilo que se mexe, e o meu parou com
+as patas da frente na água rasa e não quis passar...
+
+Eu deixei. Não tinha por que insistir.
+
+Fiquei ali do lado dele, com a água na canela, olhando o horizonte.
+
+Dois meses antes eu tinha ouvido esse mesmo mar em Al-Wajh, do outro lado, de
+noite, sem gostar dele.
+
+E ali eu gostei.
+
+Não porque tivesse mudado de ideia sobre água que anda sozinha.
+
+Foi porque, entre uma coisa e outra, eu tinha atravessado mil quilômetros de
+lugar nenhum, e o mar era a prova de que existia outro lado.
+
+Enquanto você está no meio, você não tem prova.
+
+Você só tem a palavra de um velho que disse que tinha um poço lá adiante.
+
+## Cena 68 — A água salgada
+
+Eu me abaixei e botei a mão na água.
+
+Provei, que é uma bobagem que todo mundo faz e ninguém sabe explicar.
+
+Estava salgada, claro. Estava horrível.
+
+E eu fiquei rindo sozinho, de cócoras, com a mão molhada, como um bobo...
+
+Porque durante três dias, semanas antes, eu tinha pensado em água a cada
+minuto. Tinha sonhado com água. Tinha medido água na mão, contado gole, brigado
+comigo mesmo por ter bebido demais numa semana boa.
+
+E ali tinha água até onde a vista alcançava.
+
+E não servia para nada.
+
+Tem uma piada nisso que eu não sei contar direito. Uma piada meio triste, do
+tipo que a vida faz.
+
+Você atravessa o deserto atrás de uma coisa, e chega, e o que tem lá é a mesma
+coisa que faltava, em quantidade infinita, e imprestável.
+
+Eu levantei, sequei a mão na roupa, e fui cuidar dos animais.
+
+Que era o meu ofício, e que eu ia continuar fazendo por mais quarenta anos.
+
+## Cena 69 — O que ficou
+
+E é mais ou menos isso.
+
+Eu não vou te contar o que aconteceu depois. Aconteceu muita coisa, e uma parte
+dela foi feia, e nada disso serve para dormir.
+
+Você já deve estar quase dormindo, se é que ainda está aí.
+
+Eu fico com o que ficou. E o que ficou não é o que eu esperava...
+
+Não é o dia da chegada. Não é a tempestade. Não é o inglês voltando com o
+homem no camelo.
+
+O que ficou foi a areia fria de madrugada. A mão no chão só para sentir.
+
+Foi o som do pilão de café atravessando o acampamento, e a gente voltando sem
+ninguém chamar.
+
+Foi o pano da tenda batendo devagar no meio do dia, e eu ali embaixo, no meio
+metro de sombra, cochilando.
+
+Foi quarenta bocas mastigando devagar no escuro.
+
+E foi a linha clara no horizonte, às quatro da manhã, dizendo que mais uma
+noite passou.
+
+É isso que eu tenho. Cinquenta anos depois, é isso.
+
+O resto virou história dos outros.
+
+Boa noite. Durma bem.
+
+E que o seu chão de hoje seja mais macio que o meu era.
+
+<!-- A cena 70 é a cauda de ambiente: 9 minutos de mar e vento, sem narração.
+     Não tem cabeçalho de cena porque o s2_tts sintetizaria o texto. -->
