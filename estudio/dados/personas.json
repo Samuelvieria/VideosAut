@@ -147,6 +147,43 @@
         ],
         "nota": "Composta em 04/09 a partir do traço do canal. Nunca gerou imagem."
       }
+    },
+    {
+      "id": "cameleiro-ageyl",
+      "nome": "O Cameleiro",
+      "descricao": "Voz masculina — um dos homens da escolta Ageyl que atravessou o deserto rumo a Aqaba em 1917, agora velho, contando o que viu. NÃO é Lawrence e NÃO é o herói: ele era quem cuidava dos camelos. A escolha é editorial e resolve três coisas de uma vez. Primeiro, evita pôr palavras na boca de uma pessoa real. Segundo, um cameleiro não tem opinião sobre Sykes-Picot — ele tem opinião sobre água, sobre a areia fria de madrugada, sobre quanto o animal aguenta —, e é isso que um vídeo de dormir quer. Terceiro, Lawrence aparece visto de fora, que é o único ângulo honesto.",
+      "vozes": {
+        "pt": {
+          "engine": "google-chirp3",
+          "voice": "Algenib",
+          "lang": "pt-BR",
+          "nota": "Primeira persona a nascer no Chirp3-HD. Sem `speed`: o ritmo vem da marcação [pause]/[pause long], 127 ppm medidos. Algenib foi a preferida do Samuel entre as 16 masculinas."
+        },
+        "en": {
+          "engine": "google-chirp3",
+          "voice": "Algieba",
+          "lang": "en-US",
+          "nota": "Algieba foi a preferida dele em inglês ('muito boa'). A mesma voz existe nos dois idiomas com o mesmo timbre, então o narrador não muda de identidade na faixa de áudio."
+        }
+      },
+      "criado_em": "2026-09-05T02:00:00-03:00",
+      "origem_video": null,
+      "estetica": {
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, Arabian desert of the Hejaz, sand dunes and black basalt, 1917, 16:9",
+        "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs, weapons in frame, battle, blood",
+        "paleta": [
+          "deep indigo night",
+          "near-black",
+          "warm amber",
+          "pale sand ochre"
+        ],
+        "luz": "key light warm amber from a low fire or lantern, cool indigo fill from the night sky, long shadows on sand",
+        "resolucao": [
+          1280,
+          720
+        ],
+        "nota": "Paleta trocada em relação às marítimas: o azul vira índigo e o cinza-azulado vira ocre de areia — mesma linguagem de pixel art e mesma lógica de luz quente contra frio, outra terra. `weapons in frame, battle, blood` está nos negativos de propósito: o episódio é sobre as travessias, não sobre a guerra, e a política de conteúdo perturbador cita tema violento repetido sem narrativa coesa."
+      }
     }
   ],
   "_decisao_voz_05_09_2026": {

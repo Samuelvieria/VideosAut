@@ -1,0 +1,23 @@
+id: video-04
+versao: 1
+gerador: fal.ai / Z-Image-Turbo
+resolucao:
+- 1280
+- 720
+prompt_prefixo: pixel art, detailed 16-bit style, fine pixel grain, cinematic wide
+  composition, Arabian desert of the Hejaz, sand dunes and black basalt, 1917, 16:9
+prompt_negativo: text, watermark, signature, UI, HUD, modern clothing, modern buildings,
+  cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic,
+  3d render, oversaturated, deformed hands, extra limbs, weapons in frame, battle,
+  blood
+paleta:
+- deep indigo night
+- near-black
+- warm amber
+- pale sand ochre
+luz: key light warm amber from a low fire or lantern, cool indigo fill from the night
+  sky, long shadows on sand
+seed:
+  base: 20260961
+_nota: Referência humana. O pipeline lê o plano.json, não este arquivo — só a seed
+  base é lida daqui por s3_imagens.
