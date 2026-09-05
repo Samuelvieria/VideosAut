@@ -135,8 +135,7 @@ A mão aprende antes do olho.
 
 ## Cena 5 — O que se leva
 
-Deixa eu te contar o que a gente carregou, porque é uma lista curta e ela diz
-mais que qualquer discurso.
+Deixa eu te contar o que a gente carregou.
 
 Água, primeiro. Em odres de couro de cabra, costurados com o pelo para dentro.
 Couro sua um pouco, e é de propósito: o que evapora esfria o que fica.
@@ -323,7 +322,7 @@ E os outros levantam atrás. E ninguém disse nada.
 
 Marchar de noite não é como você imagina.
 
-Não é assustador. É monótono, e a monotonia é a parte boa.
+É monótono, e a monotonia é a parte boa.
 
 Você entra num passo e o passo entra em você. Quatro, cinco quilômetros por
 hora, que é mais ou menos a velocidade de um homem andando rápido, mas você
@@ -337,7 +336,7 @@ estive na vida...
 
 A coluna anda em fila, quase sem falar.
 
-Não é disciplina. É que falar seca a boca.
+Ninguém mandou calar. Falar seca a boca, e todo mundo aprende sozinho.
 
 Então o que se ouve é: o passo almofadado na areia, que é abafado e macio. O
 couro rangendo baixinho. De vez em quando um bufo. E o vento, que no deserto
@@ -353,8 +352,8 @@ Ele só sopra. Grosso, comprido, oco.
 
 O guia lia o céu.
 
-Não é magia, e também não é simples. É um ofício, e como todo ofício ele é
-feito de decorar muita coisa e depois esquecer que decorou.
+É ofício, como qualquer outro: decorar muita coisa e depois esquecer que
+decorou.
 
 Ele conhecia as estrelas por nome. Não pelos nomes dos livros — pelos nomes
 dele, que o pai dele tinha ensinado.
@@ -509,7 +508,7 @@ Acho que era só para ter alguém ali.
 
 A pior hora do dia é três e meia da manhã.
 
-Não é a mais quente nem a mais fria. É a mais injusta. Você dormiu três horas,
+Nem a mais quente, nem a mais fria. A mais injusta. Você dormiu três horas,
 o corpo pesa como se fosse feito de areia molhada, e alguém está mexendo no
 seu ombro.
 
@@ -579,7 +578,7 @@ Eu levei semanas para entender que era de propósito.
 Entre onze e três e meia, ninguém se mexe.
 
 Tem um nome para isso, e é uma palavra antiga: qaylula. O repouso do meio-dia.
-Não é sesta de preguiça. É sobrevivência com nome bonito.
+Quem nunca passou calor de verdade acha que é preguiça com nome bonito.
 
 A gente parava onde desse sombra. Se tivesse um paredão de rocha, ótimo. Se
 não tivesse, a gente fazia.
@@ -587,12 +586,12 @@ não tivesse, a gente fazia.
 Fazer sombra é assim: você finca duas lanças, ou dois fuzis, ou dois galhos, e
 estica um manto entre eles. Fica baixo, na altura de um homem deitado.
 
-Não é bonito. É meio metro de tecido entre você e o sol...
+Meio metro de tecido feio entre você e o sol...
 
 E é a diferença entre chegar e não chegar.
 
-Debaixo daquilo o ar é uns dez graus mais fresco. Não é fresco — é menos
-quente, que não é a mesma coisa, mas o corpo agradece igual.
+Debaixo daquilo o ar cai uns dez graus. Continua quente, mas quente de um jeito
+que o corpo aguenta, e ele agradece.
 
 E aí você fica deitado.
 
@@ -615,9 +614,9 @@ Nunca dormi melhor do que debaixo daquele pano.
 
 Eu vou tentar te contar o calor, mas eu já sei que não vou conseguir.
 
-Não é o calor de um dia quente. Não é o calor de perto do fogo.
+Esqueça calor de dia quente. Esqueça calor de perto do fogo.
 
-É uma coisa que tem peso. Você sai da sombra e ela cai em cima de você, nos
+Aquilo tem peso. Você sai da sombra e ela cai em cima de você, nos
 ombros primeiro, e você abaixa um pouco a cabeça sem querer.
 
 O ar fica visível. Ele treme em cima da areia, e o horizonte se desmancha
@@ -629,8 +628,8 @@ mesma velocidade que você avança.
 
 Ninguém se anima com aquilo. Depois da terceira vez ninguém nem comenta.
 
-A boca seca de um jeito diferente do normal. Não é sede de garganta — é a
-língua que fica áspera e grossa e parece grande demais.
+A boca seca de um jeito diferente do normal. A língua fica áspera e grossa, e
+parece grande demais para o lugar onde mora.
 
 Você para de falar. Não por regra, por economia.
 
@@ -737,8 +736,8 @@ ruim que a gente aproveitava, porque desperdiçar não estava no vocabulário.
 
 Eu comi carne três vezes em dois meses.
 
-E isso não é história triste, é só a conta de um lugar onde nada se joga fora.
-Ninguém ali estava passeando.
+Num lugar onde nada se joga fora, isso é o que acontece. Ninguém ali estava
+passeando.
 
 O caldo era bom. Fazia-se num caldeirão grande, com o que tivesse, e todo mundo
 comia do mesmo caldeirão, sentado em roda.
@@ -763,15 +762,11 @@ E aí ele para. E fica parado. E depois recomeça...
 De tarde, quando a gente parava, eles saíam a procurar. Não muito longe —
 uns cem passos, duzentos. Comiam o que dava.
 
-Nunca vi um comer até se fartar. Eles comem um pouco de muitos lugares.
+Nunca vi um comer até se fartar. Eles provam de muitos lugares e não acabam com
+nenhum.
 
-Eu acho que é por isso que aguentam onde nada aguenta. Não é que eles precisem
-de pouco. É que eles aceitam qualquer coisa.
-
-E come pouco de cada arbusto, nunca até acabar com nenhum.
-
-Eu acho que é por isso que eles duram onde nada dura. Não é que precisem de
-pouco. É que não insistem em lugar nenhum.
+Eu acho que é por isso que duram onde nada dura. Eles aceitam qualquer coisa e
+não insistem em nada.
 
 Tem gente assim também. Eu conheci duas ou três.
 
@@ -1273,8 +1268,8 @@ número e isso me incomodava.
 
 E às vezes eu não pensava em nada, e essas eram as melhores horas.
 
-É um estado esquisito. Você está acordado, os olhos abertos, o corpo
-trabalhando — e não tem ninguém em casa.
+É um estado esquisito. Os olhos abertos, o corpo andando, e por dentro um
+silêncio grande.
 
 Depois, na velhice, eu procurei aquilo em vários lugares. Em oração, em coisa de
 médico, em umas bebidas que não vou citar.
@@ -1390,7 +1385,7 @@ eu quero que você veja primeiro.
 
 Depois de uma tempestade daquelas o deserto fica lindo.
 
-E isso é quase ofensivo. Você quase morreu, o seu amigo sumiu, e o lugar está
+E isso custa a engolir. Você quase morreu, o seu amigo sumiu, e o lugar está
 mais bonito do que estava de manhã.
 
 Toda marca some. Toda pegada, todo rastro, toda pedra pequena — tudo fica
@@ -1688,8 +1683,7 @@ mulher dele tinha dito baixinho meia hora antes.
 
 Eu era moço e achei engraçado.
 
-Hoje eu não acho graça. Acho que ela fazia o trabalho e ele ficava com a frase,
-e que isso é um mau negócio para quem faz o trabalho.
+Hoje eu não acho graça. Ela fazia e ele falava, e quem faz devia falar.
 
 Era vida dura. Levantar antes, deitar depois, e o dia inteiro no meio.
 
@@ -1754,9 +1748,7 @@ Você não faz nada. Fica sentado.
 E fica olhando, com aquela cara boba de quem está com sono, uma criança
 correndo atrás de um cabrito no fim da tarde.
 
-E é isso. Não tem lição nenhuma nessa cena.
-
-É só que era bom.
+E era bom. Só isso.
 
 ## Cena 55 — As histórias à noite
 
@@ -1831,24 +1823,15 @@ A tempestade estava maior. Os dias sem água eram cinco, e tinham sido três...
 
 E o resgate do Gasim já era uma cena inteira, com falas que ninguém falou.
 
-Eu fiquei quieto. Não corrigi.
+Eu fiquei quieto. Ninguém corrige Auda, e de todo jeito não ia adiantar.
 
-Primeiro porque ninguém corrige Auda. Segundo porque eu percebi, ali, que
-corrigir não adiantava nada.
+Uma história contada muitas vezes vai assentando. Cresce de um lado, encolhe do
+outro, e depois de umas vinte noites ela fica daquele jeito e não muda mais.
 
-A história vira o que ela precisa virar.
+Eu devo estar fazendo isso agora, com você.
 
-Ela cresce onde precisa crescer, e encolhe no resto, e depois de umas vinte
-noites ela toma uma forma e não muda mais.
-
-Eu estou fazendo isso agora, com você.
-
-Eu juro que estou tentando contar o que aconteceu. E mesmo assim, eu sei que
-cinquenta anos passaram por cima disso.
-
-O que eu te dou não é o que aconteceu.
-
-É o que ficou.
+Eu estou tentando contar o que aconteceu. Mas cinquenta anos passaram por cima,
+e o que eu tenho na mão já é o que sobrou.
 
 ## Cena 58 — Al-Jafr
 
@@ -1930,7 +1913,7 @@ o outro fazia café.
 Tem uma explicação boba e verdadeira. Andando, a cabeça fica ocupada com o
 passo. Parado, ela fica ocupada com você.
 
-E ninguém é boa companhia para si mesmo o dia inteiro.
+E a gente cansa da própria cabeça mais rápido do que cansa das pernas.
 
 Eu me acostumei, com o tempo, a arranjar uma coisa para as mãos.
 
@@ -2041,10 +2024,10 @@ Então ninguém falou.
 
 ## Cena 64 — O último dia
 
-Do último dia eu vou contar pouco, e é de propósito.
+Do último dia eu vou contar pouco.
 
-Aconteceu o que a gente tinha ido fazer, e aconteceu depressa, e não é sobre
-isso que eu quero falar com você antes de dormir.
+Aconteceu o que a gente tinha ido fazer, e aconteceu depressa. E eu vi menos do
+que você imagina.
 
 Teve barulho. Teve gente correndo. Teve o que tem.
 
