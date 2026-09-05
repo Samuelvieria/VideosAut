@@ -42,7 +42,33 @@ discussões sem motivo novo:
   em vídeo de sono).
 - **Divulgação de conteúdo sintético ativada** para voz/imagem geradas (toggle no Studio).
 
-## TTS — decisão tomada (vídeo 1, validar se mantém para os próximos)
+## TTS — em troca desde 05/09/2026 (Google Chirp3-HD)
+
+**O Kokoro deixou de ser a única opção.** Ao procurar por onde começar o teste
+de voz paga apareceu que a `GOOGLE_APPLICATION_CREDENTIALS` já estava no `.env`,
+a API habilitada, e a conta responde **30 vozes Chirp3-HD em pt-BR** (16
+masculinas, 14 femininas), **as mesmas disponíveis em en-US/en-GB/en-AU/en-IN**
+— o que resolve de uma vez o pedido de vozes diferentes por persona e o mercado
+internacional, sem clonagem e portanto sem questão de direito de voz.
+
+- US$ 30/milhão de caracteres → **R$ 21/mês** na cadência quinzenal bilíngue,
+  contra R$ 505 do ElevenLabs. Ver [docs/tts-provedores.md](docs/tts-provedores.md).
+- Suporta `[pause]`, `[pause short]`, `[pause long]` pelo campo `markup`, e
+  `speaking_rate`. **A pausa nativa é melhor que silêncio inserido**: o modelo
+  planeja a entoação em volta dela.
+- Em 04/09 o Samuel ouviu as 16 masculinas e aprovou 10, com **`Algenib`** como
+  preferida. Também apontou que **o espaçamento estava grande** — e estava: o
+  1,2 s do video-03 foi calibrado para o Kokoro, que não pausa sozinho; no
+  Chirp3-HD ele se soma aos ~0,45 s que o modelo já faz e vira 1,6 s efetivos.
+- Gerador: `python -m pipeline.vozes`. Nivela tudo a −18 LUFS antes de comparar,
+  que é obrigatório e já quase custou uma conclusão errada.
+- **Decisão de espaçamento em aberto** — os seis tratamentos estão em
+  `fase0/_vozes-candidatas/espacamento/contato.wav`.
+
+O Kokoro continua sendo o que produziu os vídeos 1 a 3 e o que está descrito
+abaixo. Nada foi refeito.
+
+## TTS — o que produziu os vídeos 1 a 3 (Kokoro-82M)
 
 Trocamos Azure por **Kokoro-82M** (local, Apache-2.0, licença comercial livre — ao
 contrário do XTTS-v2/Coqui, que é CPML e proíbe uso comercial). Resolve o bloqueio
@@ -179,6 +205,19 @@ Ver seção 10 do documento de viabilidade — custo de quota de `videos.insert`
 nome exato do campo de divulgação sintética na Data API v3, comportamento de loudness do
 YouTube, expiração de refresh token OAuth. Confirmar na documentação oficial antes de
 depender desses valores em código.
+
+**`private` → público dispara notificação de inscrito?** Levantado em 05/09 a
+partir de [docs/consultas/videos/README.md](docs/consultas/videos/README.md) §1.
+A decisão fixada acima manda subir como `private`; a fonte recomenda **não
+listado**, porque vídeo que sobe privado e só depois vira público pode não
+entrar no feed de inscritos nem disparar notificação — a caixa é avaliada na
+publicação. Com 0 inscritos não custa nada; com 5 mil, custa a primeira hora de
+tráfego. **Conferir no próximo vídeo antes de mudar a decisão.**
+
+**Faixa gratuita do Chirp3-HD.** Fontes secundárias falam em 1 milhão de
+caracteres/mês, o que cobriria qualquer cadência nossa de graça — mas a parte
+que diz que Chirp3-HD entra nela é inferência do agregador, não texto do Google.
+Conferir no faturamento; não depender disso em código.
 
 ## Ritmo de narração — medido em 04/09/2026
 

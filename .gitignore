@@ -54,3 +54,7 @@ metricas/
 !fase0/video-03/thumbnails/
 !fase0/video-03/thumbnails/*.png
 !fase0/video-03/thumbnails/*.stamp
+
+# Transcrições de vídeos consultados: o .txt fica (é a fonte da análise),
+# o .vtt não — é o mesmo texto com carimbo de tempo e três vezes maior.
+docs/consultas/videos/*.vtt

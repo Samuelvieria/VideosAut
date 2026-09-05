@@ -72,26 +72,62 @@ def _com_pausas(sintetizar, texto: str, pausa: float = PAUSA_FRASE_PRODUCAO):
     return np.concatenate(partes)
 
 
-def google_audio(texto: str, voz: str):
-    """Chirp3-HD, a geração de 2025. Uma frase por chamada — ver `_com_pausas`."""
-    import io, numpy as np, soundfile as sf
+def google_audio(texto: str, voz: str, lang: str = "pt-BR", markup: bool = False):
+    """Chirp3-HD, a geração de 2025.
+
+    `markup=True` manda o texto pelo campo `markup` em vez de `text`, que é o
+    que habilita as marcas `[pause]`, `[pause short]` e `[pause long]`. A pausa
+    nativa é melhor que silêncio costurado por fora: o modelo PLANEJA a
+    prosódia em volta dela — a frase anterior fecha a entoação e a seguinte
+    reabre —, enquanto silêncio inserido é um corte no meio de uma leitura
+    contínua. A mesma voz existe em en-US, en-GB, en-AU e en-IN com o mesmo
+    nome, então o narrador não muda de identidade ao trocar de idioma.
+    """
+    import io, soundfile as sf
     os.environ.setdefault("GOOGLE_APPLICATION_CREDENTIALS",
                           str(Path.home() / ".config" / "gcloud-tts.json"))
     from google.cloud import texttospeech as tts
     cli = tts.TextToSpeechClient()
+    entrada = (tts.SynthesisInput(markup=texto) if markup
+               else tts.SynthesisInput(text=texto))
     r = cli.synthesize_speech(
-        input=tts.SynthesisInput(text=texto),
-        voice=tts.VoiceSelectionParams(language_code="pt-BR",
-                                       name=f"pt-BR-Chirp3-HD-{voz}"),
+        input=entrada,
+        voice=tts.VoiceSelectionParams(language_code=lang,
+                                       name=f"{lang}-Chirp3-HD-{voz}"),
         audio_config=tts.AudioConfig(audio_encoding=tts.AudioEncoding.LINEAR16,
                                      sample_rate_hertz=24000))
     audio, _ = sf.read(io.BytesIO(r.audio_content), dtype="float32")
     return audio if audio.ndim == 1 else audio.mean(axis=1)
 
 
-def google(texto: str, voz: str, saida: Path) -> None:
-    import soundfile as sf
-    sf.write(saida, _com_pausas(lambda t: google_audio(t, voz), texto), 24000)
+# Tratamentos de espaçamento entre frases, para julgar de ouvido. O 1,2 s da
+# última linha é o do video-03 — e ele foi calibrado para o KOKORO, que não faz
+# pausa nenhuma sozinho. O Samuel ouviu as Chirp3-HD com esse mesmo 1,2 s e
+# disse que "o espaçamento está grande": faz sentido, é compensação de um
+# motor sendo aplicada a outro que não precisa dela.
+TRATAMENTOS = {
+    "1_sem_nada":      ("nada — só a pontuação, o modelo decide", None),
+    "2_pause_short":   ("marca [pause short] entre frases", "[pause short]"),
+    "3_pause":         ("marca [pause] entre frases", "[pause]"),
+    "4_pause_long":    ("marca [pause long] entre frases", "[pause long]"),
+    "5_pause_duplo":   ("duas marcas [pause] seguidas", "[pause] [pause]"),
+    "6_silencio_1s2":  ("1,2 s de silêncio inserido — como está hoje", 1.2),
+}
+
+
+def google(texto: str, voz: str, saida: Path, lang: str = "pt-BR",
+           tratamento: str = "3_pause") -> None:
+    """Gera uma amostra aplicando um dos tratamentos de espaçamento."""
+    import numpy as np, soundfile as sf
+    _, modo = TRATAMENTOS[tratamento]
+    if modo is None:
+        audio = google_audio(texto, voz, lang)
+    elif isinstance(modo, str):
+        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", texto) if f.strip()]
+        audio = google_audio(f" {modo} ".join(frases), voz, lang, markup=True)
+    else:
+        audio = _com_pausas(lambda t: google_audio(t, voz, lang), texto, modo)
+    sf.write(saida, audio, 24000)
 
 
 def kokoro(texto: str, saida: Path, voz: str = "pm_santa", speed: float = 0.75) -> None:
@@ -160,8 +196,29 @@ def main() -> None:
     ap.add_argument("--kokoro", action="store_true", help="inclui a voz atual")
     ap.add_argument("--cega", action="store_true",
                     help="renomeia para A/B/C... e guarda a correspondência em chave.txt")
+    ap.add_argument("--pausas", help="UMA voz; gera os 4 tratamentos de espaçamento")
+    ap.add_argument("--lang", default="pt-BR", help="pt-BR, en-US, en-GB…")
+    ap.add_argument("--texto", help="sobrescreve o trecho de teste")
+    ap.add_argument("--tratamento", default="3_pause", choices=list(TRATAMENTOS))
     ap.add_argument("--saida", default="google-chirp3")
     a = ap.parse_args()
+
+    texto = a.texto or TEXTO
+
+    if a.pausas:
+        dest = DESTINO / (a.saida if a.saida != "google-chirp3" else "espacamento")
+        dest.mkdir(parents=True, exist_ok=True)
+        bruto = dest / "_bruto"; bruto.mkdir(exist_ok=True)
+        feitos = []
+        for nome, (desc, _) in TRATAMENTOS.items():
+            cru, limpo = bruto / f"{nome}.wav", dest / f"{nome}.wav"
+            google(texto, a.pausas, cru, a.lang, nome)
+            nivelar(cru, limpo)
+            feitos.append((f"{nome} — {desc}", limpo))
+            log(f"{a.pausas}: {desc}")
+        folha_contato(feitos, dest / "contato.wav")
+        print(f"\nOK — 4 tratamentos de {a.pausas} em {dest}")
+        return
 
     if a.listar:
         for g, ns in listar_google().items():
@@ -195,9 +252,9 @@ def main() -> None:
             log(f"já existe {motor}/{voz}")
             continue
         if motor == "google":
-            google(TEXTO, voz, cru)
+            google(texto, voz, cru, a.lang, a.tratamento)
         else:
-            kokoro(TEXTO, cru)
+            kokoro(texto, cru)
         nivelar(cru, limpo)
         feitos.append((f"{motor}/{voz}", limpo))
         log(f"gerada {motor}/{voz}")
