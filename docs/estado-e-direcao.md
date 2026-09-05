@@ -157,9 +157,12 @@ suspeitos.
 
 ### O que falta construir
 
-- [ ] **Faixa de áudio em inglês** — o `s2_tts` já aceita `lang`, mas nada monta
-      o `.m4a` único com a duração exata do vídeo. É o item novo de código.
+- [x] **Faixa de áudio em inglês** — `pipeline/s8_faixa.py`, feito e testado em
+      05/09. Alinha cada cena ao tempo do pt-BR, recusa quem estoura, avisa
+      quando o texto está curto demais e diz **quantas palavras faltam**.
 - [ ] Roteiro de 14.100 palavras — o maior trabalho, e é humano
+- [ ] Adaptação em inglês presa ao tempo das cenas — o `--so-alinhar` diz o
+      quanto falta em cada uma, então dá para escrever com o número na mão
 
 ### O que fazer no Studio antes (minutos, e nada depende de render)
 

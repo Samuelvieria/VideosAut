@@ -100,14 +100,21 @@ def placeholders(proj: Path, plano: dict) -> None:
     log(f"placeholders em {d}")
 
 
-def trilha_narracao(proj: Path, cenas: list[dict], forcar: bool) -> tuple[Path, float]:
-    """Concatena as narrações com PAUSA_ENTRE_CENAS de silêncio entre elas."""
-    wavs = [proj / "audio" / f"cena_{c['n']:02d}.wav" for c in cenas]
+def trilha_narracao(proj: Path, cenas: list[dict], forcar: bool,
+                    dir_audio: str = "audio") -> tuple[Path, float]:
+    """Concatena as narrações com PAUSA_ENTRE_CENAS de silêncio entre elas.
+
+    `dir_audio` existe para a faixa de áudio em outro idioma (`s8_faixa`), que
+    monta as cenas em `audio-en/` já alinhadas às durações do pt-BR. Fora isso,
+    é sempre `audio/`.
+    """
+    wavs = [proj / dir_audio / f"cena_{c['n']:02d}.wav" for c in cenas]
     faltando = [w.name for w in wavs if not w.exists()]
     if faltando:
         erro(f"faltam áudios de cena: {', '.join(faltando)}\nRode s2_tts antes.")
 
-    saida = proj / "build" / "narracao_completa.wav"
+    sufixo = "" if dir_audio == "audio" else f"_{dir_audio.split('-')[-1]}"
+    saida = proj / "build" / f"narracao_completa{sufixo}.wav"
     saida.parent.mkdir(exist_ok=True)
     cfg = f"pausa={PAUSA_ENTRE_CENAS}"
     if not forcar and atualizado(saida, wavs, cfg):
