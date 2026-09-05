@@ -52,6 +52,37 @@ def nivelar(entrada: Path, saida: Path, alvo: float = LUFS_COMPARACAO) -> None:
 
 PAUSA_FRASE_PRODUCAO = 1.2      # igual ao plano do video-03
 
+# Hierarquia de pausa para o Chirp3-HD, escolhida de ouvido pelo Samuel em
+# 05/09/2026: `[pause]` entre frases (tratamento 3, ~0,8 s) — ele rejeitou tanto
+# o `[pause short]`, que some, quanto o 1,2 s inserido do Kokoro, que "está
+# grande". O `[pause long]` fica reservado para a quebra de PARÁGRAFO, que no
+# roteiro marca mudança de assunto, e o `[pause]` também cobre o "..." do
+# respiro. Isso dá três níveis a partir da pontuação que o roteiro já tem, sem
+# nenhum parâmetro novo no plano.json.
+MARCA_FRASE = "[pause]"
+MARCA_RESPIRO = "[pause]"
+MARCA_PARAGRAFO = "[pause long]"
+
+
+def marcar_roteiro(texto: str) -> str:
+    """Converte um bloco de roteiro em markup do Chirp3-HD.
+
+    Lê a estrutura que o roteiro JÁ tem — parágrafo em linha em branco, respiro
+    em "...", frase em pontuação final — e devolve o texto com as marcas nativas
+    no lugar. Não inventa estrutura: se o roteiro não tem parágrafo, não há
+    pausa longa.
+    """
+    paragrafos = [x.strip() for x in texto.split("\n\n") if x.strip()]
+    fora = []
+    for par in paragrafos:
+        partes = [x.strip() for x in par.split("...") if x.strip()]
+        marcados = []
+        for parte in partes:
+            frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", parte) if f.strip()]
+            marcados.append(f" {MARCA_FRASE} ".join(frases))
+        fora.append(f" {MARCA_RESPIRO} ".join(marcados))
+    return f" {MARCA_PARAGRAFO} ".join(fora)
+
 
 def _com_pausas(sintetizar, texto: str, pausa: float = PAUSA_FRASE_PRODUCAO):
     """Aplica a MESMA estrutura de pausa da produção a qualquer motor.
@@ -199,7 +230,8 @@ def main() -> None:
     ap.add_argument("--pausas", help="UMA voz; gera os 4 tratamentos de espaçamento")
     ap.add_argument("--lang", default="pt-BR", help="pt-BR, en-US, en-GB…")
     ap.add_argument("--texto", help="sobrescreve o trecho de teste")
-    ap.add_argument("--tratamento", default="3_pause", choices=list(TRATAMENTOS))
+    ap.add_argument("--tratamento", default="3_pause", choices=list(TRATAMENTOS),
+                    help="3_pause é o escolhido de ouvido em 05/09/2026")
     ap.add_argument("--saida", default="google-chirp3")
     a = ap.parse_args()
 

@@ -187,3 +187,37 @@ narrativa que funciona — enquanto nós estamos 26 ppm abaixo dela.
 ### Resultado
 
 _(preencher: números preferidos, e por quê)_
+
+### Resultado — 05/09/2026
+
+**Espaçamento: tratamento 3, `[pause]` entre frases.** O Samuel rejeitou tanto o
+`[pause short]`, que some, quanto o 1,2 s inserido do Kokoro, que ele descreveu
+como "o espaçamento está grande". Estava mesmo: no Chirp3-HD o 1,2 s se soma aos
+~0,45 s que o modelo já faz no ponto e vira **1,6 s efetivos**.
+
+**Vozes aprovadas em pt-BR (10 de 16):** Algenib (preferida), Algieba, Charon,
+Enceladus, Iapetus, Orus, Rasalgethi, Sadachbia, Umbriel, Zubenelgenubi.
+Descrição dele: *"não são tão caricatas, mas são muito boas"*.
+
+**Vozes aprovadas em inglês (4):** Algenib, **Algieba** (preferida, "muito
+boa"), Enceladus, Sadachbia — e o veredito geral foi que **as inglesas são
+"muito melhor do que as em português"**. Faz sentido: inglês é o locale primário
+do Chirp3-HD.
+
+### A hierarquia que saiu daí
+
+O tratamento 3 sozinho, aplicado a todas as fronteiras, dava 163 ppm — rápido
+demais. A correção não foi aumentar a pausa (ele já tinha reprovado isso), foi
+**usar a estrutura que o roteiro já tem**:
+
+| fronteira no roteiro | marca |
+|---|---|
+| frase (`.` `!` `?`) | `[pause]` |
+| respiro (`...`) | `[pause]` |
+| **parágrafo (linha em branco)** | **`[pause long]`** |
+
+Medido nas cenas 1–3 do roteiro real do video-03, voz Algenib: **127 ppm**,
+contra 128 do Dreamoria. As amostras estão em `hierarquia/`.
+
+Nenhum parâmetro novo no `plano.json` — a marcação sai de
+`pipeline/vozes.py::marcar_roteiro`.

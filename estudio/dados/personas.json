@@ -148,5 +148,43 @@
         "nota": "Composta em 04/09 a partir do traço do canal. Nunca gerou imagem."
       }
     }
-  ]
+  ],
+  "_decisao_voz_05_09_2026": {
+    "motor": "google-chirp3-hd",
+    "espacamento": "tratamento 3 — [pause] entre frases",
+    "hierarquia": {
+      "frase": "[pause]",
+      "respiro (...)": "[pause]",
+      "paragrafo": "[pause long]",
+      "nota": "Lê a estrutura que o roteiro JÁ tem; nenhum parâmetro novo no plano.json. Ver pipeline/vozes.py::marcar_roteiro."
+    },
+    "medido": {
+      "ppm_com_hierarquia": 127,
+      "referencia_dreamoria_ppm": 128,
+      "roteiro_video03_narracao_min": 50.1,
+      "nota": "Medido nas cenas 1-3 do roteiro real do video-03 com a voz Algenib, não em frase isolada."
+    },
+    "aprovadas_pt": [
+      "Algenib",
+      "Algieba",
+      "Charon",
+      "Enceladus",
+      "Iapetus",
+      "Orus",
+      "Rasalgethi",
+      "Sadachbia",
+      "Umbriel",
+      "Zubenelgenubi"
+    ],
+    "aprovadas_en": [
+      "Algenib",
+      "Algieba",
+      "Enceladus",
+      "Sadachbia"
+    ],
+    "preferida_pt": "Algenib",
+    "preferida_en": "Algieba",
+    "achado": "O Samuel julgou as vozes em INGLÊS 'muito melhor do que as em português'. Chirp3-HD tem o inglês como locale primário, e isso aparece. Consequência estratégica: a trilha em inglês não é só um mercado maior, é também onde o nosso motor de voz é mais forte. Ver docs/mercado.md §6.",
+    "consequencia_duracao": "A 127 ppm o roteiro do video-03 (6.375 palavras) daria 50,1 min de narração, contra 63,7 hoje. Para 75 min totais o roteiro precisa de ~8.400 palavras, 31% a mais. A lentidão do formato passa a vir do TAMANHO do roteiro, não de esticar a fala nem de silêncio — que é o que as duas referências de mercado fazem (Dreamoria 128 ppm, History at Night 180)."
+  }
 }

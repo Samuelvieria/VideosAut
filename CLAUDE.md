@@ -62,8 +62,28 @@ internacional, sem clonagem e portanto sem questão de direito de voz.
   Chirp3-HD ele se soma aos ~0,45 s que o modelo já faz e vira 1,6 s efetivos.
 - Gerador: `python -m pipeline.vozes`. Nivela tudo a −18 LUFS antes de comparar,
   que é obrigatório e já quase custou uma conclusão errada.
-- **Decisão de espaçamento em aberto** — os seis tratamentos estão em
-  `fase0/_vozes-candidatas/espacamento/contato.wav`.
+
+**Espaçamento decidido em 05/09/2026: `[pause]` entre frases** (tratamento 3),
+com hierarquia lida da estrutura que o roteiro já tem — `[pause]` também no
+respiro de `"..."` e **`[pause long]` na quebra de parágrafo**. Nenhum parâmetro
+novo no `plano.json`; ver `pipeline/vozes.py::marcar_roteiro`.
+
+Medido nas cenas 1–3 do roteiro real do video-03 com a `Algenib`: **127 ppm**,
+em cima dos 128 do Dreamoria.
+
+> **Consequência que muda o roteiro, não o código.** A 127 ppm as 6.375 palavras
+> do video-03 dariam **50,1 min** de narração, contra 63,7 hoje. Para 75 min
+> totais o roteiro precisa de **~8.400 palavras, 31% a mais** — e para 3 h,
+> ~21.700. **A lentidão do formato passa a vir do TAMANHO do roteiro**, não de
+> esticar a fala nem de silêncio inserido. É o que as duas referências de
+> mercado fazem: Dreamoria 128 ppm, History at Night 180, as duas com vídeos
+> longos porque escrevem muito.
+
+**As vozes em INGLÊS são melhores que as em português** — julgamento do Samuel
+em 05/09, "muito melhor". O Chirp3-HD tem o inglês como locale primário e isso
+aparece. Consequência: a trilha em inglês não é só mercado maior, é onde o nosso
+motor de voz é mais forte. Aprovadas em inglês: `Algenib`, **`Algieba`**
+(preferida), `Enceladus`, `Sadachbia`.
 
 O Kokoro continua sendo o que produziu os vídeos 1 a 3 e o que está descrito
 abaixo. Nada foi refeito.
