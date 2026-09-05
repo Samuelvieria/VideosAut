@@ -1,5 +1,5 @@
 {
-  "titulo": "A Travessia",
+  "titulo": "Som de Deserto para Dormir · 1h50 · Lawrence da Arábia",
   "obra": "1917, peninsula arabica",
   "duracao_alvo_s": 6460,
   "narrado_s": 5922,
@@ -115,7 +115,7 @@
       "papel": "narrado",
       "titulo": "Quarenta homens",
       "personagem": "",
-      "prompt": "a small column of riders silhouetted against a wide evening sky, leaving a coastal town behind, at dusk under a wide orange sky",
+      "prompt": "a small line of camel riders silhouetted against a wide evening sky, leaving a coastal town behind, at dusk under a wide orange sky",
       "ambiente": {
         "vento": 0.32,
         "areia": 0.22,
@@ -177,7 +177,7 @@
       "papel": "narrado",
       "titulo": "O relógio do deserto",
       "personagem": "",
-      "prompt": "riders moving in late afternoon light, long shadows stretching across sand",
+      "prompt": "camel riders moving in late afternoon light, long shadows stretching across sand",
       "ambiente": {
         "vento": 0.35,
         "areia": 0.28,
@@ -202,7 +202,7 @@
       "papel": "narrado",
       "titulo": "Marchar no escuro",
       "personagem": "",
-      "prompt": "a column of camels walking under a sky full of stars, no other light",
+      "prompt": "a long line of camels walking under a sky full of stars, no other light",
       "ambiente": {
         "vento": 0.38,
         "areia": 0.3,
@@ -278,7 +278,7 @@
       "papel": "narrado",
       "titulo": "Antes da alvorada",
       "personagem": "",
-      "prompt": "the first grey light on dunes, a column already moving, no sun yet",
+      "prompt": "the first grey light on dunes, a line of camels already walking, no sun yet",
       "ambiente": {
         "vento": 0.35,
         "areia": 0.28,
@@ -290,7 +290,7 @@
       "papel": "narrado",
       "titulo": "O sol que sobe",
       "personagem": "",
-      "prompt": "low sun over dunes, long blue shadows, riders small in the frame",
+      "prompt": "low sun over dunes, long blue shadows, camel riders small in the frame",
       "ambiente": {
         "vento": 0.32,
         "areia": 0.3,
@@ -412,7 +412,7 @@
       "papel": "narrado",
       "titulo": "Ninguém fala",
       "personagem": "",
-      "prompt": "a column of riders crossing black rock in silence, dusk, no faces visible",
+      "prompt": "a line of camel riders crossing black rock in silence, dusk, no faces visible",
       "ambiente": {
         "vento": 0.5,
         "areia": 0.12,
@@ -424,7 +424,7 @@
       "papel": "narrado",
       "titulo": "O guia",
       "personagem": "guia",
-      "prompt": "an older tribesman ahead of the column, reading the ground, dawn light",
+      "prompt": "an older tribesman riding ahead of the line of camels, reading the ground, dawn light",
       "ambiente": {
         "vento": 0.42,
         "areia": 0.18,
@@ -571,7 +571,7 @@
       "papel": "narrado",
       "titulo": "O que se pensa",
       "personagem": "",
-      "prompt": "a lone rider small against a huge dune slope, late light",
+      "prompt": "a lone camel rider small against a huge dune slope, late light",
       "ambiente": {
         "vento": 0.38,
         "areia": 0.26,
@@ -632,7 +632,7 @@
       "papel": "narrado",
       "titulo": "Um homem ficou para trás",
       "personagem": "",
-      "prompt": "a set of footprints in sand leading back the way the column came, empty, in flat pale afternoon light",
+      "prompt": "a set of camel footprints in sand leading back the way the caravan came, empty, in flat pale afternoon light",
       "ambiente": {
         "vento": 0.4,
         "areia": 0.3,
@@ -656,7 +656,7 @@
       "papel": "narrado",
       "titulo": "Voltar",
       "personagem": "",
-      "prompt": "a single rider heading back alone toward the horizon, seen from far away, in hazy light at late afternoon",
+      "prompt": "a single camel rider heading back alone toward the horizon, seen from far away, in hazy light at late afternoon",
       "ambiente": {
         "vento": 0.42,
         "areia": 0.3,
@@ -886,7 +886,7 @@
       "papel": "narrado",
       "titulo": "O último dia",
       "personagem": "",
-      "prompt": "a long column of riders descending a wide dry valley toward the coast at first light, the sea a thin line far ahead",
+      "prompt": "a long line of camel riders descending a wide dry valley with thorn scrub toward the coast at first light, the sea a thin line far ahead",
       "ambiente": {
         "vento": 0.4,
         "areia": 0.15,
@@ -898,7 +898,7 @@
       "papel": "narrado",
       "titulo": "O ar muda",
       "personagem": "",
-      "prompt": "riders emerging from between cliffs, distant hint of blue at the horizon, at night, one dying fire",
+      "prompt": "camel riders emerging from between cliffs, distant hint of blue at the horizon, at night, one dying fire",
       "ambiente": {
         "vento": 0.38,
         "areia": 0.12,
@@ -966,6 +966,30 @@
     }
   ],
   "_nota_obra": "Era 'a marcha ate Aqaba, contada por um cameleiro da escolta' e isso ia para TODO prompt, produzindo caravana de camelos em toda imagem. O campo serve para ancorar época e lugar, não para descrever a narrativa.",
-  "_nota_prompts": "Corrigidos 7 prompts em 05/09 depois de olhar a folha de contato. Dois padrões: 'rider' sem dizer CAMELO virou cavalo (o modelo preenche o que o prompt não diz), e 'first vegetation' num deserto virou CACTO, que é planta americana. Também a cena 20, que era 'dunes under white midday sky', saiu com o céu branco ocupando o quadro inteiro.",
-  "_nota_duracao": "Era 7200 (120 min), que era projeção a 127 ppm. Medido: a narração saiu a 141 ppm e deu 98,7 min. Com a cauda de 9 min fecha em 107,7. A cauda NÃO foi esticada para fechar 120 — o modulo-2 registra que nenhuma das duas referências de mercado tem cauda, e a nossa de 9 min já é aposta não testada."
+  "_nota_prompts": "Corrigidos 7 prompts em 05/09 depois de olhar a folha de contato. Dois padrões: 'rider' sem dizer CAMELO virou cavalo (o modelo preenche o que o prompt não diz), e 'first vegetation' num deserto virou CACTO, que é planta americana. Também a cena 20, que era 'dunes under white midday sky', saiu com o céu branco ocupando o quadro inteiro. | 05/09, 2a passada: 11 cenas diziam 'rider'/'column' sem dizer CAMELO, e o modelo preenchia com cavalo. A cena 68 saiu com cavalos E cacto — os dois erros que eu já tinha corrigido em outras cenas e repeti ao reescrever esta. | 3a passada: 'column' é ambíguo em inglês — a cena 19 saiu com uma COLUNA DE PEDRA em vez de uma fila de camelos. Trocado por 'line' em todas. E a 68 tinha virado 'column of camels of camel riders' porque minha substituição rodou duas vezes.",
+  "_nota_duracao": "Era 7200 (120 min), que era projeção a 127 ppm. Medido: a narração saiu a 141 ppm e deu 98,7 min. Com a cauda de 9 min fecha em 107,7. A cauda NÃO foi esticada para fechar 120 — o modulo-2 registra que nenhuma das duas referências de mercado tem cauda, e a nossa de 9 min já é aposta não testada.",
+  "thumbnails": {
+    "_nota": "Escolhidas de propósito, não pelo espalhamento automático. A regra do nicho é contraste BAIXO e escuro — miniatura sensacionalista até ganha clique e perde o teste A/B, porque quem clica por sensacionalismo não dorme com o vídeo. O texto é o NOME e não o termo de busca, de propósito: a regra do canal é que a miniatura nunca repete o título. O título leva 'Som de Deserto para Dormir', que é o que tem busca; a miniatura leva o nome, que é o que dá vontade de clicar. 'Lawrence da Arábia' é o apelido HISTÓRICO dele, usado desde 1918 por Lowell Thomas — 44 anos antes do filme. Usar o nome é usar história; imitar a arte ou o cartaz do filme é que seria outra coisa.",
+    "texto": "Lawrence da Arábia",
+    "variantes": [
+      {
+        "id": "A",
+        "cena": 7,
+        "posicao": "inf-esq",
+        "porque": "o inglês nas vestes brancas entre os beduínos — a imagem mais reconhecível do assunto, e ela é histórica, não do filme"
+      },
+      {
+        "id": "B",
+        "cena": 14,
+        "posicao": "sup-esq",
+        "porque": "a via láctea sobre as dunas — a mais calma, e a que mais promete sono. Céu vazio no alto aceita o texto"
+      },
+      {
+        "id": "C",
+        "cena": 68,
+        "posicao": "inf-esq",
+        "porque": "a coluna descendo o vale seco ao amanhecer — escala, e é a única das três que mostra a travessia como travessia"
+      }
+    ]
+  }
 }

@@ -324,6 +324,21 @@ def conferir(proj: Path) -> Resultado:
     if not maus_cena:
         r.ok("nenhum prompt de cena com cue proibido")
 
+    # Montaria não declarada. O modelo preenche o que o prompt não diz, e num
+    # roteiro de deserto ele preencheu com CAVALO em 11 cenas — inclusive na
+    # coluna descendo para Aqaba, que foi inteira de camelo. Mesmo mecanismo do
+    # cue de luz: o que não se declara, o gerador inventa.
+    import re as _re
+    MONTA = _re.compile(r"\b(rider|riders|riding|column of|the column)\b", _re.I)
+    ANIMAL = _re.compile(r"\b(camel|horse|donkey|mule)\w*\b", _re.I)
+    sem_animal = [c["n"] for c in narradas if c.get("prompt")
+                  and MONTA.search(c["prompt"]) and not ANIMAL.search(c["prompt"])]
+    if sem_animal:
+        r.aviso(f"cenas que falam de montaria sem dizer o ANIMAL: {sem_animal}. "
+                f"O gerador escolhe, e já escolheu cavalo num roteiro de camelo")
+    else:
+        r.ok("toda cena de montaria diz o animal")
+
     if sem_luz:
         r.aviso(f"cenas cujo prompt não diz a luz: {sem_luz}. O estilo_base não "
                 f"fixa hora do dia de propósito, então a cena precisa dizer")

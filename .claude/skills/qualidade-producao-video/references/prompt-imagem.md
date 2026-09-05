@@ -144,3 +144,29 @@ idênticos — não é garantia de estabilidade entre resoluções diferentes.
 Dentro da MESMA resolução, prompt+seed seguem determinísticos — útil pra
 testar uma mudança de frase isolada sem variar o resto.
 
+
+
+## Palavras que o gerador preenche sozinho — 05/09/2026
+
+O modelo completa o que o prompt não diz, e completa com o que é mais comum no
+treino, não com o que a sua cena precisa. Três casos que custaram regeração no
+video-04:
+
+| escrito | veio | conserto |
+|---|---|---|
+| `riders`, `riding` | **cavalos**, numa expedição inteira de camelo | dizer o animal: `camel riders` |
+| `first vegetation` no deserto | **cacto**, que é planta americana | dizer a planta: `acacia`, `tamarisk` |
+| `column` | **coluna de pedra**, não fila de gente | usar `line` ou `caravan` |
+
+**`column` é a mais traiçoeira** porque a palavra é ambígua em inglês e o
+sentido arquitetônico é mais frequente em imagem. Uma cena que pedia "a column
+already moving" na alvorada saiu com um pilar sozinho numa duna.
+
+E a regra que já estava escrita e eu repeti mesmo assim: **negação não funciona**.
+Escrevi `no cactus` e veio cacto. O Z-Image-Turbo nem aceita `negative_prompt`,
+e mesmo que aceitasse, negação em prompt positivo pede o que nega. **Descreva o
+que DEVE estar lá.**
+
+O `preflight` passou a avisar quando uma cena fala de montaria sem dizer o
+animal — mesma família da checagem de luz: o que não se declara, o gerador
+inventa.
