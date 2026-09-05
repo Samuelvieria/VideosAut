@@ -133,3 +133,44 @@ Os três foram normalizados a −20 LUFS com `loudnorm` de dois passes e
 2. **Respiração e pausa** — qual soa como quem conta, não como quem lê?
 3. **Nasais** — `ã`, `õ`, e a palatalização de /t/ e /d/ antes de /i/.
 4. **Timbre** — por último, e de propósito.
+
+---
+
+## Terceira leva — Google Chirp3-HD (05/09/2026)
+
+**O motor pago que já estava pago.** A `GOOGLE_APPLICATION_CREDENTIALS` está no
+`.env` desde sempre, a API está habilitada, e a conta responde 30 vozes
+Chirp3-HD em pt-BR — 16 masculinas, 14 femininas. Nenhum cadastro novo.
+
+Gerado por `python -m pipeline.vozes --google-masculinas --kokoro`, que é o
+primeiro gerador reutilizável desta pasta: as duas levas anteriores foram
+feitas com script descartável, e o nivelamento de loudness dependia de eu
+lembrar. Agora é obrigatório e automático — **−18 LUFS em todas**.
+
+Trecho: cena 2 do video-03, escolhido porque contém `manhã` e `água`, as duas
+palavras que o Samuel apontou como erradas no Kokoro. A pergunta desta leva não
+é "qual voz é mais bonita", é **"qual acerta o defeito que eu ouvi"**.
+
+### Como ouvir
+
+`google-chirp3/contato.wav` — as 17 amostras numa sequência só, cada uma
+anunciada por número na voz atual (`pm_santa`), que fica óbvio ser o locutor.
+Fone, à noite, no volume de dormir. Os arquivos individuais estão ao lado, para
+reouvir uma específica.
+
+Não é prova cega, e de propósito: com 17 candidatas o sorteio atrapalharia mais
+do que protege. A prova cega vem na leva seguinte, entre as 3 ou 4 finalistas
+que você apontar, contra a Kokoro atual, com trecho de 90 s.
+
+### O que observar além do timbre
+
+O Chirp3-HD fala em **ritmo natural** (a amostra `Charon` deu 16,6 s para 45
+palavras, ~163 ppm). Isso é rápido para sono — e está certo assim: a pesquisa
+de ritmo de 28/08 concluiu que a lentidão tem que vir da **pausa entre frases**,
+não de esticar a fala, que foi o que deixou o Kokoro a 0,60 soando sedado. Se
+uma dessas vozes for escolhida, a lentidão se monta com `pausa_frase_s`, como
+já se faz hoje.
+
+### Resultado
+
+_(preencher: números preferidos, e por quê)_

@@ -37,6 +37,45 @@ Então a faixa realista é **137 a 274 mil caracteres/mês**.
 
 ---
 
+## O candidato que já estava pago e ninguém tinha olhado
+
+**Google Cloud TTS, com `GOOGLE_APPLICATION_CREDENTIALS` já no `.env` desde
+sempre.** Descoberto em 05/09/2026 ao procurar por onde começar a testar: a
+credencial de conta de serviço existe, a API está habilitada no projeto
+`main-being-276610`, e a conta responde **43 vozes pt-BR — das quais 30 são
+Chirp3-HD**, a geração de 2025 do Google, 16 masculinas e 14 femininas.
+
+Isso muda a ordem do problema. Os outros três exigem cadastro antes de gerar o
+primeiro segundo de áudio; este gerou 16 amostras no mesmo dia.
+
+| | |
+|---|---|
+| vozes pt-BR | **30 Chirp3-HD** (16 M, 14 F), mais 3 Neural2 e 10 legadas |
+| vozes diferentes por persona | resolvido sem clonagem, e portanto **sem a questão de direito de voz** |
+| inglês | mesmo modelo, mesma API |
+| preço | US$ 30 por milhão de caracteres `[SECUNDÁRIO]` |
+| cadastro | **nenhum — já está configurado** |
+
+Na nossa escala de 34.248 caracteres por vídeo:
+
+| cadência | caracteres/mês | custo |
+|---|---|---|
+| quinzenal, só pt-BR | 68 mil | R$ 10 |
+| quinzenal, bilíngue | 137 mil | R$ 21 |
+| semanal, bilíngue | 274 mil | R$ 42 |
+
+> **Não verificado:** as fontes secundárias falam numa faixa gratuita de 1 milhão
+> de caracteres por mês para a família WaveNet, e afirmam que Chirp3-HD entra
+> nela — mas essa última parte é **inferência do agregador, não texto do Google**.
+> Se valer, toda cadência acima cabe de graça. Confirmar no relatório de
+> faturamento do projeto, que agora tem consumo real para mostrar (as amostras
+> desta rodada gastaram ~3.700 caracteres). Não depender disso em código.
+
+O que ele **não** dá, e os pagos dão: clonagem de voz. Para este projeto isso
+é indiferente — 30 vozes distintas já cobrem o pedido de "algumas diferentes",
+e a clonagem trazia junto uma questão de direito que a decisão do XTTS-v2 já
+tinha ensinado a evitar.
+
 ## Os três candidatos, com o custo na nossa faixa
 
 Câmbio de 04/09/2026: US$ 1 ≈ R$ 5,10. `[SECUNDÁRIO]`
