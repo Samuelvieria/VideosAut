@@ -17,6 +17,7 @@ as duas palavras que o Samuel apontou como erradas no Kokoro. A pergunta não é
 from __future__ import annotations
 import argparse
 import os
+import re
 import random
 import subprocess
 import sys
@@ -49,9 +50,31 @@ def nivelar(entrada: Path, saida: Path, alvo: float = LUFS_COMPARACAO) -> None:
          "-ar", "24000", "-ac", "1", str(saida)])
 
 
-def google(texto: str, voz: str, saida: Path) -> None:
-    """Chirp3-HD, a geração de 2025. Fala em ritmo natural — a lentidão do
-    formato vem da pausa entre frases, não de esticar a fala (ver a skill)."""
+PAUSA_FRASE_PRODUCAO = 1.2      # igual ao plano do video-03
+
+
+def _com_pausas(sintetizar, texto: str, pausa: float = PAUSA_FRASE_PRODUCAO):
+    """Aplica a MESMA estrutura de pausa da produção a qualquer motor.
+
+    Sem isto a comparação é desonesta. O Kokoro sai a 102 ppm porque leva 1,2 s
+    de silêncio entre frases; um motor sem pausa nenhuma sai a 170. Posto lado a
+    lado, o que se julga passa a ser o ritmo — que é PARÂMETRO nosso, igual para
+    todos — em vez do que está em disputa, que é a voz. É a mesma armadilha de
+    medir o correlato em vez da coisa (docs/verificacao.md, modo de falha 6).
+    """
+    import numpy as np
+    frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", texto) if f.strip()]
+    partes = []
+    for i, frase in enumerate(frases):
+        partes.append(sintetizar(frase))
+        if i < len(frases) - 1:
+            partes.append(np.zeros(int(24000 * pausa), dtype=partes[-1].dtype))
+    return np.concatenate(partes)
+
+
+def google_audio(texto: str, voz: str):
+    """Chirp3-HD, a geração de 2025. Uma frase por chamada — ver `_com_pausas`."""
+    import io, numpy as np, soundfile as sf
     os.environ.setdefault("GOOGLE_APPLICATION_CREDENTIALS",
                           str(Path.home() / ".config" / "gcloud-tts.json"))
     from google.cloud import texttospeech as tts
@@ -62,16 +85,31 @@ def google(texto: str, voz: str, saida: Path) -> None:
                                        name=f"pt-BR-Chirp3-HD-{voz}"),
         audio_config=tts.AudioConfig(audio_encoding=tts.AudioEncoding.LINEAR16,
                                      sample_rate_hertz=24000))
-    saida.write_bytes(r.audio_content)
+    audio, _ = sf.read(io.BytesIO(r.audio_content), dtype="float32")
+    return audio if audio.ndim == 1 else audio.mean(axis=1)
+
+
+def google(texto: str, voz: str, saida: Path) -> None:
+    import soundfile as sf
+    sf.write(saida, _com_pausas(lambda t: google_audio(t, voz), texto), 24000)
 
 
 def kokoro(texto: str, saida: Path, voz: str = "pm_santa", speed: float = 0.75) -> None:
-    """A voz atual, como linha de base — mesma configuração B do video-03."""
-    import numpy as np, soundfile as sf
+    """A voz atual, como linha de base — mesma configuração B do video-03.
+
+    Espelha o bloco `voz` do plano do video-03 nos globais do `s2_tts`. Comparar
+    contra o Kokoro de fábrica seria comparar contra algo que não está em
+    produção: sem a pausa de frase e sem a vogal final corrigida, a linha de
+    base sairia pior do que o vídeo publicado, e a comparação favoreceria
+    qualquer candidato por um motivo falso.
+    """
+    import soundfile as sf
     from kokoro import KPipeline
-    from pipeline.s2_tts import sintetiza, SR
+    from pipeline import s2_tts
+    s2_tts.PAUSA_RESPIRO, s2_tts.PAUSA_PARAGRAFO = 0.45, 0.30
+    s2_tts.PAUSA_FRASE, s2_tts.VOGAL_FINAL_PT = 1.2, True
     pl = KPipeline(lang_code="p")
-    sf.write(saida, np.concatenate(sintetiza(pl, texto, voz, speed)), SR)
+    sf.write(saida, s2_tts.sintetiza(pl, texto, voz, speed), s2_tts.SR)
 
 
 def listar_google() -> dict[str, list[str]]:
@@ -94,12 +132,14 @@ def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
     """
     import numpy as np, soundfile as sf
     from kokoro import KPipeline
+    from pipeline import s2_tts
     from pipeline.s2_tts import sintetiza, SR
+    s2_tts.PAUSA_FRASE = 0.0        # o locutor não precisa da pausa longa
     pl = KPipeline(lang_code="p")
     silencio = np.zeros(int(SR * 1.0), dtype="float32")
     pedacos = []
     for i, (rotulo, wav) in enumerate(arquivos, 1):
-        pedacos.append(np.concatenate(sintetiza(pl, f"Número {i}.", "pm_santa", 0.85)))
+        pedacos.append(sintetiza(pl, f"Número {i}.", "pm_santa", 0.85))
         pedacos.append(np.zeros(int(SR * 0.6), dtype="float32"))
         audio, sr = sf.read(wav, dtype="float32")
         if audio.ndim > 1:
@@ -148,6 +188,12 @@ def main() -> None:
     feitos: list[tuple[str, Path]] = []
     for motor, voz in vozes:
         cru, limpo = bruto / f"{motor}-{voz}.wav", dest / f"{motor}-{voz}.wav"
+        # Amostra já gerada não se refaz: as dos motores pagos custam dinheiro,
+        # e as locais custam minutos de CPU. Apagar o .wav é o jeito de forçar.
+        if limpo.is_file():
+            feitos.append((f"{motor}/{voz}", limpo))
+            log(f"já existe {motor}/{voz}")
+            continue
         if motor == "google":
             google(TEXTO, voz, cru)
         else:

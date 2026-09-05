@@ -162,14 +162,27 @@ Não é prova cega, e de propósito: com 17 candidatas o sorteio atrapalharia ma
 do que protege. A prova cega vem na leva seguinte, entre as 3 ou 4 finalistas
 que você apontar, contra a Kokoro atual, com trecho de 90 s.
 
-### O que observar além do timbre
+### O ritmo está casado — de propósito
 
-O Chirp3-HD fala em **ritmo natural** (a amostra `Charon` deu 16,6 s para 45
-palavras, ~163 ppm). Isso é rápido para sono — e está certo assim: a pesquisa
-de ritmo de 28/08 concluiu que a lentidão tem que vir da **pausa entre frases**,
-não de esticar a fala, que foi o que deixou o Kokoro a 0,60 soando sedado. Se
-uma dessas vozes for escolhida, a lentidão se monta com `pausa_frase_s`, como
-já se faz hoje.
+**Todas as amostras levam a mesma pausa de 1,2 s entre frases**, que é a do
+plano do video-03. Sem isso a comparação seria desonesta: o Kokoro sai a 102 ppm
+porque tem a pausa, e o Chirp3-HD cru sai a ~170 porque não tem nenhuma. Lado a
+lado, o que se julgaria seria o ritmo — que é **parâmetro nosso, igual para
+todos** — em vez do que está em disputa, que é a voz.
+
+Com a pausa aplicada em todas:
+
+| | ppm |
+|---|---|
+| `kokoro pm_santa` 0,75 (atual) | 102 |
+| Chirp3-HD mais lenta (`Achird`) | 115 |
+| Chirp3-HD mais rápida (`Schedar`) | 142 |
+| referência Dreamoria | 128 |
+| referência History at Night | 180 |
+
+A dispersão que sobra é o ritmo próprio de cada voz, e essa é diferença real.
+Vale notar que **as Chirp3-HD caem em cima do Dreamoria**, a referência de
+narrativa que funciona — enquanto nós estamos 26 ppm abaixo dela.
 
 ### Resultado
 
