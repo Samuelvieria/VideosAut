@@ -458,6 +458,17 @@
     {
       "n": 37,
       "papel": "narrado",
+      "titulo": "O camelo que parou",
+      "personagem": "cameleiro",
+      "prompt": "a camel couched and refusing to rise on open sand, a man crouched beside its head, harsh daylight",
+      "ambiente": {
+        "vento": 0.4,
+        "areia": 0.28
+      }
+    },
+    {
+      "n": 38,
+      "papel": "narrado",
       "titulo": "O camelo sabe",
       "personagem": "",
       "prompt": "a camel walking steadily, close on its face, calm eye, dust in the air",
@@ -467,7 +478,7 @@
       }
     },
     {
-      "n": 38,
+      "n": 39,
       "papel": "narrado",
       "titulo": "O que se pensa",
       "personagem": "",
@@ -478,7 +489,7 @@
       }
     },
     {
-      "n": 39,
+      "n": 40,
       "papel": "narrado",
       "titulo": "A tempestade de areia",
       "personagem": "",
@@ -489,7 +500,18 @@
       }
     },
     {
-      "n": 40,
+      "n": 41,
+      "papel": "narrado",
+      "titulo": "A areia que canta",
+      "personagem": "",
+      "prompt": "a huge smooth dune face at dusk, wind lifting a thin veil of sand off its crest",
+      "ambiente": {
+        "vento": 0.35,
+        "areia": 0.4
+      }
+    },
+    {
+      "n": 42,
       "papel": "narrado",
       "titulo": "Esperar passar",
       "personagem": "cameleiro",
@@ -501,7 +523,7 @@
       }
     },
     {
-      "n": 41,
+      "n": 43,
       "papel": "narrado",
       "titulo": "Depois",
       "personagem": "",
@@ -512,7 +534,7 @@
       }
     },
     {
-      "n": 42,
+      "n": 44,
       "papel": "narrado",
       "titulo": "Um homem ficou para trás",
       "personagem": "",
@@ -523,7 +545,18 @@
       }
     },
     {
-      "n": 43,
+      "n": 45,
+      "papel": "narrado",
+      "titulo": "Os poços de Auda",
+      "personagem": "auda",
+      "prompt": "an older warrior pointing across empty desert at dawn, others watching him",
+      "ambiente": {
+        "vento": 0.35,
+        "areia": 0.22
+      }
+    },
+    {
+      "n": 46,
       "papel": "narrado",
       "titulo": "Voltar",
       "personagem": "",
@@ -534,7 +567,7 @@
       }
     },
     {
-      "n": 44,
+      "n": 47,
       "papel": "narrado",
       "titulo": "Ele voltou com o homem",
       "personagem": "",
@@ -545,7 +578,18 @@
       }
     },
     {
-      "n": 45,
+      "n": 48,
+      "papel": "narrado",
+      "titulo": "O primeiro verde",
+      "personagem": "",
+      "prompt": "a few low dry shrubs in a shallow desert depression at evening, first vegetation",
+      "ambiente": {
+        "vento": 0.28,
+        "areia": 0.16
+      }
+    },
+    {
+      "n": 49,
       "papel": "narrado",
       "titulo": "Wadi Sirhan",
       "personagem": "",
@@ -556,7 +600,7 @@
       }
     },
     {
-      "n": 46,
+      "n": 50,
       "papel": "narrado",
       "titulo": "Água amarga",
       "personagem": "cameleiro",
@@ -567,7 +611,7 @@
       }
     },
     {
-      "n": 47,
+      "n": 51,
       "papel": "narrado",
       "titulo": "As tendas de pelo de cabra",
       "personagem": "",
@@ -580,7 +624,20 @@
       }
     },
     {
-      "n": 48,
+      "n": 52,
+      "papel": "narrado",
+      "titulo": "As mulheres do acampamento",
+      "personagem": "",
+      "prompt": "black goat-hair tents at dusk, cooking fires, daily camp life at a distance, no faces",
+      "ambiente": {
+        "vento": 0.28,
+        "areia": 0.16,
+        "pano": 0.4,
+        "fogo": 0.2
+      }
+    },
+    {
+      "n": 53,
       "papel": "narrado",
       "titulo": "Gente chegando",
       "personagem": "",
@@ -592,7 +649,19 @@
       }
     },
     {
-      "n": 49,
+      "n": 54,
+      "papel": "narrado",
+      "titulo": "As crianças e os cabritos",
+      "personagem": "",
+      "prompt": "young goats among tent ropes at golden hour in a desert camp, low view",
+      "ambiente": {
+        "vento": 0.26,
+        "areia": 0.14,
+        "pano": 0.35
+      }
+    },
+    {
+      "n": 55,
       "papel": "narrado",
       "titulo": "As histórias à noite",
       "personagem": "",
@@ -605,7 +674,7 @@
       }
     },
     {
-      "n": 50,
+      "n": 56,
       "papel": "narrado",
       "titulo": "Bair",
       "personagem": "",
@@ -616,7 +685,20 @@
       }
     },
     {
-      "n": 51,
+      "n": 57,
+      "papel": "narrado",
+      "titulo": "Contar de novo a história",
+      "personagem": "",
+      "prompt": "men around a night fire, one gesturing while telling, long shadows on tent cloth",
+      "ambiente": {
+        "vento": 0.28,
+        "areia": 0.16,
+        "fogo": 0.32,
+        "pano": 0.25
+      }
+    },
+    {
+      "n": 58,
       "papel": "narrado",
       "titulo": "Al-Jafr",
       "personagem": "",
@@ -627,7 +709,7 @@
       }
     },
     {
-      "n": 52,
+      "n": 59,
       "papel": "narrado",
       "titulo": "A espera",
       "personagem": "cameleiro",
@@ -639,7 +721,43 @@
       }
     },
     {
-      "n": 53,
+      "n": 60,
+      "papel": "narrado",
+      "titulo": "O que a espera faz",
+      "personagem": "cameleiro",
+      "prompt": "a man sitting motionless in tent shade at midday, staring out at white light",
+      "ambiente": {
+        "vento": 0.35,
+        "areia": 0.22,
+        "pano": 0.3
+      }
+    },
+    {
+      "n": 61,
+      "papel": "narrado",
+      "titulo": "Consertar tudo",
+      "personagem": "cameleiro",
+      "prompt": "hands repairing a leather water skin with a thick needle, close view, lamplight",
+      "ambiente": {
+        "vento": 0.3,
+        "areia": 0.2,
+        "pano": 0.3
+      }
+    },
+    {
+      "n": 62,
+      "papel": "narrado",
+      "titulo": "A última noite antes",
+      "personagem": "",
+      "prompt": "a quiet camp at night before departure, camels already loaded, one fire dying",
+      "ambiente": {
+        "vento": 0.35,
+        "areia": 0.2,
+        "fogo": 0.25
+      }
+    },
+    {
+      "n": 63,
       "papel": "narrado",
       "titulo": "Descer as gargantas",
       "personagem": "",
@@ -650,7 +768,18 @@
       }
     },
     {
-      "n": 54,
+      "n": 64,
+      "papel": "narrado",
+      "titulo": "O último dia",
+      "personagem": "",
+      "prompt": "a long column of riders descending a wide dry valley toward the coast at first light, the sea a thin line far ahead",
+      "ambiente": {
+        "vento": 0.4,
+        "areia": 0.15
+      }
+    },
+    {
+      "n": 65,
       "papel": "narrado",
       "titulo": "O ar muda",
       "personagem": "",
@@ -662,7 +791,7 @@
       }
     },
     {
-      "n": 55,
+      "n": 66,
       "papel": "narrado",
       "titulo": "O cheiro de sal",
       "personagem": "",
@@ -674,7 +803,7 @@
       }
     },
     {
-      "n": 56,
+      "n": 67,
       "papel": "narrado",
       "titulo": "O mar outra vez",
       "personagem": "",
@@ -685,7 +814,18 @@
       }
     },
     {
-      "n": 57,
+      "n": 68,
+      "papel": "narrado",
+      "titulo": "A água salgada",
+      "personagem": "cameleiro",
+      "prompt": "a man kneeling at the edge of the sea touching the water with one hand, dusk",
+      "ambiente": {
+        "mar": 0.5,
+        "vento": 0.25
+      }
+    },
+    {
+      "n": 69,
       "papel": "fecho",
       "titulo": "O que ficou",
       "personagem": "cameleiro",
@@ -697,7 +837,7 @@
       }
     },
     {
-      "n": 58,
+      "n": 70,
       "papel": "cauda-ambiente",
       "titulo": "Cauda",
       "personagem": "",

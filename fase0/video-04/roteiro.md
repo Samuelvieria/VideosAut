@@ -1192,3 +1192,510 @@ E não disse nada. Nunca dizia.
 Eu devo a vida àquele homem e nunca soube o nome dele direito.
 
 Todo mundo chamava ele de o velho. Inclusive os que eram mais velhos que ele.
+
+## Cena 37 — O camelo que parou
+
+No segundo daqueles dias, um camelo deitou.
+
+Não caiu. Deitou, que é diferente e é pior. Caiu é acidente. Deitou é decisão.
+
+Ele dobrou as patas da frente e desceu devagar, do jeito certo, com todo o
+cuidado do mundo. E ficou.
+
+O homem dele puxou. Falou com ele. Tentou aquele estalo de língua que sempre
+funciona.
+
+E o bicho olhou para o lado e não se mexeu...
+
+Eu fui lá. Levantei a pata, olhei a almofada, procurei corte. Não tinha.
+Apertei o peito, olhei a gengiva, que fica pálida quando falta água.
+
+Estava pálida.
+
+E aí não tem o que fazer. Você pode dar água, e a gente não tinha. Você pode
+esperar, e a gente não podia.
+
+Descarregaram ele. Distribuíram a carga entre os outros, que já estavam
+carregados.
+
+E deixaram ele ali, deitado, com a cabeça erguida, olhando a gente ir embora.
+
+Ninguém falou nada. Ninguém olhou para trás, tirando eu, que olhei duas vezes.
+
+Na segunda vez ele ainda estava com a cabeça levantada.
+
+Eu tinha dado um nome para ele. Não vou dizer qual, porque dizer em voz alta
+depois de tanto tempo me faz uma coisa esquisita no peito.
+
+E olha que já se passaram cinquenta anos.
+
+## Cena 38 — O camelo sabe
+
+Eu disse que o camelo mostra. Deixa eu explicar melhor, porque é o meu ofício e
+é a única coisa que eu sei direito.
+
+Ele avisa com dias de antecedência. Você só precisa saber olhar.
+
+Primeiro muda a orelha. Um camelo bem tem a orelha ativa, virando para o som.
+Um camelo entrando em apuro deixa a orelha caída para trás e para de virar.
+
+Depois muda o passo. Ele encurta uns dedos. Você não vê olhando um — você vê
+olhando a coluna, porque um vai ficando para trás sem parecer que fica...
+
+Depois é o olho. Fica fundo. Isso é falta de água, e quando chega no olho já
+está tarde.
+
+E por último é a barriga, que encolhe e some, e a corcova, que amolece e cai
+para o lado como um saco vazio.
+
+A corcova é gordura, não água — todo mundo erra isso. Ela é a despensa dele.
+
+Um camelo com a corcova firme ainda tem reserva. Um com a corcova mole e
+tombada já gastou tudo.
+
+Eu olhava as corcovas todo dia. De manhã, quando eles levantavam.
+
+E naqueles três dias eu olhei mais de perto do que nunca, e não gostei do que
+vi em nenhum deles.
+
+## Cena 39 — O que se pensa
+
+Quando você anda três dias sem nada acontecer, a cabeça faz o que quer.
+
+Eu vou te contar o que eu pensei, porque é a parte mais honesta desta história e
+é a que ninguém conta.
+
+Eu não pensei na morte. Isso é o mais estranho.
+
+Eu pensei em comida boba. Numa fruta que tinha na casa da minha avó, e eu
+passei uma tarde inteira tentando lembrar o nome da fruta...
+
+Eu pensei numa discussão que eu tinha tido com um primo, e ganhei a discussão
+umas quinze vezes seguidas, cada vez com uma resposta melhor.
+
+Eu pensei numa moça. Claro que sim.
+
+Eu pensei em coisas sem sentido nenhum. Contei quantos passos o camelo dava
+entre uma respiração e outra. Contei durante muito tempo. Nunca dava o mesmo
+número e isso me incomodava.
+
+E às vezes eu não pensava em nada, e essas eram as melhores horas.
+
+É um estado esquisito. Você está acordado, os olhos abertos, o corpo
+trabalhando — e não tem ninguém em casa.
+
+Depois, na velhice, eu procurei aquilo em vários lugares. Em oração, em coisa de
+médico, em umas bebidas que não vou citar.
+
+E o único jeito de chegar lá continua sendo andar muito tempo sem chegar em
+lugar nenhum.
+
+## Cena 40 — A tempestade de areia
+
+No terceiro dia o horizonte ficou marrom.
+
+Não escuro como nuvem de chuva. Marrom, e de baixo para cima, o que é o
+contrário do que o céu costuma fazer.
+
+O guia parou e olhou por um tempo. Depois virou o camelo e falou uma palavra
+só, e todo mundo entendeu.
+
+Não dá para correr daquilo. Vem rápido demais e é largo demais...
+
+O que se faz é preparar. E preparar é quase nada: você couche o animal, deita
+ele de lado se ele deixar, e você deita colado nele, do lado de trás, com o
+corpo dele entre você e o vento.
+
+Cobre a cabeça. Cobre a boca duas vezes.
+
+E o animal fecha as narinas sozinho, que é uma coisa que eu nunca deixei de
+achar bonita — ele tem um músculo ali que a gente não tem.
+
+E aí você espera.
+
+O som chega antes. É um chiado enorme, contínuo, como se alguém estivesse
+arrastando um pano gigantesco em cima de papel.
+
+E depois bate.
+
+E não é grão batendo. É uma coisa sólida, empurrando, e você sente o peso na
+lateral do corpo.
+
+Escureceu. Ao meio-dia.
+
+Eu não via a minha própria mão a um palmo do rosto.
+
+## Cena 41 — A areia que canta
+
+Naquela hora eu ouvi uma coisa que eu já tinha ouvido falar e nunca tinha
+ouvido.
+
+Por baixo do chiado tinha um som grave. Muito grave. Um zumbido comprido, que
+não vinha do ar — vinha do chão.
+
+Eu senti no osso do quadril antes de ouvir no ouvido.
+
+Os antigos chamam de areia que canta. Dizem que é a duna cantando, e dizem
+outras coisas que eu não vou repetir porque não acredito...
+
+O que eu sei é o que eu senti: um zumbido longo, de uma nota só, que ia e
+voltava.
+
+Não é bonito como música. É bonito como trovão.
+
+Um homem mais velho me disse depois que isso acontece quando uma face inteira
+de duna desliza de uma vez. A areia escorrega em bloco e os grãos vibram
+juntos, e a duna toda vira um instrumento.
+
+Não sei se é verdade. Nunca conferi.
+
+Fiquei ali deitado, com a boca coberta, no escuro do meio-dia, com o corpo do
+camelo tremendo do meu lado, ouvindo o chão zumbir.
+
+Durou uns quarenta minutos.
+
+Se você me perguntar hoje qual foi o momento mais estranho da minha vida, é
+esse.
+
+E eu não tive medo. Eu tive uma coisa parecida com respeito.
+
+## Cena 42 — Esperar passar
+
+Passou.
+
+Não de uma vez. Foi diminuindo, e o difícil de esperar é justamente isso: você
+não sabe se aquilo é o fim ou uma pausa.
+
+A gente ficou mais meia hora deitado depois de dar para levantar. Ninguém
+combinou. Ninguém quis ser o primeiro.
+
+Eu me lembro do peso. Tinha areia em cima de mim, uma camada de dois dedos,
+como se alguém tivesse me enterrado devagar...
+
+Levantei sacudindo. A areia sai do pano, mas não sai do cabelo, e não sai
+mesmo de dentro da orelha.
+
+Tinha areia dentro do relógio de um homem. Tinha areia dentro dos odres
+fechados, e até hoje eu não sei explicar como.
+
+Os camelos levantaram e sacudiram também. Todos ao mesmo tempo, e formou uma
+nuvem baixa em volta da gente.
+
+Um deles espirrou, e alguém riu, e foi o primeiro riso em três dias.
+
+O guia contou os homens. Contou duas vezes.
+
+E na segunda contagem ele parou, e olhou para a coluna, e contou uma terceira
+vez bem devagar.
+
+Faltava um.
+
+## Cena 43 — Depois
+
+Vou parar um pouco antes de contar o que aconteceu, porque tem uma coisa que
+eu quero que você veja primeiro.
+
+Depois de uma tempestade daquelas o deserto fica lindo.
+
+E isso é quase ofensivo. Você quase morreu, o seu amigo sumiu, e o lugar está
+mais bonito do que estava de manhã.
+
+Toda marca some. Toda pegada, todo rastro, toda pedra pequena — tudo fica
+coberto...
+
+Aí a areia fica lisa. Lisa de verdade, sem uma marca em quilômetros.
+
+E o vento novo, mais fraco, começa a desenhar as ondinhas de novo, todas na
+mesma direção, todas do mesmo tamanho.
+
+Parece uma coisa varrida por alguém muito caprichoso.
+
+E a luz muda também. Fica com poeira fina no ar, e o sol atravessa aquilo e
+vira laranja, e as sombras ficam com uma borda macia.
+
+Eu fiquei olhando por talvez um minuto inteiro.
+
+Um minuto é muito tempo quando tem gente contando homens atrás de você.
+
+Depois eu virei e fui ajudar a procurar.
+
+## Cena 44 — Um homem ficou para trás
+
+O nome dele eu vou trocar. Vou chamar de Gasim, que é um nome comum e serve.
+
+Ele não era dos Ageyl. Era de outro grupo, entrou depois, e por isso demorou
+para alguém sentir falta — ninguém sabia direito de quem ele era responsabilidade.
+
+Isso é uma coisa feia de admitir. Mas é assim que funciona quando quarenta
+homens de cinco lugares diferentes andam juntos.
+
+Refizemos a conta. Perguntamos de camelo em camelo...
+
+O camelo dele estava ali, na coluna, sem ele.
+
+Isso quer dizer que ele desceu. Ou caiu, e o bicho continuou.
+
+E ninguém sabia quando.
+
+Podia ser uma hora atrás. Podia ser três. Numa tempestade, andando cego, com
+cada um agarrado ao seu próprio animal, ninguém olha para o lado.
+
+E aí veio a parte que eu não gosto de contar.
+
+Discutiu-se se dava para voltar.
+
+Alguém disse que não dava. E tinha razão — a gente estava no meio do pior
+trecho, com água contada, e voltar significava gastar meio dia e água de todo
+mundo por um homem.
+
+Ninguém disse que ele merecia morrer. Não foi isso.
+
+Foi uma conta. E a conta dava não.
+
+## Cena 45 — Os poços de Auda
+
+Enquanto se discutia isso, Auda estava de lado, olhando o horizonte.
+
+Ele não entrou na discussão. Depois eu entendi que ele já tinha decidido uma
+coisa e estava esperando os outros terminarem.
+
+Quando pararam de falar, ele apontou com o queixo e disse um nome.
+
+Era o nome de um poço. Um que não estava na conta de ninguém...
+
+Ele conhecia aquele deserto de um jeito que não é mapa.
+
+Mapa tem linha e distância. O que Auda tinha era outra coisa: ele sabia que
+existia água num lugar porque tinha bebido dela quando era moço, ou porque o
+pai de alguém tinha dito, ou porque uma família devia favor a ele e o poço era
+daquela família.
+
+Ele sabia água por parentesco.
+
+E aquele poço mudava a conta. Se ele estivesse lá, e tivesse água, então dava
+para gastar meio dia.
+
+Alguém perguntou se ele tinha certeza.
+
+Auda deu de ombros e disse que o poço estava lá quando ele era moço.
+
+Isso foi tudo o que ele deu de garantia. E foi suficiente, porque era Auda.
+
+## Cena 46 — Voltar
+
+O inglês voltou sozinho.
+
+Eu não vi ele sair. Eu estava com os animais, do outro lado, e quando eu olhei
+já tinha um ponto pequeno indo na direção contrária.
+
+Alguém falou o nome dele. Auda olhou, e não fez nada para impedir.
+
+E aí a gente ficou esperando...
+
+Não paramos, para ser exato. A gente andou devagar na direção do poço que Auda
+tinha dito, porque parar de vez custa mais do que andar devagar.
+
+Mas todo mundo olhava para trás.
+
+Não dá para explicar direito o que é ficar olhando um horizonte vazio esperando
+um ponto aparecer.
+
+O tempo faz uma coisa esquisita. Meia hora dura muito.
+
+Eu me peguei fazendo promessas na cabeça. Coisas bobas, do tipo que a gente
+promete e não cumpre.
+
+E eu me peguei pensando, também, uma coisa que me envergonhou: pensei que se
+ele não voltasse, a gente ia perder dois homens em vez de um.
+
+Eu tinha vinte e dois anos.
+
+Hoje eu acho que aquele pensamento não era covardia. Era só aritmética
+aparecendo na hora errada.
+
+## Cena 47 — Ele voltou com o homem
+
+Ele voltou no fim da tarde.
+
+Primeiro apareceu um ponto. Depois o ponto virou dois vultos em cima de um
+animal só, o que a gente entendeu de longe, e alguém deu um grito.
+
+E aí um monte de gente foi andando naquela direção sem correr, porque ninguém
+corre naquele calor, e a cena ficou meio ridícula — vinte homens andando
+depressa devagar.
+
+Gasim estava vivo. Mal, mas vivo...
+
+Deram água. Pouca de cada vez, que é o certo, porque muita de uma vez faz mal
+a quem está seco.
+
+Ele não falou nada naquele dia. No dia seguinte falou, e falou pouco.
+
+E o inglês desceu do camelo, entregou o homem, e foi cuidar do animal dele
+como se nada tivesse acontecido.
+
+Eu vi ele fazer isso.
+
+Ele não recebeu abraço, ninguém bateu nas costas dele. Auda disse uma frase
+curta que eu não ouvi e que fez os outros rirem.
+
+E acabou.
+
+Anos depois eu li que essa história virou uma coisa grande, contada de um jeito
+que eu não reconheço.
+
+O que eu vi foi um homem cansado descendo de um camelo e indo verificar a
+cilha.
+
+## Cena 48 — O primeiro verde
+
+Dois dias depois apareceu verde.
+
+Não era campo. Era um arbusto, um só, meio morto, do tamanho de um cachorro
+sentado.
+
+E a coluna inteira olhou.
+
+Você não faz ideia do que um arbusto seco faz com um homem que passou semanas
+sem ver nada que não fosse areia e pedra...
+
+Depois apareceu outro. E mais outro.
+
+E aí o chão mudou de cor devagar, do vermelho para um bege sujo, e começou a
+ter mato ralo espalhado, aquele mato duro que os camelos comem.
+
+Os animais aceleraram sozinhos.
+
+Isso é uma coisa que eu vi mais de uma vez e nunca cansei: o bicho sabe antes
+de você. Ele sente água de longe, não sei por qual sentido, e o passo dele
+muda antes de qualquer sinal.
+
+Ninguém precisou dizer nada. A coluna inteira andou mais rápido porque os
+camelos andaram mais rápido.
+
+E os homens começaram a falar de novo.
+
+De coisas bobas. De comida, principalmente. Sempre é de comida.
+
+## Cena 49 — Wadi Sirhan
+
+Wadi Sirhan não é um vale como você imagina.
+
+Não tem montanha dos lados. É uma depressão comprida e rasa, larga demais para
+você ver o outro lado, e você só sabe que está nela porque desceu um pouquinho
+sem perceber.
+
+Mas é ali que a água fica.
+
+Porque o terreno é mais baixo, o pouco que chove escorre para lá e fica preso
+embaixo, e por isso a linha de poços acompanha aquela depressão como se alguém
+tivesse plantado...
+
+É uma estrada. Não tem asfalto e não tem marco, mas é uma estrada, e ela é
+usada há mais tempo do que existe história escrita.
+
+A gente entrou nela e a viagem mudou de natureza.
+
+Antes era travessia: cabeça baixa, água contada, ninguém falando.
+
+Depois de Wadi Sirhan virou outra coisa. Virou visita.
+
+Porque ali tinha gente. Acampamento, rebanho, famílias, e a cada dois dias a
+gente chegava perto de alguém.
+
+E chegar perto de alguém, naquela terra, tem regra.
+
+## Cena 50 — Água amarga
+
+O primeiro poço tinha água e a água era ruim.
+
+Salobra. Aquele gosto de metal e de sal misturado, que fica na garganta muito
+depois de você engolir.
+
+Ninguém reclamou. Não por educação — por espanto de ter.
+
+Você bebe, faz uma careta, e bebe de novo...
+
+Os camelos beberam primeiro. Isso é lei e não é gentileza: o animal que não
+bebe não anda, e o homem que não anda ainda pode ser carregado.
+
+Eles bebem de um jeito que assusta quem nunca viu. Não param. Enfiam a boca e
+sugam, e sugam por minutos, e o pescoço vai engrossando.
+
+Um camelo bem seco bebe o que um homem beberia em duas semanas.
+
+Depois deles, a gente.
+
+Encheu-se tudo. Cada odre, cada cantil, cada coisa que segurasse líquido.
+
+E naquela noite, pela primeira vez em muitos dias, ninguém contou nada.
+
+Não teve conta de água. Não teve conta de dias.
+
+Eu dormi como não dormia havia um mês, com o gosto de sal ainda na boca, e a
+água amarga foi a melhor água que eu bebi na vida.
+
+## Cena 51 — As tendas de pelo de cabra
+
+Ali eu vi as primeiras tendas.
+
+Tenda beduína é feita de pelo. De cabra preta, sobretudo, tecido em tiras
+compridas e costurado tira com tira.
+
+Chamam de casa de pelo, e é o nome exato.
+
+O pano é grosso e áspero. Não é bonito. E ele faz uma coisa que nenhum tecido
+moderno faz: quando chove, o pelo incha e fecha, e a água não passa...
+
+E quando está seco e quente, ele deixa o ar atravessar.
+
+A tenda é baixa e comprida. Fica esticada em cordas, com estacas, e a frente
+fica aberta para o lado contrário do vento.
+
+Por dentro é dividida com um pano. Um lado é dos homens e das visitas. O outro
+é da família, e ali a gente não olha.
+
+Eu passei a gostar do som daquilo.
+
+O pano batendo com a rajada — um estalo surdo, grosso. E a corda rangendo
+quando estica, um rangido baixo, que dura um segundo e para.
+
+Não é o som do nylon, que é seco e agudo e irritante.
+
+É um som pesado. Um som de coisa que fica.
+
+## Cena 52 — As mulheres do acampamento
+
+Eu falei até agora de quarenta homens andando. É hora de dizer que o deserto
+não é feito disso.
+
+O deserto é feito de acampamento. E acampamento tem família.
+
+A gente era a coisa estranha ali — um bando de homens de fora, atravessando, de
+passagem. Quem morava eram eles.
+
+E quem faz um acampamento funcionar são as mulheres. Isso é fato e não é
+elogio de cortesia...
+
+Elas montam e desmontam a tenda. É trabalho delas, não dos homens, e uma tenda
+grande sobe em menos de uma hora com três ou quatro trabalhando.
+
+Elas tecem o pano da tenda. Fiam o pelo, tingem, montam no tear de chão.
+
+Elas cuidam do rebanho pequeno, que é o que come todo dia — o camelo é
+capital, a cabra é jantar.
+
+Elas fazem o queijo, o leite coalhado, a manteiga que a gente carregava.
+
+E elas decidem muita coisa que parece decidida pelos homens.
+
+Eu vi isso mais de uma vez: um homem falando com muita firmeza uma coisa que a
+mulher dele tinha dito baixinho meia hora antes.
+
+Eu era moço e achei engraçado.
+
+Hoje eu acho que era só um sistema funcionando.
+
+Não pense que era vida boa. Não era. Era trabalho de sol a sol.
+
+Mas era um lugar onde todo mundo sabia o que fazer.
