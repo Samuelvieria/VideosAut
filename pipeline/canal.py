@@ -217,6 +217,113 @@ def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
     folha.save(saida)
 
 
+# ---------------------------------------------------------------- banner
+# O YouTube recorta o banner de forma diferente em cada tela e só um retângulo
+# CENTRAL aparece em todas. Projetar para os 2560×1440 é o erro clássico: fica
+# lindo na TV, que quase ninguém usa, e no celular só se vê uma tira do meio.
+BANNER_L, BANNER_A = 2560, 1440          # o que se sobe
+SEGURO_L, SEGURO_A = 1235, 338           # o que aparece em TODAS as telas
+RECORTES = {                              # largura × altura, centrados
+    "TV":      (2560, 1440),
+    "desktop": (2560, 423),
+    "tablet":  (1855, 423),
+    "celular": (1546, 423),
+    "SEGURO":  (SEGURO_L, SEGURO_A),
+}
+CREME = "0xF2E8D5"
+
+# Gerado em 1280×720 e ampliado ×2 com vizinho mais próximo — que dá exatamente
+# 2560×1440, o tamanho recomendado. Escala inteira preserva a grade de pixel;
+# qualquer interpolação borraria a arte, e é a mesma regra do `flags=neighbor`
+# do render (ver CLAUDE.md § Imagens).
+BANNER_FONTE_L, BANNER_FONTE_A = 1280, 720
+
+BANNERS = {
+    "A_horizonte": (
+        "16-bit pixel art, a very wide calm night seascape, dark navy water "
+        "filling the lower half with dashed pixel reflections, a warm amber "
+        "crescent moon low in the center of the sky, a tiny dark lighthouse "
+        "silhouette far away on the horizon, scattered pale pixel stars, chunky "
+        "visible pixels, limited navy and amber palette, empty sky with room to "
+        "breathe, no text, no letters",
+        7301,
+        "horizonte largo — o assunto todo dentro da tira central",
+    ),
+    "B_farol_lado": (
+        "16-bit pixel art, a very wide night seascape, a dark stone lighthouse "
+        "standing on rocks at the left with one warm amber light at its top, "
+        "wide dark navy sea stretching to the right, a low horizon line, pale "
+        "pixel stars, chunky visible pixels, limited navy and amber palette, no "
+        "text, no letters",
+        7302,
+        "farol à esquerda, mar aberto à direita — deixa o centro livre para o nome",
+    ),
+    "C_so_mar": (
+        "16-bit pixel art, a very wide expanse of dark navy night sea with "
+        "layered horizontal bands of wave texture, a faint amber glow on the "
+        "horizon line as if from a light far out of frame, deep empty sky above "
+        "with a few pale stars, chunky visible pixels, very dark and quiet, no "
+        "text, no letters",
+        7303,
+        "só o mar — o mais sóbrio, e o que menos disputa com o nome",
+    ),
+}
+
+
+def banner(nome: str, texto: str | None) -> Path:
+    """Gera o banner e a prévia com os recortes de cada tela."""
+    from PIL import Image, ImageDraw, ImageFont
+    from pipeline.s5b_thumbs import FONTE
+    prompt, seed, _ = BANNERS[nome]
+    cru = DESTINO / f"_bruto/banner_{nome}.png"
+    cru.parent.mkdir(parents=True, exist_ok=True)
+    if not cru.is_file():
+        cru.write_bytes(gerar(prompt, seed, obter("FAL_KEY"),
+                              BANNER_FONTE_L, BANNER_FONTE_A))
+    im = Image.open(cru).convert("RGB").resize((BANNER_L, BANNER_A), Image.NEAREST)
+
+    if texto:
+        d = ImageDraw.Draw(im)
+        f = ImageFont.truetype(FONTE, 132)
+        # Acima do centro, não no centro: em toda composição que sobrevive ao
+        # recorte o assunto está NA linha do horizonte, que é o meio exato, e
+        # texto ali disputa com ele. Mas não tão acima que saia da tira segura —
+        # a 110 o topo das letras caía 7px para fora dela, e o aparato de
+        # recorte existe justamente para pegar isso.
+        cx, cy = BANNER_L // 2, BANNER_A // 2 - 85
+        cima, baixo = cy - 66, cy + 66
+        topo_seguro, base_segura = (BANNER_A - SEGURO_A) // 2, (BANNER_A + SEGURO_A) // 2
+        if cima < topo_seguro or baixo > base_segura:
+            log(f"AVISO: o texto vai de y={cima} a y={baixo} e a tira segura é "
+                f"{topo_seguro}–{base_segura}. Vai ser cortado em alguma tela.")
+        cor = tuple(int(CREME[2:][i:i+2], 16) for i in (0, 2, 4))
+        # sombra suave, nunca contorno duro — mesma regra das miniaturas
+        for dx, dy in ((6, 6), (4, 4)):
+            d.text((cx + dx, cy + dy), texto, font=f, fill=(0, 0, 0), anchor="mm")
+        d.text((cx, cy), texto, font=f, fill=cor, anchor="mm")
+
+    saida = DESTINO / f"banner_{nome}{'_com_nome' if texto else ''}.png"
+    im.save(saida)
+
+    # prévia: o mesmo banner nos recortes de cada tela, empilhados
+    escala = 0.42
+    alturas = [int(a * escala) for _, a in RECORTES.values()]
+    prev = Image.new("RGB", (int(BANNER_L * escala) + 40,
+                             sum(alturas) + 34 * len(RECORTES) + 20), (18, 20, 28))
+    dp = ImageDraw.Draw(prev)
+    y = 10
+    for rot, (rl, ra) in RECORTES.items():
+        cx, cy = BANNER_L // 2, BANNER_A // 2
+        corte = im.crop((cx - rl // 2, cy - ra // 2, cx + rl // 2, cy + ra // 2))
+        corte = corte.resize((int(rl * escala), int(ra * escala)), Image.LANCZOS)
+        prev.paste(corte, (20 + (int(BANNER_L * escala) - corte.width) // 2, y))
+        y += corte.height + 6
+        dp.text((20, y), f"{rot}  {rl}x{ra}", fill=(200, 200, 210))
+        y += 28
+    prev.save(DESTINO / f"banner_previa_{nome}{'_com_nome' if texto else ''}.png")
+    return saida
+
+
 def exportar(nome: str) -> Path:
     """Prepara a candidata escolhida como foto de perfil pronta para subir.
 
@@ -268,6 +375,9 @@ def main() -> None:
     ap.add_argument("--exportar", metavar="CANDIDATA",
                     help="prepara a escolhida como foto de perfil (ex.: L_farol_horizonte)")
     ap.add_argument("--avatar", action="store_true")
+    ap.add_argument("--banner", action="store_true")
+    ap.add_argument("--nome", default=None,
+                    help="texto do banner; sem isto, banner limpo sem nome")
     ap.add_argument("--serie", default="icone", choices=list(SERIES))
     ap.add_argument("--forcar", action="store_true")
     a = ap.parse_args()
@@ -277,8 +387,17 @@ def main() -> None:
         print(f"     prévia nos tamanhos reais: {DESTINO / 'foto-perfil-previa.png'}")
         print("     Studio -> Personalização -> Identidade visual -> Foto")
         return
+    if a.banner:
+        DESTINO.mkdir(parents=True, exist_ok=True)
+        for nome in BANNERS:
+            f = banner(nome, a.nome)
+            log(f"{nome} — {BANNERS[nome][2]}")
+        print(f"\nOK — {len(BANNERS)} banners em {DESTINO}")
+        print("     prévias mostram o recorte de cada tela; a tira SEGURO é a")
+        print("     única que aparece em TODAS — projete para ela, não para a TV")
+        return
     if not a.avatar:
-        ap.error("use --avatar ou --exportar")
+        ap.error("use --avatar, --banner ou --exportar")
 
     DESTINO.mkdir(parents=True, exist_ok=True)
     chave = obter("FAL_KEY")
