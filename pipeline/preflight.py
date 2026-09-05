@@ -258,7 +258,8 @@ def conferir(proj: Path) -> Resultado:
                    and not isinstance(c["ambiente"], dict)]
     sem_amb = [c["n"] for c in cenas
                if isinstance(c.get("ambiente"), dict)
-               and not any(c["ambiente"].get(k, 0) for k in ("mar", "chuva", "fogo", "vento"))]
+               and not any(c["ambiente"].get(k, 0) for k in
+                   ("mar", "chuva", "fogo", "vento", "areia", "pano", "insetos"))]
     if sem_prompt:
         r.erro(f"cenas sem prompt de imagem: {sem_prompt}")
     else:
@@ -266,7 +267,7 @@ def conferir(proj: Path) -> Resultado:
     if tipo_errado:
         r.erro(f"cenas com `ambiente` que não é dicionário: {tipo_errado}. O "
                f"s5_render faz cfg.get('mar') e quebra com string. O formato é "
-               f"{{mar, chuva, fogo, vento, abafado, _}}")
+               f"{{mar, chuva, fogo, vento, areia, pano, insetos, abafado, _}}")
     if sem_amb:
         r.aviso(f"cenas com ambiente todo em zero (vão sair em silêncio): {sem_amb}")
     if not tipo_errado and not sem_amb:

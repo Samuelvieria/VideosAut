@@ -177,6 +177,14 @@ def _ambiente_cena(dest: Path, dur: float, cfg: dict, n: int = 0) -> None:
             nos += amb.fogo(dur, canal, cfg["fogo"]);    camadas[canal].append(f"[fogo{canal}]")
         if cfg.get("vento", 0) > 0:
             nos += amb.vento(dur, canal, cfg["vento"]);  camadas[canal].append(f"[vento{canal}]")
+        # camadas de 05/09/2026, quando a pauta deixou de ser só mar
+        if cfg.get("areia", 0) > 0:
+            nos += amb.areia(dur, canal, cfg["areia"]);  camadas[canal].append(f"[areia{canal}]")
+        if cfg.get("pano", 0) > 0:
+            nos += amb.pano(dur, canal, cfg["pano"]);    camadas[canal].append(f"[pano{canal}]")
+        if cfg.get("insetos", 0) > 0:
+            nos += amb.insetos(dur, canal, cfg["insetos"])
+            camadas[canal].append(f"[insetos{canal}]")
 
     if not camadas["L"]:   # cena sem ambiente: silêncio, não erro
         ffmpeg(["-f", "lavfi", "-i", f"anullsrc=r=48000:cl=stereo:d={dur}",

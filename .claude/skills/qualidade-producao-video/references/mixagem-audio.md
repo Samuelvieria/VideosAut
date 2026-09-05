@@ -204,8 +204,57 @@ chega igual nos dois ouvidos, e a imagem estéreo anda em vez de colar no centro
 chuva ouvida de dentro, através de parede ou janela. É o que a chave `abafado`
 do `ambiente` da cena liga.
 
-Camadas: `mar`, `chuva`, `fogo`, `vento`, mais `abafado` (booleano) e `_`
-(descrição em texto do lugar, só para leitura humana).
+Camadas: `mar`, `chuva`, `fogo`, `vento`, `areia`, `pano`, `insetos`, mais
+`abafado` (booleano) e `_` (descrição em texto do lugar, só para leitura humana).
+
+### As três camadas de 05/09/2026, e por que essas
+
+A pauta deixou de ser só mar (deserto, estrada romana à noite, campo americano
+nos anos 50). O desenho é o mesmo — envoltórias com períodos incomensuráveis —
+e cada uma ficou perto de quem faz o mesmo papel:
+
+| camada | banda | papel | vizinha de nível |
+|---|---|---|---|
+| `areia` | 1,5–9 kHz | o que o vento CARREGA, não o vento | `vento` |
+| `pano` | 0,3–3 kHz | evento; quase some entre um e outro | `fogo` |
+| `insetos` | banda estreita ressonante em 4,5 kHz | cobertor contínuo | `chuva` |
+
+**`intensidade` NÃO é unidade comparável entre camadas.** Medido em 05/09: as
+quatro originais já tinham 19,5 dB de espalhamento entre si (`chuva` −17,8,
+`vento` −37,3). Nunca foi normalizado porque os vídeos 02 e 03 foram aprovados
+de ouvido com esses valores, e normalizar mudaria som publicado. Consequência:
+`0.4` em duas camadas diferentes não dá o mesmo volume, e os valores se acham
+de ouvido no mixer.
+
+**Grilo precisa de ALTURA, não só de ruído.** Um seno em 4,5 kHz soa a aparelho
+eletrônico; a solução é ruído branco por um passa-banda ressonante, que dá a
+altura sem a esterilidade do tom. E os pulsos precisam de mais de um período
+incomensurável: um só vira metrônomo, três somados viram coro.
+
+### O que a pesquisa histórica confirmou e corrigiu (05/09/2026)
+
+Consulta externa sobre o som real de uma noite no deserto do Hejaz
+(`fase0/_pesquisa/lawrence-gemini.md` §2), feita DEPOIS de o desenho estar
+pronto — então serve de verificação independente, não de fonte:
+
+- **Confirmou o vento:** *"não há uivo como o de florestas, pois não existem
+  galhos para fatiar o ar; é um sopro contínuo, espesso e oco"*. Nosso `vento`
+  é ruído rosa de banda média com modulação lenta, sem transiente. Bate.
+- **Confirmou a areia:** *"idêntico a um tecido pesado de seda arrastado sobre
+  papel grosso"* — chiado fino e contínuo, que é a nossa banda de 1,5–9 kHz.
+- **Confirmou o pano:** *"não estala como o nylon moderno; emite um estalo
+  surdo e seco"*. O nosso ataque é 10–14 contra 50–70 do estalo de fogo.
+- **CORRIGIU o uso de `insetos`:** no deserto eles são *"quase silenciosos"*.
+  A camada existe para estrada de noite e campo aberto — **não para o
+  video-04**. Sem essa consulta ela teria entrado por hábito.
+- **Apontou o que falta:** o som mais constante de uma noite de acampamento é o
+  **camelo** — ruminação lenta, suspiros roucos, o baque da pata almofadada.
+  Não temos, e é o candidato mais forte para a próxima camada. Ficou de fora
+  por enquanto porque som de animal é o que mais facilmente sai errado, e sai
+  errado de um jeito que acorda.
+- **Insight de mixagem:** *"o solo fofo absorve as ondas sonoras, a voz morre a
+  poucos passos, sem reverberação"*. O deserto tem MENOS reverberação que o
+  mar — o que reforça `ambiente_reverb=0`, que já é o padrão desde 05/09.
 
 ## Os valores de mixagem: o que a medição propôs e o que o ouvido decidiu
 
