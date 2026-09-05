@@ -16,7 +16,9 @@
     "nota": "Persona 'cameleiro-ageyl' (estudio/dados/personas.json). Primeira persona a nascer no Chirp3-HD. Sem `speed`: o ritmo vem da marcação [pause]/[pause long], 127 ppm medidos. Algenib foi a preferida do Samuel entre as 16 masculinas."
   },
   "ambiente": {
-    "_nota": "Preencher por cena no campo `ambiente`."
+    "_nota": "Ambiente por CENA. O arco espelha a viagem: abre no mar em Al-Wajh, atravessa o deserto, e fecha no mar em Aqaba. As camadas areia/dunas/pano nasceram para este vídeo.",
+    "sintese": "pipeline/ambiente.py — dunas verificada por espectrograma em 05/09",
+    "fonte_externa": "sons/tanweraman-desert-wind-2-350417.mp3 (Pixabay, sob a síntese)"
   },
   "mixagem": {
     "_nota": "Herdado do video-02, aprovado de ouvido. ambiente_reverb=0 porque o aecho foi identificado como a causa do granulado na cauda.",
@@ -54,7 +56,8 @@
       "prompt": "an old man sitting alone at night beside a low fire, back to the viewer, wrapped in a dark cloak, empty desert behind him",
       "ambiente": {
         "vento": 0.3,
-        "areia": 0.2
+        "areia": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -66,7 +69,8 @@
       "ambiente": {
         "vento": 0.3,
         "areia": 0.2,
-        "fogo": 0.2
+        "fogo": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -89,7 +93,8 @@
       "ambiente": {
         "mar": 0.25,
         "vento": 0.3,
-        "areia": 0.15
+        "areia": 0.15,
+        "dunas": 0.07
       }
     },
     {
@@ -101,7 +106,8 @@
       "ambiente": {
         "vento": 0.3,
         "areia": 0.2,
-        "pano": 0.25
+        "pano": 0.25,
+        "dunas": 0.09
       }
     },
     {
@@ -112,7 +118,8 @@
       "prompt": "a small column of riders silhouetted against a wide evening sky, leaving a coastal town behind",
       "ambiente": {
         "vento": 0.32,
-        "areia": 0.22
+        "areia": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -124,7 +131,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.25,
-        "fogo": 0.22
+        "fogo": 0.22,
+        "dunas": 0.12
       }
     },
     {
@@ -135,7 +143,8 @@
       "prompt": "a wide empty coastal plain at night seen from high ground, a thin road far below",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.25
+        "areia": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -146,7 +155,8 @@
       "prompt": "riders moving in late afternoon light, long shadows stretching across sand",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.28
+        "areia": 0.28,
+        "dunas": 0.13
       }
     },
     {
@@ -158,7 +168,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.28,
-        "pano": 0.2
+        "pano": 0.2,
+        "dunas": 0.13
       }
     },
     {
@@ -169,7 +180,8 @@
       "prompt": "a column of camels walking under a sky full of stars, no other light",
       "ambiente": {
         "vento": 0.38,
-        "areia": 0.3
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -180,7 +192,8 @@
       "prompt": "a night sky heavy with stars over low dunes, one bright star near the horizon",
       "ambiente": {
         "vento": 0.3,
-        "areia": 0.22
+        "areia": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -191,7 +204,8 @@
       "prompt": "close view of camel feet on firm cold sand at night, faint starlight",
       "ambiente": {
         "vento": 0.38,
-        "areia": 0.32
+        "areia": 0.32,
+        "dunas": 0.15
       }
     },
     {
@@ -204,7 +218,8 @@
         "vento": 0.3,
         "areia": 0.22,
         "fogo": 0.25,
-        "pano": 0.22
+        "pano": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -216,7 +231,8 @@
       "ambiente": {
         "vento": 0.25,
         "areia": 0.18,
-        "fogo": 0.3
+        "fogo": 0.3,
+        "dunas": 0.08
       }
     },
     {
@@ -228,7 +244,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.25,
-        "pano": 0.25
+        "pano": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -239,7 +256,8 @@
       "prompt": "the first grey light on dunes, a column already moving, no sun yet",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.28
+        "areia": 0.28,
+        "dunas": 0.13
       }
     },
     {
@@ -250,7 +268,8 @@
       "prompt": "low sun over dunes, long blue shadows, riders small in the frame",
       "ambiente": {
         "vento": 0.32,
-        "areia": 0.3
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -262,7 +281,8 @@
       "ambiente": {
         "vento": 0.28,
         "areia": 0.22,
-        "pano": 0.35
+        "pano": 0.35,
+        "dunas": 0.1
       }
     },
     {
@@ -273,7 +293,8 @@
       "prompt": "empty dunes under white midday sky, heat shimmer, no figures",
       "ambiente": {
         "vento": 0.25,
-        "areia": 0.2
+        "areia": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -284,7 +305,8 @@
       "prompt": "an old man lifting a leather water skin, measuring, careful, in shade",
       "ambiente": {
         "vento": 0.3,
-        "areia": 0.22
+        "areia": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -296,7 +318,8 @@
       "ambiente": {
         "vento": 0.25,
         "areia": 0.18,
-        "fogo": 0.32
+        "fogo": 0.32,
+        "dunas": 0.08
       }
     },
     {
@@ -307,7 +330,8 @@
       "prompt": "a hand holding pressed dates while riding, camel neck in frame, daylight",
       "ambiente": {
         "vento": 0.32,
-        "areia": 0.25
+        "areia": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -318,7 +342,8 @@
       "prompt": "camels browsing dry thorn bushes at dusk, low light",
       "ambiente": {
         "vento": 0.32,
-        "areia": 0.25
+        "areia": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -329,7 +354,8 @@
       "prompt": "a field of black basalt rock stretching to the horizon, sharp and broken, dusk",
       "ambiente": {
         "vento": 0.45,
-        "areia": 0.1
+        "areia": 0.1,
+        "dunas": 0.05
       }
     },
     {
@@ -340,7 +366,8 @@
       "prompt": "close view of jagged black volcanic stones, a camel foot placed carefully",
       "ambiente": {
         "vento": 0.48,
-        "areia": 0.08
+        "areia": 0.08,
+        "dunas": 0.04
       }
     },
     {
@@ -351,7 +378,8 @@
       "prompt": "wind-carved basalt cliffs at night under stars, deep shadow",
       "ambiente": {
         "vento": 0.55,
-        "areia": 0.1
+        "areia": 0.1,
+        "dunas": 0.05
       }
     },
     {
@@ -362,7 +390,8 @@
       "prompt": "a column of riders crossing black rock in silence, dusk, no faces visible",
       "ambiente": {
         "vento": 0.5,
-        "areia": 0.12
+        "areia": 0.12,
+        "dunas": 0.06
       }
     },
     {
@@ -373,7 +402,8 @@
       "prompt": "an older tribesman ahead of the column, reading the ground, dawn light",
       "ambiente": {
         "vento": 0.42,
-        "areia": 0.18
+        "areia": 0.18,
+        "dunas": 0.08
       }
     },
     {
@@ -385,7 +415,8 @@
       "ambiente": {
         "vento": 0.4,
         "areia": 0.2,
-        "fogo": 0.2
+        "fogo": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -397,7 +428,8 @@
       "ambiente": {
         "vento": 0.38,
         "areia": 0.22,
-        "fogo": 0.18
+        "fogo": 0.18,
+        "dunas": 0.1
       }
     },
     {
@@ -408,7 +440,8 @@
       "prompt": "the same foreigner riding, hood up, seen from behind among other riders, daylight",
       "ambiente": {
         "vento": 0.38,
-        "areia": 0.24
+        "areia": 0.24,
+        "dunas": 0.11
       }
     },
     {
@@ -419,7 +452,8 @@
       "prompt": "men standing around a stone well mouth in daylight, ropes slack, nothing coming up",
       "ambiente": {
         "vento": 0.42,
-        "areia": 0.28
+        "areia": 0.28,
+        "dunas": 0.13
       }
     },
     {
@@ -430,7 +464,8 @@
       "prompt": "water skins laid in a row on sand, a man counting them, harsh light",
       "ambiente": {
         "vento": 0.4,
-        "areia": 0.26
+        "areia": 0.26,
+        "dunas": 0.12
       }
     },
     {
@@ -441,7 +476,8 @@
       "prompt": "an endless plain of red sand with no landmark at all, midday",
       "ambiente": {
         "vento": 0.45,
-        "areia": 0.32
+        "areia": 0.32,
+        "dunas": 0.15
       }
     },
     {
@@ -452,7 +488,8 @@
       "prompt": "a rider slumped slightly forward, face wrapped in cloth, sun high",
       "ambiente": {
         "vento": 0.42,
-        "areia": 0.3
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -463,7 +500,8 @@
       "prompt": "a camel couched and refusing to rise on open sand, a man crouched beside its head, harsh daylight",
       "ambiente": {
         "vento": 0.4,
-        "areia": 0.28
+        "areia": 0.28,
+        "dunas": 0.13
       }
     },
     {
@@ -474,7 +512,8 @@
       "prompt": "a camel walking steadily, close on its face, calm eye, dust in the air",
       "ambiente": {
         "vento": 0.4,
-        "areia": 0.28
+        "areia": 0.28,
+        "dunas": 0.13
       }
     },
     {
@@ -485,7 +524,8 @@
       "prompt": "a lone rider small against a huge dune slope, late light",
       "ambiente": {
         "vento": 0.38,
-        "areia": 0.26
+        "areia": 0.26,
+        "dunas": 0.12
       }
     },
     {
@@ -496,7 +536,8 @@
       "prompt": "a wall of blowing sand approaching over dunes, figures crouching, dim",
       "ambiente": {
         "vento": 0.7,
-        "areia": 0.6
+        "areia": 0.6,
+        "dunas": 0.28
       }
     },
     {
@@ -507,7 +548,8 @@
       "prompt": "a huge smooth dune face at dusk, wind lifting a thin veil of sand off its crest",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.4
+        "areia": 0.4,
+        "dunas": 0.19
       }
     },
     {
@@ -519,7 +561,8 @@
       "ambiente": {
         "vento": 0.6,
         "areia": 0.5,
-        "pano": 0.4
+        "pano": 0.4,
+        "dunas": 0.23
       }
     },
     {
@@ -530,7 +573,8 @@
       "prompt": "calm dunes just after a sandstorm, everything smoothed, dusk light",
       "ambiente": {
         "vento": 0.3,
-        "areia": 0.2
+        "areia": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -541,7 +585,8 @@
       "prompt": "a set of footprints in sand leading back the way the column came, empty",
       "ambiente": {
         "vento": 0.4,
-        "areia": 0.3
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -552,7 +597,8 @@
       "prompt": "an older warrior pointing across empty desert at dawn, others watching him",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.22
+        "areia": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -563,7 +609,8 @@
       "prompt": "a single rider heading back alone toward the horizon, seen from far away",
       "ambiente": {
         "vento": 0.42,
-        "areia": 0.3
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -574,7 +621,8 @@
       "prompt": "two riders returning toward camp at last light, the column waiting",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.25
+        "areia": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -585,7 +633,8 @@
       "prompt": "a few low dry shrubs in a shallow desert depression at evening, first vegetation",
       "ambiente": {
         "vento": 0.28,
-        "areia": 0.16
+        "areia": 0.16,
+        "dunas": 0.08
       }
     },
     {
@@ -596,7 +645,8 @@
       "prompt": "a long shallow depression in the desert with sparse dry vegetation, evening",
       "ambiente": {
         "vento": 0.32,
-        "areia": 0.2
+        "areia": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -607,7 +657,8 @@
       "prompt": "men drinking from a stone well, faces reacting to the taste, daylight",
       "ambiente": {
         "vento": 0.3,
-        "areia": 0.18
+        "areia": 0.18,
+        "dunas": 0.08
       }
     },
     {
@@ -620,7 +671,8 @@
         "vento": 0.3,
         "areia": 0.2,
         "pano": 0.45,
-        "fogo": 0.2
+        "fogo": 0.2,
+        "dunas": 0.09
       }
     },
     {
@@ -633,7 +685,8 @@
         "vento": 0.28,
         "areia": 0.16,
         "pano": 0.4,
-        "fogo": 0.2
+        "fogo": 0.2,
+        "dunas": 0.08
       }
     },
     {
@@ -645,7 +698,8 @@
       "ambiente": {
         "vento": 0.28,
         "areia": 0.18,
-        "fogo": 0.22
+        "fogo": 0.22,
+        "dunas": 0.08
       }
     },
     {
@@ -657,7 +711,8 @@
       "ambiente": {
         "vento": 0.26,
         "areia": 0.14,
-        "pano": 0.35
+        "pano": 0.35,
+        "dunas": 0.07
       }
     },
     {
@@ -670,7 +725,8 @@
         "vento": 0.28,
         "areia": 0.16,
         "fogo": 0.3,
-        "pano": 0.25
+        "pano": 0.25,
+        "dunas": 0.08
       }
     },
     {
@@ -681,7 +737,8 @@
       "prompt": "a ruined stone well complex in open desert at dawn, few structures",
       "ambiente": {
         "vento": 0.35,
-        "areia": 0.22
+        "areia": 0.22,
+        "dunas": 0.1
       }
     },
     {
@@ -694,7 +751,8 @@
         "vento": 0.28,
         "areia": 0.16,
         "fogo": 0.32,
-        "pano": 0.25
+        "pano": 0.25,
+        "dunas": 0.08
       }
     },
     {
@@ -705,7 +763,8 @@
       "prompt": "a wide flat salt pan at dusk, cracked ground, far horizon",
       "ambiente": {
         "vento": 0.38,
-        "areia": 0.25
+        "areia": 0.25,
+        "dunas": 0.12
       }
     },
     {
@@ -717,7 +776,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.22,
-        "pano": 0.3
+        "pano": 0.3,
+        "dunas": 0.1
       }
     },
     {
@@ -729,7 +789,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.22,
-        "pano": 0.3
+        "pano": 0.3,
+        "dunas": 0.1
       }
     },
     {
@@ -741,7 +802,8 @@
       "ambiente": {
         "vento": 0.3,
         "areia": 0.2,
-        "pano": 0.3
+        "pano": 0.3,
+        "dunas": 0.09
       }
     },
     {
@@ -753,7 +815,8 @@
       "ambiente": {
         "vento": 0.35,
         "areia": 0.2,
-        "fogo": 0.25
+        "fogo": 0.25,
+        "dunas": 0.09
       }
     },
     {
@@ -764,7 +827,8 @@
       "prompt": "a narrow rocky gorge descending between high cliffs, evening light",
       "ambiente": {
         "vento": 0.42,
-        "areia": 0.18
+        "areia": 0.18,
+        "dunas": 0.08
       }
     },
     {
@@ -775,7 +839,8 @@
       "prompt": "a long column of riders descending a wide dry valley toward the coast at first light, the sea a thin line far ahead",
       "ambiente": {
         "vento": 0.4,
-        "areia": 0.15
+        "areia": 0.15,
+        "dunas": 0.07
       }
     },
     {
@@ -787,7 +852,8 @@
       "ambiente": {
         "vento": 0.38,
         "areia": 0.12,
-        "mar": 0.15
+        "mar": 0.15,
+        "dunas": 0.06
       }
     },
     {
@@ -799,7 +865,8 @@
       "ambiente": {
         "vento": 0.32,
         "areia": 0.08,
-        "mar": 0.35
+        "mar": 0.35,
+        "dunas": 0.04
       }
     },
     {

@@ -191,6 +191,8 @@ def _ambiente_cena(dest: Path, dur: float, cfg: dict, n: int = 0) -> None:
         # camadas de 05/09/2026, quando a pauta deixou de ser só mar
         if cfg.get("areia", 0) > 0:
             nos += amb.areia(dur, canal, cfg["areia"]);  camadas[canal].append(f"[areia{canal}]")
+        if cfg.get("dunas", 0) > 0:
+            nos += amb.dunas(dur, canal, cfg["dunas"]); camadas[canal].append(f"[dunas{canal}]")
         if cfg.get("pano", 0) > 0:
             nos += amb.pano(dur, canal, cfg["pano"]);    camadas[canal].append(f"[pano{canal}]")
         if cfg.get("insetos", 0) > 0:

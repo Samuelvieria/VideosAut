@@ -188,6 +188,36 @@ def pano(dur: float, canal: str, intensidade: float = 1.0) -> list[str]:
     ]
 
 
+def dunas(dur: float, canal: str, intensidade: float = 1.0) -> list[str]:
+    """O corpo grave e oco do vento sobre terreno aberto. Vai POR BAIXO da areia.
+
+    Existe porque o espectrograma acusou o que o ouvido não teria como acusar
+    aqui: comparada lado a lado com a mixagem de mar aprovada no video-03, a
+    primeira mixagem de deserto tinha **grave fraco e nenhuma respiração** — um
+    campo chapado de 20 Hz a 3 kHz, sem variação no tempo. O mar tem peso abaixo
+    de 340 Hz e ondula visivelmente; o deserto não tinha nem uma coisa nem outra.
+
+    A causa: `vento` corta em 200 Hz (foi desenhado para vento de mar, com o
+    grave vindo da onda) e `areia` começa em 1500. Ninguém preenchia o fundo.
+
+    A pesquisa histórica já tinha dito isso em palavras e eu não converti em
+    banda: *"o vento é um sopro contínuo, ESPESSO E OCO"*. Espesso e oco é grave.
+
+    A ondulação vem de três envoltórias longas e incomensuráveis (23, 37 e 61 s)
+    com profundidade grande — bem mais lentas que as do mar, porque duna não
+    quebra: ela sopra mais forte e mais fraco.
+    """
+    s = 0 if canal == "L" else 1900
+    d = 1.0 if canal == "L" else 1.052
+    per = [(23.0 * d, 0.42), (37.0 * d, 0.30), (61.0 * d, 0.22)]
+    mod = "+".join(f"{g}*sin(2*PI*t/{p_})" for p_, g in per)
+    return [
+        f"anoisesrc=color=brown:amplitude=1.0:r={SR}:d={dur}:seed={1010+s}[dn{canal}0]",
+        f"[dn{canal}0]highpass=f=35,lowpass=f=420,"
+        f"volume=volume='{0.55*intensidade}*(0.45+{mod})':eval=frame[dunas{canal}]",
+    ]
+
+
 def insetos(dur: float, canal: str, intensidade: float = 1.0) -> list[str]:
     """Coro de grilos ao longe. Serve estrada de noite e campo aberto.
 

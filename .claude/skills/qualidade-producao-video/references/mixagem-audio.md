@@ -231,6 +231,41 @@ eletrônico; a solução é ruído branco por um passa-banda ressonante, que dá
 altura sem a esterilidade do tom. E os pulsos precisam de mais de um período
 incomensurável: um só vira metrônomo, três somados viram coro.
 
+### Espectrograma: o único jeito de EU verificar áudio (05/09/2026)
+
+O modelo não escuta. Mas lê imagem — e um espectrograma renderizado como PNG é
+imagem. Isso abre um canal de verificação objetiva que não existia:
+
+```bash
+ffmpeg -i mix.wav -lavfi \
+  "showspectrumpic=s=1100x360:mode=combined:color=intensity:fscale=log:legend=1" \
+  espectro.png
+```
+
+**`fscale=log` é obrigatório.** Com o eixo linear (o padrão) os 300 Hz de baixo
+ficam espremidos num fio no rodapé, e é justamente lá que mora o problema mais
+comum.
+
+**Comparar sempre contra uma mixagem APROVADA DE OUVIDO**, empilhada na mesma
+imagem. Espectrograma sozinho não diz se está bom — diz se está diferente de
+algo que se sabe bom. O julgamento estético continua sendo do Samuel.
+
+**O que isso achou de primeira, e o ouvido não teria como achar aqui:** a
+primeira mixagem de deserto, comparada com a de mar do video-03, tinha **grave
+fraco e nenhuma respiração** — campo chapado de 20 Hz a 3 kHz. Causa: `vento`
+corta em 200 Hz (foi feito para vento de mar, onde o grave vem da onda) e
+`areia` começa em 1500. Ninguém preenchia o fundo. Daí nasceu a camada `dunas`.
+
+**Julgar ondulação exige amostra LONGA.** Em 25 s o deserto parecia chapado; as
+envoltórias dele são de 23 a 61 s e não completavam um ciclo. Em 120 s
+aparecem três ondulações largas — e a comparação com o mar deixa de acusar
+defeito e passa a mostrar caráter: o mar dá 12 a 14 pulsos rápidos no mesmo
+tempo, porque onda quebra e duna não.
+
+**Ler linha horizontal é ler TOM.** Ruído de banda larga não faz linha. Se
+aparecer risco horizontal contínuo, é tom — e tom é o que o Content ID casa.
+Foi assim que o `dragon-studio-sand-dunes` foi reprovado.
+
 ### O que a pesquisa histórica confirmou e corrigiu (05/09/2026)
 
 Consulta externa sobre o som real de uma noite no deserto do Hejaz

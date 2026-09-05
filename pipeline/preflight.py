@@ -259,7 +259,7 @@ def conferir(proj: Path) -> Resultado:
     sem_amb = [c["n"] for c in cenas
                if isinstance(c.get("ambiente"), dict)
                and not any(c["ambiente"].get(k, 0) for k in
-                   ("mar", "chuva", "fogo", "vento", "areia", "pano", "insetos"))]
+                   ("mar", "chuva", "fogo", "vento", "areia", "dunas", "pano", "insetos"))]
     if sem_prompt:
         r.erro(f"cenas sem prompt de imagem: {sem_prompt}")
     else:
