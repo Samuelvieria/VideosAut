@@ -189,7 +189,7 @@
       "papel": "narrado",
       "titulo": "As estrelas que guiam",
       "personagem": "",
-      "prompt": "a night sky heavy with stars over low dunes, one bright star near the horizon",
+      "prompt": "a night sky heavy with stars over low dunes, a faint band of the milky way, one bright star low near the horizon, dark blue night",
       "ambiente": {
         "vento": 0.3,
         "areia": 0.22,
@@ -290,7 +290,7 @@
       "papel": "narrado",
       "titulo": "O calor",
       "personagem": "",
-      "prompt": "empty dunes under white midday sky, heat shimmer, no figures, under harsh white midday light",
+      "prompt": "empty red sand dunes seen from ground level with a narrow band of pale sky at the very top of the frame, heat shimmer over the sand, no figures, harsh midday light",
       "ambiente": {
         "vento": 0.25,
         "areia": 0.2,
@@ -375,7 +375,7 @@
       "papel": "narrado",
       "titulo": "A areia volta",
       "personagem": "",
-      "prompt": "pixel art wide view at dusk where a field of black basalt gives way to red sand dunes, the transition visible across the frame",
+      "prompt": "a wide view at dusk where scattered black basalt rocks give way to smooth red sand dunes, the transition running across the frame, no figures",
       "ambiente": {
         "vento": 0.42,
         "areia": 0.3,
@@ -437,7 +437,7 @@
       "papel": "narrado",
       "titulo": "Ele quase não falava",
       "personagem": "lawrence",
-      "prompt": "the same foreigner riding, hood up, seen from behind among other riders, daylight",
+      "prompt": "a man in white arab robes with the hood up riding a camel, seen from behind among other camel riders, daylight",
       "ambiente": {
         "vento": 0.38,
         "areia": 0.24,
@@ -485,7 +485,7 @@
       "papel": "narrado",
       "titulo": "A boca seca",
       "personagem": "",
-      "prompt": "a rider slumped slightly forward, face wrapped in cloth, sun high",
+      "prompt": "a camel rider sitting upright but tired, face wrapped in cloth, one hand on the saddle, high sun, seen from the side",
       "ambiente": {
         "vento": 0.42,
         "areia": 0.3,
@@ -618,7 +618,7 @@
       "papel": "narrado",
       "titulo": "Ele voltou com o homem",
       "personagem": "",
-      "prompt": "two riders returning toward camp at last light, the column waiting",
+      "prompt": "two men on a single camel returning toward a camp at last light, a line of couched camels waiting in the distance",
       "ambiente": {
         "vento": 0.35,
         "areia": 0.25,
@@ -630,7 +630,7 @@
       "papel": "narrado",
       "titulo": "O primeiro verde",
       "personagem": "",
-      "prompt": "a few low dry shrubs in a shallow desert depression at evening, first vegetation, at evening, warm side light",
+      "prompt": "a shallow desert depression at evening with a single small thorny acacia tree and low tamarisk scrub, dry grass tufts on sand, warm side light",
       "ambiente": {
         "vento": 0.28,
         "areia": 0.16,
@@ -915,5 +915,6 @@
       }
     }
   ],
-  "_nota_obra": "Era 'a marcha ate Aqaba, contada por um cameleiro da escolta' e isso ia para TODO prompt, produzindo caravana de camelos em toda imagem. O campo serve para ancorar época e lugar, não para descrever a narrativa."
+  "_nota_obra": "Era 'a marcha ate Aqaba, contada por um cameleiro da escolta' e isso ia para TODO prompt, produzindo caravana de camelos em toda imagem. O campo serve para ancorar época e lugar, não para descrever a narrativa.",
+  "_nota_prompts": "Corrigidos 7 prompts em 05/09 depois de olhar a folha de contato. Dois padrões: 'rider' sem dizer CAMELO virou cavalo (o modelo preenche o que o prompt não diz), e 'first vegetation' num deserto virou CACTO, que é planta americana. Também a cena 20, que era 'dunes under white midday sky', saiu com o céu branco ocupando o quadro inteiro."
 }
