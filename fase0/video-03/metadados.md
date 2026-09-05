@@ -25,7 +25,9 @@ pt-BR. Prometer chuva traria quem quer chuva, e quem quer chuva abandona quando
 ouve mar — abandono é o pior sinal que existe. O termo honesto é **som de mar**,
 com fogueira em segundo.
 
-Duração: **75,9 min** · 38 cenas narradas + 9 min de cauda · 596 legendas.
+Duração: **72,7 min** · narração até 63,7 min + **540 s de cauda exatos** ·
+766 legendas. Números do render que saiu na workstation (`duracoes_render.json`),
+não estimativa — os 75,9 min anteriores eram de antes da configuração B de voz.
 
 ---
 
@@ -57,6 +59,13 @@ O que **não** fazer, e a razão está medida:
   e Cinderela — mesmo com a palavra "adultos" junto.
 - **Não** pôr "A Luz da Baía Quieta" na frente. É título que nós inventamos: o
   público nunca o buscou, então ele não carrega busca nenhuma.
+
+Um risco menor, registrado para não ser esquecido: **"fogueira" promete lenha
+estalando, e o nosso fogo é óleo numa bacia de bronze.** Não é o caso da chuva —
+fogo está em 28 das 39 cenas, então a camada existe de verdade —, mas quem busca
+"som de fogueira" tem uma textura na cabeça. A miniatura mostra um farol, o que
+corrige a expectativa antes do clique. Se a retenção dos primeiros segundos vier
+ruim, este é o primeiro suspeito.
 
 ---
 
@@ -149,6 +158,8 @@ noturna na miniatura.
 - [ ] **Conteúdo alterado ou sintético: ATIVADO**
 - [ ] Feito para crianças: **não**
 - [ ] Idioma: português (Brasil)
-- [ ] Enviar `legendas.pt-BR.srt`
+- [ ] Enviar `legendas.pt-BR.srt` — reformatado em 04/09 para a norma de
+      legibilidade (2 linhas de 42, 1 a 7 s). A versão anterior tinha bloco de
+      213 caracteres e dois de duração zero.
 - [ ] Capítulos: decisão em aberto (ver `video-02/metadados-revisados.md`); se
       testar, precisa de três ou mais marcações começando em `00:00`
