@@ -163,6 +163,23 @@ video-03 herdou o defeito e só foi descoberto depois de renderizado.
 
 ## Ritmo de narração — regras que sempre valem
 
+**Quem controla o ritmo é o TAMANHO DA FRASE, não o parâmetro de pausa.**
+Achado em 05/09/2026 com o Chirp3-HD: a marca `[pause]` cai em fim de frase,
+então roteiro de frase curta recebe mais pausas por palavra e sai mais lento.
+
+| | marca a cada | ppm medido |
+|---|---|---|
+| video-03 | 6,8 palavras | 124–127 |
+| video-04 | 9,7 palavras | **141** |
+
+Projetar o video-04 pelos 127 do video-03 errou **11 minutos**. O padrão do
+estúdio passou a ser 135, que é o meio da faixa — e a projeção honesta só
+existe depois do `s2_tts`, que grava o `duracoes.json` com o número real.
+
+**Consequência para quem escreve:** existem DOIS controles de duração, não um.
+Mais palavras alonga; frase mais curta também alonga. E frase curta é o que o
+contrato de voz já pede por outro motivo.
+
 **Ritmo lento vem de PAUSA maior, não de `speed` baixo.** `speed` baixo estica a
 articulação e degrada a pronúncia — verificado transcrevendo o áudio de volta.
 

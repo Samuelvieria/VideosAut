@@ -47,14 +47,15 @@ SEG_POR_CENA = 125          # video-02: 2.473 s / 20 cenas = 123,7
 # Palavras por minuto de narração. Era 102, medido no video-02 com o Kokoro a
 # speed 0.75 e 1,2 s de pausa inserida entre frases.
 #
-# 127 DESDE 05/09/2026, com a troca para o Google Chirp3-HD: ele fala em ritmo
-# natural e a lentidão vem da marcação [pause] / [pause long], não de esticar a
-# fala. Medido nas cenas 1-3 do roteiro real do video-03 com a voz Algenib.
-# Cai em cima dos 128 do Dreamoria, a referência de narrativa que funciona.
+# 135 DESDE 05/09/2026, com o Chirp3-HD. E é MÉDIA de uma faixa, não constante:
+# medido 124-127 no video-03 e 141 no video-04, sobre 73 cenas reais. A causa é
+# o tamanho da frase — a marca de pausa cai em fim de frase, então quem escreve
+# curto alonga o vídeo e quem escreve longo encurta. Projetar por 127 fez o
+# video-04 sair 11 minutos menor que o previsto.
 #
 # A consequência é de ROTEIRO, não de código: mais ppm com a mesma duração
 # significa MAIS PALAVRAS. Um vídeo de 2 h pede 14.100.
-PPM_MEDIDO = 127
+PPM_MEDIDO = 135
 CAUDA_S = 540              # 9 min de ambiente sem narração, no fim
 
 # Valores do video-02, que foi aprovado de ouvido e publicado. Ver

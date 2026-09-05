@@ -1,8 +1,8 @@
 {
   "titulo": "A Travessia",
   "obra": "1917, peninsula arabica",
-  "duracao_alvo_s": 7200,
-  "narrado_s": null,
+  "duracao_alvo_s": 6460,
+  "narrado_s": 5922,
   "cauda_ambiente_s": 540,
   "moldura": {
     "_nota": "Moldura de APRESENTADOR, não de personagem. Ver docs/mercado.md §9: os dois canais de referência abrem com saudação e fecham com boa-noite, e isso é ritual, que é o que constrói espectador recorrente. O que as consultas mandaram cortar foi a moldura de personagem — um narrador fictício se apresentando.",
@@ -966,5 +966,6 @@
     }
   ],
   "_nota_obra": "Era 'a marcha ate Aqaba, contada por um cameleiro da escolta' e isso ia para TODO prompt, produzindo caravana de camelos em toda imagem. O campo serve para ancorar época e lugar, não para descrever a narrativa.",
-  "_nota_prompts": "Corrigidos 7 prompts em 05/09 depois de olhar a folha de contato. Dois padrões: 'rider' sem dizer CAMELO virou cavalo (o modelo preenche o que o prompt não diz), e 'first vegetation' num deserto virou CACTO, que é planta americana. Também a cena 20, que era 'dunes under white midday sky', saiu com o céu branco ocupando o quadro inteiro."
+  "_nota_prompts": "Corrigidos 7 prompts em 05/09 depois de olhar a folha de contato. Dois padrões: 'rider' sem dizer CAMELO virou cavalo (o modelo preenche o que o prompt não diz), e 'first vegetation' num deserto virou CACTO, que é planta americana. Também a cena 20, que era 'dunes under white midday sky', saiu com o céu branco ocupando o quadro inteiro.",
+  "_nota_duracao": "Era 7200 (120 min), que era projeção a 127 ppm. Medido: a narração saiu a 141 ppm e deu 98,7 min. Com a cauda de 9 min fecha em 107,7. A cauda NÃO foi esticada para fechar 120 — o modulo-2 registra que nenhuma das duas referências de mercado tem cauda, e a nossa de 9 min já é aposta não testada."
 }

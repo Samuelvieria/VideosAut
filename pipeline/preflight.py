@@ -29,11 +29,20 @@ PISO_SPEED = 0.85          # medido 04/09/2026; ver skill § Ritmo de narração
 PPM_MEDIDO = {0.60: 106, 0.85: 148, 0.95: 167}   # KOKORO, por `speed`
 
 # Chirp3-HD não tem `speed` no nosso uso: fala em ritmo natural e a lentidão vem
-# da marcação de pausa, que é fixa. Então o ritmo é UM número, não uma curva.
-# Medido em 05/09/2026 nas cenas 1-3 do roteiro real do video-03, voz Algenib,
-# com a hierarquia [pause] / [pause long]: 124 a 127 ppm. Fica 127, que foi a
-# medição sobre mais texto. Referência de mercado: Dreamoria 128.
-PPM_GOOGLE = 127
+# da marcação de pausa. Mas o ritmo NÃO é uma constante do motor — depende do
+# roteiro, e a diferença é grande:
+#
+#   video-03: uma marca a cada  6,8 palavras -> 124 a 127 ppm
+#   video-04: uma marca a cada  9,7 palavras -> 141 ppm (medido em 73 cenas)
+#
+# A marca cai em fim de frase, então **quem controla o ritmo é o TAMANHO DA
+# FRASE**, não o parâmetro de pausa. Escrever curto alonga o vídeo; escrever
+# longo encurta. Projetei o video-04 a 127 e errei 11 minutos.
+#
+# 135 é o meio da faixa medida, para a projeção errar dos dois lados em vez de
+# sempre para cima. A projeção real só existe depois do s2_tts, e o preflight
+# já prefere `duracoes.json` quando ele existe.
+PPM_GOOGLE = 135
 FAIXA_MERCADO = (65, 170)  # minutos; docs/mercado.md §2
 USD_POR_MP = 0.005         # fal.ai Z-Image-Turbo
 BRL_POR_USD = 5.10
