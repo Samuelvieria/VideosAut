@@ -26,7 +26,14 @@ from pipeline.comum import carregar_plano, projeto
 from pipeline.s2_tts import blocos
 
 PISO_SPEED = 0.85          # medido 04/09/2026; ver skill § Ritmo de narração
-PPM_MEDIDO = {0.60: 106, 0.85: 148, 0.95: 167}
+PPM_MEDIDO = {0.60: 106, 0.85: 148, 0.95: 167}   # KOKORO, por `speed`
+
+# Chirp3-HD não tem `speed` no nosso uso: fala em ritmo natural e a lentidão vem
+# da marcação de pausa, que é fixa. Então o ritmo é UM número, não uma curva.
+# Medido em 05/09/2026 nas cenas 1-3 do roteiro real do video-03, voz Algenib,
+# com a hierarquia [pause] / [pause long]: 124 a 127 ppm. Fica 127, que foi a
+# medição sobre mais texto. Referência de mercado: Dreamoria 128.
+PPM_GOOGLE = 127
 FAIXA_MERCADO = (65, 170)  # minutos; docs/mercado.md §2
 USD_POR_MP = 0.005         # fal.ai Z-Image-Turbo
 BRL_POR_USD = 5.10
@@ -123,14 +130,29 @@ def conferir(proj: Path) -> Resultado:
 
     # ---- voz
     voz = plano.get("voz") or {}
+    engine = voz.get("engine", "kokoro")
     try:
         speed = float(voz.get("speed") or 0)
     except (TypeError, ValueError):
         speed = 0.0
     compensa = bool(voz.get("pausa_frase_s")) and bool(voz.get("vogal_final_pt"))
-    if speed <= 0:
+
+    if engine == "google-chirp3":
+        # Todo o bloco de `speed` abaixo é do Kokoro e não se aplica: o piso
+        # existe porque `speed` baixo destrói o acento tonal ESTICANDO a fala, e
+        # aqui não se estica nada. O que confere neste caminho é outra coisa.
+        if voz.get("speed"):
+            r.aviso(f"`voz.speed` é do Kokoro e será ignorado no {engine} — "
+                    f"a lentidão aqui vem da marcação de pausa")
+        lang = voz.get("lang", "pt-BR")
+        if not voz.get("voice"):
+            r.erro("plano sem `voz.voice` (ex.: Algenib)")
+        else:
+            r.ok(f"voz {voz['voice']} em {lang} · {PPM_GOOGLE} ppm "
+                 f"(Dreamoria 128, a referência que funciona)")
+    elif speed <= 0:
         r.erro("plano sem `voz.speed` — sem ele não dá para projetar duração")
-    elif speed < PISO_SPEED and compensa:
+    elif engine != "google-chirp3" and speed < PISO_SPEED and compensa:
         # O piso foi medido em PALAVRA ISOLADA, sem pausa de frase e sem a
         # correção de vogal. Em 04/09/2026 o Samuel ouviu 0.75 e 0.85 lado a
         # lado COM as duas compensações e aprovou 0.75 — o ouvido venceu a
@@ -141,12 +163,12 @@ def conferir(proj: Path) -> Resultado:
                 f"plano compensa com pausa_frase_s e vogal_final_pt. Foi "
                 f"aprovado de ouvido em 04/09 nessa configuração. Se mexer numa "
                 f"das compensações, ouça de novo antes de produzir")
-    elif speed < PISO_SPEED:
+    elif engine != "google-chirp3" and speed < PISO_SPEED:
         r.erro(f"speed {speed} está abaixo do piso {PISO_SPEED}. Medido em "
                f"04/09/2026: abaixo dele o pico de F0 deixa de cair na sílaba "
                f"tônica e toda palavra soa acentuada na primeira. A lentidão "
                f"vem de voz.pausa_respiro_s / voz.pausa_paragrafo_s")
-    else:
+    elif engine != "google-chirp3":
         r.ok(f"voz {voz.get('voice')} speed {speed} (piso {PISO_SPEED})")
 
     # ---- duração projetada
@@ -158,7 +180,10 @@ def conferir(proj: Path) -> Resultado:
     # depois a pausa de frase, depois a de parágrafo e de respiro, que eu tinha
     # triplicado neste projeto. Estimativa só entra quando não há medição.
     medido = proj / "duracoes.json"
-    ppm = _ppm(speed) if speed > 0 else 0
+    # o Kokoro precisa de `speed` para projetar; o Chirp3-HD tem ritmo fixo e
+    # não usa speed nenhum — exigir speed>0 aqui zerava a projeção dele
+    ppm = (PPM_GOOGLE if engine == "google-chirp3"
+           else (_ppm(speed) if speed > 0 else 0))
     if medido.is_file():
         try:
             dd = json.loads(medido.read_text(encoding="utf-8"))

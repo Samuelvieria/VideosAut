@@ -31,16 +31,31 @@ RAIZ = Path(__file__).resolve().parent.parent.parent
 FASE0 = RAIZ / "fase0"
 
 # MEDIDO em docs/mercado.md §2: não há um só caso de sucesso na amostra perto
-# de 30-41 min. A faixa que funciona em narrativa é 65-170 min, e a mediana do
-# History at Night (73 mil inscritos com SEIS vídeos) é 76. O padrão do projeto
-# passa a ser 75; menor que isso pede justificativa, não o contrário.
-DURACAO_PADRAO_MIN = 75
+# de 30-41 min. A faixa que funciona em narrativa é 65-170 min.
+#
+# SUBIU PARA 120 EM 05/09/2026, por dois motivos que chegaram depois:
+#   1. A mediana medida do segmento em INGLÊS é 147 min, contra 25 em pt-BR
+#      (docs/ingles-canal-separado.md). Nosso produto não tem par em português;
+#      o par dele está em inglês, e lá o formato é de duas a três horas.
+#   2. Em 01/02/2027 o YPP dobra para 8.000 horas para quem entra novo. A 40 min
+#      de AVD, um vídeo de 3 h precisa de 6.000 views para as 4.000 horas; um de
+#      10 min precisa de 60.000. Duração é a alavanca mais forte que temos sobre
+#      o prazo.
+DURACAO_PADRAO_MIN = 120
 SEG_POR_CENA = 125          # video-02: 2.473 s / 20 cenas = 123,7
 
-# Palavras por minuto de narração, MEDIDO no video-02 sobre os 32,2 min de fala
-# real — não sobre os 41 min totais, que incluem a cauda silenciosa. As
-# referências rodam a 128 e 180. Ver docs/mercado.md §9.
-PPM_MEDIDO = 102
+# Palavras por minuto de narração. Era 102, medido no video-02 com o Kokoro a
+# speed 0.75 e 1,2 s de pausa inserida entre frases.
+#
+# 127 DESDE 05/09/2026, com a troca para o Google Chirp3-HD: ele fala em ritmo
+# natural e a lentidão vem da marcação [pause] / [pause long], não de esticar a
+# fala. Medido nas cenas 1-3 do roteiro real do video-03 com a voz Algenib.
+# Cai em cima dos 128 do Dreamoria, a referência de narrativa que funciona.
+#
+# A consequência é de ROTEIRO, não de código: mais ppm com a mesma duração
+# significa MAIS PALAVRAS. Um vídeo de 2 h pede 14.100.
+PPM_MEDIDO = 127
+CAUDA_S = 540              # 9 min de ambiente sem narração, no fim
 
 # Valores do video-02, que foi aprovado de ouvido e publicado. Ver
 # .claude/skills/qualidade-producao-video/references/mixagem-audio.md
@@ -182,7 +197,7 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
         "obra": obra,
         "duracao_alvo_s": dur_s,
         "narrado_s": None,
-        "cauda_ambiente_s": 540,
+        "cauda_ambiente_s": CAUDA_S,
         "moldura": {
             "_nota": "Moldura de APRESENTADOR, não de personagem. Ver "
                      "docs/mercado.md §9: os dois canais de referência abrem "
@@ -241,10 +256,12 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
         texto = json.dumps(estilo, indent=2, ensure_ascii=False)
     (proj / "estilo.yaml").write_text(texto, encoding="utf-8")
 
-    # 102 ppm é a medição corrigida do video-02 sobre a narração real
-    # (docs/mercado.md §9). Usar 80 faria todo roteiro novo nascer
-    # curto demais para a duração alvo.
-    palavras_alvo = f"{duracao_min * PPM_MEDIDO:,}".replace(",", ".")
+    # 127 ppm é a medição do Chirp3-HD com a hierarquia de pausa (05/09/2026).
+    # Usar o 102 antigo faria todo roteiro novo nascer curto demais.
+    # a cauda não tem narração, então não conta para a meta de palavras — usar
+    # a duração total inflaria o alvo em ~1.100 palavras num vídeo de 2 h
+    narracao_min = duracao_min - CAUDA_S / 60
+    palavras_alvo = f"{round(narracao_min * PPM_MEDIDO):,}".replace(",", ".")
     (proj / "roteiro.md").write_text(
         f"""# {titulo}
 
@@ -253,11 +270,12 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
 > todo roteiro: mediana de 9 palavras por frase, 57% com 10 ou menos, 15%
 > começando com "E", zero termos banidos.
 
-> **Meta de volume:** {duracao_min} min. Medido em `docs/mercado.md` §9, os
-> canais que funcionam escrevem 13.612 e 21.744 palavras. Nos nossos {PPM_MEDIDO}
-> palavras/min medidos isso dá cerca de **{palavras_alvo} palavras** aqui — e o
-> video-02 tinha 3.279. Não é estilo, é aritmética: texto de menos não
-> preenche a duração.
+> **Meta de volume:** {duracao_min} min a {PPM_MEDIDO} palavras/min dá cerca de
+> **{palavras_alvo} palavras** de narração. Não é estilo, é aritmética: texto de
+> menos não preenche a duração, e desde a troca para o Chirp3-HD a lentidão vem
+> do TAMANHO do texto, não de esticar a fala nem de silêncio inserido. Os canais
+> de referência escrevem 13.612 e 21.744 palavras; o video-02 tinha 3.279 e o
+> video-03, 6.375.
 
 ## Abertura
 

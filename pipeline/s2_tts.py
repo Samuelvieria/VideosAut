@@ -154,6 +154,27 @@ def blocos(roteiro: Path) -> list[tuple[int, str, str]]:
     return saida
 
 
+ENGINE_GOOGLE = "google-chirp3"
+
+
+def _google(corpo: str, voice: str, lang: str):
+    """Uma cena pelo Chirp3-HD, com a hierarquia de pausa do roteiro.
+
+    Diferença de fundo em relação ao Kokoro: aqui a pausa é MARCA no texto
+    (`[pause]`, `[pause long]`), lida pelo modelo, e não silêncio costurado
+    depois. O modelo planeja a entoação em volta dela — a frase anterior fecha e
+    a seguinte reabre — em vez de levar um corte no meio de uma leitura
+    contínua. Ver `pipeline/vozes.py::marcar_roteiro`.
+
+    Também não há `fator_pausa` aqui, de propósito. A densidade decrescente ao
+    longo do episódio foi medida em 04/09 e faz quase nada: 163, 168 e 169 ppm
+    em três posições do video-02, praticamente reta. Quem produz a lentidão é a
+    pausa por fronteira, que a marcação já dá.
+    """
+    from pipeline.vozes import marcar_roteiro, google_audio
+    return google_audio(marcar_roteiro(corpo), voice, lang, markup=True)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Gera a narração por cena.")
     ap.add_argument("projeto")
@@ -163,8 +184,13 @@ def main() -> None:
     proj = projeto(a.projeto)
     plano = carregar_plano(proj)
     voz = plano.get("voz", {})
+    engine = voz.get("engine", "kokoro")
     voice = voz.get("voice", "pm_santa")
     speed = float(voz.get("speed", 0.80))
+    # `lang` só existe no caminho do Google. A MESMA voz existe em pt-BR e en-US
+    # com o mesmo timbre, então trocar de idioma não troca de narrador — é isso
+    # que torna a faixa de áudio em inglês viável sem inventar uma persona nova.
+    lang = voz.get("lang", "pt-BR")
 
     # A pausa passou a ser parâmetro DO PROJETO em 04/09/2026, não constante
     # global. Motivo: medido que `speed` abaixo de 0.85 destrói o acento tonal
@@ -186,10 +212,15 @@ def main() -> None:
 
     destino = proj / "audio"
     destino.mkdir(exist_ok=True)
-    cfg = (f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO};"
-           f"frase={PAUSA_FRASE};cadencia={CADENCIA_ALTERNADA};"
-           f"vogal_pt={VOGAL_FINAL_PT};"
-           f"fator_pausa={FATOR_PAUSA_INICIO}-{FATOR_PAUSA_FIM}")
+    if engine == ENGINE_GOOGLE:
+        from pipeline.vozes import MARCA_FRASE, MARCA_RESPIRO, MARCA_PARAGRAFO
+        cfg = (f"engine={engine};voice={voice};lang={lang};"
+               f"marcas={MARCA_FRASE}/{MARCA_RESPIRO}/{MARCA_PARAGRAFO}")
+    else:
+        cfg = (f"voice={voice};speed={speed};respiro={PAUSA_RESPIRO}/{PAUSA_PARAGRAFO};"
+               f"frase={PAUSA_FRASE};cadencia={CADENCIA_ALTERNADA};"
+               f"vogal_pt={VOGAL_FINAL_PT};"
+               f"fator_pausa={FATOR_PAUSA_INICIO}-{FATOR_PAUSA_FIM}")
 
     cenas = blocos(roteiro)
     total_cenas = len(cenas)
@@ -198,6 +229,15 @@ def main() -> None:
 
     if not pendentes:
         log("todas as cenas já estão atualizadas")
+    elif engine == ENGINE_GOOGLE:
+        import soundfile as sf
+        log(f"engine={engine} voz={voice} lang={lang} — {len(pendentes)} cena(s)")
+        for n, titulo, corpo in pendentes:
+            alvo = destino / f"cena_{n:02d}.wav"
+            audio = _google(corpo, voice, lang)
+            sf.write(alvo, audio, SR)
+            marcar(alvo, [], _marca(cfg, corpo))
+            log(f"cena {n:02d}  {len(audio)/SR:6.1f}s  {titulo}")
     else:
         # importa só quando há trabalho: carregar o Kokoro custa segundos
         import numpy as np, soundfile as sf
