@@ -22,27 +22,38 @@ Boa noite. Fique à vontade.
 
 Deite, se ainda não deitou. Apague o que estiver aceso.
 
-Eu sou um homem velho. Meus olhos já não servem para o longe, e as minhas mãos
-tremem quando eu sirvo o café. Mas eu ainda me lembro de areia.
+Eu sou um homem velho, e vou contar uma coisa que eu vi quando era moço e que
+não me larga desde então.
 
-Eu me lembro do peso dela. Do jeito que ela esfria quando o sol se põe, e de
-como ela endurece na madrugada, e de como o pé do camelo afunda menos às três
-da manhã do que ao meio-dia... Isso é uma coisa que só sabe quem andou.
+Foi no deserto, há cinquenta anos. Eu tinha vinte e dois anos e cuidava de
+camelos, que é o que eu sabia fazer.
 
-Eu quero contar uma travessia. Uma só.
+E um dia me mandaram ir junto com um grupo pequeno, atravessar uma terra onde
+ninguém atravessa, para chegar por trás num lugar que estava de frente para o
+mar...
 
-Não tem batalha aqui. Não tem herói. Não tem ninguém salvando ninguém no fim.
+Ninguém achava que dava.
 
-Tem quarenta homens, mais ou menos, e os animais deles. Tem água contada. Tem
-noite, muita noite, porque a gente andava de noite. E tem um lugar onde a
-gente chegou depois de muito tempo.
+Eu também não achava. Eu fui porque me pagaram, e porque alguém tinha que
+garantir que os animais chegassem do outro lado.
 
-Eu vou contar devagar, porque devagar é o único jeito que eu sei.
+Levou dois meses.
 
-Você não precisa acompanhar até o fim. Se você dormir no meio, tudo bem. A
-travessia continua sem você — ela já continuou sem muita gente.
+E no meio daqueles dois meses aconteceram umas quatro ou cinco coisas que eu
+vou levar comigo até o fim, e eu ainda não sei direito o que fazer com elas.
 
-Feche os olhos, se quiser. Eu estou aqui.
+Uma é sobre um camelo.
+
+Outra é sobre um homem que ficou para trás numa tempestade, e sobre o que a
+gente decidiu fazer, e sobre quem foi buscar.
+
+Eu vou contar tudo. Devagar, porque devagar é o único jeito que eu sei, e
+porque a pressa não cabe numa história que levou dois meses.
+
+Você não precisa acompanhar até o fim.
+
+Se você dormir no meio, tudo bem. A travessia continua sem você — ela já
+continuou sem muita gente.
 
 ## Cena 2 — Quem eu era
 
@@ -106,32 +117,33 @@ Que engraçado, o que a gente não sabe.
 
 ## Cena 4 — Os camelos
 
-Eram uns quarenta.
+Me deram os quarenta e três dias para conhecer.
 
-Não eram todos iguais, e é aí que muita gente se engana. Um camelo de carga é
-uma coisa. Um camelo de montaria é outra, e o bom mesmo, o de raça, é uma
-terceira coisa que quase ninguém tem.
+Três dias é pouco. Camelo não é ferramenta — é bicho, e bicho tem manha, e a
+manha de um não serve para o outro.
 
-Os de carga são largos e teimosos. Andam devagar, comem qualquer coisa, e
-aguentam peso que você não acredita.
+Então eu fiz o que meu pai fazia: sentei no chão, no meio deles, e fiquei.
 
-Os de montaria são mais finos. Levantam a cabeça diferente. Cansam mais rápido
-se você exagera, e eles sabem quando você está exagerando...
+Não mexendo. Sentado. Uma tarde inteira, com o sol descendo, olhando quem
+deitava perto de quem, quem comia primeiro, quem ficava de fora...
 
-A gente couchava eles perto da praia, no fim da tarde.
+Porque camelo tem ordem. Tem um que manda, tem um que ninguém quer perto, tem
+dois que andam sempre juntos e brigam se você separa.
 
-Couchar é isso: o animal dobra as patas da frente, depois as de trás, e desce
-até o peito encostar no chão. Faz um barulho surdo. Quarenta fazendo isso ao
-mesmo tempo é um som que eu não sei descrever direito — parece uma coisa
-grande respirando fundo.
+Se você não descobre isso antes de sair, você descobre no terceiro dia de
+marcha, com carga no chão e o dia perdido.
 
-Eu passava a mão em todos. Todo dia, todos.
+E tinha os tipos, que eu vou te dizer porque importa depois.
 
-Não por carinho, embora tivesse carinho. Era para conhecer. Você passa a mão
-hoje e passa amanhã, e no terceiro dia a sua mão sabe onde tem um caroço
-novo, ou onde a pele está quente demais.
+Os de carga são largos e teimosos, comem qualquer coisa, aguentam peso que você
+não acredita. Os de montaria são finos, levantam a cabeça diferente, e cansam
+antes se você exagera — e sabem quando você está exagerando.
 
-A mão aprende antes do olho.
+No fim daquela tarde eu já sabia o nome que eu ia dar para cada um.
+
+Nenhum deles tinha nome antes. Ninguém dá nome a animal de carga.
+
+Eu dei. Foi a única coisa daquela viagem que eu escolhi sozinho.
 
 ## Cena 5 — O que se leva
 
@@ -290,33 +302,34 @@ Ele não tem pressa. E o corpo da gente acredita nele.
 
 ## Cena 10 — Por que não pela costa
 
-Você deve estar pensando: por que não seguir pela beira do mar?
+Na terceira noite eu perguntei.
 
-É a pergunta certa. A costa é reta, tem povoado, tem poço, e o mar fica ali do
-lado dizendo onde é o norte.
+Perguntei baixo, para o homem que ia do meu lado, porque a pergunta era boba e
+eu sabia: por que não pela costa?
 
-E era exatamente por isso que a gente não podia.
+A costa é reta. Tem povoado, tem poço, e o mar fica ali do lado dizendo onde é
+o norte. A gente estava indo para o lado contrário do sentido comum.
 
-O que era reto para nós era reto para quem esperava a gente. Tinha guarnição
-espalhada pela costa, e tinha canhão apontado para a água, porque todo mundo
-achava que o ataque viria de navio.
+Ele não respondeu. Fez um som com a boca e apontou com o queixo para a frente...
 
-E tinha a ferrovia, mais para dentro, que era vigiada dia e noite.
+Foi o guia que respondeu, dois dias depois, sem eu ter perguntado de novo.
 
-Então sobrava o meio. E o meio era terra que ninguém atravessa.
+Ele disse: o que é reto para você é reto para quem espera você.
 
-Isso não é figura de linguagem. Era terra que ninguém atravessava porque não
-compensava atravessar: dava uma volta enorme, custava semanas, e não levava a
-lugar nenhum que valesse a pena...
+E era isso. Tinha guarnição espalhada pela costa e canhão apontado para a água,
+porque todo mundo achava que o ataque viria de navio. E tinha a ferrovia mais
+para dentro, vigiada dia e noite.
+
+Sobrava o meio. E o meio ninguém atravessa, porque não compensa: dá uma volta
+enorme, custa semanas, e não leva a lugar nenhum que valha a pena.
 
 A menos que o lugar aonde você quer chegar esteja de costas.
 
-Foi essa a ideia toda. Uma volta de quase mil quilômetros pelo lado de dentro,
-para aparecer por trás.
+Eu ouvi aquilo e achei genial. Depois passei três dias sem água e achei outra
+coisa.
 
-Ninguém acreditava que desse. Eu, sinceramente, também não acreditava.
-
-Mas eu era pago para cuidar dos camelos, não para ter opinião.
+As duas opiniões estavam certas. Uma coisa pode ser genial e péssima ao mesmo
+tempo — isso eu não sabia aos vinte e dois.
 
 ## Cena 11 — O relógio do deserto
 
@@ -350,35 +363,31 @@ O escuro é mais fácil. Você não vê o quanto falta.
 
 ## Cena 12 — A hora de partir
 
-A hora de partir é a melhor hora do dia.
+Eu perdi uma carga no quinto dia.
 
-O sol está descendo, o ar começa a devolver a temperatura, e o acampamento
-inteiro se mexe ao mesmo tempo sem ninguém mandar.
+Foi assim: a hora de partir é o fim da tarde, quando a sombra estica, e o
+acampamento inteiro se mexe ao mesmo tempo sem ninguém mandar. Você aprende a
+fazer aquilo dormindo, e tem dia que faz mesmo.
 
-Você aprende a fazer aquilo dormindo. Literalmente — tem dia que você faz
-dormindo.
+Enrola o cobertor apertado. Prende a corda de dentro para fora, nunca ao
+contrário, porque ao contrário afrouxa com o passo. Levanta cada odre pelo bico
+e sente o peso. Sela...
 
-Enrolar o cobertor apertado. Prender com a corda de dentro para fora, nunca ao
-contrário, porque ao contrário afrouxa com o passo.
+E eu, com sono, apertei uma cilha de menos.
 
-Verificar os odres um por um. Levantar cada um pelo bico e sentir o peso, que
-é mais confiável que olhar...
+Não de mais, que o animal reclama na hora. De menos, que ele não reclama.
 
-Selar. E selar é o momento em que o animal decide se você sabe o que está
-fazendo.
+Três horas depois, no escuro, a carga girou e caiu. Farinha na areia.
 
-Se a sela vai torta, ele levanta a cabeça. Se você aperta demais, ele bufa. Se
-você aperta de menos, ele não faz nada — e três horas depois a sela gira e
-você cai, e a culpa é sua.
+Ninguém gritou comigo. Foi pior: pararam, juntaram o que dava para juntar, e
+seguiram. Um homem me ajudou a recarregar sem dizer nada.
 
-Depois é esperar.
+A farinha que se perdeu naquela noite deu falta duas semanas depois.
 
-Sempre tem espera. Alguém está sempre demorando, sempre falta uma coisa, e o
-guia sempre olha o horizonte mais tempo do que parece necessário.
+Ninguém nunca me lembrou disso. Eu lembrei sozinho, todo dia, pelos dois meses
+inteiros.
 
-E aí, sem aviso, o primeiro camelo levanta.
-
-E os outros levantam atrás. E ninguém disse nada.
+E é por isso que até hoje eu confiro duas vezes o que já conferi.
 
 ## Cena 13 — Marchar no escuro
 
@@ -499,40 +508,40 @@ E a gente ia.
 
 ## Cena 17 — O café
 
-Deixa eu falar do café direito, porque o café não é bebida ali. É outra coisa.
+O homem que fazia o café tinha perdido dois dedos da mão esquerda.
 
-Você carrega grão verde, não moído. Moído perde o cheiro em três dias e vira
-pó sem alma. Então você carrega o grão e faz tudo na hora, toda vez, mesmo
-cansado, mesmo às duas da manhã.
+Não sei como. Nunca perguntei, e ele nunca contou, e no deserto isso é comum
+dos dois lados: ninguém pergunta e ninguém conta.
 
-Primeiro torra. Numa concha de ferro de cabo comprido, direto na brasa,
-mexendo sempre. O cheiro sai antes da cor — primeiro é um cheiro de capim
-seco, depois vira aquele cheiro que todo mundo conhece, e é aí que você tira.
+Mas ele fazia o café melhor que qualquer um, e fazia com aquela mão.
 
-Se passar do ponto amarga de um jeito que não tem conserto.
+Torrava o grão numa concha de ferro de cabo comprido, direto na brasa, mexendo
+sempre. O cheiro sai antes da cor — primeiro capim seco, depois aquele cheiro
+que todo mundo conhece, e é aí que tira. Passando do ponto, amarga sem
+conserto...
 
-Aí você despeja num pilão de madeira e soca. E o som do pilão é a parte que eu
-mais gosto... Um som seco, ritmado, que atravessa o acampamento inteiro.
+Depois socava no pilão de madeira. E o som do pilão é o que eu mais gosto:
+seco, ritmado, atravessando o acampamento inteiro.
 
-Quem está longe ouve e sabe que vai ter café. E começa a caminhar de volta sem
-ninguém ter chamado.
+Quem estava longe ouvia e começava a voltar sem ninguém ter chamado.
 
-Ferve na água com cardamomo. Cardamomo é obrigatório, não é enfeite: ele corta
-a gordura do que você comeu e assenta o estômago.
+Fervia com cardamomo, que não é enfeite — corta a gordura do que você comeu e
+assenta o estômago.
 
-Serve-se em xícara pequena de barro ou de metal esmaltado, sem alça. Nada de
-louça fina — louça fina não sobrevive a três dias de alforje em cima de pedra.
-
-Você segura pela borda com as pontas dos dedos. É quente e você não se queima
-porque é pouco. Dois goles.
+Servia em xícara pequena de barro, sem alça, do tamanho de meio ovo. Dois goles.
 
 A primeira é do hóspede. A segunda é do gosto. A terceira é da palavra dada, e
 essa você não recusa se puder evitar.
 
-Depois, se não quiser mais, você chacoalha a xícara de leve entre os dedos ao
-devolver. Ninguém precisa dizer nada.
+Depois, se não quer mais, você chacoalha a xícara de leve entre os dedos ao
+devolver.
 
-E é bonito que uma coisa tão pequena diga tanto.
+Eu fiquei olhando aquela mão fazer aquilo umas trinta vezes.
+
+E o que eu penso hoje é que um homem sem dois dedos que faz o melhor café não é
+um homem apesar da mão. Ele é um homem que descobriu o que ainda dava.
+
+Todo mundo tem alguma coisa que ainda dá. Quase ninguém procura.
 
 ## Cena 18 — Dormir três horas
 
@@ -637,40 +646,35 @@ Eu levei semanas para entender que era de propósito.
 
 ## Cena 21 — A qaylula
 
-Entre onze e três e meia, ninguém se mexe.
+Numa das paradas de meio-dia eu chorei, e não sei por quê.
 
-Tem um nome para isso, e é uma palavra antiga: qaylula. O repouso do meio-dia.
-Quem nunca passou calor de verdade acha que é preguiça com nome bonito.
+Não tinha acontecido nada. Ninguém tinha morrido. A água estava contada mas
+ainda dava. Era um dia igual aos outros.
 
-A gente parava onde desse sombra. Se tivesse um paredão de rocha, ótimo. Se
-não tivesse, a gente fazia.
-
-Fazer sombra é assim: você finca duas lanças, ou dois fuzis, ou dois galhos, e
-estica um manto entre eles. Fica baixo, na altura de um homem deitado.
-
-Meio metro de tecido feio entre você e o sol...
-
-E é a diferença entre chegar e não chegar.
+A gente tinha parado onde deu, sem paredão de rocha, então armamos sombra do
+jeito que se faz: duas lanças fincadas e um manto esticado entre elas, baixo,
+na altura de um homem deitado. Meio metro de tecido feio entre você e o sol...
 
 Debaixo daquilo o ar cai uns dez graus. Continua quente, mas quente de um jeito
-que o corpo aguenta, e ele agradece.
+que o corpo aguenta.
 
-E aí você fica deitado.
+E aí você fica deitado. Não dorme direito — cochila, acorda, ouve o pano batendo
+devagar com a rajada, ouve os camelos mastigando, cochila de novo.
 
-Não dorme direito. Cochila, acorda, ouve o pano batendo devagar com a rajada,
-ouve os camelos mastigando, cochila de novo.
-
-O pano batendo é o som daquelas horas. Um estalo surdo, seco, sem pressa, e
-depois a corda rangendo baixinho quando ela estica.
+O pano batendo é o som daquelas horas. Um estalo surdo, sem pressa, e depois a
+corda rangendo baixinho quando estica.
 
 É o som de estar dentro de alguma coisa.
 
-O deserto continua lá fora, do mesmo tamanho. Mas tem um pano entre você e
-ele.
+E ali, deitado, com o braço no rosto, eu chorei. Baixo, para ninguém ver. Durou
+pouco.
 
-Eu já dormi em quartos de pedra e em camas de verdade, depois, na velhice.
+Eu tinha vinte e dois anos e estava muito cansado, e acho que era só isso.
 
-Nunca dormi melhor do que debaixo daquele pano.
+Mas eu já pensei muito nessa tarde. Tem um tipo de descanso que é pior que
+trabalhar, porque trabalhando você não tem tempo de sentir o tamanho da coisa.
+
+Parado, você tem.
 
 ## Cena 22 — O calor
 
@@ -798,41 +802,46 @@ ruim que a gente aproveitava, porque desperdiçar não estava no vocabulário.
 
 Eu comi carne três vezes em dois meses.
 
-Num lugar onde nada se joga fora, isso é o que acontece. Ninguém ali estava
-passeando.
+E das três, duas eu conhecia o animal pelo nome que eu mesmo tinha dado.
 
-O caldo era bom. Fazia-se num caldeirão grande, com o que tivesse, e todo mundo
-comia do mesmo caldeirão, sentado em roda.
+Não vou fingir que foi fácil. Também não vou fingir que eu não comi.
 
-Foram três noites em que se comeu bem. Eu me lembro delas com gosto.
+O caldo era bom, e eu comi tudo, e comi de novo no dia seguinte. Num lugar onde
+nada se joga fora, quem tem escrúpulo passa fome sozinho.
+
+Isso é uma coisa que eu aprendi ali e que nunca precisei aprender de novo.
 
 ## Cena 26 — O que os camelos comem
 
-Camelo come espinho.
+Camelo come espinho, e a primeira vez que eu vi um homem entender isso de
+verdade foi com o inglês.
 
-Você lê isso e acha exagero. Não é. Ele come acácia, ele come aquele arbusto
-seco que corta a mão da gente, e ele come com uma calma que ofende.
+Ele estava olhando um dos animais mastigar acácia. Aquele arbusto que corta a
+mão da gente, cheio de agulha.
 
-A boca dele por dentro é de couro. Tem umas pontas de carne duras, viradas
+Ficou olhando muito tempo. Depois perguntou se não machucava.
+
+O homem do lado dele riu. Eu não ri, porque eu já tinha me perguntado a mesma
+coisa aos oito anos...
+
+A boca do camelo por dentro é de couro. Tem umas pontas de carne duras, viradas
 para trás, que empurram o espinho para o lado certo.
 
-Ele mastiga de lado. Devagar, em círculo, com a mandíbula andando de um jeito
-que parece que ele está pensando.
+Ele mastiga de lado, devagar, em círculo, com a mandíbula andando de um jeito
+que parece que está pensando. E aí para. E fica parado. E depois recomeça.
 
-E aí ele para. E fica parado. E depois recomeça...
+Nunca vi um comer até se fartar. Provam de muitos lugares e não acabam com
+nenhum, e eu acho que é por isso que duram onde nada dura.
 
-De tarde, quando a gente parava, eles saíam a procurar. Não muito longe —
-uns cem passos, duzentos. Comiam o que dava.
+Eles aceitam qualquer coisa e não insistem em nada.
 
-Nunca vi um comer até se fartar. Eles provam de muitos lugares e não acabam com
-nenhum.
+O inglês ouviu isso e ficou calado um tempo. Depois disse que gostaria de ser
+assim.
 
-Eu acho que é por isso que duram onde nada dura. Eles aceitam qualquer coisa e
-não insistem em nada.
+Eu achei graça na hora.
 
-Tem gente assim também. Eu conheci duas ou três.
-
-Nenhuma delas passou fome.
+Hoje eu acho que ele estava dizendo uma coisa séria, e que talvez fosse a coisa
+mais séria que ele me disse.
 
 ## Cena 27 — O harra
 
@@ -1009,34 +1018,36 @@ Eu ri. Ele não riu.
 
 ## Cena 32 — Auda
 
-Auda era uma coisa que eu nunca tinha visto.
+De Auda eu vou contar uma noite só, porque foi a única vez que ele falou comigo.
 
-Homem já não novo, seco, alto, com uma barba dura. A voz saía de um lugar mais
-fundo do que a voz dos outros.
+Ele era um homem já não novo, seco, alto, com uma barba dura, e a voz saía de
+um lugar mais fundo que a dos outros. Falava de si mesmo na terceira pessoa,
+sem vergonha nenhuma, dizendo o próprio nome no meio da frase como quem cita
+uma testemunha.
 
-Ele falava de si mesmo na terceira pessoa. Sem vergonha nenhuma. Dizia o nome
-dele no meio da frase como quem cita uma testemunha.
+Num homem menor aquilo seria ridículo. Nele não era, e demorei a entender por
+quê: ele tinha feito tudo o que dizia ter feito, e quem podia desmentir já não
+estava vivo...
 
-Isso, num homem menor, seria ridículo.
+Eu era o rapaz dos camelos. Ele não tinha por que saber que eu existia.
 
-Nele não era, e eu levei um tempo para entender por quê... Era porque ele tinha
-feito tudo o que dizia ter feito. Todo mundo ali sabia. E não tinha ninguém
-para desmentir porque quem podia desmentir não estava mais vivo.
+Numa noite eu estava com um animal que tinha rasgado a almofada da pata numa
+pedra, e eu estava costurando aquilo à luz do fogo, com a pata no colo, com
+raiva, porque já era a terceira vez.
 
-À noite ele contava. E quando ele contava, ninguém saía do fogo.
+Ele parou atrás de mim. Ficou olhando um tempo sem falar.
 
-Contava de assalto, de cavalo, de gente que ele tinha conhecido. Repetia as
-mesmas histórias e ninguém reclamava, porque cada vez ele mudava um detalhe e
-a gente esperava para ver qual seria.
+Depois disse: esse aí não chega.
 
-Ele conhecia aquele deserto como quem conhece o próprio quintal.
+E foi embora.
 
-Não pelas estrelas, como o guia. De outro jeito — pelos poços, pelas famílias,
-por quem devia favor a quem.
+Eu fiquei com muita raiva. Costurei melhor do que já tinha costurado na vida.
 
-Sem ele a gente não teria passado. Não por causa da força dele.
+O animal chegou. Chegou magro e mancando, mas chegou, e eu levei ele até a água
+com as minhas mãos.
 
-Por causa dos nomes que ele sabia.
+E até hoje eu não sei se Auda estava errado ou se ele sabia exatamente o que
+estava fazendo quando disse aquilo.
 
 ## Cena 33 — O inglês
 
@@ -1237,36 +1248,34 @@ Ninguém bebe pensando na semana que vem.
 
 ## Cena 39 — Três dias
 
-Os três dias seguintes eu não sei contar direito.
+Do segundo dos três dias eu lembro de uma coisa só, e é uma bobagem.
 
-Não porque tenham sido terríveis. Foram, mas não é por isso.
+Eu comecei a contar os passos que o meu camelo dava entre uma respiração e
+outra.
 
-É que eles não têm marca. Não tem nada para lembrar. É areia igual, céu igual,
-passo igual, e o cérebro não guarda o que se repete.
+Contei durante horas. Nunca dava o mesmo número — cinco, depois sete, depois
+quatro — e aquilo me incomodou de um jeito desproporcional. Eu queria que
+desse o mesmo...
 
-Eu sei que andamos. Sei que paramos. Sei que fez a mesma coisa três vezes.
+O resto daqueles três dias não tem marca. É areia igual, céu igual, passo
+igual, e o cérebro não guarda o que se repete.
 
-E na minha cabeça aquilo é um bloco só...
+Sei que andamos. Sei que paramos. Sei que fizemos a mesma coisa três vezes. E
+na minha cabeça aquilo é um bloco só.
 
-O que eu lembro são coisas soltas, sem ordem.
+O que sobrou são coisas soltas, sem ordem.
 
-Lembro da minha própria respiração dentro do pano do rosto, que fica quente e
-úmida e é a única umidade que sobra.
+A minha própria respiração dentro do pano do rosto, que fica quente e úmida e é
+a única umidade que sobra. O gosto de metal na boca, que vem com a sede e vem
+antes do resto. A nuca do homem da frente, que eu conheci melhor do que conheço
+a minha própria mão.
 
-Lembro do gosto de metal na boca. Isso vem com a sede, e vem antes do resto.
+E os passos entre as respirações, que nunca davam o mesmo número.
 
-Lembro de olhar para a nuca do homem da frente por horas, e de conhecer aquela
-nuca melhor do que conheço a minha própria mão.
+Eu penso nisso às vezes. A cabeça, quando não tem o que fazer, procura ordem
+onde não tem.
 
-E lembro de uma hora ter perdido a conta de que dia era, e de não ter achado
-aquilo grave.
-
-Não foi desespero. Foi uma indiferença calma, quase engraçada, que passou e foi
-embora.
-
-O corpo faz umas coisas estranhas quando falta água.
-
-A cabeça faz mais.
+E fica brava quando não acha. Como se o mundo devesse alguma coisa.
 
 ## Cena 40 — A boca seca
 
@@ -1325,14 +1334,20 @@ esperar, e a gente não podia.
 Descarregaram ele. Distribuíram a carga entre os outros, que já estavam
 carregados.
 
-Deixaram um odre pequeno perto dele, e a gente foi.
+Deixaram um odre pequeno perto dele. E a gente foi.
 
-Aquela era uma linha de caravana. Passa gente ali, não todo dia, mas passa. E
-camelo descansado levanta sozinho depois de um tempo, se a noite ajudar.
+Ninguém falou nada. Ninguém olhou para trás — tirando eu, que olhei duas vezes.
 
-Foi o que o guia disse, e eu escolhi acreditar. Escolho até hoje.
+Na segunda vez ele ainda estava com a cabeça levantada.
 
-Eu tinha dado um nome para ele. Não vou dizer qual.
+O guia me disse depois que aquela era linha de caravana, que passa gente ali, e
+que camelo descansado levanta sozinho se a noite ajudar.
+
+Pode ser que sim. Eu nunca conferi, e ninguém volta para conferir uma coisa
+dessas.
+
+Eu tinha dado um nome para ele. Não vou dizer qual, porque dizer em voz alta
+depois de tanto tempo me faz uma coisa esquisita no peito.
 
 E olha que já se passaram cinquenta anos.
 
@@ -1553,13 +1568,16 @@ E aí veio a parte que eu não gosto de contar.
 
 Discutiu-se se dava para voltar.
 
-Alguém disse que era arriscado, e não estava errado — a gente estava no meio do
-pior trecho, com água contada.
+Alguém disse que não dava. E não estava errado: a gente estava no meio do pior
+trecho, com água contada, e voltar custava meio dia e a água de todos por causa
+de um homem.
 
-Ninguém disse que devia deixar. Ninguém disse que devia ir.
+Ninguém disse que ele merecia morrer. Não era isso.
+
+Era uma conta. E a conta dava não.
 
 Ficou todo mundo parado, olhando para o chão, do jeito que gente fica quando
-sabe que a conta não fecha e não quer ser quem diz isso em voz alta.
+sabe o resultado e não quer ser quem diz em voz alta.
 
 ## Cena 49 — Os poços de Auda
 
@@ -1746,32 +1764,32 @@ Eu dormi como não dormia havia um mês, com o gosto de sal ainda na boca, e a
 
 ## Cena 55 — As tendas de pelo de cabra
 
-Ali eu vi as primeiras tendas.
+Numa daquelas noites eu fui chamado para dentro de uma tenda.
 
-Tenda beduína é feita de pelo. De cabra preta, sobretudo, tecido em tiras
-compridas e costurado tira com tira.
+Nunca tinha entrado numa. Isso pode parecer estranho, e não é: eu era o rapaz
+dos camelos, e o rapaz dos camelos dorme com os camelos.
 
-Chamam de casa de pelo, e é o nome exato.
+A tenda beduína é feita de pelo. Cabra preta, sobretudo, tecido em tiras
+compridas e costurado tira com tira. Chamam de casa de pelo, e é o nome exato.
 
-O pano é grosso e áspero. Não é bonito. E ele faz uma coisa que nenhum tecido
-moderno faz: quando chove, o pelo incha e fecha, e a água não passa...
+O pano é grosso e áspero, e faz uma coisa que nenhum tecido moderno faz: quando
+chove, o pelo incha e fecha, e a água não passa. E seco, deixa o ar
+atravessar...
 
-E quando está seco e quente, ele deixa o ar atravessar.
+Por dentro é dividido com um pano. Um lado é dos homens e das visitas, e o
+outro é da família, e ali a gente não olha.
 
-A tenda é baixa e comprida. Fica esticada em cordas, com estacas, e a frente
-fica aberta para o lado contrário do vento.
+Eu entrei e não soube onde sentar.
 
-Por dentro é dividida com um pano. Um lado é dos homens e das visitas. O outro
-é da família, e ali a gente não olha.
+Um velho apontou um lugar com o queixo. Sentei. Deram café, e eu bebi errado —
+segurei a xícara com a mão inteira, como quem segura caneca, e alguém sorriu.
 
-Eu passei a gostar do som daquilo.
+Ninguém me corrigiu. Aquilo foi pior que corrigir.
 
-O pano batendo com a rajada — um estalo surdo, grosso. E a corda rangendo
-quando estica, um rangido baixo, que dura um segundo e para.
+Fiquei ali quase uma hora sem falar nada, ouvindo homens mais velhos discutirem
+coisas que não eram da minha conta.
 
-Não é estalo de pano fino. Pano fino faz um barulho agudo e apressado.
-
-Aquele é um som pesado. Um som de coisa que fica.
+Foi uma das melhores horas da minha vida, e eu não sei explicar por quê.
 
 ## Cena 56 — As mulheres do acampamento
 
@@ -1872,33 +1890,35 @@ E era bom. Só isso.
 
 ## Cena 59 — As histórias à noite
 
-À noite, no acampamento grande, contava-se história.
+À noite, no acampamento grande, contava-se história. Sempre as mesmas.
 
-Não era entretenimento como hoje se entende. Era o jeito de guardar as coisas.
-
-Ninguém escrevia. Então o que não fosse contado sumia, e por isso contava-se
-sempre, e sempre as mesmas.
-
-E ninguém reclamava de já ter ouvido...
+Ninguém escrevia. Então o que não fosse contado sumia — e por isso contava-se
+de novo, e de novo, e ninguém reclamava de já ter ouvido.
 
 O bom contador não é o que tem história nova. É o que conta a velha de um jeito
-que você escuta de novo.
+que você fica.
 
-Auda era assim. Ele repetia e a gente ficava.
+Auda era assim. Voz baixa no começo, quase difícil de ouvir, o que puxa todo
+mundo para a frente. E parava no meio de uma frase, o tempo exato de incomodar,
+e voltava...
 
-Tinha um jeito de fazer. A voz baixa no começo, quase difícil de ouvir, e isso
-puxa todo mundo para a frente.
+Numa dessas noites um velho de outra família contou uma história de poço.
 
-Depois ele parava numa hora esquisita. No meio de uma frase, quase.
+Era sobre dois homens que chegaram num poço ao mesmo tempo, vindos de lados
+diferentes, e um deles era inimigo do pai do outro.
 
-E ficava calado o suficiente para incomodar. E aí voltava.
+E eu não lembro o fim.
 
-Eu aprendi a contar ouvindo aquilo. E é por isso que eu falo assim com você,
-com essas paradas — não é problema de velhice.
+Eu juro que escutei até o fim. Lembro da voz dele, lembro do cheiro do fogo,
+lembro que alguém riu no meio e foi mandado calar.
 
-É ofício.
+O fim eu não tenho.
 
-Bom, é um pouco de velhice também.
+Passei cinquenta anos remontando aquele fim de umas seis maneiras diferentes, e
+nenhuma me convence.
+
+Tem coisa que a gente perde assim, sem perceber que estava perdendo. E aí um
+dia procura e não está.
 
 ## Cena 60 — Bair
 
@@ -1986,99 +2006,97 @@ Mas eu guardei essa imagem melhor do que guardei coisas mais importantes.
 
 ## Cena 63 — A espera
 
-E aí veio a espera.
+Na terceira semana parada, dois homens quase se mataram por causa de uma corda.
 
-Ninguém conta essa parte. Nas histórias, o grupo atravessa o deserto e chega e
-acontece a coisa.
+Uma corda. Não uma boa, nem comprida.
 
-Na vida real, o grupo atravessa o deserto e depois espera semanas.
+Um disse que era dele, o outro disse que tinha achado, e aquilo cresceu num
+tamanho que não tinha nada a ver com corda nenhuma.
+
+Foi preciso três homens para separar, e o resto do dia ficou ruim...
+
+E é isso que a espera faz.
+
+Ninguém conta essa parte. Nas histórias, o grupo atravessa o deserto, chega, e
+acontece a coisa. Na vida real, o grupo atravessa o deserto e depois espera
+semanas.
 
 Esperava-se gente chegar. Esperava-se recado. Esperava-se que uma família
-decidisse se vinha ou não vinha...
+decidisse se vinha ou não vinha.
 
-E esperar, num lugar quente, sem nada para fazer, é um trabalho.
+E esperar, num lugar quente, sem nada para fazer, é um trabalho pior que andar.
 
-O dia fica comprido de um jeito que a marcha não deixava. Andando, o dia passa
-sozinho. Parado, você sente cada hora.
+Andando, o dia passa sozinho. Parado, você sente cada hora, e a cabeça começa a
+procurar em que gastar a força que sobra.
 
-Todo mundo fica meio azedo. Discussão pequena começa a aparecer.
-
-E é aí que acidente acontece, porque gente sem tarefa faz besteira.
-
-Os chefes sabiam disso. Então sempre tinha alguma coisa mandada.
-
-Contar carga outra vez. Revisar sela. Levar os animais para pastar mais longe do
-que precisava.
+Os chefes sabiam. Por isso sempre tinha alguma coisa mandada — contar carga
+outra vez, revisar sela, levar os animais para pastar mais longe do que
+precisava.
 
 Eu levei anos para entender que metade daquelas tarefas não servia para nada.
 
-Servia para não deixar ninguém parado.
+Servia para não deixar ninguém parado com uma corda na mão.
 
 ## Cena 64 — O que a espera faz
 
-Nessas semanas eu aprendi uma coisa sobre mim que eu não sabia.
+Na quarta semana parada eu descobri uma coisa sobre mim que eu não sabia.
 
 Eu aguento cansaço. Aguento sede, aguento frio de madrugada, aguento andar doze
-horas.
+horas com o quadril doendo.
 
 Eu não aguento não ter o que fazer.
 
-No terceiro dia parado eu estava pior do que no terceiro dia sem água...
+No terceiro dia parado eu estava pior do que no terceiro dia sem água. E isso é
+uma frase que parece exagero e não é...
 
-E não era só eu. Dava para ver na coluna inteira.
+Sem água você tem um problema, e o problema ocupa você inteiro.
 
-Homem que atravessou o Nefud sem reclamar começava a implicar com o jeito que
-o outro fazia café.
+Parado você não tem problema nenhum, e é aí que a cabeça vira contra você.
 
-Tem uma explicação boba e verdadeira. Andando, a cabeça fica ocupada com o
-passo. Parado, ela fica ocupada com você.
+Eu comecei a implicar com o jeito que um homem mastigava. Um homem que tinha
+dividido o último pão comigo duas semanas antes.
 
-E a gente cansa da própria cabeça mais rápido do que cansa das pernas.
+Vi isso na coluna toda. Gente que atravessou o Nefud sem reclamar brigando por
+lugar de sombra.
 
-Eu me acostumei, com o tempo, a arranjar uma coisa para as mãos.
+Então eu arranjei coisa para as mãos. Costurei couro que não precisava.
+Trancei corda. Limpei o que já estava limpo.
 
-Costurar couro que não precisava. Trançar corda. Limpar o que já estava limpo.
+Faço isso até hoje. A minha mulher achava graça — dizia que eu não sabia ficar
+sentado.
 
-Faço isso até hoje. A minha mulher achava graça.
-
-Ela dizia que eu não sabia ficar sentado.
-
-E é verdade. Eu aprendi a atravessar deserto antes de aprender a ficar parado
-numa cadeira.
+E eu não sei mesmo. Eu aprendi a atravessar deserto antes de aprender a ficar
+parado numa cadeira, e essas duas coisas não se ensinam na mesma idade.
 
 ## Cena 65 — Consertar tudo
 
-O trabalho que eu mais gosto de lembrar é o de consertar.
+O melhor trabalho daquelas semanas foi um odre que quase não deu para salvar.
 
-Odre de água, principalmente. Eles vazavam sempre, e sempre num lugar difícil.
+Era um dos grandes, dos bons, e tinha rasgado na costura velha — não um furo,
+uma linha inteira abrindo, do tamanho de um dedo indicador.
 
-Você vira o odre do avesso, o que já é uma luta, e procura o furo passando a
-mão devagar. A mão acha antes do olho, sempre.
+Um homem disse para descartar. E ele tinha razão pela conta: o couro estava
+fino ali, e costura em couro fino abre de novo.
 
-Aí você raspa em volta com a faca, para o couro ficar áspero e a costura pegar...
+Eu não descartei...
 
-Agulha grossa, de três lados. Linha encerada.
+Virei o odre do avesso, que já é uma luta. Raspei em volta com a faca até o
+couro ficar áspero. Cortei uma tira de um odre que já tinha morrido e usei como
+remendo por dentro.
 
-E costura de dentro para fora, com o ponto apertado, e depois passa gordura por
-cima da costura.
+Agulha grossa, de três lados. Linha encerada. Ponto miúdo e apertado, de dentro
+para fora, e gordura por cima da costura no fim.
 
-Leva uma hora um furo. Às vezes duas.
+Levou uma noite inteira. Eu apaguei o fogo duas vezes de tão perto que eu
+estava.
 
-E é uma hora boa. Você está sentado na sombra, as mãos ocupadas, e a cabeça
-fica naquele lugar de não pensar em nada.
+Aquele odre foi até Aqaba.
 
-Corda também. Corda desfia na ponta e você tem que rematar.
+Eu penso nele mais do que penso em coisas maiores que aconteceram. Não sei por
+quê — talvez porque foi a única coisa naqueles dois meses que dependeu só de
+mim, e deu certo.
 
-Sela: revisar a madeira, procurar rachadura, apertar a amarração que soltou.
-
-Eu passava dias assim naquelas semanas de espera.
-
-E quando eu ficava velho e não conseguia mais dormir, eu descia e ia consertar
-alguma coisa na cozinha, de noite.
-
-A minha mulher acordava e não dizia nada.
-
-Acho que ela entendia.
+Tudo o mais que deu certo dependeu de outras pessoas.
 
 ## Cena 66 — A última noite antes
 
