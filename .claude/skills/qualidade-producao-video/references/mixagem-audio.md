@@ -2,6 +2,29 @@
 
 Carregado sob demanda pela skill `qualidade-producao-video`.
 
+## Onde mora um valor aprovado de ouvido (custou o mesmo defeito duas vezes)
+
+**Valor aprovado de ouvido sobe para `MIXAGEM_PADRAO` no código. `plano.json`
+guarda só o que é específico daquele vídeo — nunca a calibração do canal.**
+
+- O que aconteceu: em 04/09/2026 o video-03 saiu com eco de ambiente, um
+  defeito que o Samuel já tinha rejeitado no video-02. A correção do video-02
+  (`ambiente_reverb: 0.0`, `ganho: 0.3`, `lowpass: 3500`) tinha sido gravada
+  como **override no `plano.json` daquele vídeo**, e o `MIXAGEM_PADRAO`
+  continuou com os números calculados por medição, que ninguém nunca escutou
+  (`reverb: 0.7`, `ganho: 1.0`, `lowpass: 5500`). O video-03 foi escrito sem
+  overrides — "usa o padrão" — e herdou exatamente o que já tinha sido
+  rejeitado.
+- Por que é traiçoeiro: o vídeo corrigido continua correto, então nada
+  aponta o problema. A regressão só aparece no vídeo SEGUINTE, e parece
+  defeito novo.
+- **Nos dois casos a medição perdeu do ouvido.** `ambiente_ganho: 1.0` foi
+  calculado com stem isolado dando 13,6dB de gap, dentro do alvo teórico —
+  e de ouvido ainda soava alto; ficou 0.3. Isso não é motivo para parar de
+  medir: é motivo para tratar a medição como ponto de partida e o
+  julgamento auditivo como decisão final, e para o resultado do julgamento
+  ir para onde o próximo vídeo vai buscar.
+
 ## Mixagem de áudio (`pipeline/s5_render.py::mixar`)
 
 **Alvo de masterização final: -14 LUFS integrado / -1 dBTP, não -18.**
