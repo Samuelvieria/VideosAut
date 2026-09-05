@@ -20,7 +20,7 @@ Meta: ~14.100 palavras a 127 ppm = 111 min de narração + 9 de cauda.
 
 Boa noite. Fique à vontade.
 
-Se você estiver dirigindo, encoste. Escute isso outra hora.
+Deite, se ainda não deitou. Apague o que estiver aceso.
 
 Eu sou um homem velho. Meus olhos já não servem para o longe, e as minhas mãos
 tremem quando eu sirvo o café. Mas eu ainda me lembro de areia.
@@ -422,9 +422,10 @@ O corpo aguenta calado. A cabeça é que começa a fazer contas erradas...
 
 Sentava todo mundo. Ninguém falava muito.
 
-O café vinha em copo pequeno, do tamanho de meia laranja, amargo, com
-cardamomo. Você bebe em dois goles. Se você quer mais, vira o copo de boca
-para baixo quando não quer, e é assim que se diz "chega" sem falar.
+O café vinha em xícara pequena, sem alça, do tamanho de meio ovo, amarga, com
+cardamomo. Dois goles e acabou. Quando você não quer mais, você chacoalha a
+xícara de leve entre os dedos antes de devolver, e é assim que se diz "chega"
+sem falar.
 
 Aí a gente ficava ali, olhando o fogo baixinho.
 
@@ -458,15 +459,17 @@ ninguém ter chamado.
 Ferve na água com cardamomo. Cardamomo é obrigatório, não é enfeite: ele corta
 a gordura do que você comeu e assenta o estômago.
 
-Serve-se em copo pequeno, de vidro ou de louça fina, sem alça.
+Serve-se em xícara pequena de barro ou de metal esmaltado, sem alça. Nada de
+louça fina — louça fina não sobrevive a três dias de alforje em cima de pedra.
 
-Você segura pela borda, com as pontas dos dedos, e é quente e você não se
-queima porque é pouco. Dois goles.
+Você segura pela borda com as pontas dos dedos. É quente e você não se queima
+porque é pouco. Dois goles.
 
-O primeiro copo é de cortesia. O segundo é de sede. O terceiro é de amizade, e
-depois do terceiro você vira o copo de boca para baixo.
+A primeira é do hóspede. A segunda é do gosto. A terceira é da palavra dada, e
+essa você não recusa se puder evitar.
 
-Ninguém precisa dizer que já chega.
+Depois, se não quiser mais, você chacoalha a xícara de leve entre os dedos ao
+devolver. Ninguém precisa dizer nada.
 
 E é bonito que uma coisa tão pequena diga tanto.
 
@@ -658,11 +661,10 @@ antes**...
 
 Se ele saiu de um poço ruim, com pouca água, ele não aguenta nada.
 
-Eu levantava cada odre de manhã. Um por um, pelo bico, sentindo o peso.
+O que eu procurava de manhã não era o peso — isso eu já contei. Era o suor.
 
-Você aprende a sentir a diferença de meio litro só na mão. E aprende a
-reconhecer o odre que está suando mais do que devia, porque aquele tem um furo
-que ainda não virou furo.
+Odre que sua mais que os outros tem um furo que ainda não virou furo. Você
+passa a mão e a mão volta úmida demais, e é só isso o aviso que você tem.
 
 Um odre que vaza devagar é pior que um odre que rasga.
 
@@ -735,12 +737,13 @@ ruim que a gente aproveitava, porque desperdiçar não estava no vocabulário.
 
 Eu comi carne três vezes em dois meses.
 
-E das três vezes, duas eu conhecia o camelo pelo nome que eu mesmo tinha dado.
-
-Isso não é uma tristeza que eu queira te passar antes de dormir. Digo só para
-você entender o tamanho da coisa.
-
+E isso não é história triste, é só a conta de um lugar onde nada se joga fora.
 Ninguém ali estava passeando.
+
+O caldo era bom. Fazia-se num caldeirão grande, com o que tivesse, e todo mundo
+comia do mesmo caldeirão, sentado em roda.
+
+Foram três noites em que se comeu bem. Eu me lembro delas com gosto.
 
 ## Cena 24 — O que os camelos comem
 
@@ -765,18 +768,14 @@ Nunca vi um comer até se fartar. Eles comem um pouco de muitos lugares.
 Eu acho que é por isso que aguentam onde nada aguenta. Não é que eles precisem
 de pouco. É que eles aceitam qualquer coisa.
 
-E de noite eles ruminam.
+E come pouco de cada arbusto, nunca até acabar com nenhum.
 
-Aquilo é o som mais constante de um acampamento no deserto. Não é o vento, não
-é o fogo — é quarenta bocas mastigando devagar, cada uma no seu tempo, sem
-combinar entre si.
+Eu acho que é por isso que eles duram onde nada dura. Não é que precisem de
+pouco. É que não insistem em lugar nenhum.
 
-Se você deitar no meio daquilo, você dorme.
+Tem gente assim também. Eu conheci duas ou três.
 
-Eu dormi mil noites naquele som, e ainda hoje, quando eu não consigo pegar no
-sono, eu tento lembrar dele.
-
-Às vezes funciona.
+Nenhuma delas passou fome.
 
 ## Cena 25 — O harra
 
@@ -806,10 +805,11 @@ Então a gente ia devagar. Muito devagar.
 Uma légua ali custava três léguas de areia. E não dava para ir de noite, o que
 era o pior de tudo, porque no escuro você não vê onde põe o pé.
 
-Então a gente atravessou o harra de dia.
+E não dava para atravessar aquilo no escuro. Então a regra do meio-dia teve
+que ser esticada: a gente andava até mais tarde de manhã e voltava mais cedo à
+tarde, com a pedra preta ainda devolvendo o calor de baixo.
 
-De dia, no verão, em cima de pedra preta que devolve o calor de baixo enquanto
-o sol bate de cima.
+O repouso do meio-dia continuou. Só ficou mais curto, e ninguém gostou.
 
 Eu não vou dizer que foi a pior parte da travessia, porque a pior ainda estava
 por vir.
@@ -851,40 +851,34 @@ não desce — fica.
 
 Eu preferi a areia. Sempre preferi.
 
-## Cena 27 — O assobio nas fendas
+## Cena 27 — A areia volta
 
-Eu quero ficar mais um pouco naquele som, porque foi ele que me fez entender
-uma coisa.
+O harra durou uns dias e acabou de um jeito estranho.
 
-O vento no deserto não uiva. Já falei disso e vou repetir, porque é o que todo
-mundo erra: uivo precisa de galho. Precisa de folha, de fio, de coisa fina que
-corte o ar em pedaços.
+Não foi de uma vez. Primeiro apareceu areia entre as pedras, enchendo os vãos.
+Depois apareceu areia em cima das pedras, cobrindo as menores.
 
-O deserto de areia não tem nada disso. Então o vento passa liso, e o que se
-ouve é só um sopro comprido, grosso, sem forma.
+E aí, numa tarde, eu percebi que fazia um tempo que eu não ouvia estalo nenhum.
+O passo tinha voltado a ser macio e eu nem tinha reparado quando.
 
-Mas o harra tem forma.
+Olhei para trás e a pedra preta estava lá atrás, virando uma linha escura...
 
-O basalto quebra em quina. Tem greta, tem buraco, tem canal estreito entre
-duas pedras grandes. E o vento entrando ali vira som de verdade...
+E na frente era duna outra vez.
 
-Um assobio grave. Não é agudo, não é apito. É mais parecido com alguém soprando
-na boca de uma garrafa muito grande.
+Vermelha, alta, com aquelas cristas que o vento desenha.
 
-E como as fendas são muitas, e cada uma tem um tamanho, o som não é um só.
+Eu não sei explicar direito o alívio que aquilo deu. Areia é cansativa, afunda o
+pé, custa o dobro de esforço. Racionalmente era pior.
 
-São vários, uns por cima dos outros, entrando e saindo, sem ritmo nenhum.
+E mesmo assim todo mundo respirou.
 
-Nunca se repete igual. Isso é o que faz aquilo ser bonito e insuportável ao
-mesmo tempo.
+Acho que era o barulho. Depois de dias de estalo e de eco, voltar para o
+silêncio macio foi como entrar em casa.
 
-O ouvido procura o padrão. E o ouvido não acha.
+O guia não comemorou. Ele olhou as cristas por um tempo, conferindo para que
+lado apontavam.
 
-Depois de três dias ali eu comecei a ouvir aquilo mesmo quando parava o vento.
-
-Já aconteceu com você? De ouvir uma coisa que já parou?
-
-Passa. Leva uns dias, mas passa.
+E depois virou o caminho uns poucos graus, e ninguém perguntou por quê.
 
 ## Cena 28 — Ninguém fala
 
@@ -936,14 +930,14 @@ poder parar e olhar sem a coluna inteira parar atrás dele...
 
 Ele olhava o chão o tempo todo.
 
-Eu demorei a entender o que ele estava lendo. Depois ele me mostrou uma vez, de
-má vontade, e era isso: a areia tem onda, e a onda tem um lado íngreme e um
-lado suave.
+Eu demorei a entender o que ele estava lendo, e quando entendi era a onda da
+areia, que eu já te contei.
 
-O lado íngreme aponta para onde o vento vai. E o vento naquela época do ano
-vem sempre mais ou menos do mesmo lugar.
+O que me espantou não foi o truque. Foi a frequência.
 
-Então a areia inteira é uma bússola. Deitada no chão, o tempo todo, de graça.
+Ele olhava aquilo o tempo todo. Não de vez em quando — o tempo todo, o dia
+inteiro, como quem confere o relógio a cada dois minutos sem perceber que está
+conferindo.
 
 Ele conferia com as estrelas de noite e com a areia de dia.
 
@@ -1149,10 +1143,10 @@ Lembro do gosto de metal na boca. Isso vem com a sede, e vem antes do resto.
 Lembro de olhar para a nuca do homem da frente por horas, e de conhecer aquela
 nuca melhor do que conheço a minha própria mão.
 
-E lembro de uma hora ter pensado que talvez a gente já tivesse morrido e não
-tivesse percebido.
+E lembro de uma hora ter perdido a conta de que dia era, e de não ter achado
+aquilo grave.
 
-Não foi desespero. Foi uma ideia calma, quase engraçada, que passou e foi
+Não foi desespero. Foi uma indiferença calma, quase engraçada, que passou e foi
 embora.
 
 O corpo faz umas coisas estranhas quando falta água.
@@ -1161,20 +1155,18 @@ A cabeça faz mais.
 
 ## Cena 36 — A boca seca
 
-Quando falta água de verdade, a primeira coisa que vai é a saliva.
+Eu já te contei o que a sede faz com a boca e com o suor.
 
-Você percebe que não consegue mais cuspir. Depois percebe que não consegue mais
-engolir direito — engole e não desce nada.
+O que eu não contei é como se descobre isso no outro, que é a parte que
+importava ali.
 
-A língua incha. Ou parece que incha. Ela fica grossa e áspera e ocupa espaço
-demais na boca.
+Ninguém fala. Ninguém levanta a mão e diz que está mal — em parte por orgulho,
+em parte porque falar custa.
 
-E o pior: você para de suar.
+Então você aprende a ler.
 
-Isso engana muita gente, e engana justo quem não conhece. A pessoa pensa: parei
-de suar, então esfriou, então estou melhor...
-
-É o contrário. Parou porque não tem mais o que sair.
+O homem que para de mexer a cabeça. O que deixa de acompanhar com o olho quando
+alguém passa. O que começa a montar torto, meio caído para um lado.
 
 O guia sabia disso e olhava para a gente. Ele passava os olhos na coluna de vez
 em quando, e o que ele estava vendo não era a cara — era se a camisa estava
@@ -1218,14 +1210,14 @@ esperar, e a gente não podia.
 Descarregaram ele. Distribuíram a carga entre os outros, que já estavam
 carregados.
 
-E deixaram ele ali, deitado, com a cabeça erguida, olhando a gente ir embora.
+Deixaram um odre pequeno perto dele, e a gente foi.
 
-Ninguém falou nada. Ninguém olhou para trás, tirando eu, que olhei duas vezes.
+Aquela era uma linha de caravana. Passa gente ali, não todo dia, mas passa. E
+camelo descansado levanta sozinho depois de um tempo, se a noite ajudar.
 
-Na segunda vez ele ainda estava com a cabeça levantada.
+Foi o que o guia disse, e eu escolhi acreditar. Escolho até hoje.
 
-Eu tinha dado um nome para ele. Não vou dizer qual, porque dizer em voz alta
-depois de tanto tempo me faz uma coisa esquisita no peito.
+Eu tinha dado um nome para ele. Não vou dizer qual.
 
 E olha que já se passaram cinquenta anos.
 
@@ -1292,7 +1284,8 @@ lugar nenhum.
 
 ## Cena 40 — A tempestade de areia
 
-No terceiro dia o horizonte ficou marrom.
+No terceiro dia, no meio da tarde, com a coluna já andando, o horizonte ficou
+marrom.
 
 Não escuro como nuvem de chuva. Marrom, e de baixo para cima, o que é o
 contrário do que o céu costuma fazer.
@@ -1321,7 +1314,7 @@ E depois bate.
 E não é grão batendo. É uma coisa sólida, empurrando, e você sente o peso na
 lateral do corpo.
 
-Escureceu. Ao meio-dia.
+Escureceu antes da hora, e mais do que a noite escurece.
 
 Eu não via a minha própria mão a um palmo do rosto.
 
@@ -1349,8 +1342,8 @@ juntos, e a duna toda vira um instrumento.
 
 Não sei se é verdade. Nunca conferi.
 
-Fiquei ali deitado, com a boca coberta, no escuro do meio-dia, com o corpo do
-camelo tremendo do meu lado, ouvindo o chão zumbir.
+Fiquei ali deitado, com a boca coberta, naquele escuro que não era de noite,
+com o corpo do camelo tremendo do meu lado, ouvindo o chão zumbir.
 
 Durou uns quarenta minutos.
 
@@ -1375,8 +1368,8 @@ como se alguém tivesse me enterrado devagar...
 Levantei sacudindo. A areia sai do pano, mas não sai do cabelo, e não sai
 mesmo de dentro da orelha.
 
-Tinha areia dentro do relógio de um homem. Tinha areia dentro dos odres
-fechados, e até hoje eu não sei explicar como.
+Tinha areia dentro dos odres fechados, e até hoje eu não sei explicar como.
+Tinha areia dentro da bainha de uma faca, entre o couro e a lâmina.
 
 Os camelos levantaram e sacudiram também. Todos ao mesmo tempo, e formou uma
 nuvem baixa em volta da gente.
@@ -1421,13 +1414,14 @@ Depois eu virei e fui ajudar a procurar.
 
 ## Cena 44 — Um homem ficou para trás
 
-O nome dele eu vou trocar. Vou chamar de Gasim, que é um nome comum e serve.
+O nome dele eu não vou dizer. Ele teve família depois, e eu não sei se eles
+iam gostar.
 
-Ele não era dos Ageyl. Era de outro grupo, entrou depois, e por isso demorou
-para alguém sentir falta — ninguém sabia direito de quem ele era responsabilidade.
+Ele tinha entrado no grupo já no caminho. E numa coluna que junta homens de
+cinco lugares diferentes, quem entrou depois demora um pouco mais a ser
+notado — não por desprezo, por não ter ainda quem responda por ele.
 
-Isso é uma coisa feia de admitir. Mas é assim que funciona quando quarenta
-homens de cinco lugares diferentes andam juntos.
+Isso é uma coisa feia de admitir. Mas é assim que funciona.
 
 Refizemos a conta. Perguntamos de camelo em camelo...
 
@@ -1444,13 +1438,13 @@ E aí veio a parte que eu não gosto de contar.
 
 Discutiu-se se dava para voltar.
 
-Alguém disse que não dava. E tinha razão — a gente estava no meio do pior
-trecho, com água contada, e voltar significava gastar meio dia e água de todo
-mundo por um homem.
+Alguém disse que era arriscado, e não estava errado — a gente estava no meio do
+pior trecho, com água contada.
 
-Ninguém disse que ele merecia morrer. Não foi isso.
+Ninguém disse que devia deixar. Ninguém disse que devia ir.
 
-Foi uma conta. E a conta dava não.
+Ficou todo mundo parado, olhando para o chão, do jeito que gente fica quando
+sabe que a conta não fecha e não quer ser quem diz isso em voz alta.
 
 ## Cena 45 — Os poços de Auda
 
@@ -1541,8 +1535,8 @@ curta que eu não ouvi e que fez os outros rirem.
 
 E acabou.
 
-Anos depois eu li que essa história virou uma coisa grande, contada de um jeito
-que eu não reconheço.
+Anos depois me contaram que essa história virou uma coisa grande, contada de um
+jeito que eu não reconheço.
 
 O que eu vi foi um homem cansado descendo de um camelo e indo verificar a
 cilha.
@@ -1660,9 +1654,9 @@ Eu passei a gostar do som daquilo.
 O pano batendo com a rajada — um estalo surdo, grosso. E a corda rangendo
 quando estica, um rangido baixo, que dura um segundo e para.
 
-Não é o som do nylon, que é seco e agudo e irritante.
+Não é estalo de pano fino. Pano fino faz um barulho agudo e apressado.
 
-É um som pesado. Um som de coisa que fica.
+Aquele é um som pesado. Um som de coisa que fica.
 
 ## Cena 52 — As mulheres do acampamento
 
@@ -1694,11 +1688,13 @@ mulher dele tinha dito baixinho meia hora antes.
 
 Eu era moço e achei engraçado.
 
-Hoje eu acho que era só um sistema funcionando.
+Hoje eu não acho graça. Acho que ela fazia o trabalho e ele ficava com a frase,
+e que isso é um mau negócio para quem faz o trabalho.
 
-Não pense que era vida boa. Não era. Era trabalho de sol a sol.
+Era vida dura. Levantar antes, deitar depois, e o dia inteiro no meio.
 
-Mas era um lugar onde todo mundo sabia o que fazer.
+Eu não vou dizer que era bonito. Vou dizer só que sem elas não tinha
+acampamento, e que quase ninguém escreveu isso em lugar nenhum.
 
 ## Cena 53 — Gente chegando
 
@@ -1801,16 +1797,16 @@ de pedra, e umas ruínas em volta que ninguém sabe direito de quando são.
 
 A gente chegou lá e alguns dos poços estavam estragados.
 
-Não secos. Estragados de propósito, que é diferente, e que a gente entendeu na
-hora sem precisar de explicação...
+Não secos. Entulhados, que é diferente, e que a gente entendeu na hora sem
+precisar de explicação...
 
-Isso é uma coisa que se faz em guerra e é a coisa mais cruel que se pode fazer
-naquela terra.
+Isso se faz em guerra. Todo lado faz, quando acha que precisa, e depois todo
+lado passa sede no ano seguinte.
 
-Um poço leva gerações para ser cavado. Estragar leva uma tarde.
+Um poço leva gerações para ser cavado. Entupir leva uma tarde.
 
-E quem estraga não mata só o inimigo. Mata quem passar ali nos próximos dez
-anos, sem escolher.
+E o poço não sabe de quem é. Quem paga é quem passar por ali nos próximos dez
+anos, sem ninguém ter escolhido.
 
 Ficamos vários dias em Bair.
 
@@ -2213,7 +2209,8 @@ ninguém chamar.
 Foi o pano da tenda batendo devagar no meio do dia, e eu ali embaixo, no meio
 metro de sombra, cochilando.
 
-Foi quarenta bocas mastigando devagar no escuro.
+Foi o som das bocas mastigando devagar no escuro — quarenta no começo,
+trezentas no fim, e no escuro dá tudo no mesmo.
 
 E foi a linha clara no horizonte, às quatro da manhã, dizendo que mais uma
 noite passou.

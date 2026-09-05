@@ -89,7 +89,7 @@
       "papel": "narrado",
       "titulo": "Os camelos",
       "personagem": "cameleiro",
-      "prompt": "rows of couched camels on sand near the shore at evening, men moving between them",
+      "prompt": "rows of couched camels on sand near the shore at evening, men moving between them, at evening, warm low sun",
       "ambiente": {
         "mar": 0.25,
         "vento": 0.3,
@@ -115,7 +115,7 @@
       "papel": "narrado",
       "titulo": "Quarenta homens",
       "personagem": "",
-      "prompt": "a small column of riders silhouetted against a wide evening sky, leaving a coastal town behind",
+      "prompt": "a small column of riders silhouetted against a wide evening sky, leaving a coastal town behind, at dusk under a wide orange sky",
       "ambiente": {
         "vento": 0.32,
         "areia": 0.22,
@@ -290,7 +290,7 @@
       "papel": "narrado",
       "titulo": "O calor",
       "personagem": "",
-      "prompt": "empty dunes under white midday sky, heat shimmer, no figures",
+      "prompt": "empty dunes under white midday sky, heat shimmer, no figures, under harsh white midday light",
       "ambiente": {
         "vento": 0.25,
         "areia": 0.2,
@@ -302,7 +302,7 @@
       "papel": "narrado",
       "titulo": "A água",
       "personagem": "cameleiro",
-      "prompt": "an old man lifting a leather water skin, measuring, careful, in shade",
+      "prompt": "an old man lifting a leather water skin, measuring, careful, in deep shade at midday",
       "ambiente": {
         "vento": 0.3,
         "areia": 0.22,
@@ -363,7 +363,7 @@
       "papel": "narrado",
       "titulo": "Pedra preta",
       "personagem": "",
-      "prompt": "close view of jagged black volcanic stones, a camel foot placed carefully",
+      "prompt": "close view of jagged black volcanic stones, a camel foot placed carefully, at dusk, long shadows on black rock",
       "ambiente": {
         "vento": 0.48,
         "areia": 0.08,
@@ -373,13 +373,13 @@
     {
       "n": 27,
       "papel": "narrado",
-      "titulo": "O assobio nas fendas",
+      "titulo": "A areia volta",
       "personagem": "",
-      "prompt": "wind-carved basalt cliffs at night under stars, deep shadow",
+      "prompt": "pixel art wide view at dusk where a field of black basalt gives way to red sand dunes, the transition visible across the frame",
       "ambiente": {
-        "vento": 0.55,
-        "areia": 0.1,
-        "dunas": 0.05
+        "vento": 0.42,
+        "areia": 0.3,
+        "dunas": 0.14
       }
     },
     {
@@ -473,7 +473,7 @@
       "papel": "narrado",
       "titulo": "Três dias",
       "personagem": "",
-      "prompt": "an endless plain of red sand with no landmark at all, midday",
+      "prompt": "an endless plain of red sand with no landmark at all, under a flat white midday sky",
       "ambiente": {
         "vento": 0.45,
         "areia": 0.32,
@@ -509,7 +509,7 @@
       "papel": "narrado",
       "titulo": "O camelo sabe",
       "personagem": "",
-      "prompt": "a camel walking steadily, close on its face, calm eye, dust in the air",
+      "prompt": "a camel walking steadily, close on its face, calm eye, dust in the air, in low golden late-afternoon light",
       "ambiente": {
         "vento": 0.4,
         "areia": 0.28,
@@ -533,7 +533,7 @@
       "papel": "narrado",
       "titulo": "A tempestade de areia",
       "personagem": "",
-      "prompt": "a wall of blowing sand approaching over dunes, figures crouching, dim",
+      "prompt": "a wall of blowing sand approaching over dunes, figures crouching, dim, in dim brown light before a sandstorm",
       "ambiente": {
         "vento": 0.7,
         "areia": 0.6,
@@ -557,7 +557,7 @@
       "papel": "narrado",
       "titulo": "Esperar passar",
       "personagem": "cameleiro",
-      "prompt": "men and camels lying pressed together under cloth while sand blows over them",
+      "prompt": "men and camels lying pressed together under cloth while sand blows over them, in dim dust-filtered light",
       "ambiente": {
         "vento": 0.6,
         "areia": 0.5,
@@ -582,7 +582,7 @@
       "papel": "narrado",
       "titulo": "Um homem ficou para trás",
       "personagem": "",
-      "prompt": "a set of footprints in sand leading back the way the column came, empty",
+      "prompt": "a set of footprints in sand leading back the way the column came, empty, in flat pale afternoon light",
       "ambiente": {
         "vento": 0.4,
         "areia": 0.3,
@@ -606,7 +606,7 @@
       "papel": "narrado",
       "titulo": "Voltar",
       "personagem": "",
-      "prompt": "a single rider heading back alone toward the horizon, seen from far away",
+      "prompt": "a single rider heading back alone toward the horizon, seen from far away, in hazy light at late afternoon",
       "ambiente": {
         "vento": 0.42,
         "areia": 0.3,
@@ -630,7 +630,7 @@
       "papel": "narrado",
       "titulo": "O primeiro verde",
       "personagem": "",
-      "prompt": "a few low dry shrubs in a shallow desert depression at evening, first vegetation",
+      "prompt": "a few low dry shrubs in a shallow desert depression at evening, first vegetation, at evening, warm side light",
       "ambiente": {
         "vento": 0.28,
         "areia": 0.16,
@@ -642,7 +642,7 @@
       "papel": "narrado",
       "titulo": "Wadi Sirhan",
       "personagem": "",
-      "prompt": "a long shallow depression in the desert with sparse dry vegetation, evening",
+      "prompt": "a long shallow depression in the desert with sparse dry vegetation, evening, at dusk, low warm light",
       "ambiente": {
         "vento": 0.32,
         "areia": 0.2,
@@ -707,7 +707,7 @@
       "papel": "narrado",
       "titulo": "As crianças e os cabritos",
       "personagem": "",
-      "prompt": "young goats among tent ropes at golden hour in a desert camp, low view",
+      "prompt": "young goats among tent ropes in a desert camp, low view, at golden hour",
       "ambiente": {
         "vento": 0.26,
         "areia": 0.14,
@@ -772,7 +772,7 @@
       "papel": "narrado",
       "titulo": "A espera",
       "personagem": "cameleiro",
-      "prompt": "men sitting doing nothing in the shade of a tent, midday, waiting",
+      "prompt": "men sitting doing nothing in the shade of a tent, midday, waiting, at midday, harsh light outside the shade",
       "ambiente": {
         "vento": 0.35,
         "areia": 0.22,
@@ -848,7 +848,7 @@
       "papel": "narrado",
       "titulo": "O ar muda",
       "personagem": "",
-      "prompt": "riders emerging from between cliffs, distant hint of blue at the horizon",
+      "prompt": "riders emerging from between cliffs, distant hint of blue at the horizon, at night, one dying fire",
       "ambiente": {
         "vento": 0.38,
         "areia": 0.12,

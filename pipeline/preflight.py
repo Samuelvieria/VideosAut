@@ -291,9 +291,14 @@ def conferir(proj: Path) -> Resultado:
 
     # \b em "light": sem ele, "flight", "slight" e "delight" davam match e
     # aprovavam a cena por engano.
+    # `midday`, `noon`, `evening` e `golden hour` entraram em 05/09: eram hora do
+    # dia legítima e o aviso disparava em cena que já dizia a luz. Falso positivo
+    # gasta a atenção de quem lê o relatório, e aviso que se aprende a ignorar
+    # deixa de ser aviso.
     LUZ = re.compile(r"\b(night|dark\w*|lantern|lamp\w*|firelight|flame|glow\w*|"
                      r"torch|starlight|dawn|morning|daylight|dusk|light|moon\w*|"
-                     r"lit|sun\w*|shadow\w*)\b", re.I)
+                     r"lit|sun\w*|shadow\w*|midday|noon|evening|overcast|"
+                     r"golden\s+hour)\b", re.I)
     sem_luz = [c["n"] for c in narradas if c.get("prompt") and not LUZ.search(c["prompt"])]
 
     # Os cues UNIVERSais valem no prompt da cena também — foi o buraco que a
