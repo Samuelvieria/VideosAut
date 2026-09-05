@@ -265,17 +265,37 @@ def trilha_ambiente(proj: Path, plano: dict, duracoes: dict, forcar: bool) -> Pa
 #     ducking forte + rápido "bombeia" (fica óbvio o ambiente subindo/caindo);
 #     pra sono o alvo é reduzir só 4-6dB, de forma lenta o bastante pra não
 #     ser percebido como evento.
+# PROMOVIDO DO VIDEO-02 EM 04/09/2026. Os valores abaixo NÃO são mais os que
+# eu calculei por medição — são os que o Samuel aprovou de OUVIDO no vídeo 02,
+# que estavam presos no `plano.json` daquele vídeo enquanto este default
+# continuava com números que ninguém nunca escutou. O video-03 foi escrito sem
+# overrides ("usa o padrão") e herdou o eco de ambiente que já tinha sido
+# rejeitado uma vez — o mesmo defeito, de novo, porque o conhecimento morava no
+# lugar errado.
+#
+# Regra que sai disso: valor aprovado de ouvido sobe para cá. `plano.json` só
+# guarda o que é específico daquele vídeo, não a calibração do canal.
+#
+# O que mudou em relação ao que eu havia medido, e por quê a medição perdeu:
+#   ambiente_ganho    1.0  -> 0.3   (medi 13,6dB de gap; de ouvido ficou alto)
+#   ambiente_reverb   0.7  -> 0.0   (eco de ambiente foi rejeitado duas vezes)
+#   ambiente_lowpass  5500 -> 3500  (mais abafado = mais "no fundo")
+#   voz_ganho         1.0  -> 0.6
+#   voz_reverb        0.5  -> 0.45
+#   voz_deesser       0.4  -> 0.25
+#   duck_attack_ms    200  -> 170
+#   duck_release_ms   2000 -> 1600
 MIXAGEM_PADRAO = {
-    "voz_ganho": 1.0,
-    "voz_reverb": 0.5,
-    "voz_deesser": 0.4,
-    "ambiente_ganho": 1.0,
-    "ambiente_reverb": 0.7,
-    "ambiente_lowpass_hz": 5500,
+    "voz_ganho": 0.6,
+    "voz_reverb": 0.45,
+    "voz_deesser": 0.25,
+    "ambiente_ganho": 0.3,
+    "ambiente_reverb": 0.0,     # abaixo de 0.05 o aecho sai da cadeia inteira
+    "ambiente_lowpass_hz": 3500,
     "duck_threshold": 0.05,
     "duck_ratio": 2,
-    "duck_attack_ms": 200,
-    "duck_release_ms": 2000,
+    "duck_attack_ms": 170,
+    "duck_release_ms": 1600,
     # A cauda (ambiente sem voz) precisa SUBIR quando a narração acaba. Durante
     # a narração o loudnorm normaliza voz+ambiente somados, e a voz domina a
     # soma; quando ela sai, sobra o ambiente no nível em que sempre esteve.
