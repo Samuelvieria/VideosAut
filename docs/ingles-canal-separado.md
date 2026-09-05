@@ -87,9 +87,11 @@ timbre** — o narrador não muda de identidade ao trocar de idioma.
 das **duas** audiências para **um** patamar de YPP.
 
 **O custo real, e ele existe:** a faixa de áudio precisa bater a duração do
-vídeo **com tolerância de 1 segundo**. Isso obriga o texto em inglês a ser
-**adaptação presa ao tempo das cenas**, não roteiro reescrito livremente — o que
-contraria a decisão registrada em [mercado.md](mercado.md) §6.
+vídeo. A página oficial diz *"roughly the same length"*; as fontes secundárias
+dizem **1 segundo**. Até medirmos, assumir 1 segundo, que é o lado seguro. Isso
+obriga o texto em inglês a ser **adaptação presa ao tempo das cenas**, não
+roteiro reescrito livremente — o que contraria a decisão registrada em
+[mercado.md](mercado.md) §6.
 
 Essa decisão, porém, foi tomada por um motivo específico: prosa em inglês gerada
 por IA tem tiques próprios (*delve*, *tapestry*, *testament to*). Isso é
@@ -99,6 +101,37 @@ vídeo de sono, ler é contraproducente.
 
 **Requisito:** Recursos Avançados ativados (a mesma etapa que destrava o teste
 A/B de miniatura).
+
+### "Ter duas línguas não limita o envio para o inglês?"
+
+Pergunta do Samuel em 05/09. **Não limita — adiciona**, e a página oficial é
+explícita:
+
+> *"Once your videos are translated, your videos can be found when viewers
+> search using a translated video title and description."*
+> — [support.google.com/youtube/answer/13338784](https://support.google.com/youtube/answer/13338784)
+
+Adicionar a faixa torna o vídeo **elegível para recomendação e busca no idioma
+da faixa**. Não é o mesmo vídeo dividindo uma audiência: são duas
+elegibilidades somadas. O YouTube reporta que criadores com faixa múltipla
+veem **mais de 25% do watch time vindo do idioma não primário**.
+
+**Mas há uma condição que quase se perde, e sem ela nada disso acontece:**
+
+> **Só a faixa de áudio NÃO destrava a busca em inglês.** É preciso localizar
+> **título e descrição** também. Sem isso o vídeo tem áudio em inglês e
+> continua invisível para quem busca em inglês.
+
+Duas ressalvas honestas:
+
+- Os **25%** vêm do próprio YouTube, sobre criadores que investiram em dublagem
+  — ou seja, gente que já tinha alcance. É viés de seleção. A direção é
+  confiável, a magnitude não.
+- O sinal de "para quem é este canal" se forma pelo **comportamento da
+  audiência** ao longo do tempo. Isso joga a favor de fazer **agora**: com 3
+  inscritos não há sinal estabelecido para contrariar. Um canal com dois anos de
+  audiência só em pt-BR teria muito mais atrito para virar bilíngue do que nós
+  temos hoje.
 
 ---
 
