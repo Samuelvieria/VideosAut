@@ -163,3 +163,109 @@ noturna na miniatura.
       213 caracteres e dois de duração zero.
 - [ ] Capítulos: decisão em aberto (ver `video-02/metadados-revisados.md`); se
       testar, precisa de três ou mais marcações começando em `00:00`
+
+---
+
+# REVISÃO de 05/09/2026 — depois da pesquisa de descrição
+
+O vídeo já está publicado como `KdVNQjzWzNQ`. O que está no ar é bom no
+essencial — abre dizendo o que é, tem o bloco de transparência, não pede nada.
+Faltam três coisas, e as três atacam o gargalo medido, que é **inscrito** (3) e
+não hora de exibição. Base: [docs/descricoes.md](../../docs/descricoes.md).
+
+## Título — com a duração
+
+O que está no ar não diz quanto dura. O espectador escolhe pelo tempo que
+precisa cobrir, e às 23h ele não vai medir a barra. É informação **funcional**,
+não SEO.
+
+| | chars | |
+|---|---|---|
+| no ar | 54 | `Som de Mar e fogueira pra Dormir \| A luz da Baía Quieta` |
+| **recomendado** | **56** | `Som de Mar e Fogueira para Dormir · 1 Hora · A Luz da Baía Quieta` |
+| alternativa exata | 51 | `Som de Mar e Fogueira para Dormir · 1h12 · A Luz da Baía Quieta` |
+
+"1 Hora" **subpromete** 12 minutos, o que é o lado seguro de errar: quem vem
+por uma hora ganha mais. O contrário — prometer 1h30 — seria abandono.
+
+Trocar título de vídeo publicado é permitido, e com os Recursos Avançados
+ligados dá para rodar o **teste A/B nativo** entre os dois em vez de escolher no
+escuro. As três miniaturas já existem em `thumbnails/`.
+
+## Descrição revisada
+
+```
+História original para dormir, com som de mar e fogueira ao fundo.
+1 hora e 12 minutos, sem música e sem interrupção.
+Para adultos — insônia, ansiedade da madrugada, quem simplesmente não desliga.
+
+Um velho faroleiro grego conta a noite em que uma luz apareceu no mar aberto e
+respondeu ao sinal dele. A ilha é pequena. A torre é de pedra, e o fogo queima
+óleo numa bacia de bronze que precisa de mecha aparada de hora em hora. Ele
+fala devagar, sem pressa, como quem já contou isso para si mesmo antes de
+contar para alguém.
+
+Não tem batalha. Não tem deus descendo do céu. Não tem monstro no fundo do
+mar. Tem um homem, um fogo e uma baía quieta.
+
+A narração ocupa a primeira hora. Depois dela o mar continua sozinho por mais
+nove minutos, para você não acordar no silêncio quando a história terminar.
+
+Feito para ouvir deitado, no escuro, com o volume baixo. Se você dormir no
+meio, a história continua sem você — é exatamente para isso que ela existe.
+
+──────────────
+
+▶ Todas as histórias, em sequência: COLAR-LINK-DA-PLAYLIST
+
+📄 Sobre como este vídeo é feito
+
+A história é original, escrita por nós — não é adaptação de nenhum texto
+existente. A ambientação na Grécia Antiga foi pesquisada: a navegação de
+cabotagem, o mar fechado no inverno, a torre de pedra com bacia de bronze e
+placa refletora. Onde a pesquisa e a história discordaram, a história cedeu.
+
+A narração é gerada por síntese de voz, e as imagens são geradas uma a uma em
+pixel art. O som de mar, vento e fogo é sintetizado por nós, não é gravação de
+biblioteca. A divulgação de conteúdo sintético está ativada neste vídeo.
+
+Este é um vídeo de relaxamento, não uma fonte acadêmica.
+
+#somdemar #paradormir #insonia
+```
+
+### As decisões desta descrição
+
+**As três primeiras linhas dizem o quê, quanto dura e para quem.** É o que
+aparece no resultado de busca e acima do "mostrar mais" — decide o clique junto
+com miniatura e título.
+
+**"Para adultos" está na terceira linha, não escondido no fim.** É mitigação de
+Made for Kids, que desligaria anúncio personalizado, comentários e notificação
+de inscrito. Custa uma linha.
+
+**As hashtags evitam `#historiaparadormir` de propósito.** É o termo mais óbvio
+e é o pior dos dois mundos: em busca devolve Masha e o Urso
+([mercado.md](../../docs/mercado.md) §4), e em política aproxima o canal do
+classificador infantil. `#somdemar #paradormir #insonia` carregam intenção
+adulta. Três, porque três é o que o YouTube exibe.
+
+**Nenhum pedido de like, inscrição ou comentário.** Não é esquecimento — é o
+formato. Quem acorda com pedido não volta.
+
+**A última linha do primeiro bloco é a promessa central do produto**, e é a
+mesma frase que a cena 1 diz em voz: se você dormir no meio, tudo bem.
+
+## O que só você pode fazer
+
+O nosso OAuth é `youtube.readonly` — leio, não escrevo. Três itens, e o
+primeiro é o de maior retorno de todos:
+
+- [ ] **Criar a playlist** com os dois vídeos e colar o link no lugar do
+      `COLAR-LINK-DA-PLAYLIST`. Quem assiste dois, três, quatro vídeos acaba se
+      inscrevendo — e inscrito é o gargalo, não hora.
+- [ ] **Ligar a marca d'água de inscrição** (Personalização → Branding). É o
+      **único CTA compatível com este formato**: imagem no canto, não faz som,
+      não acorda ninguém. Nunca foi configurada.
+- [ ] **Desmarcar capítulos automáticos** nos dois vídeos (Detalhes → Mostrar
+      mais). O YouTube inventa a divisão e sai bagunçada.
