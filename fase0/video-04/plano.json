@@ -1,6 +1,6 @@
 {
   "titulo": "A Travessia",
-  "obra": "original: a marcha ate Aqaba, 1917, contada por um cameleiro da escolta",
+  "obra": "1917, peninsula arabica",
   "duracao_alvo_s": 7200,
   "narrado_s": null,
   "cauda_ambiente_s": 540,
@@ -36,7 +36,7 @@
   "direitos": {
     "_nota": "Imagens geradas; áudio procedural. Divulgação de conteúdo sintético ATIVADA no Studio."
   },
-  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, Arabian desert of the Hejaz, sand dunes and black basalt, 1917, 16:9, palette of deep indigo night, near-black, warm amber, pale sand ochre, key light warm amber from a low fire or lantern, cool indigo fill from the night sky, long shadows on sand",
+  "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, 16:9, palette of deep indigo night, near-black, warm amber, pale sand ochre, warm amber key light, cool indigo fill, long soft shadows",
   "resolucao": [
     1280,
     720
@@ -914,5 +914,6 @@
         "vento": 0.25
       }
     }
-  ]
+  ],
+  "_nota_obra": "Era 'a marcha ate Aqaba, contada por um cameleiro da escolta' e isso ia para TODO prompt, produzindo caravana de camelos em toda imagem. O campo serve para ancorar época e lugar, não para descrever a narrativa."
 }

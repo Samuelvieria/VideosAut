@@ -57,6 +57,18 @@ _CUES_PROIBIDOS = [
      "inteiro e contradiz as cenas que se passam em outro momento (o video-03 "
      "tinha 'at night' e três cenas eram de dia ou amanhecer)"),
 
+    # Cenário. Estilo diz COMO desenhar; a cena diz O QUE tem. Achado em
+    # 05/09/2026 na primeira amostra do video-04: "sand dunes and black basalt"
+    # no estilo_base punha duna até na cena que era só basalto, e a persona
+    # tinha passado nesta validação. Mesma família dos 23 faróis modernos do
+    # video-03. Paleta e luz genérica continuam permitidas — cor é estilo.
+    (r"\b(dune\w*|sand|desert|sea|ocean|beach|shore|forest|jungle|mountain\w*|"
+     r"basalt|cliff\w*|tower|lighthouse|tent\w*|castle|village|street|road|"
+     r"ship\w*|boat\w*|camel\w*|horse\w*)\b",
+     "substantivo de CENÁRIO não pode viver no estilo_base: ele entra em TODAS "
+     "as cenas e contradiz as que se passam em outro lugar. Estilo diz COMO "
+     "desenhar; a cena diz O QUE tem"),
+
     # Negação. O "no" solto NÃO entra: em português é preposição comum
     # ("desenho no papel") e recusaria estilo legítimo. Só marca quando o alvo
     # da negação é uma das coisas que a gente de fato tenta negar.

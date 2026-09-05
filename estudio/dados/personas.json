@@ -169,7 +169,7 @@
       "criado_em": "2026-09-05T02:00:00-03:00",
       "origem_video": null,
       "estetica": {
-        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, Arabian desert of the Hejaz, sand dunes and black basalt, 1917, 16:9",
+        "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs, weapons in frame, battle, blood",
         "paleta": [
           "deep indigo night",
@@ -177,12 +177,12 @@
           "warm amber",
           "pale sand ochre"
         ],
-        "luz": "key light warm amber from a low fire or lantern, cool indigo fill from the night sky, long shadows on sand",
+        "luz": "warm amber key light, cool indigo fill, long soft shadows",
         "resolucao": [
           1280,
           720
         ],
-        "nota": "Paleta trocada em relação às marítimas: o azul vira índigo e o cinza-azulado vira ocre de areia — mesma linguagem de pixel art e mesma lógica de luz quente contra frio, outra terra. `weapons in frame, battle, blood` está nos negativos de propósito: o episódio é sobre as travessias, não sobre a guerra, e a política de conteúdo perturbador cita tema violento repetido sem narrativa coesa."
+        "nota": "CORRIGIDA em 05/09/2026, na primeira amostra de imagem. A versão anterior punha CONTEÚDO no campo de ESTILO: 'sand dunes and black basalt' no estilo_base dava duna até na cena que é só basalto, e 'from a low fire or lantern / shadows on sand' na luz punha lanterna e areia em toda cena, inclusive nas do mar. É a mesma armadilha que deu 23 faróis modernos no video-03. Estilo diz COMO desenhar; a cena diz O QUE tem. Paleta pode ficar: cor é estilo."
       }
     }
   ],
