@@ -141,7 +141,25 @@ normalização do YouTube é de ganho global e a razão sobrevive a ela.
 **Reusar label de filtro falha se houver vídeo no mesmo filtergraph.** Usar
 `asplit` explícito.
 
-→ Cadeia completa, valores medidos e o debate de LUFS: `references/mixagem-audio.md`
+**Ambiente é sintetizado, nunca gravado** (`pipeline/ambiente.py`). Não é escolha
+estética: som gerado é a única fonte que o Content ID não consegue casar. E o mar
+é feito de **eventos de onda**, não de ruído com modulação de amplitude — ruído
+modulado soa pulsando, não rebentando.
+
+**Ambiente é por CENA, não trilha única.** A troca acontece no mesmo instante do
+fade para preto, então soa intencional em vez de soar como corte.
+
+**`ambiente_reverb` fica em 0.** O eco no ambiente foi a causa da granulação na
+cauda — cinco hipóteses medidas falharam antes, e quem achou foi o ouvido. Se
+alguém subir esse valor, tem que ouvir a **cauda**, onde não há voz mascarando.
+
+**Correção achada num vídeo tem que subir para o padrão do código, não ficar só
+como override no `plano.json`.** Foi exatamente assim que a granulação voltou: a
+correção ficou no plano do video-02, o `MIXAGEM_PADRAO` continuou errado, e o
+video-03 herdou o defeito e só foi descoberto depois de renderizado.
+
+→ Cadeia completa, valores medidos, síntese do ambiente e o debate de LUFS:
+`references/mixagem-audio.md`
 
 ## Ritmo de narração — regras que sempre valem
 

@@ -247,6 +247,22 @@ def conferir(proj: Path) -> Resultado:
     if not tipo_errado and not sem_amb:
         r.ok("toda cena tem perfil de ambiente com pelo menos uma camada")
 
+    # Eco no ambiente. Foi a causa da granulação na cauda do video-02, achada de
+    # ouvido em 03/09/2026 depois de CINCO hipóteses medidas falharem. A correção
+    # entrou como override no plano daquele vídeo e não subiu para o padrão, então
+    # o video-03 herdou o defeito e só foi descoberto depois de renderizado. É
+    # aviso, não erro: pode haver caso em que se queira o eco — mas tem que ser
+    # escolha, e tem que ser ouvida na CAUDA, onde não há voz para mascarar.
+    from pipeline.s5_render import MIXAGEM_PADRAO
+    mix = {**MIXAGEM_PADRAO, **{k: v for k, v in (plano.get("mixagem") or {}).items()
+                                if not k.startswith("_")}}
+    if mix["ambiente_reverb"] >= 0.05:
+        r.aviso(f"ambiente_reverb={mix['ambiente_reverb']} liga o aecho do ambiente. "
+                f"Foi ele a granulação da cauda no video-02. Ouça os últimos "
+                f"minutos antes de aceitar")
+    else:
+        r.ok("ambiente sem eco (o que causou a granulação da cauda)")
+
     # \b em "light": sem ele, "flight", "slight" e "delight" davam match e
     # aprovavam a cena por engano.
     LUZ = re.compile(r"\b(night|dark\w*|lantern|lamp\w*|firelight|flame|glow\w*|"

@@ -99,10 +99,21 @@ ver a regra de cima pra config atual.**
 
 **Pra um som de fundo parecer "atrás" da voz, baixar o volume sozinho não
 basta — precisa de reverb (textura de espaço) e lowpass (perda de agudo por
-distância) junto.**
-- Por quê: sem isso o ambiente só fica "mais baixo em primeiro plano", não
-  "mais longe". Simulado com múltiplos taps de `aecho` (esse build de ffmpeg
-  não tem `afreeverb`) + `lowpass` na faixa de 5000-6000Hz.
+distância) junto. VALE PARA A VOZ; foi DERRUBADO para o ambiente.**
+- Por quê valia: sem isso o ambiente só fica "mais baixo em primeiro plano",
+  não "mais longe". Simulado com múltiplos taps de `aecho` (esse build de
+  ffmpeg não tem `afreeverb`) + `lowpass` na faixa de 5000-6000Hz.
+- **Por que caiu para o ambiente (03/09/2026):** era o `aecho` do ambiente a
+  causa da granulação na cauda. Confirmado de ouvido num A/B
+  (`teste/audio/B_rampa_sem_eco`) depois de CINCO hipóteses medidas falharem.
+  Passar `decay=0,001` não resolve — o filtro recusa 0 e o eco continua
+  audível; o jeito é não instanciar o `aecho`, que é o que
+  `usar_eco_amb = ambiente_reverb >= 0.05` faz.
+- Por que a cauda e não o vídeo todo: durante a narração a voz mascara o eco.
+  Nos 9 min finais não há voz, e o artefato fica exposto. **Qualquer teste de
+  ambiente tem que incluir a cauda** — julgar pelo meio do vídeo não vê nada.
+- `voz_reverb` continua ligado (0,5 no padrão): a regra original segue de pé
+  para a voz, que é onde a "sala" ajuda. O que caiu foi o eco no ambiente.
 
 **Camada de som GRAVADO por baixo da síntese procedural melhora realismo,
 mas nomear o elemento genericamente na escolha do arquivo pode reativar o
@@ -140,3 +151,64 @@ balanço voz/música (pureaudioinsight.com, mytasker.com); ducking
 (xiaomitoday.com); ambiências pra sono (slonoise.com, amix-design.com);
 `loudnorm`/`ebur128` (ffmpeg.org/ffmpeg-filters.html).
 
+
+
+## Síntese do ambiente (`pipeline/ambiente.py`)
+
+**Por que sintetizar e não gravar:** áudio no YouTube passa por Content ID, que
+casa por impressão digital independentemente da licença comprada. Som gerado não
+tem referência para casar — é a única fonte impossível de reivindicar.
+
+**O mar não é ruído com modulação de amplitude.** Isso soa como ruído pulsando,
+não como rebentação. Uma onda real é um evento discreto de três partes:
+
+    grave que cresce -> estouro de banda larga -> cauda sibilante decaindo
+
+Cada trem de ondas é uma envoltória ataque-decaimento com período próprio, e os
+períodos são **incomensuráveis** (8,3 / 11,7 / 17,1 s) de propósito: somados, as
+ondas nunca recaem em fase, então não existe loop audível e o ritmo fica
+irregular como surf de verdade. O mesmo desenho serve o fogo, com períodos muito
+mais curtos (1,7 / 2,9 / 4,3 s) e ataque bem mais seco — estalo, não onda.
+
+**Cada camada tem um fundo constante** (o mar não some entre as ondas: `0.16 *
+intensidade`). Ambiente que zera entre eventos vira sequência de sustos.
+
+**Os dois canais são destoados**, não copiados: o canal direito multiplica os
+períodos por 1,061 (mar), 1,037 (fogo) e usa seeds diferentes. A mesma onda não
+chega igual nos dois ouvidos, e a imagem estéreo anda em vez de colar no centro.
+
+**`chuva(abafada=True)`** troca a banda de 600–7000 Hz para 120–1400 Hz: é a
+chuva ouvida de dentro, através de parede ou janela. É o que a chave `abafado`
+do `ambiente` da cena liga.
+
+Camadas: `mar`, `chuva`, `fogo`, `vento`, mais `abafado` (booleano) e `_`
+(descrição em texto do lugar, só para leitura humana).
+
+## Os valores de mixagem que cada vídeo usou
+
+`MIXAGEM_PADRAO` em `s5_render.py` é o ponto de partida; o bloco `mixagem` do
+`plano.json` sobrepõe, e o mixer do estúdio edita esse bloco sem tocar em código.
+
+| | padrão | video-02 | |
+|---|---|---|---|
+| `voz_ganho` | 1.0 | 0.6 | |
+| `voz_reverb` | 0.5 | 0.45 | |
+| `voz_deesser` | 0.4 | 0.25 | |
+| `ambiente_ganho` | 1.0 | 0.3 | |
+| `ambiente_reverb` | **0.0** | 0.0 | corrigido de ouvido |
+| `ambiente_lowpass_hz` | 5500 | 3500 | |
+| `duck_threshold` | 0.05 | 0.05 | |
+| `duck_ratio` | 2 | 2.0 | |
+| `duck_attack_ms` | 200 | 170 | |
+| `duck_release_ms` | 2000 | 1600 | |
+
+A divergência de NÍVEL é intencional: os dois conjuntos entraram no mesmo commit
+da remasterização para −14 LUFS, e o video-02 ficou preso aos valores dele para
+não mudar de som depois de aprovado. **Não promova esses números para o padrão
+sem ouvir** — eles foram calibrados para `pm_santa` a `speed` 0.60.
+
+O `ambiente_reverb` é outra história, e é a lição desta seção: ele foi corrigido
+**só no plano do video-02** em 03/09/2026 e o padrão ficou em 0.7. O video-03
+herdou 0.7 e foi renderizado com a granulação de volta — descoberta só depois do
+render, quando o vídeo já estava pronto para publicar. Desde então o `preflight`
+avisa quando o eco do ambiente está ligado.

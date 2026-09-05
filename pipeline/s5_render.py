@@ -270,7 +270,13 @@ MIXAGEM_PADRAO = {
     "voz_reverb": 0.5,
     "voz_deesser": 0.4,
     "ambiente_ganho": 1.0,
-    "ambiente_reverb": 0.7,
+    # 0.0, não 0.7. O eco do ambiente foi a causa da granulação na cauda,
+    # confirmada de ouvido no A/B de 03/09/2026 (teste/audio/B_rampa_sem_eco) —
+    # e a correção ficou só como override no plano.json do video-02, nunca
+    # chegou aqui. O video-03 herdou 0.7 e foi renderizado com o defeito.
+    # Quem quiser espaço no ambiente sobe pelo mixer e OUVE a cauda inteira,
+    # que é onde ele aparece: sem voz por cima, nada mascara o eco.
+    "ambiente_reverb": 0.0,
     "ambiente_lowpass_hz": 5500,
     "duck_threshold": 0.05,
     "duck_ratio": 2,
