@@ -172,17 +172,18 @@
         "estilo_base": "pixel art, detailed 16-bit style, fine pixel grain, cinematic wide composition, 16:9",
         "prompt_negativo": "text, watermark, signature, UI, HUD, modern clothing, modern buildings, cars, plastic, neon, anime, chibi, cute, smooth gradients, blurry, photorealistic, 3d render, oversaturated, deformed hands, extra limbs, weapons in frame, battle, blood",
         "paleta": [
-          "deep indigo night",
+          "deep indigo",
           "near-black",
           "warm amber",
-          "pale sand ochre"
+          "pale sand ochre",
+          "burnt sienna"
         ],
-        "luz": "warm amber key light, cool indigo fill, long soft shadows",
+        "luz": "warm amber key light, cool fill, long soft shadows",
         "resolucao": [
           1280,
           720
         ],
-        "nota": "CORRIGIDA em 05/09/2026, na primeira amostra de imagem. A versão anterior punha CONTEÚDO no campo de ESTILO: 'sand dunes and black basalt' no estilo_base dava duna até na cena que é só basalto, e 'from a low fire or lantern / shadows on sand' na luz punha lanterna e areia em toda cena, inclusive nas do mar. É a mesma armadilha que deu 23 faróis modernos no video-03. Estilo diz COMO desenhar; a cena diz O QUE tem. Paleta pode ficar: cor é estilo."
+        "nota": "CORRIGIDA em 05/09/2026, na primeira amostra de imagem. A versão anterior punha CONTEÚDO no campo de ESTILO: 'sand dunes and black basalt' no estilo_base dava duna até na cena que é só basalto, e 'from a low fire or lantern / shadows on sand' na luz punha lanterna e areia em toda cena, inclusive nas do mar. É a mesma armadilha que deu 23 faróis modernos no video-03. Estilo diz COMO desenhar; a cena diz O QUE tem. Paleta pode ficar: cor é estilo. SEGUNDA correção em 05/09: a paleta dizia 'deep indigo NIGHT' e a luz dizia 'cool indigo fill'. Resultado: as 70 imagens saíram de noite, inclusive as 6 que pediam meio-dia e as 4 de amanhecer. Paleta é COR — 'night' não é cor, é hora."
       }
     }
   ],

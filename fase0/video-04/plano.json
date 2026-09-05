@@ -123,7 +123,32 @@
       }
     },
     {
+      "titulo": "As vestes",
+      "personagem": "lawrence",
+      "prompt": "a fair-skinned foreign man in white sharifian robes with a gold-corded head rope standing among bedouin men in a camp, daylight, warm side light",
+      "ambiente": {
+        "vento": 0.3,
+        "areia": 0.2,
+        "dunas": 0.09,
+        "pano": 0.25
+      },
       "n": 7,
+      "papel": "narrado"
+    },
+    {
+      "titulo": "Os pés dele",
+      "personagem": "lawrence",
+      "prompt": "close view of bare feet walking on hot red sand beside a camel's shadow, harsh midday light",
+      "ambiente": {
+        "vento": 0.35,
+        "areia": 0.26,
+        "dunas": 0.12
+      },
+      "n": 8,
+      "papel": "narrado"
+    },
+    {
+      "n": 9,
       "papel": "narrado",
       "titulo": "A primeira noite fora",
       "personagem": "cameleiro",
@@ -136,7 +161,7 @@
       }
     },
     {
-      "n": 8,
+      "n": 10,
       "papel": "narrado",
       "titulo": "Por que não pela costa",
       "personagem": "",
@@ -148,7 +173,7 @@
       }
     },
     {
-      "n": 9,
+      "n": 11,
       "papel": "narrado",
       "titulo": "O relógio do deserto",
       "personagem": "",
@@ -160,7 +185,7 @@
       }
     },
     {
-      "n": 10,
+      "n": 12,
       "papel": "narrado",
       "titulo": "A hora de partir",
       "personagem": "cameleiro",
@@ -173,7 +198,7 @@
       }
     },
     {
-      "n": 11,
+      "n": 13,
       "papel": "narrado",
       "titulo": "Marchar no escuro",
       "personagem": "",
@@ -185,7 +210,7 @@
       }
     },
     {
-      "n": 12,
+      "n": 14,
       "papel": "narrado",
       "titulo": "As estrelas que guiam",
       "personagem": "",
@@ -197,7 +222,7 @@
       }
     },
     {
-      "n": 13,
+      "n": 15,
       "papel": "narrado",
       "titulo": "A areia fria",
       "personagem": "",
@@ -209,7 +234,7 @@
       }
     },
     {
-      "n": 14,
+      "n": 16,
       "papel": "narrado",
       "titulo": "A parada da meia-noite",
       "personagem": "cameleiro",
@@ -223,7 +248,7 @@
       }
     },
     {
-      "n": 15,
+      "n": 17,
       "papel": "narrado",
       "titulo": "O café",
       "personagem": "cameleiro",
@@ -236,7 +261,7 @@
       }
     },
     {
-      "n": 16,
+      "n": 18,
       "papel": "narrado",
       "titulo": "Dormir três horas",
       "personagem": "",
@@ -249,7 +274,7 @@
       }
     },
     {
-      "n": 17,
+      "n": 19,
       "papel": "narrado",
       "titulo": "Antes da alvorada",
       "personagem": "",
@@ -261,7 +286,7 @@
       }
     },
     {
-      "n": 18,
+      "n": 20,
       "papel": "narrado",
       "titulo": "O sol que sobe",
       "personagem": "",
@@ -273,7 +298,7 @@
       }
     },
     {
-      "n": 19,
+      "n": 21,
       "papel": "narrado",
       "titulo": "A qaylula",
       "personagem": "cameleiro",
@@ -286,7 +311,7 @@
       }
     },
     {
-      "n": 20,
+      "n": 22,
       "papel": "narrado",
       "titulo": "O calor",
       "personagem": "",
@@ -298,7 +323,7 @@
       }
     },
     {
-      "n": 21,
+      "n": 23,
       "papel": "narrado",
       "titulo": "A água",
       "personagem": "cameleiro",
@@ -310,7 +335,7 @@
       }
     },
     {
-      "n": 22,
+      "n": 24,
       "papel": "narrado",
       "titulo": "O pão na cinza",
       "personagem": "cameleiro",
@@ -323,7 +348,7 @@
       }
     },
     {
-      "n": 23,
+      "n": 25,
       "papel": "narrado",
       "titulo": "As tâmaras",
       "personagem": "cameleiro",
@@ -335,7 +360,7 @@
       }
     },
     {
-      "n": 24,
+      "n": 26,
       "papel": "narrado",
       "titulo": "O que os camelos comem",
       "personagem": "",
@@ -347,7 +372,7 @@
       }
     },
     {
-      "n": 25,
+      "n": 27,
       "papel": "narrado",
       "titulo": "O harra",
       "personagem": "",
@@ -359,7 +384,7 @@
       }
     },
     {
-      "n": 26,
+      "n": 28,
       "papel": "narrado",
       "titulo": "Pedra preta",
       "personagem": "",
@@ -371,7 +396,7 @@
       }
     },
     {
-      "n": 27,
+      "n": 29,
       "papel": "narrado",
       "titulo": "A areia volta",
       "personagem": "",
@@ -383,7 +408,7 @@
       }
     },
     {
-      "n": 28,
+      "n": 30,
       "papel": "narrado",
       "titulo": "Ninguém fala",
       "personagem": "",
@@ -395,7 +420,7 @@
       }
     },
     {
-      "n": 29,
+      "n": 31,
       "papel": "narrado",
       "titulo": "O guia",
       "personagem": "guia",
@@ -407,7 +432,7 @@
       }
     },
     {
-      "n": 30,
+      "n": 32,
       "papel": "narrado",
       "titulo": "Auda",
       "personagem": "auda",
@@ -420,7 +445,7 @@
       }
     },
     {
-      "n": 31,
+      "n": 33,
       "papel": "narrado",
       "titulo": "O inglês",
       "personagem": "lawrence",
@@ -433,7 +458,19 @@
       }
     },
     {
-      "n": 32,
+      "titulo": "O camelo dele",
+      "personagem": "lawrence",
+      "prompt": "a fine slender riding camel standing in daylight while a man in pale robes checks its girth strap, warm side light",
+      "ambiente": {
+        "vento": 0.34,
+        "areia": 0.24,
+        "dunas": 0.11
+      },
+      "n": 34,
+      "papel": "narrado"
+    },
+    {
+      "n": 35,
       "papel": "narrado",
       "titulo": "Ele quase não falava",
       "personagem": "lawrence",
@@ -445,7 +482,20 @@
       }
     },
     {
-      "n": 33,
+      "titulo": "O caderno",
+      "personagem": "lawrence",
+      "prompt": "a man in dusty robes sitting close to a small fire at night, bent over a small notebook with a pencil, firelight on the page",
+      "ambiente": {
+        "vento": 0.32,
+        "areia": 0.2,
+        "dunas": 0.09,
+        "fogo": 0.28
+      },
+      "n": 36,
+      "papel": "narrado"
+    },
+    {
+      "n": 37,
       "papel": "narrado",
       "titulo": "O poço seco",
       "personagem": "cameleiro",
@@ -457,7 +507,7 @@
       }
     },
     {
-      "n": 34,
+      "n": 38,
       "papel": "narrado",
       "titulo": "Contar a água outra vez",
       "personagem": "cameleiro",
@@ -469,11 +519,11 @@
       }
     },
     {
-      "n": 35,
+      "n": 39,
       "papel": "narrado",
       "titulo": "Três dias",
       "personagem": "",
-      "prompt": "an endless plain of red sand with no landmark at all, under a flat white midday sky",
+      "prompt": "an endless plain of red sand reaching a very high horizon line, a thin band of pale washed-out sky at the top, heat haze, harsh midday light",
       "ambiente": {
         "vento": 0.45,
         "areia": 0.32,
@@ -481,7 +531,7 @@
       }
     },
     {
-      "n": 36,
+      "n": 40,
       "papel": "narrado",
       "titulo": "A boca seca",
       "personagem": "",
@@ -493,7 +543,7 @@
       }
     },
     {
-      "n": 37,
+      "n": 41,
       "papel": "narrado",
       "titulo": "O camelo que parou",
       "personagem": "cameleiro",
@@ -505,7 +555,7 @@
       }
     },
     {
-      "n": 38,
+      "n": 42,
       "papel": "narrado",
       "titulo": "O camelo sabe",
       "personagem": "",
@@ -517,7 +567,7 @@
       }
     },
     {
-      "n": 39,
+      "n": 43,
       "papel": "narrado",
       "titulo": "O que se pensa",
       "personagem": "",
@@ -529,7 +579,7 @@
       }
     },
     {
-      "n": 40,
+      "n": 44,
       "papel": "narrado",
       "titulo": "A tempestade de areia",
       "personagem": "",
@@ -541,7 +591,7 @@
       }
     },
     {
-      "n": 41,
+      "n": 45,
       "papel": "narrado",
       "titulo": "A areia que canta",
       "personagem": "",
@@ -553,7 +603,7 @@
       }
     },
     {
-      "n": 42,
+      "n": 46,
       "papel": "narrado",
       "titulo": "Esperar passar",
       "personagem": "cameleiro",
@@ -566,7 +616,7 @@
       }
     },
     {
-      "n": 43,
+      "n": 47,
       "papel": "narrado",
       "titulo": "Depois",
       "personagem": "",
@@ -578,7 +628,7 @@
       }
     },
     {
-      "n": 44,
+      "n": 48,
       "papel": "narrado",
       "titulo": "Um homem ficou para trás",
       "personagem": "",
@@ -590,7 +640,7 @@
       }
     },
     {
-      "n": 45,
+      "n": 49,
       "papel": "narrado",
       "titulo": "Os poços de Auda",
       "personagem": "auda",
@@ -602,7 +652,7 @@
       }
     },
     {
-      "n": 46,
+      "n": 50,
       "papel": "narrado",
       "titulo": "Voltar",
       "personagem": "",
@@ -614,7 +664,7 @@
       }
     },
     {
-      "n": 47,
+      "n": 51,
       "papel": "narrado",
       "titulo": "Ele voltou com o homem",
       "personagem": "",
@@ -626,7 +676,7 @@
       }
     },
     {
-      "n": 48,
+      "n": 52,
       "papel": "narrado",
       "titulo": "O primeiro verde",
       "personagem": "",
@@ -638,7 +688,7 @@
       }
     },
     {
-      "n": 49,
+      "n": 53,
       "papel": "narrado",
       "titulo": "Wadi Sirhan",
       "personagem": "",
@@ -650,7 +700,7 @@
       }
     },
     {
-      "n": 50,
+      "n": 54,
       "papel": "narrado",
       "titulo": "Água amarga",
       "personagem": "cameleiro",
@@ -662,7 +712,7 @@
       }
     },
     {
-      "n": 51,
+      "n": 55,
       "papel": "narrado",
       "titulo": "As tendas de pelo de cabra",
       "personagem": "",
@@ -676,7 +726,7 @@
       }
     },
     {
-      "n": 52,
+      "n": 56,
       "papel": "narrado",
       "titulo": "As mulheres do acampamento",
       "personagem": "",
@@ -690,7 +740,7 @@
       }
     },
     {
-      "n": 53,
+      "n": 57,
       "papel": "narrado",
       "titulo": "Gente chegando",
       "personagem": "",
@@ -703,7 +753,7 @@
       }
     },
     {
-      "n": 54,
+      "n": 58,
       "papel": "narrado",
       "titulo": "As crianças e os cabritos",
       "personagem": "",
@@ -716,7 +766,7 @@
       }
     },
     {
-      "n": 55,
+      "n": 59,
       "papel": "narrado",
       "titulo": "As histórias à noite",
       "personagem": "",
@@ -730,7 +780,7 @@
       }
     },
     {
-      "n": 56,
+      "n": 60,
       "papel": "narrado",
       "titulo": "Bair",
       "personagem": "",
@@ -742,7 +792,7 @@
       }
     },
     {
-      "n": 57,
+      "n": 61,
       "papel": "narrado",
       "titulo": "Contar de novo a história",
       "personagem": "",
@@ -756,7 +806,7 @@
       }
     },
     {
-      "n": 58,
+      "n": 62,
       "papel": "narrado",
       "titulo": "Al-Jafr",
       "personagem": "",
@@ -768,7 +818,7 @@
       }
     },
     {
-      "n": 59,
+      "n": 63,
       "papel": "narrado",
       "titulo": "A espera",
       "personagem": "cameleiro",
@@ -781,11 +831,11 @@
       }
     },
     {
-      "n": 60,
+      "n": 64,
       "papel": "narrado",
       "titulo": "O que a espera faz",
       "personagem": "cameleiro",
-      "prompt": "a man sitting motionless in tent shade at midday, staring out at white light",
+      "prompt": "a man sitting motionless in the deep shade of a tent at midday, seen from inside, the bright pale desert visible beyond the tent edge, harsh light outside",
       "ambiente": {
         "vento": 0.35,
         "areia": 0.22,
@@ -794,7 +844,7 @@
       }
     },
     {
-      "n": 61,
+      "n": 65,
       "papel": "narrado",
       "titulo": "Consertar tudo",
       "personagem": "cameleiro",
@@ -807,7 +857,7 @@
       }
     },
     {
-      "n": 62,
+      "n": 66,
       "papel": "narrado",
       "titulo": "A última noite antes",
       "personagem": "",
@@ -820,7 +870,7 @@
       }
     },
     {
-      "n": 63,
+      "n": 67,
       "papel": "narrado",
       "titulo": "Descer as gargantas",
       "personagem": "",
@@ -832,7 +882,7 @@
       }
     },
     {
-      "n": 64,
+      "n": 68,
       "papel": "narrado",
       "titulo": "O último dia",
       "personagem": "",
@@ -844,7 +894,7 @@
       }
     },
     {
-      "n": 65,
+      "n": 69,
       "papel": "narrado",
       "titulo": "O ar muda",
       "personagem": "",
@@ -857,7 +907,7 @@
       }
     },
     {
-      "n": 66,
+      "n": 70,
       "papel": "narrado",
       "titulo": "O cheiro de sal",
       "personagem": "",
@@ -870,7 +920,7 @@
       }
     },
     {
-      "n": 67,
+      "n": 71,
       "papel": "narrado",
       "titulo": "O mar outra vez",
       "personagem": "",
@@ -881,7 +931,7 @@
       }
     },
     {
-      "n": 68,
+      "n": 72,
       "papel": "narrado",
       "titulo": "A água salgada",
       "personagem": "cameleiro",
@@ -892,7 +942,7 @@
       }
     },
     {
-      "n": 69,
+      "n": 73,
       "papel": "fecho",
       "titulo": "O que ficou",
       "personagem": "cameleiro",
@@ -904,7 +954,7 @@
       }
     },
     {
-      "n": 70,
+      "n": 74,
       "papel": "cauda-ambiente",
       "titulo": "Cauda",
       "personagem": "",

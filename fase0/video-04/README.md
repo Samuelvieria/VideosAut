@@ -5,10 +5,10 @@ cameleiro da escolta Ageyl, hoje velho — **não** por Lawrence, e não pelo he
 
 | | |
 |---|---|
-| duração projetada | ~116 min (105 de narração + 9 de cauda) |
-| roteiro | **13.345 palavras**, 69 cenas + cauda |
+| duração projetada | ~119 min (110 de narração + 9 de cauda) |
+| roteiro | **14.019 palavras**, 73 cenas + cauda |
 | voz | `google-chirp3` · `Algenib` · pt-BR · 127 ppm |
-| imagens | 72 a 1280×720 · R$ 4,23 com retentativa |
+| imagens | 74 a 1280×720 · R$ 1,80 gastos |
 | persona | `cameleiro-ageyl` (nova) |
 
 ---
@@ -68,3 +68,42 @@ teria pego:
 - [ ] `s5_render` — pesado; provavelmente na workstation
 - [ ] **Adaptação em inglês** presa ao tempo das cenas
       (`s8_faixa --so-alinhar` diz quantas palavras faltam em cada uma)
+
+
+---
+
+## Lawrence, e por que ele quase não aparecia
+
+A primeira versão o deixava periférico de propósito — o narrador é um cameleiro
+e Lawrence era visto de longe. O Samuel apontou em 05/09 que ele sumia. Certo:
+ele estava em 8 de 69 cenas.
+
+Agora há **cinco cenas sobre ele**, todas em fato documentado: as vestes de
+seda branca que o Emir Faiçal deu (eram de casamento, feitas para o irmão que
+nunca usou), os pés descalços para engrossar a sola, o caderno, o camelo dele
+visto por quem entende de camelo, e as febres.
+
+E o último dia ganhou o detalhe que a pesquisa deu e que nenhum filme mostra:
+na carga, ele **atirou no próprio camelo** por acidente e foi arremessado,
+ficando desacordado enquanto o resto acontecia. Contado por um cameleiro, isso
+vale mais que qualquer heroísmo.
+
+## Sobre o filme
+
+O pedido era replicar as cenas icônicas do filme. Duas correções tornaram isso
+desnecessário:
+
+**O filme é de 1962, não dos anos 50** — David Lean, Columbia, e sob direito
+autoral até por volta de 2057 nos EUA. E o `CLAUDE.md` já registra que imagem no
+YouTube não passa por Content ID: reclamação vira **strike**, não claim.
+
+**Mas quase tudo que ele tem de icônico é histórico.** A travessia, o resgate de
+Gasim, Aqaba por terra, as vestes — tudo em *Sete Pilares* e nos relatórios do
+Arab Bureau, tudo livre.
+
+O que é invenção do filme está listado em
+[`lawrence-filme-vs-historia.md`](../_pesquisa/lawrence-filme-vs-historia.md) §2
+e **não entra**: o personagem Sherif Ali (100% fictício), a aparição na miragem
+do poço, "nothing is written", o fósforo, Lawrence em cima do vagão, a morte na
+areia movediça. As duas cenas mais lembradas do filme — a miragem e o vagão —
+são exatamente as duas mais claramente de Lean.

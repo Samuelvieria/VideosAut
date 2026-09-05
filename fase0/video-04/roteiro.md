@@ -197,7 +197,69 @@ Eu achei que ele fosse desistir na primeira semana.
 
 Eu estava errado sobre isso, e sobre mais umas quantas coisas.
 
-## Cena 7 — A primeira noite fora
+## Cena 7 — As vestes
+
+Eu preciso te contar das roupas dele, porque foi a primeira coisa que me
+explicaram sobre aquele homem.
+
+Não foi ele que escolheu vestir aquilo.
+
+Quem deu foi o Emir Faiçal, meses antes, num acampamento lá no sul. E não eram
+roupas quaisquer. Eram vestes de casamento, de seda branca com fio de ouro,
+feitas para o irmão mais novo do Emir, que nunca chegou a usar...
+
+Isso quer dizer uma coisa que a gente entendeu na hora e que ele talvez tenha
+levado mais tempo para entender inteiro.
+
+Quem veste roupa da família do Xerife de Meca não está fantasiado. Está sendo
+apresentado.
+
+Tinha razão prática também, e ela é simples. Fardamento inglês no meio do Hejaz
+é um homem gritando de longe que não é dali, e tem gente que atira por menos.
+
+E o corte largo é o único que serve para ficar oito horas em cima de um camelo.
+
+Mas eu vi depois uma coisa que me pareceu mais verdadeira que tudo isso.
+
+As vestes ficaram sujas.
+
+Poeira vermelha, fuligem de pólvora, gordura de mão. Em duas semanas aquela
+seda branca era da cor da terra, igual à roupa de todo mundo.
+
+E aí ele parou de parecer um homem vestido de outra coisa.
+
+## Cena 8 — Os pés dele
+
+Uma coisa que me contaram e que eu depois vi com os meus olhos: ele andava
+descalço de propósito.
+
+Não por falta de sandália. Ele tinha.
+
+Era para a sola engrossar, como a nossa. Homem daqui cresce pisando pedra
+quente e a pele vira couro sem ninguém mandar; quem chega adulto não tem
+isso...
+
+Então ele descia do camelo e andava.
+
+Em pedra, em areia de meio-dia, no que desse. E fazia uma cara de quem não está
+achando nada, que era a cara que ele fazia para quase tudo.
+
+Os primeiros dias devem ter sido horríveis. Eu vi o pé dele uma vez, de longe,
+e não estava bom.
+
+Ele não falou nada e ninguém perguntou.
+
+Tinha gente que achava aquilo bobagem de estrangeiro querendo provar coisa.
+Talvez fosse.
+
+Mas eu cuidava de animal, e quem cuida de animal sabe o que é insistir todo dia
+numa coisa pequena até ela virar outra coisa.
+
+Não é o tipo de teimosia que se ensina. Ou o homem tem, ou não tem.
+
+Aquele tinha.
+
+## Cena 9 — A primeira noite fora
 
 A primeira noite fora de uma cidade é sempre estranha.
 
@@ -226,7 +288,7 @@ Se você quer dormir no deserto, escute o camelo mastigando.
 
 Ele não tem pressa. E o corpo da gente acredita nele.
 
-## Cena 8 — Por que não pela costa
+## Cena 10 — Por que não pela costa
 
 Você deve estar pensando: por que não seguir pela beira do mar?
 
@@ -256,7 +318,7 @@ Ninguém acreditava que desse. Eu, sinceramente, também não acreditava.
 
 Mas eu era pago para cuidar dos camelos, não para ter opinião.
 
-## Cena 9 — O relógio do deserto
+## Cena 11 — O relógio do deserto
 
 No verão, o deserto tem um relógio, e ele não é o seu.
 
@@ -286,7 +348,7 @@ Tem uma coisa boa nisso, que eu só entendi depois de velho.
 
 O escuro é mais fácil. Você não vê o quanto falta.
 
-## Cena 10 — A hora de partir
+## Cena 12 — A hora de partir
 
 A hora de partir é a melhor hora do dia.
 
@@ -318,7 +380,7 @@ E aí, sem aviso, o primeiro camelo levanta.
 
 E os outros levantam atrás. E ninguém disse nada.
 
-## Cena 11 — Marchar no escuro
+## Cena 13 — Marchar no escuro
 
 Marchar de noite não é como você imagina.
 
@@ -348,7 +410,7 @@ Não uiva. Não tem galho, não tem folha, não tem nada para o vento cortar.
 
 Ele só sopra. Grosso, comprido, oco.
 
-## Cena 12 — As estrelas que guiam
+## Cena 14 — As estrelas que guiam
 
 O guia lia o céu.
 
@@ -376,7 +438,7 @@ e falou uma coisa que eu nunca esqueci.
 
 Ele disse: eu não aprendi. Eu só nunca dormi cedo.
 
-## Cena 13 — A areia fria
+## Cena 15 — A areia fria
 
 Tem uma coisa da areia que quase ninguém conta.
 
@@ -404,7 +466,7 @@ Só mudou a hora.
 Muita coisa é assim, eu acho. A gente jura que o mundo mudou, e o que mudou
 foi a hora em que a gente olhou.
 
-## Cena 14 — A parada da meia-noite
+## Cena 16 — A parada da meia-noite
 
 Perto da meia-noite a gente parava.
 
@@ -435,7 +497,7 @@ Depois alguém levantava.
 
 E a gente ia.
 
-## Cena 15 — O café
+## Cena 17 — O café
 
 Deixa eu falar do café direito, porque o café não é bebida ali. É outra coisa.
 
@@ -472,7 +534,7 @@ devolver. Ninguém precisa dizer nada.
 
 E é bonito que uma coisa tão pequena diga tanto.
 
-## Cena 16 — Dormir três horas
+## Cena 18 — Dormir três horas
 
 A gente dormia três horas por noite. Às vezes quatro.
 
@@ -504,7 +566,7 @@ Não sei explicar por quê. Acho que era para acordar se ele se mexesse.
 
 Acho que era só para ter alguém ali.
 
-## Cena 17 — Antes da alvorada
+## Cena 19 — Antes da alvorada
 
 A pior hora do dia é três e meia da manhã.
 
@@ -539,7 +601,7 @@ essa linha é a coisa mais bonita que existe.
 
 Porque ela quer dizer: mais uma noite passou e você está inteiro.
 
-## Cena 18 — O sol que sobe
+## Cena 20 — O sol que sobe
 
 O primeiro sol é bom.
 
@@ -573,7 +635,7 @@ meio.
 
 Eu levei semanas para entender que era de propósito.
 
-## Cena 19 — A qaylula
+## Cena 21 — A qaylula
 
 Entre onze e três e meia, ninguém se mexe.
 
@@ -610,7 +672,7 @@ Eu já dormi em quartos de pedra e em camas de verdade, depois, na velhice.
 
 Nunca dormi melhor do que debaixo daquele pano.
 
-## Cena 20 — O calor
+## Cena 22 — O calor
 
 Eu vou tentar te contar o calor, mas eu já sei que não vou conseguir.
 
@@ -642,7 +704,7 @@ Foi por isso que o guia mandava beber com hora marcada, mesmo sem sede.
 
 Sede, ali, chega tarde demais para servir de aviso.
 
-## Cena 21 — A água
+## Cena 23 — A água
 
 A água era contada.
 
@@ -675,7 +737,7 @@ Eu costurei muito couro naquela travessia.
 E costurei de noite, quase sempre, porque de dia o couro fica mole e a agulha
 abre demais.
 
-## Cena 22 — O pão na cinza
+## Cena 24 — O pão na cinza
 
 Pão a gente fazia todo dia. Nunca sobrava para o dia seguinte.
 
@@ -708,7 +770,7 @@ Ninguém falava enquanto comia.
 
 Depois falava. Mas enquanto comia, não.
 
-## Cena 23 — As tâmaras
+## Cena 25 — As tâmaras
 
 Tâmara é o alimento de quem anda.
 
@@ -744,7 +806,7 @@ comia do mesmo caldeirão, sentado em roda.
 
 Foram três noites em que se comeu bem. Eu me lembro delas com gosto.
 
-## Cena 24 — O que os camelos comem
+## Cena 26 — O que os camelos comem
 
 Camelo come espinho.
 
@@ -772,7 +834,7 @@ Tem gente assim também. Eu conheci duas ou três.
 
 Nenhuma delas passou fome.
 
-## Cena 25 — O harra
+## Cena 27 — O harra
 
 Depois de umas semanas a areia acabou.
 
@@ -811,7 +873,7 @@ por vir.
 
 Mas foi a parte mais feia.
 
-## Cena 26 — Pedra preta
+## Cena 28 — Pedra preta
 
 Tem uma coisa que eu preciso te contar sobre aquele lugar, e é sobre o
 silêncio.
@@ -846,7 +908,7 @@ não desce — fica.
 
 Eu preferi a areia. Sempre preferi.
 
-## Cena 27 — A areia volta
+## Cena 29 — A areia volta
 
 O harra durou uns dias e acabou de um jeito estranho.
 
@@ -875,7 +937,7 @@ lado apontavam.
 
 E depois virou o caminho uns poucos graus, e ninguém perguntou por quê.
 
-## Cena 28 — Ninguém fala
+## Cena 30 — Ninguém fala
 
 A gente falava pouco. Foi ficando cada vez menos.
 
@@ -911,7 +973,7 @@ homem por semanas, come do mesmo pão, e vocês não trocam vinte frases.
 
 E mesmo assim você sabe, no fim, que aquele homem é dos seus.
 
-## Cena 29 — O guia
+## Cena 31 — O guia
 
 O guia não era o chefe. Isso é importante.
 
@@ -945,7 +1007,7 @@ Ele disse que não. Depois pensou e disse: perdido, não. Atrasado, muitas vezes
 
 Eu ri. Ele não riu.
 
-## Cena 30 — Auda
+## Cena 32 — Auda
 
 Auda era uma coisa que eu nunca tinha visto.
 
@@ -976,7 +1038,7 @@ Sem ele a gente não teria passado. Não por causa da força dele.
 
 Por causa dos nomes que ele sabia.
 
-## Cena 31 — O inglês
+## Cena 33 — O inglês
 
 Sobre o inglês eu vou falar com cuidado.
 
@@ -1010,7 +1072,37 @@ eu lembro porque repeti muitas vezes.
 
 E repetir muda a coisa, um pouquinho por vez.
 
-## Cena 32 — Ele quase não falava
+## Cena 34 — O camelo dele
+
+Do meu ofício eu posso te dizer com autoridade: ele tinha um animal muito bom.
+
+Não foi ele que escolheu, e ele não saberia escolher. Deram.
+
+Era uma fêmea de montaria, de raça, do tipo que anda rápido e leve e que a gente
+chama de dalul. Pescoço fino, perna comprida, cabeça pequena. Um animal caro.
+
+E ele montava mal...
+
+Isso não é crítica. É observação de quem olha isso a vida inteira.
+
+Quem aprende criança tem o quadril solto. O corpo acompanha o balanço sozinho e
+a pessoa nem sabe que está fazendo. Quem aprende adulto acompanha com esforço,
+e por isso cansa mais e machuca mais.
+
+Ele tinha as pernas rígidas demais. E se segurava na sela, o que não se faz.
+
+Melhorou muito nesses dois meses. Nunca ficou bom.
+
+Mas eu vi uma coisa nele que compensava, e é a coisa que separa quem sabe de
+quem não sabe: ele cuidava do bicho antes de cuidar de si.
+
+Chegava, descia, e a primeira coisa era a sela, a cilha, o pé.
+
+Só depois é que ele bebia.
+
+Muito homem nascido aqui não faz isso.
+
+## Cena 35 — Ele quase não falava
 
 Uma coisa que me surpreendeu: ele não mandava.
 
@@ -1041,7 +1133,35 @@ Eu tinha visto. Virei o rosto.
 
 Ele agradeceu com a cabeça, e a gente nunca falou daquilo.
 
-## Cena 33 — O poço seco
+## Cena 36 — O caderno
+
+Todo dia, ou quase, ele escrevia.
+
+Tirava um caderno pequeno do peito, e um lápis, e escrevia curvado — de dia com
+a mão fazendo sombra por cima do papel, de noite chegando perto demais do fogo.
+
+Eu perguntei uma vez o que ele escrevia.
+
+Ele disse: o que eu vou esquecer...
+
+Achei uma resposta esquisita na hora. Hoje eu acho a coisa mais sensata que ele
+me disse.
+
+Porque eu não escrevi nada. Eu não sabia, e mesmo se soubesse não teria escrito,
+porque naquela época a gente guardava contando.
+
+E contar muda um pouquinho por vez.
+
+Eu tenho cinquenta anos contando isso. Já não é mais o que eu vi — é o que eu
+contei.
+
+Ele ia ter as duas coisas. O que ele viu, no caderno, e o que ele contou depois.
+
+Me disseram que as duas não bateram.
+
+Isso não me espanta nem um pouco. Se batesse é que era estranho.
+
+## Cena 37 — O poço seco
 
 Chegar num poço é a única alegria daquele tipo de viagem.
 
@@ -1080,7 +1200,7 @@ cansado demais para brigar, e porque Auda falou primeiro.
 
 Às vezes é só isso que separa uma coisa da outra.
 
-## Cena 34 — Contar a água outra vez
+## Cena 38 — Contar a água outra vez
 
 Naquela noite a gente contou tudo.
 
@@ -1115,7 +1235,7 @@ demais na semana anterior, quando estava fácil.
 
 Ninguém bebe pensando na semana que vem.
 
-## Cena 35 — Três dias
+## Cena 39 — Três dias
 
 Os três dias seguintes eu não sei contar direito.
 
@@ -1148,7 +1268,7 @@ O corpo faz umas coisas estranhas quando falta água.
 
 A cabeça faz mais.
 
-## Cena 36 — A boca seca
+## Cena 40 — A boca seca
 
 Eu já te contei o que a sede faz com a boca e com o suor.
 
@@ -1180,7 +1300,7 @@ Eu devo a vida àquele homem e nunca soube o nome dele direito.
 
 Todo mundo chamava ele de o velho. Inclusive os que eram mais velhos que ele.
 
-## Cena 37 — O camelo que parou
+## Cena 41 — O camelo que parou
 
 No segundo daqueles dias, um camelo deitou.
 
@@ -1216,7 +1336,7 @@ Eu tinha dado um nome para ele. Não vou dizer qual.
 
 E olha que já se passaram cinquenta anos.
 
-## Cena 38 — O camelo sabe
+## Cena 42 — O camelo sabe
 
 Eu disse que o camelo mostra. Deixa eu explicar melhor, porque é o meu ofício e
 é a única coisa que eu sei direito.
@@ -1245,7 +1365,7 @@ Eu olhava as corcovas todo dia. De manhã, quando eles levantavam.
 E naqueles três dias eu olhei mais de perto do que nunca, e não gostei do que
 vi em nenhum deles.
 
-## Cena 39 — O que se pensa
+## Cena 43 — O que se pensa
 
 Quando você anda três dias sem nada acontecer, a cabeça faz o que quer.
 
@@ -1277,7 +1397,7 @@ médico, em umas bebidas que não vou citar.
 E o único jeito de chegar lá continua sendo andar muito tempo sem chegar em
 lugar nenhum.
 
-## Cena 40 — A tempestade de areia
+## Cena 44 — A tempestade de areia
 
 No terceiro dia, no meio da tarde, com a coluna já andando, o horizonte ficou
 marrom.
@@ -1313,7 +1433,7 @@ Escureceu antes da hora, e mais do que a noite escurece.
 
 Eu não via a minha própria mão a um palmo do rosto.
 
-## Cena 41 — A areia que canta
+## Cena 45 — A areia que canta
 
 Naquela hora eu ouvi uma coisa que eu já tinha ouvido falar e nunca tinha
 ouvido.
@@ -1347,7 +1467,7 @@ esse.
 
 E eu não tive medo. Eu tive uma coisa parecida com respeito.
 
-## Cena 42 — Esperar passar
+## Cena 46 — Esperar passar
 
 Passou.
 
@@ -1378,7 +1498,7 @@ vez bem devagar.
 
 Faltava um.
 
-## Cena 43 — Depois
+## Cena 47 — Depois
 
 Vou parar um pouco antes de contar o que aconteceu, porque tem uma coisa que
 eu quero que você veja primeiro.
@@ -1407,7 +1527,7 @@ Um minuto é muito tempo quando tem gente contando homens atrás de você.
 
 Depois eu virei e fui ajudar a procurar.
 
-## Cena 44 — Um homem ficou para trás
+## Cena 48 — Um homem ficou para trás
 
 O nome dele eu não vou dizer. Ele teve família depois, e eu não sei se eles
 iam gostar.
@@ -1441,7 +1561,7 @@ Ninguém disse que devia deixar. Ninguém disse que devia ir.
 Ficou todo mundo parado, olhando para o chão, do jeito que gente fica quando
 sabe que a conta não fecha e não quer ser quem diz isso em voz alta.
 
-## Cena 45 — Os poços de Auda
+## Cena 49 — Os poços de Auda
 
 Enquanto se discutia isso, Auda estava de lado, olhando o horizonte.
 
@@ -1470,7 +1590,7 @@ Auda deu de ombros e disse que o poço estava lá quando ele era moço.
 
 Isso foi tudo o que ele deu de garantia. E foi suficiente, porque era Auda.
 
-## Cena 46 — Voltar
+## Cena 50 — Voltar
 
 O inglês voltou sozinho.
 
@@ -1502,7 +1622,7 @@ Eu tinha vinte e dois anos.
 Hoje eu acho que aquele pensamento não era covardia. Era só aritmética
 aparecendo na hora errada.
 
-## Cena 47 — Ele voltou com o homem
+## Cena 51 — Ele voltou com o homem
 
 Ele voltou no fim da tarde.
 
@@ -1536,7 +1656,7 @@ jeito que eu não reconheço.
 O que eu vi foi um homem cansado descendo de um camelo e indo verificar a
 cilha.
 
-## Cena 48 — O primeiro verde
+## Cena 52 — O primeiro verde
 
 Dois dias depois apareceu verde.
 
@@ -1566,7 +1686,7 @@ E os homens começaram a falar de novo.
 
 De coisas bobas. De comida, principalmente. Sempre é de comida.
 
-## Cena 49 — Wadi Sirhan
+## Cena 53 — Wadi Sirhan
 
 Wadi Sirhan não é um vale como você imagina.
 
@@ -1594,7 +1714,7 @@ gente chegava perto de alguém.
 
 E chegar perto de alguém, naquela terra, tem regra.
 
-## Cena 50 — Água amarga
+## Cena 54 — Água amarga
 
 O primeiro poço tinha água e a água era ruim.
 
@@ -1624,7 +1744,7 @@ Não teve conta de água. Não teve conta de dias.
 Eu dormi como não dormia havia um mês, com o gosto de sal ainda na boca, e a
 água amarga foi a melhor água que eu bebi na vida.
 
-## Cena 51 — As tendas de pelo de cabra
+## Cena 55 — As tendas de pelo de cabra
 
 Ali eu vi as primeiras tendas.
 
@@ -1653,7 +1773,7 @@ Não é estalo de pano fino. Pano fino faz um barulho agudo e apressado.
 
 Aquele é um som pesado. Um som de coisa que fica.
 
-## Cena 52 — As mulheres do acampamento
+## Cena 56 — As mulheres do acampamento
 
 Eu falei até agora de quarenta homens andando. É hora de dizer que o deserto
 não é feito disso.
@@ -1690,7 +1810,7 @@ Era vida dura. Levantar antes, deitar depois, e o dia inteiro no meio.
 Eu não vou dizer que era bonito. Vou dizer só que sem elas não tinha
 acampamento, e que quase ninguém escreveu isso em lugar nenhum.
 
-## Cena 53 — Gente chegando
+## Cena 57 — Gente chegando
 
 Em Wadi Sirhan a gente parou de andar sozinho.
 
@@ -1723,7 +1843,7 @@ Eu passei a andar entre eles de manhã, devagar, olhando o todo.
 E até hoje, quando eu entro num lugar com muita gente, eu faço a mesma coisa
 sem querer.
 
-## Cena 54 — As crianças e os cabritos
+## Cena 58 — As crianças e os cabritos
 
 Onde tem acampamento tem criança, e onde tem criança tem cabrito.
 
@@ -1750,7 +1870,7 @@ correndo atrás de um cabrito no fim da tarde.
 
 E era bom. Só isso.
 
-## Cena 55 — As histórias à noite
+## Cena 59 — As histórias à noite
 
 À noite, no acampamento grande, contava-se história.
 
@@ -1780,7 +1900,7 @@ com essas paradas — não é problema de velhice.
 
 Bom, é um pouco de velhice também.
 
-## Cena 56 — Bair
+## Cena 60 — Bair
 
 Bair é um lugar de poços.
 
@@ -1810,7 +1930,7 @@ dias seguidos, tirando pedra e entulho de lá de dentro.
 E vi um deles subir no quarto dia com água na mão, e mostrar para os outros
 como quem mostra um filho recém-nascido.
 
-## Cena 57 — Contar de novo a história
+## Cena 61 — Contar de novo a história
 
 Naquelas noites de Bair eu ouvi a nossa própria travessia ser contada.
 
@@ -1833,7 +1953,7 @@ Eu devo estar fazendo isso agora, com você.
 Eu estou tentando contar o que aconteceu. Mas cinquenta anos passaram por cima,
 e o que eu tenho na mão já é o que sobrou.
 
-## Cena 58 — Al-Jafr
+## Cena 62 — Al-Jafr
 
 Depois de Bair a gente foi para Al-Jafr.
 
@@ -1864,7 +1984,7 @@ Deve ter sido cansaço.
 
 Mas eu guardei essa imagem melhor do que guardei coisas mais importantes.
 
-## Cena 59 — A espera
+## Cena 63 — A espera
 
 E aí veio a espera.
 
@@ -1894,7 +2014,7 @@ Eu levei anos para entender que metade daquelas tarefas não servia para nada.
 
 Servia para não deixar ninguém parado.
 
-## Cena 60 — O que a espera faz
+## Cena 64 — O que a espera faz
 
 Nessas semanas eu aprendi uma coisa sobre mim que eu não sabia.
 
@@ -1926,7 +2046,7 @@ Ela dizia que eu não sabia ficar sentado.
 E é verdade. Eu aprendi a atravessar deserto antes de aprender a ficar parado
 numa cadeira.
 
-## Cena 61 — Consertar tudo
+## Cena 65 — Consertar tudo
 
 O trabalho que eu mais gosto de lembrar é o de consertar.
 
@@ -1960,7 +2080,7 @@ A minha mulher acordava e não dizia nada.
 
 Acho que ela entendia.
 
-## Cena 62 — A última noite antes
+## Cena 66 — A última noite antes
 
 A noite antes de partir foi diferente de todas.
 
@@ -1992,7 +2112,7 @@ E naquela noite eu dormi bem.
 
 Que é uma coisa que quase ninguém acredita quando eu conto.
 
-## Cena 63 — Descer as gargantas
+## Cena 67 — Descer as gargantas
 
 A última parte foi pelas montanhas.
 
@@ -2022,7 +2142,7 @@ E se alguém fala, a voz enche o lugar todo.
 
 Então ninguém falou.
 
-## Cena 64 — O último dia
+## Cena 68 — O último dia
 
 Do último dia eu vou contar pouco.
 
@@ -2039,6 +2159,20 @@ O que eu me lembro do último dia não é o que você espera.
 Eu me lembro de estar segurando quatro cabrestos ao mesmo tempo, com a mão
 doendo, e de um dos camelos estar puxando para o lado.
 
+E me lembro do que me contaram depois, que é a coisa que eu mais repito quando
+alguém me pergunta dele.
+
+Na hora da carga, o inglês atirou no próprio camelo.
+
+Sem querer. Com a arma dele mesmo, na nuca do bicho, e o animal caiu de uma vez
+e ele foi arremessado no chão de pedra.
+
+E ficou lá, desacordado, enquanto o resto acontecia sem ele.
+
+Quando eu ouvi isso eu não ri. Nenhum cameleiro riria.
+
+Eu só pensei: pobre do animal, e pobre do homem, que vai carregar isso.
+
 Eu me lembro de um cheiro diferente no ar, que eu não soube identificar na
 hora.
 
@@ -2052,7 +2186,7 @@ E aí alguém disse: acabou.
 E eu não acreditei, e continuei segurando os cabrestos por mais um tempo, com a
 mão doendo, sem saber o que fazer com aquilo.
 
-## Cena 65 — O ar muda
+## Cena 69 — O ar muda
 
 Foi na descida final que eu senti.
 
@@ -2084,7 +2218,7 @@ Mas eu soube ali. E o homem na minha frente também tinha parado.
 
 A gente se olhou e ninguém falou nada.
 
-## Cena 66 — O cheiro de sal
+## Cena 70 — O cheiro de sal
 
 Depois veio o cheiro.
 
@@ -2112,7 +2246,7 @@ Mas eu virei a cabeça umas quinze vezes na meia hora seguinte.
 
 Só para conferir se continuava lá.
 
-## Cena 67 — O mar outra vez
+## Cena 71 — O mar outra vez
 
 A gente desceu até a beira.
 
@@ -2142,7 +2276,7 @@ Enquanto você está no meio, você não tem prova.
 
 Você só tem a palavra de um velho que disse que tinha um poço lá adiante.
 
-## Cena 68 — A água salgada
+## Cena 72 — A água salgada
 
 Eu me abaixei e botei a mão na água.
 
@@ -2170,7 +2304,7 @@ Eu levantei, sequei a mão na roupa, e fui cuidar dos animais.
 
 Que era o meu ofício, e que eu ia continuar fazendo por mais quarenta anos.
 
-## Cena 69 — O que ficou
+## Cena 73 — O que ficou
 
 E é mais ou menos isso.
 

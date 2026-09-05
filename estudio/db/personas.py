@@ -52,6 +52,10 @@ _CUES_PROIBIDOS = [
     (r"\b(at|in\s+the|during\s+the|late)\s+"
      r"(night|dawn|dusk|noon|sunset|sunrise|midnight|morning|afternoon|evening|twilight)\b"
      r"|\b(daytime|nighttime|golden\s+hour|blue\s+hour)\b"
+     # hora do dia SOLTA, sem preposição: "deep indigo night" na paleta pôs as
+     # 70 imagens do video-04 de noite, inclusive as que pediam meio-dia, e a
+     # regra de cima não pegava porque exigia "at"/"in the" antes.
+     r"|\b(night|dusk|dawn|midnight|midday|noon|sunset|sunrise)\b"
      r"|\b(morning|evening|afternoon|midday)\s+(light|sun|sky)\b",
      "hora do dia não pode ser fixada no estilo_base: ela vale para o vídeo "
      "inteiro e contradiz as cenas que se passam em outro momento (o video-03 "
