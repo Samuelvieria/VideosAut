@@ -23,7 +23,7 @@ saíram de coisas medidas:
 ## O texto
 
 ```
-Histórias originais para adultos dormirem.
+Histórias originais para dormir.
 
 Cada episódio é uma história escrita por nós — não é adaptação, não é conto
 de domínio público narrado, não é texto de outra pessoa lido em voz alta.
@@ -33,21 +33,42 @@ deitado, no escuro, com o volume baixo.
 Sem música. Sem interrupção. A narração vai devagar, e o som ambiente
 continua depois que a história acaba, para você não acordar no silêncio.
 
-O som de mar, chuva, vento e fogo é sintetizado por nós, não é gravação de
-biblioteca. A narração é gerada por síntese de voz e as imagens são geradas
-uma a uma, e isso está declarado em cada vídeo.
-
-Conteúdo para público adulto — insônia, ansiedade noturna, quem trabalha de
-madrugada, quem simplesmente não desliga. Não é conteúdo infantil.
-
-Novos episódios a cada duas ou três semanas.
+Para quem tem insônia, para quem trabalha de madrugada, para quem deita e
+não desliga.
 ```
 
-**830 caracteres.** Sobra folga para acrescentar contato ou redes depois.
+**527 caracteres.**  Sobra folga para acrescentar contato ou redes depois.
 
 ---
 
-## Decisões deste texto, e o que foi deixado de fora
+## Revisão de 05/09 — três cortes pedidos pelo Samuel
+
+**Saiu a palavra "adulto".** Ela aparecia duas vezes e soava defensiva —
+crítica justa de escrita. **O trabalho que ela fazia continua sendo feito**,
+por conteúdo em vez de rótulo: *"insônia, trabalha de madrugada, deita e não
+desliga"* não é lido como conteúdo infantil por ninguém. É mitigação mais fraca
+que a declaração explícita, e é melhor texto.
+
+**Saiu a promessa de cadência.** Estava errada e promessa de frequência que não
+se cumpre é pior que nenhuma. Se houver um número real, ele volta em uma linha.
+
+**Saiu o parágrafo de síntese de voz e imagem.** Vale separar duas coisas que
+ele misturava:
+
+- **A divulgação de conteúdo sintético é obrigatória, e ela é o TOGGLE no
+  Studio, por vídeo** — não este texto. O toggle continua ligado em todo upload
+  (decisão fixada no `CLAUDE.md`). Tirar daqui não muda nada de conformidade.
+- O que se perde é transparência voluntária, e a frase de que **o som é
+  sintetizado por nós, não é gravação de biblioteca** — que era um
+  diferenciador de ofício, não uma confissão. Ela pode voltar sozinha se você
+  quiser.
+
+**O que NÃO saiu, e não deve sair:** *"escrita por nós — não é adaptação, não é
+conto de domínio público narrado"*. Essa é a defesa contra a política de
+conteúdo reutilizado, e é a única linha aqui que existe por motivo de política,
+não de estilo.
+
+## Decisões do texto original, e o que foi deixado de fora
 
 **"Não é adaptação, não é conto de domínio público narrado"** é a frase mais
 importante, e é a única linha aqui que existe por causa de política. Ela é
