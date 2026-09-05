@@ -80,3 +80,45 @@ plano — ver seção "Licença" acima).
 
 `stereogenicstudio-beach-02` não está em `sons/` (só 11 dos 12 arquivos foram
 recuperados) — não é usado na regra atual.
+
+---
+
+## Lote de deserto — 05/09/2026
+
+Três arquivos baixados pelo Samuel depois da conversa sobre diversificar o
+ambiente, para o video-04 (Lawrence da Arábia).
+
+| arquivo | dur | LUFS | g/m/a | estab | veredito |
+|---|---|---|---|---|---|
+| `tanweraman-desert-wind-2` | 32s | −23,6 | 53/100/12 | 2,5 dB | **usar** — médio dominante, que é vento |
+| `freesound_community-desert-monolith` | 85s | −35,2 | 100/93/17 | 8,6 dB | reserva — muito quieto e com eventos |
+| `dragon-studio-desert-sand-dunes` | 282s | −30,2 | 100/6/1 | **1,1 dB** | **DESCARTADO — tonal** |
+
+### O descarte é o achado do lote
+
+O `sand-dunes` tinha **a melhor estabilidade de toda a biblioteca** (1,1 dB,
+empatado com o `soul_serenity_sounds`) e 282 s de duração, que cobriria uma cena
+inteira sem repetir. Era o melhor arquivo por todos os critérios antigos.
+
+E é tonal: **1600 Hz com harmônicos em 3200 e 4800**. Isso é uma série
+harmônica, que é a assinatura de um tom — provavelmente um pad sintetizado, não
+uma gravação de campo. Mesmo caso do `universfield-atmospheric-cinematic`, que
+este documento já mandava evitar.
+
+**Content ID casa música, e drone tonal é o que ele casa.** Um arquivo de
+biblioteca livre não protege contra reivindicação de terceiro que registrou o
+material.
+
+### A medição que quase deixou passar
+
+O primeiro teste comparou cada pico contra a **mediana global** do espectro e
+deu o veredito ao contrário: acusou o `sand-dunes` de tonal pelo motivo errado
+(concentração larga de grave em 60–72 Hz, que é rumor) e absolveu o
+`desert-monolith`.
+
+O teste que serve compara o pico contra a **envoltória local** e depois procura
+**harmônicos em 2×, 3× e 4×**. Tom tem harmônicos; rumor não. Sem essa segunda
+passada o arquivo tonal teria entrado e o arquivo bom teria sido descartado.
+
+Fica como regra: **avaliar tom por estrutura harmônica, nunca por altura de
+pico.**

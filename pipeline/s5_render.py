@@ -153,12 +153,23 @@ CROSSFADE = 3.0   # transição entre ambientes de cena; cai junto com o fade do
 SONS = RAIZ / "sons"
 _TEMPESTADE = SONS / "loswin23-thunderstorm-2-516370.mp3"
 _MAR_CAMA = SONS / "enternalrainsounds-light-rain-with-gentle-ocean-waves-mix-420329.mp3"
+# Só 32 s, então dá ~4 voltas numa cena de 2 min. Aceitável porque entra a 0,22
+# sob a síntese, não em primeiro plano — e o deslocamento por cena impede que
+# duas cenas comecem no mesmo trecho. O arquivo com melhor estabilidade do lote
+# de deserto (dragon-studio-sand-dunes, estab 1,1 dB) foi DESCARTADO: tem 1600 Hz
+# com harmônicos em 3200 e 4800, e série harmônica é assinatura de tom.
+# Ver docs/biblioteca-sons.md.
+_DESERTO = SONS / "tanweraman-desert-wind-2-350417.mp3"
 
 
 def _escolher_gravado(cfg: dict) -> tuple[Path, float] | None:
-    chuva, mar = cfg.get("chuva", 0), cfg.get("mar", 0)
+    chuva, mar, areia = cfg.get("chuva", 0), cfg.get("mar", 0), cfg.get("areia", 0)
     if chuva >= 0.5 and _TEMPESTADE.is_file():
         return _TEMPESTADE, 0.35 * chuva
+    # deserto: `areia` só aparece em cena de deserto, então serve de chave sem
+    # precisar de campo novo — mesma lógica de chuva/mar acima
+    if areia >= 0.3 and _DESERTO.is_file():
+        return _DESERTO, 0.22 * areia
     if mar >= 0.3 and not cfg.get("abafado") and _MAR_CAMA.is_file():
         return _MAR_CAMA, 0.25 * mar
     return None
