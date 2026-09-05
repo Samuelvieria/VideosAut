@@ -69,12 +69,15 @@ AVATARES = {
         7103,
         "ícone mínimo — o único que ainda lê a 24px",
     ),
-    # SEGUNDA RODADA. A primeira ensinou duas coisas. Uma: a 48px só sobrevive
-    # forma sólida com contraste alto — a pixel art e a pintura viraram borrão
-    # escuro. Outra: o modelo IGNOROU "16-bit pixel art" em 1024x1024 quadrado e
-    # entregou farol realista, então não dá para contar com esse estilo aqui.
-    # Estas três mantêm a força de ícone do C e trocam a lua, que é o símbolo de
-    # sono mais genérico que existe, por algo que diz o que NÓS narramos.
+    # SEGUNDA RODADA. A primeira ensinou que a 48px só sobrevive forma sólida com
+    # contraste alto — a pixel art e a pintura viraram borrão escuro.
+    #
+    # CORREÇÃO de 05/09: eu havia escrito aqui que o modelo "ignorou pixel art e
+    # entregou farol realista". Errado — eu julguei pela miniatura da folha. Em
+    # tamanho real o A é pixel art legítima, com blocos visíveis na torre e o
+    # reflexo em traços discretos. O Samuel viu e corrigiu. O que falha no A não
+    # é o estilo, é a COMPOSIÇÃO: assunto pequeno no quadro, azul escuro sobre
+    # azul escuro. Ver a terceira rodada.
     "D_farol": (
         "minimal flat icon, bold silhouette of a lighthouse tower, a single warm "
         "amber beam of light sweeping out from its top across a deep navy field, "
@@ -100,6 +103,48 @@ AVATARES = {
         "lua cheia sobre água — mais peso que a crescente, ainda lê pequeno",
     ),
 }
+
+# TERCEIRA RODADA — pixel art, agora composta para o recorte circular.
+# O A provou que o estilo funciona; o que não funcionava era o enquadramento.
+# Aqui o assunto OCUPA o quadro e a luz quente é grande o bastante para
+# sobreviver ao recorte de 48px. Mesma paleta navy/âmbar dos vídeos.
+PIXEL = {
+    "G_lanterna": (
+        "16-bit pixel art, extreme close-up of the top of a lighthouse at night, "
+        "the lantern room filling most of the frame, one big glowing warm amber "
+        "window, dark navy night sky behind, chunky visible pixels, large simple "
+        "blocks, limited palette of navy and amber, very high contrast, centered, "
+        "no text, no letters",
+        7201,
+        "a lanterna de perto — a luz vira a forma dominante",
+    ),
+    "H_lua_mar": (
+        "16-bit pixel art, a huge warm amber crescent moon filling the upper half "
+        "of the frame above a dark navy pixel sea, dashed pixel reflection on the "
+        "water, chunky visible pixels, limited palette of navy and amber, very high "
+        "contrast, centered, no text, no letters",
+        7202,
+        "lua grande sobre mar de pixel — a mais legível de todas",
+    ),
+    "I_farol_lua": (
+        "16-bit pixel art, a small dark lighthouse silhouette on the horizon in "
+        "front of a huge warm amber full moon rising behind it, dark navy pixel sea "
+        "below with dashed reflection, chunky visible pixels, limited palette, very "
+        "high contrast, centered, no text, no letters",
+        7203,
+        "o farol do A, mas recortado contra uma lua que carrega o contraste",
+    ),
+    "J_janela": (
+        "16-bit pixel art, close-up of a dark stone tower wall at night, one large "
+        "warm amber lit window in the center filling much of the frame, chunky "
+        "visible pixels, deep navy and amber palette, very high contrast, centered, "
+        "no text, no letters",
+        7204,
+        "só a janela acesa — alguém ficou acordado por você",
+    ),
+}
+
+SERIES = {"icone": AVATARES, "pixel": PIXEL}
 
 
 def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
@@ -129,6 +174,7 @@ def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Ativos do canal.")
     ap.add_argument("--avatar", action="store_true")
+    ap.add_argument("--serie", default="icone", choices=list(SERIES))
     ap.add_argument("--forcar", action="store_true")
     a = ap.parse_args()
     if not a.avatar:
@@ -137,7 +183,7 @@ def main() -> None:
     DESTINO.mkdir(parents=True, exist_ok=True)
     chave = obter("FAL_KEY")
     feitos = []
-    for nome, (prompt, seed, porque) in AVATARES.items():
+    for nome, (prompt, seed, porque) in SERIES[a.serie].items():
         f = DESTINO / f"avatar_{nome}.png"
         if f.is_file() and not a.forcar:
             log(f"já existe {nome}")
@@ -145,9 +191,9 @@ def main() -> None:
             f.write_bytes(gerar(prompt, seed, chave, LADO, LADO))
             log(f"gerada {nome} — {porque}")
         feitos.append((nome, f))
-    folha_contato(feitos, DESTINO / "avatar_contato.png")
+    folha_contato(feitos, DESTINO / f"avatar_contato_{a.serie}.png")
     print(f"\nOK — {len(feitos)} candidatas em {DESTINO}")
-    print(f"     folha: {DESTINO / 'avatar_contato.png'} (a fileira de baixo é o tamanho real)")
+    print(f"     folha: {DESTINO / f'avatar_contato_{a.serie}.png'} (a fileira de baixo é o tamanho real)")
 
 
 if __name__ == "__main__":
