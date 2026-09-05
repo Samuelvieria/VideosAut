@@ -37,6 +37,7 @@ PPM_GOOGLE = 127
 FAIXA_MERCADO = (65, 170)  # minutos; docs/mercado.md §2
 USD_POR_MP = 0.005         # fal.ai Z-Image-Turbo
 BRL_POR_USD = 5.10
+SALDO_PISO_USD = 5.0       # abaixo disto, avisa antes de a produção travar
 
 # Cues que já custaram uma rodada de erro. Espelha estudio/db/personas.py, mas
 # o pipeline NÃO importa de estudio/ (ver a regra em estudio/main.py), então a
@@ -325,10 +326,45 @@ def conferir(proj: Path) -> Resultado:
     mp = res[0] * res[1] / 1_000_000
     n_img = len(narradas) + 3
     usd = n_img * mp * USD_POR_MP
+    custo = usd * BRL_POR_USD
+    custo_ret = custo * 2.5
     r.ok(f"{n_img} imagens a {res[0]}x{res[1]} = US$ {usd:.2f} "
-         f"(R$ {usd*BRL_POR_USD:.2f}); com retentativa 2,5x, "
-         f"R$ {usd*BRL_POR_USD*2.5:.2f}")
+         f"(R$ {custo:.2f}); com retentativa 2,5x, R$ {custo_ret:.2f}")
+
+    # saldo: o custo acima não serve de nada se não houver crédito para pagá-lo
+    saldo = _saldo_fal()
+    if saldo is None:
+        r.aviso("não deu para ler o saldo da fal.ai (sem rede ou sem chave)")
+    elif saldo < custo_ret / BRL_POR_USD:
+        r.erro(f"saldo da fal.ai US$ {saldo:.2f} NÃO cobre este vídeo "
+               f"(precisa de US$ {custo_ret/BRL_POR_USD:.2f} no pior caso)")
+    elif saldo < SALDO_PISO_USD:
+        r.aviso(f"saldo da fal.ai US$ {saldo:.2f}, abaixo do piso de "
+                f"US$ {SALDO_PISO_USD:.0f} — recarregue antes do próximo vídeo")
+    else:
+        r.ok(f"saldo fal.ai US$ {saldo:.2f} (R$ {saldo*BRL_POR_USD:.0f}) — "
+             f"cobre ~{int(saldo*BRL_POR_USD/max(custo_ret,0.01))} vídeos como este")
     return r
+
+
+def _saldo_fal() -> float | None:
+    """Saldo da fal.ai em dólares, ou None se não der para ler.
+
+    Existe para o vídeo não morrer no meio: gerar 74 imagens leva minutos, e
+    descobrir que o crédito acabou na imagem 60 custa o dobro do tempo. Falha
+    em silêncio de propósito — sem rede, o preflight ainda serve para tudo o
+    mais, e travar a conferência por causa disso seria pior que não conferir.
+    """
+    import urllib.request
+    from pipeline.config import obter
+    try:
+        req = urllib.request.Request(
+            "https://rest.alpha.fal.ai/billing/user_balance",
+            headers={"Authorization": f"Key {obter('FAL_KEY', obrigatorio=False)}"})
+        with urllib.request.urlopen(req, timeout=10) as f:
+            return float(f.read().decode())
+    except Exception:
+        return None
 
 
 def main() -> None:
