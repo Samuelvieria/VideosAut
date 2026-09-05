@@ -180,6 +180,16 @@ Quando a obra-fonte for histórica (ex.: Moby-Dick, 1851): **o texto original é
 traduções publicadas são obra autoral protegida.** A adaptação em português tem que ser
 escrita por nós, nunca colada de tradução em catálogo.
 
+**Faltava um eixo aqui, achado em 05/09/2026.** Domínio público resolve DIREITO
+AUTORAL e **não resolve POLÍTICA DE MONETIZAÇÃO** — são independentes, e a
+política diz isso explicitamente. "Conteúdo que apresenta exclusivamente
+leituras de outros materiais que você não criou originalmente" é não
+monetizável **mesmo sem violar copyright nenhum**, e vale para o canal inteiro.
+O video-02 (Moby Dick) fica exposto por esse eixo; a defesa é que a adaptação é
+nossa, e ela precisa de **prova guardada com data**, não de explicação. O
+video-03 é original do zero e não tem o problema. Ver
+[docs/consultas/nicho-sono-politica.md](docs/consultas/nicho-sono-politica.md) §2.
+
 ## Hardware e perfis
 
 Máquina atual: MacBook Pro **M2, 8 GB, 8 CPUs, sem GPU**. Migração para workstation
@@ -192,6 +202,40 @@ paralelismo. Forçar com `PERFIL=teste|m2-8gb|workstation`.
 Gargalo medido: `s4_legendas` com `large-v3` em CPU roda a **3,44× realtime** —
 ~87 min por vídeo. `s2_tts` leva ~12 min e `s5_render` 8 min. A máquina nova compra
 de volta basicamente o tempo de legenda.
+
+## Prazo e política — levantado em 05/09/2026
+
+**01/02/2027: o YPP dobra para 8.000 horas** para quem entra novo (verificado no
+blog oficial do YouTube; quem já está dentro não muda). Faltam ~5 meses e temos
+dois vídeos publicados. Isso dá um **segundo** motivo, independente do mercado,
+para o vídeo ser longo: a 3 h com AVD de 40 min bastam ~6.000 views para as
+4.000 horas, contra 60.000 de um canal de 10 min.
+
+**Made for Kids é risco existencial neste nicho, não detalhe de upload.** O
+classificador pode sobrepor a nossa declaração, e "histórias" está na lista
+oficial de indicadores de conteúdo infantil. Se marcar, desligam anúncio
+personalizado, comentários, **notificação de inscrito**, memberships e Super
+Thanks — a economia inteira. Duas exposições nossas: o título do video-02 lidera
+com "História para Dormir", e **a pixel art é linguagem de jogo**, contra a
+recomendação de visual adulto (fotografia/pintura). Não é para mudar a pixel
+art agora — é para saber que a decisão tem esse custo, e conferir a declaração
+de audiência dos dois vídeos no Studio.
+
+**O que a política PREMIA, e nós não temos: universo recorrente.** O texto
+oficial permite explicitamente "uma série seguindo um conjunto de personagens ao
+longo de episódios, em que cada vídeo tem enredo, foco ou conceito distinto".
+Temos originalidade e variação; **não temos continuidade** — video-02 é Moby
+Dick, video-03 é um farol grego, nada liga os dois. O Demétrio do video-03 já é
+moldura de universo e não foi projetado como tal.
+
+**"Mesmo formato" não é o problema; substância intercambiável é.** Identidade
+visual, intro e formato constantes são explicitamente permitidos. Isso alivia a
+ansiedade registrada acima sobre formato idêntico e aperta a exigência sobre
+enredo.
+
+**Mid-roll desligado deixou de ser preferência.** A página oficial de anúncios
+nomeia "vídeos de meditação" como exemplo de conteúdo em que desativar mid-roll
+é o certo.
 
 ## Não pular a Fase 0
 
