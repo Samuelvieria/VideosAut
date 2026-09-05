@@ -2,6 +2,29 @@
 
 Carregado sob demanda pela skill `qualidade-producao-video`.
 
+## Onde mora um valor aprovado de ouvido (custou o mesmo defeito duas vezes)
+
+**Valor aprovado de ouvido sobe para `MIXAGEM_PADRAO` no código. `plano.json`
+guarda só o que é específico daquele vídeo — nunca a calibração do canal.**
+
+- O que aconteceu: em 04/09/2026 o video-03 saiu com eco de ambiente, um
+  defeito que o Samuel já tinha rejeitado no video-02. A correção do video-02
+  (`ambiente_reverb: 0.0`, `ganho: 0.3`, `lowpass: 3500`) tinha sido gravada
+  como **override no `plano.json` daquele vídeo**, e o `MIXAGEM_PADRAO`
+  continuou com os números calculados por medição, que ninguém nunca escutou
+  (`reverb: 0.7`, `ganho: 1.0`, `lowpass: 5500`). O video-03 foi escrito sem
+  overrides — "usa o padrão" — e herdou exatamente o que já tinha sido
+  rejeitado.
+- Por que é traiçoeiro: o vídeo corrigido continua correto, então nada
+  aponta o problema. A regressão só aparece no vídeo SEGUINTE, e parece
+  defeito novo.
+- **Nos dois casos a medição perdeu do ouvido.** `ambiente_ganho: 1.0` foi
+  calculado com stem isolado dando 13,6dB de gap, dentro do alvo teórico —
+  e de ouvido ainda soava alto; ficou 0.3. Isso não é motivo para parar de
+  medir: é motivo para tratar a medição como ponto de partida e o
+  julgamento auditivo como decisão final, e para o resultado do julgamento
+  ir para onde o próximo vídeo vai buscar.
+
 ## Mixagem de áudio (`pipeline/s5_render.py::mixar`)
 
 **Alvo de masterização final: -14 LUFS integrado / -1 dBTP, não -18.**
@@ -184,31 +207,41 @@ do `ambiente` da cena liga.
 Camadas: `mar`, `chuva`, `fogo`, `vento`, mais `abafado` (booleano) e `_`
 (descrição em texto do lugar, só para leitura humana).
 
-## Os valores de mixagem que cada vídeo usou
+## Os valores de mixagem: o que a medição propôs e o que o ouvido decidiu
 
 `MIXAGEM_PADRAO` em `s5_render.py` é o ponto de partida; o bloco `mixagem` do
 `plano.json` sobrepõe, e o mixer do estúdio edita esse bloco sem tocar em código.
 
-| | padrão | video-02 | |
-|---|---|---|---|
-| `voz_ganho` | 1.0 | 0.6 | |
-| `voz_reverb` | 0.5 | 0.45 | |
-| `voz_deesser` | 0.4 | 0.25 | |
-| `ambiente_ganho` | 1.0 | 0.3 | |
-| `ambiente_reverb` | **0.0** | 0.0 | corrigido de ouvido |
-| `ambiente_lowpass_hz` | 5500 | 3500 | |
-| `duck_threshold` | 0.05 | 0.05 | |
-| `duck_ratio` | 2 | 2.0 | |
-| `duck_attack_ms` | 200 | 170 | |
-| `duck_release_ms` | 2000 | 1600 | |
+| | calculado por medição | **aprovado de ouvido — é o padrão hoje** |
+|---|---|---|
+| `voz_ganho` | 1.0 | **0.6** |
+| `voz_reverb` | 0.5 | **0.45** |
+| `voz_deesser` | 0.4 | **0.25** |
+| `ambiente_ganho` | 1.0 | **0.3** |
+| `ambiente_reverb` | 0.7 | **0.0** |
+| `ambiente_lowpass_hz` | 5500 | **3500** |
+| `duck_threshold` | 0.05 | 0.05 |
+| `duck_ratio` | 2 | 2 |
+| `duck_attack_ms` | 200 | **170** |
+| `duck_release_ms` | 2000 | **1600** |
 
-A divergência de NÍVEL é intencional: os dois conjuntos entraram no mesmo commit
-da remasterização para −14 LUFS, e o video-02 ficou preso aos valores dele para
-não mudar de som depois de aprovado. **Não promova esses números para o padrão
-sem ouvir** — eles foram calibrados para `pm_santa` a `speed` 0.60.
+A coluna da esquerda é histórica: **em oito dos dez valores a medição perdeu do
+ouvido**, e nos dois que sobraram ela não tinha nada a decidir. Vale guardar
+porque explica por que os números do meio nunca voltam.
 
-O `ambiente_reverb` é outra história, e é a lição desta seção: ele foi corrigido
-**só no plano do video-02** em 03/09/2026 e o padrão ficou em 0.7. O video-03
-herdou 0.7 e foi renderizado com a granulação de volta — descoberta só depois do
-render, quando o vídeo já estava pronto para publicar. Desde então o `preflight`
-avisa quando o eco do ambiente está ligado.
+**Não há mais divergência: em 04/09/2026 os oito valores do video-02 subiram
+para o padrão**, por decisão do Samuel ("deixa como estava no video 2 o padrão
+da mix"). Os números do meio da tabela ficam como registro histórico do que a
+medição tinha proposto e o ouvido reprovou.
+
+Eu havia argumentado contra promover os NÍVEIS, com a razão de que foram
+calibrados para `pm_santa` a `speed` 0.60 e o video-03 usa 0.75. O argumento era
+fraco por dois motivos que só apareceram depois: o `voz_ganho` entra ANTES do
+leveler dinâmico da voz, que renormaliza logo em seguida, então seu efeito no
+nível final é pequeno; e o video-03 foi de fato remixado com os valores
+promovidos e medido — narração −14,31 LUFS, cauda −17,25, TP −1,42/−1,45,
+LRA 4,4/3,1. Deixar o padrão em números que ninguém escutou custava um defeito
+por vídeo; a preocupação com a `speed` era hipótese, o defeito era real.
+
+Desde então o `preflight` avisa quando o eco do ambiente está ligado, e manda
+ouvir a cauda.
