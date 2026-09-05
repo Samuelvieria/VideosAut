@@ -2,23 +2,30 @@
 
 Análise completa em [docs/viabilidade-tecnica.md](docs/viabilidade-tecnica.md).
 **Estado atual, custo por vídeo e ordem das frentes abertas em
-[docs/estado-e-direcao.md](docs/estado-e-direcao.md)** (03/09/2026) — comece por
-ele. Resumo das decisões de arquitetura já tomadas — não reabrir essas
+[docs/estado-e-direcao.md](docs/estado-e-direcao.md)** (05/09/2026) — comece por
+ele. O retrato anterior virou `docs/estado-04-09.md`, mantido como histórico. Resumo das decisões de arquitetura já tomadas — não reabrir essas
 discussões sem motivo novo:
 
 ## Decisões fixadas
 
 - **Zero editor de vídeo.** Tudo em FFmpeg puro (render, mix de áudio, concat).
   Nada de DaVinci/Premiere/CapCut.
-- **Formato: 30 min, não 1–3 h.** Decidido em 26/08/2026. A duração é um *parâmetro*,
-  não uma constante — o pipeline é idêntico para 30 min e 3 h, muda o número de cenas
-  e o `-t`. Se a retenção pedir formato longo depois, é um número, não uma reescrita.
-  **CONTRARIADO PELO MERCADO em 04/09/2026.** Medido em [docs/mercado.md](docs/mercado.md):
-  não existe **um só** caso de sucesso na amostra perto de 30–41 min. A faixa que funciona
-  em narrativa é **65–170 min**; ambiente é medido em horas. O padrão de projeto novo
-  no estúdio já nasce em **75 min** (mediana do History at Night). O video-02 tem 41 e o
-  video-03 foi planejado com 30 — este último ainda não foi produzido, então mudar é
-  barato agora e caro depois.
+- **Formato: 120 min.** A decisão original era 30 min (26/08/2026) e caiu por
+  três medições independentes, nesta ordem:
+  1. **04/09** — [mercado.md](docs/mercado.md): nenhum caso de sucesso na amostra
+     perto de 30–41 min; a faixa que funciona em narrativa é 65–170. Padrão foi
+     para 75.
+  2. **05/09** — [ingles-canal-separado.md](docs/ingles-canal-separado.md): a
+     mediana do segmento em INGLÊS, onde o nosso produto de fato existe, é
+     **147 min**. Em pt-BR é 25, porque lá o nicho é infantil.
+  3. **05/09** — o YPP dobra para 8.000 h em **01/02/2027**. A 40 min de AVD, um
+     vídeo de 3 h precisa de 6.000 views para as 4.000 horas; um de 10 min
+     precisa de 60.000. **Duração é a alavanca mais forte que temos sobre o
+     prazo.**
+
+  Padrão do estúdio: **120 min · 127 ppm · 14.097 palavras**. A duração continua
+  sendo parâmetro, não constante — mas agora o que a limita é quanto se escreve,
+  não o pipeline.
 - **N imagens em sequência, não 1 imagem estática.** Referência de formato:
   narração + sequência de cenas ilustradas, sem vídeo real. ~20 cenas em 30 min.
 - **Claude Code é o engenheiro, não o servidor de produção.** Quem roda em produção é um
@@ -37,6 +44,14 @@ discussões sem motivo novo:
   em projetos de API não auditados (armadilha nº1 da seção 5).
 - **Áudio ambiente gerado proceduralmente** (brown/pink noise via FFmpeg `anoisesrc`), nunca
   música de terceiros sem whitelist de Content ID. É a única fonte impossível de dar match.
+- **Inglês por FAIXA DE ÁUDIO, não por canal separado.** Decidido em 05/09/2026
+  depois de medir 225 vídeos. Um vídeo, duas faixas, dois títulos, duas
+  descrições — e **um só patamar de YPP**, o que importa com 5 meses de prazo e
+  3 inscritos. A imagem e o ambiente não têm idioma, e a mesma voz existe em
+  pt-BR e en-US com o mesmo timbre. Custo real: a faixa tem que bater a duração
+  do vídeo, o que obriga **adaptação presa ao tempo das cenas**, não roteiro
+  reescrito livre. Gatilho para reabrir: quando as horas em inglês superarem as
+  em português. Ver [docs/ingles-canal-separado.md](docs/ingles-canal-separado.md).
 - **Legendas sempre soft (`captions.insert`), nunca queimadas** — permite multi-idioma sem
   re-renderizar e não atrapalha o objetivo do conteúdo (texto na tela é contraproducente
   em vídeo de sono).
@@ -256,6 +271,22 @@ enredo.
 **Mid-roll desligado deixou de ser preferência.** A página oficial de anúncios
 nomeia "vídeos de meditação" como exemplo de conteúdo em que desativar mid-roll
 é o certo.
+
+## O gargalo é inscrito, não hora — medido em 05/09/2026
+
+3 inscritos, 317 views, ~1% de conversão. As 4.000 horas são a parte fácil deste
+nicho; 500 a 1.000 inscritos, não. E **o formato suprime o mecanismo padrão de
+conversão**: todo conselho manda pedir inscrição dentro do vídeo, e quem acorda
+com pedido não volta. Isso é estrutural.
+
+Sobram os canais silenciosos, e o mais forte deles nunca foi ligado: **a marca
+d'água de inscrição** (imagem no canto, não faz som). Depois dela, **playlist
+com reprodução automática** — quem assiste dois, três, quatro vídeos se
+inscreve. O canal tem **zero playlists**.
+
+Isso é também o argumento mais forte para o **universo recorrente**: quem dorme
+com um vídeo solto não tem motivo para voltar; quem dorme com o episódio 3 de
+uma série tem.
 
 ## Não pular a Fase 0
 
