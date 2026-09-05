@@ -104,14 +104,39 @@ som ambiente para dormir
 
 ## Descrição
 
+Revisada em 04/09 por dois defeitos medidos na versão anterior, ambos contra
+regra que já estava escrita nos nossos próprios docs:
+
+1. **180 palavras.** A regra é ≥200 — descrição curta rende menos em busca.
+2. **A palavra-chave não estava na primeira frase.** `som de mar` aparecia só
+   na segunda. O termo com busca tem que abrir a descrição, como abre o título.
+
+O que **não** mudou, de propósito: a honestidade sobre síntese de voz e imagem,
+a promessa dos nove minutos de mar depois da história, e a instrução de ouvir
+deitado com volume baixo. Ganhou também o aviso de não ouvir dirigindo, que já
+está falado nos primeiros 30 s do áudio e não custa nada repetir aqui.
+
 ```
-Um velho faroleiro grego conta a noite em que uma luz apareceu no mar aberto e
-respondeu ao sinal dele. Som de mar, de vento e da fogueira do farol por trás.
+Som de mar e fogueira para dormir, com a história de um velho faroleiro grego —
+a noite em que uma luz apareceu no mar aberto e respondeu ao sinal dele.
 
 Sem música. Sem interrupção. A narração vai devagar, e o mar continua por mais
 nove minutos depois que a história acaba, para você não acordar no silêncio.
 
-Feito para ouvir deitado, no escuro, com o volume baixo.
+Feito para ouvir deitado, no escuro, com o volume baixo. Não escute enquanto
+dirige ou opera máquinas.
+
+──────────────
+
+O que você vai ouvir
+
+Som de mar, de vento e do fogo do farol — uma bacia de óleo queimando no alto
+de uma torre de pedra. Não tem chuva, não tem música, não tem sino nem
+sobressalto: nada no áudio sobe de volume de repente.
+
+A voz é a de Demétrio, um homem velho contando uma noite da própria juventude.
+Ele fala devagar, e a história não tem clímax nem final surpreendente. Ninguém
+precisa chegar ao fim — se você dormir no meio, ela era para isso.
 
 ──────────────
 
@@ -150,6 +175,53 @@ noturna na miniatura.
 
 ---
 
+## Playlists — o buraco maior desta lista
+
+Auditando esta página em 04/09 contra a nossa própria estratégia de canal, esse
+foi o único item que **não existia em lugar nenhum**: nem aqui, nem no
+`monetizacao.md`, nem no checklist. Só aparecia nas consultas a modelos
+externos, que os três levantaram sem serem perguntados.
+
+Por que importa mais neste nicho que em qualquer outro: **o espectador quer
+fluxo contínuo sem decidir nada.** Ele está deitado, no escuro, com um dedo.
+Playlist com autoplay não é organização de catálogo — é o produto. Quem dorme
+no video-03 e emenda no video-02 dá duas sessões pelo preço de uma, e tempo de
+exibição é exatamente a métrica que abre o YPP.
+
+Com **dois** vídeos publicados isso já funciona, e é a alavanca mais barata que
+existe agora: não custa render, não custa API, não custa roteiro.
+
+O que criar (nome com o termo que tem busca, não com o nome que inventamos):
+
+| playlist | o que entra | por quê |
+|---|---|---|
+| **Som de Mar para Dormir** | video-02 e video-03 | os dois têm mar; é a que forma a corrente de sessão |
+| **Histórias Longas para Dormir** | os dois | agrupa por formato, pega quem busca por duração |
+| **Todos os Vídeos — Ordem de Publicação** | os dois | catálogo; barata de manter |
+
+Duas coisas para não errar:
+
+- **Descrição e título da playlist também são indexados** — escrever o termo de
+  busca neles, não deixar em branco.
+- Adicionar o **video-02 também**, não só este. Ele já está no ar e hoje não
+  está em playlist nenhuma, então não puxa ninguém para lugar algum.
+
+## Teste A/B de miniatura — dá para usar, com uma ordem específica
+
+Nós já geramos **três** miniaturas, que é exatamente o que o teste nativo do
+YouTube aceita. Escolher uma no olho joga fora uma medição de graça.
+
+Dois detalhes operacionais que mudam a ordem do checklist:
+
+- **Vídeo privado não entra no teste.** O teste só existe para vídeo público ou
+  não listado — então ele é montado DEPOIS da revisão, não junto do upload.
+- Exige **recursos avançados** ativados em Studio → Configurações → Canal →
+  Qualificação para recursos → Recursos avançados. Se o botão não aparecer, é
+  aqui que se olha primeiro.
+- O teste **não penaliza** o vídeo que participa.
+
+Fontes: [guia de teste A/B](https://www.thumbmagic.co/blog/ab-test-youtube-thumbnails).
+
 ## Checklist ao publicar
 
 - [ ] Visibilidade **privada** até você revisar
@@ -163,3 +235,12 @@ noturna na miniatura.
       213 caracteres e dois de duração zero.
 - [ ] Capítulos: decisão em aberto (ver `video-02/metadados-revisados.md`); se
       testar, precisa de três ou mais marcações começando em `00:00`
+
+Depois de tornar público (nesta ordem, porque privado não aceita as duas
+últimas):
+
+- [ ] Adicionar às **3 playlists** da seção acima — e pôr o **video-02** nelas
+      também, que hoje não está em nenhuma
+- [ ] Montar o **teste A/B** com as três miniaturas já geradas
+- [ ] Horário: a hipótese do doc de estratégia é publicar 3–5 h antes do pico de
+      sono (~17h–19h BRT). É hipótese, não dado — vale medir no Studio depois
