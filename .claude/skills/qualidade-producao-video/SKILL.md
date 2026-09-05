@@ -176,8 +176,7 @@ opinião.** Dizer que a promessa é de 1915 e o acordo de repartição é de 191
 toma partido. Dizer quem foi vilão, sim.
 
 Verificação obrigatória em roteiro novo: **ele diz POR QUE as pessoas fazem o
-que fazem?** Se não diz, falta o principal. Detalhe em
-[`docs/voz.md`](../../../docs/voz.md).
+que fazem?** Se não diz, falta o principal. Detalhe em [`docs/roteiro.md`](../../../docs/roteiro.md) §2.
 
 ## O que faz dormir — a regra que vem antes das outras
 
@@ -188,7 +187,7 @@ Um aviso de "isto pode acordar o ouvinte" sobre um ACONTECIMENTO quase sempre
 está errado — vale sobre a entrega (grito, estouro, aceleração, vinheta, pedido
 de inscrição), não sobre o conteúdo. Em 05/09/2026 eu amaciei cinco passagens
 do video-04 por causa de uma lista dessas, e quatro eram as melhores do
-roteiro. Detalhe e exemplo em [`docs/voz.md`](../../../docs/voz.md).
+roteiro. Detalhe e exemplo em [`docs/roteiro.md`](../../../docs/roteiro.md) §1.
 
 **E não anunciar o que a história não tem.** "Não tem batalha, não tem herói" é
 pedir desculpa pelo produto nos 90 segundos em que o espectador decide ficar.

@@ -13,112 +13,12 @@ qualquer idioma, tem que passar nestes números antes de virar áudio.
 As regras foram extraídas medindo o roteiro do vídeo 02, que já foi aprovado de
 ouvido. Elas descrevem o que ele **é**, não o que eu gostaria que fosse.
 
-## A regra que veio antes de todas — 05/09/2026
-
-**O sono vem da ENTREGA, não do enredo.** Uma história boa contada devagar faz
-dormir. Uma história sem nada em jogo, contada devagar, só é chata.
-
-Isto está escrito porque eu errei nos dois primeiros vídeos, e o Samuel
-apontou: *"os roteiros fogem de ser interessantes para causar o sono, e isso
-deixa o produto pior."* Ele tem razão, e dá para mostrar onde.
-
-Na revisão do video-04 chegou uma lista de "trechos que podem acordar o
-ouvinte". Tratei a lista inteira como defeito e amaciei cinco passagens. **Quatro
-das cinco eram as melhores do roteiro.**
-
-O caso mais claro é o camelo que ficou para trás. Antes:
-
-> *"E deixaram ele ali, deitado, com a cabeça erguida, olhando a gente ir
-> embora. Ninguém olhou para trás, tirando eu, que olhei duas vezes. Na segunda
-> vez ele ainda estava com a cabeça levantada."*
-
-Depois de eu "corrigir":
-
-> *"Deixaram um odre pequeno perto dele... camelo descansado levanta sozinho
-> depois de um tempo. Foi o que o guia disse, e eu escolhi acreditar."*
-
-Troquei a imagem que um homem carregaria por cinquenta anos por um consolo.
-Piorei a escrita para deixar mais segura.
-
-### O que de fato acorda, e o que não acorda
-
-| acorda | não acorda |
-|---|---|
-| pico de volume, som súbito, vinheta | uma perda contada em voz baixa |
-| quebra de ritmo, frase acelerada | um dilema moral, se a fala não muda de andamento |
-| pedido de like, inscrição, comentário | tensão que se resolve sem grito |
-| mudança brusca de ambiente entre cenas | um final que não consola |
-
-**Um aviso de "isto pode acordar" sobre um ACONTECIMENTO quase sempre está
-errado.** O aviso vale sobre a ENTREGA — grito, estouro, aceleração. Conteúdo
-duro dito com calma é o que faz a pessoa continuar ouvindo, e continuar ouvindo
-é a única forma de ela adormecer ouvindo.
-
-### E não anunciar o que a história não tem
-
-A abertura do video-04 diz: *"Não tem batalha aqui. Não tem herói. Não tem
-ninguém salvando ninguém no fim."*
-
-Isso é pedir desculpa pelo produto nos noventa segundos em que o espectador
-decide se fica. Se a história é boa, ela não precisa de aviso; se precisa de
-aviso, o problema é a história.
-
-**Nos próximos: a história é boa do jeito que ela é.** O que fica calmo é a
-voz, a pausa, o ambiente e a ausência de sobressalto — não o enredo.
-
-## Não fugir da ideia que a obra tem
-
-Segunda correção do mesmo dia, e mais afiada que a primeira. O Samuel:
-*"filosofia é entrar nas ideias pragmáticas das obras, e nós não devemos ser
-covardes e fugir delas."*
-
-Filosofia aqui **não é o narrador ser sábio**. É o episódio encarar o que o
-assunto de fato levanta.
-
-### O que eu tinha feito
-
-O roteiro do video-04 não dizia, em duas horas, **por que aquelas quarenta
-pessoas estavam atravessando o deserto**. Nenhuma menção à revolta, à
-independência prometida, a Sykes-Picot. Eu tinha escrito no cabeçalho
-"Sykes-Picot fora de quadro" e com isso tirei a razão da história inteira.
-
-Sobrou uma travessia sem causa: dois meses de areia e contagem de água.
-
-E a covardia estava escrita com todas as letras no fecho:
-
-> *"Eu não vou te contar o que aconteceu depois. Aconteceu muita coisa, e uma
-> parte dela foi feia, e nada disso serve para dormir."*
-
-**Quando o narrador anuncia que está se recusando a contar, o problema já está
-na página.**
-
-### A distinção que separa entrar de tomar partido
-
-| entrar na ideia | tomar partido |
-|---|---|
-| a promessa foi feita em 1915 e o acordo de repartição é de 1916 | culpar a Inglaterra, ou a França, ou quem for |
-| o narrador não sabia, e soube velho | julgar quem sabia |
-| ele não sentiu raiva, e isso o incomoda | dizer o que o ouvinte deve sentir |
-| *"provavelmente eu teria feito a mesma coisa, porque me pagavam"* | absolver ou condenar o personagem |
-
-**Fato documentado com data é história. Atribuir culpa hoje é que é opinião.**
-
-E há um ganho que a covardia estava jogando fora: a ideia mais interessante do
-material era exatamente a que eu tinha cortado — **o que é fazer o trabalho por
-uma causa cujos termos não te contaram.** Isso não é política; é a experiência
-de quase todo mundo que já trabalhou.
-
-### Como aplicar
-
-1. Antes de escrever, perguntar: **qual é a ideia que este assunto levanta?**
-   Não a lição — a ideia. Lawrence levanta a de servir a dois donos e saber que
-   um deles mente.
-2. Verificar se o roteiro **diz por que** as pessoas estão fazendo o que fazem.
-   Se não diz, falta o principal.
-3. Deixar a ideia **sem resolver**. O narrador pode não saber o que fazer com
-   ela — e é mais honesto que resolver.
-4. A calma continua sendo da entrega. Ideia dura dita devagar continua fazendo
-   dormir.
+> **A direção de roteiro mudou de casa.** O que faz um episódio ser bom — a
+> ideia que ele encara, o que faz uma cena existir, a abertura que promete —
+> está em **[roteiro.md](roteiro.md)**, que se lê ANTES de escrever.
+>
+> Este documento é o contrato mecânico: ritmo de frase, termos banidos, e como
+> conferir um roteiro pronto. Lê-se enquanto se escreve e no fim.
 
 ## Ritmo de frase — a regra que mais importa
 

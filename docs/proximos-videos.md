@@ -11,6 +11,14 @@ não muda a sequência — registra o que cada episódio exige, onde dois deles
 esbarram em política, e onde a ordem esbarra no prazo. **A decisão continua
 sendo dele; o que está aqui é o que ele precisa saber antes de decidir.**
 
+**Antes de escrever qualquer um destes, leia [roteiro.md](roteiro.md).** Ele
+mudou em 05/09 com duas regras que nasceram de erro no video-04: o sono vem da
+entrega e não do enredo, e não se foge da ideia que a obra tem.
+
+A consequência para esta pauta está na coluna nova de cada episódio abaixo — **a
+ideia que ele encara**. Episódio sem ideia é travessia sem causa, que foi
+exatamente o que o video-04 quase virou.
+
 Três coisas mudaram desde o video-03 e valem para todos os sete:
 
 - **Voz:** Google Chirp3-HD, `[pause]` entre frases e `[pause long]` no
@@ -37,6 +45,10 @@ escrever 14 mil palavras que sustentem a noite inteira.
 
 ## 1. Lawrence da Arábia
 
+**A ideia:** o que é fazer o trabalho por uma causa cujos termos não te
+contaram. A promessa de um país é de 1915, o acordo que repartiu aquela terra é
+de 1916, e quem carregava os camelos não sabia de nenhum dos dois.
+
 **Ângulo de sono:** as travessias, não as batalhas. O Nefud a noite inteira em
 lombo de camelo, o silêncio entre dunas, a espera antes de Aqaba, os dias em
 que nada acontece. A guerra existe no fundo e nunca chega ao primeiro plano.
@@ -57,6 +69,10 @@ travessia, no cansaço.
 ficou velho.
 
 ## 2. Alguma história de ET nos anos 50 nos EUA
+
+**A ideia:** o que uma pessoa faz com uma coisa que viu e não pode provar.
+Não é sobre discos voadores — é sobre o preço social de afirmar. Quem conta
+perde emprego, casamento, reputação; quem cala carrega sozinho.
 
 **É o único da lista que pode ser 100% ficção original nossa**, e por isso o
 mais seguro de todos em política. Nada a defender, nada a provar.
@@ -108,6 +124,10 @@ formato que a política descreve como permitido.
 
 ## 4. Alcibíades
 
+**A ideia:** lealdade é a mesma coisa que conveniência quando a conveniência
+dura muito tempo? Ele traiu Atenas, depois Esparta, depois a Pérsia, e voltou —
+e em cada troca tinha um argumento honesto. Não julgar; mostrar.
+
 **O melhor da lista para este formato, e por larga margem.** Exilado três
 vezes, passou para Esparta, depois para a Pérsia, depois voltou para Atenas.
 Vida inteira em navio, em espera e em terra estrangeira.
@@ -124,6 +144,10 @@ uma decisão e outra.
 que guardou. Ver a seção do arco, abaixo.
 
 ## 5. Bulla Felix
+
+**A ideia:** a diferença entre um bandido e um governo é o tamanho. Ele
+roubava na estrada e o império roubava por imposto, e ele dizia isso em voz alta
+— e por dois anos seiscentos homens acharam que ele tinha razão.
 
 **O mais subestimado da lista.** Bandido romano, por volta de 205 d.C., 600
 homens, assaltava a Via Ápia e escapou de Septímio Severo por dois anos. A
@@ -160,6 +184,10 @@ desligaria anúncio personalizado, comentários e notificação de inscrito.
   abássida tem material de sobra e nenhum problema de autoria.
 
 ## 7. Jogos Píticos
+
+**A ideia:** por que uma competição de música virou competição de corpo. Os
+Píticos começaram premiando quem cantasse melhor o hino a Apolo, e terminaram
+como atletismo — e essa troca aconteceu de novo em toda cultura desde então.
 
 **Ângulo de sono:** a peregrinação a Delfos, que é subida de montanha em passo
 lento. A fonte Castália. A espera pelo oráculo. E o detalhe que quase ninguém

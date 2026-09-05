@@ -267,9 +267,15 @@ def criar_projeto(slug: str, titulo: str, obra: str, persona_id: str,
         f"""# {titulo}
 
 > Esqueleto gerado em {date.today():%d/%m/%Y} a partir da persona
-> `{persona_id}`. O contrato de escrita está em `docs/voz.md` e vale para
-> todo roteiro: mediana de 9 palavras por frase, 57% com 10 ou menos, 15%
-> começando com "E", zero termos banidos.
+> `{persona_id}`.
+>
+> **Leia [`docs/roteiro.md`](../../docs/roteiro.md) antes de escrever** — é a
+> direção: qual ideia este episódio encara, o que faz uma cena existir, e por
+> que a abertura promete em vez de listar ausências.
+>
+> O [`docs/voz.md`](../../docs/voz.md) é o contrato mecânico e se confere no
+> fim: mediana de 9 palavras por frase, 57% com 10 ou menos, 15% começando com
+> "E", zero termos banidos.
 
 > **Meta de volume:** {duracao_min} min a {PPM_MEDIDO} palavras/min dá cerca de
 > **{palavras_alvo} palavras** de narração. Não é estilo, é aritmética: texto de
