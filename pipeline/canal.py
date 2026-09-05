@@ -221,14 +221,18 @@ def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
 # O YouTube recorta o banner de forma diferente em cada tela e só um retângulo
 # CENTRAL aparece em todas. Projetar para os 2560×1440 é o erro clássico: fica
 # lindo na TV, que quase ninguém usa, e no celular só se vê uma tira do meio.
-BANNER_L, BANNER_A = 2560, 1440          # o que se sobe
-SEGURO_L, SEGURO_A = 1235, 338           # o que aparece em TODAS as telas
+BANNER_L, BANNER_A = 2560, 1440          # o que se sobe (o recomendado)
+# A área segura ESCALA com o tamanho do upload, e eu tinha errado isso:
+# 1235x338 é a área segura do upload MÍNIMO (2048x1152). No recomendado de
+# 2560x1440 ela é 1546x423. Projetar para a menor não quebra nada — é
+# conservador demais e desperdiça espaço.
+SEGURO_L, SEGURO_A = 1546, 423           # o que aparece em TODAS as telas
 RECORTES = {                              # largura × altura, centrados
     "TV":      (2560, 1440),
     "desktop": (2560, 423),
     "tablet":  (1855, 423),
     "celular": (1546, 423),
-    "SEGURO":  (SEGURO_L, SEGURO_A),
+    "SEGURO":  (SEGURO_L, SEGURO_A),   # o que aparece em toda tela
 }
 CREME = "0xF2E8D5"
 
@@ -290,7 +294,7 @@ def banner(nome: str, texto: str | None) -> Path:
         # texto ali disputa com ele. Mas não tão acima que saia da tira segura —
         # a 110 o topo das letras caía 7px para fora dela, e o aparato de
         # recorte existe justamente para pegar isso.
-        cx, cy = BANNER_L // 2, BANNER_A // 2 - 85
+        cx, cy = BANNER_L // 2, BANNER_A // 2 - 95
         cima, baixo = cy - 66, cy + 66
         topo_seguro, base_segura = (BANNER_A - SEGURO_A) // 2, (BANNER_A + SEGURO_A) // 2
         if cima < topo_seguro or baixo > base_segura:
@@ -320,7 +324,11 @@ def banner(nome: str, texto: str | None) -> Path:
         y += corte.height + 6
         dp.text((20, y), f"{rot}  {rl}x{ra}", fill=(200, 200, 210))
         y += 28
-    prev.save(DESTINO / f"banner_previa_{nome}{'_com_nome' if texto else ''}.png")
+    # A prévia é RETRATO, com os recortes empilhados — não é banner e já foi
+    # confundida com um. Fica em subpasta própria, longe do que se sobe.
+    dprev = DESTINO / "previas"
+    dprev.mkdir(exist_ok=True)
+    prev.save(dprev / f"banner_{nome}{'_com_nome' if texto else ''}.png")
     return saida
 
 
