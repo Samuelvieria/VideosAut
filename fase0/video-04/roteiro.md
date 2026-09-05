@@ -9,8 +9,14 @@ até Aqaba em 1917. Ele não é Lawrence e não é o herói: cuidava dos camelos
 Lawrence aparece visto de fora, que é o único ângulo honesto sobre uma pessoa
 real. Pesquisa em `fase0/video-04/pesquisa/lawrence-gemini.md`.
 
-Fora de quadro de propósito: a execução em Wadi Ghaddi, Deraa, Tafas,
-Sykes-Picot e a rivalidade entre clãs. O episódio é sobre as travessias.
+Fora de quadro: a execução em Wadi Ghaddi, Deraa e Tafas — violência que não
+cabe num vídeo de dormir.
+
+**Sykes-Picot NÃO está fora de quadro**, e tirar era covardia. O acordo é fato
+documentado de 1916, e a promessa a Hussein é de 1915, e as duas se contradizem.
+Um cameleiro não sabia disso em 1917 e podia saber cinquenta anos depois — e é
+isso que o episódio usa. Dizer que a promessa foi feita e não cumprida é
+história; culpar alguém hoje é que seria tomar partido.
 
 Meta: ~14.100 palavras a 127 ppm = 111 min de narração + 9 de cauda.
 
@@ -197,8 +203,21 @@ dele.
 
 Tinha os Ageyl, que eram os meus. Homens de caravana, gente do norte, que
 vivia disso e sabia disso. Se você quer atravessar terra vazia, você leva
-Ageyl. Não porque a gente lutasse bem — a gente lutava mal, honestamente —,
-mas porque a gente chegava do outro lado...
+Ageyl. A gente lutava mal, honestamente. Mas a gente chegava do outro lado...
+
+E eu devia dizer para que a gente estava indo, porque até aqui eu não disse.
+
+O que se falava nos acampamentos era simples. O Xerife de Meca tinha se
+levantado contra os turcos, e os ingleses estavam do lado dele, e quando
+acabasse ia existir um país nosso. Do mar até o norte. Com governo nosso.
+
+Foi isso que me disseram, e foi isso que eu repeti para a minha mãe antes de
+sair.
+
+Eu não tinha opinião sobre aquilo. Eu tinha vinte e dois anos e ia porque me
+pagavam, e essas duas coisas cabem na mesma cabeça sem se atrapalhar.
+
+Mas eu ouvi. E quem ouve, guarda.
 
 E tinha o inglês.
 
@@ -2326,37 +2345,58 @@ Que era o meu ofício, e que eu ia continuar fazendo por mais quarenta anos.
 
 E é mais ou menos isso.
 
-Eu não vou te contar o que aconteceu depois. Aconteceu muita coisa, e uma parte
-dela foi feia, e nada disso serve para dormir.
+Eu vou te contar uma última coisa, e ela é do tipo que eu evitei a noite
+inteira, mas evitar já não me parece honesto.
 
-Você já deve estar quase dormindo, se é que ainda está aí.
+Não existiu o país.
 
-Eu fico com o que ficou. E o que ficou não é o que eu esperava...
+Enquanto a gente atravessava aquele deserto — enquanto eu contava água e
+costurava odre e enterrava o quadril na areia para dormir —, dois governos do
+outro lado do mar já tinham desenhado um mapa e repartido aquela terra entre
+eles...
 
-Não é o dia da chegada. Não é a tempestade. Não é o inglês voltando com o
-homem no camelo.
+O papel é de um ano antes da nossa travessia. Um ano antes.
 
-O que ficou foi a areia fria de madrugada. A mão no chão só para sentir.
+Eu não sabia. Ninguém que andava comigo sabia, tirando talvez um.
 
-Foi o som do pilão de café atravessando o acampamento, e a gente voltando sem
+Eu fiquei sabendo velho. Já com filho crescido, já sem montar. Alguém leu para
+mim uma coisa num jornal e eu pedi para ler de novo.
+
+E eu não senti raiva, e isso me incomoda até hoje.
+
+Senti uma coisa mais parada. Como quem descobre, muito tempo depois, que estava
+carregando peso para uma casa que não era a que tinham dito.
+
+O trabalho foi o mesmo. A areia era a mesma. O camelo que ficou para trás ficou
+igual.
+
+Só o motivo é que era outro, e eu nunca vou saber o que teria feito se soubesse.
+Provavelmente a mesma coisa, porque me pagavam. É isso que me incomoda.
+
+Então eu fico com o que ficou. E o que ficou é a parte que ninguém pode
+redesenhar num mapa.
+
+A areia fria de madrugada, e a mão no chão só para sentir.
+
+O som do pilão de café atravessando o acampamento, e a gente voltando sem
 ninguém chamar.
 
-Foi o pano da tenda batendo devagar no meio do dia, e eu ali embaixo, no meio
-metro de sombra, cochilando.
+O pano da tenda batendo devagar no meio do dia, e eu ali embaixo, no meio metro
+de sombra, cochilando.
 
-Foi o som das bocas mastigando devagar no escuro — quarenta no começo,
-trezentas no fim, e no escuro dá tudo no mesmo.
+As bocas mastigando devagar no escuro — quarenta no começo, trezentas no fim, e
+no escuro dá tudo no mesmo.
 
-E foi a linha clara no horizonte, às quatro da manhã, dizendo que mais uma
-noite passou.
+E a linha clara no horizonte, às quatro da manhã, dizendo que mais uma noite
+passou.
 
-É isso que eu tenho. Cinquenta anos depois, é isso.
+Isso ninguém prometeu, e ninguém tirou.
 
-O resto virou história dos outros.
+Cinquenta anos depois é isso que eu tenho, e é mais do que eu esperava ter.
 
 Boa noite. Durma bem.
 
 E que o seu chão de hoje seja mais macio que o meu era.
 
-<!-- A cena 70 é a cauda de ambiente: 9 minutos de mar e vento, sem narração.
-     Não tem cabeçalho de cena porque o s2_tts sintetizaria o texto. -->
+<!-- A cena 74 é a cauda de ambiente: 9 minutos, sem narração. Não leva
+     cabeçalho porque o s2_tts sintetizaria o texto. -->

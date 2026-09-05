@@ -161,6 +161,24 @@ video-03 herdou o defeito e só foi descoberto depois de renderizado.
 → Cadeia completa, valores medidos, síntese do ambiente e o debate de LUFS:
 `references/mixagem-audio.md`
 
+## Não fugir da ideia que a obra tem
+
+**Filosofia não é o narrador ser sábio — é o episódio encarar o que o assunto
+levanta.** Em 05/09/2026 o roteiro do video-04 passava duas horas sem dizer por
+que quarenta pessoas estavam atravessando o deserto: eu tinha posto Sykes-Picot
+"fora de quadro" e com isso tirei a razão da história.
+
+**O tell:** quando o narrador anuncia que está se recusando a contar alguma
+coisa, a covardia já está na página.
+
+A distinção: **fato documentado com data é história; atribuir culpa hoje é
+opinião.** Dizer que a promessa é de 1915 e o acordo de repartição é de 1916 não
+toma partido. Dizer quem foi vilão, sim.
+
+Verificação obrigatória em roteiro novo: **ele diz POR QUE as pessoas fazem o
+que fazem?** Se não diz, falta o principal. Detalhe em
+[`docs/voz.md`](../../../docs/voz.md).
+
 ## O que faz dormir — a regra que vem antes das outras
 
 **O sono vem da ENTREGA, não do enredo.** História boa contada devagar faz

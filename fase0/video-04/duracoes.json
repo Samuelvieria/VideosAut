@@ -1,7 +1,7 @@
 {
   "voice": "Algenib",
   "speed": 0.8,
-  "total_s": 5995.0,
+  "total_s": 6091.84,
   "cenas": [
     {
       "n": 1,
@@ -41,9 +41,9 @@
     {
       "n": 6,
       "titulo": "Quarenta homens",
-      "dur_s": 82.76,
-      "palavras": 193,
-      "ppm": 140
+      "dur_s": 124.92,
+      "palavras": 294,
+      "ppm": 141
     },
     {
       "n": 7,
@@ -510,9 +510,9 @@
     {
       "n": 73,
       "titulo": "O que ficou",
-      "dur_s": 86.52,
-      "palavras": 206,
-      "ppm": 143
+      "dur_s": 141.2,
+      "palavras": 355,
+      "ppm": 151
     }
   ]
 }

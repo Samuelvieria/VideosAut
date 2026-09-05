@@ -66,6 +66,60 @@ aviso, o problema é a história.
 **Nos próximos: a história é boa do jeito que ela é.** O que fica calmo é a
 voz, a pausa, o ambiente e a ausência de sobressalto — não o enredo.
 
+## Não fugir da ideia que a obra tem
+
+Segunda correção do mesmo dia, e mais afiada que a primeira. O Samuel:
+*"filosofia é entrar nas ideias pragmáticas das obras, e nós não devemos ser
+covardes e fugir delas."*
+
+Filosofia aqui **não é o narrador ser sábio**. É o episódio encarar o que o
+assunto de fato levanta.
+
+### O que eu tinha feito
+
+O roteiro do video-04 não dizia, em duas horas, **por que aquelas quarenta
+pessoas estavam atravessando o deserto**. Nenhuma menção à revolta, à
+independência prometida, a Sykes-Picot. Eu tinha escrito no cabeçalho
+"Sykes-Picot fora de quadro" e com isso tirei a razão da história inteira.
+
+Sobrou uma travessia sem causa: dois meses de areia e contagem de água.
+
+E a covardia estava escrita com todas as letras no fecho:
+
+> *"Eu não vou te contar o que aconteceu depois. Aconteceu muita coisa, e uma
+> parte dela foi feia, e nada disso serve para dormir."*
+
+**Quando o narrador anuncia que está se recusando a contar, o problema já está
+na página.**
+
+### A distinção que separa entrar de tomar partido
+
+| entrar na ideia | tomar partido |
+|---|---|
+| a promessa foi feita em 1915 e o acordo de repartição é de 1916 | culpar a Inglaterra, ou a França, ou quem for |
+| o narrador não sabia, e soube velho | julgar quem sabia |
+| ele não sentiu raiva, e isso o incomoda | dizer o que o ouvinte deve sentir |
+| *"provavelmente eu teria feito a mesma coisa, porque me pagavam"* | absolver ou condenar o personagem |
+
+**Fato documentado com data é história. Atribuir culpa hoje é que é opinião.**
+
+E há um ganho que a covardia estava jogando fora: a ideia mais interessante do
+material era exatamente a que eu tinha cortado — **o que é fazer o trabalho por
+uma causa cujos termos não te contaram.** Isso não é política; é a experiência
+de quase todo mundo que já trabalhou.
+
+### Como aplicar
+
+1. Antes de escrever, perguntar: **qual é a ideia que este assunto levanta?**
+   Não a lição — a ideia. Lawrence levanta a de servir a dois donos e saber que
+   um deles mente.
+2. Verificar se o roteiro **diz por que** as pessoas estão fazendo o que fazem.
+   Se não diz, falta o principal.
+3. Deixar a ideia **sem resolver**. O narrador pode não saber o que fazer com
+   ela — e é mais honesto que resolver.
+4. A calma continua sendo da entrega. Ideia dura dita devagar continua fazendo
+   dormir.
+
 ## Ritmo de frase — a regra que mais importa
 
 | faixa | alvo | vídeo 02 |
