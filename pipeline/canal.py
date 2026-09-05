@@ -144,7 +144,53 @@ PIXEL = {
     ),
 }
 
-SERIES = {"icone": AVATARES, "pixel": PIXEL}
+# QUARTA RODADA — a H com mais matéria dentro.
+# "Gostei da H, mas acho que tá simples" (Samuel, 05/09). A restrição é que o
+# que entrar precisa RESOLVER a 320px e ficar QUIETO a 48px: detalhe que compete
+# com a lua no tamanho pequeno destrói exatamente o que a H tem de bom.
+# Todas na seed da H (7202) para a lua ficar na mesma família; só o que se
+# acrescenta muda, do mais discreto ao mais cheio.
+LUA = {
+    "K_estrelas": (
+        "16-bit pixel art, a huge warm amber crescent moon filling the upper half "
+        "of the frame above a dark navy pixel sea, dashed pixel reflection on the "
+        "water, a scatter of small pale pixel stars across the navy sky, chunky "
+        "visible pixels, limited palette of navy and amber, very high contrast, "
+        "centered, no text, no letters",
+        7202,
+        "só estrelas — o acréscimo mais discreto possível",
+    ),
+    "L_farol_horizonte": (
+        "16-bit pixel art, a huge warm amber crescent moon filling the upper half "
+        "of the frame above a dark navy pixel sea, dashed pixel reflection on the "
+        "water, small pale pixel stars in the sky, a tiny dark lighthouse "
+        "silhouette far away on the horizon line with one speck of amber light, "
+        "chunky visible pixels, navy and amber palette, very high contrast, "
+        "centered, no text, no letters",
+        7202,
+        "estrelas + um farol minúsculo no horizonte — junta a H e a I",
+    ),
+    "M_barco": (
+        "16-bit pixel art, a huge warm amber crescent moon filling the upper half "
+        "of the frame above a dark navy pixel sea, dashed pixel reflection, small "
+        "pale pixel stars, a tiny dark sailboat silhouette crossing the moon's "
+        "reflection on the water, chunky visible pixels, navy and amber palette, "
+        "very high contrast, centered, no text, no letters",
+        7202,
+        "um barco atravessando o reflexo — acrescenta narrativa, não só textura",
+    ),
+    "N_nuvens": (
+        "16-bit pixel art, a huge warm amber crescent moon in the upper frame "
+        "partly crossed by thin dark pixel clouds, small pale stars, a dark navy "
+        "pixel sea below with several layered bands of dashed reflection and wave "
+        "texture, distant dark cliffs on one side, chunky visible pixels, navy and "
+        "amber palette, very high contrast, centered, no text, no letters",
+        7202,
+        "nuvens, camadas de água e um rochedo — a mais cheia das quatro",
+    ),
+}
+
+SERIES = {"icone": AVATARES, "pixel": PIXEL, "lua": LUA}
 
 
 def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
@@ -171,14 +217,68 @@ def folha_contato(arquivos: list[tuple[str, Path]], saida: Path) -> None:
     folha.save(saida)
 
 
+def exportar(nome: str) -> Path:
+    """Prepara a candidata escolhida como foto de perfil pronta para subir.
+
+    Fica em 1024x1024 de propósito. O YouTube recomenda 800x800 e aceita maior,
+    reamostrando ele mesmo — e 1024 para 800 não é razão inteira, então
+    reamostrar aqui só borraria a grade de pixel antes de entregar. Mesma lógica
+    do `flags=neighbor` do render: em pixel art, quem reamostra errado destrói o
+    que a arte tem.
+
+    Também gera uma prévia com o recorte CIRCULAR nos tamanhos reais de uso, e
+    avisa se algo importante cai fora do círculo — o YouTube corta os cantos e
+    não pergunta.
+    """
+    from PIL import Image, ImageDraw
+    origem = DESTINO / f"avatar_{nome}.png"
+    if not origem.is_file():
+        raise SystemExit(f"não existe: {origem}\n  candidatas: "
+                         + ", ".join(sorted(f.stem.replace("avatar_", "")
+                                            for f in DESTINO.glob("avatar_*.png")
+                                            if "contato" not in f.name)))
+    im = Image.open(origem).convert("RGB")
+    saida = DESTINO / "foto-perfil.png"
+    im.save(saida)
+
+    # prévia: o círculo nos tamanhos em que as pessoas realmente veem
+    # o espaço de cada coluna é o MAIOR entre a imagem e o rótulo — senão o
+    # texto de um tamanho pequeno invade o do vizinho
+    tamanhos = [(320, "canal, grande"), (88, "canal"),
+                (48, "comentário"), (24, "inscrições")]
+    colunas = [max(t, 8 * len(r) + 10) for t, r in tamanhos]
+    larg = sum(colunas) + 40 * (len(tamanhos) + 1)
+    prev = Image.new("RGB", (larg, 400), (18, 20, 28))
+    d = ImageDraw.Draw(prev)
+    x = 40
+    for (tam, rotulo), col in zip(tamanhos, colunas):
+        c = im.resize((tam, tam), Image.LANCZOS)
+        mask = Image.new("L", (tam, tam), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, tam - 1, tam - 1), fill=255)
+        prev.paste(c, (x + (col - tam) // 2, 340 - tam), mask)
+        d.text((x, 355), f"{tam}px", fill=(200, 200, 210))
+        d.text((x, 370), rotulo, fill=(120, 122, 132))
+        x += col + 40
+    prev.save(DESTINO / "foto-perfil-previa.png")
+    return saida
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Ativos do canal.")
+    ap.add_argument("--exportar", metavar="CANDIDATA",
+                    help="prepara a escolhida como foto de perfil (ex.: L_farol_horizonte)")
     ap.add_argument("--avatar", action="store_true")
     ap.add_argument("--serie", default="icone", choices=list(SERIES))
     ap.add_argument("--forcar", action="store_true")
     a = ap.parse_args()
+    if a.exportar:
+        f = exportar(a.exportar)
+        print(f"\nOK — {f}")
+        print(f"     prévia nos tamanhos reais: {DESTINO / 'foto-perfil-previa.png'}")
+        print("     Studio -> Personalização -> Identidade visual -> Foto")
+        return
     if not a.avatar:
-        ap.error("use --avatar")
+        ap.error("use --avatar ou --exportar")
 
     DESTINO.mkdir(parents=True, exist_ok=True)
     chave = obter("FAL_KEY")
