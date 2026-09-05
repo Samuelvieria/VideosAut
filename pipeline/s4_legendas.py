@@ -93,13 +93,160 @@ def alinhar(palavras: list[tuple[float, float, str]], alvo: list[str]) -> list[t
     return fora
 
 
+# Norma de legibilidade de legenda. Não é preferência: é o que a BBC, a Netflix
+# e o guia da própria plataforma convergem em pedir, e o motivo é físico — o
+# olho não lê linha mais longa que isso de relance, e bloco que fica menos de um
+# segundo não dá tempo de sacada.
+MAX_LINHA = 42        # caracteres por linha
+MAX_LINHAS = 2
+DUR_MIN = 1.0         # segundos
+DUR_MAX = 7.0
+MAX_BLOCO = MAX_LINHA * MAX_LINHAS
+
+
+def _quebrar_linhas(txt: str) -> str:
+    """Quebra em no máximo duas linhas, o mais equilibradas possível."""
+    palavras = txt.split()
+    if len(" ".join(palavras)) <= MAX_LINHA:
+        return " ".join(palavras)
+    melhor, dif = None, 10**9
+    for k in range(1, len(palavras)):
+        a, b = " ".join(palavras[:k]), " ".join(palavras[k:])
+        if len(a) > MAX_LINHA or len(b) > MAX_LINHA:
+            continue
+        if abs(len(a) - len(b)) < dif:
+            melhor, dif = (a, b), abs(len(a) - len(b))
+    return "\n".join(melhor) if melhor else " ".join(palavras)
+
+
+def _cabe(txt: str) -> bool:
+    return all(len(l) <= MAX_LINHA for l in _quebrar_linhas(txt).split("\n"))
+
+
+def _pedacos(txt: str, n: int) -> list[str]:
+    """Parte em n trechos de tamanho parecido, sempre em fronteira de palavra."""
+    if n <= 1:
+        return [txt]
+    alvo, pedacos, atual = len(txt) / n, [], ""
+    for w in txt.split():
+        if atual and len(atual) + 1 + len(w) > alvo and len(pedacos) < n - 1:
+            pedacos.append(atual)
+            atual = w
+        else:
+            atual = f"{atual} {w}".strip()
+    if atual:
+        pedacos.append(atual)
+    return pedacos
+
+
+def _fatiar(ini: float, fim: float, txt: str) -> list[tuple[float, float, str]]:
+    """Parte um bloco grande demais, repartindo o tempo por caractere.
+
+    Uma frase do roteiro pode ter 40 palavras — o `alinhar` devolve ela inteira
+    como um bloco só, e sem esta passada virava legenda de 213 caracteres parada
+    17 segundos na tela.
+
+    O número de pedaços não é calculado, é PROCURADO: sobe até que cada pedaço
+    caiba de fato em duas linhas e dentro do tempo máximo. Calcular errou nos
+    dois eixos. Em caractere, porque 84 cabe em 84 mas não em 2x42 — a quebra
+    consome um espaço e a fronteira de palavra é grossa. Em tempo, porque o
+    tempo é repartido por caractere: um pedaço com 45% do texto fica com 45% da
+    duração, e passa do teto mesmo quando a média não passaria.
+    """
+    dur, palavras = fim - ini, txt.split()
+    n = 1
+    while True:
+        pedacos = _pedacos(txt, n)
+        total = sum(len(x) for x in pedacos) or 1
+        if all(_cabe(x) and dur * len(x) / total <= DUR_MAX for x in pedacos):
+            break
+        if n >= len(palavras):
+            break
+        n += 1
+
+    if len(pedacos) == 1:
+        return [(ini, fim, txt)]
+    fora, t = [], ini
+    for i, pedaco in enumerate(pedacos):
+        f = fim if i == len(pedacos) - 1 else t + dur * len(pedaco) / total
+        fora.append((t, f, pedaco))
+        t = f
+    return fora
+
+
+def formatar(blocos_: list[tuple[float, float, str]]) -> list[tuple[float, float, str]]:
+    """Aplica a norma: fatia o que é longo demais e estica o que é curto demais."""
+    fora: list[tuple[float, float, str]] = []
+    for ini, fim, txt in blocos_:
+        fora.extend(_fatiar(ini, fim, " ".join(txt.split())))
+
+    # Duração mínima, numa passada com cursor. Não basta esticar até o início do
+    # próximo: no video-03 o alinhador empilhou "Cento e doze degraus." e "Vinte
+    # anos." no MESMO instante, e qualquer limite tirado do vizinho deixaria os
+    # dois com zero segundo — piscavam e sumiam. O cursor empurra quem vier pela
+    # frente, e o empurrão morre sozinho no primeiro silêncio, que em vídeo de
+    # sono nunca está longe. De quebra garante ordem e nenhuma sobreposição.
+    t = 0.0
+    for i, (ini, fim, txt) in enumerate(fora):
+        ini = max(ini, t)
+        fim = max(fim, ini + DUR_MIN)
+        fora[i] = (ini, fim, txt)
+        t = fim
+    return [(i, f, _quebrar_linhas(t)) for i, f, t in fora]
+
+
+def _ler_srt(srt: Path) -> list[tuple[float, float, str]]:
+    def seg(t: str) -> float:
+        h, m, resto = t.split(":")
+        s_, ms = resto.split(",")
+        return int(h) * 3600 + int(m) * 60 + int(s_) + int(ms) / 1000
+
+    fora = []
+    for bloco in srt.read_text(encoding="utf-8").strip().split("\n\n"):
+        linhas_ = [x for x in bloco.split("\n") if x.strip()]
+        if len(linhas_) < 3:
+            continue
+        ini, fim = (seg(x) for x in linhas_[1].split(" --> "))
+        fora.append((ini, fim, " ".join(linhas_[2:])))
+    return fora
+
+
+def reformatar(srt: Path) -> None:
+    """Reaplica a norma num SRT já existente, sem rodar o whisper de novo.
+
+    A formatação só mexe em texto e tempo — nada nela depende do áudio. Quando o
+    SRT já foi gerado (o do video-03 saiu na workstation, em 30 min de whisper),
+    refazer o alinhamento inteiro para arrumar quebra de linha é desperdício.
+
+    Não regrava a marca de propósito: ela é hash das ENTRADAS (wavs + modelo),
+    que não mudaram. Assim o `s4_legendas` normal continua dizendo "já
+    atualizadas" e não atropela este arquivo na próxima passagem.
+    """
+    antes = _ler_srt(srt)
+    depois = formatar(antes)
+    linhas = [f"{i+1}\n{ts(ini)} --> {ts(fim)}\n{txt}\n"
+              for i, (ini, fim, txt) in enumerate(depois)]
+    srt.write_text("\n".join(linhas) + "\n", encoding="utf-8")
+    log(f"reformatado: {len(antes)} -> {len(depois)} blocos")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Gera SRT alinhado ao roteiro.")
     ap.add_argument("projeto")
     ap.add_argument("--modelo", default=None,
                     help="sobrescreve o modelo do perfil (ex.: small)")
     ap.add_argument("--forcar", action="store_true")
+    ap.add_argument("--reformatar", action="store_true",
+                    help="reaplica a norma de legibilidade no SRT existente, "
+                         "sem whisper e sem áudio")
     a = ap.parse_args()
+
+    if a.reformatar:
+        srt_ = projeto(a.projeto) / "legendas.pt-BR.srt"
+        if not srt_.is_file():
+            erro(f"não existe: {srt_}")
+        reformatar(srt_)
+        return
 
     hw = perfil()
     modelo_nome = a.modelo or hw.whisper_modelo
@@ -130,7 +277,7 @@ def main() -> None:
     linhas, idx, offset = [], 1, 0.0
     for (n, titulo, corpo), wav in zip(cenas, wavs):
         palavras = segmentos_whisper(modelo, wav)
-        for ini, fim, txt in alinhar(palavras, frases(corpo)):
+        for ini, fim, txt in formatar(alinhar(palavras, frases(corpo))):
             linhas.append(f"{idx}\n{ts(offset+ini)} --> {ts(offset+fim)}\n{txt}\n")
             idx += 1
         offset += duracao(wav) + PAUSA
