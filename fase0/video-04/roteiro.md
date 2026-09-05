@@ -7,7 +7,7 @@ Lawrence, e narrar livro alheio é o gatilho de conteúdo reutilizado.
 Voz: um cameleiro da escolta Ageyl, hoje velho, contando a marcha de Al-Wajh
 até Aqaba em 1917. Ele não é Lawrence e não é o herói: cuidava dos camelos.
 Lawrence aparece visto de fora, que é o único ângulo honesto sobre uma pessoa
-real. Pesquisa em `fase0/_pesquisa/lawrence-gemini.md`.
+real. Pesquisa em `fase0/video-04/pesquisa/lawrence-gemini.md`.
 
 Fora de quadro de propósito: a execução em Wadi Ghaddi, Deraa, Tafas,
 Sykes-Picot e a rivalidade entre clãs. O episódio é sobre as travessias.

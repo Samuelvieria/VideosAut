@@ -1,57 +1,32 @@
-# Consultas a modelos externos
+# Consultas externas
 
-Os arquivos em `brutas/` são respostas de modelos externos ao briefing do
-projeto, colados à mão. A [síntese](sintese.md) é a leitura cruzada delas.
+Material que veio de fora do projeto: guias que o Samuel baixou, respostas de
+outros modelos, transcrições de vídeo, pesquisa delegada.
 
-Desde 04/09/2026 dá para consultar sem copiar e colar.
+**Nada aqui é fonte de decisão por si só.** O que vale é o que foi medido ou
+verificado contra a nossa própria evidência — ver [`../verificacao.md`](../verificacao.md).
 
-## Como está ligado
+## Estrutura
 
-O **Gemini CLI morreu em 18/06/2026** para conta de consumidor — Pro, Ultra e
-free tier, os três. Só sobrou licença Code Assist corporativa. O sucessor é o
-**Antigravity CLI (`agy`)**, e o plano pago do Samuel dá acesso a modelo Pro
-nele.
-
-```bash
-brew install --cask antigravity-cli     # já feito; instala /opt/homebrew/bin/agy
-agy models                              # diagnóstico, não gasta prompt
-```
-
-Modelos disponíveis nesta conta (04/09/2026):
-
-| modelo | nota |
+| pasta | o que é |
 |---|---|
-| `gemini-3.1-pro-high` / `-low` | o mais forte da lista |
-| `gemini-3.8-flash-high` / `-medium` / `-low` | rápido e barato |
-| `gemini-3.7-flash-*`, `gemini-3.6-flash-*` | gerações anteriores |
-| `claude-sonnet-4-6`, `claude-opus-4-6-thinking` | via Vertex Model Garden |
-| `gpt-oss-120b-medium` | idem |
+| `brutas/` | o material **como chegou**, sem edição |
+| `brutas/pipeline-audio/` | o pacote de mixagem e análise espectral (doc, script e exemplo) |
+| `briefings/` | os textos que MANDAMOS para consulta externa |
+| `videos/` | transcrições de vídeo do YouTube, tiradas das legendas automáticas |
+| aqui na raiz | as **avaliações**, que é onde o material vira ou não vira decisão |
 
-## Uso
+## As avaliações
 
-```bash
-agy --model gemini-3.1-pro-high -p "PERGUNTA"
-agy --model gemini-3.1-pro-high --output-format json -p "PERGUNTA"
-cat docs/briefing-externo.md | agy --model gemini-3.1-pro-high -p "Critique isto."
-```
+| arquivo | assunto |
+|---|---|
+| [`sintese.md`](sintese.md) | as consultas externas de agosto |
+| [`guia-canal-ia-avaliado.md`](guia-canal-ia-avaliado.md) | o guia genérico de canal de IA, medido contra o que sabemos |
+| [`nicho-sono-politica.md`](nicho-sono-politica.md) | os três documentos de nicho, e o prazo do YPP |
+| [`videos/README.md`](videos/README.md) | os seis vídeos de 04/09 |
 
-`--effort` e o sufixo `-high|-medium|-low` controlam o esforço de raciocínio.
-A quota renova a cada cinco horas nos planos pagos.
+## Pesquisa de um vídeo específico
 
-## Duas regras
-
-**1. Isto envia conteúdo para o Google.** Tudo que entra no prompt sai da
-máquina. Não mandar `.env`, chave, nem o `oauth_creds.json`. Quando a consulta
-for sobre o projeto, mandar o documento pertinente — não o repositório inteiro.
-
-**2. Pedir segunda opinião a `claude-*` tem valor limitado.** Os modelos Claude
-da lista vêm pelo Vertex Model Garden e são da mesma família de quem escreve
-este repositório. Para o efeito que a `sintese.md` busca — convergência entre
-fontes **independentes** — o valor está em `gemini-3.1-pro` e `gpt-oss-120b`.
-
-## Por que a conta de estudante não servia
-
-O `~/.gemini/oauth_creds.json` estava autenticado como
-`...@sga.pucminas.br`, que o servidor reportou como `free-tier` /
-"Gemini Code Assist for individuals" — a faixa cortada. O `agy` usa a sessão do
-Antigravity, que está na conta com plano pago.
+Fica **na pasta do vídeo**, não aqui. O video-04 tem a dele em
+`fase0/video-04/pesquisa/` — é material sobre Lawrence, só serve àquele
+episódio, e separar por assunto seria pior que separar por uso.

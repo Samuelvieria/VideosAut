@@ -269,7 +269,7 @@ Foi assim que o `dragon-studio-sand-dunes` foi reprovado.
 ### O que a pesquisa histórica confirmou e corrigiu (05/09/2026)
 
 Consulta externa sobre o som real de uma noite no deserto do Hejaz
-(`fase0/_pesquisa/lawrence-gemini.md` §2), feita DEPOIS de o desenho estar
+(`fase0/video-04/pesquisa/lawrence-gemini.md` §2), feita DEPOIS de o desenho estar
 pronto — então serve de verificação independente, não de fonte:
 
 - **Confirmou o vento:** *"não há uivo como o de florestas, pois não existem

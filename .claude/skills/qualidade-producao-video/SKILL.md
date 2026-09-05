@@ -161,6 +161,20 @@ video-03 herdou o defeito e só foi descoberto depois de renderizado.
 → Cadeia completa, valores medidos, síntese do ambiente e o debate de LUFS:
 `references/mixagem-audio.md`
 
+## O que faz dormir — a regra que vem antes das outras
+
+**O sono vem da ENTREGA, não do enredo.** História boa contada devagar faz
+dormir; história sem nada em jogo só é chata.
+
+Um aviso de "isto pode acordar o ouvinte" sobre um ACONTECIMENTO quase sempre
+está errado — vale sobre a entrega (grito, estouro, aceleração, vinheta, pedido
+de inscrição), não sobre o conteúdo. Em 05/09/2026 eu amaciei cinco passagens
+do video-04 por causa de uma lista dessas, e quatro eram as melhores do
+roteiro. Detalhe e exemplo em [`docs/voz.md`](../../../docs/voz.md).
+
+**E não anunciar o que a história não tem.** "Não tem batalha, não tem herói" é
+pedir desculpa pelo produto nos 90 segundos em que o espectador decide ficar.
+
 ## Ritmo de narração — regras que sempre valem
 
 **Quem controla o ritmo é o TAMANHO DA FRASE, não o parâmetro de pausa.**

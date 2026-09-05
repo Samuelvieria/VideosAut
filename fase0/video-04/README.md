@@ -28,7 +28,7 @@ A escolha é editorial e resolve três coisas de uma vez:
 ## O que ficou fora de quadro, de propósito
 
 A execução em Wadi Ghaddi, Deraa, Tafas, Sykes-Picot e a rivalidade entre clãs.
-A lista saiu da pesquisa em [`../_pesquisa/lawrence-gemini.md`](../_pesquisa/lawrence-gemini.md) §5.
+A lista saiu da pesquisa em [`pesquisa/lawrence-gemini.md`](pesquisa/lawrence-gemini.md) §5.
 
 O último dia — o que a expedição foi fazer — é contado em uma cena curta e de
 longe, porque o narrador estava atrás com os animais e porque não é sobre isso
@@ -50,7 +50,7 @@ mixagem de deserto tinha grave fraco e nenhuma respiração.
 ## Revisão externa
 
 O roteiro foi revisado por consulta externa pedindo **problemas, não
-qualidades** ([`revisao-roteiro-04.md`](../_pesquisa/revisao-roteiro-04.md)).
+qualidades** ([`revisao-roteiro-04.md`](pesquisa/revisao-roteiro-04.md)).
 Voltaram 17 correções aplicadas, entre elas quatro erros de fato que eu não
 teria pego:
 
@@ -102,7 +102,7 @@ Gasim, Aqaba por terra, as vestes — tudo em *Sete Pilares* e nos relatórios d
 Arab Bureau, tudo livre.
 
 O que é invenção do filme está listado em
-[`lawrence-filme-vs-historia.md`](../_pesquisa/lawrence-filme-vs-historia.md) §2
+[`lawrence-filme-vs-historia.md`](pesquisa/lawrence-filme-vs-historia.md) §2
 e **não entra**: o personagem Sherif Ali (100% fictício), a aparição na miragem
 do poço, "nothing is written", o fósforo, Lawrence em cima do vagão, a morte na
 areia movediça. As duas cenas mais lembradas do filme — a miragem e o vagão —

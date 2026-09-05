@@ -13,6 +13,59 @@ qualquer idioma, tem que passar nestes números antes de virar áudio.
 As regras foram extraídas medindo o roteiro do vídeo 02, que já foi aprovado de
 ouvido. Elas descrevem o que ele **é**, não o que eu gostaria que fosse.
 
+## A regra que veio antes de todas — 05/09/2026
+
+**O sono vem da ENTREGA, não do enredo.** Uma história boa contada devagar faz
+dormir. Uma história sem nada em jogo, contada devagar, só é chata.
+
+Isto está escrito porque eu errei nos dois primeiros vídeos, e o Samuel
+apontou: *"os roteiros fogem de ser interessantes para causar o sono, e isso
+deixa o produto pior."* Ele tem razão, e dá para mostrar onde.
+
+Na revisão do video-04 chegou uma lista de "trechos que podem acordar o
+ouvinte". Tratei a lista inteira como defeito e amaciei cinco passagens. **Quatro
+das cinco eram as melhores do roteiro.**
+
+O caso mais claro é o camelo que ficou para trás. Antes:
+
+> *"E deixaram ele ali, deitado, com a cabeça erguida, olhando a gente ir
+> embora. Ninguém olhou para trás, tirando eu, que olhei duas vezes. Na segunda
+> vez ele ainda estava com a cabeça levantada."*
+
+Depois de eu "corrigir":
+
+> *"Deixaram um odre pequeno perto dele... camelo descansado levanta sozinho
+> depois de um tempo. Foi o que o guia disse, e eu escolhi acreditar."*
+
+Troquei a imagem que um homem carregaria por cinquenta anos por um consolo.
+Piorei a escrita para deixar mais segura.
+
+### O que de fato acorda, e o que não acorda
+
+| acorda | não acorda |
+|---|---|
+| pico de volume, som súbito, vinheta | uma perda contada em voz baixa |
+| quebra de ritmo, frase acelerada | um dilema moral, se a fala não muda de andamento |
+| pedido de like, inscrição, comentário | tensão que se resolve sem grito |
+| mudança brusca de ambiente entre cenas | um final que não consola |
+
+**Um aviso de "isto pode acordar" sobre um ACONTECIMENTO quase sempre está
+errado.** O aviso vale sobre a ENTREGA — grito, estouro, aceleração. Conteúdo
+duro dito com calma é o que faz a pessoa continuar ouvindo, e continuar ouvindo
+é a única forma de ela adormecer ouvindo.
+
+### E não anunciar o que a história não tem
+
+A abertura do video-04 diz: *"Não tem batalha aqui. Não tem herói. Não tem
+ninguém salvando ninguém no fim."*
+
+Isso é pedir desculpa pelo produto nos noventa segundos em que o espectador
+decide se fica. Se a história é boa, ela não precisa de aviso; se precisa de
+aviso, o problema é a história.
+
+**Nos próximos: a história é boa do jeito que ela é.** O que fica calmo é a
+voz, a pausa, o ambiente e a ausência de sobressalto — não o enredo.
+
 ## Ritmo de frase — a regra que mais importa
 
 | faixa | alvo | vídeo 02 |
